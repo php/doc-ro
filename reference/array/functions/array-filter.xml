@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.2 $ -->
+<!-- $Revision: 1.3 $ -->
 <!-- splitted from ./en/functions/array.xml, last change in rev 1.62 -->
   <refentry id="function.array-filter">
    <refnamediv>
     <refname>array_filter</refname>
     <refpurpose>
-     Filters elements of an array using a callback function
+     Filtrează elementele unui tablou utilizând o funcţie callback
     </refpurpose>
    </refnamediv>
    <refsect1>
-    <title>Description</title>
+    <title>Descriere</title>
      <methodsynopsis>
       <type>array</type><methodname>array_filter</methodname>
       <methodparam><type>array</type><parameter>input</parameter></methodparam>
       <methodparam choice="opt"><type>mixed</type><parameter>callback</parameter></methodparam>
      </methodsynopsis>
     <para>
-     <function>array_filter</function> returns an array
-     containing all the elements of <parameter>input</parameter>
-     filtered according a callback function. If the
-     <parameter>input</parameter> is an associative array
-     the keys are preserved.
+     <function>array_filter</function> returneză un tablou
+	 conţinând toate elementele parametrului <parameter>input</parameter>
+	 filtrate în concordanţă cu funcţia callback.
+	 Dacă <parameter>input</parameter> este un tablou asociativ,
+	 indecşii sunt păstraţi.
     </para>
     <para>
      <example>
-      <title><function>array_filter</function> example</title>
+      <title>Exemplu de utilizare <function>array_filter</function></title>
       <programlisting role="php">
 <![CDATA[
 function odd($var) {
@@ -45,7 +45,7 @@ print_r(array_filter($array2, "even"));
 ]]>
       </programlisting>
       <para>
-       The printout of the program above will be:
+       Rezultatul va fi:
        <screen role="php">
 <![CDATA[
 Odd :
@@ -70,13 +70,13 @@ Array
     </para>
     &note.func-callback;
     <para>
-     Users may not change the array itself from the callback
-     function. e.g. Add/delete an element, unset the array that
-     <function>array_filter</function> is applied to. If the array
-     is changed, the behavior of this function is undefined.
+	 Utilizatorii ar trebui să nu schimbe tabloul din
+	 funcţia callback. De exemplu, adăugarea/ştergerea unui element
+	 sau anularea tabloului la care se aplică <function>array_filter</function>.
+	 Dacă tabloul iniţial este schimbat comportamentul funcţiei este impredictibil.
     </para>
     <para>
-     See also <function>array_map</function> and
+     Vezi, de asemenea, <function>array_map</function> şi
      <function>array_reduce</function>.
     </para>
    </refsect1>
