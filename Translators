@@ -76,7 +76,7 @@ functions/dio.xml			***
 functions/dir.xml			***
 functions/domxml.xml			***
 functions/dotnet.xml			***
-functions/errorfunc.xml			***
+functions/errorfunc.xml			Adrian Ciutureanu
 functions/exec.xml			***
 functions/fbsql.xml			***
 functions/fdf.xml			***
@@ -166,8 +166,8 @@ language/operators.xml			***
 language/references.xml			***
 language/types.xml			***
 language/variables.xml			***
--------- ZendApi -----------------------------------------------------------
-ZendApi/manual.xml			Nãstasã Dorel
-ZendApi/Extending_Zend.xml		Nãstasã Dorel
-ZendApi/Extending_Zend_Introduction.xml	Nãstasã Dorel
-ZendApi/Extending_Zend_Overview.xml	Nãstasã Dorel
+-------- ZendApi (repository/ZendAPI/ro) -----------------------------------
+manual.xml				Nãstasã Dorel
+Extending_Zend.xml			Nãstasã Dorel
+Extending_Zend_Introduction.xml		Nãstasã Dorel
+Extending_Zend_Overview.xml		Nãstasã Dorel
