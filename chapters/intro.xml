@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="iso-8859-2"?>
+<!-- EN-Revision: 1.29 Maintainer: spooky Status: ready -->
+ <chapter id="introduction">
+  <title>Introducere</title>
+
+  <sect1 id="intro-whatis">
+   <title>Ce este PHP?</title>
+   <para>
+    <acronym>PHP</acronym> (acronim recursiv petnru "PHP: Hypertext
+    Preprocessor") este un limbaj de scripting utilizat pe scară largă,
+    realizat şi distribuit în sistem Open Source, ce se potriveste producţiei 
+Web şi poate fi încapsulat în HTML.
+   </para>
+   <para>
+    Un răspuns simplu, dar totuşi ce înseamnă aceasta? Un exemplu:
+   </para>
+   <para>
+    <example>
+     <title>Un exemplu introductiv</title>
+     <programlisting role="php">
+<![CDATA[
+<html>
+    <head>
+        <title>Exemplu</title>
+    </head>
+    <body>
+
+        <?php 
+        echo "Salut, sunt un script PHP!"; 
+        ?>
+
+    </body>
+</html>
+]]>
+     </programlisting>
+    </example>
+   </para>
+   <para>
+    Observă cum acest exemplu diferă faţă de un script scris în alte limbaje cum 
+ar fi Perl sau C -- în loc de a scrie un program cu o mulţime de comenzi 
+pentru a produce un HTML, scrii un script HTML ce include cod pentru a 
+realiza ceva (în acest caz, a afişa un text). Codul PHP este delimitat de 
+<link linkend="language.basic-syntax.phpmode">coduri de start şi de sfârşit 
+</link> ce îţi permit să intri şi sa iesi din "modul PHP".
+   </para>
+   <para>
+    Diferenţa dintre PHP şi altceva cum ar fi JavaScript este acela că PHP este 
+executat pe server pe când JavaScript este executat pe calculatorului 
+clientului (de navigatorul de Internet). Dacă ar fi să ai un script similar 
+cu cel de mai sus pe serverul tău, clientul ar primi doar rezultatele 
+scriptului ce este rulat, fără a vedea în nici un fel codul din spatele 
+acestuia. Îţi poţi chiar configura serverul de web ca acesta să îti 
+proceseze toate fisierele HTML cu PHP şi astfel nu exită nici o metodă ca un 
+utilizator să stie defapt ce există în fişierele tale.
+   </para>
+   <para>
+    Cele mai bune lucruri în folosirea PHP-ului sunt că este foarte simplu 
+pentru un începător, dar oferă o mulţime de facilităţi avansate pentru un 
+programator prefesional. Să nu-ţi fie frică să citeşti lista lungă de 
+funcţii PHP. Poţi să intri in acţiune, într-un timp scurt, şi să începi să 
+scrii scripturi simple în câteva ore.
+   </para>
+   <para>
+    Deşi dezvoltarea PHP-ului este axată pe partea de scripting ce rulează pe 
+server, poţi să faci mult mai multe cu el. Citeşte şi vezi ce poţi face mai 
+multe în secţiunea <link linkend="intro-whatcando">Ce poate face 
+PHP?</link>.
+   </para>
+  </sect1>
+
+  <sect1 id="intro-whatcando">
+   <title>Ce poate face PHP?</title>
+   <para>
+    Orice. PHP este în principal axat pe partea de scripting ce rulează pe 
+server, deci poţi face orice fac şi un program CGI, cum ar fi colectarea de 
+date de la formulare, generarea de conţinut dinamic sau trimitere şi primire 
+de cookie-uri. Dar PHP poate face mult mai multe.
+   </para>
+   <para>
+    Există trei domenii principale unde sunt folosite scripturile PHP.
+    <itemizedlist>
+     <listitem>
+      <simpara>
+       Scripturi ce ruleaza pe server. Acesta este cel mai tradiţional şi cel 
+mai important pentru PHP. Ai nevoie de trei lucrui pentru a face sa 
+meargă. Interpretorul PHP (CGI sau modul de server), un server de web şi 
+un navigator de web. E nevoie ca serverul de web să fie pornit, cu o 
+conexiune PHP instalată. Poţi accesa rezultatul programelor PHP cu un 
+navigator print intermediul serverului de web. Vezi secţiunea <link 
+linkend="installation">instrucţiuni de instalare</link> pentru mai multe 
+detalii.
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       Scripting la linia de comandă. Poţi face ca PHP să ruleze fără a fi 
+nevoie de server şi de browser, ci doar de interpretorul PHP. Această 
+metodă este ideală pentru scripturile ce se vor a fi executate regula 
+folosinf cron (task scheduler în Windows), sau sarcini simple de 
+procesare a textelor. Vezi secţiunea despre <link 
+linkend="commandline">Folosirea PHP-ului în linie comandă</link> pentru 
+mai multe informaţii.
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       Scrierea de aplicaţii ce rulează de partea clientului în mod grafic 
+(GUI). Probabil că PHP nu este limbajul cel mai bun de a scrie aplicaţii 
+cu ferestre pentru Windows sau alte sisteme de operare, dar dacă cunoşti 
+PHP foarte bine şi vrei vrei să foloseşti nişte facilităţi avansate a 
+PHP-ului în aplicaţiile tale ce ruleaza de partea clientului poţi totuşi 
+folosi PHP-GTK pentru a scrie astfel de programe. Deasemenea ai 
+posibilitatea de a scrie aplicaţii ce ruleaza pe platforme diferite 
+folosind această metoda. PHP-GTK este o extensie a PHP-ului, 
+nedisponibila în distribuţia principală de PHP. Dacă eşti interesat de 
+PHP-GTK vizitează <ulink url="&url.php.gtk;">propiul lui site.</ulink>.
+      </simpara>
+     </listitem>
+    </itemizedlist>
+   </para>
+   <para>
+    PHP poate fi folosit pe aproape toate marile sisteme de operare, incluzând 
+Linux, multe variante de Unix (incluzând HP-UX, Solaris şi OpenBSD), 
+Microsoft Windows, Mac OS X, RISC OS, probabil şi altele.
+    PHP are deasemenea suport pentru majoritatea serverelor de web din prezent. 
+Acestea includ serverele Apache, Microsoft Internet Information Server, 
+Personal Web Server, Netscape şi iPlanet, serverul Oreillz Website Pro, 
+Caudium, Xitami, OmniHTTPd, şi multe atele. Pentru majoritatea serverelor 
+PHP are un modul, iar pentru celelalte suportă standardul CGI, PHP putând să 
+lucreye ca un procesor CGI.
+   </para>
+   <para>
+    Deci, cu PHP, ai libertatea de a alege un sistem de operare şi un server de 
+web. Chiar mai mult, ai posibilitatea de a alege programarea procedurală sau 
+programarea orientată obiect, sau chiar sa le amesteci. Cu toate acestea, nu 
+orice facilitate a standardului POO este prezentă în versiunea curent a 
+PHP-ului, multe librării de cod şi aplicaţii mari (incluzând şi librăria 
+PEAR) sunt scrise folosind doar cos POO.
+   </para>
+   <para>
+    Cu PHP nu eşti limitat să scoţi rezultat HTML. Posibilităţile PHP-ului 
+includ afişarea de imagine, fişiere PDF şi chiar filmuleţe Flash (folosind 
+librăriile libswf şi Ming) toate generate instant. Poţi deasemeanea ca 
+rezultatul tău să fie orice fişier text, cum ar fi XHTML sau orice alte 
+fişiere XML. PHP poate genera autmoat aceste fişiere şi să le salveze în 
+sistemul de fişiere în loc să le afişeze, formând un cache de partea 
+serverului pentru continutul tău dinamic.
+   </para>
+   <para>
+    Una dintre cele mai puternice şi importante facilităţi în PHP este suportul 
+său pentru o gamă larga de baze de date. Scrierea une pagini de web ce 
+interacţioneaza cu o bază de date este incredibil de simplă. Următoarele 
+baze de date sunt suportate:
+    <blockquote>
+     <simplelist columns="3">
+      <member>Adabas D</member>
+      <member>dBase</member>
+      <member>Empress</member>
+      <member>FilePro (doar citire)</member>
+      <member>Hyperwave</member>
+      <member>IBM DB2</member>
+      <member>Informix</member>
+      <member>Ingres</member>
+      <member>InterBase</member>
+      <member>FrontBase</member>
+      <member>mSQL</member>
+      <member>Direct MS-SQL</member>
+      <member>MySQL</member>
+      <member>ODBC</member>
+      <member>Oracle (OCI7 şi OCI8)</member>
+      <member>Ovrimos</member>
+      <member>PostgreSQL</member>
+      <member>Solid</member>
+      <member>Sybase</member>
+      <member>Velocis</member>
+      <member>Unix dbm</member>
+     </simplelist>
+    </blockquote>
+     Deasemenea avem o extensie abstracta a bazei de date DBX ce îţi permite 
+într-un mod transparent dolosirea oricărei bazei de date ce suportă această 
+extensie. Mai mult, PHP suportă ODBC, standardul Open Database Connectio, 
+deci te poţi conecta la orice altă bază de date ce suporta acest standard 
+mondial.
+   </para>
+   <para>
+    PHP are deasemeanea suport pentru a conversa cu alte servicii folosind 
+protocoale cum ar fi LDAP, IMAP, SNMP, NNTP, POP3, HTTP, COM (pe Windows) şi 
+multe altele. Poţi deasemenea deschide deasemenea socket-uri de reţea şi să 
+interacţionezi între aproape toate limbajele de programare Web. Apropo de 
+interconectare, PHP are suport pentru instanţierea obiectelor Java şi 
+utilizarea lor într-un mod transparent ca obiecte PHP. Poţi deasemenea 
+folosi extensii CORBA pentru a accesa obiecte aflate la distanţă.
+   </para>
+   <para>
+    PHP are capabilităţi extrem de folositoare pentru procesarea textului, de la 
+POSIX Extins sau expresii regulare Perl până la parsarea documentelor XML. 
+Pentru parsarea şi accesarea documentelor XML, suportăm standardele SAX şi 
+DOM. Poţi folosi extensia noastra XSLT pentru a transforma documentele XML.
+   </para>
+   <para>
+    Folosinf PHP în domeniul comerţului electronic, vei descoperi foarte 
+folositoare pentru programul tău de plaţi online funcţii de plată Cybercash, 
+CyberMUT, VeriSign Payflow Pro şi CCVS.
+   </para>
+   <para>
+    În cele din urmă, dar nu ultimul, avem şi alte extensii interesante, cum ar 
+fi funcţiile ale motorului de căutare mnoGoSearch, funcţii pentru accesarea 
+IRC-ului, multe utilitare de compresie (gzip, bz2), conversie de calendar, 
+traducere...
+   </para>
+   <para>
+    După cum poţi observa această pagină nu este de ajuns pentru a scrie toate 
+psobilităţile şi beneficiile oferite de PHP. Citeste mai departe secţiunile 
+despre <link linkend="installation">instalrea PHP</link>, şi <link 
+linkend="funcref">documentaţia funcţiilor</link> parte a explicaţiilor a 
+extensiilor menţionate mai sus.
+   </para>
+  </sect1>
+
+ </chapter>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:1
+sgml-indent-data:t
+indent-tabs-mode:nil
+sgml-parent-document:nil
+sgml-default-dtd-file:"../../manual.ced"
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+vim600: syn=xml fen fdm=syntax fdl=2 si
+vim: et tw=78 syn=sgml
+vi: ts=1 sw=1
+-->
+
+
+
+
+
+
+
+
