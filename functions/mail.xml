@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="iso-8859-2"?>
+<!-- $Revision: 1.1 $ -->
+ <reference id="ref.mail">
+  <title>Funcţii Mail</title>
+  <titleabbrev>Mail</titleabbrev>
+  <partintro>
+   <simpara>
+    Funcţia <function>mail</function> vă permite să trimiteţi e-mail-uri
+   </simpara>
+
+   <variablelist>
+    <title>Directive de configurare ale funcţiei Mail</title>
+
+    <varlistentry id="ini.smtp">
+     <term>
+      <parameter>SMTP</parameter>
+      <type>string</type>
+     </term>
+     <listitem>
+      <para>
+       Numele DNS sau adresa IP a serverului SMTP pe care versiunea pentru Windows a PHP trebuie să o folosească pentru a trimite e-mail-uri cu funcţia <function>mail</function>.
+      </para>
+     </listitem>
+    </varlistentry>
+
+    <varlistentry id="ini.sendmail-from">
+     <term>
+      <parameter>sendmail_from</parameter>
+      <type>string</type>
+     </term>
+     <listitem>
+      <para>
+       Adresa de e-mail care va fi utilizată în câmpul "From:" la trimiterea de e-mail-uri în versiunea Windows a PHP.
+      </para>
+     </listitem>
+    </varlistentry>
+
+    <varlistentry id="ini.sendmail-path">
+     <term>
+      <parameter>sendmail_path</parameter>
+      <type>string</type>
+     </term>
+     <listitem>
+      <para>
+       Calea către programul <command>sendmail</command>, de regulă <filename>/usr/sbin/sendmail</filename> sau <filename>/usr/lib/sendmail</filename> <command>configure</command> încearcă să-l localizeze şi să-l seteze ca implicit, dar dacă acest lucru nu se întâmplă puteţi seta calea în această directivă.
+      </para>
+      <para>
+       Pe sistemele care nu utilizează sendmail această directivă trebuie pentru a conţine calea către programul care înlocuieşte sendmail, dacă există vreunul. De exemplu, cei care utilizează <ulink url="&url.qmail;">Qmail</ulink> pot seta valoarea directivei la <filename>/var/qmail/bin/sendmail</filename>.
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </partintro>
+
+  <refentry id="function.mail">
+   <refnamediv>
+    <refname>mail</refname>
+    <refpurpose>trimite mail</refpurpose>
+   </refnamediv>
+   <refsect1>
+    <title>Descriere</title>
+     <methodsynopsis>
+      <type>bool</type><methodname>mail</methodname>
+      <methodparam><type>string</type><parameter>to</parameter></methodparam>
+      <methodparam><type>string</type><parameter>subject</parameter></methodparam>
+      <methodparam><type>string</type><parameter>message</parameter></methodparam>
+      <methodparam choice="opt"><type>string</type><parameter>additional_headers</parameter></methodparam>
+      <methodparam choice="opt"><type>string</type><parameter>additional_parameters
+       </parameter></methodparam>
+     </methodsynopsis>
+    <simpara>
+     <function>mail</function> trimite automat mesajele specificate în <parameter>message</parameter> către destinatarul specificat în <parameter>to</parameter>. Pot fi specificaţi mai mulţi destinatari, separând adresele prin virgulă în parametrul <parameter>to</parameter>. Pot fi trimise e-mail-uri cu fişiere ataşate şi cu tipuri speciale de conţinut utilizând această funcţie. Aceasta se realizează prin codificare MIME; Pentru mai multe informaţii vezi <ulink url="&url.email.mime.zend;">un articol ZEND</ulink> sau <ulink url="&url.email.mime.pear;">Clasele PEAR - MIME</ulink>.
+     </simpara>     
+     <simpara>
+     Următoarele RFC-uri pot fi, de asemenea, folositoare:
+     <ulink url="&url.rfc1896;">RFC 1896</ulink>,
+     <ulink url="&url.rfc2045;">RFC 2045</ulink>,
+     <ulink url="&url.rfc2046;">RFC 2046</ulink>,
+     <ulink url="&url.rfc2047;">RFC 2047</ulink>,
+     <ulink url="&url.rfc2048;">RFC 2048</ulink>, şi 
+     <ulink url="&url.rfc2049;">RFC 2049</ulink>.
+    </simpara>
+    <para>
+     <function>mail</function> returnează &true; dacă mailul a fost trimis cu succes, &false; în caz contrar.
+    </para>
+    <para>
+     <example>
+      <title>Trimiterea unui e-mail.</title>
+      <programlisting>
+<![CDATA[
+mail("joecool@example.com", "Subiectul", "Linia 1\nLinia 2\nLinia 3");
+]]>
+      </programlisting>
+     </example></para>
+    <simpara>
+     Dacă şi cel de-al patrulea argument este trimis către funcţie, acest şir este inserat la finalul antetului. Acest parametru se utilizează pentru a adăuga antete adiţionale. Antetele multiple se separă cu un început de rînd (<literal>\r</literal>) şi cu o linie nouă (<literal>\n</literal>).
+    </simpara>
+    <note>
+     <para>
+     Trebuie utilizată combinaţia <literal>\r\n</literal> pentru separarea antetelor, cu toate că unii agenţi de transfer mail din Unix pot lucra cu un singur caracter linie nouă (<literal>\n</literal>). Antetul Cc: este sensibil la distincţia majuscule/minuscule şi trebuie scris <literal>Cc:</literal> pe sisteme Win32. Antetul Bcc: nu este suportat pe sistemele Win32.
+     </para>
+    </note>
+    <para>
+     <example>
+      <title>Trimiterea de mail-uri cu antete adiţionale.</title>
+      <programlisting>
+<![CDATA[
+mail("nobody@example.com", "subiectul", $mesaj,
+     "From: webmaster@$NUME_SERVER\r\n"
+    ."Reply-To: webmaster@$NUME_SERVER\r\n"
+    ."X-Mailer: PHP/" . phpversion());
+]]>
+      </programlisting>
+     </example>
+    </para>
+    <para>
+     <parameter>additional_parameters</parameter> poate fi utilizat pentru a trimite parametri adiţionali programului folosit pentru trimiterea de e-mail-uri specificat în <literal>sendmail_path</literal>. De exemplu aceşti parametri adiţionali pot fi folosiţi pentru a indica adresa expeditorului. Pentru a preveni trimiterea unui antet 'X-Warning' odată cu mesajul atunci când utilizaţi această metodă este posibil să fie necesar să adăugaţi utilizatorul care rulează serverul web.
+     <example>
+      <title>Expedierea de mesaje cu antete adiţionale şi setarea unui parametru linie de comandă adiţional.</title>
+      <programlisting>
+<![CDATA[
+mail("nimeni@exemplu.com", "subiectul", $mesaj,
+     "From: webmaster@$SERVER_NAME", "-fwebmaster@$SERVER_NAME");
+]]>
+      </programlisting>
+     </example>
+    </para>
+    <note>
+     <para>
+      Cel de-al cincilea parametru a fost adăugat în PHP 4.0.5.
+     </para>
+    </note>
+    <para>
+    Se pot utiliza şiruri simple pentru a constru mesaje de e-mail complexe.
+     <example>
+      <title>Expedierea de mesaje complexe.</title>
+      <programlisting>
+<![CDATA[
+/* destinatari */
+$catre  = "Mary <mary@example.com>" . ", " ; //notaţi virgula
+$catre .= "Kelly <kelly@example.com>";
+
+/* subiect */
+$subiect = "Zile de naştere în august";
+
+/* mesaj */
+$mesaj = '
+<html>
+<head>
+ <title>Zile de naştere în august</title>
+</head>
+<body>
+<p>Zile de naştere care se sărbătoresc în august!</p>
+<table>
+ <tr>
+  <th>Persoana</th><th>Ziua</th><th>Luna</th><th>Anul</th>
+ </tr>
+ <tr>
+  <td>Joe</td><td>3</td><td>august</td><td>1970</td>
+  <td>Sally</td><td>17</td><td>august</td><td>1973</td>
+ </tr>
+</table>
+</body>
+</html>
+';
+
+/* Pentru a trimite un e-mail în format HTML trebuie setat antetul Content-type. */
+$antete  = "MIME-Version: 1.0\r\n";
+$antete .= "Content-type: text/html; charset=iso-8859-1\r\n";
+
+/* Antete adiţionale */
+$antete .= "From: Monitorizare zile de nastere <birthday@example.com>\r\n";
+
+$antete .= "Cc: birthdayarchive@example.com\r\n";
+$antete .= "Bcc: birthdaycheck@example.com\r\n";
+
+/* Şi acum să-i dăm drumul... */
+mail($catre, $subiect, $mesaj, $antete);
+]]>
+      </programlisting>
+     </example>
+    </para>
+    <note>
+     <para>
+       Aveţi grijă să nu fie vreun caracter linie nouă (\n) în parametrii <parameter>to</parameter> sau <parameter>subject</parameter>, dacă doriţi ca mesajul să fie trimis.
+     </para>
+    </note>
+   </refsect1>
+  </refentry>
+
+  <refentry id="function.ezmlm-hash">
+   <refnamediv>
+    <refname>ezmlm_hash</refname>
+    <refpurpose>Calculează valoarea hash cerută de EZMLM</refpurpose>
+   </refnamediv>
+   <refsect1>
+    <title>Descriere</title>
+     <methodsynopsis>
+      <type>int</type><methodname>ezmlm_hash</methodname>
+      <methodparam><type>string</type><parameter>addr</parameter></methodparam>
+     </methodsynopsis>
+    <simpara>
+     <function>ezmlm_hash</function> calculează valoarea hash necesară pentru păstrarea listelor de e-mail EZMLM într-o bază de date MySQL.
+    </simpara>
+    <para>
+     <example>
+      <title>Calcularea valorii hash şi adăugarea unui utilizator nou.</title>
+      <programlisting>
+<![CDATA[
+$utilizator = "joecool@example.com";
+$hash = ezmlm_hash ($user);
+$query = sprintf ("INSERT INTO sample VALUES (%s, '%s')", $hash, $utilizator);
+$db->query($query); // utilizând interfaţa db a PHPLIB
+]]>
+      </programlisting>
+     </example>
+    </para>
+   </refsect1>
+  </refentry>
+
+ </reference>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:1
+sgml-indent-data:t
+indent-tabs-mode:nil
+sgml-parent-document:nil
+sgml-default-dtd-file:"../../manual.ced"
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+vim600: syn=xml fen fdm=syntax fdl=2 si
+vim: et tw=78 syn=sgml
+vi: ts=1 sw=1
+-->
+
