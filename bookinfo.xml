@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.1 $ -->
+<!-- $Revision: 1.2 $ -->
 
  <bookinfo id="bookinfo">
   <authorgroup id="authors">
@@ -42,35 +42,47 @@
  
   <authorgroup id="editors">
    <editor>
-    <firstname>Paul</firstname><surname>Dorneanu</surname>
+    <firstname>Stig</firstname><surname>S&aelig;ther Bakken</surname>
    </editor>
    <editor>
-    <firstname>Adrian</firstname><surname>Jurjica</surname>
+    <firstname>Egon</firstname><surname>Schmid</surname>
    </editor>
-   <editor>
-    <firstname>Cristi</firstname><surname>Rădulescu</surname>
-   </editor>
-   <editor>
-    <firstname>Valentin</firstname><surname>Ţuţu</surname>
-   </editor>
-   <editor>
-    <firstname>Iulian</firstname><surname>Năstăsache</surname>
-   </editor>
-   <editor>
-    <firstname>Daniel</firstname><surname>Toma</surname>
-   </editor>
-   <editor>
-    <firstname>1ns0mn1a</firstname><surname> </surname>
-   </editor>
-   <editor>
-    <firstname>Dorel</firstname><surname>Năstasă</surname>
-   </editor>
-   <editor>
-    <firstname>Rareş</firstname><surname>Benea</surname>
-   </editor>
-   <editor>
-    <firstname>Valentin</firstname><surname>Agachi</surname>
-   </editor>
+  </authorgroup>
+
+  <authorgroup id="translators">
+   <collab>
+    <collabname>Traducerea în limba română a fost efectuată de</collabname>
+   </collab>
+   <collab>
+    <collabname>Paul Dorneanu</collabname>
+   </collab>
+   <collab>
+    <collabname>Adrian Jurjica</collabname>
+   </collab>
+   <collab>
+    <collabname>Cristi Rădulescu</collabname>
+   </collab>
+   <collab>
+    <collabname>Valentin Ţuţu</collabname>
+   </collab>
+   <collab>
+    <collabname>Iulian Năstăsache</collabname>
+   </collab>
+   <collab>
+    <collabname>Daniel Toma</collabname>
+   </collab>
+   <collab>
+    <collabname>1n0mn1a</collabname>
+   </collab>
+   <collab>
+    <collabname>Dorel Năstasă</collabname>
+   </collab>
+   <collab>
+    <collabname>Rareş Benea</collabname>
+   </collab>
+   <collab>
+    <collabname>Valentin Agachi</collabname>
+   </collab>
   </authorgroup>
 
   <copyright>
