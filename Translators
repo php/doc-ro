@@ -119,7 +119,7 @@ functions/mysql.xml			***
 functions/ncurses.xml			***
 functions/network.xml			Cristian Câmpean
 functions/nis.xml			***
-functions/oci8.xml			***
+functions/oci8.xml			Adrian Ciutureanu
 functions/openssl.xml			***
 functions/oracle.xml			Adrian Ciutureanu
 functions/outcontrol.xml		***
