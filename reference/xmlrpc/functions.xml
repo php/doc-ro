@@ -3,7 +3,7 @@
 &reference.xmlrpc.functions.xmlrpc-encode;
 &reference.xmlrpc.functions.xmlrpc-encode-request;
 &reference.xmlrpc.functions.xmlrpc-get-type;
-&reference.xmlrpc.functions.xmlrpc-parse-method-Descrieres;
+&reference.xmlrpc.functions.xmlrpc-parse-method-descriptions;
 &reference.xmlrpc.functions.xmlrpc-server-add-introspection-data;
 &reference.xmlrpc.functions.xmlrpc-server-call-method;
 &reference.xmlrpc.functions.xmlrpc-server-create;
