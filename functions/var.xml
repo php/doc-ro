@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.1 $ -->
+<!-- $Revision: 1.2 $ -->
  <reference id="ref.variables">
   <title>Variabile</title>
   <titleabbrev>Variabile</titleabbrev>
@@ -486,8 +486,8 @@ import_request_variables("gP", "rvar_");
      <function>is_integer</function>,
      <function>is_numeric</function>,
      <function>is_string</function>,
-     <function>is_array</function>, şi
-     <function>is_object</function>,
+     <function>is_array</function> şi
+     <function>is_object</function>.
     </simpara>
    </refsect1>
   </refentry>
@@ -577,7 +577,9 @@ import_request_variables("gP", "rvar_");
      <function>is_int</function>,
      <function>is_string</function>,
      <function>is_object</function>,
-     <function>is_array</function>, şi
+     <function>is_array</function>,
+     <function>is_integer</function> şi
+     <function>is_real</function>.
     </para>
    </refsect1>
   </refentry>
@@ -791,6 +793,11 @@ show_var($proteins);
       <methodparam choice="opt"><type>mixed</type><parameter>var</parameter></methodparam>
       <methodparam choice="opt"><parameter>...</parameter></methodparam>
      </methodsynopsis>
+    <note> 
+       <para> 
+        <function>isset</function> este o construcţie de limbaj. 
+       </para> 
+      </note> 
     <simpara>
      Returnează &true; dacă <parameter>var</parameter>
      existsă, &false; în caz contrar.
@@ -1103,18 +1110,17 @@ settype($bar, "string");  // $bar devine "1" (string)
      "înapoi" într-o variabilă PHP. Este returnată valoarea convertită, care poate 
      să aibă tipurile <type>integer</type>, <type>float</type>,
      <type>string</type>, <type>array</type> sau <type>object</type>.
-     Dacă a fost liniarizat un obiect, metodele nu sunt reţinute în valoarea returnată.
     </simpara>
     <note>
      <para>
       Este posibilă setarea unei funcţii callback ce va fi apelată
       dacă o clasă nedefinită trebuie instanţiată în timpul conversiei din
       forma liniară (pentru a preveni preluarea incompletă a unui <type>object</type>).
-      Se poate folosi php.ini, <function>ini_set</function> sau un fisier .htaccess
+      Se poate folosi &php.ini;, <function>ini_set</function> sau un fisier .htaccess
       pentru a defini 'unserialize_callback_func'.
       De câte ori o clasă trebuie instanţiată, se va apela această funcţie.
       Pentru a dezactiva această facilitate, trebuie doar să ştergeţi această
-      variabilă globală.
+      setare.
      </para>
     </note>
     <para>
@@ -1149,8 +1155,9 @@ function mycallback($classname) {
       <programlisting role="php">
 <![CDATA[
 // Aici se foloseşte unserialize() pentru a încărca datele unei sesiuni
-// dintr-o bază de date în $session_data. Acest exemplu este complementar
-// celui pentru funcţia <function>serialize</function>.
+// în $session_data dintr-un string selectat dintr-o bază de date.
+// Acest exemplu este complementar celui pentru funcţia
+// <function>serialize</function>.
 
 $conn = odbc_connect ("webdb", "php", "chicken");
 $stmt = odbc_prepare ($conn, "SELECT data FROM sessions WHERE id = ?");
@@ -1189,6 +1196,11 @@ if (!odbc_execute ($stmt, &$sqldata) || !odbc_fetch_into ($stmt, &$tmp)) {
       <methodparam choice="opt"><type>mixed</type><parameter>var</parameter></methodparam>
       <methodparam choice="opt"><parameter>...</parameter></methodparam>
      </methodsynopsis>
+    <note> 
+       <para> 
+        <function>unset</function> este o construcţie de limbaj. 
+       </para> 
+      </note> 
     <para>
      <function>unset</function> distruge variabilele specificate. de notat că în PHP 3,
      <function>unset</function> returnează întotdeauna &true;
@@ -1284,7 +1296,7 @@ something
 function foo() {
     static $a;
     $a++;
-       echo "$a\n";
+    echo "$a\n";
 
     unset($a);
 }
@@ -1322,11 +1334,6 @@ foo();
       </programlisting>
      </informalexample>
     </para>
-    <note>
-     <para>
-      <function>unset</function> este o construcţie de limbaj.
-     </para>
-    </note>
     <para>
      Mai consultaţi <function>isset</function> şi
      <function>empty</function>.
@@ -1385,7 +1392,8 @@ array(3) {
 
 */
 
-$b = 3.1; $c = TRUE;
+$b = 3.1;
+$c = TRUE;
 var_dump($b,$c);
 
 /* afişează:
@@ -1393,7 +1401,7 @@ float(3.1)
 bool(true)
 
 */
-?>;
+?>
 </pre>
 ]]>
       </programlisting>
@@ -1462,7 +1470,7 @@ echo $v;
    </refsect1>
   </refentry>
 
-  <refentry id='function.is-callable'>
+  <refentry id="function.is-callable">
    <refnamediv>
     <refname>is_callable</refname>
     <refpurpose>
