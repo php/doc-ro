@@ -14,7 +14,6 @@
  </translators>
  
  <work-in-progress>
-  <file name="functions/apache.xml"          person="adiju"		     type="offline" />
   <file name="functions/array.xml"           person="adiju"		     type="offline" />
   <file name="functions/string.xml"          person="adiju"		     type="offline" />
   <file name="functions/domxml.xml"          person="aspinei"		 type="offline" />

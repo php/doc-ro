@@ -13,6 +13,7 @@ File Translator State
 ./functions/mail.xml adiju Done
 ./preface.xml adiju Done
 ./function/datetime.xml adiju 100%
+./functions/apache.xml adiju 100%
 ../../ZendAPI/ro/manual.xml dorel nastasa 100%
 ../../ZendAPI/ro/Extending_Zend.xml dorel nastasa 100%
 ../../ZendAPI/ro/Extending_Zend_Introduction.xml dorel nastasa 100%
