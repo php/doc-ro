@@ -1,60 +1,60 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- $Revision: 1.1 $ -->
+<!-- $Revision: 1.2 $ -->
 <!-- splitted from ./en/functions/mysql.xml, last change in rev 1.2 -->
   <refentry id="function.mysql-affected-rows">
    <refnamediv>
     <refname>mysql_affected_rows</refname>
-    <refpurpose>Numarul de randuri dintr-un tabel al bazei de date 
-	curente afectate de ultima operatie</refpurpose>
+    <refpurpose>Numarul de randuri afectate de ultima
+     operatie MySQL</refpurpose>
    </refnamediv>
    <refsect1>
     <title>Descriere</title>
      <methodsynopsis>
       <type>int</type><methodname>mysql_affected_rows</methodname>
-      <methodparam choice="opt"><type>resource</type>
-	  <parameter>link_identifier</parameter></methodparam>
+      <methodparam choice="opt"><type>resource</type><parameter>
+        link_identifier
+       </parameter></methodparam>
      </methodsynopsis>
     <para>
      <function>mysql_affected_rows</function> intoarce numarul de randuri
-     afectate de ultima operatie daca aceasta a fost una din 
-	 urmatoarele: INSERT, UPDATE sau DELETE.
-	 Aceasta valoare este dependenta de identificatorul de conexiune 
-	 <parameter>link_identifier</parameter>. Daca 
-	 <parameter>link_identifier</parameter> nu este specificat,
-	 se considera implicita ultima conexiune creata cu 
-     <function>mysql_connect</function>.
+     afectate de ultima cerere de tip INSERT, UPDATE sau DELETE asociata
+     cu <parameter>link_identifier</parameter>.  Daca nu se specifica 
+     un identificator de conectare, se foloseste implicit ultima conexiune 
+     creata cu <function>mysql_connect</function>.
     </para>
     <note>
      <para>
-      Daca folositi tranzactii, penrtu o valoare reala trebuie sa apelati 
+      Daca folositi tranzactii, trebuie sa apelati 
       <function>mysql_affected_rows</function> imediat dupa INSERT,
-      UPDATE, sau DELETE, nu dupa definitivare (commit).
+      UPDATE, sau DELETE, nu dupa commit.
      </para>
     </note>
     <para>
-     Daca ultima operatie a fost DELETE fara o clauza WHERE, atunci
-     toate inregistrarile din table vor fi sterse dar aceasta 
-     functie va intoarce zero.
+     Daca ultima cerere a fost DELETE fara clauza WHERE, toate randurile vor fi sterse
+	 din tabel dar functia va returna zero.
     </para>
     <note>
      <para>
-      Daca folositi UPDATE, MySQL nu va modifica coloanele a caror valoare 
-	  noua este egala cu cea veche. Acest lucru creaza posibilitatea 
-      ca <function>mysql_affected_rows</function> sa nu intoarca un numarul
-	  la care va asteptati, ci ea va intoarce numarul de randuri care au 
-	  fost efectiv modificate de ultima operatie.
+      Daca folositi UPDATE, MySQL nu va modifica coloanele unde valorile noi
+      sunt egale/identice cu valorile noi. Astfel exista posibilitatea 
+      ca <function>mysql_affected_rows</function> sa nu returneze numarul exact 
+	  de randuri care indeplineau conditiile, ci numai randurile care au fost
+	  efectiv modificate.
+     </para>
+     <para>
+      Cererile de tip REPLACE intai sterg randurile cu aceeasi cheie primara
+      si apoi introduc un rand nou. Aceasta functie va returna numarul de randuri sterse
+	  plus numarul de randuri introduse.
      </para>
     </note>
     <para>
-     <function>mysql_affected_rows</function> nu functioneaza cu operatiuni de tip 
-     SELECT; doar operatii care modifica inregistrari. Pentru a prelua numarul de 
-	 randuri rezultate in urma unei cereri de tip SELECT, va recomandam sa folositi
-     <function>mysql_num_rows</function>.
+     Pentru a gasi numarul de randuri in intoarse ca raspuns la o cerere de tip SELECT, 
+	 este recomandat sa folositi <function>mysql_num_rows</function>.
     </para>
     <para>
-     Daca ultima cerere a esuat, functia va intoarce -1.
+     Daca ultima cerere a esuat, aceasta functie va intoarce -1.
      <example>
-      <title>Solicitare de stergere</title>
+      <title>Solicitare DELETE</title>
       <programlisting role="php">
 <![CDATA[
 <?php
@@ -65,23 +65,23 @@ if (!$link) {
 }
 mysql_select_db('mydb');
 
-/* aar trebui sa eintoarca numarul de randuri sterse */
+/* acest cod ar trebui sa intoarca numarul corect de randuri sterse */
 mysql_query('DELETE FROM mytable WHERE id < 10');
-printf("Randuri sterse: %d\n", mysql_affected_rows());
+printf("Inregistrari sterse: %d\n", mysql_affected_rows());
 
-/* cu o clauza de tip WHERE care este totdeauna falsa, intoarce 0 */
+/* cu o clauza care nu valideaza niciodata, va intoarce 0 */
 mysql_query('DELETE FROM mytable WHERE 0');
-printf("randuri sterse: %d\n", mysql_affected_rows());
+printf("Inregistrari sterse: %d\n", mysql_affected_rows());
 ?>
 ]]>
       </programlisting>
       <para>
-       Exemplul de mai sus va produce urmatoarele:
+       Exemplul de mai sus va avea urmatorul rezultat:
       </para>
       <screen>
 <![CDATA[
-Records deleted: 10
-Records deleted: 0
+Inregistrari sterse: 10
+Inregistrari sterse: 0
 ]]>
       </screen>
      </example>
@@ -92,12 +92,11 @@ Records deleted: 0
       <programlisting role="php">
 <![CDATA[
 <?php
-/* conectare la baza de dare */
+/* conectare la baza de date */
 mysql_connect("localhost", "mysql_user", "mysql_password") or
-    die("Nu am putut stabili o conexiune: " . mysql_error());
+    die('Nu am putut stabili o conexiune: ' . mysql_error());
 mysql_select_db("mydb");
 
-/* solicitare UPDATE */
 mysql_query("UPDATE mytable SET used=1 WHERE id < 10");
 printf ("Inregistrari modificate: %d\n", mysql_affected_rows());
 mysql_query("COMMIT");
@@ -105,17 +104,17 @@ mysql_query("COMMIT");
 ]]>
       </programlisting>
       <para>
-       Exemplul de mai sus va produce urmatoarele:
+       Exemplul de mai sus va avea urmatorul rezultat:
       </para>
       <screen>
 <![CDATA[
-Updated Records: 10
+Inregistrari modificate: 10
 ]]>
       </screen>
      </example> 
     </para>
     <para>
-     Vedeti de asemenea <function>mysql_num_rows</function>, si
+     Va mai recomandam: <function>mysql_num_rows</function>, si
      <function>mysql_info</function>.
     </para>
    </refsect1>
