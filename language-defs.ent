@@ -12,3 +12,5 @@
 <!ENTITY FAQ               "FAQ: Întrebãri frecvente">
 <!ENTITY FAQabbrev         "FAQ">
 <!ENTITY FunctionIndex     "Indexul funcþiilor">
+<!ENTITY ReservedConstants "Constante predefinite">
+
