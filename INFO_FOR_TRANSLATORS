@@ -32,3 +32,5 @@ File Translator State
 ./chapter/installation.xml spooky 0%
 ./reference/java aspinei 0%
 ./reference/zlib aspinei 0%
+./reference/mysql radical 0% just getting started
+./reference/mysqli radical 0% just getting started
