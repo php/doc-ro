@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="iso-8859-2"?>
+<!-- splitted from ./ro/functions/errorfunc.xml, last change in rev 1.2 -->
+<!-- last change to 'trigger-error' in en/ tree in rev 1.1 -->
+  <refentry id="function.trigger-error">
+   <refnamediv>
+    <refname>trigger_error</refname>
+    <refpurpose>
+     Generează o eroare/avertisment/notificare la nivelul utilizatorului
+    </refpurpose>
+   </refnamediv>
+   <refsect1>
+    <title>Descriere</title>
+     <methodsynopsis>
+      <type>void</type><methodname>trigger_error</methodname>
+      <methodparam><type>string</type><parameter>error_msg</parameter></methodparam>
+      <methodparam choice="opt"><type>int</type><parameter>error_type</parameter></methodparam>
+     </methodsynopsis>
+    <para>
+     Se foloseşte pentru a declanşa o eroare condiţionată de utilizator. Se poate folosi
+     în conjuncţie cu gestionarul nativ al erorilor sau cu o funcţie definită de utilizator
+     (<function>set_error_handler</function>). Funcţionează doar cu familia de constante
+     E_USER, valoarea implicită pentru <parameter>error_type</parameter> fiind <constant>E_USER_NOTICE</constant>.
+    </para>
+    <para>
+      Această funcţie este utilă atunci când se doreşte generarea unui răspuns anume
+      pentru o excepţie apărută în timpul rulării. De exemplu:
+     <informalexample>
+      <programlisting>
+<![CDATA[
+if (assert ($divisor == 0))
+   trigger_error ("Împărţirea la zero nu este permisă", E_USER_ERROR);
+]]>
+      </programlisting>
+     </informalexample>
+     <note>
+     <para>
+     Consultaţi <function>set_error_handler</function> pentru un exemplu mai detaliat.
+     </para>
+     </note>
+    </para>
+    <para>
+     Mai consultaţi <function>error_reporting</function>,
+     <function>set_error_handler</function>,
+     <function>restore_error_handler</function>, 
+     <function>user_error</function>.
+    </para>
+   </refsect1>
+  </refentry>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:1
+sgml-indent-data:t
+indent-tabs-mode:nil
+sgml-parent-document:nil
+sgml-default-dtd-file:"../../../../manual.ced"
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+vim600: syn=xml fen fdm=syntax fdl=2 si
+vim: et tw=78 syn=sgml
+vi: ts=1 sw=1
+-->

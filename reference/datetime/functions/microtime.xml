@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-2"?>
+<!-- splitted from ./ro/functions/datetime.xml, last change in rev 1.1 -->
+<!-- last change to 'microtime' in en/ tree in rev 1.2 -->
+  <refentry id="function.microtime">
+   <refnamediv>
+    <refname>microtime</refname>
+    <refpurpose>Returnează timestamp-ul curent UNIX cu microsecunde</refpurpose>
+   </refnamediv>
+   <refsect1>
+    <title>Descriere</title>
+     <methodsynopsis>
+      <type>string</type><methodname>microtime</methodname>
+      <void/>
+     </methodsynopsis>
+    <para>
+     Returnează şirul "msec sec" unde sec este timpul curent măsurat în secunde de la începutul Epocii UNIX (0:00:00 January 1, 1970 GMT), şi msec este partea reprezentând microsecndele. Această funcţie este valabilă pe sistemele de operare care suportă apelul sistem gettimeofday().
+    </para>
+    <para>
+     Ambele părţi ale şirului sunt returnate în unităţi de secunde.
+     <example>
+      <title>Exemplu <function>microtime</function></title>
+      <programlisting role="php">
+<![CDATA[
+function getmicrotime(){ 
+    list($usec, $sec) = explode(" ",microtime()); 
+    return ((float)$usec + (float)$sec);
+    } 
+
+$start_t = getmicrotime();
+    
+for ($i=0; $i < 1000; $i++){
+    //do nothing, 1000 times
+    }
+
+$stop_t = getmicrotime();
+$timp = $stop_t - $start_t;
+
+echo "N-am facut nimic timp de $time secunde";
+]]>
+      </programlisting>
+     </example>
+    </para>
+    <para>
+     Vezi, de asemenea, <function>time</function>.
+    </para>
+   </refsect1>
+  </refentry>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:1
+sgml-indent-data:t
+indent-tabs-mode:nil
+sgml-parent-document:nil
+sgml-default-dtd-file:"../../../../manual.ced"
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+vim600: syn=xml fen fdm=syntax fdl=2 si
+vim: et tw=78 syn=sgml
+vi: ts=1 sw=1
+-->

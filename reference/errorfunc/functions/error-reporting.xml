@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="iso-8859-2"?>
+<!-- splitted from ./ro/functions/errorfunc.xml, last change in rev 1.2 -->
+<!-- last change to 'error-reporting' in en/ tree in rev 1.1 -->
+  <refentry id="function.error-reporting">
+   <refnamediv>
+    <refname>error_reporting</refname>
+    <refpurpose>Setează care erori PHP sunt raportate</refpurpose>
+   </refnamediv>
+   <refsect1>
+    <title>Descriere</title>
+     <methodsynopsis>
+      <type>int</type><methodname>error_reporting</methodname>
+      <methodparam choice="opt"><type>int</type><parameter>level</parameter></methodparam>
+     </methodsynopsis>
+    <para>
+     Setează nivelul de raportare a erorilor PHP şi returnează nivelul anterior. Nivelul de
+     raportare poate fi o mască de biţi sau numele unei constante. Folosirea numelor de
+     constante este încurajată în mod deosebit pentru a asigura compatibilitatea cu versiunile
+     următoare. Pe măsură ce au fost adăugate nivele de eroare, rangul numerelor întregi a
+     crescut, aşa că vechile nivele de eroare bazate pe valori întregi nu vor avea totdeauna
+     comportamentul aşteptat.
+    </para>
+    <para>
+     <example role="php">
+      <title>Schimbări ale valorilor întregi</title>
+      <programlisting role="php">
+<![CDATA[
+<?php
+error_reporting(55);   // echivalent în PHP 3 cu E_ALL ^ E_NOTICE
+
+// ...în PHP 4, '55' va însemna (E_ERROR | E_WARNING | E_PARSE |
+// E_CORE_ERROR | E_CORE_WARNING)
+
+error_reporting(2039); // echivalent în PHP 4 cu E_ALL ^ E_NOTICE
+
+error_reporting(E_ALL ^ E_NOTICE); // Identic în PHP 3 şi 4
+?>
+]]>
+      </programlisting>
+     </example>
+     Urmaţi legăturile constantelor pentru a afla ce reprezintă:
+     <table>
+      <title>Valori bit pentru <function>error_reporting</function></title>
+      <tgroup cols="2">
+       <thead>
+        <row>
+         <entry>valoare</entry>
+         <entry>constantă</entry>
+        </row>
+       </thead>
+       <tbody>
+        <row>
+         <entry>1</entry>
+         <entry>
+          <link linkend="internal.e-error">E_ERROR</link>
+         </entry>
+        </row>
+        <row>
+         <entry>2</entry>
+         <entry>
+          <link linkend="internal.e-warning">E_WARNING</link>
+         </entry>
+        </row>
+        <row>
+         <entry>4</entry>
+         <entry>
+          <link linkend="internal.e-parse">E_PARSE</link>
+         </entry>
+        </row>
+        <row>
+         <entry>8</entry>
+         <entry>
+          <link linkend="internal.e-notice">E_NOTICE</link>
+         </entry>
+        </row>
+        <row>
+         <entry>16</entry>
+         <entry>
+          <link linkend="internal.e-core-error">E_CORE_ERROR</link>
+         </entry>
+        </row>
+        <row>
+         <entry>32</entry>
+         <entry>
+          <link linkend="internal.e-core-warning">E_CORE_WARNING</link>
+         </entry>
+        </row>
+        <row>
+         <entry>64</entry>
+         <entry>
+          <link linkend="internal.e-compile-error">E_COMPILE_ERROR</link>
+         </entry>
+        </row>
+        <row>
+         <entry>128</entry>
+         <entry>
+          <link linkend="internal.e-compile-warning">E_COMPILE_WARNING</link>
+         </entry>
+        </row>
+        <row>
+         <entry>256</entry>
+         <entry>
+          <link linkend="internal.e-user-error">E_USER_ERROR</link>
+         </entry>
+        </row>
+        <row>
+         <entry>512</entry>
+         <entry>
+          <link linkend="internal.e-user-warning">E_USER_WARNING</link>
+         </entry>
+        </row>
+        <row>
+         <entry>1024</entry>
+         <entry>
+          <link linkend="internal.e-user-error">E_USER_NOTICE</link>
+         </entry>
+        </row>
+       </tbody>
+      </tgroup>
+     </table>
+    </para>
+    <para>
+     <example role="php">
+      <title>Exemple <function>error_reporting</function></title>
+      <programlisting role="php">
+<![CDATA[
+<?php
+error_reporting(0);
+// Opreşte orice raportare
+
+// Exemplele sunt prezentate mai întâi în sintaxa veche (pentru PHP 2/3)
+// apoi în sintaxa nouă (cea recomandată, pentru PHP 3/4)
+
+error_reporting(7);
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+// bine de folosit pentru erori simple de rulare
+
+error_reporting(15);
+error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
+// bine de folosit pentru raportarea variabilelor neiniţializate
+// (posibil scrise greşit)
+
+error_reporting(63);
+error_reporting(E_ALL);
+// raportează toate erorile PHP
+?>
+]]>
+      </programlisting>
+     </example>
+    </para>
+   </refsect1>
+  </refentry>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:1
+sgml-indent-data:t
+indent-tabs-mode:nil
+sgml-parent-document:nil
+sgml-default-dtd-file:"../../../../manual.ced"
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+vim600: syn=xml fen fdm=syntax fdl=2 si
+vim: et tw=78 syn=sgml
+vi: ts=1 sw=1
+-->
