@@ -4,6 +4,8 @@ the bottom of this file. Thank you. - spooky
 
 File Translator State
 -------------------------------------------- ------------------ -------------
+./security/database.xml zamolxe 100% done v1 translated and addapted
+./security/current.xml zamolxe 100% done v1
 ./security/cgi-bin.xml zamolxe 100% done v1
 ./security/apache.xml zamolxe 100% done v1
 ./security/ zamolxe 5% just getting started
