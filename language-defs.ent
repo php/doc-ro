@@ -2,11 +2,11 @@
 
 <!ENTITY PHPManual         "Manual PHP">
 <!ENTITY Date              "Date:">
-<!ENTITY GettingStarted    "Getting Started">
+<!ENTITY GettingStarted    "Sa incepeme">
 <!ENTITY Installation      "Instalare">
 <!ENTITY LanguageReference "Referinta limbaj">
 <!ENTITY Features          "Facilitati">
-<!ENTITY FunctionReference "Referinta Limbaj">
+<!ENTITY FunctionReference "Referinta functii">
 <!ENTITY Appendixes        "Adnotari">
 <!ENTITY PEAR              "PEAR: Extensia PHP si Aplicatia Repository (?!?)">
 <!ENTITY FAQ               "FAQ: Cele mai des intalnite intrebari">
