@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- $Revision: 1.1 $ -->
+<!-- splitted from ./en/functions/mysql.xml, last change in rev 1.62 -->
+  <refentry id="function.mysql-get-client-info">
+   <refnamediv>
+    <refname>mysql_get_client_info</refname>
+    <refpurpose>Aflare informatii client MySQL</refpurpose>
+   </refnamediv>
+   <refsect1>
+    <title>Descriere</title>
+     <methodsynopsis>
+      <type>string</type><methodname>mysql_get_client_info</methodname>
+      <void/>
+     </methodsynopsis>
+    <para>
+     <function>mysql_get_client_info</function> intoarce un sir de caractere care 
+	 reprezinta versiunea librariei client.
+    </para>
+    <para>
+     <example>
+      <title>exemplu <function>mysql_get_client_info</function></title>
+      <programlisting role="php">
+<![CDATA[
+<?php
+printf("Informatie client MySQL: %s\n", mysql_get_client_info());
+?>
+]]>
+      </programlisting>
+      <para>
+       Exemplul de mai sus va produce:
+      </para>
+      <screen>
+<![CDATA[
+Informatie client MySQL: 3.23.39
+]]>
+      </screen>
+     </example>
+    </para>
+    <para>
+     Va recomandam de asemenea:
+     <function>mysql_get_host_info</function>,
+     <function>mysql_get_proto_info</function> si
+     <function>mysql_get_server_info</function>.
+    </para>
+   </refsect1>
+  </refentry>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:1
+sgml-indent-data:t
+indent-tabs-mode:nil
+sgml-parent-document:nil
+sgml-default-dtd-file:"../../../../manual.ced"
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+vim600: syn=xml fen fdm=syntax fdl=2 si
+vim: et tw=78 syn=sgml
+vi: ts=1 sw=1
+-->
