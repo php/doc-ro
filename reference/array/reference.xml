@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.1 $ -->
+<!-- $Revision: 1.2 $ -->
  <reference id="ref.array">
   <title>Array - funcţii</title>
-  <titleabbrev>Arrays</titleabbrev>
+  <titleabbrev>Tablouri</titleabbrev>
 
   <partintro>
    <section id="array.intro">
     &reftitle.intro;
     <para>
      Aceste funcţii vă permit să interacţionaţi cu şi să manipulaţi
-     tablouriîn diverse feluri. Tablourile sunt esenţiale pentru sortare,
+     tablouri în diverse feluri. Tablourile sunt esenţiale pentru sortare,
      dar şi pentru operarea cu seturi de variabile.
     </para>
     <para>
