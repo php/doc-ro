@@ -121,7 +121,7 @@ functions/network.xml			Cristian Câmpean
 functions/nis.xml			***
 functions/oci8.xml			***
 functions/openssl.xml			***
-functions/oracle.xml			***
+functions/oracle.xml			Adrian Ciutureanu
 functions/outcontrol.xml		***
 functions/overload.xml			***
 functions/ovrimos.xml			***
