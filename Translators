@@ -50,7 +50,7 @@ features/persistent-connections.xml	***
 features/remote-files.xml		***
 features/safe-mode.xml			***
 ------- functions -----------------------------------------------------------
-functions/apache.xml			***
+functions/apache.xml			Adrian Jurjica
 functions/array.xml			Adrian Jurjica
 functions/aspell.xml			***
 functions/bc.xml			***
@@ -156,9 +156,9 @@ functions/yaz.xml			***
 functions/zip.xml			***
 functions/zlib.xml			***
 -------- language ----------------------------------------------------------
-language/basic-syntax.xml		cristi radulescu
-language/constants.xml			cristi radulescu
-language/control-structures.xml		cristi radulescu
+language/basic-syntax.xml		Cristi Rãdulescu
+language/constants.xml			Cristi Rãdulescu
+language/control-structures.xml		Cristi Rãdulescu
 language/expressions.xml		***
 language/functions.xml			***
 language/oop.xml			***
