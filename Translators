@@ -141,7 +141,7 @@ functions/session.xml			***
 functions/shmop.xml			***
 functions/snmp.xml			***
 functions/sockets.xml			***
-functions/strings.xml			***
+functions/strings.xml			Adrian Jurjica
 functions/swf.xml			***
 functions/sybase.xml			***
 functions/uodbc.xml			***
