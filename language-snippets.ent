@@ -1,70 +1,40 @@
 <!-- $Revision$ -->
 
-<!ENTITY warn.experimental '<warning><simpara>Aceasta extensie este 
-<emphasis>EXPERIMENTALÃ</emphasis>. Comportamentul acestei extensii,
-incluzând numele funcþiilor, ºi orice altceva documentat despre aceastã
-extensie s-ar putea schimba farã anunþ intr-o viitoare apariþie a PHP.
-Aveþi grijã ºi folosiþi aceastã extensie pe riscul vostru.</simpara></warning>'>
+<!ENTITY warn.experimental '<warning><simpara>Aceastã extensie este <emphasis>EXPERIMENTALÃ</emphasis>. Comportamentul acestei extensii, incluzând numele funcþiilor ºi orice altceva documentat despre aceastã extensie ar putea fi schimbate farã un anunþ prealabil, intr-o viitoare versiune PHP. V-am avertizat, deci folosiþi aceastã extensie pe riscul dv.</simpara></warning>'>
 
-<!ENTITY warn.experimental.func '<warning><simpara>Aceastã funcþie este 
-<emphasis>EXPERIMENTALÃ</emphasis>. Comportamentul acestei funcþii,
-numele funcþiei, ºi orice altceva documentat despre aceastã
-funcþie s-ar putea schimba farã anunþ intr-o viitoare apariþie a PHP.
-Aveþi grijã ºi folosiþi aceastã extensie pe riscul vostru.</simpara></warning>'>
+<!ENTITY warn.experimental.func '<warning><simpara>Aceastã funcþie este <emphasis>EXPERIMENTALÃ</emphasis>. Comportamentul acestei funcþii, numele funcþiei, ºi orice altceva documentat despre aceastã funcþie ar putea fi schimbate farã un anunþ prealabil, intr-o viitoare versiune PHP. V-am avertizat, deci folosiþi aceastã extensie pe riscul dv.</simpara></warning>'>
 
-<!ENTITY warn.undocumented.func '<warning><simpara>Aceastã funcþie nu este
-momentan documentatã. Numai lista de argumente este disponibilã.</simpara></warning>'>
+<!ENTITY warn.undocumented.func '<warning><simpara>Aceastã funcþie nu este încã documentatã. Deocamdatã este disponibilã doar lista argumentelor.</simpara></warning>'>
 
-<!ENTITY tip.ob-capture '<tip><simpara>Odatã ce orice scoate rezultatul
-direct cãtre navigator, poþi folosi <link linkend="ref.outcontrol">funcþia
-de control a ieºirii (output-control)</link> pentru a captura rezultatul 
-acestei funcþii ºi de a-l salva - de exemplu - intr-un ºir (<type>string</type>).</simpara></tip>'>
+<!ENTITY tip.ob-capture '<tip><simpara>Cum toate funcþiile afiºeazã rezultatele direct cãtre browser, se pot folosi <link linkend="ref.outcontrol">funcþiile de control a ieºirii</link> pentru a captura rezultatul acestei funcþii ºi a-l salva, de exemplu, într-un <type>string</type>.</simpara></tip>'>
 
-<!ENTITY tip.fopen-wrapper '<tip><simpara>Poþi folosi acest URL ca un nume de
-fiºier folosind aceastã funcþit dacã "fopen wrappers" a fost activatã.
-Vezi <function>fopen</function> pentru mai multe detalii.</simpara></tip>'>
+<!ENTITY tip.fopen-wrapper '<tip><simpara>Cu aceastã funcþie se poate folosi URL-ul ca nume de fiºier, dacã a fost activatã opþiunea "fopen wrappers". Vezi <function>fopen</function> pentru mai multe detalii.</simpara></tip>'>
 
-<!ENTITY return.success 'Returneazã &true; in caz de success, &false; in caz de eºec.'>
+<!ENTITY return.success 'Returneazã &true; în caz de succes, &false; în caz contrar.'>
 
-<!ENTITY return.falseproblem '<warning><simpara>Aceastã funcþie e posibil sã
-returneze &false;, dar poate returna deasemenea o valoare ce poate fi evaluatã
-ca fiind &false; într-o declaraþie simpla. Te rog foloseºte <link
-linkend="language.operators.comparison">operatorul ===</link> pentru
-a testa valoarea returnatã a acestei funcþii.</simpara></warning>'>    
+<!ENTITY return.falseproblem '<warning><simpara>Aceastã funcþie e posibil sã returneze &false;, dar poate returna, de asemenea, o valoare ce poate fi evaluatã ca fiind &false;, cum ar fi <literal>0</literal> sau &quot;&quot;. Citeºte despre <link linkend="language.types.boolean">tipul boolean</link> pentru mai multe informaþii. Te rog foloseºte <link linkend="language.operators.comparison">operatorul ===</link> pentru a testa valoarea returnatã de aceastã funcþie.</simpara></warning>'>
 
 <!-- Various notes -->
-<!ENTITY note.not-bin-safe '<warning><simpara>Aceastã funcþie nu este (incã)
-sigurã ca binar!</simpara></warning>'>
+<!ENTITY note.not-bin-safe '<warning><simpara>Aceastã funcþie nu este (încã) binar-sigurã!</simpara></warning>'>
 
-<!ENTITY note.bin-safe '<note><simpara>Aceastp funcþie este binar-sigurã.</simpara></note>'>
+<!ENTITY note.bin-safe '<note><simpara>Aceastã funcþie este binar-sigurã.</simpara></note>'>
 
-<!ENTITY note.no-windows '<note><simpara>Aceastã funcþie nu este implementatã
-pe platformele Windows.</simpara></note>'>
+<!ENTITY note.no-windows '<note><simpara>Aceastã funcþie nu este implementatã pe platformele Windows.</simpara></note>'>
 
-<!ENTITY note.func-callback '<note><simpara>În locul numelui unei funcþii,
-un vector conþinând o referinþã cãtre un obiect sau numele unei metode poate
-fi folositã in schimb.</simpara></note>'>
+<!ENTITY note.func-callback '<note><simpara>În locul numelui unei funcþii, poate fi folosit un tablou conþinând o referinþã cãtre un obiect sau numele unei metode.</simpara></note>'>
 
 <!-- Notes for safe-mode limited functions: -->
-<!ENTITY note.sm.disabled '<note><simpara>&sm.dezactivat;</simpara></note>'>
+<!ENTITY note.sm.disabled '<note><simpara>&sm.disabled;</simpara></note>'>
 
-<!ENTITY note.sm.uidcheck '<note><simpara>Cand <link 
-linkend="features.safe-mode">modul sigur</link> este activat, PHP verificã dacã
-fiºierul(le)/directoarele asupra cãrora operezi au acelaºi UID
-ca scriptul ce trebuie executat.</simpara></note>'>
+<!ENTITY note.sm.uidcheck '<note><simpara>Cand <link linkend="features.safe-mode">modul sigur</link> este activat, PHP verificã dacã fiºierul(fiºierele)/directoarele asupra cãrora operezi au acelaºi UID ca scriptul ce trebuie executat.</simpara></note>'>
 
-<!ENTITY note.sm.uidcheck.dir '<note><simpara>Cand <link 
-linkend="features.safe-mode">modul sigur</link> este activat, PHP verificã dacã
-directorul în care vrei sã operezi are acelaºi UID ca scriptul ce trebuie executat.</simpara></note>'>
+<!ENTITY note.sm.uidcheck.dir '<note><simpara>Când este activat <link linkend="features.safe-mode">safe-mode</link>, PHP verificã dacã directorul în care sînteþi pe cale sã lucraþi are acelaºi UID ca scriptul care se executã.</simpara></note>'>
 
 <!-- Common pieces in features/safe-mode.xml 
      Jade doesn't allow in-line entities, so I put them here... Though they 
      should have been inline in safe-mode.xml -->
-<!ENTITY sm.uidcheck 'Verificã dacã fisierul(le) cu care operezi au acelaºi UID
-ca ºi scriptul ce se executã.'>
+<!ENTITY sm.uidcheck 'Verificã dacã fiºierele/directoarele cu care lucraþi au acelaºi UID ca ºi scriptul care se executã.'>
 
-<!ENTITY sm.uidcheck.dir 'Verificã dacã în care operezi au acelaºi UID
-ca ºi scriptul ce se executã.'>
+<!ENTITY sm.uidcheck.dir 'Verificã dacã directorul în care sînteþi pe cale sã lucraþi are acelaºi UID ca scriptul care se executã.'>
 
-<!ENTITY sm.disabled 'Aceastã funcþie e dezactivatã in <link 
-linkend="features.safe-mode">modul sigur</link>.'>
+<!ENTITY sm.disabled 'Aceastã funcþie e dezactivatã în <link linkend="features.safe-mode">safe-mode</link>.'>
