@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.1 $ -->
+<!-- $Revision: 1.2 $ -->
 
  <preface id="preface">
   <title>Prefaţă</title>
@@ -19,7 +19,7 @@
   </para>
 
   <para>
-   Versiunea în limba română a manualului PHP este realizată, în mod voluntar, de o echipă formată din Paul Dorneanu (iniţiatorul acestui proiect), Adrian Jurjica, Cristi Rădulescu, Valentin Ţuţu, Iulian Năstăsache, Daniel Toma, 1ns0mn1a, Dorel Năstasă, Dan Matornei, Rareş Benea şi Valentin Agachi. Pentru a participa la traducerea manualului PHP este de ajuns sa subscrieţi la lista de discuţii rophpman-at-yahoo.com. De asemenea vă recomandăm să vizitaţi php.urbanxp.ro şi www.rophp.net pentru noutăţi.
+   Versiunea în limba română a manualului PHP este realizată, în mod voluntar, de o echipă formată din Paul Dorneanu (iniţiatorul acestui proiect), Adrian Jurjica, Cristi Rădulescu, Valentin Ţuţu, Iulian Năstăsache, Daniel Toma, 1ns0mn1a, Dorel Năstasă, Dan Matornei, Rareş Benea, Valentin Agachi şi Cristi Armeana. Pentru a participa la traducerea manualului PHP este de ajuns sa subscrieţi la lista de discuţii rophpman-at-yahoo.com. De asemenea vă recomandăm să vizitaţi php.urbanxp.ro şi www.rophp.net pentru noutăţi.
   </para>
  </preface>
 
