@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- $Revision: 1.2 $ -->
+<!-- $Revision: 1.3 $ -->
 <!-- splitted from ./index.xml, last change in rev 1.66 -->
   <sect1 id="security.cgi-bin">
    <title>Instalat ca un binar CGI</title>
@@ -31,7 +31,7 @@ de un asemenea setup:
       <simpara>
        Accesarea fisierelor din sistem: <filename
        
-role="url">http://www.host_victima.ro/cgi-bin/php?/etc/passwd</filename>
+role="url">http://host.ext/cgi-bin/php?/etc/passwd</filename>
       </simpara>
       <simpara>
 	   Informatia din URL de dupa semnul de intrebare (?) este 
@@ -51,7 +51,7 @@ prim argument in
       <simpara>
        Puteti accesa orice document de pe server: <filename
        
-role="url">http://www.host_victima.ro/cgi-bin/php/secret/doc.html</filename>
+role="url">http://host.ext/cgi-bin/php/secret/doc.html</filename>
       </simpara>
       <simpara>
 	   Informatiile introduse in URL dupa numele binarului
