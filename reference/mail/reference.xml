@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.2 $ -->
+<!-- $Revision: 1.3 $ -->
  <reference id="ref.mail">
-  <title>Funcţii Mail</title>
+  <title>Mail - funcţii</title>
   <titleabbrev>Mail</titleabbrev>
   <partintro>
    <simpara>

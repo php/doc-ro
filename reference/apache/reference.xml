@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- $Revision: 1.2 $ -->
+<!-- $Revision: 1.3 $ -->
  <reference id="ref.apache">
-  <title>Funcþii specifice Apache</title>
+  <title>Apache - funcþii specifice</title>
   <titleabbrev>Apache</titleabbrev>
 
 &reference.apache.functions;

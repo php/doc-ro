@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.2 $ -->
+<!-- $Revision: 1.3 $ -->
  <reference id="ref.datetime">
-  <title>Funcţii de timp şi dată</title>
+  <title>Dată/timp - funcţii</title>
   <titleabbrev>Date/time</titleabbrev>
 
 &reference.datetime.functions;
