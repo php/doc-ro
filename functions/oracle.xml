@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.2 $ -->
+<!-- $Revision: 1.3 $ -->
  <reference id="ref.oracle">
   <title>Oracle</title>
   <titleabbrev>Oracle</titleabbrev>
@@ -395,6 +395,7 @@ remove the unique restriction or do not insert the key
     <para>
      Cu această puteţi extrage o linie de date într-un tablou.
      <example>
+	  <title>Prelucrare set rezultate în array</title>
       <programlisting role="php">
 <![CDATA[
 array($results);
