@@ -17,6 +17,12 @@ V-am avertizat, deci folosiþi aceastã extensie pe riscul dv.</simpara></warning>
 nu este încã documentatã. Deocamdatã este disponibilã doar
 lista argumentelor.</simpara></warning>'>
 
+<!ENTITY warn.no-win32-fopen-wrapper '<warning><para>Windows
+versions of <literal>PHP</literal> prior to PHP 4.3 do not
+support accessing remote files via this function, even if
+<link linkend="ini.allow-url-fopen">allow_url_fopen</link> is enabled.
+</para></warning>'>
+
 <!ENTITY tip.ob-capture '<tip><simpara>Cum toate funcþiile afiºeazã
 rezultatele direct cãtre browser, se pot folosi
 <link linkend="ref.outcontrol">funcþiile de control a ieºirii</link>
@@ -44,6 +50,13 @@ pentru a testa valoarea returnatã de aceastã funcþie.
 
 <!ENTITY note.bin-safe '<note><simpara>Aceastã funcþie este
 binar-sigurã.</simpara></note>'>
+
+<!ENTITY note.line-endings '<note><simpara>If you are having problems
+with <literal>PHP</literal> not recognizing the line endings when
+reading files either on or created by a Macintosh computer, you
+might want to enable the <link linkend="ini.auto-detect-line-endings"
+>auto_detect_line_endings</link> run-time configuration option.</simpara>
+</note>'>
 
 <!ENTITY note.no-windows '<note><simpara>Aceastã funcþie nu este
 implementatã pe platformele Windows.</simpara></note>'>
@@ -88,6 +101,11 @@ de configurare.</para>'>
 pãrþi ale modulului standard care este întotdeauna disponibil.</para>'>
 <!ENTITY no.install '<para>Nu este necesarã o instalare a acestor funcþii,
 ele fac parte din PHP.</para>'>
+
+<!-- Used in reference/$extname/ini.xml -->
+<!ENTITY extension.runtime '<simpara>
+The behaviour of these functions is affected by settings in &php.ini;.
+</simpara>'>
 
 <!-- Used in reference/$extname/constants.xml -->
 <!ENTITY extension.constants '<simpara>
