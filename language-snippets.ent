@@ -4,58 +4,58 @@
 <emphasis>EXPERIMENTALÃ</emphasis>. Comportamentul acestei extensii,
 incluzând numele funcþiilor, ºi orice altceva documentat despre aceastã
 extensie s-ar putea schimba farã anunþ intr-o viitoare apariþie a PHP.
-Aveþi grijã ºi folosiþi aceastã extensie pe riscul vostru.</simpara>'>
+Aveþi grijã ºi folosiþi aceastã extensie pe riscul vostru.</simpara></warning>'>
 
 <!ENTITY warn.experimental.func '<warning><simpara>Aceastã funcþie este 
 <emphasis>EXPERIMENTALÃ</emphasis>. Comportamentul acestei funcþii,
 numele funcþiei, ºi orice altceva documentat despre aceastã
 funcþie s-ar putea schimba farã anunþ intr-o viitoare apariþie a PHP.
-Aveþi grijã ºi folosiþi aceastã extensie pe riscul vostru.</simpara>'>
+Aveþi grijã ºi folosiþi aceastã extensie pe riscul vostru.</simpara></warning>'>
 
 <!ENTITY warn.undocumented.func '<warning><simpara>Aceastã funcþie nu este
-momentan documentatã. Numai lista de argumente este disponibilã.</simpara>'>
+momentan documentatã. Numai lista de argumente este disponibilã.</simpara></warning>'>
 
 <!ENTITY tip.ob-capture '<tip><simpara>Odatã ce orice scoate rezultatul
 direct cãtre navigator, poþi folosi <link linkend="ref.outcontrol">funcþia
 de control a ieºirii (output-control)</link> pentru a captura rezultatul 
-acestei funcþii ºi de a-l salva - de exemplu - intr-un ºir (<type>string</type>).</simpara>'>
+acestei funcþii ºi de a-l salva - de exemplu - intr-un ºir (<type>string</type>).</simpara></tip>'>
 
 <!ENTITY tip.fopen-wrapper '<tip><simpara>Poþi folosi acest URL ca un nume de
 fiºier folosind aceastã funcþit dacã "fopen wrappers" a fost activatã.
-Vezi <function>fopen</function> pentru mai multe detalii.</simpara>'>
+Vezi <function>fopen</function> pentru mai multe detalii.</simpara></tip>'>
 
 <!ENTITY return.success 'Returneazã &true; in caz de success, &false; in caz de eºec.'>
 
-<!ENTITY return.falseproblem '<warning><simpara>Aceastã funcþie e posibile sã
+<!ENTITY return.falseproblem '<warning><simpara>Aceastã funcþie e posibil sã
 returneze &false;, dar poate returna deasemenea o valoare ce poate fi evaluatã
 ca fiind &false; într-o declaraþie simpla. Te rog foloseºte <link
 linkend="language.operators.comparison">operatorul ===</link> pentru
-a testa valoarea returnatã a acestei funcþii.</simpara>'>    
+a testa valoarea returnatã a acestei funcþii.</simpara></warning>'>    
 
 <!-- Various notes -->
 <!ENTITY note.not-bin-safe '<warning><simpara>Aceastã funcþie nu este (incã)
-sigurã ca binar!</simpara>'>
+sigurã ca binar!</simpara></warning>'>
 
-<!ENTITY note.bin-safe '<note><simpara>Aceastp funcþie este binar-sigurã.</simpara>'>
+<!ENTITY note.bin-safe '<note><simpara>Aceastp funcþie este binar-sigurã.</simpara></note>'>
 
 <!ENTITY note.no-windows '<note><simpara>Aceastã funcþie nu este implementatã
-pe platformele Windows.</simpara>'>
+pe platformele Windows.</simpara></note>'>
 
 <!ENTITY note.func-callback '<note><simpara>În locul numelui unei funcþii,
 un vector conþinând o referinþã cãtre un obiect sau numele unei metode poate
-fi folositã in schimb.</simpara>'>
+fi folositã in schimb.</simpara></note>'>
 
 <!-- Notes for safe-mode limited functions: -->
-<!ENTITY note.sm.disabled '<note><simpara>&sm.dezactivat;</simpara>'>
+<!ENTITY note.sm.disabled '<note><simpara>&sm.dezactivat;</simpara></note>'>
 
 <!ENTITY note.sm.uidcheck '<note><simpara>Cand <link 
 linkend="features.safe-mode">modul sigur</link> este activat, PHP verificã dacã
 fiºierul(le)/directoarele asupra cãrora operezi au acelaºi UID
-ca scriptul ce trebuie executat.</simpara>'>
+ca scriptul ce trebuie executat.</simpara></note>'>
 
 <!ENTITY note.sm.uidcheck.dir '<note><simpara>Cand <link 
 linkend="features.safe-mode">modul sigur</link> este activat, PHP verificã dacã
-directorul în care vrei sã operezi are acelaºi UID ca scriptul ce trebuie executat.</simpara>'>
+directorul în care vrei sã operezi are acelaºi UID ca scriptul ce trebuie executat.</simpara></note>'>
 
 <!-- Common pieces in features/safe-mode.xml 
      Jade doesn't allow in-line entities, so I put them here... Though they 
@@ -66,5 +66,5 @@ ca ºi scriptul ce se executã.'>
 <!ENTITY sm.uidcheck.dir 'Verificã dacã în care operezi au acelaºi UID
 ca ºi scriptul ce se executã.'>
 
-<!ENTITY sm.disabled 'Aceastã funþie e dezactivatã in <link 
+<!ENTITY sm.disabled 'Aceastã funcþie e dezactivatã in <link 
 linkend="features.safe-mode">modul sigur</link>.'>
