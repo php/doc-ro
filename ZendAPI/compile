@@ -1,0 +1,2 @@
+#!/bin/sh
+jade -d ./phpweb.dsl -V use-output-dir -t sgml ./phpdocxml.dcl ./Extending_Zend.xml

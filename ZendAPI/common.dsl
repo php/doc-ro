@@ -1,0 +1,117 @@
+;; -*- Scheme -*-
+;;
+;; $Id$
+;;
+;; This file contains stylesheet customization common to the HTML
+;; and print versions.
+;;
+
+;; Stylesheets Localization
+(define %default-language% "en")
+
+(define %root-filename% "index")
+(define %use-id-as-filename% #t)
+(define %gentext-nav-tblwidth% "100%")
+(define %refentry-function% #t)
+(define %refentry-generate-name% #f)
+(define %funcsynopsis-style% 'ansi)
+(define ($legalnotice-link-file$ legalnotice)
+  (string-append "copyright" %html-ext%))
+(define %generate-legalnotice-link% #t)
+(define %footnotes-at-end% #t)
+(define %force-chapter-toc% #t)
+(define newline "\U-000D")
+(define %number-programlisting-lines% #f)
+(define %linenumber-mod% 1)
+(define %shade-verbatim% #t)
+(define %prefers-ordinal-label-name-format% #f)
+(define ($generate-book-lot-list$) (list))
+
+(define %gentext-ja-edited-by% "Edited by")
+
+(define (php-code code)
+  (make processing-instruction
+    data: (string-append "php " code "?")))
+
+(define quicksort
+  (quicksort::generic null? car cdr append cons '()))
+
+(define nl-quicksort
+  (quicksort::generic node-list-empty?
+		      node-list-first
+		      node-list-rest
+		      node-list
+		      node-list
+		      (empty-node-list)))
+
+(define quicksort::generic
+  (lambda(is-null? first others concat add empty)
+    (letrec ((collect
+	;; Collect is an helper function doing the real work
+
+	      (lambda (pivot ls lgroup rgroup less?)
+		(if (is-null? ls)
+		    (concat (impl lgroup less?)
+			    (add pivot (impl rgroup less?)))
+		    (if (less? pivot (first ls))
+			(collect pivot (others ls) lgroup 
+				 (add (first ls) rgroup) 
+				 less?)
+			(collect pivot (others ls) 
+				 (add (first ls) lgroup) 
+				 rgroup 
+				 less?)))))
+	     (impl	
+	      ;; impl first test some trivial sorting case and then call
+	      ;; the procedure collect
+	      (lambda (ls less?)	
+		(if (or (is-null? ls) (is-null? (others ls)))
+		    ls
+		    (collect (first ls) (others ls) empty empty less?)))))
+	;; we return the new defined procedure
+      impl)))
+
+;; definition for japanese
+
+(define ja-chapter-name	"\U-7B2C;")
+(define ja-sect1-name	"\U-7B2C;")
+(define ja-sect2-name	"\U-7B2C;")
+(define ja-section-name	"\U-7B2C;")
+(define ja-figure-name	"Figure ")
+(define ja-refsynopsisdiv-name "Synopsis")
+
+(define (ja-label-title-sep)
+  (list
+   (list (normalize "chapter")		" \U-7AE0; ")
+   (list (normalize "sect1")		". ")
+   (list (normalize "sect2")		". ")
+   (list (normalize "section")		". ")
+   ))
+
+(define (gentext-ja-label-title-sep gind)
+  (let* ((giname (if (string? gind) gind (gi gind)))
+	 (name   (normalize giname))
+	 (sep    (assoc name (ja-label-title-sep))))
+    (if sep
+	(car (cdr sep))
+	"")))
+
+;; Polish definitions
+
+(define (gentext-pl-nav-next next)
+  (make sequence (literal "Nast\U-0119;pny")))
+
+(define (book-titlepage-recto-elements)
+  (list (normalize "title")
+	(normalize "subtitle")
+	(normalize "graphic")
+	(normalize "mediaobject")
+	(normalize "corpauthor")
+	(normalize "authorgroup")
+	(normalize "author")
+	(normalize "editor")
+        (normalize "pubdate")
+	(normalize "copyright")
+	(normalize "abstract")
+	(normalize "legalnotice")))
+

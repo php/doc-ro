@@ -1,0 +1,8 @@
+12.11.2001
+----------
+
+The ZendAPI documentation will automatically integrate itself into the PHP documentation if you either copy the ZendAPI dir into the phpdoc dir or if you configure phpdoc providing --with-zendapi=DIR .
+
+It can also be build independend by running './configure' and 'make html'. If you are on a Win32 platform you can also create a .chm file by running make_chm.bat .
+
+For further information about how to build the documentation and which tools are needed read the PHP documentation.
