@@ -61,6 +61,9 @@ might want to enable the <link linkend="ini.auto-detect-line-endings"
 <!ENTITY note.no-windows '<note><simpara>Aceastã funcþie nu este
 implementatã pe platformele Windows.</simpara></note>'>
 
+<!ENTITY note.no-windows.extension '<note><simpara>This extension is not
+available on Windows platforms.</simpara></note>'>
+
 <!ENTITY note.func-callback '<note><simpara>În locul numelui unei
 funcþii, poate fi folosit un tablou conþinând o referinþã cãtre un
 obiect sau numele unei metode.</simpara></note>'>
@@ -113,6 +116,10 @@ Aceste constante sunt definite de aceastã extensie ºi
 vor fi disponibile doar cînd extensia a fost fie
 compilatã odatã la instalarea PHP fie dacã extensia este încãrcatã
 dinamic la rulare.</simpara>'>
+
+<!ENTITY windows.builtin '<simpara> The windows version of <literal>PHP</literal>
+has built in support for this extension. You do not need to load any additional
+extension in order to use these functions.</simpara>'>
 
 <!-- These are using in reference/$extname/reference.xml and other
 supplemental files to mark section titles -->
