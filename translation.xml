@@ -10,6 +10,7 @@
  <translators>
   <person name="Adrian Jurjica"      email="adiju@terrasat.ro"                  nick="adiju"   cvs="yes" />
   <person name="Adrian Spinei"       email="aspinei@internal.metawings.com"     nick="aspinei" cvs="yes" />
+  <person name="Adrian Ciutureanu"   email="adu@php.net"                        nick="adu"   cvs="yes" />
  </translators>
  
  <work-in-progress>
@@ -18,6 +19,7 @@
   <file name="functions/string.xml"          person="adiju"		     type="offline" />
   <file name="functions/domxml.xml"          person="aspinei"		 type="offline" />
   <file name="functions/xmlrpc.xml"          person="aspinei"		 type="offline" />
+  <file name="functions/oci8.xml"            person="adu"		     type="translation" date="2002-03-27" />
  </work-in-progress>
 
 </translation>
