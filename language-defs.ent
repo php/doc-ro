@@ -12,6 +12,7 @@
 <!ENTITY FAQ               "FAQ: Întrebãri frecvente">
 <!ENTITY FAQabbrev         "FAQ">
 <!ENTITY FunctionIndex     "Indexul funcþiilor">
+<!ENTITY CHMEdition        "HTML Help Edition">
 <!ENTITY ReservedConstants "Constante predefinite">
 
 <!ENTITY url.ro.rophp        "http://www.rophp.net">
