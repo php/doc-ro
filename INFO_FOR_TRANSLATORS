@@ -6,4 +6,8 @@ File Translator State
 -------------------------------------------- ------------------ -------------
 ./language-defs.ent dt Done
 ./language-snippets.ent spooky Done
-./functions-array.xml adiju 15%
+./bookinfo.xml adiju Done
+./make_chm_index_ro.html adiju Done
+./chmonly/aboutchm.xml adiju Done
+./functions/array.xml adiju 15%
+./functions/mail.xml adiju Done
