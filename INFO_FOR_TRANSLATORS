@@ -9,10 +9,10 @@ File Translator State
 ./bookinfo.xml adiju Done
 ./make_chm_index_ro.html adiju Done
 ./chmonly/aboutchm.xml adiju Done
-./functions/array.xml adiju 12%
+./functions/array.xml adiju 15%
 ./functions/mail.xml adiju Done
 ./preface.xml adiju Done
-./function/datetime.xml adiju 60%
+./function/datetime.xml adiju 100%
 ../../ZendAPI/ro/manual.xml dorel nastasa 100%
 ../../ZendAPI/ro/Extending_Zend.xml dorel nastasa 100%
 ../../ZendAPI/ro/Extending_Zend_Introduction.xml dorel nastasa 100%
