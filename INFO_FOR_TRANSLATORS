@@ -22,3 +22,5 @@ File Translator State
 ./function/wddx.xml aspinei 100%
 ./function/xmlrpc.xml aspinei 5%
 ./function/domxml.xml aspinei 0%
+./chapters/intro.xml spooky 100%
+./chapter/installation.xml spooky 0%
