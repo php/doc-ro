@@ -1,38 +1,34 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- $Revision: 1.1 $ -->
+<!-- $Revision: 1.2 $ -->
 <!-- EN-Revision: install.general.xml 1.1 Maintainer: spooky Status: ready -->
 <chapter id="installation">
  <title>Instalare</title>
   <sect1 id="install.general">
    <title>Aspecte generale privind instalarea</title>
    <para>
-    Înainte de începerea instalãrii, trebuie sã ºtii pentru ce vrei sã 
+    Înainte de începerea instalãrii, trebuie sã ºti pentru ce vrei sã 
 foloseºti 
 PHP-ul. Sunt trei domenii principale în care poþi folosi PHP-ul descrise în 
 secþiunea <link linkend="intro-whatcando">Ce poate face PHP?</link>
     <itemizedlist>
-     <listitem><simpara>Scripting ce ruleazãa de partea 
-serverului</simpara></listitem>
-     <listitem><simpara>Scripting la linia de comandã</simpara></listitem>
-     <listitem><simpara>Aplicaþii GUI ce ruleazã de partea 
-clientului</simpara></listitem>
+     <listitem><simpara>Scripturi ce ruleazã pe partea de server</simpara></listitem>
+     <listitem><simpara>Scripturi ce ruleazã din linia de comandã</simpara></listitem>
+     <listitem><simpara>Aplicaþii GUI ce ruleazã la client</simpara></listitem>
     </itemizedlist>
    </para>
    <para>
-    Pentru prima ºi cea mai utilizatã formp, ai nevoie de trei lucruri: însuºi 
+    Pentru prima ºi cea mai utilizatã formã, ai nevoie de trei lucruri: însuºi 
 PHP-ul, un server de web ºi un navigator web. Probabil ai deja un navigator 
-web, ºi, depindinzând de instalarea sistemului tãu de operare, s-ar putea sã 
+web, ºi, depinzând de instalarea sistemului tãu de operare, s-ar putea sã 
 ai ºi un server de web (ex. Apache pe Linux sau IIS pe Windows).
-    Ai putea deasemenea sã inchiriezi spaþiu pe web de la o companie. În acest 
-fel, nu trebuiascã sã seteti tu personal, doar sã scrii scripturile PHP, le 
+    Ai putea, de asemenea, sã inchiriezi spaþiu pe web de la o companie. În acest 
+fel, nu trebuiascã sã setezi tu personal, doar sã scrii scripturile PHP, le 
 transferi pe server pe care ai închiriat spaþiul ºi vezi rezultatul obþinut 
-în browser. Poþi gãsi o listã cu companii care oferã hosting la <ulink 
-url="&url.php.hosts;">&url.php.hosts;</ulink>.
+în browser. Poþi gãsi o listã cu companii care oferã hosting la <ulink url="&url.php.hosts;">&url.php.hosts;</ulink>.
    </para>
    <para>
     Dacã instalezi serverul ºi PHP de unul singur, ai la dispoziþie douã 
-metode 
-de a conecta PHP de server. Pentru majoritatea serverelor PHP are un modul 
+metode de a conecta PHP de server. Pentru majoritatea serverelor PHP are un modul 
 direct de interfaþã (numit ºi SAPI). Aceste server includ Apache, Microsoft 
 Internet Information Server, Netscape ºi iPlanet. Multe alte server au 
 suport pentru ISAPI, modulul de interfata Microsoft (OmniHTTPd spre 

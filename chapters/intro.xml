@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- EN-Revision: 1.29 Maintainer: spooky Status: ready -->
-<!-- $Revision: 1.2 $ -->
+<!-- $Revision: 1.3 $ -->
  <chapter id="introduction">
   <title>Introducere</title>
 
@@ -199,21 +199,21 @@ Pentru parsarea şi accesarea documentelor XML, suportăm standardele SAX şi
 DOM. Poţi folosi extensia noastra XSLT pentru a transforma documentele XML.
    </para>
    <para>
-    Folosinf PHP în domeniul comerţului electronic, vei descoperi foarte 
+    Folosind PHP în domeniul comerţului electronic, vei descoperi foarte 
 folositoare pentru programul tău de plaţi online funcţii de plată Cybercash, 
 CyberMUT, VeriSign Payflow Pro şi CCVS.
    </para>
    <para>
-    În cele din urmă, dar nu ultimul, avem şi alte extensii interesante, cum ar 
-fi funcţiile ale motorului de căutare mnoGoSearch, funcţii pentru accesarea 
+    În cele din urmă, dar nu ultimul rând, avem şi alte extensii interesante, cum ar 
+fi funcţii ale motorului de căutare mnoGoSearch, funcţii pentru accesarea 
 IRC-ului, multe utilitare de compresie (gzip, bz2), conversie de calendar, 
 traducere...
    </para>
    <para>
     După cum poţi observa această pagină nu este de ajuns pentru a scrie toate 
-psobilităţile şi beneficiile oferite de PHP. Citeste mai departe secţiunile 
-despre <link linkend="installation">instalrea PHP</link>, şi <link 
-linkend="funcref">documentaţia funcţiilor</link> parte a explicaţiilor a 
+posbilităţile şi beneficiile oferite de PHP. Citeşte mai departe secţiunile 
+despre <link linkend="installation">instalarea PHP</link>, şi <link 
+linkend="funcref">documentaţia funcţiilor</link> parte a explicaţiilor 
 extensiilor menţionate mai sus.
    </para>
   </sect1>
