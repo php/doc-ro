@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.1 $ -->
+<!-- $Revision: 1.2 $ -->
  <reference id="ref.datetime">
   <title>Funcţii de timp şi dată</title>
   <titleabbrev>Date/time</titleabbrev>
@@ -281,7 +281,7 @@ $anul_viitor = mktime (0,0,0,date("m"),  date("d"),  date("Y")+1);
 /* Today is March 10th, 2001, 5:16:18 pm */
 $azi = date("F j, Y, g:i a");                   // March 10, 2001, 5:16 pm
 $azi = date("m.d.y");                           // 03.10.01
-$azi = date("j, m, Y");                         // 10, 3, 2001
+$azi = date("j, n, Y");                         // 10, 3, 2001
 $azi = date("Ymd");                             // 20010310
 $azi = date('h-i-s, j-m-y, it is w Day z ');    // 05-16-17, 10-03-01, 1631 1618 6 Fripm01
 $azi = date('\e\s\t\e \z\i\u\a \d\e j.');       // este ziua de 10.
