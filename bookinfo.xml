@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.2 $ -->
+<!-- $Revision: 1.3 $ -->
 
  <bookinfo id="bookinfo">
   <authorgroup id="authors">
@@ -76,6 +76,9 @@
    </collab>
    <collab>
     <collabname>Dorel Năstasă</collabname>
+   </collab>
+   <collab>
+    <collabname>Dan Matornei</collabname>
    </collab>
    <collab>
     <collabname>Rareş Benea</collabname>
