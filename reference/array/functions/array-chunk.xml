@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.2 $ -->
+<!-- $Revision: 1.3 $ -->
 <!-- splitted from ./en/functions/array.xml, last change in rev 1.2 -->
   <refentry id="function.array-chunk">
    <refnamediv>
@@ -7,7 +7,7 @@
     <refpurpose>Split an array into chunks</refpurpose>
    </refnamediv>
    <refsect1>
-    <title>Description</title>
+    <title>Descriere</title>
      <methodsynopsis>
       <type>array</type><methodname>array_chunk</methodname>
       <methodparam><type>array</type><parameter>input</parameter></methodparam>
@@ -15,22 +15,22 @@
       <methodparam choice="opt"><type>bool</type><parameter>preserve_keys</parameter></methodparam>
      </methodsynopsis>
     <para>
-     <function>array_chunk</function> splits the array into
-     several arrays with <parameter>size</parameter> values
-     in them. You may also have an array with less values
-     at the end. You get the arrays as members of a
-     multidimensional array indexed with numbers starting
-     from zero.
+     <function>array_chunk</function> împarte un tablou în
+	 mai multe tablouri, fiecare având cel mult <parameter>size</parameter> valori.
+	 Unul dintre tablourile returnate poate avea mai puţine valori
+	 la sfîrşit. Tablourile rezultate vor face parte dintr-un
+	 tablou multidimensional cu index numeric care începe
+	 de la zero.
     </para>
     <para>
-     By setting the optional <parameter>preserve_keys</parameter>
-     parameter to &true;, you can force PHP to preserve the original
-     keys from the input array. If you specify &false; new number
-     indices will be used in each resulting array with
-     indices starting from zero. The default is &false;.
+     Prin setarea parametrului opţional <parameter>preserve_keys</parameter>
+	 ca &true;, PHP poate fi forţat să păstreze indecşii originali
+	 din tabloul iniţial. Dacă se specifică &false; în fiecare tablou
+	 rezultat vor fi utilizaţi indecşi numerici noi
+	 pornind de la zero. Valoarea implicită este &false;.
     </para>
     <example>
-     <title><function>array_chunk</function> example</title>
+     <title>Exempul de utilizare <function>array_chunk</function></title>
      <programlisting role="php">
 <![CDATA[
 $input_array = array('a', 'b', 'c', 'd', 'e');
@@ -39,7 +39,7 @@ print_r(array_chunk($input_array, 2, TRUE));
 ]]>
      </programlisting>
      <para>
-      The printout of the above program will be:
+      Rezultatul va fi:
       <screen>
 <![CDATA[
 Array
