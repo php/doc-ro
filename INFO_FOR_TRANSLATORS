@@ -18,3 +18,6 @@ File Translator State
 ../../ZendAPI/ro/Extending_Zend_Introduction.xml dorel nastasa 100%
 ../../ZendAPI/ro/Extending_Zend_Overview.xml dorel nastasa 100%
 ./function/errorfunc.xml adrian_ciutureanu 100%
+./function/wddx.xml aspinei 100%
+./function/xmlrpc.xml aspinei 5%
+./function/domxml.xml aspinei 0%

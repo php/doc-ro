@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.6 $ -->
+<!-- $Revision: 1.7 $ -->
 
  <bookinfo id="bookinfo">
   <authorgroup id="authors">
@@ -85,6 +85,9 @@
    </collab>
    <collab>
     <collabname>Cristi Armeana</collabname>
+   </collab>
+   <collab>
+       <collabname>Adrian Spinei</collabname>
    </collab>
   </authorgroup>
 
