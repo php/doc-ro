@@ -1,0 +1,168 @@
+Files					Translators
+==============================================================================
+bookinfo.xml				Adrian Jurjica
+preface.xml				Adrian Jurjica
+language-defs.ent           		Paul Dorneanu; Daniel Toma
+language-snippets.ent       		Paul Dorneanu; Adrian Jurjica
+make_chm_index_ro.html			Adrian Jurjica
+------- appendices -----------------------------------------------------------
+appendices/about.xml			***
+appendices/aliases.xml			***
+appendices/commandline.xml		***
+appendices/debugger.xml			***
+appendices/history.xml			***
+appendices/migration.xml		***
+appendices/migration4.xml		***
+appendices/phpdevel.xml			***
+appendices/predefined.xml		***
+appendices/reserved.xml			***
+appendices/resources.xml		***
+------- chapters ------------------------------------------------------------
+chapters/config.xml			***
+chapters/copyright.xml			***
+chapters/install.xml			***
+chapters/intro.xml			***
+chapters/security.xml			***
+------- chapters ------------------------------------------------------------
+chmonly/aboutchm.xml			Adrian Jurjica
+-------- faq ---------------------------------------------------------------
+faq/build.xml				***
+faq/com.xml				***
+faq/databases.xml			***
+faq/general.xml				***
+faq/html.xml				***
+faq/installation.xml			***
+faq/languages.xml			***
+faq/mailinglist.xml			***
+faq/migration.xml			***
+faq/migration4.xml			***
+faq/misc.xml				***
+faq/obtaining.xml			***
+faq/using.xml				***
+------- features ------------------------------------------------------------
+features/connection-handling.xml	***
+features/cookies.xml			***
+features/error-handling.xml		***
+features/file-upload.xml		***
+features/http-auth.xml			***
+features/images.xml			***
+features/persistent-connections.xml	***
+features/remote-files.xml		***
+features/safe-mode.xml			***
+------- functions -----------------------------------------------------------
+functions/apache.xml			***
+functions/array.xml			Adrian Jurjica
+functions/aspell.xml			***
+functions/bc.xml			***
+functions/bzip2.xml			***
+functions/calendar.xml			***
+functions/ccvs.xml			***
+functions/classobj.xml			***
+functions/com.xml			***
+functions/cpdf.xml			***
+functions/crack.xml			***
+functions/ctype.xml			***
+functions/curl.xml			***
+functions/cybercash.xml			***
+functions/cybermut.xml			***
+functions/cyrus.xml			***
+functions/datetime.xml			Adrian Jurjica
+functions/dba.xml			***
+functions/dbase.xml			***
+functions/dbm.xml			***
+functions/dbplus.xml			***
+functions/dbx.xml			***
+functions/dio.xml			***
+functions/dir.xml			***
+functions/domxml.xml			***
+functions/dotnet.xml			***
+functions/errorfunc.xml			***
+functions/exec.xml			***
+functions/fbsql.xml			***
+functions/fdf.xml			***
+functions/filepro.xml			***
+functions/filesystem.xml		***
+functions/fribidi.xml			***
+functions/ftp.xml			***
+functions/funchand.xml			***
+functions/gettext.xml			***
+functions/gmp.xml			***
+functions/http.xml			***
+functions/hw.xml			***
+functions/ibase.xml			***
+functions/icap.xml			***
+functions/iconv.xml			***
+functions/ifx.xml			***
+functions/iisfunc.xml			***
+functions/image.xml			***
+functions/imap.xml			***
+functions/info.xml			***
+functions/ingres_ii.xml			***
+functions/ircg.xml			***
+functions/java.xml			***
+functions/ldap.xml			***
+functions/mail.xml			Adrian Jurjica
+functions/mailparse.xml			***
+functions/math.xml			***
+functions/mbstring.xml			***
+functions/mcal.xml			***
+functions/mcrypt.xml			***
+functions/mhash.xml			***
+functions/ming.xml			***
+functions/misc.xml			***
+functions/mnogosearch.xml		***
+functions/msession.xml			***
+functions/msql.xml			***
+functions/mssql.xml			***
+functions/muscat.xml			***
+functions/mysql.xml			***
+functions/ncurses.xml			***
+functions/network.xml			***
+functions/nis.xml			***
+functions/oci8.xml			***
+functions/openssl.xml			***
+functions/oracle.xml			***
+functions/outcontrol.xml		***
+functions/overload.xml			***
+functions/ovrimos.xml			***
+functions/pcre.xml			***
+functions/pdf.xml			***
+functions/pfpro.xml			***
+functions/pgsql.xml			***
+functions/posix.xml			***
+functions/printer.xml			***
+functions/pspell.xml			***
+functions/readline.xml			***
+functions/recode.xml			***
+functions/regex.xml			***
+functions/sem.xml			***
+functions/sesam.xml			***
+functions/session.xml			***
+functions/shmop.xml			***
+functions/snmp.xml			***
+functions/sockets.xml			***
+functions/strings.xml			***
+functions/swf.xml			***
+functions/sybase.xml			***
+functions/uodbc.xml			***
+functions/url.xml			***
+functions/var.xml			***
+functions/vpopmail.xml			***
+functions/wddx.xml			***
+functions/xml.xml			***
+functions/xmlrpc.xml			***
+functions/xslt.xml			***
+functions/yaz.xml			***
+functions/zip.xml			***
+functions/zlib.xml			***
+-------- language ----------------------------------------------------------
+language/basic-syntax.xml		***
+language/constants.xml			***
+language/control-structures.xml		***
+language/expressions.xml		***
+language/functions.xml			***
+language/oop.xml			***
+language/operators.xml			***
+language/references.xml			***
+language/types.xml			***
+language/variables.xml			***
