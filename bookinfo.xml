@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="iso-8859-2"?>
+<!-- $Revision: 1.1 $ -->
+
+ <bookinfo id="bookinfo">
+  <authorgroup id="authors">
+
+   <author>
+    <firstname>Stig</firstname><surname>S&aelig;ther Bakken</surname>
+   </author>
+
+   <author>
+    <firstname>Alexander</firstname><surname>Aulbach</surname>
+   </author>
+
+   <author>
+    <firstname>Egon</firstname><surname>Schmid</surname>
+   </author>
+
+   <author>
+    <firstname>Jim</firstname><surname>Winstead</surname>
+   </author>
+
+   <author>
+    <firstname>Lars Torben</firstname><surname>Wilson</surname>
+   </author>
+
+   <author>
+    <firstname>Rasmus</firstname><surname>Lerdorf</surname>
+   </author>
+
+   <author>
+    <firstname>Andrei</firstname><surname>Zmievski</surname>
+   </author>
+
+   <author>
+    <firstname>Jouni</firstname><surname>Ahto</surname>
+   </author>
+
+  </authorgroup>
+
+  <pubdate>&php.build-date;</pubdate>
+ 
+  <authorgroup id="editors">
+   <editor>
+    <firstname>Paul</firstname><surname>Dorneanu</surname>
+   </editor>
+   <editor>
+    <firstname>Adrian</firstname><surname>Jurjica</surname>
+   </editor>
+   <editor>
+    <firstname>Cristi</firstname><surname>Rădulescu</surname>
+   </editor>
+   <editor>
+    <firstname>Valentin</firstname><surname>Ţuţu</surname>
+   </editor>
+   <editor>
+    <firstname>Iulian</firstname><surname>Năstăsache</surname>
+   </editor>
+   <editor>
+    <firstname>Daniel</firstname><surname>Toma</surname>
+   </editor>
+   <editor>
+    <firstname>1ns0mn1a</firstname><surname> </surname>
+   </editor>
+   <editor>
+    <firstname>Dorel</firstname><surname>Năstasă</surname>
+   </editor>
+   <editor>
+    <firstname>Rareş</firstname><surname>Benea</surname>
+   </editor>
+   <editor>
+    <firstname>Valentin</firstname><surname>Agachi</surname>
+   </editor>
+  </authorgroup>
+
+  <copyright>
+   <year>1997</year>
+   <year>1998</year>
+   <year>1999</year>
+   <year>2000</year>
+   <year>2001</year>
+   <year>2002</year>
+   <holder>Grupul de Documentare PHP</holder>
+  </copyright>
+
+  <legalnotice id="copyright">
+   <title>Copyright</title>
+   <simpara>
+    Acest manual este &copy; Copyright 1997, 1998, 1999, 2000, 2001, 2002 al Grupului de Documentare PHP.  Membrii acestui grup sunt listaţi pe prima pagină a prezentului manual.
+   </simpara>
+   <simpara>
+    Manualul poate fi redistribuit sub termenii Licenţei GNU General Public License aşa cum a fost publicată de Free Software Foundation; fie ea versiunea 2 a Licenţei, sau (la opţiunea dv.) orice versiune ulterioară.
+   </simpara>
+   <simpara>
+    Secţinea 'Extending PHP 4.0' a manualului este &copy; 2000 al Zend Technologies, Ltd. Acest material poate fi distribuit conform termenilor şi condiţiilor specificate în Open Publication License, v1.0 sau versiuni ulterioare (cea mai recentă versiune poate fi găsită la <ulink url="&url.opl;">&url.opl;</ulink>).
+   </simpara>
+  </legalnotice>
+
+ </bookinfo>
+ 
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:1
+sgml-indent-data:t
+indent-tabs-mode:nil
+sgml-parent-document:nil
+sgml-default-dtd-file:"../manual.ced"
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+vim600: syn=xml fen fdm=syntax fdl=2 si
+vim: et tw=78 syn=sgml
+vi: ts=1 sw=1
+-->
