@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- $Revision: 1.1 $ -->
+<!-- $Revision: 1.2 $ -->
 <!-- splitted from ./index.xml, last change in rev 1.66 -->
   <sect1 id="security.cgi-bin">
    <title>Instalat ca un binar CGI</title>
@@ -175,10 +175,10 @@ cai
 	 Includerea de continut activ, de pilda scripturi si 
 executabile,
 	 in directoarele serverului web este de multe ori considerata
-	 o metoda nesecurizata. Daca, din cauza unor configuratii 
+	 o metoda nesigura. Daca, din cauza unor configuratii 
 gresite,
 	 scripturile nu sunt executate ci afisate ca documente HTML,
-	 atunci securitatea si informatii vitale cum ar fi parolele
+	 atunci securitatea sistemului si informatii vitale cum ar fi parolele
 	 pot fi desconspirate.  De aceea multi administratori de sistem
 	 configureaza un director creat special, in care ruleaza 
 scripturi
