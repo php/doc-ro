@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.1 $ -->
+<!-- $Revision: 1.2 $ -->
  <reference id="ref.mysql">
   <title>Functii MySQL</title>
   <titleabbrev>MySQL</titleabbrev>
@@ -8,12 +8,12 @@
    <section id="mysql.intro">
     &reftitle.intro;
     <para>
-     Aceste funcţii vă oferă acces la serverul de baze de date MySQL.
-     Mai mult informaţii despre MySQL puteţi găsi la <ulink
+     Aceste functii va ofera acces la serverul de baze de date MySQL.
+     Mai mult informatii despre MySQL puteti gasi la <ulink
      url="&url.mysql;">&url.mysql;</ulink>.
     </para>
     <para>
-     Documenaţia MySQL poate fi găsită la <ulink
+     Documenatia MySQL poate fi gasita la <ulink
      url="&url.mysql.docs;">&url.mysql.docs;</ulink>.
     </para>
    </section>
@@ -21,7 +21,7 @@
    <section id="mysql.requirements">
     &reftitle.required;
     <para>
-     Pentru a putea folosi aceste funcţii, trebuie să compilaţi PHP cu
+     Pentru a putea folosi aceste functii, trebuie sa compilati PHP cu
      suport MySQL.
     </para>
    </section>
@@ -33,8 +33,8 @@
    <section id="mysql.resources">
    &reftitle.resources;
     <para>
-     Sunt două tipuri de resurse folosite de modulu MySQL. Primul este identificatorul
-	 de legătură pentru conexiunea la baza de date, al doilea este resursa care &quot;ţine&quot;
+     Sunt doua tipuri de resurse folosite de modulu MySQL. Primul este identificatorul
+	 de legatura pentru conexiunea la baza de date, al doilea este resursa care &quot;tine&quot;
 	 rezultatul unei cereri sql.
     </para>
    </section>
@@ -44,8 +44,8 @@
    <section id="mysql.examples">
    &reftitle.examples;
     <para>
-     Acest exemplu simplu vă va arata cum să vă conectaţi, cum să faceţi o cerere sql, cum 
-	 sa afişaţi rezultatul şi în final să vă deconectaţi de la MySQL.
+     Acest exemplu simplu va va arata cum sa va conectati, cum sa faceti o cerere sql, cum 
+	 sa afisati rezultatul si in final sa va deconectati de la MySQL.
      <example>
       <title>Exemplu general - MySQL</title>
       <programlisting role="php">
@@ -53,16 +53,16 @@
 <?php
 // Conectarea la server
 $link = mysql_connect('mysql_host', 'mysql_user', 'mysql_password')
-    or die('Nu mă pot conecta la server: ' . mysql_error());
+    or die('Nu ma pot conecta la server: ' . mysql_error());
 echo 'Connected successfully';
 // Selectarea unei baze da date
 mysql_select_db('my_database') or die('Nu am putut schimba baza de date');
 
 // Crearea unei cereri SQL si rularea ei
 $query = 'SELECT * FROM my_table';
-$result = mysql_query($query) or die('Cererea SQL a fost incorectă: ' . mysql_error());
+$result = mysql_query($query) or die('Cererea SQL a fost incorecta: ' . mysql_error());
 
-// Afişarea rezultatelor în format HTML
+// Afisarea rezultatelor in format HTML
 echo "<table>\n";
 while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
     echo "\t<tr>\n";
@@ -76,7 +76,7 @@ echo "</table>\n";
 // eliberarea rezultatului
 mysql_free_result($result);
 
-// Închiderea conexiunii
+// Inchiderea conexiunii
 mysql_close($link);
 ?>
 ]]>

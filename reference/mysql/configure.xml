@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.2 $ -->
+<!-- $Revision: 1.3 $ -->
 <section id="mysql.installation">
  &reftitle.install;
  <para id="mysql.configure">
-  Folosind opţiunea de configurare <option role="configure">--with-mysql[=DIR]</option>
-  aveţi posibilitatea de a vă conecta la baze de date MySQL folosind PHP.
+  Folosind optiunea de configurare <option role="configure">--with-mysql[=DIR]</option>
+  aveti posibilitatea de a va conecta la baze de date MySQL folosind PHP.
  </para>
  <para>
-  În PHP 4, opţiunea <option role="configure">--with-mysql</option> este 
-  implicită.  Pentru a dezactiva această setare implicită, puteţi folosi
-  opţiunea <option role="configure">--without-mysql</option>.  
-  De asemenea în PHP 4, dacă folosiţi MySQL fără a specifica calea către
-  directorul DIR în care este instalat MySQL, PHP va folosi librăriile 
+  In PHP 4, optiunea <option role="configure">--with-mysql</option> este 
+  implicita.  Pentru a dezactiva aceasta setare implicita, puteti folosi
+  optiunea <option role="configure">--without-mysql</option>.  
+  De asemenea in PHP 4, daca folositi MySQL fara a specifica calea catre
+  directorul DIR in care este instalat MySQL, PHP va folosi librariile 
   MySQL incluse in sursa PHP.
-  In Windows, nu există un DLL, ci este pur şi simplu inclus in PHP 4.
-  Utilizatorii care folosesc alte aplicaţii care folosesc MySQL (drept examplu,
-  auth-mysql) sunt sfătuiţi să nu folosească librăriile incluse în sursa PHP,
-  şi să specifice directorul în care a fost instalat MySQL:
-  <option role="configure">--with-mysql=/cale/către/mysql</option>.
-  Această setare va forţa PHP să solosească librăriile furnizate de MySQL, 
-  evitând posibile conflicte.
+  In Windows, nu exista un DLL, ci este pur si simplu inclus in PHP 4.
+  Utilizatorii care folosesc alte aplicatii care folosesc MySQL (drept examplu,
+  auth-mysql) sunt sfatuiti sa nu foloseasca librariile incluse in sursa PHP,
+  si sa specifice directorul in care a fost instalat MySQL:
+  <option role="configure">--with-mysql=/cale/catre/mysql</option>.
+  Aceasta setare va forta PHP sa soloseasca librariile furnizate de MySQL, 
+  evitand posibile conflicte.
  </para>
  <para>
-  În PHP 5, MySQL nu mai este implicit, nici nu este furnizată o librărie MySQL.
-  Citiţi <link linkend="faq.databases.mysql.php5">
+  In PHP 5, MySQL nu mai este implicit, nici nu este furnizata o librarie MySQL.
+  Cititi <link linkend="faq.databases.mysql.php5">
   FAQ</link> pentru detalii.
  </para>
 
  <note>
   <para>
-   Utilizatorii Windows vor trebui să activeze <filename>php_mysql.dll</filename>
-   în &php.ini; şi fie să creeze o copie a fişierului <filename>libmysql.dll</filename>
-   în directorul Windows al sistemului, fie să modifice <envar>PATH</envar> astfel încât să cuprindă locaţia
-   fişierului <filename>libmysql.dll</filename>.
+   Utilizatorii Windows vor trebui sa activeze <filename>php_mysql.dll</filename>
+   in &php.ini; si fie sa creeze o copie a fisierului <filename>libmysql.dll</filename>
+   in directorul Windows al sistemului, fie sa modifice <envar>PATH</envar> astfel incat sa cuprinda locatia
+   fisierului <filename>libmysql.dll</filename>.
   </para>
   <para>
    Acest lucru va rezolva eroarea "Unable to load dynamic library './php_mysql.dll'".
@@ -40,32 +40,32 @@
  </note>
  
  <para>
-   Pentru a compila PHP cu suport MySQL, folosiţi opţiunea 
+   Pentru a compila PHP cu suport MySQL, folositi optiunea 
   <option role="configure"> --with-mysql=[DIR]</option> unde 
-  <literal>[DIR]</literal> indică locaţia unde a fost instalat MySQL.
+  <literal>[DIR]</literal> indica locatia unde a fost instalat MySQL.
  </para>
  <para>
-  Această extense nu suportă toate funcţionalităţile unor versiuni MySQL mai mari 
-  4.1.0. Pentru toate funcţionalităţile vă recomandăm <link linkend="ref.mysqli">MySQLi</link>.
+  Aceasta extense nu suporta toate functionalitatile unor versiuni MySQL mai mari 
+  4.1.0. Pentru toate functionalitatile va recomandam <link linkend="ref.mysqli">MySQLi</link>.
  </para>
  <para>
-  Dacă doriţi să instalaţi şi extensia MySQL precum şi extensia MySQLi
-  în acelaşi timp trebuie sa folosiţi aceaşi librările furnizată de MySQL 
+  Daca doriti sa instalati si extensia MySQL precum si extensia MySQLi
+  in acelasi timp trebuie sa folositi aceasi librarile furnizata de MySQL 
   pentru a evita conflictele.
  </para>
  <warning>
   <para>
-   Întreruperi neaşteptate şi probleme la pornirea PHP poti fi întâlnite 
-   dacă se foloseşte această extensie în acelaşi timp cu extensia 
+   Intreruperi neasteptate si probleme la pornirea PHP poti fi intalnite 
+   daca se foloseste aceasta extensie in acelasi timp cu extensia 
    <link linkend="ref.recode">recode</link>.
-   Vedeţi <link linkend="ref.recode">recode</link> pentru mai multe informaţii.
+   Vedeti <link linkend="ref.recode">recode</link> pentru mai multe informatii.
   </para>
  </warning>
  <note>
   <para>
-   Dacă aveţi nevoie de un set de caractere altul decât <emphasis>latin</emphasis>
-   (implicit), va trebui să instalaţi librăria (care nu vă este furnizată) libmysql 
-   compilată cu setul de caractere respectiv. 
+   Daca aveti nevoie de un set de caractere altul decat <emphasis>latin</emphasis>
+   (implicit), va trebui sa instalati libraria (care nu va este furnizata) libmysql 
+   compilata cu setul de caractere respectiv. 
   </para>
  </note>
 </section>

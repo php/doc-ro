@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.1 $ -->
+<!-- $Revision: 1.2 $ -->
 <section id="mysql.configuration">
  &reftitle.runtime;
  &extension.runtime;
  <para>
   <table>
-   <title>Opţiuni de configurare MySQL</title>
+   <title>Optiuni de configurare MySQL</title>
    <tgroup cols="3">
     <thead>
      <row>
@@ -68,7 +68,7 @@
     </tbody>
    </tgroup>
   </table>
-  Pentru alte detalii si definiţii pentru constantele PHP_INI_* vă recomandăm 
+  Pentru alte detalii si definitii pentru constantele PHP_INI_* va recomandam 
   <function>ini_set</function>.
 </para>
 
@@ -83,7 +83,7 @@
    </term>
    <listitem>
     <para>
-     Dacă sunt permise
+     Daca sunt permise
      <link linkend="features.persistent-connections">conexiuni persistente</link>
      la MySQL.
     </para>
@@ -97,7 +97,7 @@
    </term>
    <listitem>
     <para>
-     Numărul maximum de conexiuni persistente la MySQL pentru fiecare proces.
+     Numarul maximum de conexiuni persistente la MySQL pentru fiecare proces.
     </para>
    </listitem>
   </varlistentry>
@@ -109,8 +109,8 @@
    </term>
    <listitem>
     <para>
-     Numărul maxim de conexiuni per proces, cu tot cu conexiuni persistente. 
-	 Atentie! este vorba de numarul de conexiuni şi nu de numărul de cereri către server.
+     Numarul maxim de conexiuni per proces, cu tot cu conexiuni persistente. 
+	 Atentie! este vorba de numarul de conexiuni si nu de numarul de cereri catre server.
     </para>
    </listitem>
   </varlistentry>
@@ -122,9 +122,9 @@
    </term>
    <listitem>
     <para>
-     Trace mode. Dacă <literal>mysql.trace_mode</literal> este activat, avertismentele 
-     referitoare la scanari de tabele/indecşi, seturi de rezultate neeliberate, şi erori 
-	 SQL vor fi afişate conform cu setarile PHP.
+     Trace mode. Daca <literal>mysql.trace_mode</literal> este activat, avertismentele 
+     referitoare la scanari de tabele/indecsi, seturi de rezultate neeliberate, si erori 
+	 SQL vor fi afisate conform cu setarile PHP.
 	 (Introdus de la PHP 4.3.0)
     </para>
    </listitem>
@@ -138,11 +138,11 @@
    <listitem>
     <para>
      Portul TCP folosit implicit pentru conectarea la MySQL
-	 dacă nu este specificat alt port. Daca nici un port 
+	 daca nu este specificat alt port. Daca nici un port 
 	 implicit nu este definit PHP va folosi variabila de sistem
-	 <envar>MYSQL_TCP_PORT</envar>, valoarea <literal>mysql-tcp</literal> din fişierul 
-     <filename>/etc/services</filename> sau constanta definită la compilare
-     <constant>MYSQL_PORT</constant>, în această ordine. Sistemele Windows vor 
+	 <envar>MYSQL_TCP_PORT</envar>, valoarea <literal>mysql-tcp</literal> din fisierul 
+     <filename>/etc/services</filename> sau constanta definita la compilare
+     <constant>MYSQL_PORT</constant>, in aceasta ordine. Sistemele Windows vor 
 	 folosi doar constanta <constant>MYSQL_PORT</constant>.
     </para>
    </listitem>
@@ -155,8 +155,8 @@
    </term>
    <listitem>
     <para>
-     Numele socket folosită la conectare la un server local
-     de baze de date dacă nu se defineşte un socket la conectare.
+     Numele socket folosita la conectare la un server local
+     de baze de date daca nu se defineste un socket la conectare.
     </para>
    </listitem>
   </varlistentry>
@@ -167,9 +167,9 @@
    </term>
    <listitem>
     <para>
-	 Gazda implicită pentru conectarea la o bază de date dacă 
-	 nu se specifică alta. Această valoare nu se aplică dacă 
-	 PHP rulează în &safemode;.
+	 Gazda implicita pentru conectarea la o baza de date daca 
+	 nu se specifica alta. Aceasta valoare nu se aplica daca 
+	 PHP ruleaza in &safemode;.
     </para>
    </listitem>
   </varlistentry>
@@ -182,8 +182,8 @@
    <listitem>
     <para>
      Numele utilizatorului implicit pentru conectarea la o 
-	 bază de date dacă nu se specifică alta. Această 
-	 valoare nu se aplică dacă PHP rulează în &safemode;.
+	 baza de date daca nu se specifica alta. Aceasta 
+	 valoare nu se aplica daca PHP ruleaza in &safemode;.
     </para>
    </listitem>
   </varlistentry>
@@ -195,9 +195,9 @@
    </term>
    <listitem>
     <para>
-	 Parola implicită pentru conectarea la o bază de date dacă 
-	 nu se specifică alta. Această valoare nu se aplică dacă 
-	 PHP rulează în &safemode;.
+	 Parola implicita pentru conectarea la o baza de date daca 
+	 nu se specifica alta. Aceasta valoare nu se aplica daca 
+	 PHP ruleaza in &safemode;.
     </para>
    </listitem>
   </varlistentry>
@@ -208,8 +208,8 @@
    </term>
    <listitem>
     <para>
-     Timpul cât PHP aşteaptă conectarea la MySQL. Pe Linux acest timp se aplică si la
-	 timpul de aşteptare pentru primul răspuns din aprtea serverului.
+     Timpul cat PHP asteapta conectarea la MySQL. Pe Linux acest timp se aplica si la
+	 timpul de asteptare pentru primul raspuns din aprtea serverului.
     </para>
    </listitem>
   </varlistentry>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.1 $ -->
+<!-- $Revision: 1.2 $ -->
 <section id="mysql.constants">
  &reftitle.constants;
  &extension.constants;
  <para>
-  De la PHP 4.3.0 este posibil să specificaţi modificatori (flags) opţionali
-  pentru funcţiile
-  <function>mysql_connect</function> şi <function>mysql_pconnect</function>.
-  Următoarele constante sunt definite:
+  De la PHP 4.3.0 este posibil sa specificati modificatori (flags) optionali
+  pentru functiile
+  <function>mysql_connect</function> si <function>mysql_pconnect</function>.
+  Urmatoarele constante sunt definite:
   <table>
    <title>Constante MySQL</title>
     <tgroup cols="2">
@@ -20,22 +20,22 @@
      <tbody>
       <row>
        <entry>MYSQL_CLIENT_COMPRESS</entry>
-       <entry>Foloseşte compresie</entry>
+       <entry>Foloseste compresie</entry>
       </row>
       <row>
        <entry>MYSQL_CLIENT_IGNORE_SPACE</entry>
-       <entry>Permite folosirea spaţiilor după numele funcţiilor (Atenţie ! 
-	    este vorba de funcţiile MySQL folosite în interiorul cererilor SQL nu de funcţii PHP.)</entry>
+       <entry>Permite folosirea spatiilor dupa numele functiilor (Atentie ! 
+	    este vorba de functiile MySQL folosite in interiorul cererilor SQL nu de functii PHP.)</entry>
       </row>
       <row>
        <entry>MYSQL_CLIENT_INTERACTIVE</entry>
        <entry>Permite interactive_timeout secunde (in loc de wait_timeout)
-	    fără activitate înainte de a închide conexiunea.</entry>
+	    fara activitate inainte de a inchide conexiunea.</entry>
       </row>
       <row>
        <entry>MYSQL_CLIENT_SSL</entry>
-       <entry>Foloseşte criptare SSL. Acest modificator este valabil doar pentru versiuni ale librăriilor MySQL
-	     mai mari sau egale cu 4.0. Versiunea 3.23.x este inclusă atât în  PHP 4 cât şi în versiunile 
+       <entry>Foloseste criptare SSL. Acest modificator este valabil doar pentru versiuni ale librariilor MySQL
+	     mai mari sau egale cu 4.0. Versiunea 3.23.x este inclusa atat in  PHP 4 cat si in versiunile 
 		 binare petnru Windows ale PHP 5.
        </entry>
       </row>
@@ -45,9 +45,9 @@
  </para>
 
  <para>
-  Funcţia <function>mysql_fetch_array</function> foloseşte constante 
-  pentru diferite tipuri de reyultate.
-  Următoarele constante sunt definite:
+  Functia <function>mysql_fetch_array</function> foloseste constante 
+  pentru diferite tipuri de rezultate.
+  Urmatoarele constante sunt definite:
   <table>
    <title>Constante MySQL mysql_fetch_*</title>
    <tgroup cols="2">
@@ -61,21 +61,21 @@
      <row>
       <entry>MYSQL_ASSOC</entry>
       <entry>
-       Coloanele sunt returnate in tablouri având drept index numele coloanei din tabelul MySQL.
+       Coloanele sunt returnate in tablouri avand drept index numele coloanei din tabelul MySQL.
       </entry>
      </row>
      <row>
       <entry>MYSQL_BOTH</entry>
       <entry>
-       Coloanele sunt returnate in tablouri având drept index numele coloanei MySQL precum si un index numeric.
-	   (Atenţie ! acest modificator dublează mărimea tabloului rezultat. Pentru a afla numărul de cloane întoarse
-	    împărţiţi la 2 rezultatul oferit de funcţia PHP <function>count</function>.)
+       Coloanele sunt returnate in tablouri avand drept index numele coloanei MySQL precum si un index numeric.
+	   (Atentie ! acest modificator dubleaza marimea tabloului rezultat. Pentru a afla numarul de cloane intoarse
+	    impartiti la 2 rezultatul oferit de functia PHP <function>count</function>.)
       </entry>
      </row>
      <row>
       <entry>MYSQL_NUM</entry>
       <entry>
-        Coloanele sunt returnate in tablouri având numai index numeric. Numerotarea începe de la 0, unde 0 reprezintă prima coloană.
+        Coloanele sunt returnate in tablouri avand numai index numeric. Numerotarea incepe de la 0, unde 0 reprezinta prima coloana.
       </entry>
      </row>
     </tbody>
