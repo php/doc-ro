@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- $Revision: 1.2 $ -->
+<!-- $Revision: 1.3 $ -->
 <!-- EN-Revision: install.general.xml 1.1 Maintainer: spooky Status: ready -->
 <chapter id="installation">
  <title>Instalare</title>
@@ -19,17 +19,17 @@ secþiunea <link linkend="intro-whatcando">Ce poate face PHP?</link>
    <para>
     Pentru prima ºi cea mai utilizatã formã, ai nevoie de trei lucruri: însuºi 
 PHP-ul, un server de web ºi un navigator web. Probabil ai deja un navigator 
-web, ºi, depinzând de instalarea sistemului tãu de operare, s-ar putea sã 
+web ºi, depinzând de instalarea sistemului tãu de operare, s-ar putea sã 
 ai ºi un server de web (ex. Apache pe Linux sau IIS pe Windows).
     Ai putea, de asemenea, sã inchiriezi spaþiu pe web de la o companie. În acest 
-fel, nu trebuiascã sã setezi tu personal, doar sã scrii scripturile PHP, le 
+fel, nu trebuie sã setezi tu personal, doar sã scrii scripturile PHP, le 
 transferi pe server pe care ai închiriat spaþiul ºi vezi rezultatul obþinut 
 în browser. Poþi gãsi o listã cu companii care oferã hosting la <ulink url="&url.php.hosts;">&url.php.hosts;</ulink>.
    </para>
    <para>
     Dacã instalezi serverul ºi PHP de unul singur, ai la dispoziþie douã 
 metode de a conecta PHP de server. Pentru majoritatea serverelor PHP are un modul 
-direct de interfaþã (numit ºi SAPI). Aceste server includ Apache, Microsoft 
+direct de interfaþã (numit ºi SAPI). Aceste servere includ Apache, Microsoft 
 Internet Information Server, Netscape ºi iPlanet. Multe alte server au 
 suport pentru ISAPI, modulul de interfata Microsoft (OmniHTTPd spre 
 exemplu). Dacã PHP nu are suport de modul pentru serverul tãu de web, îl 
@@ -84,75 +84,75 @@ sistemele HP-UX.
 <![CDATA[
 From: paul_mckay@clearwater-it.co.uk
 04-Jan-2001 09:49
-(These tips are for PHP 4.0.4 and Apache v1.3.9) 
+(Aceste trucuri sunt pentgru PHP 4.0.4 ºi Apache v1.3.9) 
 
-So you want to install PHP and Apache on a HP-UX 10.20 box? 
+Deci vrei sã instalezi PHP ºi Apache pe o maºinã HP-UX 10.20? 
 
-1. You need gzip, download a binary distribution from
+1. Ai nevoie de gzip, descarcã o distribuþie binarã de la 
 http://hpux.connect.org.uk/ftp/hpux/Gnu/gzip-1.2.4a/gzip-1.2.4a-sd-10.20.depot
 .Z
-uncompress the file and install using swinstall 
+decompacteazã fiºierul ºi instaleazã utilizând using swinstall 
 
-2. You need gcc, download a binary distribution from 
+2. Ai nevoie de gcc, descarcã o distribuþie binarã de la 
 http://gatekeep.cs.utah.edu/ftp/hpux/Gnu/gcc-2.95.2/gcc-2.95.2-sd-10.20.depot.
 gz 
-gunzip this file and install gcc using swinstall. 
+gunzip acest fiºier ºi instaleazã gcc utilizând swinstall. 
 
-3. You need the GNU binutils, you can download a binary distribution from 
+3. Ai nevoie de GNU binutils, descarcã o distribuþie binarã de la 
 http://hpux.connect.org.uk/ftp/hpux/Gnu/binutils-2.9.1/binutils-2.9.1-sd-10.20
 .depot.gz 
-gunzip and install using swinstall. 
+gunzip acest fiºier ºi instaleazã utilizând swinstall. 
 
-4. You now need bison, you can download a binary distribution from 
+4. Ai nevoie de bison, descarcã o distribuþie binarã de la 
 http://hpux.connect.org.uk/ftp/hpux/Gnu/bison-1.28/bison-1.28-sd-10.20.depot.g
 z 
-install as above. 
+ºi instaleazã ca mai sus. 
 
-5. You now need flex, you need to download the source from one of the
-http://www.gnu.org mirrors. It is in the <filename>non-gnu</filename> 
-directory of the ftp site. 
-Download the file, gunzip, then tar -xvf it. Go into the newly created flex
-directory and do a ./configure, then a make, and then a make install 
+5. Ai nevoie de flex, trebuie sã descarci sursele de la
+http://www.gnu.org mirrors. Este în directorul <filename>non-gnu</filename> 
+a site-ului FTP. 
+Descarcã fiºierul, gunzip, apoi tar -xvf asupra lui. Du-te în directorul flex nou creat
+ºi dã-i ./configure, apoi make, dupã care make install 
 
-If you have errors here, it's probably because gcc etc. are not in your
-PATH so add them to your PATH. 
+Dacã apar erori, acestea se datoreazã, probabil, faptului cã gcc etc. nu sînt în
+PATH aºa cã adaugã-le în PATH. 
 
-Right, now into the hard stuff. 
+Ei, ºi-acum începe partea grea. 
 
-6. Download the PHP and apache sources. 
+6. Descarcã sursele PHP ºi Apache. 
 
-7. gunzip and tar -xvf them. 
+7. gunzip ºi tar -xvf asupra lor. 
 
-We need to hack a couple of files so that they can compile ok. 
+Trebuie sã modificãm o serie de fiºiere pentru a putea compila sursele.
 
-8. Firstly the configure file needs to be hacked because it seems to lose
-track of the fact that you are a hpux machine, there will be a
-better way of doing this but a cheap and cheerful hack is to put 
+8. Mai întîi fiºierul de configurare are nevoie sã fie modificat deoarece pare sã nu sesizeze 
+faptul cã ruleazã pe o maºinã hpux; cea mai bunã cale de a remedia 
+problema este sã adaugi  
     lt_target=hpux10.20 
-on line 47286 of the configure script. 
+în linia 47286 a scriptului de configurare. 
 
-9. Next, the Apache GuessOS file needs to be hacked. Under
-apache_1.3.9/src/helpers change line 89 from 
+9. Urmeazã sã fie modificat fiºierul Apache GuessOS. În 
+apache_1.3.9/src/helpers schimbã linia 89 de la 
     "echo "hp${HPUXMACH}-hpux${HPUXVER}"; exit 0" 
-to: 
+la: 
     "echo "hp${HPUXMACH}-hp-hpux${HPUXVER}"; exit 0" 
     
-10. You cannot install PHP as a shared object under HP-UX so you must compile
-it as a static, just follow the instructions at the Apache page. 
+10. Nu poþi instala PHP ca obiect partajat sub HP-UX aºa cã trebuie sã-l compilezi
+static, pentru asta vezi instrucþiunile de pe site-ul Apache. 
 
-11. PHP and apache should have compiled OK, but Apache won't start. you need
-to create a new user for Apache, eg www, or apache. You then change lines 252
-and 253 of the conf/httpd.conf in Apache so that instead of 
+11. PHP ºi Apache pot fi compilate OK, dar Apache nu porneºte. Trebuie
+sã creezi un nou user pentru Apache, de exemplu www, sau apache. Schimbã apoi liniile 252
+ºi 253 a fiºierului conf/httpd.conf al Apache-ului aºa încât în loc de 
     User nobody 
     Group nogroup 
-you have something like 
+sã ai ceva de genul 
     User www 
     Group sys 
 
-This is because you can't run Apache as nobody under hp-ux. 
-Apache and PHP should then work. 
+Asta deoarece nu poþi rula Apache ca nimeni sub hp-ux. 
+Acum Apache ºi PHP ar trebui sã meargã. 
 
-Hope this helps somebody,
+Cu speranþa cã va ajuta pe cineva,
 Paul Mckay.
 ]]>
   </screen>
