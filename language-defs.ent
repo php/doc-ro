@@ -8,8 +8,8 @@
 <!ENTITY Features          "Caracteristici">
 <!ENTITY FunctionReference "Documentaþia funcþiilor">
 <!ENTITY Appendixes        "Anexe">
-<!ENTITY PEAR              "PEAR: colecþia PHP de extensii ºi aplicaþii (PEAR : PHP Extension and Application Repository)">
+<!ENTITY PEAR              "PEAR: colecþie PHP de extensii ºi aplicaþii (PEAR : PHP Extension and Application Repository)">
 <!ENTITY FAQ               "FAQ: Întrebãri frecvente">
 <!ENTITY FAQabbrev         "FAQ">
-<!ENTITY FunctionIndex     "Lista funcþiilor">
+<!ENTITY FunctionIndex     "Indexul funcþiilor">
 
