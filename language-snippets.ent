@@ -38,3 +38,8 @@
 <!ENTITY sm.uidcheck.dir 'Verificã dacã directorul în care sînteþi pe cale sã lucraþi are acelaºi UID ca scriptul care se executã.'>
 
 <!ENTITY sm.disabled 'Aceastã funcþie e dezactivatã în <link linkend="features.safe-mode">safe-mode</link>.'>
+
+<!-- Common pieces in partintro-sections -->
+<!ENTITY no.config '<para>Aceastã extensie nu defineºte directive de configurare.</para>'>
+<!ENTITY no.resource '<para>Aceastã extensie nu defineºte tipuri de resurse.</para>'>
+<!ENTITY no.constants '<para>Aceastã extensie nu defineºte constante.</para>'>
