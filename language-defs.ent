@@ -4,14 +4,14 @@
 <!ENTITY Date              "Data:">
 <!ENTITY GettingStarted    "Introducere">
 <!ENTITY Installation      "Instalare">
-<!ENTITY LanguageReference "Documentaþia limbajului">
+<!ENTITY LanguageReference "Documentatia limbajului">
 <!ENTITY Features          "Caracteristici">
-<!ENTITY FunctionReference "Documentaþia funcþiilor">
+<!ENTITY FunctionReference "Documentatia functiilor">
 <!ENTITY Appendixes        "Anexe">
-<!ENTITY PEAR              "PEAR: colecþie PHP de extensii ºi aplicaþii (PEAR : PHP Extension and Application Repository)">
-<!ENTITY FAQ               "FAQ: Întrebãri frecvente">
+<!ENTITY PEAR              "PEAR: colectie PHP de extensii si aplicatii (PEAR : PHP Extension and Application Repository)">
+<!ENTITY FAQ               "FAQ: Intrebari frecvente">
 <!ENTITY FAQabbrev         "FAQ">
-<!ENTITY FunctionIndex     "Indexul funcþiilor">
+<!ENTITY FunctionIndex     "Indexul functiilor">
 <!ENTITY CHMEdition        "HTML Help Edition">
 <!ENTITY ReservedConstants "Constante predefinite">
 
