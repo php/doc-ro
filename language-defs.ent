@@ -1,15 +1,15 @@
 <!-- $Revision$ -->
 
 <!ENTITY PHPManual         "Manual PHP">
-<!ENTITY Date              "Date:">
-<!ENTITY GettingStarted    "Sa incepeme">
+<!ENTITY Date              "Data:">
+<!ENTITY GettingStarted    "Introducere">
 <!ENTITY Installation      "Instalare">
-<!ENTITY LanguageReference "Referinta limbaj">
-<!ENTITY Features          "Facilitati">
-<!ENTITY FunctionReference "Referinta functii">
-<!ENTITY Appendixes        "Adnotari">
-<!ENTITY PEAR              "PEAR: Extensia PHP si Aplicatia Repository (?!?)">
-<!ENTITY FAQ               "FAQ: Cele mai des intalnite intrebari">
+<!ENTITY LanguageReference "Documentaþia limbajului">
+<!ENTITY Features          "Caracteristici">
+<!ENTITY FunctionReference "Documentaþia funcþiilor">
+<!ENTITY Appendixes        "Anexe">
+<!ENTITY PEAR              "PEAR: colecþia PHP de extensii ºi aplicaþii (PEAR : PHP Extension and Application Repository)">
+<!ENTITY FAQ               "FAQ: Intrebãri frecvente">
 <!ENTITY FAQabbrev         "FAQ">
-<!ENTITY FunctionIndex     "Index functii">
+<!ENTITY FunctionIndex     "Lista funcþiilor">
 
