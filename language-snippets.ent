@@ -4,73 +4,67 @@
 <emphasis>EXPERIMENTALÃ</emphasis>. Comportamentul acestei extensii,
 incluzând numele funcþiilor, ºi orice altceva documentat despre aceastã
 extensie s-ar putea schimba farã anunþ intr-o viitoare apariþie a PHP.
-Aveþi grijã ºi folosiþi aceasta extensie pe riscul vostru.</simpara>'>
+Aveþi grijã ºi folosiþi aceastã extensie pe riscul vostru.</simpara>'>
 
-<!ENTITY warn.experimental.func '<warning><simpara>This function is
-<emphasis>EXPERIMENTAL</emphasis>. The behaviour of this function, the
-name of this function, and anything else documented about this
-function may change in a future release of PHP without notice.  Be
-warned and use this function at your own risk.</simpara>'>
+<!ENTITY warn.experimental.func '<warning><simpara>Aceastã funcþie este 
+<emphasis>EXPERIMENTALÃ</emphasis>. Comportamentul acestei funcþii,
+numele funcþiei, ºi orice altceva documentat despre aceastã
+funcþie s-ar putea schimba farã anunþ intr-o viitoare apariþie a PHP.
+Aveþi grijã ºi folosiþi aceastã extensie pe riscul vostru.</simpara>'>
 
-<!ENTITY warn.undocumented.func '<warning><simpara>This function is
-currently not documented, only the argument list is
-available.</simpara>'>
+<!ENTITY warn.undocumented.func '<warning><simpara>Aceastã funcþie nu este
+momentan documentatã. Numai lista de argumente este disponibilã.</simpara>'>
 
-<!ENTITY tip.ob-capture '<tip><simpara>As with anything that outputs
-its result directly to the browser, you can use the <link
-linkend="ref.outcontrol">output-control functions to capture
-the output of this function, and save it - for example - in a
-<type>string</type>.</simpara>'>
+<!ENTITY tip.ob-capture '<tip><simpara>Odatã ce orice scoate rezultatul
+direct cãtre navigator, poþi folosi <link linkend="ref.outcontrol">funcþia
+de control a ieºirii (output-control)</link> pentru a captura rezultatul 
+acestei funcþii ºi de a-l salva - de exemplu - intr-un ºir (<type>string</type>).</simpara>'>
 
-<!ENTITY tip.fopen-wrapper '<tip><simpara>You can use a URL as a
-filename with this function if the "fopen wrappers" have been enabled.
-See <function>fopen</function> for more details.</simpara>'>
+<!ENTITY tip.fopen-wrapper '<tip><simpara>Poþi folosi acest URL ca un nume de
+fiºier folosind aceastã funcþit dacã "fopen wrappers" a fost activatã.
+Vezi <function>fopen</function> pentru mai multe detalii.</simpara>'>
 
-<!ENTITY return.success 'Returns &true; on success, &false; on failure.'>
+<!ENTITY return.success 'Returneazã &true; in caz de success, &false; in caz de eºec.'>
 
-<!ENTITY return.falseproblem '<warning><simpara>This function may
-return &false;, but may also return a value evaluating to &false; in a
-simple if statement. Please use <link
-linkend="language.operators.comparison">the === operator for
-testing the return value of this function.</simpara>'>    
+<!ENTITY return.falseproblem '<warning><simpara>Aceastã funcþie e posibile sã
+returneze &false;, dar poate returna deasemenea o valoare ce poate fi evaluatã
+ca fiind &false; într-o declaraþie simpla. Te rog foloseºte <link
+linkend="language.operators.comparison">operatorul ===</link> pentru
+a testa valoarea returnatã a acestei funcþii.</simpara>'>    
 
 <!-- Various notes -->
-<!ENTITY note.not-bin-safe '<warning><simpara>This function
-is not (yet) binary safe!</simpara>'>
+<!ENTITY note.not-bin-safe '<warning><simpara>Aceastã funcþie nu este (incã)
+sigurã ca binar!</simpara>'>
 
-<!ENTITY note.bin-safe '<note><simpara>This function is
-binary-safe.</simpara>'>
+<!ENTITY note.bin-safe '<note><simpara>Aceastp funcþie este binar-sigurã.</simpara>'>
 
-<!ENTITY note.no-windows '<note><simpara>This function is not
-implemented on Windows platforms.</simpara>'>
+<!ENTITY note.no-windows '<note><simpara>Aceastã funcþie nu este implementatã
+pe platformele Windows.</simpara>'>
 
-<!ENTITY note.func-callback '<note><simpara>Instead of a function name, an
-array containing an object reference and a method name can also be
-supplied.</simpara>'>
+<!ENTITY note.func-callback '<note><simpara>În locul numelui unei funcþii,
+un vector conþinând o referinþã cãtre un obiect sau numele unei metode poate
+fi folositã in schimb.</simpara>'>
 
 <!-- Notes for safe-mode limited functions: -->
-<!ENTITY note.sm.disabled '<note><simpara>&sm.disabled;</simpara>'>
+<!ENTITY note.sm.disabled '<note><simpara>&sm.dezactivat;</simpara>'>
 
-<!ENTITY note.sm.uidcheck '<note><simpara>When <link 
-linkend="features.safe-mode">safe mode is enabled, PHP checks whether 
-the file(s)/directories you are about to operate on have the same UID as the 
-script that is being executed.</simpara>'>
+<!ENTITY note.sm.uidcheck '<note><simpara>Cand <link 
+linkend="features.safe-mode">modul sigur</link> este activat, PHP verificã dacã
+fiºierul(le)/directoarele asupra cãrora operezi au acelaºi UID
+ca scriptul ce trebuie executat.</simpara>'>
 
-<!ENTITY note.sm.uidcheck.dir '<note><simpara>When <link 
-linkend="features.safe-mode">safe mode is enabled, PHP checks whether 
-the directory in which you are about to operate has the same UID as the 
-script that is being executed.</simpara>'>
+<!ENTITY note.sm.uidcheck.dir '<note><simpara>Cand <link 
+linkend="features.safe-mode">modul sigur</link> este activat, PHP verificã dacã
+directorul în care vrei sã operezi are acelaºi UID ca scriptul ce trebuie executat.</simpara>'>
 
 <!-- Common pieces in features/safe-mode.xml 
      Jade doesn't allow in-line entities, so I put them here... Though they 
      should have been inline in safe-mode.xml -->
-<!ENTITY sm.uidcheck 'Checks whether the file(s)/directories you are 
-about to operate on have the same UID as the script that is being
-executed.'>
+<!ENTITY sm.uidcheck 'Verificã dacã fisierul(le) cu care operezi au acelaºi UID
+ca ºi scriptul ce se executã.'>
 
-<!ENTITY sm.uidcheck.dir 'Checks whether the directory in which
-you are about to operate has the same UID as the script that is being
-executed.'>
+<!ENTITY sm.uidcheck.dir 'Verificã dacã în care operezi au acelaºi UID
+ca ºi scriptul ce se executã.'>
 
-<!ENTITY sm.disabled 'This function is disabled in <link 
-linkend="features.safe-mode">safe mode.'>
+<!ENTITY sm.disabled 'Aceastã funþie e dezactivatã in <link 
+linkend="features.safe-mode">modul sigur</link>.'>
