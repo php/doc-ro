@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.1 $ -->
+<!-- $Revision: 1.2 $ -->
  <reference id="ref.oracle">
   <title>Oracle</title>
   <titleabbrev>Oracle</titleabbrev>
@@ -7,7 +7,7 @@
   <refentry id="function.ora-bind">
    <refnamediv>
     <refname>Ora_Bind</refname>
-    <refpurpose>Leagă o variabilă PHP variable la un parametru Oracle</refpurpose>
+    <refpurpose>Leagă o variabilă PHP la un parametru Oracle</refpurpose>
    </refnamediv>
    <refsect1>
     <title>Descriere</title>
