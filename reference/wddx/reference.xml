@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.1 $ -->
+<!-- $Revision: 1.2 $ -->
 <reference id="ref.wddx">
 	<title>Funcţii WDDX</title>
 	<titleabbrev>WDDX</titleabbrev>
@@ -71,6 +71,7 @@ print $packet;
 			</informalexample>
 		</para>
 	</partintro>
+
 &reference.wddx.functions;
 
 </reference>
