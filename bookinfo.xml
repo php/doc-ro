@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.8 $ -->
+<!-- $Revision: 1.9 $ -->
 
  <bookinfo id="bookinfo">
   <authorgroup id="authors">
@@ -92,6 +92,9 @@
    <collab>
    <collabname>Cristian Câmpean</collabname>
    </collab>
+   <collab>
+   <collabname>Serban Gheorghe Ghita</collabname>
+   </collab>
   </authorgroup>
 
   <copyright>
@@ -101,13 +104,16 @@
    <year>2000</year>
    <year>2001</year>
    <year>2002</year>
+   <year>2003</year>
+   <year>2004</year>
    <holder>Grupul de Documentare PHP</holder>
   </copyright>
 
   <legalnotice id="copyright">
    <title>Copyright</title>
    <simpara>
-    Acest manual este &copy; Copyright 1997, 1998, 1999, 2000, 2001, 2002 al Grupului de Documentare PHP.  Membrii acestui grup sunt listaţi pe prima pagină a prezentului manual.
+    Acest manual este &copy; Copyright 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004 al Grupului de Documentare PHP.  
+Membrii acestui grup sunt listaţi pe prima pagină a prezentului manual.
    </simpara>
    <simpara>
     Manualul poate fi redistribuit sub termenii Licenţei GNU General Public License aşa cum a fost publicată de Free Software Foundation; fie ea versiunea 2 a Licenţei, sau (la opţiunea dv.) orice versiune ulterioară.
