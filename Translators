@@ -117,7 +117,7 @@ functions/mssql.xml			***
 functions/muscat.xml			***
 functions/mysql.xml			***
 functions/ncurses.xml			***
-functions/network.xml			***
+functions/network.xml			Cristian Câmpean
 functions/nis.xml			***
 functions/oci8.xml			***
 functions/openssl.xml			***
