@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- $Revision: 1.1 $ -->
+<!-- splitted from ./index.xml, last change in rev 1.66 -->
+ <chapter id="security.intro">
+  <title>Introducere</title>
+  <simpara>
+   PHP este un limbaj de programare web puternic iar interpretorul,
+   fie ca este incluse in serverul web ca un modul sau executat separat
+   ca binar <acronym>CGI</acronym>, este capabil sa acceseze fisiere,
+   sa execute comenzi sau sa deschida conexiuni in retea pe server.
+   Aceste proprietati fac posibila rularea oricarui script/program
+   pe serverul web, care este nesecurizat default.
+   PHP este creat pentru a rula scripturi CGI securizate decat
+   Perl si C, si cu o selectare minutioasa a timpilor de compilare si
+   runtime din optiunile de configurare, dublate de o tehnica de programare
+   sigura si eficienta, PHP va poate oferi combinatia perfecta de libertate
+   si securitate pe care o cautati. 
+  </simpara>
+  <simpara>
+   Exista mai multe posibilitati de a utiliza PHP-ul, exista multe 
+   optiuni de configurare care ii controleaza comportamentul in
+   timpul rularii aplicatiilor.
+   O gama larga de optiuni de configurare garanteaza folosirea PHP-ului
+   la capacitate maxima, si pentru o intreaga suita de intrebuintari,
+   dar exista si posibilitatea ca prin anumite combinatii de configurari
+   sa rezulte un setup instabil si nesecurizat.
+  </simpara>
+  <simpara>
+   Flexibilitatea configuratiilor in PHP este egala si rivalizeaza
+   cu flexibilitatea codului. PHP poate fi folosit pentru a construi
+   aplicatii complete pentru servere, cu toate avantajele unui utilizator
+   shell, sau poate fi folosit ca un simplu server-side includes cu mici
+   riscuri, intr-un mediu bine controlat.
+   Cum sa construiesti acel mediu si cum sa-l controlezi, este la
+   latitudinea fiecarui developer PHP.
+  </simpara>
+  <simpara>
+   Acest capitol incepe cu cateva sfaturi generale de securitate,
+   explica diferite optiuni de configurare si combinatii, precum
+   si situatiile in care pot fi folosite cu siguranta; mai descrie
+   de asemenea, diferite consideratii legate de coding si de diferite
+   nivele de securitate.
+  </simpara>
+ </chapter>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:1
+sgml-indent-data:t
+indent-tabs-mode:nil
+sgml-parent-document:nil
+sgml-default-dtd-file:"../../manual.ced"
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+vim600: syn=xml fen fdm=syntax fdl=2 si
+vim: et tw=78 syn=sgml
+vi: ts=1 sw=1
+-->
