@@ -21,9 +21,13 @@ nick="Spooky"    cvs="yes" />
 nick="BBD"    cvs="yes" />
   <person name="Serban Gheorghe Ghita"		email="zamolxe@php.net"
 nick="Zamolxe"	cvs="yes" />
+  <person name="Gabriel PREDA"		email="gabriel.preda@amr.ro"
+nick="radical"	cvs="yes" />
  </translators>
  
  <work-in-progress>
+  <file name="mysql/"		person="radical"
+type="translation" date="2004-10-21" />
   <file name="security/"		person="zamolxe"
 type="translation" date="2004-08-23" />
   <file name="functions/array.xml"           person="adiju"		     

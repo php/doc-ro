@@ -116,7 +116,7 @@ functions/msession.xml			***
 functions/msql.xml			***
 functions/mssql.xml			***
 functions/muscat.xml			***
-functions/mysql.xml			***
+functions/mysql.xml			Gabriel PREDA
 functions/ncurses.xml			***
 functions/network.xml			Cristian Câmpean
 functions/nis.xml			***
