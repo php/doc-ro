@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.2 $ -->
+<!-- $Revision: 1.3 $ -->
 <!-- splitted from ./en/functions/array.xml, last change in rev 1.2 -->
   <refentry id="function.array-count-values">
    <refnamediv>
     <refname>array_count_values</refname>
-    <refpurpose>Counts all the values of an array</refpurpose>
+    <refpurpose>Numără valorile unui tablou</refpurpose>
    </refnamediv>
    <refsect1>
-    <title>Description</title>
+    <title>Descriere</title>
      <methodsynopsis>
       <type>array</type><methodname>array_count_values</methodname>
       <methodparam><type>array</type><parameter>input</parameter></methodparam>
      </methodsynopsis>
     <para>
-     <function>array_count_values</function> returns an array using
-     the values of the <parameter>input</parameter> array as keys and
-     their frequency in <parameter>input</parameter> as values.
+     <function>array_count_values</function> returnează un tablou utilizând
+	 valorile din tabloul <parameter>input</parameter> ca şi indecşi
+	 iar frecvenţa acestora în <parameter>input</parameter> ca şi valori.
     </para>
     <para>
      <example>
-      <title><function>array_count_values</function> example</title>
+      <title>Exemplu de utilizare <function>array_count_values</function></title>
       <programlisting role="php">
 <![CDATA[
 $array = array (1, "hello", 1, "world", "hello");
@@ -27,7 +27,7 @@ print_r(array_count_values ($array));
 ]]>
       </programlisting>
       <para>
-       The printout of the above program will be:
+       Rezultatul va fi:
        <screen>
 <![CDATA[
 Array
