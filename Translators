@@ -156,9 +156,9 @@ functions/yaz.xml			***
 functions/zip.xml			***
 functions/zlib.xml			***
 -------- language ----------------------------------------------------------
-language/basic-syntax.xml		***
-language/constants.xml			***
-language/control-structures.xml		***
+language/basic-syntax.xml		cristi radulescu
+language/constants.xml			cristi radulescu
+language/control-structures.xml		cristi radulescu
 language/expressions.xml		***
 language/functions.xml			***
 language/oop.xml			***
