@@ -17,6 +17,8 @@ nick="aspinei"   cvs="yes" />
 nick="adu"       cvs="yes" />
   <person name="Paul Dorneanu"       email="spooky@php.net"                     
 nick="Spooky"    cvs="yes" />
+  <person name="Dan Bajarca"         email="bbd@php.net"                     
+nick="BBD"    cvs="yes" />
  </translators>
  
  <work-in-progress>
@@ -32,6 +34,8 @@ type="offline" />
 type="translation" date="2002-03-27" />
   <file name="chapters/intro.xml"            person="spooky"		     
 type="translation" date="2002-03-27" />
+  <file name="features/http-auth.xml"        person="bbd"		     
+type="translation" date="2002-07-22" />
  </work-in-progress>
 
 </translation>

@@ -4,6 +4,7 @@ the bottom of this file. Thank you. - spooky
 
 File Translator State
 -------------------------------------------- ------------------ -------------
+./features/http-auth.xml bbd 5%
 ./language-defs.ent dt Done
 ./language-snippets.ent spooky Done
 ./bookinfo.xml adiju Done

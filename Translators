@@ -44,7 +44,7 @@ features/connection-handling.xml	***
 features/cookies.xml			***
 features/error-handling.xml		***
 features/file-upload.xml		***
-features/http-auth.xml			***
+features/http-auth.xml			Dan Bajarca
 features/images.xml			***
 features/persistent-connections.xml	***
 features/remote-files.xml		***
