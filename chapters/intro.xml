@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- EN-Revision: 1.29 Maintainer: spooky Status: ready -->
-<!-- $Revision: 1.3 $ -->
+<!-- $Revision: 1.4 $ -->
  <chapter id="introduction">
   <title>Introducere</title>
 
   <sect1 id="intro-whatis">
    <title>Ce este PHP?</title>
    <para>
-    <acronym>PHP</acronym> (acronim recursiv petnru "PHP: Hypertext
+    <acronym>PHP</acronym> (acronim recursiv pentru "PHP: Hypertext
     Preprocessor") este un limbaj de scripting utilizat pe scară largă,
     realizat şi distribuit în sistem Open Source, ce se potriveste producţiei 
 Web şi poate fi încapsulat în HTML.
