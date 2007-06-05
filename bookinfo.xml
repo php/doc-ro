@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.12 $ -->
+<!-- $Revision: 1.13 $ -->
 
  <bookinfo id="bookinfo">
   <title>&PHPManual;</title>
@@ -9,7 +9,7 @@
 
   <authorgroup id="translators">
    <collab>
-    <collabname>Traducerea în limba română a fost efectuată de</collabname>
+    <collabname>Traducerea in limba romana a fost efectuata de</collabname>
    </collab>
    <collab>
     <collabname>Paul Dorneanu</collabname>
@@ -18,19 +18,19 @@
     <collabname>Adrian Jurjica</collabname>
    </collab>
    <collab>
-    <collabname>Cristi Rădulescu</collabname>
+    <collabname>Cristi Radulescu</collabname>
    </collab>
    <collab>
-    <collabname>Valentin Ţuţu</collabname>
+    <collabname>Valentin Tutu</collabname>
    </collab>
    <collab>
-    <collabname>Iulian Năstăsache</collabname>
+    <collabname>Iulian Nastasache</collabname>
    </collab>
    <collab>
     <collabname>Daniel Toma</collabname>
    </collab>
    <collab>
-    <collabname>Dorel Năstasă</collabname>
+    <collabname>Dorel Nastasa</collabname>
    </collab>
    <collab>
     <collabname>Dan Matornei</collabname>
@@ -48,32 +48,49 @@
    <collabname>Adrian Spinei</collabname>
    </collab>
    <collab>
-   <collabname>Cristian Câmpean</collabname>
+   <collabname>Cristian Campean</collabname>
    </collab>
    <collab>
    <collabname>Serban Gheorghe Ghita</collabname>
    </collab>
    <collab>
-   <collabname>Gabriel PREDA</collabname>
+   <collabname>Gabriel Preda</collabname>
    </collab>
   </authorgroup>
 
   <copyright>
-   <year>1997-2004</year>
+   <year>1997-2007</year>
    <holder>Grupul de Documentare PHP</holder>
   </copyright>
 
   <legalnotice id="copyright">
    <title>Copyright</title>
    <simpara>
-    Acest manual este &copy; Copyright 1997 - 2004 al Grupului de Documentare PHP.  
-Membrii acestui grup sunt listaţi pe prima pagină a prezentului manual.
+    Copyright &copy; 1997 - 2007 de catre Grupul de Documentare PHP.
+    Acest materia poate fi distribuit numai in baza termenilor si conditiilor
+	stabilite in documentul Open Publication License (Licenta Open de Publicare), 
+	v1.0 sau anterioara. O copie a <link linkend="opl.license">Licentei Open de
+    Publicare</link> este distribuita cu acest manual, cea mai noua versiune
+    este prezentata si disponibila la adresa <ulink url="&url.opl;">&url.opl;</ulink>.
    </simpara>
    <simpara>
-    Manualul poate fi redistribuit sub termenii Licenţei GNU General Public License aşa cum a fost publicată de Free Software Foundation; fie ea versiunea 2 a Licenţei, sau (la opţiunea dv.) orice versiune ulterioară.
+    Distribuirea de versiuni ale acestui document modificate substantial 
+	este interzisa fara acordul explicit a detinatorilor de copyright.
    </simpara>
    <simpara>
-    Secţinea 'Extending PHP 4.0' a manualului este &copy; 2000 al Zend Technologies, Ltd. Acest material poate fi distribuit conform termenilor şi condiţiilor specificate în Open Publication License, v1.0 sau versiuni ulterioare (cea mai recentă versiune poate fi găsită la <ulink url="&url.opl;">&url.opl;</ulink>).
+   	Distributia continutului din acest document sub forma de carte (manual) 
+	este permisa numai cu acordul detinatorilor de copyright.
+   </simpara>
+   <simpara>
+    In caz ca sunteti interesat in redistribuirea sau republicarea acestui document
+	integral sau pe bucati, modificat sau nemodificat, si daca aveti intrebari,
+	va rugam sa contactati detinatorii de copyright la adresa
+    <ulink url="mailto:&email.php.doc.license;">&email.php.doc.license;</ulink>.
+    Aceasta adresa este mapata catre arhiva listei publice de mail.
+   </simpara>
+   <simpara>
+    Sectiunea documentatiei referitoare la <xref linkend="zend"/> este bazata pe
+    contributia initiala a Zend Technologies.
    </simpara>
   </legalnotice>
 
