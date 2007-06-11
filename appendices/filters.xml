@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.1 $ -->
+<!-- EN-Revision: 1.15 Maintainer: simionea Status: translated -->
+<appendix id="filters">
+ <title>Lista filtrelor disponibile</title>
+ <para>
+  Urmează o listă a câtorva filtre de torent pentru a fi utilizate cu
+  <function>stream_filter_append</function>.
+  Versiunea dumneavoastră a PHP poate avea mai multre filtre (sau mai puţine)
+  decât cele listate aici.
+ </para>
+
+ <para>
+  Merită de a fi remarcată mica asimetrie dintre
+  <function>stream_filter_append</function>
+  şi <function>stream_filter_prepend</function>.  
+  Fiecare torent PHP conţine o mică <emphasis>zonă-tampon de citire</emphasis>
+  unde el stochează blocuri de date recepţionate de la sistemul de fişiere
+  sau alte resurse pentru a procesa datele în modul cel mai eficient.
+  Imediat ce datele sunt extrase din resursă în zona-tampon internă a torentului,
+  ele sunt procesate prin orice filtru ataşat, indiferent dacă aplicaţia PHP
+  este pregătită de a primi datele, sau nu.
+  Dacă datele se află în zona-tampon de citire în timp ce sunt 
+  <emphasis>anexate</emphasis> la filtru, aceste date vor fi imediat procesate
+  prin acel filtru, astfel încât faptul aflării lor în zona-tampon trece
+  neobservat.
+  Însă dacă datele se află în zona-tampon de citire în timp ce sunt
+  <emphasis>prefixate</emphasis> la filtru, ele <emphasis>NU</emphasis>
+  vor fi procesate prin acel filtru. În schimb se va aştepta momentul când următorul
+  bloc de date va fi extras din resursă.
+ </para>
+
+ <para>
+  Pentru a vedea lista filtrelor instalate în versiunea dumneavoastră a PHP,
+  folosiţi <function>stream_get_filters</function>.
+ </para>
+
+ <section id="filters.string">
+  <title>Filtrele string-urilor</title>
+
+  <simpara>
+   Fiecare dintre aceste filtre efectuează exact ceea ce indică denumirea lor
+   şi corespund cu comportamentul unei funcţii de manipulare a stringurilor
+   incorporate în PHP. Pentru mai multe informaţii despre un anumit filtru,
+   referiţi-vă la pagina din manual pentru funcţia corespunzătoare.
+  </simpara>
+
+  <simpara>
+   <literal>string.rot13</literal>
+   (începând cu PHP 4.3.0)
+   Folosirea acestui filtru este echivalentă cu procesarea tuturor datelor
+   din torent prin funcţia <function>str_rot13</function>.
+  </simpara>
+  <example>
+   <title>string.rot13</title>
+   <programlisting role="php">
+<![CDATA[
+<?php
+$fp = fopen('php://output', 'w');
+stream_filter_append($fp, 'string.rot13');
+fwrite($fp, "This is a test.\n");
+/* Afişează:  Guvf vf n grfg.   */
+?>
+]]>
+   </programlisting>
+  </example>
+
+  <simpara>
+   <literal>string.toupper</literal>
+   (începând cu PHP 5.0.0)
+   Folosirea acestui filtru este echivalentă cu procesarea tuturor datelor
+   din torent prin funcţia <function>strtoupper</function>.
+  </simpara>
+  <example>
+   <title>string.toupper</title>
+   <programlisting role="php">
+<![CDATA[
+<?php
+$fp = fopen('php://output', 'w');
+stream_filter_append($fp, 'string.toupper');
+fwrite($fp, "This is a test.\n");
+/* Afişează:  THIS IS A TEST.   */
+?>
+]]>
+   </programlisting>
+  </example>
+
+  <simpara>
+   <literal>string.tolower</literal>
+   (începând cu PHP 5.0.0)
+   Folosirea acestui filtru este echivalentă cu procesarea tuturor datelor
+   din torent prin funcţia <function>strtolower</function>.
+  </simpara>
+  <example>
+   <title>string.tolower</title>
+   <programlisting role="php">
+<![CDATA[
+<?php
+$fp = fopen('php://output', 'w');
+stream_filter_append($fp, 'string.tolower');
+fwrite($fp, "This is a test.\n");
+/* Afişează:  this is a test.   */
+?>
+]]>
+   </programlisting>
+  </example>
+
+  <simpara>
+   <literal>string.strip_tags</literal>
+   (începând cu PHP 5.0.0)
+   Folosirea acestui filtru este echivalentă cu procesarea tuturor datelor
+   din torent prin funcţia <function>strip_tags</function>.
+   El acceptă parametrii în unul din aceste două moduri:
+   un string conţinând o listă de tag-uri, similar celui de-al doilea
+   parametru al funcţiei <function>strip_tags</function>,
+   sau ca un masiv cu denumirile tag-urilor.
+  </simpara>
+  <example>
+   <title>string.strip_tags</title>
+   <programlisting role="php">
+<![CDATA[
+<?php
+$fp = fopen('php://output', 'w');
+stream_filter_append($fp, 'string.strip_tags', STREAM_FILTER_WRITE, "<b><i><u>");
+fwrite($fp, "<b>bolded text</b> enlarged to a <h1>level 1 heading</h1>\n");
+fclose($fp);
+/* Afişează:  <b>bolded text</b> enlarged to a level 1 heading   */
+
+$fp = fopen('php://output', 'w');
+stream_filter_append($fp, 'string.strip_tags', STREAM_FILTER_WRITE, array('b','i','u'));
+fwrite($fp, "<b>bolded text</b> enlarged to a <h1>level 1 heading</h1>\n");
+fclose($fp);
+/* Afişează:  <b>bolded text</b> enlarged to a level 1 heading   */
+?>
+]]>
+   </programlisting>
+  </example>
+   
+ </section>
+
+ <section id="filters.convert">
+  <title>Filtre de conversie</title>
+
+  <simpara>
+   Ca şi filtrele string.*, filtrele convert.* efectuează acţiuni similare numelor
+   lor. Filtrele de conversie au fost introduse odată cu PHP 5.0.0.
+   Pentru mai multe informaţii despre un anumit filtru, referiţi-vă la pagina din
+   manual pentru funcţia corespunzătoare.
+  </simpara>
+
+  <simpara>
+   <literal>convert.base64-encode</literal> şi
+   <literal>convert.base64-decode</literal>
+   Utilizarea acestor filtre este echivalentă cu procesarea tuturor datelor din
+   torent prin funcţiile <function>base64_encode</function> şi
+   <function>base64_decode</function> respectiv.
+   <literal>convert.base64-encode</literal> susţine parametri sub forma unui masiv
+   asociativ. Dacă parametrul <parameter>line-length</parameter> este specificat,
+   ieşirile sub forma base64 for fi separate în porţiuni de câte <parameter>line-length</parameter>
+   caractere fiecare. Dacă parametrul <parameter>line-break-chars</parameter> este specificat, fiecare
+   porţiune va fi delimitată cu caracterele specificaate în parametru. Aceşti parametri produc
+   acelaşi efect ca şi utilizarea <function>base64_encode</function> cu
+   <function>chunk_split</function>.
+  </simpara>
+  <example>
+   <title>
+    convert.base64-encode &amp;
+    convert.base64-decode
+   </title>
+   <programlisting role="php">
+<![CDATA[
+<?php
+$fp = fopen('php://output', 'w');
+stream_filter_append($fp, 'convert.base64-encode');
+fwrite($fp, "This is a test.\n");
+fclose($fp);
+/* Afişează:  VGhpcyBpcyBhIHRlc3QuCg==  */
+
+$param = array('line-length' => 8, 'line-break-chars' => "\r\n");
+$fp = fopen('php://output', 'w');
+stream_filter_append($fp, 'convert.base64-encode', STREAM_FILTER_WRITE, $param);
+fwrite($fp, "This is a test.\n");
+fclose($fp);
+/* Afişează:  VGhpcyBp
+           :  cyBhIHRl
+           :  c3QuCg==  */
+
+$fp = fopen('php://output', 'w');
+stream_filter_append($fp, 'convert.base64-decode');
+fwrite($fp, "VGhpcyBpcyBhIHRlc3QuCg==");
+fclose($fp);
+/* Afişează:  This is a test.  */
+?>
+]]>
+   </programlisting>
+  </example>
+
+  <simpara>
+   <literal>convert.quoted-printable-encode</literal> şi
+   <literal>convert.quoted-printable-decode</literal>
+   Utilizarea versiunii decode a acestui filtru este echivalentă cu procesarea tuturor
+   datelor din torent prin funcţia <function>quoted_printable_decode</function>.
+   Nu există o funcţie echivalentă pentru <literal>convert.quoted-printable-encode</literal>.
+   <literal>convert.quoted-printable-encode</literal> susţine parametrii sub forma unui masiv
+   asociativ. Adăugător la parametrii susţinuţi de <literal>convert.base64-encode</literal>,
+   <literal>convert.quoted-printable-encode</literal> de asemenea susţine argumente boolean
+   <parameter>binary</parameter> şi <parameter>force-encode-first</parameter>.
+   <literal>convert.base64-decode</literal> susţine numai parametrul
+   <parameter>line-break-chars</parameter> în calitate de indiciu al caracterelor ce trebiue
+   eliminate din încărcătura utilă codificată.
+  </simpara>
+  <example>
+   <title>
+    convert.quoted-printable-encode &amp;
+    convert.quoted-printable-decode
+   </title>
+   <programlisting role="php">
+<![CDATA[
+<?php
+$fp = fopen('php://output', 'w');
+stream_filter_append($fp, 'convert.quoted-printable-encode');
+fwrite($fp, "This is a test.\n");
+/* Afişează:  =This is a test.=0A  */
+?>
+]]>
+   </programlisting>
+  </example>
+ </section>
+
+ <section id="filters.compression">
+  <title>Filtrele de compresie</title>
+
+  <simpara>
+   În timp ce <link linkend="wrappers.compression">învelişurile de compresie</link>
+   oferă o modalitate de a crea fişiere compatibile cu gzip and bz2 pe sistemul de
+   fişiere local, ele nu oferă o modalitate de compresie generalizată prin torente
+   în reţea, nici nu oferă o modalitate de a începe cu un torent necomprimat şi a
+   trece la unul comprimat. Pentru acestea, un filtru de compresie poate fi aplicat
+   oricând asupra oricărei resurse-torent.
+  </simpara>
+
+  <note>
+   <simpara>
+    Filtrele de compresie <emphasis>nu</emphasis> generează antete sau sfârşituri
+    utilizate de utilitele din linie de comandă, cum ar fi <literal>gzip</literal>.
+    Ele numai comprimă şi decomprimă porţiunile cu încărcătură utilă a torentelor
+    de date.
+   </simpara>
+  </note>
+
+  <simpara>
+   <literal>zlib.deflate</literal> (compresie) şi
+   <literal>zlib.inflate</literal> (decompresie) sunt implementări ale metodelor de
+   compresie descrise în <ulink url="&url.rfc;1951">RFC 1951</ulink>.
+   Filtrul <literal>deflate</literal> preia până la trei parametri transmişi sub
+   forma unui masiv asociativ.
+
+   <parameter>level</parameter> descrie nivelul de compresie utilizat (1-9).
+   Numere mai mari vor produce în general încărcături utile mai mici fără a necesita
+   timp de procesare suplimentar. De asemenea există şi două nivele speciale de
+   compresie: 0 (fără compresie), şi -1 (valoarea internă implicită a zlib -- în prezent 6).
+
+   <parameter>window</parameter> este logaritmul în baza 2 a mărimii ferestrei de compresie
+   în buclă inversă. Valorile mai mari (până la 15 -- 32768 baiţi) produc o compresie mai
+   bună, costul fiind mai multă memorie, în timp ce valorile mai mici (până la 9 -- 512 baiţi)
+   produc o compresie mai rea într-un volum de memorie mai mic.
+   Valoarea implicită a mărimii <parameter>window</parameter> este în prezent
+   <constant>15</constant>.
+
+   <parameter>memory</parameter> este o scară care indică ce volum de memorie de lucru trebiue
+   allocated. Valori permise sunt în intervalul de la 1 (alocare minimă) până la 9 (alocare maximă).
+   Aceată alocare de memorie influenţează doar viteza şi nu are impact asupra mărimii
+   încărcăturii de lucru generate.
+  </simpara>
+
+  <note>
+   <simpara>
+    Deoarece nivelul compresiei este cel mai des utilizat parametru, el poate fi transmis, îm mod
+    alternativ, sub forma unei simple valori întregi (şi nu sub forma unui masiv dintr-un element).
+   </simpara>
+  </note>
+
+  <simpara>
+    Filtrele de compresie zlib.* sunt disponibile în PHP începând cu versiunea <literal>5.1.0</literal>,
+    dacă susţinerea <link linkend="ref.zlib">zlib</link> a fost activată. Ele de asemenea sunt disponibile
+    în calitate de cod portabil şi pentru versiunea <literal>5.0.x</literal> instalând pachetul
+    <ulink url="&url.pecl.package;zlib_filter">zlib_filter</ulink> din
+    <ulink url="&url.pecl;">PECL</ulink>. Aceste filtre <emphasis>nu</emphasis> sunt disponibile pentru
+    PHP 4.
+  </simpara>
+
+  <example>
+   <title>
+    <literal>zlib.deflate</literal> şi
+    <literal>zlib.inflate</literal>
+   </title>
+   <programlisting role="php">
+<![CDATA[
+<?php
+$params = array('level' => 6, 'window' => 15, 'memory' => 9);
+
+$original_text = "This is a test.\nThis is only a test.\nThis is not an important string.\n";
+echo "The original text is " . strlen($original_text) . " characters long.\n";
+
+$fp = fopen('test.deflated', 'w');
+stream_filter_append($fp, 'zlib.deflate', STREAM_FILTER_WRITE, $params);
+fwrite($fp, $original_text);
+fclose($fp);
+
+echo "The compressed file is " . filesize('test.deflated') . " bytes long.\n";
+echo "The original text was:\n";
+/* Folosim readfile şi zlib.inflate pentru a decomprima datele 'din zbor' */
+readfile('php://filter/zlib.inflate/resource=test.deflated');
+
+/* Generează utmătoarele:
+
+The original text is 70 characters long.
+The compressed file is 56 bytes long.
+The original text was:
+This is a test.
+This is only a test.
+This is not an important string.
+
+ */
+?>
+]]>
+   </programlisting>
+  </example>
+
+  <example>
+   <title>
+    <literal>zlib.deflate</literal> simplu
+   </title>
+   <programlisting role="php">
+<![CDATA[
+<?php
+$original_text = "This is a test.\nThis is only a test.\nThis is not an important string.\n";
+echo "The original text is " . strlen($original_text) . " characters long.\n";
+
+$fp = fopen('test.deflated', 'w');
+/* Aici "6" indică nivelul de compresie 6 */
+stream_filter_append($fp, 'zlib.deflate', STREAM_FILTER_WRITE, 6);
+fwrite($fp, $original_text);
+fclose($fp);
+
+echo "The compressed file is " . filesize('test.deflated') . " bytes long.\n";
+
+/* Generează următoarele:
+
+The original text is 70 characters long.
+The compressed file is 56 bytes long.
+
+ */
+?>
+]]>
+   </programlisting>
+  </example>
+
+  <simpara>
+   <literal>bzip2.compress</literal> şi
+   <literal>bzip2.decompress</literal>
+   funcţionează în acelaşi mod ca şi filtrele zlib descrise anterior.
+
+   Filtrul <literal>bzip2.compress</literal> acceptă până la doi parametri transmişi sub
+   formă de elemente ale unui masiv asociativ:
+
+   <parameter>blocks</parameter> este o valoare de tip întreg de la 1 până la 9, specificând
+   numărul de blocuri de memorie de 100 kbaiţi pentru a fi alocaţi în spaţiul de lucru.
+
+   <parameter>work</parameter> este de asemenea o valoare de tip întreg din intervalul de la
+   0 până la 250 indicând ce volum de efort trebuie cheltuit folosind metoda normală de
+   compresie, înainte de a trece înapoi la o metodă mai lentă, dar mai sigură.
+   Reglarea acestui parametru afectează doar viteza de compresie. Nici mărimea datelor finale,
+   nici utilizarea memoriei nu sunt afectate de modificarea acestui parametru.
+   Valoarea 0 instruieşte biblioteca bzip să utilizeze valoarea internă implicită.
+
+   Filtrul <literal>bzip2.decompress</literal> acceptă doar un parametru, care poate fi
+   transmis sub forma unei valori boolean obişnuite sau sub forma elementului
+   <parameter>small</parameter> al unui masiv asociativ.
+
+   <parameter>small</parameter>, când este stabilit la valoarea &true;, instruieşte biblioteca
+   bzip să efectueze decomprimarea cu utilizarea unui volum minimal al memoriei la costul
+   vitezei de procesare.
+  </simpara>
+
+  <simpara>
+    Filtrele de copresie bzip2.* sunt disponibile în PHP începând cu versiunea <literal>5.1.0</literal>
+    dacă susţinerea <link linkend="ref.bzip2">bz2</link> a fost activată. Ele de asemenea sunt disponibile
+    în calitate de cod portabil şi pentru versiunea <literal>5.0.x</literal> instalând pachetul
+    <ulink url="&url.pecl.package;bz2_filter">bz2_filter</ulink> din
+    <ulink url="&url.pecl;">PECL</ulink>. Aceste filtre <emphasis>nu</emphasis> sunt disponibile în PHP 4.
+  </simpara>
+
+  <example>
+   <title>
+    <literal>bzip2.compress</literal> şi
+    <literal>bzip2.decompress</literal>
+   </title>
+   <programlisting role="php">
+<![CDATA[
+<?php
+$param = array('blocks' => 9, 'work' => 0);
+
+echo "The original file is " . filesize('LICENSE') . " bytes long.\n";
+
+$fp = fopen('LICENSE.compressed', 'w');
+stream_filter_append($fp, 'bzip2.compress', STREAM_FILTER_WRITE, $param);
+fwrite($fp, file_get_contents('LICENSE'));
+fclose($fp);
+
+echo "The compressed file is " . filesize('LICENSE.compressed') . " bytes long.\n";
+
+/* Generează următoarele:
+
+The original text is 3288 characters long.
+The compressed file is 1488 bytes long.
+
+ */
+?>
+]]>
+   </programlisting>
+  </example>
+ </section>
+
+ <section id="filters.encryption">
+  <title>Filtrele de criptare</title>
+
+  <simpara>
+   <literal>mcrypt.*</literal> şi <literal>mdecrypt.*</literal>
+   oferă criptare şi decriptare simetrică, utilizând libmcrypt.
+   Ambele seturi de filtre susţin aceiaşi algoritmi disponibili
+   <link linkend="ref.mcrypt">extensiei mcrypt</link> sub forma
+   <literal>mcrypt.ciphername</literal>, unde <parameter>ciphername</parameter>
+   este denumirea algoritmului de criptare, care ar fi putut fi transmis funcţiei
+   <function>mcrypt_module_open</function>.
+   De asemenea sunt disponibili şi următorii cinci parametri:
+  </simpara>
+
+  <para>
+   <table>
+    <title>Parametrii filtrului mcrypt</title>
+    <tgroup cols="4">
+     <thead>
+      <row>
+       <entry>Parametrul</entry>
+       <entry>Necesar?</entry>
+       <entry>Implicit</entry>
+       <entry>Valori-exemple</entry>
+      </row>
+     </thead>
+     <tbody>
+      <row>
+       <entry>mode</entry>
+       <entry>Opţional</entry>
+       <entry>cbc</entry>
+       <entry>cbc, cfb, ecb, nofb, ofb, stream</entry>
+      </row>
+      <row>
+       <entry>algorithms_dir</entry>
+       <entry>Opţional</entry>
+       <entry>ini_get('mcrypt.algorithms_dir')</entry>
+       <entry>Localizarea modulelor algoritmilor</entry>
+      </row>
+      <row>
+       <entry>modes_dir</entry>
+       <entry>Opţional</entry>
+       <entry>ini_get('mcrypt.modes_dir')</entry>
+       <entry>Localizarea modulelor modurilor</entry>
+      </row>
+      <row>
+       <entry>iv</entry>
+       <entry>Necesar</entry>
+       <entry>nu este</entry>
+       <entry>De obicei 8, 16, sau 32 baiţi de date binare. Depinde de cifru</entry>
+      </row>
+      <row>
+       <entry>key</entry>
+       <entry>Necesar</entry>
+       <entry>nu este</entry>
+       <entry>De obicei 8, 16, sau 32 baiţi de date binare. Depinde de cifru</entry>
+      </row>
+     </tbody>
+    </tgroup>
+   </table>
+  </para>
+
+  <example>
+   <title>Criptarea conţinutului unui fişier utilizând 3DES</title>
+   <programlisting role="php">
+<![CDATA[
+<?php
+$passphrase = 'My secret';
+
+/* Transformă parola în text deschis
+ * într-o pereche iv/key reproductibilă
+ */
+$iv = substr(md5('iv'.$passphrase, true), 0, 8);
+$key = substr(md5('pass1'.$passphrase, true) . 
+               md5('pass2'.$passphrase, true), 0, 24);
+$opts = array('iv'=>$iv, 'key'=>$key);
+
+$fp = fopen('secert-file.enc', 'wb');
+stream_filter_append($fp, 'mcrypt.tripledes', STREAM_FILTER_WRITE, $opts);
+fwrite($fp, 'Secret secret secret data');
+fclose($fp);
+?>
+]]>
+   </programlisting>
+  </example>
+
+  <example>
+   <title>Citirea unui fişier criptat</title>
+   <programlisting role="php">
+<![CDATA[
+<?php
+$passphrase = 'My secret';
+
+/* Transformă parola în text deschis
+ * într-o pereche iv/key reproductibilă
+ */
+$iv = substr(md5('iv'.$passphrase, true), 0, 8);
+$key = substr(md5('pass1'.$passphrase, true) . 
+               md5('pass2'.$passphrase, true), 0, 24);
+$opts = array('iv'=>$iv, 'key'=>$key);
+
+$fp = fopen('secert-file.enc', 'rb');
+stream_filter_append($fp, 'mdecrypt.tripledes', STREAM_FILTER_WRITE, $opts);
+$data = rtrim(stream_get_contents($fp));
+fclose($fp);
+
+echo $data;
+?>
+]]>
+   </programlisting>
+  </example>
+
+ </section>
+
+</appendix>
+
+<!-- Translated by Simion Onea -->
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:1
+sgml-indent-data:t
+indent-tabs-mode:nil
+sgml-parent-document:nil
+sgml-default-dtd-file:"../../manual.ced"
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+vim600: syn=xml fen fdm=syntax fdl=2 si
+vim: et tw=78 syn=sgml
+vi: ts=1 sw=1
+-->
