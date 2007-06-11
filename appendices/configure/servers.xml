@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.1 $ -->
+ <sect3 id="configure.options.servers">
+  <title>Opţiunile SAPI</title>
+  <para>
+   Lista ce urmează conţine interfeţele SAPI (<literal>Server
+   Application Programming Interface &mdash; Interfaţa de
+   Programare a Aplicaţiilor pentru Server</literal>) disponibile
+   pentru PHP.
+  </para>
+  <variablelist>
+   <varlistentry id="configure.with-aolserver">
+    <term>
+     <option role="configure">--with-aolserver=DIR</option>
+    </term>
+    <listitem>
+     <para>
+      Specifică calea spre AOLserver instalat.
+     </para>
+    </listitem>
+   </varlistentry>
+   <varlistentry id="configure.with-apxs">
+    <term>
+     <option role="configure">--with-apxs[=FILE]</option>
+    </term>
+    <listitem>
+     <para>
+      Asamblează un modul partajat pentru Apache. FILE este calea opţională spre
+      instrumentul apxs; implicit este apxs. Asiguraţi-vă că specificaţi versiunea 
+      apxs care este într-adevăr instalată pe sistemul dumneavoastră, NU aceea ce
+      se conţine în pachetul cu sursa apache.
+     </para>
+    </listitem>
+   </varlistentry>
+   <varlistentry id="configure.with-apache">
+    <term>
+     <option role="configure">--with-apache[=DIR]</option>
+    </term>
+    <listitem>
+     <para>
+      Asamblează un modul static pentru Apache. DIR este directorul de vârf al
+      serverului Apache asamblat, implicit este <filename>/usr/local/apache</filename>.
+     </para>
+    </listitem>
+   </varlistentry>
+   <varlistentry id="configure.with-mod_charset">
+    <term>
+     <option role="configure">--with-mod_charset</option>
+    </term>
+    <listitem>
+     <para>
+      Activează tabelele de transfer pentru mod_charset (Apache rusesc).
+     </para>
+    </listitem>
+   </varlistentry>
+   <varlistentry id="configure.with-apxs2">
+    <term>
+     <option role="configure">--with-apxs2[=FILE]</option>
+    </term>
+    <listitem>
+     <para>
+      Asamblează un modul partajat pentru Apache 2.0. FILE este calea opţională spre
+      instrumentul apxs; implicit este apxs.
+     </para>
+    </listitem>
+   </varlistentry>
+
+   <varlistentry id="configure.with-caudium">
+    <term>
+     <option role="configure">--with-caudium=DIR</option>
+    </term>
+    <listitem>
+     <para>
+      Asamblează PHP în calitate de modul Pike, pentru a fi folosit cu Caudium. DIR este
+      directorul serverului Caudium, cu valoarea implicită
+      <filename>/usr/local/caudium/server</filename>.
+     </para>
+    </listitem>
+   </varlistentry>
+
+   <varlistentry id="configure.disable-cli">
+    <term>
+     <option role="configure">--disable-cli</option>
+    </term>
+    <listitem>
+     <para>
+      Disponibil odată cu PHP 4.3.0. Dezactivează asamblarea versiunii CLI a PHP (aceasta impune
+      şi <link linkend="configure.without-pear">--without-pear</link>).
+      Mai multe informaţii sunt disponibile în secţiunea desspre
+      <link linkend="features.commandline">Utilizarea PHP din linia de comandă</link>.
+     </para>
+    </listitem>
+   </varlistentry>
+
+   <varlistentry id="configure.enable-embed">
+    <term>
+     <option role="configure">--enable-embed[=TYPE]</option>
+    </term>
+    <listitem>
+     <para>
+      Activează asamblarea unei biblioteci SAPI încorporate. TYPE poate fi sau
+      <literal>shared</literal>, sau <literal>static</literal> şi implicit este
+      <literal>shared</literal>. Disponibil odată cu PHP 4.3.0.
+     </para>
+    </listitem>
+   </varlistentry>
+
+   <varlistentry id="configure.with-fhttpd">
+    <term>
+     <option role="configure">--with-fhttpd[=DIR]</option>
+    </term>
+    <listitem>
+     <para>
+      Asamblează un modul fhttpd. DIR este directorul cu sursele fhttpd, implicit are valoarea
+      <filename>/usr/local/src/fhttpd</filename>. Nu mai este disponibil începând cu PHP
+      4.3.0.
+     </para>
+    </listitem>
+   </varlistentry>
+   <varlistentry id="configure.with-isapi">
+    <term>
+     <option role="configure">--with-isapi=DIR</option>
+    </term>
+    <listitem>
+     <para>
+      Asamblează PHP în calitate de modul ISAPI, pentru a fi utilizat cu Zeus.
+     </para>
+    </listitem>
+   </varlistentry>
+   <varlistentry id="configure.with-nsapi">
+    <term>
+     <option role="configure">--with-nsapi=DIR</option>
+    </term>
+    <listitem>
+     <para>
+      Specifică calea spre web server-ele instalate Netscape/iPlanet/SunONE.
+     </para>
+    </listitem>
+   </varlistentry>
+   <varlistentry id="configure.with-phttpd">
+    <term>
+     <option role="configure">--with-phttpd=DIR</option>
+    </term>
+    <listitem>
+     <para>
+      Deocamdată nu există informaţii.
+     </para>
+    </listitem>
+   </varlistentry>
+   <varlistentry id="configure.with-pi3web">
+    <term>
+     <option role="configure">--with-pi3web=DIR</option>
+    </term>
+    <listitem>
+     <para>
+      Asamblează PHP în calitate de modul, pentru a fi utilizat cu Pi3Web.
+     </para>
+    </listitem>
+   </varlistentry>
+   <varlistentry id="configure.with-roxen">
+    <term>
+     <option role="configure">--with-roxen=DIR</option>
+    </term>
+    <listitem>
+     <para>
+      Asamblează PHP în calitate de modul Pike. DIR este directorul de bază al Roxen,
+      în mod normal <filename>/usr/local/roxen/server</filename>.
+     </para>
+    </listitem>
+   </varlistentry>
+   <varlistentry id="configure.enable-roxen-zts">
+    <term>
+     <option role="configure">--enable-roxen-zts</option>
+    </term>
+    <listitem>
+     <para>
+      Asamblează modulul Roxen utilizând Zend Thread Safety.
+     </para>
+    </listitem>
+   </varlistentry>
+   <varlistentry id="configure.with-servlet">
+    <term>
+     <option role="configure">--with-servlet[=DIR]</option>
+    </term>
+    <listitem>
+     <para>
+      Include susţinerea servlet-urilor. DIR este directorul de bază,
+      unde este instalat JSDK. Acest SAPI necesită ca extensia java să
+      fie asamblată ca un 'dl' partajat.
+     </para>
+    </listitem>
+   </varlistentry>
+   <varlistentry id="configure.with-thttpd">
+    <term>
+     <option role="configure">--with-thttpd=SRCDIR</option>
+    </term>
+    <listitem>
+     <para>
+      Asamblează PHP în calitate de modul thttpd.
+     </para>
+    </listitem>
+   </varlistentry>
+
+   <varlistentry id="configure.with-tux">
+    <term>
+     <option role="configure">--with-tux=MODULEDIR</option>
+    </term>
+    <listitem>
+     <para>
+      Asamblează PHP în calitate de modul TUX (numai în Linux).
+     </para>
+    </listitem>
+   </varlistentry>
+
+   <varlistentry id="configure.with-webjames">
+    <term>
+     <option role="configure">--with-webjames=SRCDIR</option>
+    </term>
+    <listitem>
+     <para>
+      Asamblează PHP în calitate de modul WebJames (numai în RISC OS)
+     </para>
+    </listitem>
+   </varlistentry>
+
+   <varlistentry id="configure.disable-cgi">
+    <term>
+     <option role="configure">--disable-cgi</option>
+    </term>
+    <listitem>
+     <para>
+      Dezactivează asamblarea versiunii CGI a PHP. Disponibil începând cu PHP 4.3.0.
+     </para>
+    </listitem>
+   </varlistentry>
+
+   <varlistentry id="configure.enable-force-cgi-redirect">
+    <term>
+     <option role="configure">--enable-force-cgi-redirect</option>
+    </term>
+    <listitem>
+     <para>
+      Activează controlul de securitate pentru redirecţionările interne ale serverului.
+      Ar trebui să utilizaţi această opţiune dacă rulaţi versiunea CGI cu Apache.
+     </para>
+    </listitem>
+   </varlistentry>
+
+   <varlistentry id="configure.enable-discard-path">
+    <term>
+     <option role="configure">--enable-discard-path</option>
+    </term>
+    <listitem>
+     <para>
+      Dacă această opţiune e activată, fişierul binar CGI al PHP poate fi plasat în mod
+      sigur în afara arborelui web şi nimeni nu va putea sparge securitatea &htaccess;.
+     </para>
+    </listitem>
+   </varlistentry>
+
+   <varlistentry id="configure.with-fastcgi">
+    <term>
+     <option role="configure">--with-fastcgi</option>
+    </term>
+    <listitem>
+     <para>
+      Asamblează PHP în calitate de aplicaţie FastCGI. Aceasta nu mai este disponibilă
+      începând cu  PHP 4.3.0. În loc, ar trebui să folosiţi
+      <option role="configure">--enable-fastcgi</option>.
+     </para>
+    </listitem>
+   </varlistentry>
+
+   <varlistentry id="configure.enable-fastcgi">
+    <term>
+     <option role="configure">--enable-fastcgi</option>
+    </term>
+    <listitem>
+     <para>
+      Dacă această opţiune e activată, modulul CGI va fi asamblat de asemenea cu susţinerea
+      FastCGI. Disponibil începând cu PHP 4.3.0
+     </para>
+    </listitem>
+   </varlistentry>
+
+   <varlistentry id="configure.disable-path-info-check">
+    <term>
+     <option role="configure">--disable-path-info-check</option>
+    </term>
+    <listitem>
+     <para>
+      Dacă această opţiune e dezactivată, căile ca
+      <filename>/info.php/test?a=b</filename>
+      nu vor funcţiona. Disponibil începând cu PHP 4.3.0.
+      Pentru informaţii suplimentare, accesaţi
+      <ulink url="&url.apache.core;#acceptpathinfo">Manualul Apache</ulink>.
+     </para>
+    </listitem>
+   </varlistentry>
+  </variablelist>
+ </sect3>
+
+<!-- Translated by Simion Onea -->
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:1
+sgml-indent-data:t
+indent-tabs-mode:nil
+sgml-parent-document:nil
+sgml-default-dtd-file:"../../../manual.ced"
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+vim600: syn=xml fen fdm=syntax fdl=2 si
+vim: et tw=78 syn=sgml
+vi: ts=1 sw=1
+-->
