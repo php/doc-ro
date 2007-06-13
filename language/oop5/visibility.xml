@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- $Revision: 1.1 $ -->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.2 $ -->
  <sect1 id="language.oop5.visibility">
   <title>Vizibilitatea</title>
   <para>
-   Vizibilitatea unei propietati sau a unei metode 
-   poate fi definita prefixand declaratia cu una din cuvintele 
-   cheie: public, protected or private. Elementele (fie ele 
-   propietati sau metode) declarate public pot fi accesate oriunde.
-   Elementele declarate protected limiteaza accesul la clasele 
-   care mostenesc propietatile sau metodele (precum si la clasa 
-   care le defineste). In final, cele declarate cu private limiteaza
-   vizibilitatea doar la clasa in care este definita.
+   Vizibilitatea unei propietăţi sau a unei metode 
+   poate fi definită prefixând declaraţia cu una din cuvintele 
+   cheie: public, protected sau private. Elementele (fie ele 
+   propietăţi sau metode) declarate public pot fi accesate oriunde.
+   Elementele declarate protected limitează accesul la clasele 
+   care moştenesc propietăţile sau metodele (precum şi la clasa 
+   care le defineşte). În final, cele declarate private limitează
+   vizibilitatea doar la clasa în care sunt definite.
   </para>
   <sect2 id="language.oop5.visiblity-members">
    <title>Vizibilitatea membrilor</title>
    <para>
-   Membri unei clase trebuie definiti cu: public, private, sau protected.
+   Membri unei clase trebuie definiţi cu: public, private, sau protected.
    </para>
    <para>
     <example>
-     <title>Declaratie membri</title>
+     <title>Declaraţie membri</title>
      <programlisting role="php">
 <![CDATA[
 <?php
@@ -41,17 +41,17 @@ class ClassaMea
 }
 
 $obj = new ClassaMea();
-echo $obj->membru_public;    // Functioneaza
-echo $obj->membru_protected; // Eroare fatala
-echo $obj->membru_private;   // Eroare fatala
-$obj->afiseazaBunaZiua();    // Afiseaza Eu sunt: Public, Eu sunt: Protected, Eu sunt: Private
+echo $obj->membru_public;    // Funcţioneaza
+echo $obj->membru_protected; // Eroare fatală
+echo $obj->membru_private;   // Eroare fatală
+$obj->afiseazaBunaZiua();    // Afişează Eu sunt: Public, Eu sunt: Protected, Eu sunt: Private
 
 /**
  * Define ClassaMea2
  */
 class ClassaMea2 extends ClassaMea
 {
-    // Putem redeclara metodele publice si protected, dar nu si cele private
+    // Putem redeclara metodele publice şi protected, dar nu şi pe cele private
     protected $membru_protected = 'Eu sunt: Protected2';
 
     function afiseazaBunaZiua()
@@ -63,10 +63,10 @@ class ClassaMea2 extends ClassaMea
 }
 
 $obj2 = new ClassaMea2();
-echo $obj->membru_public;     // Functioneaza
+echo $obj->membru_public;     // Funcţionează
 echo $obj2->membru_private;   // Nedefinit
-echo $obj2->membru_protected; // Eroare fatala
-$obj2->afiseazaBunaZiua();    // Afiseaza Eu sunt: Public, Eu sunt: Protected2
+echo $obj2->membru_protected; // Eroare fatală
+$obj2->afiseazaBunaZiua();    // Afişează Eu sunt: Public, Eu sunt: Protected2
 
 ?> 
 ]]>
@@ -75,42 +75,42 @@ $obj2->afiseazaBunaZiua();    // Afiseaza Eu sunt: Public, Eu sunt: Protected2
    </para>
    <note>
     <simpara>
-     Metoda PHP 4 de a declara variabile folosind cuvantul cheie
-     <emphasis>var</emphasis> nu mai este valabile pentru obiectele
+     Metoda PHP 4 de a declara variabile folosind cuvântul cheie
+     <emphasis>var</emphasis> nu mai este valabilă pentru obiectele
 	 din PHP 5. Pentru compatibilitate variabilele declarate 
-     in PHP 5 cu <emphasis>var</emphasis> vor fi automat inzestrate
-	 cu vizibilitate public, si se va emite un warning de tip
+     în PHP 5 cu <emphasis>var</emphasis> vor fi automat înzestrate
+	 cu vizibilitate public, şi se va emite un warning de tip
      <constant>E_STRICT</constant>.
     </simpara>
    </note>
   </sect2>
   <sect2 id="language.oop5.visiblity-methods">
-   <title>Method Visibility</title>
+   <title>Vizibilitatea metodelor</title>
    <para>
-    Class methods must be defined with public, private, or protected. Methods
-    without any declaration are defined as public.
+    Metodele claselor trebuie definite cu public, private, sau protected. Metodele 
+    fără nici o declaraţie sunt implicit considerate public.
    </para>
    <para>
     <example>
-     <title>Method Declaration</title>
+     <title>Declaraţie metode</title>
      <programlisting role="php">
 <![CDATA[
 <?php
 /**
- * Define MyClass
+ * Definire ClasaMea
  */
-class MyClass
+class ClasaMea
 {
-    // Contructors must be public
+    // Constructorul trebuie să fie public
     public function __construct() { }
 
-    // Declare a public method
+    // Declararea unei metode: public
     public function MyPublic() { }
 
-    // Declare a protected method
+    // Declararea unei metode: protected
     protected function MyProtected() { }
 
-    // Declare a private method
+    // Declararea unei metode: private
     private function MyPrivate() { }
 
     // This is public
@@ -123,10 +123,10 @@ class MyClass
 }
 
 $myclass = new MyClass;
-$myclass->MyPublic(); // Works
-$myclass->MyProtected(); // Fatal Error
-$myclass->MyPrivate(); // Fatal Error
-$myclass->Foo(); // Public, Protected and Private work
+$myclass->MyPublic(); // Funcţionează
+$myclass->MyProtected(); // Eroare Fatală
+$myclass->MyPrivate(); // Eroare Fatală
+$myclass->Foo(); // Public, Protected şi Private funcţionează
 
 
 /**
@@ -139,13 +139,13 @@ class MyClass2 extends MyClass
     {
         $this->MyPublic();
         $this->MyProtected();
-        $this->MyPrivate(); // Fatal Error
+        $this->MyPrivate(); // Eroare Fatală
     }
 }
 
 $myclass2 = new MyClass2;
-$myclass2->MyPublic(); // Works
-$myclass2->Foo2(); // Public and Protected work, not Private
+$myclass2->MyPublic(); // Funcţionează
+$myclass2->Foo2(); // Public şi Protected funcţionează, nu şi Private
 ?>
 ]]>
      </programlisting>

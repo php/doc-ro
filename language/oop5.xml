@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- $Revision: 1.1 $ -->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.2 $ -->
  <chapter id="language.oop5">
   <title>Classes and Objects (PHP 5)</title>
 
   <sect1  id="op5.intro">
    <title>Introducere</title>
    <para>
-    In PHP 5 suportul pentru Obiecte este complet nou. Modul in care PHP 
-	manipuleaza obiecte a fost rescris in totalitate, pentru o 
-	performanta mai buna si mai multe calitati/caracteristici.
+    În PHP 5 suportul pentru Obiecte este complet nou. Modul în care PHP 
+	manipulează obiecte a fost rescris în totalitate, pentru o 
+	performanţă mai bună şi mai multe calităţi/caracteristici.
    </para>
   </sect1>
 
