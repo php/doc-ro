@@ -1,22 +1,66 @@
 <!-- $Revision$ -->
+<!-- EN-Revision: 1.31 Maintainer: simionea Status: translated -->
 
-<!ENTITY PHPManual         "Manual PHP">
+<!-- Part titles used mostly in manual.xml itself -->
+<!ENTITY PHPManual         "Manualul PHP">
 <!ENTITY Date              "Data:">
-<!ENTITY GettingStarted    "Introducere">
-<!ENTITY Installation      "Instalare">
-<!ENTITY LanguageReference "Documentatia limbajului">
-<!ENTITY Features          "Caracteristici">
-<!ENTITY FunctionReference "Documentatia functiilor">
-<!ENTITY Appendixes        "Anexe">
-<!ENTITY PEAR              "PEAR: colectie PHP de extensii si aplicatii (PEAR : PHP Extension and Application Repository)">
-<!ENTITY FAQ               "FAQ: Intrebari frecvente">
+<!ENTITY GettingStarted    "Pentru început">
+<!ENTITY InstallAndConfigure "Installarea şi configurarea">
+<!ENTITY Installation      "Instalarea">
+<!ENTITY LanguageReference "Informaţii de referinţă despre limbaj">
+<!ENTITY Features          "Facilităţi">
+<!ENTITY Security          "Securitatea">
+<!ENTITY FunctionReference "Informaţii de referinţă despre funcţii">
+<!ENTITY PECLReference     "Informaţii de referinţă despre funcţiile PECL">
+<!ENTITY AddOnReference    "Informaţii de referinţă despre funcţiile extensiilor suplimentare">
+<!ENTITY Appendices        "Anexe">
+<!ENTITY PEAR              "PEAR: colecţia de extensii şi aplicaţii PHP">
+<!ENTITY FAQ               "FAQ: Întrebări frecvente">
 <!ENTITY FAQabbrev         "FAQ">
-<!ENTITY FunctionIndex     "Indexul functiilor">
-<!ENTITY CHMEdition        "HTML Help Edition">
+<!ENTITY Internals         "Interiorul PHP şi a motorului Zend">
+<!ENTITY Internals2        "Nucleul PHP: Ghidul unui hacker spre motorul Zend">
+<!ENTITY ZendAPI           "API al Zend: Aprofundarea în nucleul PHP">
+<!ENTITY FunctionIndex     "Indicele funcţiilor">
+<!ENTITY CHMEdition        "Ediţia în formatul HTML Help">
 <!ENTITY ReservedConstants "Constante predefinite">
+<!ENTITY MissingStuff      "Lucruri care lipsesc">
+<!ENTITY AndSeveralOthers  "Şi altele">
+<!ENTITY Version           "Versiunea">
+<!ENTITY Description       "Descriere">
+<!ENTITY Changeable        "Poate fi modificată">
+<!ENTITY ConfigureOptions  "Opţiuni de configurare pentru">
+<!ENTITY Default           "Valoarea implicită">
+<!ENTITY Definition        "Definiţia">
+<!ENTITY Functions         "Funcţii">
+<!ENTITY Name              "Denumirea">
+<!ENTITY Alias             "Pseudonim pentru">
+
+<!-- These are used in reference/$extname/reference.xml and other
+supplemental files to mark section titles -->
+<!ENTITY reftitle.changelog    '<title>Istoria schimbărilor</title>'>
+<!ENTITY reftitle.classes      '<title>Clase predefinite</title>'>
+<!ENTITY reftitle.constants    '<title>Constante predefinite</title>'>
+<!ENTITY reftitle.constructor  '<title>Constructorul</title>'>
+<!ENTITY reftitle.description  '<title>Descrierea</title>'>
+<!ENTITY reftitle.examples     '<title>Exemple</title>'>
+<!ENTITY reftitle.exceptions   '<title>Excepţii</title>'>
+<!ENTITY reftitle.errors       '<title>Erori/Excepţii</title>'>
+<!ENTITY reftitle.install      '<title>Instalarea</title>'>
+<!ENTITY reftitle.intro        '<title>Introducere</title>'>
+<!ENTITY reftitle.methods      '<title>Metode</title>'>
+<!ENTITY reftitle.parameters   '<title>Parametri</title>'>
+<!ENTITY reftitle.properties   '<title>Proprietăţi</title>'>
+<!ENTITY reftitle.required     '<title>Necesităţi</title>'>
+<!ENTITY reftitle.resources    '<title>Tipurile resurselor</title>'>
+<!ENTITY reftitle.runtime      '<title>Configuraţia la rulare</title>'>
+<!ENTITY reftitle.returnvalues '<title>Valorile întroarse</title>'>
+<!ENTITY reftitle.seealso      '<title>Vedeţi de asemenea</title>'>
+<!ENTITY reftitle.notes        '<title>Note</title>'>
 
 <!ENTITY url.ro.rophp        "http://www.rophp.net">
 <!ENTITY url.ro.rophpdoc     "http://www.rophp.net/doc/php">
 <!ENTITY url.ro.urbanxp      "http://php.urbanxp.org">
 <!ENTITY email.ro.adiju      "adiju@terrasat.ro">
 <!ENTITY email.ro.rophpman   "rophpman@yahoogroups.com">
+
+<!-- Translated by Simion Onea -->

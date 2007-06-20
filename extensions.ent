@@ -1,1 +1,93 @@
-<!-- Placeholder file, someone please translate -->
+<!-- $Revision$ -->
+<!-- EN-Revision: 1.1 Maintainer: simionea Status: translated -->
+
+<!--
+  Entities for the categorized extension list, so it does not need
+  to be translated, and thus it is not going to be outdated.
+-->
+
+<!ENTITY extcat.intro '<title>Categorizarea extensiilor</title><para>Această
+anexă categorizează peste 150 extensii documentate în Manualul PHP
+după câteva criterii.</para>'>
+
+<!-- ======================================================================= -->
+
+<!ENTITY extcat.purpose '<title>Scopul</title>'>
+
+<!ENTITY extcat.purpose.basic '<title>Extensiile de bază ale PHP</title>'>
+<!ENTITY extcat.purpose.basic.vartype '<title>Extensiile ce se referă la variable şi tipuri</title>'>
+<!ENTITY extcat.purpose.basic.text '<title>Procesarea textelor</title>'>
+<!ENTITY extcat.purpose.basic.php "<title>Schimbarea comportamentului PHP</title>">
+<!ENTITY extcat.purpose.basic.session '<title>Extensiile de lucru cu sesiuni</title>'>
+<!ENTITY extcat.purpose.basic.other '<title>Alte extensii de bază</title>'>
+
+<!ENTITY extcat.purpose.database '<title>Extensii de lucru cu baze de date</title>'>
+<!ENTITY extcat.purpose.database.abstract '<title>Nivelele de abstracţie</title>'>
+<!ENTITY extcat.purpose.database.vendors '<title>Extensii de lucru cu baze de date specifice ale unor producători</title>'>
+
+<!ENTITY extcat.purpose.xml '<title>Manipularea cu XML</title>'>
+
+<!ENTITY extcat.purpose.webservice '<title>Servicii Web</title>'>
+
+<!ENTITY extcat.purpose.creditcard '<title>Procesarea cartelelor de credit</title>'>
+   
+<!ENTITY extcat.purpose.mathcrypto '<title>Matematică şi criptografie</title>'>
+<!ENTITY extcat.purpose.mathcrypto.math '<title>Extensii matematice</title>'>
+<!ENTITY extcat.purpose.mathcrypto.crypto '<title>Extensii criptografice</title>'>
+
+<!ENTITY extcat.purpose.international '<title>Susţinerea codificării caracterelor şi a limbajului uman</title>'>
+   
+<!ENTITY extcat.purpose.fileprocess '<title>Controlul sistemului de fişiere şi al proceselor</title>'>
+<!ENTITY extcat.purpose.fileprocess.file '<title>Extensii ce se referă la sistemul de fişiere</title>'>
+<!ENTITY extcat.purpose.fileprocess.process '<title>Extensii de control al proceselor</title>'>
+
+<!ENTITY extcat.purpose.remote '<title>Accessarea serviciilor</title>'>
+<!ENTITY extcat.purpose.remote.mail '<title>Extensii ce se referă la poştă</title>'>
+<!ENTITY extcat.purpose.remote.auth '<title>Servicii de autentificare</title>'>
+<!ENTITY extcat.purpose.remote.other '<title>Alte servicii</title>'>
+
+<!ENTITY extcat.purpose.compression '<title>Extensii de comprimare</title>'>
+
+<!ENTITY extcat.purpose.calendar '<title>Extensii ce se referă la calendar şi evenimente</title>'>
+
+<!ENTITY extcat.purpose.utilspec '<title>Extensii specifice ariei de utilizare</title>'>
+<!ENTITY extcat.purpose.utilspec.nontext '<title>Obţinerea ieşirilor MIME non-textuale</title>'>
+<!ENTITY extcat.purpose.utilspec.image '<title>Procesarea şi generarea imaginilor</title>'>
+<!ENTITY extcat.purpose.utilspec.audio '<title>Manipularea cu formatele audio</title>'>
+<!ENTITY extcat.purpose.utilspec.cmdline '<title>Extensii specifice liniei de comandă</title>'>
+<!ENTITY extcat.purpose.utilspec.windows '<title>Extensii numai pentru Windows</title>'>
+<!ENTITY extcat.purpose.utilspec.server '<title>Extensii specifice serverelor</title>'>
+    
+<!-- ======================================================================= -->
+
+<!ENTITY extcat.membership '<title>Apartenenţa</title>'>
+
+<!ENTITY extcat.membership.core '<title>Extensiile de bază</title><para>Acestea
+de fapt nu sunt extensii. Ele fac parte din nucleul PHP şi nu pot fi separate de
+binarul PHP folosind opţiuni de compilare.</para>'>
+
+<!ENTITY extcat.membership.bundled '<title>Extensii adiţionale</title><para>Aceste
+extensii sunt livrate împreună cu PHP.</para>'>
+
+<!ENTITY extcat.membership.external '<title>Extensii externe</title><para>Pentru
+a putea compila aceste extensii, vor fi necesare biblioteci externe.</para>'>
+
+<!ENTITY extcat.membership.pecl '<title>Extensii PECL</title><para>Aceste
+extensii sunt disponibile în <ulink url="&url.pecl;">PECL</ulink>. Există mai
+multe extensii PECL, dar ele nu sunt documentate în manualul PHP deocamdată.</para>'>
+
+<!-- ======================================================================= -->
+
+<!ENTITY extcat.state '<title>Statutul</title><para>Acest compartiment enumeră extensiile
+care nu sunt destinate folosirii în producere - ele sunt sau prea "vechi" (scoase din uz), sau
+"noi" (experimentale).</para>'>
+
+<!ENTITY extcat.state.deprecated '<title>Extensiile scoase din uz</title><para>Aceste extensii
+au fost scoase din uz în favoarea unor alte extensii, de regulă.</para>'>
+
+<!ENTITY extcat.state.experimental '<title>Extensii experimentale</title><para>Comportamentul
+acestor extensii - inclusiv numele funcţiilor lor şi orice alte aspecte documentate despre
+aceste extensii - pot fi schimbate fără preaviz într-o versiune viitoare a PHP. Utilizaţi
+aceste extensii la propriul risc.</para>'>
+
+<!-- Translated by Simion Onea -->
