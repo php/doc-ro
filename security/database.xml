@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- $Revision: 1.1 $ -->
+<!-- $Revision: 1.2 $ -->
 <!-- splitted from ./index.xml, last change in rev 1.66 -->
-  <chapter id="security.database">
+  <chapter xml:id="security.database" xmlns="http://docbook.org/ns/docbook">
    <title>Securitatea Bazelor de Date</title>
 
    <simpara>
@@ -31,7 +31,7 @@
     care va puteti pune problemele legate de securitate. 
     </simpara>
 
-   <sect1 id="security.database.design">
+   <sect1 xml:id="security.database.design">
     <title>Designul bazelor de date</title>
      <simpara>
       Primul pas este intotdeauna crearea bazei de date, numai in cazul in
@@ -65,7 +65,7 @@
      </simpara>
    </sect1>
 
-   <sect1 id="security.database.connection">
+   <sect1 xml:id="security.database.connection">
     <title>Conectarea la baza de date</title>
     <simpara>
      Se poate sa doriti sa va conectati la baza de date folosind encriptia SSL
@@ -82,7 +82,7 @@
     </simpara-->
    </sect1>
 
-   <sect1 id="security.database.storage">
+   <sect1 xml:id="security.database.storage">
     <title>Model de stocare criptata</title>
     <simpara>
      SSL/SSH protejeaza traversarea datelor de la client la server, insa SSL/SSH
@@ -141,7 +141,7 @@ else {
     </example>
    </sect1>
 
-   <sect1 id="security.database.sql-injection">
+   <sect1 xml:id="security.database.sql-injection">
     <title>Injectia SQL</title>
     <simpara>
      Multi developeri web nu stiu cum pot fi manipulate query-urile SQL,
@@ -345,7 +345,7 @@ $result = mssql_query($query);
      </para>
     </note>
 
-    <sect2 id="security.database.avoiding">
+    <sect2 xml:id="security.database.avoiding">
      <title>Tehnici de evitare</title>
      <simpara>
       Puteti spune ca un atacator trebuie sa detina informatii despre baza de date

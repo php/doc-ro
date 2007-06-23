@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- splitted from ./ro/functions/var.xml, last change in rev 1.1 -->
 <!-- last change to 'floatval' in en/ tree in rev 1.66 -->
-  <refentry id="function.floatval">
+  <refentry xml:id="function.floatval" xmlns="http://docbook.org/ns/docbook">
    <refnamediv>
     <refname>floatval</refname>
     <refpurpose>Returnează valoarea de tip float a unei variabile</refpurpose>

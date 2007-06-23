@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.1 $ -->
-<!-- EN-Revision: 1.11 Maintainer: simionea Status: translated -->
-<appendix id="types.comparisons">
+<!-- $Revision: 1.2 $ -->
+<!-- EN-Revision: 1.12 Maintainer: simionea Status: translated -->
+<appendix xml:id="types.comparisons" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Tabelele de comparaţii ale tipurilor PHP</title>
  <para>
   Tabelele următoare demonstrează comportamentul 
@@ -11,7 +11,7 @@
   supliment de asemenea are legătură şi cu secţiunea din manual despre 
   <link linkend="language.types.type-juggling">jonglarea cu tipurile</link>.
   Inspiraţia a fost adusă de diverse comentarii ale utilizatorilor şi de lucrările
-  de la <ulink url="&url.blueshoes.comparisons;">BlueShoes</ulink>.
+  de la <link xlink:href="&url.blueshoes.comparisons;">BlueShoes</link>.
  </para>
  <para>
   Înainte de a utiliza aceste tabele, este important de a întelege tipurile şi

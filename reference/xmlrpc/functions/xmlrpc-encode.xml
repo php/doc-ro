@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- splitted from ./ro/functions/xmlrpc.xml, last change in rev 1.1 -->
 <!-- last change to 'xmlrpc-encode' in en/ tree in rev 1.1 -->
-  <refentry id="function.xmlrpc-encode">
+  <refentry xml:id="function.xmlrpc-encode" xmlns="http://docbook.org/ns/docbook">
    <refnamediv>
     <refname>xmlrpc_encode</refname>
     <refpurpose>Generează XML pentru o valoare PHP</refpurpose>

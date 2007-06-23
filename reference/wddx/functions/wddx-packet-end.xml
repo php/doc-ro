@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- splitted from ./ro/functions/wddx.xml, last change in rev 1.1 -->
 <!-- last change to 'wddx-packet-end' in en/ tree in rev 1.2 -->
-	<refentry id="function.wddx-packet-end">
+	<refentry xml:id="function.wddx-packet-end" xmlns="http://docbook.org/ns/docbook">
 		<refnamediv>
 			<refname>wddx_packet_end</refname>
 			<refpurpose>Finalizează un pachet WDDX avand ID-ul specificat</refpurpose>

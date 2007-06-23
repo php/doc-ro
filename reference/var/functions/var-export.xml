@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- splitted from ./ro/functions/var.xml, last change in rev 1.1 -->
 <!-- last change to 'var-export' in en/ tree in rev 1.6 -->
-  <refentry id="function.var-export">
+  <refentry xml:id="function.var-export" xmlns="http://docbook.org/ns/docbook">
    <refnamediv>
     <refname>var_export</refname>
     <refpurpose>Afişează o reprezentare ca şir de caractere a unei variabile</refpurpose>

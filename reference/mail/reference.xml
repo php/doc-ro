@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.3 $ -->
- <reference id="ref.mail">
+<!-- $Revision: 1.4 $ -->
+ <reference xml:id="ref.mail" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Mail - funcţii</title>
   <titleabbrev>Mail</titleabbrev>
   <partintro>
@@ -11,7 +11,7 @@
    <variablelist>
     <title>Directive de configurare ale funcţiei Mail</title>
 
-    <varlistentry id="ini.smtp">
+    <varlistentry xml:id="ini.smtp">
      <term>
       <parameter>SMTP</parameter>
       <type>string</type>
@@ -23,7 +23,7 @@
      </listitem>
     </varlistentry>
 
-    <varlistentry id="ini.sendmail-from">
+    <varlistentry xml:id="ini.sendmail-from">
      <term>
       <parameter>sendmail_from</parameter>
       <type>string</type>
@@ -35,7 +35,7 @@
      </listitem>
     </varlistentry>
 
-    <varlistentry id="ini.sendmail-path">
+    <varlistentry xml:id="ini.sendmail-path">
      <term>
       <parameter>sendmail_path</parameter>
       <type>string</type>
@@ -45,7 +45,7 @@
        Calea către programul <command>sendmail</command>, de regulă <filename>/usr/sbin/sendmail</filename> sau <filename>/usr/lib/sendmail</filename> <command>configure</command> încearcă să-l localizeze şi să-l seteze ca implicit, dar dacă acest lucru nu se întâmplă puteţi seta calea în această directivă.
       </para>
       <para>
-       Pe sistemele care nu utilizează sendmail această directivă trebuie pentru a conţine calea către programul care înlocuieşte sendmail, dacă există vreunul. De exemplu, cei care utilizează <ulink url="&url.qmail;">Qmail</ulink> pot seta valoarea directivei la <filename>/var/qmail/bin/sendmail</filename>.
+       Pe sistemele care nu utilizează sendmail această directivă trebuie pentru a conţine calea către programul care înlocuieşte sendmail, dacă există vreunul. De exemplu, cei care utilizează <link xlink:href="&url.qmail;">Qmail</link> pot seta valoarea directivei la <filename>/var/qmail/bin/sendmail</filename>.
       </para>
      </listitem>
     </varlistentry>

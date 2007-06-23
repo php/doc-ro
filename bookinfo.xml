@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.13 $ -->
+<!-- $Revision: 1.14 $ -->
 
- <bookinfo id="bookinfo">
+ <bookinfo xml:id="bookinfo" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>&PHPManual;</title>
   &frontpage.authors;
   <pubdate>&php.build-date;</pubdate>
   &frontpage.editors;
 
-  <authorgroup id="translators">
+  <authorgroup xml:id="translators">
    <collab>
     <collabname>Traducerea in limba romana a fost efectuata de</collabname>
    </collab>
@@ -63,7 +63,7 @@
    <holder>Grupul de Documentare PHP</holder>
   </copyright>
 
-  <legalnotice id="copyright">
+  <legalnotice xml:id="copyright">
    <title>Copyright</title>
    <simpara>
     Copyright &copy; 1997 - 2007 de catre Grupul de Documentare PHP.
@@ -71,7 +71,7 @@
 	stabilite in documentul Open Publication License (Licenta Open de Publicare), 
 	v1.0 sau anterioara. O copie a <link linkend="opl.license">Licentei Open de
     Publicare</link> este distribuita cu acest manual, cea mai noua versiune
-    este prezentata si disponibila la adresa <ulink url="&url.opl;">&url.opl;</ulink>.
+    este prezentata si disponibila la adresa <link xlink:href="&url.opl;">&url.opl;</link>.
    </simpara>
    <simpara>
     Distribuirea de versiuni ale acestui document modificate substantial 
@@ -85,7 +85,7 @@
     In caz ca sunteti interesat in redistribuirea sau republicarea acestui document
 	integral sau pe bucati, modificat sau nemodificat, si daca aveti intrebari,
 	va rugam sa contactati detinatorii de copyright la adresa
-    <ulink url="mailto:&email.php.doc.license;">&email.php.doc.license;</ulink>.
+    <link url="mailto:&email.php.doc.license;">&email.php.doc.license;</link>.
     Aceasta adresa este mapata catre arhiva listei publice de mail.
    </simpara>
    <simpara>
@@ -94,7 +94,7 @@
    </simpara>
   </legalnotice>
 
- </bookinfo>
+ </info>
  
 <!-- Keep this comment at the end of the file
 Local variables:

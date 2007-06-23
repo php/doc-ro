@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.1 $ -->
-<!-- EN-Revision: 1.15 Maintainer: simionea Status: translated -->
-<appendix id="filters">
+<!-- $Revision: 1.2 $ -->
+<!-- EN-Revision: 1.16 Maintainer: simionea Status: translated -->
+<appendix xml:id="filters" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Lista filtrelor disponibile</title>
  <para>
   Urmează o listă a câtorva filtre de torent pentru a fi utilizate cu
@@ -35,7 +35,7 @@
   folosiţi <function>stream_get_filters</function>.
  </para>
 
- <section id="filters.string">
+ <section xml:id="filters.string">
   <title>Filtrele string-urilor</title>
 
   <simpara>
@@ -138,7 +138,7 @@ fclose($fp);
    
  </section>
 
- <section id="filters.convert">
+ <section xml:id="filters.convert">
   <title>Filtre de conversie</title>
 
   <simpara>
@@ -227,7 +227,7 @@ fwrite($fp, "This is a test.\n");
   </example>
  </section>
 
- <section id="filters.compression">
+ <section xml:id="filters.compression">
   <title>Filtrele de compresie</title>
 
   <simpara>
@@ -251,7 +251,7 @@ fwrite($fp, "This is a test.\n");
   <simpara>
    <literal>zlib.deflate</literal> (compresie) şi
    <literal>zlib.inflate</literal> (decompresie) sunt implementări ale metodelor de
-   compresie descrise în <ulink url="&url.rfc;1951">RFC 1951</ulink>.
+   compresie descrise în <link xlink:href="&url.rfc;1951">RFC 1951</link>.
    Filtrul <literal>deflate</literal> preia până la trei parametri transmişi sub
    forma unui masiv asociativ.
 
@@ -284,8 +284,8 @@ fwrite($fp, "This is a test.\n");
     Filtrele de compresie zlib.* sunt disponibile în PHP începând cu versiunea <literal>5.1.0</literal>,
     dacă susţinerea <link linkend="ref.zlib">zlib</link> a fost activată. Ele de asemenea sunt disponibile
     în calitate de cod portabil şi pentru versiunea <literal>5.0.x</literal> instalând pachetul
-    <ulink url="&url.pecl.package;zlib_filter">zlib_filter</ulink> din
-    <ulink url="&url.pecl;">PECL</ulink>. Aceste filtre <emphasis>nu</emphasis> sunt disponibile pentru
+    <link xlink:href="&url.pecl.package;zlib_filter">zlib_filter</link> din
+    <link xlink:href="&url.pecl;">PECL</link>. Aceste filtre <emphasis>nu</emphasis> sunt disponibile pentru
     PHP 4.
   </simpara>
 
@@ -387,8 +387,8 @@ The compressed file is 56 bytes long.
     Filtrele de copresie bzip2.* sunt disponibile în PHP începând cu versiunea <literal>5.1.0</literal>
     dacă susţinerea <link linkend="ref.bzip2">bz2</link> a fost activată. Ele de asemenea sunt disponibile
     în calitate de cod portabil şi pentru versiunea <literal>5.0.x</literal> instalând pachetul
-    <ulink url="&url.pecl.package;bz2_filter">bz2_filter</ulink> din
-    <ulink url="&url.pecl;">PECL</ulink>. Aceste filtre <emphasis>nu</emphasis> sunt disponibile în PHP 4.
+    <link xlink:href="&url.pecl.package;bz2_filter">bz2_filter</link> din
+    <link xlink:href="&url.pecl;">PECL</link>. Aceste filtre <emphasis>nu</emphasis> sunt disponibile în PHP 4.
   </simpara>
 
   <example>
@@ -422,7 +422,7 @@ The compressed file is 1488 bytes long.
   </example>
  </section>
 
- <section id="filters.encryption">
+ <section xml:id="filters.encryption">
   <title>Filtrele de criptare</title>
 
   <simpara>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- splitted from ./ro/functions/datetime.xml, last change in rev 1.1 -->
 <!-- last change to 'gmmktime' in en/ tree in rev 1.2 -->
-  <refentry id="function.gmmktime">
+  <refentry xml:id="function.gmmktime" xmlns="http://docbook.org/ns/docbook">
    <refnamediv>
     <refname>gmmktime</refname>
     <refpurpose>Citeşte un timestamp UNIX pentru o dată GMT</refpurpose>

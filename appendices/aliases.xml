@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.1 $ -->
-<!-- EN-Revision: 1.32 Maintainer: simionea Status: translated -->
-<appendix id="aliases">
+<!-- $Revision: 1.2 $ -->
+<!-- EN-Revision: 1.33 Maintainer: simionea Status: translated -->
+<appendix xml:id="aliases" xmlns="http://docbook.org/ns/docbook">
  <title>Lista pseudonimelor funcţiilor</title>
  <para>
   Există câteva funcţii în PHP, pe care puteţi să le apelaţi cu mai multe

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.5 $ -->
+<!-- $Revision: 1.6 $ -->
 
- <preface id="preface">
+ <preface xml:id="preface" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Prefaţă</title>
 
   <abstract>
@@ -15,11 +15,11 @@
   </para>
 
   <para>
-   Cele mai noi versiuni ale acestui manual (actualizate imediat ce conţinutul se modifică) pot fi vizualizate (sau descărcate, în diferite formate) la <ulink url="&url.php.docs;">&url.php.docs;</ulink>. Mai multe informaţii despre modul în care este dezvoltat manualul PHP pot fi găsite în Anexa <link linkend="about">'Despre manualul PHP'</link>.
+   Cele mai noi versiuni ale acestui manual (actualizate imediat ce conţinutul se modifică) pot fi vizualizate (sau descărcate, în diferite formate) la <link xlink:href="&url.php.docs;">&url.php.docs;</link>. Mai multe informaţii despre modul în care este dezvoltat manualul PHP pot fi găsite în Anexa <link linkend="about">'Despre manualul PHP'</link>.
   </para>
 
   <para>
-   Versiunea în limba română a manualului PHP este realizată, în mod voluntar, de o echipă formată din Paul Dorneanu (iniţiatorul acestui proiect), Adrian Jurjica, Cristi Rădulescu, Valentin Ţuţu, Iulian Năstăsache, Daniel Toma, 1ns0mn1a, Dorel Năstasă, Dan Matornei, Rareş Benea, Valentin Agachi, Cristi Armeana şi Adrian Spinei. Pentru a participa la traducerea manualului PHP este de ajuns sa subscrieţi la lista de discuţii rophpman-at-yahoo.com. De asemenea vă recomandăm să vizitaţi <ulink url="&url.ro.urbanxp;">&url.ro.urbanxp;</ulink> şi <ulink url="&url.ro.rophp;">&url.ro.rophp;</ulink> pentru noutăţi.
+   Versiunea în limba română a manualului PHP este realizată, în mod voluntar, de o echipă formată din Paul Dorneanu (iniţiatorul acestui proiect), Adrian Jurjica, Cristi Rădulescu, Valentin Ţuţu, Iulian Năstăsache, Daniel Toma, 1ns0mn1a, Dorel Năstasă, Dan Matornei, Rareş Benea, Valentin Agachi, Cristi Armeana şi Adrian Spinei. Pentru a participa la traducerea manualului PHP este de ajuns sa subscrieţi la lista de discuţii rophpman-at-yahoo.com. De asemenea vă recomandăm să vizitaţi <link xlink:href="&url.ro.urbanxp;">&url.ro.urbanxp;</link> şi <link xlink:href="&url.ro.rophp;">&url.ro.rophp;</link> pentru noutăţi.
   </para>
   
   &contributors;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- splitted from ./ro/functions/var.xml, last change in rev 1.1 -->
 <!-- last change to 'is-object' in en/ tree in rev 1.2 -->
-  <refentry id="function.is-object">
+  <refentry xml:id="function.is-object" xmlns="http://docbook.org/ns/docbook">
    <refnamediv>
     <refname>is_object</refname>
     <refpurpose>Decide dacă o variabilă este de tip object</refpurpose>

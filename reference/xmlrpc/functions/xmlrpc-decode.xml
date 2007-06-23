@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- splitted from ./ro/functions/xmlrpc.xml, last change in rev 1.1 -->
 <!-- last change to 'xmlrpc-decode' in en/ tree in rev 1.1 -->
-  <refentry id="function.xmlrpc-decode">
+  <refentry xml:id="function.xmlrpc-decode" xmlns="http://docbook.org/ns/docbook">
    <refnamediv>
     <refname>xmlrpc_decode</refname>
     <refpurpose>Decodează XML în tipuri PHP native </refpurpose>

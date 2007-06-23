@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- $Revision: 1.1 $ -->
+<!-- $Revision: 1.2 $ -->
 <!-- splitted from ./index.xml, last change in rev 1.66 -->
-  <chapter id="security.current">
+  <chapter xml:id="security.current" xmlns="http://docbook.org/ns/docbook">
    <title>Cea mai noua versiune</title>
    <simpara>
     PHP, ca si orice alt sistem, este intr-un proces constant de

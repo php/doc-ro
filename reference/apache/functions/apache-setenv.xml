@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!-- splitted from ./ro/functions/apache.xml, last change in rev 1.1 -->
 <!-- last change to 'apache-setenv' in en/ tree in rev 1.7 -->
-  <refentry id='function.apache-setenv'>
+  <refentry xml:id='function.apache-setenv' xmlns="http://docbook.org/ns/docbook">
    <refnamediv>
     <refname>apache_setenv</refname>
     <refpurpose>Seteazã o variabilã Apache subprocess_env</refpurpose>

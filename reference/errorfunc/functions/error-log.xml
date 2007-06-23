@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- splitted from ./ro/functions/errorfunc.xml, last change in rev 1.2 -->
 <!-- last change to 'error-log' in en/ tree in rev 1.1 -->
-  <refentry id="function.error-log">
+  <refentry xml:id="function.error-log" xmlns="http://docbook.org/ns/docbook">
    <refnamediv>
     <refname>error_log</refname>
     <refpurpose>Trimite un mesaj de eroare către o destinaţie</refpurpose>

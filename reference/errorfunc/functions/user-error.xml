@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- splitted from ./ro/functions/errorfunc.xml, last change in rev 1.2 -->
 <!-- last change to 'user-error' in en/ tree in rev 1.1 -->
-  <refentry id="function.user-error">
+  <refentry xml:id="function.user-error" xmlns="http://docbook.org/ns/docbook">
    <refnamediv>
     <refname>user_error</refname>
     <refpurpose>

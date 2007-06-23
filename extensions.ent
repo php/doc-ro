@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.1 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.2 Maintainer: simionea Status: translated -->
 
 <!--
   Entities for the categorized extension list, so it does not need
@@ -73,7 +73,7 @@ extensii sunt livrate împreună cu PHP.</para>'>
 a putea compila aceste extensii, vor fi necesare biblioteci externe.</para>'>
 
 <!ENTITY extcat.membership.pecl '<title>Extensii PECL</title><para>Aceste
-extensii sunt disponibile în <ulink url="&url.pecl;">PECL</ulink>. Există mai
+extensii sunt disponibile în <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.pecl;">PECL</link>. Există mai
 multe extensii PECL, dar ele nu sunt documentate în manualul PHP deocamdată.</para>'>
 
 <!-- ======================================================================= -->

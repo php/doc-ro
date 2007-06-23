@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- $Revision: 1.3 $ -->
- <reference id='ref.imap'>
+<!-- $Revision: 1.4 $ -->
+ <reference xml:id='ref.imap' xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>IMAP, POP3 ºi NNTP - funcþii</title>
   <titleabbrev>IMAP</titleabbrev>
 
@@ -9,7 +9,7 @@
     Pentru ca aceste funcþii sã poatã fi folosite, trebuie sã compilaþi
     PHP cu directiva <option role="configure">--with-imap</option>.
     Este nevoie sã fie instalatã biblioteca c-client. Descãrcaþi ultima
-    versiune de la <ulink url="&url.imap;">&url.imap;</ulink> ºi compilaþi-o.
+    versiune de la <link xlink:href="&url.imap;">&url.imap;</link> ºi compilaþi-o.
     Apoi copiaþi fiºierul <filename>c-client/c-client.a</filename> în
     <filename>/usr/local/lib/libc-client.a</filename>
     ºi copiaþi <filename>c-client/rfc822.h</filename>,
@@ -32,55 +32,55 @@
     <itemizedlist>
      <listitem>
       <simpara>
-       <ulink url="&url.rfc;rfc2821.html">RFC2821</ulink>: Simple Mail
+       <link xlink:href="&url.rfc;rfc2821.html">RFC2821</link>: Simple Mail
        Transfer Protocol (SMTP).
       </simpara>
      </listitem>
      <listitem>
       <simpara>
-       <ulink url="&url.rfc;rfc2822.html">RFC2822</ulink>: Standard for
+       <link xlink:href="&url.rfc;rfc2822.html">RFC2822</link>: Standard for
        ARPA internet text messages.
       </simpara>
      </listitem>
      <listitem>
       <simpara>
-       <ulink url="&url.rfc;rfc2060.html">RFC2060</ulink>: Internet
+       <link xlink:href="&url.rfc;rfc2060.html">RFC2060</link>: Internet
        Message Access Protocol (IMAP) Version 4rev1. 
       </simpara>
      </listitem>
      <listitem>
       <simpara>
-       <ulink url="&url.rfc;rfc1939.html">RFC1939</ulink>:  Post
+       <link xlink:href="&url.rfc;rfc1939.html">RFC1939</link>:  Post
        Office Protocol Version 3 (POP3).
       </simpara>
      </listitem>
      <listitem>
       <simpara>
-       <ulink url="&url.rfc;rfc977.html">RFC977</ulink>: Network News
+       <link xlink:href="&url.rfc;rfc977.html">RFC977</link>: Network News
        Transfer Protocol (NNTP).
       </simpara>
      </listitem>
      <listitem>
       <simpara>
-       <ulink url="&url.rfc;rfc2076.html">RFC2076</ulink>: Common
+       <link xlink:href="&url.rfc;rfc2076.html">RFC2076</link>: Common
        Internet Message Headers.
       </simpara>
      </listitem>
      <listitem>
       <simpara>
-       <ulink url="&url.rfc;rfc2045.html">RFC2045</ulink>, <ulink
-        url="&url.rfc;rfc2046.html">RFC2046</ulink>, <ulink
-        url="&url.rfc;rfc2047.html">RFC2047</ulink>, <ulink
-        url="&url.rfc;rfc2048.html">RFC2048</ulink> ºi <ulink
-        url="&url.rfc;rfc2049.html">RFC2049</ulink>: Multipurpose
+       <link xlink:href="&url.rfc;rfc2045.html">RFC2045</link>, <link
+        xlink:href="&url.rfc;rfc2046.html">RFC2046</link>, <link
+        xlink:href="&url.rfc;rfc2047.html">RFC2047</link>, <link
+        xlink:href="&url.rfc;rfc2048.html">RFC2048</link> ºi <link
+        xlink:href="&url.rfc;rfc2049.html">RFC2049</link>: Multipurpose
        Internet Mail Extensions (MIME).
       </simpara>
      </listitem>
     </itemizedlist> 
     O viziune mai detaliatã puteþi gãsi ºi în cãrþile
-    <ulink url="&url.email.book;">Programming Internet Email</ulink>
-    de David Wood ºi <ulink url="&url.imap.book;">Managing
-     IMAP</ulink> de Dianna Mullet &amp; Kevin Mullet.
+    <link xlink:href="&url.email.book;">Programming Internet Email</link>
+    de David Wood ºi <link xlink:href="&url.imap.book;">Managing
+     IMAP</link> de Dianna Mullet &amp; Kevin Mullet.
    </para>
   </partintro>
 

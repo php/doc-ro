@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- splitted from ./ro/functions/datetime.xml, last change in rev 1.1 -->
 <!-- last change to 'localtime' in en/ tree in rev 1.10 -->
-  <refentry id="function.localtime">
+  <refentry xml:id="function.localtime" xmlns="http://docbook.org/ns/docbook">
    <refnamediv>
     <refname>localtime</refname>
     <refpurpose>Citeşte timpul local</refpurpose>

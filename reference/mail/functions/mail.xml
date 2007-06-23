@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- splitted from ./ro/functions/mail.xml, last change in rev 1.1 -->
 <!-- last change to 'mail' in en/ tree in rev 1.2 -->
-  <refentry id="function.mail">
+  <refentry xml:id="function.mail" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
    <refnamediv>
     <refname>mail</refname>
     <refpurpose>trimite mail</refpurpose>
@@ -18,16 +18,16 @@
        </parameter></methodparam>
      </methodsynopsis>
     <simpara>
-     <function>mail</function> trimite automat mesajele specificate în <parameter>message</parameter> către destinatarul specificat în <parameter>to</parameter>. Pot fi specificaţi mai mulţi destinatari, separând adresele prin virgulă în parametrul <parameter>to</parameter>. Pot fi trimise e-mail-uri cu fişiere ataşate şi cu tipuri speciale de conţinut utilizând această funcţie. Aceasta se realizează prin codificare MIME; Pentru mai multe informaţii vezi <ulink url="&url.email.mime.zend;">un articol ZEND</ulink> sau <ulink url="&url.email.mime.pear;">Clasele PEAR - MIME</ulink>.
+     <function>mail</function> trimite automat mesajele specificate în <parameter>message</parameter> către destinatarul specificat în <parameter>to</parameter>. Pot fi specificaţi mai mulţi destinatari, separând adresele prin virgulă în parametrul <parameter>to</parameter>. Pot fi trimise e-mail-uri cu fişiere ataşate şi cu tipuri speciale de conţinut utilizând această funcţie. Aceasta se realizează prin codificare MIME; Pentru mai multe informaţii vezi <link xlink:href="&url.email.mime.zend;">un articol ZEND</link> sau <link xlink:href="&url.email.mime.pear;">Clasele PEAR - MIME</link>.
      </simpara>     
      <simpara>
      Următoarele RFC-uri pot fi, de asemenea, folositoare:
-     <ulink url="&url.rfc1896;">RFC 1896</ulink>,
-     <ulink url="&url.rfc2045;">RFC 2045</ulink>,
-     <ulink url="&url.rfc2046;">RFC 2046</ulink>,
-     <ulink url="&url.rfc2047;">RFC 2047</ulink>,
-     <ulink url="&url.rfc2048;">RFC 2048</ulink>, şi 
-     <ulink url="&url.rfc2049;">RFC 2049</ulink>.
+     <link xlink:href="&url.rfc1896;">RFC 1896</link>,
+     <link xlink:href="&url.rfc2045;">RFC 2045</link>,
+     <link xlink:href="&url.rfc2046;">RFC 2046</link>,
+     <link xlink:href="&url.rfc2047;">RFC 2047</link>,
+     <link xlink:href="&url.rfc2048;">RFC 2048</link>, şi 
+     <link xlink:href="&url.rfc2049;">RFC 2049</link>.
     </simpara>
     <para>
      <function>mail</function> returnează &true; dacă mailul a fost trimis cu succes, &false; în caz contrar.

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.1 $ -->
-<!-- EN-Revision: 1.49 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.2 $ -->
+<!-- EN-Revision: 1.50 Maintainer: simionea Status: translated -->
 
-<appendix id="about">
+<appendix xml:id="about" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Despre manual</title>
 
- <sect1 id="about.formats">
+ <sect1 xml:id="about.formats">
   <title>Formate</title>
   <para>
    Manualul PHP este disponibil în câteva formate. Aceste formate pot fi divizate
@@ -18,7 +18,7 @@
    </para>
   </note>
   <para>
-   Manualul poate fi citit online pe <ulink url="&url.php;">web site-ul PHP.net</ulink>,
+   Manualul poate fi citit online pe <link xlink:href="&url.php;">web site-ul PHP.net</link>,
    şi pe numeroasele oglinzi ale acestuia. Pentru  performanţa optimă, alegeţi cea mai
    apropiată oglindă. Versiunea online a manualului PHP are în prezent două foi de stil
    <acronym>CSS</acronym>, o foaie de stil pentru  acces web şi una pentru tipar.
@@ -26,7 +26,7 @@
   <para>
    Două avantaje remarcabile ale manualului online faţă de majoritatea formatelor offline
    este integrarea <link linkend="about.notes">adnotărilor contribuite de utilizatori</link>
-   şi <ulink url="&url.php.urlhowto;">scurtăturilor URL</ulink> , care pot fi utilizate
+   şi <link xlink:href="&url.php.urlhowto;">scurtăturilor URL</link> , care pot fi utilizate
    pentru a ajunge rapid la secţiunea dorită a manualului. Un dezavantaj evident este
    necesitatea de a fi conectat online pentru a vizualiza această ediţie a manualului.
   </para>
@@ -55,7 +55,7 @@
   <note>
    <para>
     Many programs exist to view <acronym>PDF</acronym> files, such as the
-    <ulink url="&url.adobe.acrobat;">Adobe Acrobat Reader</ulink>.
+    <link xlink:href="&url.adobe.acrobat;">Adobe Acrobat Reader</link>.
    </para>
   </note>
   -->
@@ -67,19 +67,19 @@
    utilizate pe larg, de asemenea se integrează cu această versiune a documentaţiei,
    pentru a oferi un acces simplu. De asemenea sunt disponibile şi programe de vizualizare
    CHM pentru sistemele Linux. Verificaţi
-   <ulink url="&url.xchm;">xCHM</ulink> sau
-   <ulink url="&url.gnochm;">GnoCHM</ulink>.
+   <link xlink:href="&url.xchm;">xCHM</link> sau
+   <link xlink:href="&url.gnochm;">GnoCHM</link>.
   </para>
   
   <para>
-   De asemenea este disponibilă si o <ulink url="&url.php.echm;">versiune CHM extinsă</ulink>,
+   De asemenea este disponibilă si o <link xlink:href="&url.php.echm;">versiune CHM extinsă</link>,
    care este reînnoită mai rar, dar oferă multe facilităţi suplimentare. Doar că ea va
    funcţiona numai pe <productname>Microsoft Windows</productname>, din cauza tehnologiilor
    folosite pentru a construi paginile de ajutor.
   </para>
  </sect1>
  
- <sect1 id="about.notes">
+ <sect1 xml:id="about.notes">
   <title>Despre adnotările utilizatorilor</title>
   <para>
    Adnotările scrise de utilizatori joacă un rol important în dezvoltarea acestui
@@ -108,7 +108,7 @@
   </note>
  </sect1>
 
- <sect1 id="about.prototypes">
+ <sect1 xml:id="about.prototypes">
    <title>Cum se citeşte definiţia unei funcţii (prototipul)</title>
    <para>
     Fiecare funcţie din manual este documentată pentru referinţă rapidă. Ştiind cum se
@@ -254,7 +254,7 @@ int strlen ( string $string )
     </para>
  </sect1>
  
- <sect1 id="about.phpversions">
+ <sect1 xml:id="about.phpversions">
   <title>Versiunile PHP documentate în acest manual</title>
   <para>
    Această documentaţie conţine informaţii despre versiunile curente şi viitoare ale
@@ -266,11 +266,11 @@ int strlen ( string $string )
    Există documentaţia parţială a versiunii PHP din CVS, ceea ce întotdeauna înseamnă
    ultima versiune în dezvoltare. Aceasta încă urmează să fie lansată, de aceea e
    disponibilă numai în sistemul de gestiune a versiunilor CVS, sau prin intermediul
-   unei <ulink url="&url.php.snapshots;">imagini instantanee (snapshot)</ulink>.
+   unei <link xlink:href="&url.php.snapshots;">imagini instantanee (snapshot)</link>.
    Deci fiţi conştient că facilităţile marcate "disponibil în CVS" în mod normal nu
    sunt disponibile. Însă aceste facilităţi, cel mai probabil, vor fi disponibile în
    următoarea versiune stabilă a PHP. Pentru a descărca versiunea CVS, verificaţi
-   <ulink url="&url.php.anoncvs;">pagina de acces anonim la CVS</ulink>.
+   <link xlink:href="&url.php.anoncvs;">pagina de acces anonim la CVS</link>.
   </para>
   <para>
    Deci poate exista documentaţie pentru versiuni PHP care încă nu sunt lansate.
@@ -295,7 +295,7 @@ int strlen ( string $string )
   </para>
  </sect1>
    
- <sect1 id="about.more">
+ <sect1 xml:id="about.more">
   <title>Cum să găsim mai multă informaţie despre PHP</title>
   <para>
    Acest manual nu încearcă să ofere instrucţiuni despre practici generale
@@ -309,14 +309,14 @@ int strlen ( string $string )
    toate aspectele programării cu PHP. Dacă sunteţi blocaţi cu o problemă,
    consideraţi folosirea acestor liste de distribuţie. Pentru a vedea
    opţiunile de suport, inclusiv listele de distribuţie poştale, vizitaţi
-   <ulink url="&url.php.support;">pagina de suport PHP.net</ulink>.
+   <link xlink:href="&url.php.support;">pagina de suport PHP.net</link>.
    În afară de aceasta, puteţi găsi o listă de web site-uri devotate PHP,
    care conţin articole, foruri, şi galerii cu coduri-sursă pe
-   <ulink url="&url.php.links;">pagina de referinţe PHP.net</ulink>.
+   <link xlink:href="&url.php.links;">pagina de referinţe PHP.net</link>.
   </para>
  </sect1>
 
- <sect1 id="about.howtohelp">
+ <sect1 xml:id="about.howtohelp">
   <title>Cum să contribuim la îmbunătăţirea documentaţiei</title>
   <para>
    Există trei modalităţi pentru ca oricine să contribuie la îmbunătăţirea
@@ -325,7 +325,7 @@ int strlen ( string $string )
   <para>
    Dacă în acest manual este găsită o eroare, în orice limbă, vă rugăm să o
    raportaţi folosind sistemul de erori la adresa
-   <ulink url="&url.php.bugs;">&url.php.bugs;</ulink>.
+   <link xlink:href="&url.php.bugs;">&url.php.bugs;</link>.
    Clasificaţi eroarea ca "Documentation Problem" &mdash; "Problemă în documentaţie".
    Toate problemele ce ţin de documentaţie, inclusiv cele ce ţin de formatele
    manualului, trebuie să fie înaintate în calitate de rapoarte de erori.
@@ -334,7 +334,7 @@ int strlen ( string $string )
    <para>
     Vă rugăm să nu abuzaţi sistemul de erori înaintând cereri pentru ajutor.
     În schimb, folosiţi una din multitudinea de
-    <ulink url="&url.php.support;">opţiuni pentru ajutor</ulink>.
+    <link xlink:href="&url.php.support;">opţiuni pentru ajutor</link>.
    </para>
   </note>
   <para>
@@ -348,7 +348,7 @@ int strlen ( string $string )
    străine oferă încă o modalitate de a îmbunătăţi manualul PHP, lucrînd într-o
    echipă de traducători. Pentru informaţii despre începerea unei traduceri noi,
    sau contribuirea la o versiune deja tradusă, vă rugăm să citiţi
-   <ulink url="&url.php.dochowto;">&url.php.dochowto;</ulink>.
+   <link xlink:href="&url.php.dochowto;">&url.php.dochowto;</link>.
   </para>
   <para>
    Proiectul de Documentare PHP are de asemenea şi un canal IRC, unde se adună
@@ -358,12 +358,12 @@ int strlen ( string $string )
   </para>
  </sect1>
  
- <sect1 id="about.generate">
+ <sect1 xml:id="about.generate">
   <title>Cum generăm formatele</title>
   <para>
-   Acest manual este scris în <acronym>XML</acronym> folosind <ulink
-   url="&url.docbook.xml;">DocBook XML DTD</ulink>, folosind <ulink
-   url="&url.xslt;"><acronym>XSLT</acronym></ulink> (Extensible
+   Acest manual este scris în <acronym>XML</acronym> folosind <link
+   xlink:href="&url.docbook.xml;">DocBook XML DTD</link>, folosind <link
+   xlink:href="&url.xslt;"><acronym>XSLT</acronym></link> (Extensible
    Stylesheet Language Transformations &mdash; Transformările Limbajului
    Extensibil al Foilor de Stil) pentru întreţinere şi formatare.
   </para>
@@ -372,28 +372,28 @@ int strlen ( string $string )
    posibilitatea de a genera multe formate de ieşire din fişierele sursă,
    întreţinerea efectuându-se pentru doar un document sursă pentru toate
    formatele. Uneltele utilizate pentru formatarea manualului online sunt
-   <ulink url="&url.xsltproc;">xsltproc</ulink> şi <ulink
-   url="&url.dbxsl;">DocBook XSL Stylesheets</ulink>.
+   <link xlink:href="&url.xsltproc;">xsltproc</link> şi <link
+   xlink:href="&url.dbxsl;">DocBook XSL Stylesheets</link>.
    Versiunile <acronym>HTML</acronym> şi <acronym>TeX</acronym> utilizează
-   <ulink url="&url.jade;">Jade</ulink>, scrisă de către <ulink
-   url="&url.jclark;">James Clark</ulink>; şi <ulink
-   url="&url.dbstyle;">The Modular DocBook Stylesheets</ulink>,
-   scrisă de către <ulink url="&url.nwalsh;">Norman Walsh</ulink>.
-   Noi utilizăm <ulink url="&url.winhelp;">Microsoft HTML Help
-   Workshop</ulink> pentru a genera formatul 'Windows HTML Help' al manualului,
+   <link xlink:href="&url.jade;">Jade</link>, scrisă de către <link
+   xlink:href="&url.jclark;">James Clark</link>; şi <link
+   xlink:href="&url.dbstyle;">The Modular DocBook Stylesheets</link>,
+   scrisă de către <link xlink:href="&url.nwalsh;">Norman Walsh</link>.
+   Noi utilizăm <link xlink:href="&url.winhelp;">Microsoft HTML Help
+   Workshop</link> pentru a genera formatul 'Windows HTML Help' al manualului,
    şi desugur însuşi PHP pentru a face careva transformări şi formatări
    adiţionale.
   </para>
   <para>
    Manualul PHP este generat în diverse limbi şi formate, vezi
-   <ulink url="&url.php.docs;">&url.php.docs;</ulink> pentru detalii suplimentare.
+   <link xlink:href="&url.php.docs;">&url.php.docs;</link> pentru detalii suplimentare.
    Codul sursă <acronym>XML</acronym> poate fi descărcat din CVS şi vizualizat la
-   <ulink url="&url.php.cvs;">&url.php.cvs;</ulink>. Documentaţia este stocată în
+   <link xlink:href="&url.php.cvs;">&url.php.cvs;</link>. Documentaţia este stocată în
    modulul <literal>phpdoc</literal>.
   </para>
  </sect1>
 
- <sect1 id="about.translations">
+ <sect1 xml:id="about.translations">
   <title>Traduceri</title>
   <para>
    Manualul PHP este disponibil nu numai în diverse formate, dar şi în diverse
@@ -405,7 +405,7 @@ int strlen ( string $string )
   </para>
   <para>
    Persoanele implicate în traducere încep de la sursa în <acronym>XML</acronym>
-   disponibilă la <ulink url="&url.php.cvs;">&url.php.cvs;</ulink>
+   disponibilă la <link xlink:href="&url.php.cvs;">&url.php.cvs;</link>
    şi din ea efectuează traducerea în limba lor de origine. Ei  
    <emphasis>nu folosesc</emphasis> versiunile generate (cum ar fi 
    <acronym>HTML</acronym> sau textul simplu), deoarece sistemul de asamblare
@@ -416,8 +416,8 @@ int strlen ( string $string )
    <para>
     Pentru a ajuta la traducerea acestei documentaţii, vă rugăm să faceţi
     legătură cu echipa de traducere/documentare înscriindu-vă la lista de
-    distribuţie poştală phpdoc: trimiteţi un mesaj vid la <ulink
-    url="mailto:&email.php.doc.subscribe;">&email.php.doc.subscribe;</ulink>.
+    distribuţie poştală phpdoc: trimiteţi un mesaj vid la <link
+    url="mailto:&email.php.doc.subscribe;">&email.php.doc.subscribe;</link>.
     Adresa listei de distribuţie este <literal>&email.php.doc;</literal>.
     Menţionaţi în mesaj despre interesul dumneavoastră în traducerea manualului
     şi cineva vă va răspunde cu detalii despre aceea cum să purcedeţi mai
@@ -433,7 +433,7 @@ int strlen ( string $string )
    Slovenă, Spaniolă, Suedeză şi Turcă.
   </para>
   <para>
-   Toate acestea pot fi descărcate aici: <ulink url="&url.php.docs;">&url.php.docs;</ulink>.
+   Toate acestea pot fi descărcate aici: <link xlink:href="&url.php.docs;">&url.php.docs;</link>.
   </para>
  </sect1>
 

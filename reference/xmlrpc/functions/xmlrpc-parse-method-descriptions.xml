@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- splitted from ./ro/functions/xmlrpc.xml, last change in rev 1.1 -->
-  <refentry id="function.xmlrpc-parse-method-descriptions">
+  <refentry xml:id="function.xmlrpc-parse-method-descriptions" xmlns="http://docbook.org/ns/docbook">
    <refnamediv>
     <refname>xmlrpc_parse_method_descriptions</refname>
     <refpurpose>Decodează XML într-o listă de descrieri de metode </refpurpose>

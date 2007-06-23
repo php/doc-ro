@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- splitted from ./ro/functions/var.xml, last change in rev 1.1 -->
 <!-- last change to 'intval' in en/ tree in rev 1.2 -->
-  <refentry id="function.intval">
+  <refentry xml:id="function.intval" xmlns="http://docbook.org/ns/docbook">
    <refnamediv>
     <refname>intval</refname>
     <refpurpose>Returnează valoarea întreagă a unei variabile</refpurpose>

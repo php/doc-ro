@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- splitted from ./ro/functions/xmlrpc.xml, last change in rev 1.1 -->
 <!-- last change to 'xmlrpc-set-type' in en/ tree in rev 1.1 -->
-  <refentry id="function.xmlrpc-set-type">
+  <refentry xml:id="function.xmlrpc-set-type" xmlns="http://docbook.org/ns/docbook">
    <refnamediv>
     <refname>xmlrpc_set_type</refname>
     <refpurpose>Setează tipul xmlrpc, base64 sau datetime, pentru o valoare PHP de tip string (şir de caractere) </refpurpose>

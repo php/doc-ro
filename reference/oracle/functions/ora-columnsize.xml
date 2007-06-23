@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- splitted from ./ro/functions/oracle.xml, last change in rev 1.1 -->
 <!-- last change to 'ora-columnsize' in en/ tree in rev 1.10 -->
-  <refentry id="function.ora-columnsize">
+  <refentry xml:id="function.ora-columnsize" xmlns="http://docbook.org/ns/docbook">
    <refnamediv>
     <refname>Ora_ColumnSize</refname>
     <refpurpose>Returnează dimensiunea unei coloane dintr-un rezultat Oracle</refpurpose>

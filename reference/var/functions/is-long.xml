@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- splitted from ./ro/functions/var.xml, last change in rev 1.1 -->
 <!-- last change to 'is-long' in en/ tree in rev 1.2 -->
-  <refentry id="function.is-long">
+  <refentry xml:id="function.is-long" xmlns="http://docbook.org/ns/docbook">
    <refnamediv>
     <refname>is_long</refname>
     <refpurpose>Alias pentru <function>is_int</function></refpurpose>

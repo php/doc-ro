@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- splitted from ./ro/functions/datetime.xml, last change in rev 1.1 -->
 <!-- last change to 'strftime' in en/ tree in rev 1.2 -->
-  <refentry id="function.strftime">
+  <refentry xml:id="function.strftime" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
    <refnamediv>
     <refname>strftime</refname>
     <refpurpose>
@@ -228,7 +228,7 @@ print (strftime ("%A.\n"));
 	 Acest exemplu funcţionează dacă aveţi instalate localele respective în sistem.
     </para>
     <para>
-     Vezi, de asemenea, <function>setlocale</function> şi <function>mktime</function> precum şi <ulink url="&spec.strftime;"> specificaţiile Open Group pentru <function>strftime</function></ulink>.
+     Vezi, de asemenea, <function>setlocale</function> şi <function>mktime</function> precum şi <link xlink:href="&spec.strftime;"> specificaţiile Open Group pentru <function>strftime</function></link>.
     </para>
    </refsect1>
   </refentry>

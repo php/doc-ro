@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- splitted from ./ro/functions/datetime.xml, last change in rev 1.1 -->
 <!-- last change to 'gmstrftime' in en/ tree in rev 1.2 -->
-  <refentry id="function.gmstrftime">
+  <refentry xml:id="function.gmstrftime" xmlns="http://docbook.org/ns/docbook">
    <refnamediv>
     <refname>gmstrftime</refname>
     <refpurpose>Formatează data/timpul GMT/CUT conform cu setările locale</refpurpose>

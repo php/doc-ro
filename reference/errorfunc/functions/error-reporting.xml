@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- splitted from ./ro/functions/errorfunc.xml, last change in rev 1.2 -->
 <!-- last change to 'error-reporting' in en/ tree in rev 1.1 -->
-  <refentry id="function.error-reporting">
+  <refentry xml:id="function.error-reporting" xmlns="http://docbook.org/ns/docbook">
    <refnamediv>
     <refname>error_reporting</refname>
     <refpurpose>Setează care erori PHP sunt raportate</refpurpose>

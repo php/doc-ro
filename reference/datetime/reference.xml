@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.3 $ -->
- <reference id="ref.datetime">
+<!-- $Revision: 1.4 $ -->
+ <reference xml:id="ref.datetime" xmlns="http://docbook.org/ns/docbook">
   <title>Dată/timp - funcţii</title>
   <titleabbrev>Date/time</titleabbrev>
 

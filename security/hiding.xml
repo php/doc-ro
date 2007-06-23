@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- $Revision: 1.1 $ -->
+<!-- $Revision: 1.2 $ -->
 <!-- splitted from ./index.xml, last change in rev 1.66 -->
-  <chapter id="security.hiding">
+  <chapter xml:id="security.hiding" xmlns="http://docbook.org/ns/docbook">
    <title>Ascunderea PHP-ului</title>
    <para>
     In general, securitatea prin obscuritate este una dintre cele mai slabe

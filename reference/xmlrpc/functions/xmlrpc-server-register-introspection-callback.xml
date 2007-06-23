@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- splitted from ./ro/functions/xmlrpc.xml, last change in rev 1.1 -->
 <!-- last change to 'xmlrpc-server-register-introspection-callback' in en/ tree in rev 1.1 -->
-  <refentry id="function.xmlrpc-server-register-introspection-callback">
+  <refentry xml:id="function.xmlrpc-server-register-introspection-callback" xmlns="http://docbook.org/ns/docbook">
    <refnamediv>
     <refname>xmlrpc_server_register_introspection_callback</refname>
     <refpurpose>Înregistrează o funcţie PHP pentru introspecţie în vederea generării automate de documentaţie </refpurpose>

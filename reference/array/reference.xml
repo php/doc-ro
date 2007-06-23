@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.2 $ -->
- <reference id="ref.array">
+<!-- $Revision: 1.3 $ -->
+ <reference xml:id="ref.array" xmlns="http://docbook.org/ns/docbook">
   <title>Array - funcţii</title>
   <titleabbrev>Tablouri</titleabbrev>
 
   <partintro>
-   <section id="array.intro">
+   <section xml:id="array.intro">
     &reftitle.intro;
     <para>
      Aceste funcţii vă permit să interacţionaţi cu şi să manipulaţi
@@ -25,27 +25,27 @@
     </para>
    </section>
 
-   <section id="array.requirements">
+   <section xml:id="array.requirements">
     &reftitle.required;
     &no.requirement;
    </section>
     
-   <section id="array.installation">
+   <section xml:id="array.installation">
     &reftitle.install;
     &no.install;
    </section>
 
-   <section id="array.configuration">
+   <section xml:id="array.configuration">
     &reftitle.runtime;
     &no.config;
    </section>
 
-   <section id="array.resources">
+   <section xml:id="array.resources">
     &reftitle.resources;
     &no.resource;
    </section>
 
-   <section id="array.constants">
+   <section xml:id="array.constants">
     &reftitle.constants;
     <para>
      <constant>CASE_UPPER</constant> şi <constant>CASE_LOWER</constant> sunt
@@ -54,7 +54,7 @@
     </para>
    </section>
 
-   <section id="array.seealso">
+   <section xml:id="array.seealso">
     &reftitle.seealso;
     <para>
      Vezi, de asemenea, <function>is_array</function>, <function>explode</function>,

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.1 $ -->
-<!-- EN-Revision: 1.27 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.2 $ -->
+<!-- EN-Revision: 1.28 Maintainer: simionea Status: translated -->
 
-<appendix id="history">
+<appendix xml:id="history" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Istoria PHP şi a proiectelor asociate</title>
  <para>
   PHP a parcurs o cale lungă în decursul ultimilor ani.
@@ -11,13 +11,13 @@
   Cei dintre voi interesaţi de a afla pe scurt cum PHP a crescut
   până la ceea ce este el în ziua de azi, citiţi în continuare.
   Versiunile vechi ale PHP pot fi găsite la
-  <ulink url="&url.php.museum;">muzeul PHP</ulink>.
+  <link xlink:href="&url.php.museum;">muzeul PHP</link>.
  </para>
  
- <sect1 id="history.php">
+ <sect1 xml:id="history.php">
   <title>Istoria PHP</title>
   
-  <sect2 id="history.phpfi">
+  <sect2 xml:id="history.phpfi">
    <title>PHP/FI</title>
    <para>
     PHP succede un produs mai vechi, numit PHP/FI. PHP/FI a
@@ -30,7 +30,7 @@
     în stare să comunice cu baze de date şi dădea posibilitate
     utilizatorilor să dezvolte simple aplicaţii Web dinamice.
     Rasmus a hotărât să
-    <ulink url="&url.php.release1.0.0;">lanseze</ulink>
+    <link xlink:href="&url.php.release1.0.0;">lanseze</link>
     codurile-sursă ale PHP/FI pentru ca oricine să le poată vedea,
     utiliza, să poată corecta erorile din ele şi să îmbunătăţească
     codul-sursă.
@@ -60,7 +60,7 @@
    </para>
   </sect2>
 
-  <sect2 id="history.php3">
+  <sect2 xml:id="history.php3">
    <title>PHP 3</title>
    <para>
     PHP 3.0 a fost prima versiune care se aseamănă mult cu PHP,
@@ -105,7 +105,7 @@
    </para>
   </sect2>
 
-  <sect2 id="history.php4">
+  <sect2 xml:id="history.php4">
    <title>PHP 4</title>
    <para>
     Către iarna anului 1998, la scurt timp după ce PHP 3.0 a fost
@@ -143,7 +143,7 @@
    </para>
   </sect2>
 
-  <sect2 id="history.php5">
+  <sect2 xml:id="history.php5">
    <title>PHP 5</title>
    <para>
     PHP 5 a fost lansat în iulie 2004 după o lungă perioadă de dezvoltare
@@ -153,12 +153,12 @@
   </sect2>
  </sect1>
  
- <sect1 id="history.php.related">
+ <sect1 xml:id="history.php.related">
   <title>Istoria proiectelor asociate cu PHP</title>
   
   <!-- Hope Stig and/or Egon can do this
   
-  <sect2 id="history.phpdoc">
+  <sect2 xml:id="history.phpdoc">
    <title>PHP Documentation Project</title>
    <para>
    </para>
@@ -166,10 +166,10 @@
   
   -->
 
-  <sect2 id="history.pear">
+  <sect2 xml:id="history.pear">
    <title>PEAR</title>
    <para>
-    <ulink url="&url.php.pear;">PEAR</ulink>, Repozitoriul de Extensii
+    <link xlink:href="&url.php.pear;">PEAR</link>, Repozitoriul de Extensii
     şi Aplicaţii PHP (original, Repozitoriul de Extensii şi Suplimente PHP)
     este versiunea PHP a claselor fundamentale, care în viitor poate deveni
     una din modalităţile cheie de distribuire a extensiilor PHP între
@@ -190,16 +190,16 @@
     calcule matematice, comerţ electronic şi multe altele.
    </para>
    <para>
-    Mai multe informaţii despre PEAR pot fi găsite în <ulink
-    url="&url.php.pear.manual;">manual</ulink>.
+    Mai multe informaţii despre PEAR pot fi găsite în <link
+    xlink:href="&url.php.pear.manual;">manual</link>.
    </para>
   </sect2>
 
-  <sect2 id="history.phpqa">
+  <sect2 xml:id="history.phpqa">
    <title>Iniţiativa de Asigurare a Calităţii în PHP</title>
    <para>
-    <ulink url="&url.php.prerelease;">Iniţiativa de Asigurare a Calităţii
-    în PHP</ulink> a fost inaugurată în vara anului 2000 ca răspuns la
+    <link xlink:href="&url.php.prerelease;">Iniţiativa de Asigurare a Calităţii
+    în PHP</link> a fost inaugurată în vara anului 2000 ca răspuns la
     criticile, precum că versiunile PHP nu erau suficient testate pentru
     a putea fi puse în medii de producere. Acum echipa constă dintr-un
     grup de programatori de bază care posedă o bună înţelegere a
@@ -210,10 +210,10 @@
    </para>
   </sect2>
 
-  <sect2 id="history.phpgtk">
+  <sect2 xml:id="history.phpgtk">
    <title>PHP-GTK</title>
    <para>
-    <ulink url="&url.php.gtk;">PHP-GTK</ulink> este soluţia PHP pentru
+    <link xlink:href="&url.php.gtk;">PHP-GTK</link> este soluţia PHP pentru
     scrierea aplicaţiilor GUI de partea clientului. Andrei Zmievski îşi
     aminteşte planificarea şi procesul de creare a PHP-GTK:
    </para>
@@ -266,7 +266,7 @@
   </sect2>
  </sect1>
 
- <sect1 id="history.php.books">
+ <sect1 xml:id="history.php.books">
   <title>Cărţi despre PHP</title>
   <para>
    Odată cu dezvoltarea sa, PHP a început să fie recunoscut pe plan
@@ -297,7 +297,7 @@
   </para>
  </sect1>
  
- <sect1 id="history.php.publications">
+ <sect1 xml:id="history.php.publications">
   <title>Publicaţii despre PHP</title>
   <para>
    Din câte cunoaştem, primul articol despre PHP într-o revistă tipărită

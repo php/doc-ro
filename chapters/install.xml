@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.4 $ -->
+<!-- $Revision: 1.5 $ -->
 <!-- EN-Revision: install.general.xml 1.1 Maintainer: spooky Status: ready -->
-<chapter id="installation">
+<chapter xml:id="installation" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Instalare</title>
-  <sect1 id="install.general">
+  <sect1 xml:id="install.general">
    <title>Aspecte generale privind instalarea</title>
    <para>
     Înainte de începerea instalării, trebuie să şti pentru ce vrei să 
@@ -24,7 +24,7 @@ ai şi un server de web (ex. Apache pe Linux sau IIS pe Windows).
     Ai putea, de asemenea, să inchiriezi spaţiu pe web de la o companie. În acest 
 fel, nu trebuie să setezi tu personal, doar să scrii scripturile PHP, le 
 transferi pe server pe care ai închiriat spaţiul şi vezi rezultatul obţinut 
-în browser. Poţi găsi o listă cu companii care oferă hosting la <ulink url="&url.php.hosts;">&url.php.hosts;</ulink>.
+în browser. Poţi găsi o listă cu companii care oferă hosting la <link xlink:href="&url.php.hosts;">&url.php.hosts;</link>.
    </para>
    <para>
     Dacă instalezi serverul şi PHP de unul singur, ai la dispoziţie două 
@@ -52,8 +52,8 @@ linkend="commandline">scrierea de aplicaţii PHP în linia de comandă</link>.
 clientului folosind extensia PHP-GTK. Aceasta este o abordare total diferită 
 decât cea a scrierii paginilor web, deoarece tu nu scoţi nici un rezultat 
 HTML, dar manevrezi ferestre şi obiecte din interiorul lor. Pentru mai multe 
-detalii despre PHP-GTK, te rog <ulink url="&url.php.gtk;">vizitează site-ul 
-dedicat acestei extensii</ulink>. PHP-GTK nu este inclus în distribuţia 
+detalii despre PHP-GTK, te rog <link xlink:href="&url.php.gtk;">vizitează site-ul 
+dedicat acestei extensii</link>. PHP-GTK nu este inclus în distribuţia 
 oficială a PHP-ului.
    </para>
    <para>
@@ -63,20 +63,20 @@ de server şi executabil CGI.
    </para>
    <para>
     Descărcaţi PHP, codul sursă, şi distribuţiile binare pentru Windows care 
-pot fi găsite la <ulink url="&url.php;">&url.php;</ulink>.
-    Îţi recomandăm să alegi un <ulink url="&url.mirrors;">server</ulink> care 
+pot fi găsite la <link xlink:href="&url.php;">&url.php;</link>.
+    Îţi recomandăm să alegi un <link xlink:href="&url.mirrors;">server</link> care 
 se află mai aproape de tine pentru a descărca mai repede distribuşiile.
    </para>
   </sect1>
 
 <!-- EN-Revision: install.hpux.xml 1.1 Maintainer: spooky Status: ready -->
-  <sect1 id="install.hpux">
+  <sect1 xml:id="install.hpux">
    <title>Instalarea pe Unix/HP-UX</title>
    <para>
     Această secţiune conţine notiţe şi ajutoare pentru a instala PHP pe 
 sistemele HP-UX.
    </para>
-   <example id="install.hpux.example">
+   <example xml:id="install.hpux.example">
     <title>
      Instrucţiuni instalare pentru HP-UX 10
     </title>

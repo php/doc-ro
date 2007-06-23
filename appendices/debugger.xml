@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.1 $ -->
-<!-- EN-Revision: 1.27 Maintainer: simionea Status: translated -->
- <appendix id="debugger">
+<!-- $Revision: 1.2 $ -->
+<!-- EN-Revision: 1.28 Maintainer: simionea Status: translated -->
+ <appendix xml:id="debugger" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Depistarea erorilor (debugging) în PHP</title>
 
-  <sect1 id="debugger-about">
+  <sect1 xml:id="debugger-about">
    <title>Despre debugger</title>
    <simpara>
     PHP 3 includea posibilitatea de a utiliza un debugger prin reţea.
@@ -12,17 +12,17 @@
    <simpara>
     PHP 4 nu posedă o facilitate internă de debugging.
     Însă puteţi folosi unul dintre debugger-ele externe.
-    <ulink url="&url.zend.ide;">Mediul Zend IDE</ulink> include
+    <link xlink:href="&url.zend.ide;">Mediul Zend IDE</link> include
     un debugger, şi mai sunt şi alte extensii gretuite de debugging, cum ar fi
-    DBG la <ulink url="&url.dbg;">&url.dbg;</ulink>, 
-    <ulink url="&url.apd;">Advanced PHP Debugger</ulink> (APD) sau
-    <ulink url="&url.xdebug;">Xdebug</ulink> care posedă chiar o interfaţă de
+    DBG la <link xlink:href="&url.dbg;">&url.dbg;</link>, 
+    <link xlink:href="&url.apd;">Advanced PHP Debugger</link> (APD) sau
+    <link xlink:href="&url.xdebug;">Xdebug</link> care posedă chiar o interfaţă de
     debugger compatibilă cu funcţionalitatea PHP 3, care este descrisă în această
     secţiune.
    </simpara>
   </sect1>
 
-  <sect1 id="debugger-using">
+  <sect1 xml:id="debugger-using">
    <title>Utilizarea debugger-ului</title>
 
    <para>
@@ -66,7 +66,7 @@
    </para>
   </sect1>
 
-  <sect1 id="debugger-protocol">
+  <sect1 xml:id="debugger-protocol">
    <title>Protocolul debugger-ului</title>
    <para>
     Protocolul debugger-ului din PHP 3 este orientat pe rânduri. Fiecare rând are

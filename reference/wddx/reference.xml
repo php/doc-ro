@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.3 $ -->
-<reference id="ref.wddx">
+<!-- $Revision: 1.4 $ -->
+<reference xml:id="ref.wddx" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<title>WDDX - funcţii</title>
 	<titleabbrev>WDDX</titleabbrev>
 	<partintro>
 		<para>
-    Aceste funcţii folosesc <ulink url="&url.wddx;">WDDX</ulink>.
+    Aceste funcţii folosesc <link xlink:href="&url.wddx;">WDDX</link>.
    </para>
 		<para>
     Ca să puteţi utiliza WDDX, trebuie instalată aplicaţia expat

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.2 $ -->
- <reference id="ref.errorfunc">
+<!-- $Revision: 1.3 $ -->
+ <reference xml:id="ref.errorfunc" xmlns="http://docbook.org/ns/docbook">
   <title>Erori - gestiune şi înregistrare</title>
   <titleabbrev>Erorile şi înregistrarea</titleabbrev>
 

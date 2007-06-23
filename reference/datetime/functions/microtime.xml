@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- splitted from ./ro/functions/datetime.xml, last change in rev 1.1 -->
 <!-- last change to 'microtime' in en/ tree in rev 1.2 -->
-  <refentry id="function.microtime">
+  <refentry xml:id="function.microtime" xmlns="http://docbook.org/ns/docbook">
    <refnamediv>
     <refname>microtime</refname>
     <refpurpose>Returnează timestamp-ul curent UNIX cu microsecunde</refpurpose>

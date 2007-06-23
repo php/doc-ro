@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- splitted from ./ro/functions/datetime.xml, last change in rev 1.1 -->
 <!-- last change to 'strtotime' in en/ tree in rev 1.8 -->
-  <refentry id="function.strtotime">
+  <refentry xml:id="function.strtotime" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
    <refnamediv>
     <refname>strtotime</refname>
     <refpurpose>
@@ -19,7 +19,7 @@
 	 Funcţia aşteaptă un şir conţinând o dată în format englezesc pe care va încerca să o convertească la valoarea UNIX timestamp în funcţie de parametrul <parameter>now</parameter>; dacă <parameter>now</parameter> nu este dat se foloseşte timpul curent. În caz de eşec este returnată valoarea <literal>-1</literal>.
     </simpara>
     <simpara>
-	 Datorită faptului că <function>strtotime</function> se comportă conforma specificaţiilor de sintaxă a datei GNU, aruncaţi o privire la pagina de manual intitulată <ulink url="&url.gnu.man.date-input;">Date Input Formats</ulink>. Aici este descrisă o sintaxă validă pentru parametrul <parameter>time</parameter>.
+	 Datorită faptului că <function>strtotime</function> se comportă conforma specificaţiilor de sintaxă a datei GNU, aruncaţi o privire la pagina de manual intitulată <link xlink:href="&url.gnu.man.date-input;">Date Input Formats</link>. Aici este descrisă o sintaxă validă pentru parametrul <parameter>time</parameter>.
     </simpara>
     <para>
      <example>

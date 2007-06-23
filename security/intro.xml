@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- $Revision: 1.1 $ -->
+<!-- $Revision: 1.2 $ -->
 <!-- splitted from ./index.xml, last change in rev 1.66 -->
- <chapter id="security.intro">
+ <chapter xml:id="security.intro" xmlns="http://docbook.org/ns/docbook">
   <title>Introducere</title>
   <simpara>
    PHP este un limbaj de programare web puternic iar interpretorul,

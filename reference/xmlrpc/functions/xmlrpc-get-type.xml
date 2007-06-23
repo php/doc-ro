@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- splitted from ./ro/functions/xmlrpc.xml, last change in rev 1.1 -->
 <!-- last change to 'xmlrpc-get-type' in en/ tree in rev 1.1 -->
-  <refentry id="function.xmlrpc-get-type">
+  <refentry xml:id="function.xmlrpc-get-type" xmlns="http://docbook.org/ns/docbook">
    <refnamediv>
     <refname>xmlrpc_get_type</refname>
     <refpurpose>Obţine tipul xmlrpc pentru o valoare PHP. Extrem de util pentru şirurile de caractere care conîtin valori de tipul base64 şi datetime </refpurpose>

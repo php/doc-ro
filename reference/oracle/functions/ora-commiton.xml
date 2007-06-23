@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- splitted from ./ro/functions/oracle.xml, last change in rev 1.1 -->
 <!-- last change to 'ora-commiton' in en/ tree in rev 1.5 -->
-  <refentry id="function.ora-commiton">
+  <refentry xml:id="function.ora-commiton" xmlns="http://docbook.org/ns/docbook">
    <refnamediv>
     <refname>Ora_CommitOn</refname>
     <refpurpose>Activează validarea automată</refpurpose>

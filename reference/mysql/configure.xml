@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.3 $ -->
-<section id="mysql.installation">
+<!-- $Revision: 1.4 $ -->
+<section xml:id="mysql.installation" xmlns="http://docbook.org/ns/docbook">
  &reftitle.install;
- <para id="mysql.configure">
+ <para xml:id="mysql.configure">
   Folosind optiunea de configurare <option role="configure">--with-mysql[=DIR]</option>
   aveti posibilitatea de a va conecta la baze de date MySQL folosind PHP.
  </para>

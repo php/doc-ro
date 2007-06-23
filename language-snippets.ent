@@ -441,10 +441,10 @@ pentru a verifica driver-ul în caz că codul-sursă al dumneavoastră poate rul
 cu mai multe driver-e.</simpara>'>
 
 <!-- PECL entities -->
-<!ENTITY pecl.moved 'Această extensie <ulink url="&url.pecl;">PECL</ulink> nu
+<!ENTITY pecl.moved 'Această extensie <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.pecl;">PECL</link> nu
 este încorporată în PHP.'>
 
-<!ENTITY pecl.bundled 'Această extensie <ulink url="&url.pecl;">PECL</ulink>
+<!ENTITY pecl.bundled 'Această extensie <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.pecl;">PECL</link>
 este încorporată în PHP.'>
 
 <!ENTITY pecl.info 'Informaţie despre instalarea acestei extensii PECL poate
@@ -463,21 +463,21 @@ directorul <filename>extensions/</filename> al distributivului PHP pentru Window
 <!ENTITY pecl.windows.download '
 Biblioteca <acronym>DLL</acronym> pentru această extensie <acronym>PECL</acronym>
 poate fi descărcată de pe pagina
-<ulink url="&url.php.downloads;">PHP Downloads</ulink> sau de pe
-<ulink url="&url.pecl.win;">&url.pecl.win;</ulink>'>
+<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.php.downloads;">PHP Downloads</link> sau de pe
+<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.pecl.win;">&url.pecl.win;</link>'>
 
 <!ENTITY pecl.windows.download.unbundled 'Extensiile <acronym>PECL</acronym> 
 care nu sunt furnizate cu PHP pot fi descărcate de pe:
-<ulink url="&url.pecl.win;">&url.pecl.win;</ulink>'>
+<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.pecl.win;">&url.pecl.win;</link>'>
 
 <!ENTITY pecl.moved-ver 'Această extensie a fost transferată în repozitoriul
-<ulink url="&url.pecl;">PECL</ulink> şi nu mai este furnizată împreună cu PHP
+<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.pecl;">PECL</link> şi nu mai este furnizată împreună cu PHP
 începând cu versiunea '>
 
 <!-- kept for BC -->
 <!ENTITY note.pecl-php5 '<note><simpara>
 Această extensie a fost eliminată începând cu PHP 5 şi transferată în repozitoriul
-<ulink url="&url.pecl;">PECL</ulink>.
+<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.pecl;">PECL</link>.
 </simpara></note>'>
 
 <!-- Common pieces for reference part END -->
@@ -691,7 +691,7 @@ Zend Engine 2, ceea ce înseamnă PHP &gt;= 5.0.0.</simpara></note>'>
 <!ENTITY tidy.conf-enc '<para>Parametrul <parameter>config</parameter> poate
 fi transmis sau sub forma unui masiv, sau sub forma unui string. Dacă îl transmiteţi
 ca string, el este interpretat ca denumirea fişierului de configurare, în caz contrar
-el este interpretat ca însăşi opţiunile. Accesaţi <ulink url="&url.tidy.conf;">&url.tidy.conf;</ulink>
+el este interpretat ca însăşi opţiunile. Accesaţi <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.tidy.conf;">&url.tidy.conf;</link>
 pentru explicaţia fiecărei opţiuni.</para><para>Parametrul <parameter>encoding</parameter>
 stabileşte codificarea pentru documentele de intrare/ieşire. Valorile posibile pentru
 <parameter>encoding</parameter> sunt:

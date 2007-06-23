@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
 <!-- splitted from ./ro/functions/xmlrpc.xml, last change in rev 1.1 -->
 <!-- last change to 'xmlrpc-server-create' in en/ tree in rev 1.1 -->
-  <refentry id="function.xmlrpc-server-create">
+  <refentry xml:id="function.xmlrpc-server-create" xmlns="http://docbook.org/ns/docbook">
    <refnamediv>
     <refname>xmlrpc_server_create</refname>
     <refpurpose>Creează un server XML-RPC </refpurpose>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- $Revision: 1.4 $ -->
+<!-- $Revision: 1.5 $ -->
 <!-- splitted from ./index.xml, last change in rev 1.66 -->
-  <chapter id="security.cgi-bin">
+  <chapter xml:id="security.cgi-bin" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
    <title>Instalat ca un binar CGI</title>
 
-   <sect1 id="security.cgi-bin.attacks">
+   <sect1 xml:id="security.cgi-bin.attacks">
     <title>Atacuri posibile</title>
     <simpara>
      Folosind PHP ca pe un binar <acronym>CGI</acronym> este o optiune 
@@ -17,8 +17,8 @@ folosi PHP cu
 securizate chroot si setuid
      pentru scripturi. Acest setup implica de obicei instalarea 
 binarului PHP executabil in
-	 directorul cgi-bin din serverul web. Indrumarul CERT <ulink 
-url="&url.cert;">CA-96.11</ulink>
+	 directorul cgi-bin din serverul web. Indrumarul CERT <link 
+url="&url.cert;">CA-96.11</link>
 	 nu recomanda plasarea oricarui tip de interpretor de acest gen 
 in directorul cgi-bin.
 	 Chiar daca binarul PHP poate fi folosit ca un interpretor de 
@@ -100,7 +100,7 @@ detaliate
     </itemizedlist>
    </sect1>
 
-   <sect1 id="security.cgi-bin.default">
+   <sect1 xml:id="security.cgi-bin.default">
     <title>Cazul 1: numai fisierele publice sunt servite 
 clientului</title>
 
@@ -130,7 +130,7 @@ directivele
     </simpara>
    </sect1>
 
-   <sect1 id="security.cgi-bin.force-redirect">
+   <sect1 xml:id="security.cgi-bin.force-redirect">
     <title>Cazul 2: utilizarea --enable-force-cgi-redirect</title>
     <simpara>
 	 Aceasta optiune disponibila in timpul compilarii este folosita 
@@ -169,7 +169,7 @@ cai
     </simpara>
    </sect1>
 
-   <sect1 id="security.cgi-bin.doc-root">
+   <sect1 xml:id="security.cgi-bin.doc-root">
     <title>Cazul 3: configurarea doc_root sau user_dir</title>
     <simpara>
 	 Includerea de continut activ, de pilda scripturi si 
@@ -242,7 +242,7 @@ accesul la directorul radacina
     </simpara>
    </sect1>
 
-   <sect1 id="security.cgi-bin.shell">
+   <sect1 xml:id="security.cgi-bin.shell">
     <title>Cazul 4: parserul PHP in afara directorului radacina 
 web</title>
     <para>
