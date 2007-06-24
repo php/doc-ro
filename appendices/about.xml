@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.2 $ -->
+<!-- $Revision: 1.3 $ -->
 <!-- EN-Revision: 1.50 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="about" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -417,7 +417,7 @@ int strlen ( string $string )
     Pentru a ajuta la traducerea acestei documentaţii, vă rugăm să faceţi
     legătură cu echipa de traducere/documentare înscriindu-vă la lista de
     distribuţie poştală phpdoc: trimiteţi un mesaj vid la <link
-    url="mailto:&email.php.doc.subscribe;">&email.php.doc.subscribe;</link>.
+    xlink:href="mailto:&email.php.doc.subscribe;">&email.php.doc.subscribe;</link>.
     Adresa listei de distribuţie este <literal>&email.php.doc;</literal>.
     Menţionaţi în mesaj despre interesul dumneavoastră în traducerea manualului
     şi cineva vă va răspunde cu detalii despre aceea cum să purcedeţi mai

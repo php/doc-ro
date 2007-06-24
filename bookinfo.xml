@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.14 $ -->
+<!-- $Revision: 1.15 $ -->
 
  <bookinfo xml:id="bookinfo" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>&PHPManual;</title>
@@ -85,7 +85,7 @@
     In caz ca sunteti interesat in redistribuirea sau republicarea acestui document
 	integral sau pe bucati, modificat sau nemodificat, si daca aveti intrebari,
 	va rugam sa contactati detinatorii de copyright la adresa
-    <link url="mailto:&email.php.doc.license;">&email.php.doc.license;</link>.
+    <link xlink:href="mailto:&email.php.doc.license;">&email.php.doc.license;</link>.
     Aceasta adresa este mapata catre arhiva listei publice de mail.
    </simpara>
    <simpara>
