@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.2 $ -->
+<!-- $Revision: 1.3 $ -->
 <!-- EN-Revision: 1.55 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -2718,7 +2718,7 @@
          <para>
           Această directivă de asemenea afectează scurtătura <userinput>&lt;?=</userinput>, 
           care este identică cu <userinput>&lt;? echo</userinput>. Utilizarea acestei scurtături
-          necesită ca <systemitem role="directive">short_open_tag</constant> să fie activată.
+          necesită ca <systemitem role="directive">short_open_tag</systemitem> să fie activată.
          </para>
         </note>
        </listitem>
@@ -3222,7 +3222,7 @@
          pentru mai multe informaţii.
         </para>
         <para>
-         Vă rugăm să atrageţi atenţia că <systemitem role="directive">register_globals</constant>
+         Vă rugăm să atrageţi atenţia că <systemitem role="directive">register_globals</systemitem>
          nu poate fi stabilit în timpul execuţiei (<function>ini_set</function>). Cu toate acestea
 	 puteţi utiliza &htaccess; dacă serverul permite aceasta, după cum e descris anterior.
 	 Un exemplu de înregistrare &htaccess;:
@@ -3230,7 +3230,7 @@
         </para>
         <note>
          <para>
-          <systemitem role="directive">register_globals</constant> este afectată de
+          <systemitem role="directive">register_globals</systemitem> este afectată de
           directiva <link linkend="ini.variables-order">variables_order</link>.
          </para>
         </note>
