@@ -19,7 +19,7 @@
     </note>
     <para>
      Este inversul folosirii construcþiei 
-     <literal>(boolean) <parameter>var</parameter></literal>,
+     <literal>(boolean) var</literal>,
      cu deosebirea cã nu se genereazã mesaj de atenþionare dacã
      variabila nu este definitã. Consultaþi
      <link linkend="language.types.boolean.casting">conversia la
