@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.3 $ -->
+<!-- $Revision: 1.4 $ -->
 <!-- EN-Revision: 1.55 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -3099,7 +3099,7 @@
         </para>
         <para>
          Atrageţi atenţia că începând cu PHP 4.0.3, <systemitem
-         role="directive">track_vars</constant> este întotdeauna activat.
+         role="directive">track_vars</systemitem> este întotdeauna activat.
         </para>
        </listitem>
       </varlistentry>
