@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.3 $ -->
+<!-- $Revision: 1.4 $ -->
 <!-- EN-Revision: 1.2 Maintainer: simionea Status: translated -->
  <sect3 xml:id="configure.options.misc" xmlns="http://docbook.org/ns/docbook">
   <title>Opţiuni diverse</title>
@@ -62,7 +62,7 @@
     </term>
     <listitem>
      <para>
-      Dezactivează posibilitatea indicării căilor de căutare suplimentare ale bibliotecii runtime.
+      Dezactivează posibilitatea indicării căilor de căutare suplimentare ale bibliotecii la rulare.
      </para>
     </listitem>
    </varlistentry>
@@ -82,7 +82,7 @@
     </term>
     <listitem>
      <para>
-      Include torentele PHP experimentale. Nu folosiţi decât dacă testaţi codul sursă!
+      Include fluxurile PHP experimentale. Nu folosiţi decât dacă testaţi codul sursă!
      </para>
     </listitem>
    </varlistentry>

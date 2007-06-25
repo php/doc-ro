@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.3 $ -->
+<!-- $Revision: 1.4 $ -->
 <!-- EN-Revision: 1.5 Maintainer: simionea Status: translated -->
 <appendix xml:id="configure" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Opţiunile de configurare</title>
@@ -27,8 +27,8 @@
   <note>
    <para>
     Acestea sunt utilizate doar în timpul compilării. Dacă doriţi să modificaţi
-    configuraţia de lucru a PHP, vă rugăm să vedeţi capitolul despre <link
-    linkend="configuration">Configuraţia de lucru</link>.
+    configuraţia PHP în timpul rulării, vă rugăm să vedeţi capitolul despre <link
+    linkend="configuration">Configuraţia la rulare</link>.
    </para>
   </note>
 
