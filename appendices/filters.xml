@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.2 $ -->
+<!-- $Revision: 1.3 $ -->
 <!-- EN-Revision: 1.16 Maintainer: simionea Status: translated -->
 <appendix xml:id="filters" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Lista filtrelor disponibile</title>
  <para>
-  Urmează o listă a câtorva filtre de torent pentru a fi utilizate cu
+  Urmează o listă a câtorva filtre de flux pentru a fi utilizate cu
   <function>stream_filter_append</function>.
   Versiunea dumneavoastră a PHP poate avea mai multre filtre (sau mai puţine)
   decât cele listate aici.
@@ -14,10 +14,10 @@
   Merită de a fi remarcată mica asimetrie dintre
   <function>stream_filter_append</function>
   şi <function>stream_filter_prepend</function>.  
-  Fiecare torent PHP conţine o mică <emphasis>zonă-tampon de citire</emphasis>
+  Fiecare flux PHP conţine o mică <emphasis>zonă-tampon de citire</emphasis>
   unde el stochează blocuri de date recepţionate de la sistemul de fişiere
   sau alte resurse pentru a procesa datele în modul cel mai eficient.
-  Imediat ce datele sunt extrase din resursă în zona-tampon internă a torentului,
+  Imediat ce datele sunt extrase din resursă în zona-tampon internă a fluxului,
   ele sunt procesate prin orice filtru ataşat, indiferent dacă aplicaţia PHP
   este pregătită de a primi datele, sau nu.
   Dacă datele se află în zona-tampon de citire în timp ce sunt 
@@ -49,7 +49,7 @@
    <literal>string.rot13</literal>
    (începând cu PHP 4.3.0)
    Folosirea acestui filtru este echivalentă cu procesarea tuturor datelor
-   din torent prin funcţia <function>str_rot13</function>.
+   din flux prin funcţia <function>str_rot13</function>.
   </simpara>
   <example>
    <title>string.rot13</title>
@@ -69,7 +69,7 @@ fwrite($fp, "This is a test.\n");
    <literal>string.toupper</literal>
    (începând cu PHP 5.0.0)
    Folosirea acestui filtru este echivalentă cu procesarea tuturor datelor
-   din torent prin funcţia <function>strtoupper</function>.
+   din flux prin funcţia <function>strtoupper</function>.
   </simpara>
   <example>
    <title>string.toupper</title>
@@ -89,7 +89,7 @@ fwrite($fp, "This is a test.\n");
    <literal>string.tolower</literal>
    (începând cu PHP 5.0.0)
    Folosirea acestui filtru este echivalentă cu procesarea tuturor datelor
-   din torent prin funcţia <function>strtolower</function>.
+   din flux prin funcţia <function>strtolower</function>.
   </simpara>
   <example>
    <title>string.tolower</title>
@@ -109,7 +109,7 @@ fwrite($fp, "This is a test.\n");
    <literal>string.strip_tags</literal>
    (începând cu PHP 5.0.0)
    Folosirea acestui filtru este echivalentă cu procesarea tuturor datelor
-   din torent prin funcţia <function>strip_tags</function>.
+   din flux prin funcţia <function>strip_tags</function>.
    El acceptă parametrii în unul din aceste două moduri:
    un string conţinând o listă de tag-uri, similar celui de-al doilea
    parametru al funcţiei <function>strip_tags</function>,
@@ -152,7 +152,7 @@ fclose($fp);
    <literal>convert.base64-encode</literal> şi
    <literal>convert.base64-decode</literal>
    Utilizarea acestor filtre este echivalentă cu procesarea tuturor datelor din
-   torent prin funcţiile <function>base64_encode</function> şi
+   flux prin funcţiile <function>base64_encode</function> şi
    <function>base64_decode</function> respectiv.
    <literal>convert.base64-encode</literal> susţine parametri sub forma unui masiv
    asociativ. Dacă parametrul <parameter>line-length</parameter> este specificat,
@@ -199,7 +199,7 @@ fclose($fp);
    <literal>convert.quoted-printable-encode</literal> şi
    <literal>convert.quoted-printable-decode</literal>
    Utilizarea versiunii decode a acestui filtru este echivalentă cu procesarea tuturor
-   datelor din torent prin funcţia <function>quoted_printable_decode</function>.
+   datelor din flux prin funcţia <function>quoted_printable_decode</function>.
    Nu există o funcţie echivalentă pentru <literal>convert.quoted-printable-encode</literal>.
    <literal>convert.quoted-printable-encode</literal> susţine parametrii sub forma unui masiv
    asociativ. Adăugător la parametrii susţinuţi de <literal>convert.base64-encode</literal>,
@@ -233,17 +233,17 @@ fwrite($fp, "This is a test.\n");
   <simpara>
    În timp ce <link linkend="wrappers.compression">învelişurile de compresie</link>
    oferă o modalitate de a crea fişiere compatibile cu gzip and bz2 pe sistemul de
-   fişiere local, ele nu oferă o modalitate de compresie generalizată prin torente
-   în reţea, nici nu oferă o modalitate de a începe cu un torent necomprimat şi a
+   fişiere local, ele nu oferă o modalitate de compresie generalizată prin fluxuri
+   în reţea, nici nu oferă o modalitate de a începe cu un flux necomprimat şi a
    trece la unul comprimat. Pentru acestea, un filtru de compresie poate fi aplicat
-   oricând asupra oricărei resurse-torent.
+   oricând asupra oricărei resurse-flux.
   </simpara>
 
   <note>
    <simpara>
     Filtrele de compresie <emphasis>nu</emphasis> generează antete sau sfârşituri
     utilizate de utilitele din linie de comandă, cum ar fi <literal>gzip</literal>.
-    Ele numai comprimă şi decomprimă porţiunile cu încărcătură utilă a torentelor
+    Ele numai comprimă şi decomprimă porţiunile cu încărcătură utilă a fluxurilor
     de date.
    </simpara>
   </note>
