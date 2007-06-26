@@ -4,10 +4,9 @@
 <translation xmlns="http://docbook.org/ns/docbook">
 
  <intro>
-  The Romanian translation of the PHP Documentation is managed by a team of
-  translators from Romania and Moldova. If you would like to join us and contribute
-  to this translation, please contact Serban Gheorghe Ghita, Gabriel Preda or
-  Simion Onea.
+  The Romanian translation of the PHP Documentation is managed by an international
+  team of translators. If you would like to join us and contribute to this translation,
+  please subscribe to doc-ro@lists.php.net mailing list and contact us.
  </intro>
 
  <chmindex>
@@ -29,7 +28,7 @@
   <person name="Dan Tofan"             email="tdan_99@yahoo.com"              nick="xelis"     cvs="yes" /> <!-- Joined: 2002-11-14 Status: unknown -->
   <person name="Mircea Banu"           email="banu@ss.pub.ro"                 nick="mbr"       cvs="yes" /> <!-- Joined: 2003-04-01 Status: unknown -->
   <person name="Florin Enache"         email="eflorin@home.ro"                nick="eflorin"   cvs="yes" /> <!-- Joined: 2003-09-01 Status: unknown -->
-  <person name="Serban Gheorghe Ghita" email="zamolxe@php.net"                nick="zamolxe"   cvs="yes" /> <!-- Joined: 2003-12-17 Status: active -->
+  <person name="Şerban Gheorghe Ghiţă" email="zamolxe@php.net"                nick="zamolxe"   cvs="yes" /> <!-- Joined: 2003-12-17 Status: active -->
   <person name="Gabriel Preda"         email="gabriel.preda@amr.ro"           nick="radical"   cvs="yes" /> <!-- Joined: 2004-09-15 Status: active -->
   <person name="ShOtY"                 email="shoty_my@yahoo.com"             nick="shoty"     cvs="yes" /> <!-- Joined: 2005-02-02 Status: unknown -->
   <person name="Simion Onea"           email="simion.onea@bem.md"             nick="simionea"  cvs="yes" /> <!-- Joined: 2007-06-04 Status: active -->
