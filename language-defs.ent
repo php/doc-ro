@@ -58,9 +58,6 @@ supplemental files to mark section titles -->
 <!ENTITY reftitle.notes        '<title>Note</title>'>
 
 <!ENTITY url.ro.rophp        "http://www.rophp.net">
-<!ENTITY url.ro.rophpdoc     "http://www.rophp.net/doc/php">
-<!ENTITY url.ro.urbanxp      "http://php.urbanxp.org">
-<!ENTITY email.ro.adiju      "adiju@terrasat.ro">
-<!ENTITY email.ro.rophpman   "rophpman@yahoogroups.com">
+<!ENTITY url.ro.phpromania   "http://www.phpromania.net">
 
 <!-- Translated by Simion Onea -->
