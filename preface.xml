@@ -1,30 +1,73 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.6 $ -->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.7 $ -->
+<!-- EN-Revision: 1.35 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
 
- <preface xml:id="preface" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <title>Prefaţă</title>
+<preface xml:id="preface" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://docbook.org/ns/docbook">
+ <info><title>PrefaĹŁÄ</title>
+ <abstract>
+  <simpara>
+   <acronym>PHP</acronym>, ce ĂŽnseamnÄ "PHP: Hypertext
+   Preprocessor" este un limbaj de scripting de uz general,
+   cu cod-sursÄ deschis (Open Source), utilizat pe scarÄ largÄ, 
+   Ĺi care este potrivit ĂŽn special pentru dezvoltarea
+   aplicaĹŁiilor Web Ĺi poate fi integrat ĂŽn HTML.
+   Sintaxa sa provine din C, Java Ĺi Perl Ĺi este uĹor de ĂŽnvÄĹŁat.
+   Scopul principal al limbajului este acela de a permite
+   programatorilor web sÄ creeze rapid pagini web generate
+   dinamic, ĂŽnsÄ cu PHP puteĹŁi realiza mult mai multe.
+  </simpara>
+ </abstract>
+</info>
 
-  <abstract>
-   <simpara>
-    <acronym>PHP</acronym>, acronim care provine din "PHP: Hypertext Preprocessor", este un limbaj de scripting utilizat pe scară largă, realizat şi distribuit în sistem Open Source, care este special realizat pentru a dezvolta aplicaţii web, prin integrarea codului PHP în documente HTML. Sintaxa sa provine din C, Java şi Perl şi este uşor de învăţat. Scopul principal al limbajului este acela de a scrie rapid pagini web dinamice, dar cu PHP se pot realiza mult mai multe.
-   </simpara>
-  </abstract>
+ <para>
+  Acest manual constÄ ĂŽn primul rĂ˘nd dintr-o <link linkend="funcref">
+  referinĹŁÄ a funcĹŁiilor</link>, dar de asemenea conĹŁine Ĺi o
+  <link linkend="langref">prezentare a limbajului</link>, explicaĹŁia
+  celor mai importante <link linkend="features">facilitÄĹŁi</link>
+  oferite de PHP, Ĺi alte informaĹŁii
+  <link linkend="appendices">suplimentare</link>.
+ </para>
+ <para>
+  PuteĹŁi descÄrca acest manual ĂŽn cĂ˘teva formate la adresa <link
+  xlink:href="&url.php.doc.downloads;">&url.php.doc.downloads;</link>.
+  InformaĹŁii suplimentare despre modul ĂŽn care acest manual este dezvoltat
+  pot fi gÄsite ĂŽn anexa <link linkend="about">'Despre manual'</link>.
+  DacÄ vÄ intereseazÄ <link linkend="history">istoria PHP</link>,
+  vizitaĹŁi anexa corespunzÄtoare.
+ </para>
 
-  <para>
-   Acest manual reprezintă, în primul rând, o referinţă a funcţiilor PHP, dar conţine, de asemenea, prezentarea limbajului, explicarea unor caracteristici majore ale limbajului, precum şi alte informaţii suplimentare.
-  </para>
+ <para>
+  Versiunea ĂŽn limba romĂ˘nÄ a manualului PHP este realizatÄ, ĂŽn mod voluntar,
+  de o echipÄ internaĹŁionalÄ de traducÄtori formatÄ din
+  Paul Dorneanu (iniĹŁiatorul acestui proiect),
+  Adrian Jurjica,
+  Cristi RÄdulescu,
+  Valentin Ĺ˘uĹŁu,
+  Iulian NÄstÄsache,
+  Daniel Toma,
+  1ns0mn1a,
+  Dorel NÄstasÄ,
+  Dan Matornei,
+  RareĹ Benea,
+  Valentin Agachi,
+  Cristi Armeana,
+  Adrian Spinei,
+  Ĺerban Gheorghe GhiĹŁÄ,
+  Gabriel Preda,
+  Simion Onea.
+ </para>
 
-  <para>
-   Cele mai noi versiuni ale acestui manual (actualizate imediat ce conţinutul se modifică) pot fi vizualizate (sau descărcate, în diferite formate) la <link xlink:href="&url.php.docs;">&url.php.docs;</link>. Mai multe informaţii despre modul în care este dezvoltat manualul PHP pot fi găsite în Anexa <link linkend="about">'Despre manualul PHP'</link>.
-  </para>
-
-  <para>
-   Versiunea în limba română a manualului PHP este realizată, în mod voluntar, de o echipă formată din Paul Dorneanu (iniţiatorul acestui proiect), Adrian Jurjica, Cristi Rădulescu, Valentin Ţuţu, Iulian Năstăsache, Daniel Toma, 1ns0mn1a, Dorel Năstasă, Dan Matornei, Rareş Benea, Valentin Agachi, Cristi Armeana şi Adrian Spinei. Pentru a participa la traducerea manualului PHP este de ajuns sa subscrieţi la lista de discuţii rophpman-at-yahoo.com. De asemenea vă recomandăm să vizitaţi <link xlink:href="&url.ro.urbanxp;">&url.ro.urbanxp;</link> şi <link xlink:href="&url.ro.rophp;">&url.ro.rophp;</link> pentru noutăţi.
-  </para>
+ <para>
+  DacÄ doriĹŁi sÄ contribuiĹŁi la traducerea manualului PHP, este de ajuns sÄ
+  vÄ ĂŽnscrieĹŁi la lista de discuĹŁii doc-ro@lists.php.net Ĺi sÄ ne contactaĹŁi.
+  De asemenea vÄ recomandÄm sÄ vizitaĹŁi urmÄtoarele resurse PHP romĂ˘neĹti:
+  <link xlink:href="&url.ro.rophp;">&url.ro.rophp;</link> Ĺi
+  <link xlink:href="&url.ro.phpromania;">&url.ro.phpromania;</link>.
+ </para>
   
-  &contributors;
-  
- </preface>
+ &contributors;
+</preface>
 
 <!-- Keep this comment at the end of the file
 Local variables:
