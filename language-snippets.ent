@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.202 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.205 Maintainer: simionea Status: translated -->
 
 <!-- Keep 'em sorted -->
 
@@ -108,14 +108,14 @@ să utilizaţi <function>escapeshellarg</function> sau <function>escapeshellcmd<
 pentru a vă asigura că utilizatorii nu vor păcăli sistemul să execute comenzi arbitrare.
 </para></warning>'>
 
-<!ENTITY warn.experimental '<warning><simpara>Această extensie este
-<emphasis>EXPERIMENTALĂ</emphasis>. Comportamentul acestei extensii --
+<!ENTITY warn.experimental '<warning xmlns="http://docbook.org/ns/docbook"><simpara>
+Această extensie este <emphasis>EXPERIMENTALĂ</emphasis>. Comportamentul acestei extensii --
 inclusiv denumirile funcţiilor sale şi orice alte aspecte documentate în privinţa
 acestei extensii -- pot să fie modificate fără preaviz într-o versiune viitoare a PHP. 
 Utilizaţi această extensie la propriul risc.</simpara></warning>'>
 
-<!ENTITY warn.experimental.func '<warning><simpara>Această funcţie este
-<emphasis>EXPERIMENTALĂ</emphasis>. Comportamentul acestei funcţii,
+<!ENTITY warn.experimental.func '<warning xmlns="http://docbook.org/ns/docbook"><simpara>
+Această funcţie este <emphasis>EXPERIMENTALĂ</emphasis>. Comportamentul acestei funcţii,
 denumirea sa şi orice alte aspecte documentate în privinţa
 acestei funcţii pot să fie modificate fără preaviz într-o versiune viitoare a PHP. 
 Utilizaţi această funcţie la propriul risc.</simpara></warning>'>
@@ -691,7 +691,8 @@ Zend Engine 2, ceea ce înseamnă PHP &gt;= 5.0.0.</simpara></note>'>
 <!ENTITY tidy.conf-enc '<para>Parametrul <parameter>config</parameter> poate
 fi transmis sau sub forma unui masiv, sau sub forma unui string. Dacă îl transmiteţi
 ca string, el este interpretat ca denumirea fişierului de configurare, în caz contrar
-el este interpretat ca însăşi opţiunile. Accesaţi <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.tidy.conf;">&url.tidy.conf;</link>
+el este interpretat ca însăşi opţiunile. Accesaţi
+<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.tidy.conf;">&url.tidy.conf;</link>
 pentru explicaţia fiecărei opţiuni.</para><para>Parametrul <parameter>encoding</parameter>
 stabileşte codificarea pentru documentele de intrare/ieşire. Valorile posibile pentru
 <parameter>encoding</parameter> sunt:
@@ -808,6 +809,15 @@ utilizând autentificarea cu chei publice, utilizaţi funcţia <function>ssh2_au
 xmlwriter</parameter></term><listitem><para>Numai pentru apelurile procedurale. 
 <type>Resursa</type> XMLWriter care este modificată. Această resursă se obţine în urma apelării
 <function>xmlwriter_open_uri</function> sau <function>xmlwriter_open_memory</function>.</para></listitem></varlistentry>'>
+
+<!-- SVN notes -->
+<!ENTITY svn.relativepath "<note><simpara>Căile relative vor fi rezolvate ca şi cum directorul curent
+este cel ce conţine binarul PHP. Pentru a utiliza directorul de lucru al scriptului apelant, utilizaţi
+<function>realpath</function> sau dirname(__FILE__).</simpara></note>">
+<!ENTITY svn.referto.status 'Accesaţi <link linkend="svn.constants.status">constantele de stare</link>
+pentru a afla valorile posibile.'>
+<!ENTITY svn.referto.type 'Accesaţi <link linkend="svn.constants.type">constante de tip</link> pentru
+a afla valorile posibile.'>
 
 <!-- Imagick generic return types -->
 <!ENTITY imagick.return.success 'Întoarce &true; în caz de succes.'>
