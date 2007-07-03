@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.1 $ -->
+<!-- EN-Revision: 1.3 Maintainer: simionea Status: translated -->
+<appendix xml:id="opl.license" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <title>Licenţa Publicaţiei Deschise</title>
+  <simpara>v1.0, 8 Iunie 1999</simpara>
+  <section xml:id="opl.require">
+   <title>I. CERINŢE FAŢĂ DE VERSIUNILE ATÂT MODIFICATE, CÂT ŞI NEMODIFICATE</title>
+   <simpara>
+    Lucrările în Publicaţie Deschisă pot fi reproduse şi distribuite în întregime,
+    sau parţial, pe/în orice mediu fizic sau electronic, cu condiţia aderării la
+    termenele acestei licenţe şi cu condiţia ca această licenţă, sau o încorporare
+    a sa prin referinţă (cu orice opţiuni alese de autor(i) şi/sau editori), este
+    afişată în reproducere.
+   </simpara>
+   <simpara>
+    Forma potrivită pentru o încorporare prin referinţă este după cum urmează:
+   </simpara>
+   <para>
+    Copyright (c) &lt;anul&gt; de &lt;numele autorului sau al persoanei desemnate&gt;.
+    Acest material poate fi distribuit numai în conformitate cu termenele şi condiţiile
+    stabilite în Licenţa Publicaţiei Deschise, vX.Y sau ulterioară (ultima versiune
+    este disponibilă în prezent la <link xlink:href="&url.opl;">&url.opl;</link> .
+    </para>
+   <simpara>
+    Referinţa trebuie să fie urmată imediat de opţiunile alese de autor(i) şi/sau
+    editori ai documentului (vedeţi secţinea VI).
+    Redistribuirea commercială a materialelor licenţiate în Publicaţie Deschisă
+    este permisă. Orice publicaţie sub forma unei cărţi standarde (de hârtie) va necesita
+    citarea editorului şi autorului originar. Numele editorului şi al autorului vor
+    apărea pe toate suprafeţele externe ale cărţii. Pe toate suprafeţele externe ale
+    cărţii numele editorului originar va fi de aceeaşi dimensiune ca şi titlul
+    lucrării şi va fi citat în mod posesiv faţă de titlu.
+   </simpara>
+  </section>
+
+  <section xml:id="opl.copyright">
+   <title>II. COPYRIGHT - DREPTUL DE REPRODUCERE</title>
+   <simpara>
+    Dreptul de reproducere a fiecărei Publicaţii Deschise este deţinut de autorul său, sau
+    de persoana desemnată.
+   </simpara>
+  </section>
+
+  <section xml:id="opl.scope">
+   <title>III. DOMENIUL ACŢIUNII LICENŢEI</title>
+   <simpara>
+    Următoarele termene ale licenţei se aplică tuturor lucrărilor în Publicaţie Deschisă,
+    dacă în document nu este specificat în mod explicit altfel.
+   </simpara>
+   <simpara>
+    O simplă alipire a unei lucrări în Publicaţie Deschisă, sau a unei porţiuni a unei
+    lucrări în Publicaţie Deschisă la alte lucrări sau programe pe acelaşi mediu purtător
+    nu va cauza aplicarea acestei licenţe apupra acestor alte lucrări. Lucrarea agregată
+    va conţine o adnotare ce va specifica includerea materialului din Publicaţie Deschisă
+    şi adnotarea potrivită despre dreptul de reproducere (copyright).
+   </simpara>
+   <simpara>
+    RIGUROZITATEA. Dacă orice porţiune a acestei licenţe nu poate fi impusă în careva
+    jurisdicţie, restul porţiunilor licenţei rămân în vigoare.
+   </simpara>
+   <simpara>
+    FĂRĂ GARANŢIE. Lucrările în Publicaţie Deschisă sunt licenţiate şi oferite "cum sunt",
+    fără vre-o garanţie de orice fel, exprimată sau presupusă, incluzând, dar nelimitându-se
+    la, garanţii presupuse de comerciabilitate şi potrivire pentru un anumit scop, sau vre-o
+    garanţie de neîncălcare.
+   </simpara>
+  </section>
+
+
+  <section xml:id="opl.modified.works">
+   <title>IV. CERINŢE FAŢĂ DE LUCRĂRILE MODIFICATE</title>
+   <para>
+    Toate versiunile modificate ale documentelor ce cad sub incidenţa acestei
+    licenţe, inclusiv traducerile, antologiile, compilările şi documentele
+    parţiale, trebuie să satisfacă următoarelor cerinţe:
+   </para>
+   <para>
+    <orderedlist>
+     <listitem>
+      <simpara>
+       Versiunea modificată trebuie marcată ca atare.
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       Persoana care a efectuat modificările trebuie să fie identificată şi
+       trebuie să se indice data modificărilor.
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       Consimţământul autorului şi editorului originar, dacă se aplică, trebuie obţinut 
+       conform practicilor normale ale citării academice.
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       Localizarea documentului original nemodificat trebuie identificată.
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       Numele autorului (sau autorilor) originari nu poate fi folosit pentru a consimţi
+       sau a presupune girarea documentului rezultant fără permisiunea autorului (sau
+       autorilor) originari.
+      </simpara>
+     </listitem>
+    </orderedlist>
+   </para>
+  </section>
+
+  <section xml:id="opl.good-practice">
+   <title>V. RECOMANDĂRI DE PRACTICI BUNE</title>
+   <simpara>
+    Suplimentar la cerinţele acestei licenţe, de la redistribuitori este cerut şi
+    recomandat insistent următoarele:
+   </simpara>
+   <para>
+    <orderedlist>
+     <listitem>
+      <simpara>
+       Dacă distribuiţi lucrări în Publicaţie Deschisă pe suport solid, sau pe CD-ROM,
+       trebuie să înştiinţaţi autorii prin e-mail despre intenţia de redistribuire cu
+       cel puţin treizeci de zile înainte de încetarea efectuării modificărilor în
+       manuscris sau pe suport, pentru a oferi autorilor timp pentru a furniza documente
+       reînnoite. Această înştiinţare ar trebui să descrie modificările efectuate în
+       document, dacă sunt.
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       Toate modificările substanţiale (inclusiv eliminările) trebuie să fie marcate clar
+       în document sau descrise într-un alt mod într-o anexă a documentului.
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       În final, deşi nu este obligatoriu conform termenelor acestei licenţe, este
+       considerat un gest binevoitor de a oferi o copie gratuită pe suport solid, sau
+       CD-ROM a lucrării derivate din lucrarea licenţiată în Publicaţie Deschisă
+       autorului (sau autorilor) săi.
+      </simpara>
+     </listitem>
+    </orderedlist>
+   </para>
+  </section>
+
+  <section xml:id="opl.options">
+   <title>VI. OPŢIUNILE LICENŢEI</title>
+   <simpara>
+    Autorul (sau autorii) şi/sau editorii unui document licenţiat în Publicaţie
+    Deschisă pot alege anumite opţiuni prin adăugarea limbajului la referinţa sau
+    la copia licenţei. Aceste opţiuni sunt considereate ca parte componentă a instanţei
+    licenţei şi trebuie incluse în licenţă (sau în încorporarea sa prin referinţă)
+    în lucrările derivate.
+   </simpara>
+   <simpara>
+    A. Pentru a interzice distribuirea versiunilor modificate substanţial fără
+    permisiunea explicită a autorului (sau autorilor). "Modificarea substanţială" este
+    definită ca o schimbare în conţinutul semantic al documentului şi nu include simple
+    schimbări ale formatului sau corectări tipografice.
+   </simpara>
+   <simpara>
+    Pentru a realiza aceasta, adăugaţi fraza 'Distribuirea versiunilor modificate
+    substanţial ale acestui document este interzisă fără permisiunea explicită
+    a deţinătorului dreptului de reproducere (copyright).' la referinţa sau copia
+    licenţei.
+   </simpara>
+   <simpara>
+    B. Pentru a interzice orice publicare a acestei lucrări, sau a lucrărilor derivate
+    în întregime, sau parţial sub forma unei cărţi standarde (de hârtie) pentru scopuri
+    comerciale dacă anterior nu a fost obţinută permisiunea deţinătorului dreptului de
+    reproducere.
+   </simpara>
+   <simpara>
+    Pentru a realiza aceasta, adăugaţi fraza 'Distribuirea lucrării sau a unei derivate
+    a lucrării sub forma unei cărţi standarde (de hârtie) este interzisă dacă anterior
+    nu a fost obţinută permisiunea deţinătorului dreptului de reproducere.' la referinţa
+    sau copia licenţei.
+   </simpara>
+  </section>
+</appendix>
+
+<!-- Translated by Simion Onea -->
