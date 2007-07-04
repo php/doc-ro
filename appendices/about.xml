@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.3 $ -->
+<!-- $Revision: 1.4 $ -->
 <!-- EN-Revision: 1.50 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="about" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -84,7 +84,7 @@
   <para>
    Adnotările scrise de utilizatori joacă un rol important în dezvoltarea acestui
    manual. Oferind cititorilor manualului posibilitatea de a contribui cu exemple,
-   obiecţii şi clarificări suplimentare direct din browser-ul lor, suntem în stare
+   obiecţii şi clarificări suplimentare direct din navigatorul lor, suntem în stare
    să le încorporăm apoi în textul de bază al manualului. Şi până când adnotările
    nu au fost încorporate, ele pot fi vizualizate în forma în care au fost înscrise
    online şi în unele formate offline.
