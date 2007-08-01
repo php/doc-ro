@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.206 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.207 Maintainer: simionea Status: translated -->
 <!-- Keep 'em sorted -->
 
 <!-- Notes -->
@@ -520,6 +520,11 @@ fără argumente.</para></listitem></varlistentry>'>
 result</parameter></term><listitem><para>Un identificator al rezultatului
 întors de <function>fbsql_query</function> sau 
 <function>fbsql_db_query</function>.</para></listitem></varlistentry>'>
+
+<!-- GMP Notes -->
+<!ENTITY gmp.return 'O <type>resursă</type> număr GMP.'>
+<!ENTITY gmp.parameter '<para>Aceasta poate fi sau o <type>resursă</type> număr GMP, sau 
+un şir de caractere numeric, dacă este posibilă convertirea acestuia într-un număr.</para>'>
 
 <!-- MySQLi Notes -->
 <!ENTITY mysqli.result.description '<varlistentry><term><parameter>
