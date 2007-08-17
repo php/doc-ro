@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.7 $ -->
-<!-- EN-Revision: 1.58 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.8 $ -->
+<!-- EN-Revision: 1.59 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Directivele &php.ini;</title>
@@ -3353,7 +3353,7 @@
         <para>
          Specifică denumirea unui fişier care va fi automat analizat şi executat înainte
          de fişierul principal. Acest fişier este inclus, ca şi cum ar fi fost apelat
-         cu funcţia <function>include</function>, deci
+         cu funcţia <function>require</function>, deci
          <link linkend="ini.include-path">include_path</link> este utilizat.</para>
         <para>
          Valoarea specială <constant>none</constant> anulează executarea automată.
@@ -3370,7 +3370,7 @@
         <para>
          Specifică denumirea unui fişier care va fi automat analizat şi executat după
          fişierul principal. Acest fişier este inclus, ca şi cum ar fi fost apelat
-         cu funcţia <function>include</function>, deci
+         cu funcţia <function>require</function>, deci
          <link linkend="ini.include-path">include_path</link> este utilizat.</para>
         <para>
          Valoarea specială <constant>none</constant> anulează executarea automată.
