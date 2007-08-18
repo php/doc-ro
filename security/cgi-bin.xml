@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- $Revision: 1.5 $ -->
+<!-- $Revision: 1.6 $ -->
 <!-- splitted from ./index.xml, last change in rev 1.66 -->
   <chapter xml:id="security.cgi-bin" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
    <title>Instalat ca un binar CGI</title>
@@ -18,7 +18,7 @@ securizate chroot si setuid
      pentru scripturi. Acest setup implica de obicei instalarea 
 binarului PHP executabil in
 	 directorul cgi-bin din serverul web. Indrumarul CERT <link 
-url="&url.cert;">CA-96.11</link>
+xlink:href="&url.cert;">CA-96.11</link>
 	 nu recomanda plasarea oricarui tip de interpretor de acest gen 
 in directorul cgi-bin.
 	 Chiar daca binarul PHP poate fi folosit ca un interpretor de 

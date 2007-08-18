@@ -1,61 +1,61 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.16 $ -->
+<!-- $Revision: 1.17 $ -->
 
- <info xml:id="bookinfo" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <info xml:id="bookinfo" xmlns="http://docbook.org/ns/docbook">
   <title>&PHPManual;</title>
   &frontpage.authors;
   <pubdate>&php.build-date;</pubdate>
   &frontpage.editors;
 
   <authorgroup xml:id="translators">
-   <collab>
-    <collabname>Traducerea in limba romana a fost efectuata de</collabname>
-   </collab>
-   <collab>
-    <collabname>Paul Dorneanu</collabname>
-   </collab>
-   <collab>
-    <collabname>Adrian Jurjica</collabname>
-   </collab>
-   <collab>
-    <collabname>Cristi Radulescu</collabname>
-   </collab>
-   <collab>
-    <collabname>Valentin Tutu</collabname>
-   </collab>
-   <collab>
-    <collabname>Iulian Nastasache</collabname>
-   </collab>
-   <collab>
-    <collabname>Daniel Toma</collabname>
-   </collab>
-   <collab>
-    <collabname>Dorel Nastasa</collabname>
-   </collab>
-   <collab>
-    <collabname>Dan Matornei</collabname>
-   </collab>
-   <collab>
-    <collabname>Rareş Benea</collabname>
-   </collab>
-   <collab>
-    <collabname>Valentin Agachi</collabname>
-   </collab>
-   <collab>
-    <collabname>Cristi Armeana</collabname>
-   </collab>
-   <collab>
-   <collabname>Adrian Spinei</collabname>
-   </collab>
-   <collab>
-   <collabname>Cristian Campean</collabname>
-   </collab>
-   <collab>
-   <collabname>Serban Gheorghe Ghita</collabname>
-   </collab>
-   <collab>
-   <collabname>Gabriel Preda</collabname>
-   </collab>
+   <author>
+    <personname>Traducerea in limba romana a fost efectuata de</personname>
+   </author>
+   <author>
+    <personname>Paul Dorneanu</personname>
+   </author>
+   <author>
+    <personname>Adrian Jurjica</personname>
+   </author>
+   <author>
+    <personname>Cristi Radulescu</personname>
+   </author>
+   <author>
+    <personname>Valentin Tutu</personname>
+   </author>
+   <author>
+    <personname>Iulian Nastasache</personname>
+   </author>
+   <author>
+    <personname>Daniel Toma</personname>
+   </author>
+   <author>
+    <personname>Dorel Nastasa</personname>
+   </author>
+   <author>
+    <personname>Dan Matornei</personname>
+   </author>
+   <author>
+    <personname>Rareş Benea</personname>
+   </author>
+   <author>
+    <personname>Valentin Agachi</personname>
+   </author>
+   <author>
+    <personname>Cristi Armeana</personname>
+   </author>
+   <author>
+   <personname>Adrian Spinei</personname>
+   </author>
+   <author>
+   <personname>Cristian Campean</personname>
+   </author>
+   <author>
+   <personname>Serban Gheorghe Ghita</personname>
+   </author>
+   <author>
+   <personname>Gabriel Preda</personname>
+   </author>
   </authorgroup>
 
   <copyright>
@@ -63,7 +63,7 @@
    <holder>Grupul de Documentare PHP</holder>
   </copyright>
 
-  <legalnotice xml:id="copyright">
+  <legalnotice xml:id="copyright" xmlns:xlink="http://www.w3.org/1999/xlink">
    <title>Copyright</title>
    <simpara>
     Copyright &copy; 1997 - 2007 de catre Grupul de Documentare PHP.
