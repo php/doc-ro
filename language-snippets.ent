@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.207 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.208 Maintainer: simionea Status: translated -->
 <!-- Keep 'em sorted -->
 
 <!-- Notes -->
@@ -242,8 +242,8 @@ de creare a imaginilor, cum ar fi <function>imagecreatetruecolor</function>.</pa
 
 <!ENTITY gd.font.description '<varlistentry><term><parameter>
 font</parameter></term><listitem><para>Poate fi 1, 2, 3, 4, 5 pentru font-urile încorporate
-(unde numerele mai mari corespund font-urilor mai mari) sau orice identificator de font al
-dumneavoastră, înregistrat cu <function>imageloadfont</function>.
+cu codificarea latin2 (unde numerele mai mari corespund font-urilor mai mari) sau orice
+identificator de font al dumneavoastră, înregistrat cu <function>imageloadfont</function>.
 </para></listitem></varlistentry>'>
 
 <!-- DBM notes -->
