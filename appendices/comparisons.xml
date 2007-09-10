@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.3 $ -->
-<!-- EN-Revision: 1.12 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.13 Maintainer: simionea Status: translated -->
 <appendix xml:id="types.comparisons" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Tabelele de comparaţii ale tipurilor PHP</title>
  <para>
@@ -192,7 +192,7 @@
  </para>
 
  <para>
-  <table>
+  <table xml:id="types.comparisions-loose">
    <title>Comparaţiile libere cu <literal>==</literal></title>
    <tgroup cols="12">
     <thead>
@@ -399,7 +399,7 @@
  </para>
 
  <para>
-  <table>
+  <table xml:id="type.comparisons-strict">
    <title>Comparaţiile stricte cu <literal>===</literal></title>
    <tgroup cols="12">
     <thead>
