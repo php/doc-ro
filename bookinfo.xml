@@ -1,5 +1,7 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.17 $ -->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.18 $ -->
+<!-- EN-Revision: 1.52 Maintainer: zamolxe Status: translated -->
+<!-- CREDITS: adiju,aspinei,radical,simionea -->
 
  <info xml:id="bookinfo" xmlns="http://docbook.org/ns/docbook">
   <title>&PHPManual;</title>
@@ -9,53 +11,24 @@
 
   <authorgroup xml:id="translators">
    <author>
-    <personname>Traducerea in limba romana a fost efectuata de</personname>
+    <personname>Traducerea în limba română a fost efectuată de</personname>
    </author>
-   <author>
-    <personname>Paul Dorneanu</personname>
-   </author>
-   <author>
-    <personname>Adrian Jurjica</personname>
-   </author>
-   <author>
-    <personname>Cristi Radulescu</personname>
-   </author>
-   <author>
-    <personname>Valentin Tutu</personname>
-   </author>
-   <author>
-    <personname>Iulian Nastasache</personname>
-   </author>
-   <author>
-    <personname>Daniel Toma</personname>
-   </author>
-   <author>
-    <personname>Dorel Nastasa</personname>
-   </author>
-   <author>
-    <personname>Dan Matornei</personname>
-   </author>
-   <author>
-    <personname>Rare� Benea</personname>
-   </author>
-   <author>
-    <personname>Valentin Agachi</personname>
-   </author>
-   <author>
-    <personname>Cristi Armeana</personname>
-   </author>
-   <author>
-   <personname>Adrian Spinei</personname>
-   </author>
-   <author>
-   <personname>Cristian Campean</personname>
-   </author>
-   <author>
-   <personname>Serban Gheorghe Ghita</personname>
-   </author>
-   <author>
-   <personname>Gabriel Preda</personname>
-   </author>
+   <author><personname>Paul Dorneanu</personname></author>
+   <author><personname>Adrian Jurjică</personname></author>
+   <author><personname>Cristi Rădulescu</personname></author>
+   <author><personname>Valentin Tutu</personname></author>
+   <author><personname>Iulian Năstăsache</personname></author>
+   <author><personname>Daniel Toma</personname></author>
+   <author><personname>Dorel Năstasă</personname></author>
+   <author><personname>Dan Matornei</personname></author>
+   <author><personname>Rare Benea</personname></author>
+   <author><personname>Valentin Agachi</personname></author>
+   <author><personname>Cristi Armeana</personname></author>
+   <author><personname>Adrian Spinei</personname></author>
+   <author><personname>Cristian Câmpean</personname></author>
+   <author><personname>Şerban Gheorghe Ghiţă</personname></author>
+   <author><personname>Gabriel Preda</personname></author>
+   <author><personname>Simion Onea</personname></author>
   </authorgroup>
 
   <copyright>
@@ -66,31 +39,33 @@
   <legalnotice xml:id="copyright" xmlns:xlink="http://www.w3.org/1999/xlink">
    <title>Copyright</title>
    <simpara>
-    Copyright &copy; 1997 - 2007 de catre Grupul de Documentare PHP.
-    Acest materia poate fi distribuit numai in baza termenilor si conditiilor
-	stabilite in documentul Open Publication License (Licenta Open de Publicare), 
-	v1.0 sau anterioara. O copie a <link linkend="opl.license">Licentei Open de
-    Publicare</link> este distribuita cu acest manual, cea mai noua versiune
-    este prezentata si disponibila la adresa <link xlink:href="&url.opl;">&url.opl;</link>.
+    Copyright &copy; 1997 - 2007 de către Grupul de Documentare PHP.
+    Acest material poate fi distribuit numai în baza termenelor şi condiţiilor
+    stabilite în documentul "Open Publication License" (Licenţa Publicaţiei Deschise), 
+    v1.0 sau ulterioară. O copie a <link linkend="opl.license">Licenţa Publicaţiei
+    Deschise</link> este distribuită cu acest manual, cea mai recentă versiune
+    este prezentată şi disponibilă la adresa <link xlink:href="&url.opl;">&url.opl;</link>.
    </simpara>
    <simpara>
-    Distribuirea de versiuni ale acestui document modificate substantial 
-	este interzisa fara acordul explicit a detinatorilor de copyright.
+    Distribuirea unor versiuni ale acestui document modificate substanţial 
+    este interzisă fara acordul explicit al deţinătorilor dreptului de reproducere.
    </simpara>
    <simpara>
-   	Distributia continutului din acest document sub forma de carte (manual) 
-	este permisa numai cu acordul detinatorilor de copyright.
+    Distribuţia lucrării, sau a derivatelor ei sub formă de carte (manual) tipărită
+    este interzisă dacă nu a fost obţinută anterior permisiunea deţinătorilor
+    dreptului de reproducere.
    </simpara>
    <simpara>
-    In caz ca sunteti interesat in redistribuirea sau republicarea acestui document
-	integral sau pe bucati, modificat sau nemodificat, si daca aveti intrebari,
-	va rugam sa contactati detinatorii de copyright la adresa
+    În caz că sunteţi cointeresat în redistribuirea sau republicarea acestui document
+    integral sau parţial, modificat sau nemodificat, şi dacă aveti întrebări,
+    vă rugăm să contactaţi deţinătorii dreptului de reproducere la adresa
     <link xlink:href="mailto:&email.php.doc.license;">&email.php.doc.license;</link>.
-    Aceasta adresa este mapata catre arhiva listei publice de mail.
+    Vă rugăm să ţineţi cont că această adresă este mapată (redirecţionată) către
+    arhiva listei publice de distribuţie poştală.
    </simpara>
    <simpara>
-    Sectiunea documentatiei referitoare la <xref linkend="zend"/> este bazata pe
-    contributia initiala a Zend Technologies.
+    Secţiunea documentaţiei referitoare la <xref linkend="internals2.ze1"/> este
+    bazată pe contribuţia iniţială a Zend Technologies.
    </simpara>
   </legalnotice>
 
