@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.208 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.209 Maintainer: simionea Status: translated -->
 <!-- Keep 'em sorted -->
 
 <!-- Notes -->
@@ -309,6 +309,9 @@ de exemplu.'>
 să indice la un fişier deschis cu succes cu ajutorul <function>fopen</function> sau
 <function>fsockopen</function> (şi să nu fie închis cu
 <function>fclose</function>).</para>'>
+
+<!ENTITY fs.file.pointer '<para>O <type>resursă</type> de tip indicator în sistemul de fişiere
+care este în mod tipic creată utilizând <function>fopen</function>.</para>'>
 
 <!-- Oracle -->
 <!ENTITY oci.charset "<para>Utilizând Oracle server de versiune 9.2 sau ulterioară,
