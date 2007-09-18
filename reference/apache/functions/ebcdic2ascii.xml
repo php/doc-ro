@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
+<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
 <!-- splitted from ./ro/functions/apache.xml, last change in rev 1.1 -->
 <!-- last change to 'ebcdic2ascii' in en/ tree in rev 1.10 -->
   <refentry xml:id="function.ebcdic2ascii" xmlns="http://docbook.org/ns/docbook">

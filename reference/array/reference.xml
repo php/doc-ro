@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.3 $ -->
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
  <reference xml:id="ref.array" xmlns="http://docbook.org/ns/docbook">
   <title>Array - funcţii</title>
   <titleabbrev>Tablouri</titleabbrev>
