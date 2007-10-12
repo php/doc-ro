@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.8 $ -->
-<!-- EN-Revision: 1.59 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.9 $ -->
+<!-- EN-Revision: 1.60 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
- <title>Directivele &php.ini;</title>
+ <title>&php.ini; directives</title>
 
  <section xml:id="ini.list">
-  <title>Lisa directivelor &php.ini;</title>
+  <title>Lista directivelor &php.ini;</title>
   <para>
-   Această listă include directivele &php.ini; pe care le puteţi stabili pentru a
-   configura PHP.
+   Această listă include directivele &php.ini; pe care le puteţi stabili 
+   pentru a configura PHP.
   </para>
   <para>
    <table>
@@ -28,19 +28,19 @@
        <entry><link linkend="ini.allow-call-time-pass-reference">allow_call_time_pass_reference</link></entry>
        <entry>"1"</entry>
        <entry>PHP_INI_PERDIR</entry>
-       <entry>PHP_INI_ALL în PHP &lt;= 4.0.0.</entry>
+       <entry>PHP_INI_ALL în PHP &lt;= 4.0.0. Eliminat în PHP 6.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.allow-url-fopen">allow_url_fopen</link></entry>
        <entry>"1"</entry>
-       <entry>PHP_INI_SYSTEM</entry>
-       <entry>PHP_INI_ALL în PHP &lt;= 4.3.4. Disponibil începând cu PHP 4.0.4.</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>PHP_INI_ALL în PHP &lt;= 4.3.4. PHP_INI_SYSTEM în PHP &lt; 6. Disponibil începând cu PHP 4.0.4.</entry>
       </row>
       <row>
        <entry><link linkend="ini.allow-url-include">allow_url_include</link></entry>
        <entry>"0"</entry>
-       <entry>PHP_INI_SYSTEM</entry>
-       <entry>Disponibil începând cu PHP 5.2.0.</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>PHP_INI_SYSTEM în PHP 5. Disponibil începând cu PHP 5.2.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.always-populate-raw-post-data">always_populate_raw_post_data</link></entry>
@@ -52,25 +52,25 @@
        <entry><link linkend="ini.apc.cache-by-default">apc.cache_by_default</link></entry>
        <entry>"1"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>PHP_INI_SYSTEM in APC &lt;= 3.0.12p2</entry>
+       <entry>PHP_INI_SYSTEM in APC &lt;= 3.0.12. Disponibil începând cu APC 3.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.apc.enabled">apc.enabled</link></entry>
        <entry>"1"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry>PHP_INI_ALL in APC &lt;= 3.0.12p2</entry>
+       <entry>PHP_INI_SYSTEM in APC 2. PHP_INI_ALL in APC &lt;= 3.0.12.</entry>
       </row>
       <row>
        <entry><link linkend="ini.apc.enable-cli">apc.enable_cli</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu APC 3.0.7.</entry>
       </row>
       <row>
        <entry><link linkend="ini.apc.file-update-protection">apc.file_update_protection</link></entry>
        <entry>"2"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu APC 3.0.6.</entry>
       </row>
       <row>
        <entry><link linkend="ini.apc.filters">apc.filters</link></entry>
@@ -85,10 +85,28 @@
        <entry></entry>
       </row>
       <row>
-       <entry>apc.max_file_size</entry>
+       <entry><link linkend="ini.apc.include-once-override">apc.include_once_override</link></entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu APC 3.0.12.</entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.apc.localcache">apc.localcache</link></entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu APC 3.0.14.</entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.apc.localcache.size">apc.localcache.size</link></entry>
+       <entry>"512"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu APC 3.0.14.</entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.apc.max_file_size">apc.max_file_size</link></entry>
        <entry>"1M"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu APC 3.0.7.</entry>
       </row>
       <row>
        <entry><link linkend="ini.apc.mmap-file-mask">apc.mmap_file_mask</link></entry>
@@ -106,6 +124,36 @@
        <entry><link linkend="ini.apc.optimization">apc.optimization</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
+       <entry>PHP_INI_SYSTEM in APC 2. Eliminat în APC 3.0.13.</entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.apc.report-autofilter">apc.report_autofilter</link></entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu APC 3.0.11.</entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.apc.rfc1867">apc.rfc1867</link></entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu APC 3.0.13.</entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.apc.rfc1867_freq">apc.rfc1867_freq</link></entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.apc.rfc1867_name">apc.rfc1867_name</link></entry>
+       <entry>"APC_UPLOAD_PROGRESS"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.apc.rfc1867_prefix">apc.rfc1867_prefix</link></entry>
+       <entry>"upload_"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
        <entry></entry>
       </row>
       <row>
@@ -124,25 +172,49 @@
        <entry><link linkend="ini.apc.slam-defense">apc.slam_defense</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu APC 3.0.0.</entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.apc.stat">apc.stat</link></entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu APC 3.0.10.</entry>
+      </row>
+      <row>
+       <entry>apc.stat_ctime</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu APC 3.0.13.</entry>
       </row>
       <row>
        <entry><link linkend="ini.apc.ttl">apc.ttl</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu APC 3.0.0.</entry>
       </row>
       <row>
-       <entry>apc.user_entries_hint</entry>
-       <entry>"100"</entry>
+       <entry><link linkend="ini.apc.user-entries-hint">apc.user_entries_hint</link></entry>
+       <entry>"4096"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu APC 3.0.0.</entry>
       </row>
       <row>
-       <entry>apc.user_ttl</entry>
+       <entry><link linkend="ini.apc.user-ttl">apc.user_ttl</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu APC 3.0.0.</entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.apc.write-lock">apc.write_lock</link></entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu APC 3.0.11.</entry>
+      </row>
+      <row>
+       <entry>apd.bitmask</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Eliminat în apd 0.9.</entry>
       </row>
       <row>
        <entry><link linkend="ini.apd.dumpdir">apd.dumpdir</link></entry>
@@ -154,7 +226,13 @@
        <entry><link linkend="ini.apd.statement-tracing">apd.statement_tracing</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu apd 0.9.</entry>
+      </row>
+      <row>
+       <entry>arg_separator</entry>
+       <entry>"&amp;"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Eliminat în PHP 4.0.6.</entry>
       </row>
       <row>
        <entry><link linkend="ini.arg-separator.input">arg_separator.input</link></entry>
@@ -205,6 +283,12 @@
        <entry></entry>
       </row>
       <row>
+       <entry>async_send</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu PHP 4.2.0. Eliminat în PHP 4.3.0.</entry>
+      </row>
+      <row>
        <entry><link linkend="ini.auto-append-file">auto_append_file</link></entry>
        <entry>NULL</entry>
        <entry>PHP_INI_PERDIR</entry>
@@ -229,6 +313,30 @@
        <entry>PHP_INI_ALL în PHP &lt;= 4.2.3.</entry>
       </row>
       <row>
+       <entry>axis2.client_home</entry>
+       <entry>"~/work/axisc/c/deply"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>axis2.enable_exception</entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>axis2.enable_trace</entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>axis2.log_path</entry>
+       <entry>"/tmp"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
        <entry><link linkend="ini.bcmath.scale">bcmath.scale</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
@@ -238,7 +346,7 @@
        <entry>bcompiler.enabled</entry>
        <entry>"1"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu bcompiler 0.8.</entry>
       </row>
       <row>
        <entry>birdstep.max_links</entry>
@@ -262,25 +370,25 @@
        <entry><link linkend="ini.cgi.check-shebang-line">cgi.check_shebang_line</link></entry>
        <entry>"1"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry>Disponibil începând cu PHP 5.2.0.</entry>
+       <entry>Disponibil începând cu PHP 5.2.1.</entry>
       </row>
       <row>
        <entry>cgi.discard_path</entry>
        <entry>"0"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry>Disponibil începând cu PHP 6.0.0.</entry>
+       <entry>Disponibil începând cu PHP 5.3.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.cgi.fix-pathinfo">cgi.fix_pathinfo</link></entry>
        <entry>"1"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry>Disponibil începând cu PHP 4.3.0. PHP_INI_ALL înainte de PHP 5.2.1.</entry>
+       <entry>PHP_INI_ALL în PHP &lt;= 5.2.0. Disponibil începând cu PHP 4.3.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.cgi.force-redirect">cgi.force_redirect</link></entry>
        <entry>"1"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry>Disponibil începând cu PHP 4.2.0. PHP_INI_ALL înainte de PHP 5.2.1.</entry>
+       <entry>PHP_INI_ALL în PHP &lt;= 5.2.0. Disponibil începând cu PHP 4.2.0.</entry>
       </row>
       <row>
        <entry>cgi.nph</entry>
@@ -292,7 +400,7 @@
        <entry><link linkend="ini.cgi.redirect-status-env">cgi.redirect_status_env</link></entry>
        <entry>NULL</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry>Disponibil începând cu PHP 4.2.0. PHP_INI_ALL înainte de PHP 5.2.1.</entry>
+       <entry>PHP_INI_ALL în PHP &lt;= 5.2.0. Disponibil începând cu PHP 4.2.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.cgi.rfc2616-headers">cgi.rfc2616_headers</link></entry>
@@ -305,6 +413,66 @@
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
        <entry>Disponibil începând cu PHP 4.0.5.</entry>
+      </row>
+      <row>
+       <entry>coin_acceptor.autoreset</entry>
+       <entry>"On"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Eliminat în coin_acceptor 0.2.</entry>
+      </row>
+      <row>
+       <entry>coin_acceptor.auto_initialize</entry>
+       <entry>"Off"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu coin_acceptor 0.2.</entry>
+      </row>
+      <row>
+       <entry>coin_acceptor.auto_reset</entry>
+       <entry>"On"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu coin_acceptor 0.2.</entry>
+      </row>
+      <row>
+       <entry>coin_acceptor.command_function</entry>
+       <entry>"Off"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu coin_acceptor 0.3.</entry>
+      </row>
+      <row>
+       <entry>coin_acceptor.delay</entry>
+       <entry>"53132"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Eliminat în coin_acceptor 0.2.</entry>
+      </row>
+      <row>
+       <entry>coin_acceptor.delay_coins</entry>
+       <entry>"53132"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu coin_acceptor 0.2.</entry>
+      </row>
+      <row>
+       <entry>coin_acceptor.delay_prom</entry>
+       <entry>"55748"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu coin_acceptor 0.2.</entry>
+      </row>
+      <row>
+       <entry>coin_acceptor.device</entry>
+       <entry>"/dev/ttyS1"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Eliminat în coin_acceptor 0.2.</entry>
+      </row>
+      <row>
+       <entry>coin_acceptor.lock_on_close</entry>
+       <entry>"Off"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu coin_acceptor 0.2.</entry>
+      </row>
+      <row>
+       <entry>coin_acceptor.start_unlocked</entry>
+       <entry>"On"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu coin_acceptor 0.2.</entry>
       </row>
       <row>
        <entry><link linkend="ini.com.allow-dcom">com.allow_dcom</link></entry>
@@ -346,7 +514,7 @@
        <entry>crack.default_dictionary</entry>
        <entry>NULL</entry>
        <entry>PHP_INI_PERDIR</entry>
-       <entry>Disponibil începând cu PHP 4.0.5.</entry>
+       <entry>PHP_INI_SYSTEM in crack &lt;= 0.2. Disponibil începând cu PHP 4.0.5. Eliminat în PHP 5.0.0.</entry>
       </row>
       <row>
        <entry>daffodildb.default_host</entry>
@@ -392,13 +560,13 @@
       </row>
       <row>
        <entry><link linkend="ini.date.sunrise-zenith">date.sunrise_zenith</link></entry>
-       <entry>"90.83"</entry>
+       <entry>"90.583333"</entry>
        <entry>PHP_INI_ALL</entry>
        <entry>Disponibil începând cu PHP 5.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.date.sunset-zenith">date.sunset_zenith</link></entry>
-       <entry>"90.83"</entry>
+       <entry>"90.583333"</entry>
        <entry>PHP_INI_ALL</entry>
        <entry>Disponibil începând cu PHP 5.0.0.</entry>
       </row>
@@ -418,7 +586,7 @@
        <entry><link linkend="ini.dbx.colnames-case">dbx.colnames_case</link></entry>
        <entry>"unchanged"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry>Disponibil începând cu PHP 4.3.0.</entry>
+       <entry>Disponibil începând cu PHP 4.3.0. Eliminat în PHP 5.1.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.default-charset">default_charset</link></entry>
@@ -445,15 +613,21 @@
        <entry></entry>
       </row>
       <row>
+       <entry>detect_unicode</entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu PHP 5.1.0. Eliminat în PHP 6.0.0.</entry>
+      </row>
+      <row>
        <entry><link linkend="ini.disable-classes">disable_classes</link></entry>
        <entry>""</entry>
-       <entry>Numai în &php.ini;</entry>
+       <entry>numai în &php.ini;</entry>
        <entry>Disponibil începând cu PHP 4.3.2.</entry>
       </row>
       <row>
        <entry><link linkend="ini.disable-functions">disable_functions</link></entry>
        <entry>""</entry>
-       <entry>Numai în &php.ini;</entry>
+       <entry>numai în &php.ini;</entry>
        <entry>Disponibil începând cu PHP 4.0.1.</entry>
       </row>
       <row>
@@ -490,7 +664,7 @@
        <entry><link linkend="ini.enable-dl">enable_dl</link></entry>
        <entry>"1"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry></entry>
+       <entry>Eliminat în PHP 6.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.engine">engine</link></entry>
@@ -519,6 +693,18 @@
       <row>
        <entry><link linkend="ini.error-reporting">error_reporting</link></entry>
        <entry>NULL</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>etpan.default.charset</entry>
+       <entry>"utf-8"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>etpan.default.protocol</entry>
+       <entry>"imap"</entry>
        <entry>PHP_INI_ALL</entry>
        <entry></entry>
       </row>
@@ -579,12 +765,12 @@
       <row>
        <entry><link linkend="ini.expose-php">expose_php</link></entry>
        <entry>"1"</entry>
-       <entry>Numai în &php.ini;</entry>
+       <entry>numai în &php.ini;</entry>
        <entry></entry>
       </row>
       <row>
        <entry><link linkend="ini.extension-dir">extension_dir</link></entry>
-       <entry>"/path/to/php"</entry>
+       <entry>"/calea/spre/php"</entry>
        <entry>PHP_INI_SYSTEM</entry>
        <entry></entry>
       </row>
@@ -592,13 +778,19 @@
        <entry><link linkend="ini.fastcgi.impersonate">fastcgi.impersonate</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry>Disponibil începând cu PHP 4.3.0. PHP_INI_ALL înainte de PHP 5.2.1.</entry>
+       <entry>PHP_INI_ALL în PHP &lt;= 5.2.0. Disponibil începând cu PHP 4.3.0.</entry>
       </row>
       <row>
        <entry>fastcgi.logging</entry>
        <entry>"1"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry>Disponibil începând cu PHP 4.4.0. PHP_INI_ALL înainte de PHP 5.2.1.</entry>
+       <entry>PHP_INI_ALL în PHP &lt;= 5.2.0. Disponibil începând cu PHP 4.4.0. Eliminat în PHP 5.0.0.</entry>
+      </row>
+      <row>
+       <entry>fbsql.allow_persistant</entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu PHP 4.0.6. Eliminat în PHP 4.2.0.</entry>
       </row>
       <row>
        <entry>fbsql.allow_persistent</entry>
@@ -611,6 +803,12 @@
        <entry>"1"</entry>
        <entry>PHP_INI_SYSTEM</entry>
        <entry>Disponibil începând cu PHP 4.0.6.</entry>
+      </row>
+      <row>
+       <entry>fbsql.batchSize</entry>
+       <entry>"1000"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu PHP 4.2.0. Eliminat în PHP 5.1.0.</entry>
       </row>
       <row>
        <entry>fbsql.batchsize</entry>
@@ -679,22 +877,34 @@
        <entry>Disponibil începând cu PHP 4.0.6.</entry>
       </row>
       <row>
+       <entry>fbsql.mbatchSize</entry>
+       <entry>"1000"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu PHP 4.0.6. Eliminat în PHP 4.2.0.</entry>
+      </row>
+      <row>
+       <entry>fbsql.show_timestamp_decimals</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu PHP 5.1.5.</entry>
+      </row>
+      <row>
        <entry><link linkend="ini.file-uploads">file_uploads</link></entry>
        <entry>"1"</entry>
        <entry>PHP_INI_SYSTEM</entry>
        <entry>PHP_INI_ALL în PHP &lt;= 4.2.3. Disponibil începând cu PHP 4.0.3.</entry>
       </row>
       <row>
-       <entry>filter.default</entry>
-       <entry>"string"</entry>
-       <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry><link linkend="ini.filter.default">filter.default</link></entry>
+       <entry>"unsafe_raw"</entry>
+       <entry>PHP_INI_PERDIR</entry>
+       <entry>PHP_INI_ALL in filter &lt;= 0.9.4. Disponibil începând cu PHP 5.2.0.</entry>
       </row>
       <row>
-       <entry>filter.default_flags</entry>
+       <entry><link linkend="ini.filter.default-flags">filter.default_flags</link></entry>
        <entry>NULL</entry>
-       <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>PHP_INI_PERDIR</entry>
+       <entry>PHP_INI_ALL in filter &lt;= 0.9.4. Disponibil începând cu PHP 5.2.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.from">from</link></entry>
@@ -706,13 +916,37 @@
        <entry><link linkend="ini.image.jpeg-ignore-warning">gd.jpeg_ignore_warning</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 5.1.4.</entry>
+       <entry>Disponibil începând cu PHP 5.1.3.</entry>
+      </row>
+      <row>
+       <entry>geoip.custom_directory</entry>
+       <entry>NULL</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu geoip 1.0.1.</entry>
+      </row>
+      <row>
+       <entry>geoip.database_standard</entry>
+       <entry>"GeoIP.dat"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Eliminat în geoip 1.0.1.</entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.gpc-order">gpc_order</link></entry>
+       <entry>"GPC"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Eliminat în PHP 5.0.0.</entry>
+      </row>
+      <row>
+       <entry>hidef.ini_path</entry>
+       <entry>(char*)default_ini_path</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry></entry>
       </row>
       <row>
        <entry><link linkend="ini.syntax-highlighting">highlight.bg</link></entry>
        <entry>"#FFFFFF"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Eliminat în PHP 6.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.syntax-highlighting">highlight.comment</link></entry>
@@ -751,88 +985,232 @@
        <entry>PHP_INI_SYSTEM în PHP &lt;= 4.2.3. Disponibil începând cu PHP 4.0.2.</entry>
       </row>
       <row>
+       <entry>htscanner.config_file</entry>
+       <entry>".htaccess"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>htscanner.default_docroot</entry>
+       <entry>"/"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>htscanner.default_ttl</entry>
+       <entry>"300"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu htscanner 0.6.0.</entry>
+      </row>
+      <row>
+       <entry>htscanner.stop_on_error</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu htscanner 0.7.0.</entry>
+      </row>
+      <row>
        <entry>http.allowed_methods</entry>
        <entry>""</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu pecl_http 0.4.0. Eliminat în pecl_http 1.0.0.</entry>
       </row>
       <row>
        <entry>http.allowed_methods_log</entry>
        <entry>""</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu pecl_http 0.12.0. Eliminat în pecl_http 1.0.0.</entry>
       </row>
       <row>
        <entry>http.cache_log</entry>
        <entry>""</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu pecl_http 0.8.0. Eliminat în pecl_http 1.0.0.</entry>
       </row>
       <row>
        <entry>http.composite_log</entry>
        <entry>""</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu pecl_http 0.12.0. Eliminat în pecl_http 1.0.0.</entry>
+      </row>
+      <row>
+       <entry>http.etag.mode</entry>
+       <entry>"MD5"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu pecl_http 1.0.0.</entry>
       </row>
       <row>
        <entry>http.etag_mode</entry>
        <entry>"MD5"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu pecl_http 0.12.0. Eliminat în pecl_http 1.0.0.</entry>
       </row>
       <row>
        <entry>http.force_exit</entry>
        <entry>"1"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu pecl_http 0.18.0.</entry>
+      </row>
+      <row>
+       <entry>http.log.allowed_methods</entry>
+       <entry>""</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu pecl_http 1.0.0.</entry>
+      </row>
+      <row>
+       <entry>http.log.cache</entry>
+       <entry>""</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu pecl_http 1.0.0.</entry>
+      </row>
+      <row>
+       <entry>http.log.composite</entry>
+       <entry>""</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu pecl_http 1.0.0.</entry>
+      </row>
+      <row>
+       <entry>http.log.not_found</entry>
+       <entry>""</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu pecl_http 1.0.0.</entry>
+      </row>
+      <row>
+       <entry>http.log.redirect</entry>
+       <entry>""</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu pecl_http 1.0.0.</entry>
       </row>
       <row>
        <entry>http.ob_deflate_auto</entry>
        <entry>"0"</entry>
        <entry>PHP_INI_PERDIR</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu pecl_http 0.21.0. Eliminat în pecl_http 1.0.0.</entry>
       </row>
       <row>
        <entry>http.ob_deflate_flags</entry>
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu pecl_http 0.21.0. Eliminat în pecl_http 1.0.0.</entry>
       </row>
       <row>
        <entry>http.ob_inflate_auto</entry>
        <entry>"0"</entry>
        <entry>PHP_INI_PERDIR</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu pecl_http 0.21.0. Eliminat în pecl_http 1.0.0.</entry>
       </row>
       <row>
        <entry>http.ob_inflate_flags</entry>
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu pecl_http 0.21.0. Eliminat în pecl_http 1.0.0.</entry>
       </row>
       <row>
        <entry>http.only_exceptions</entry>
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu pecl_http 0.11.0.</entry>
+      </row>
+      <row>
+       <entry>http.persistent.handles.ident</entry>
+       <entry>"GLOBAL"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu pecl_http 1.5.0.</entry>
+      </row>
+      <row>
+       <entry>http.persistent.handles.limit</entry>
+       <entry>"-1"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu pecl_http 1.5.0.</entry>
       </row>
       <row>
        <entry>http.redirect_log</entry>
        <entry>""</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu pecl_http 0.12.0. Eliminat în pecl_http 1.0.0.</entry>
+      </row>
+      <row>
+       <entry>http.request.datashare.connect</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu pecl_http 1.3.0.</entry>
+      </row>
+      <row>
+       <entry>http.request.datashare.cookie</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu pecl_http 1.3.0.</entry>
+      </row>
+      <row>
+       <entry>http.request.datashare.dns</entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu pecl_http 1.3.0.</entry>
+      </row>
+      <row>
+       <entry>http.request.datashare.ssl</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu pecl_http 1.3.0.</entry>
+      </row>
+      <row>
+       <entry>http.request.methods.allowed</entry>
+       <entry>""</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu pecl_http 1.0.0.</entry>
+      </row>
+      <row>
+       <entry>http.request.methods.custom</entry>
+       <entry>""</entry>
+       <entry>PHP_INI_PERDIR</entry>
+       <entry>Disponibil începând cu pecl_http 1.0.0.</entry>
+      </row>
+      <row>
+       <entry>http.send.deflate.start_auto</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_PERDIR</entry>
+       <entry>Disponibil începând cu pecl_http 1.0.0.</entry>
+      </row>
+      <row>
+       <entry>http.send.deflate.start_flags</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu pecl_http 1.0.0.</entry>
+      </row>
+      <row>
+       <entry>http.send.inflate.start_auto</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_PERDIR</entry>
+       <entry>Disponibil începând cu pecl_http 1.0.0.</entry>
+      </row>
+      <row>
+       <entry>http.send.inflate.start_flags</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu pecl_http 1.0.0.</entry>
+      </row>
+      <row>
+       <entry>http.send.not_found_404</entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu pecl_http 1.0.0.</entry>
+      </row>
+      <row>
+       <entry>hyerwave.allow_persistent</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Eliminat în PHP 4.3.2.</entry>
       </row>
       <row>
        <entry>hyperwave.allow_persistent</entry>
        <entry>"0"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry>Disponibil începând cu PHP 4.3.2.</entry>
+       <entry>Disponibil începând cu PHP 4.3.2. Eliminat în PHP 5.0.0.</entry>
       </row>
       <row>
        <entry>hyperwave.default_port</entry>
        <entry>"418"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Eliminat în PHP 5.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.ibase.allow-persistent">ibase.allow_persistent</link></entry>
@@ -901,10 +1279,22 @@
        <entry></entry>
       </row>
       <row>
+       <entry><link linkend="ini.ibm-db2.i5-allow-commit">ibm_db2.i5_allow_commit</link></entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu ibm_db2 1.4.9.</entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.ibm-db2.i5-dbcs-alloc">ibm_db2.i5_dbcs_alloc</link></entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu ibm_db2 1.5.0.</entry>
+      </row>
+      <row>
        <entry><link linkend="ini.ibm-db2.instance-name">ibm_db2.instance_name</link></entry>
        <entry>NULL</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu ibm_db2 1.0.2.</entry>
       </row>
       <row>
        <entry>iconv.input_encoding</entry>
@@ -928,67 +1318,67 @@
        <entry><link linkend="ini.ifx.allow-persistent">ifx.allow_persistent</link></entry>
        <entry>"1"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry></entry>
+       <entry>Eliminat în PHP 5.2.1.</entry>
       </row>
       <row>
        <entry><link linkend="ini.ifx.blobinfile">ifx.blobinfile</link></entry>
        <entry>"1"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Eliminat în PHP 5.2.1.</entry>
       </row>
       <row>
        <entry><link linkend="ini.ifx.byteasvarchar">ifx.byteasvarchar</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Eliminat în PHP 5.2.1.</entry>
       </row>
       <row>
        <entry><link linkend="ini.ifx.charasvarchar">ifx.charasvarchar</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Eliminat în PHP 5.2.1.</entry>
       </row>
       <row>
        <entry><link linkend="ini.ifx.default-host">ifx.default_host</link></entry>
        <entry>NULL</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry></entry>
+       <entry>Eliminat în PHP 5.2.1.</entry>
       </row>
       <row>
        <entry><link linkend="ini.ifx.default-password">ifx.default_password</link></entry>
        <entry>NULL</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry></entry>
+       <entry>Eliminat în PHP 5.2.1.</entry>
       </row>
       <row>
        <entry><link linkend="ini.ifx.default-user">ifx.default_user</link></entry>
        <entry>NULL</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry></entry>
+       <entry>Eliminat în PHP 5.2.1.</entry>
       </row>
       <row>
        <entry><link linkend="ini.ifx.max-links">ifx.max_links</link></entry>
        <entry>"-1"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry></entry>
+       <entry>Eliminat în PHP 5.2.1.</entry>
       </row>
       <row>
        <entry><link linkend="ini.ifx.max-persistent">ifx.max_persistent</link></entry>
        <entry>"-1"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry></entry>
+       <entry>Eliminat în PHP 5.2.1.</entry>
       </row>
       <row>
        <entry><link linkend="ini.ifx.nullformat">ifx.nullformat</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Eliminat în PHP 5.2.1.</entry>
       </row>
       <row>
        <entry><link linkend="ini.ifx.textasvarchar">ifx.textasvarchar</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Eliminat în PHP 5.2.1.</entry>
       </row>
       <row>
        <entry><link linkend="ini.ignore-repeated-errors">ignore_repeated_errors</link></entry>
@@ -1009,6 +1399,18 @@
        <entry></entry>
       </row>
       <row>
+       <entry>imlib2.font_cache_max_size</entry>
+       <entry>"524288"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>imlib2.font_path</entry>
+       <entry>"/usr/share/php/fonts/"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
        <entry><link linkend="ini.implicit-flush">implicit_flush</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
@@ -1016,7 +1418,7 @@
       </row>
       <row>
        <entry><link linkend="ini.include-path">include_path</link></entry>
-       <entry>".;/path/to/php/pear"</entry>
+       <entry>".;/calea/spre/php/pear"</entry>
        <entry>PHP_INI_ALL</entry>
        <entry></entry>
       </row>
@@ -1024,97 +1426,103 @@
        <entry>ingres.allow_persistent</entry>
        <entry>"1"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry>Disponibil începând cu PHP 4.0.2.</entry>
+       <entry>Disponibil începând cu PHP 4.0.2. Eliminat în PHP 5.1.0.</entry>
+      </row>
+      <row>
+       <entry>ingres.array_index_start</entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu ingres 1.4.0.</entry>
       </row>
       <row>
        <entry>ingres.blob_segment_length</entry>
        <entry>"4096"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu ingres 1.2.0.</entry>
       </row>
       <row>
        <entry>ingres.cursor_mode</entry>
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu ingres 1.1.</entry>
       </row>
       <row>
        <entry>ingres.default_database</entry>
        <entry>NULL</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 4.0.2.</entry>
+       <entry>Disponibil începând cu PHP 4.0.2. Eliminat în PHP 5.1.0.</entry>
       </row>
       <row>
        <entry>ingres.default_password</entry>
        <entry>NULL</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 4.0.2.</entry>
+       <entry>Disponibil începând cu PHP 4.0.2. Eliminat în PHP 5.1.0.</entry>
       </row>
       <row>
        <entry>ingres.default_user</entry>
        <entry>NULL</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 4.0.2.</entry>
+       <entry>Disponibil începând cu PHP 4.0.2. Eliminat în PHP 5.1.0.</entry>
       </row>
       <row>
        <entry>ingres.max_links</entry>
        <entry>"-1"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry>Disponibil începând cu PHP 4.0.2.</entry>
+       <entry>Disponibil începând cu PHP 4.0.2. Eliminat în PHP 5.1.0.</entry>
       </row>
       <row>
        <entry>ingres.max_persistent</entry>
        <entry>"-1"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry>Disponibil începând cu PHP 4.0.2.</entry>
+       <entry>Disponibil începând cu PHP 4.0.2. Eliminat în PHP 5.1.0.</entry>
       </row>
       <row>
        <entry>ingres.report_db_warnings</entry>
        <entry>"1"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu ingres 1.1.</entry>
       </row>
       <row>
        <entry>ingres.timeout</entry>
        <entry>"-1"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu ingres 1.4.0.</entry>
       </row>
       <row>
        <entry>ingres.trace_connect</entry>
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu ingres 1.2.1.</entry>
       </row>
       <row>
        <entry>ircg.control_user</entry>
        <entry>"nobody"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 5.0.0.</entry>
+       <entry>Disponibil începând cu PHP 5.0.0. Eliminat în PHP 5.1.0.</entry>
       </row>
       <row>
        <entry>ircg.keep_alive_interval</entry>
        <entry>"60"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 5.0.0.</entry>
+       <entry>Disponibil începând cu PHP 5.0.0. Eliminat în PHP 5.1.0.</entry>
       </row>
       <row>
        <entry>ircg.max_format_message_sets</entry>
        <entry>"12"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 5.0.0.</entry>
+       <entry>Disponibil începând cu PHP 5.0.0. Eliminat în PHP 5.1.0.</entry>
       </row>
       <row>
        <entry>ircg.shared_mem_size</entry>
        <entry>"6000000"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 5.0.0.</entry>
+       <entry>Disponibil începând cu PHP 5.0.0. Eliminat în PHP 5.1.0.</entry>
       </row>
       <row>
        <entry>ircg.work_dir</entry>
        <entry>"/tmp/ircg"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 5.0.0.</entry>
+       <entry>Disponibil începând cu PHP 5.0.0. Eliminat în PHP 5.1.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.last-modified">last_modified</link></entry>
@@ -1123,10 +1531,22 @@
        <entry>Disponibil începând cu PHP 4.0.5.</entry>
       </row>
       <row>
+       <entry>ldap.base_dn</entry>
+       <entry>NULL</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Eliminat în PHP 4.2.0.</entry>
+      </row>
+      <row>
        <entry>ldap.max_links</entry>
        <entry>"-1"</entry>
        <entry>PHP_INI_SYSTEM</entry>
        <entry></entry>
+      </row>
+      <row>
+       <entry>log.dbm_dir</entry>
+       <entry>""</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Eliminat în PHP 4.0.1.</entry>
       </row>
       <row>
        <entry><link linkend="ini.log-errors">log_errors</link></entry>
@@ -1144,31 +1564,31 @@
        <entry><link linkend="ini.magic-quotes-gpc">magic_quotes_gpc</link></entry>
        <entry>"1"</entry>
        <entry>PHP_INI_PERDIR</entry>
-       <entry>PHP_INI_ALL în PHP &lt;= 4.2.3.</entry>
+       <entry>PHP_INI_ALL în PHP &lt;= 4.2.3. Eliminat în PHP 6.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.magic-quotes-runtime">magic_quotes_runtime</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Eliminat în PHP 6.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.magic-quotes-sybase">magic_quotes_sybase</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Eliminat în PHP 6.0.0.</entry>
       </row>
       <row>
        <entry>mail.force_extra_parameters</entry>
        <entry>NULL</entry>
-       <entry>PHP_INI_PERDIR</entry>
+       <entry>numai în &php.ini;</entry>
        <entry>Disponibil începând cu PHP 5.0.0.</entry>
       </row>
       <row>
        <entry>mailparse.def_charset</entry>
        <entry>"us-ascii"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 4.1.0.</entry>
+       <entry>Disponibil începând cu PHP 4.1.0. Eliminat în PHP 4.2.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.maxdb.default-db">maxdb.default_db</link></entry>
@@ -1207,16 +1627,16 @@
        <entry></entry>
       </row>
       <row>
+       <entry><link linkend="ini.max-input-nesting-level">max_input_nesting_level</link></entry>
+       <entry>"64"</entry>
+       <entry>PHP_INI_PERDIR</entry>
+       <entry>Disponibil începând cu PHP 4.4.8. Eliminat în PHP 5.0.0.</entry>
+      </row>
+      <row>
        <entry><link linkend="ini.max-input-time">max_input_time</link></entry>
        <entry>"-1"</entry>
        <entry>PHP_INI_PERDIR</entry>
        <entry>Disponibil începând cu PHP 4.3.0.</entry>
-      </row>
-      <row>
-       <entry><link linkend="ini.max-input-nesting-level">max_input_nesting_level</link></entry>
-       <entry>"64"</entry>
-       <entry>PHP_INI_SYSTEM|PHP_INI_PERDIR</entry>
-       <entry>Disponibil începând cu PHP 5.2.2.</entry>
       </row>
       <row>
        <entry><link linkend="ini.mbstring.detect-order">mbstring.detect_order</link></entry>
@@ -1267,7 +1687,7 @@
        <entry>Disponibil începând cu PHP 4.3.0.</entry>
       </row>
       <row>
-       <entry>mbstring.strict_detection</entry>
+       <entry><link linkend="ini.mbstring.strict-detection">mbstring.strict_detection</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
        <entry>Disponibil începând cu PHP 5.1.2.</entry>
@@ -1291,6 +1711,42 @@
        <entry>Disponibil începând cu PHP 4.0.2.</entry>
       </row>
       <row>
+       <entry><link linkend="ini.memcache.allow-failover">memcache.allow_failover</link></entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu memcache 2.0.2.</entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.memcache.chunk-size">memcache.chunk_size</link></entry>
+       <entry>"8192"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu memcache 2.0.2.</entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.memcache.default-port">memcache.default_port</link></entry>
+       <entry>"11211"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu memcache 2.0.2.</entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.memcache.hash-function">memcache.hash_function</link></entry>
+       <entry>"crc32"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu memcache 2.2.0.</entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.memcache.hash-strategy">memcache.hash_strategy</link></entry>
+       <entry>"standard"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu memcache 2.2.0.</entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.memcache.max-failover-attempts">memcache.max_failover_attempts</link></entry>
+       <entry>"20"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu memcache 2.1.0.</entry>
+      </row>
+      <row>
        <entry><link linkend="ini.memory-limit">memory_limit</link></entry>
        <entry>"128M"</entry>
        <entry>PHP_INI_ALL</entry>
@@ -1304,7 +1760,7 @@
       </row>
       <row>
        <entry><link linkend="ini.mime-magic.magicfile">mime_magic.magicfile</link></entry>
-       <entry>"/path/to/php/magic.mime"</entry>
+       <entry>"/calea/spre/php/magic.mime"</entry>
        <entry>PHP_INI_SYSTEM</entry>
        <entry>Disponibil începând cu PHP 4.3.0.</entry>
       </row>
@@ -1417,10 +1873,22 @@
        <entry>Disponibil începând cu PHP 4.1.0.</entry>
       </row>
       <row>
+       <entry>mysql.allow_local_infile</entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu PHP 6.0.0.</entry>
+      </row>
+      <row>
        <entry><link linkend="ini.mysql.allow-persistent">mysql.allow_persistent</link></entry>
        <entry>"1"</entry>
        <entry>PHP_INI_SYSTEM</entry>
        <entry></entry>
+      </row>
+      <row>
+       <entry>mysql.cache_size</entry>
+       <entry>"2000"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu PHP 6.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.mysql.connect-timeout">mysql.connect_timeout</link></entry>
@@ -1477,6 +1945,18 @@
        <entry>Disponibil începând cu PHP 4.3.0.</entry>
       </row>
       <row>
+       <entry>mysqli.allow_local_infile</entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu PHP 6.0.0.</entry>
+      </row>
+      <row>
+       <entry>mysqli.cache_size</entry>
+       <entry>"2000"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu PHP 6.0.0.</entry>
+      </row>
+      <row>
        <entry><link linkend="ini.mysqli.default-host">mysqli.default_host</link></entry>
        <entry>NULL</entry>
        <entry>PHP_INI_ALL</entry>
@@ -1517,6 +1997,12 @@
        <entry>"0"</entry>
        <entry>PHP_INI_SYSTEM</entry>
        <entry>Disponibil începând cu PHP 5.0.0.</entry>
+      </row>
+      <row>
+       <entry>mysqlnd.collect_statistics</entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu PHP 6.0.0.</entry>
       </row>
       <row>
        <entry>namazu.debugmode</entry>
@@ -1651,6 +2137,42 @@
        <entry></entry>
       </row>
       <row>
+       <entry>odbtp.datetime_format</entry>
+       <entry>"object"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>odbtp.detach_default_queries</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>odbtp.guid_format</entry>
+       <entry>"string"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu odbtp 1.1.3.</entry>
+      </row>
+      <row>
+       <entry>odbtp.interface_file</entry>
+       <entry>"/usr/local/share/odbtp.conf"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>odbtp.truncation_errors</entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>opendirectory.default_separator</entry>
+       <entry>"/"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Eliminat în opendirectory 0.2.2.</entry>
+      </row>
+      <row>
        <entry>opendirectory.max_refs</entry>
        <entry>"-1"</entry>
        <entry>PHP_INI_ALL</entry>
@@ -1660,31 +2182,31 @@
        <entry>opendirectory.separator</entry>
        <entry>"/"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu opendirectory 0.2.2.</entry>
       </row>
       <row>
        <entry><link linkend="ini.open-basedir">open_basedir</link></entry>
        <entry>NULL</entry>
-       <entry>PHP_INI_SYSTEM</entry>
-       <entry></entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>PHP_INI_SYSTEM în PHP &lt; 6.</entry>
       </row>
       <row>
        <entry>oracle.allow_persistent</entry>
        <entry>"-1"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Eliminat în PHP 5.1.0.</entry>
       </row>
       <row>
        <entry>oracle.max_links</entry>
        <entry>"-1"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Eliminat în PHP 5.1.0.</entry>
       </row>
       <row>
        <entry>oracle.max_persistent</entry>
        <entry>"-1"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Eliminat în PHP 5.1.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.output-buffering">output_buffering</link></entry>
@@ -1697,6 +2219,12 @@
        <entry>NULL</entry>
        <entry>PHP_INI_PERDIR</entry>
        <entry>Disponibil începând cu PHP 4.0.4.</entry>
+      </row>
+      <row>
+       <entry>pam.servicename</entry>
+       <entry>"php"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
       </row>
       <row>
        <entry><link linkend="ini.pcre.backtrack-limit">pcre.backtrack_limit</link></entry>
@@ -1718,51 +2246,51 @@
       </row>
       <row>
        <entry><link linkend="ini.pdo-odbc.db2-instance-name">pdo_odbc.db2_instance_name</link></entry>
-       <entry>&null;</entry>
+       <entry>NULL</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu PHP 5.1.1. Eliminat în PHP 6.0.0.</entry>
       </row>
       <row>
        <entry>pfpro.defaulthost</entry>
        <entry>"test-payflow.verisign.com"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 4.0.2.</entry>
+       <entry>Disponibil începând cu PHP 4.0.2. Eliminat în PHP 5.1.0.</entry>
       </row>
       <row>
        <entry>pfpro.defaultport</entry>
        <entry>"443"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 4.0.2.</entry>
+       <entry>Disponibil începând cu PHP 4.0.2. Eliminat în PHP 5.1.0.</entry>
       </row>
       <row>
        <entry>pfpro.defaulttimeout</entry>
        <entry>"30"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 4.0.2.</entry>
+       <entry>Disponibil începând cu PHP 4.0.2. Eliminat în PHP 5.1.0.</entry>
       </row>
       <row>
        <entry>pfpro.proxyaddress</entry>
        <entry>""</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 4.0.2.</entry>
+       <entry>Disponibil începând cu PHP 4.0.2. Eliminat în PHP 5.1.0.</entry>
       </row>
       <row>
        <entry>pfpro.proxylogon</entry>
        <entry>""</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 4.0.2.</entry>
+       <entry>Disponibil începând cu PHP 4.0.2. Eliminat în PHP 5.1.0.</entry>
       </row>
       <row>
        <entry>pfpro.proxypassword</entry>
        <entry>""</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 4.0.2.</entry>
+       <entry>Disponibil începând cu PHP 4.0.2. Eliminat în PHP 5.1.0.</entry>
       </row>
       <row>
        <entry>pfpro.proxyport</entry>
        <entry>""</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 4.0.2.</entry>
+       <entry>Disponibil începând cu PHP 4.0.2. Eliminat în PHP 5.1.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.pgsql.allow-persistent">pgsql.allow_persistent</link></entry>
@@ -1801,6 +2329,24 @@
        <entry></entry>
       </row>
       <row>
+       <entry><link linkend="ini.phar.extract-list">phar.extract_list</link></entry>
+       <entry>""</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu phar 1.1.0.</entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.phar.readonly">phar.readonly</link></entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.phar.require-hash">phar.require_hash</link></entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
        <entry><link linkend="ini.post-max-size">post_max_size</link></entry>
        <entry>"8M"</entry>
        <entry>PHP_INI_PERDIR</entry>
@@ -1816,16 +2362,28 @@
        <entry>printer.default_printer</entry>
        <entry>""</entry>
        <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu PHP 4.0.6. Eliminat în PHP 4.1.1.</entry>
+      </row>
+      <row>
+       <entry>python.append_path</entry>
+       <entry>""</entry>
+       <entry>PHP_INI_ALL</entry>
        <entry></entry>
       </row>
       <row>
-       <entry>realpath_cache_size</entry>
+       <entry>python.prepend_path</entry>
+       <entry>"."</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.realpath-cache-size">realpath_cache_size</link></entry>
        <entry>"16K"</entry>
        <entry>PHP_INI_SYSTEM</entry>
        <entry>Disponibil începând cu PHP 5.1.0.</entry>
       </row>
       <row>
-       <entry>realpath_cache_ttl</entry>
+       <entry><link linkend="ini.realpath-cache-ttl">realpath_cache_ttl</link></entry>
        <entry>"120"</entry>
        <entry>PHP_INI_SYSTEM</entry>
        <entry>Disponibil începând cu PHP 5.1.0.</entry>
@@ -1840,13 +2398,13 @@
        <entry><link linkend="ini.register-globals">register_globals</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_PERDIR</entry>
-       <entry>PHP_INI_ALL în PHP &lt;= 4.2.3.</entry>
+       <entry>PHP_INI_ALL în PHP &lt;= 4.2.3. Eliminat în PHP 6.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.register-long-arrays">register_long_arrays</link></entry>
        <entry>"1"</entry>
        <entry>PHP_INI_PERDIR</entry>
-       <entry>Disponibil începând cu PHP 5.0.0.</entry>
+       <entry>Disponibil începând cu PHP 5.0.0. Eliminat în PHP 6.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.report-memleaks">report_memleaks</link></entry>
@@ -1876,37 +2434,37 @@
        <entry><link linkend="ini.safe-mode">safe_mode</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry></entry>
+       <entry>Eliminat în PHP 6.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.safe-mode-allowed-env-vars">safe_mode_allowed_env_vars</link></entry>
        <entry>"PHP_"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry></entry>
+       <entry>Eliminat în PHP 6.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.safe-mode-exec-dir">safe_mode_exec_dir</link></entry>
        <entry>""</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry></entry>
+       <entry>Eliminat în PHP 6.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.safe-mode-gid">safe_mode_gid</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry>Disponibil începând cu PHP 4.1.0.</entry>
+       <entry>Disponibil începând cu PHP 4.1.0. Eliminat în PHP 6.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.safe-mode-include-dir">safe_mode_include_dir</link></entry>
        <entry>NULL</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry>Disponibil începând cu PHP 4.1.0.</entry>
+       <entry>Disponibil începând cu PHP 4.1.0. Eliminat în PHP 6.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.safe-mode-protected-env-vars">safe_mode_protected_env_vars</link></entry>
        <entry>"LD_LIBRARY_PATH"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry></entry>
+       <entry>Eliminat în PHP 6.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.sendmail-from">sendmail_from</link></entry>
@@ -1916,7 +2474,7 @@
       </row>
       <row>
        <entry><link linkend="ini.sendmail-path">sendmail_path</link></entry>
-       <entry>NULL</entry>
+       <entry>"/usr/sbin/sendmail -t -i"</entry>
        <entry>PHP_INI_SYSTEM</entry>
        <entry></entry>
       </row>
@@ -1936,13 +2494,13 @@
        <entry><link linkend="ini.session.bug-compat-42">session.bug_compat_42</link></entry>
        <entry>"1"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 4.3.0.</entry>
+       <entry>Disponibil începând cu PHP 4.3.0. Eliminat în PHP 6.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.session.bug-compat-warn">session.bug_compat_warn</link></entry>
        <entry>"1"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 4.3.0.</entry>
+       <entry>Disponibil începând cu PHP 4.3.0. Eliminat în PHP 6.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.session.cache-expire">session.cache_expire</link></entry>
@@ -1964,7 +2522,7 @@
       </row>
       <row>
        <entry><link linkend="ini.session.cookie-httponly">session.cookie_httponly</link></entry>
-       <entry>NULL</entry>
+       <entry>""</entry>
        <entry>PHP_INI_ALL</entry>
        <entry>Disponibil începând cu PHP 5.2.0.</entry>
       </row>
@@ -1997,6 +2555,12 @@
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
        <entry></entry>
+      </row>
+      <row>
+       <entry>session.gc_dividend</entry>
+       <entry>"100"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu PHP 4.3.0. Eliminat în PHP 4.3.2.</entry>
       </row>
       <row>
        <entry><link linkend="ini.session.gc-divisor">session.gc_divisor</link></entry>
@@ -2203,6 +2767,12 @@
        <entry>Disponibil începând cu PHP 4.3.0.</entry>
       </row>
       <row>
+       <entry>soap.wsdl_cache</entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu PHP 5.1.5.</entry>
+      </row>
+      <row>
        <entry><link linkend="ini.soap.wsdl-cache-dir">soap.wsdl_cache_dir</link></entry>
        <entry>"/tmp"</entry>
        <entry>PHP_INI_ALL</entry>
@@ -2215,16 +2785,16 @@
        <entry>Disponibil începând cu PHP 5.0.0.</entry>
       </row>
       <row>
+       <entry><link linkend="ini.soap.wsdl-cache-limit">soap.wsdl_cache_limit</link></entry>
+       <entry>"5"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu PHP 5.1.5.</entry>
+      </row>
+      <row>
        <entry><link linkend="ini.soap.wsdl-cache-ttl">soap.wsdl_cache_ttl</link></entry>
        <entry>"86400"</entry>
        <entry>PHP_INI_ALL</entry>
        <entry>Disponibil începând cu PHP 5.0.0.</entry>
-      </row>
-      <row>
-       <entry><link linkend="ini.soap.wsdl-cache-limit">soap.wsdl_cache_limit</link></entry>
-       <entry>"5"</entry>
-       <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 5.1.4.</entry>
       </row>
       <row>
        <entry><link linkend="ini.sql.safe-mode">sql.safe_mode</link></entry>
@@ -2239,6 +2809,12 @@
        <entry>Disponibil începând cu PHP 5.0.0.</entry>
       </row>
       <row>
+       <entry>sqlite.iso8859.locale</entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu PHP 6.0.0.</entry>
+      </row>
+      <row>
        <entry><link linkend="ini.sybase.allow-persistent">sybase.allow_persistent</link></entry>
        <entry>"1"</entry>
        <entry>PHP_INI_ALL</entry>
@@ -2251,10 +2827,22 @@
        <entry></entry>
       </row>
       <row>
+       <entry>sybase.hostname</entry>
+       <entry>NULL</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Eliminat în PHP 4.0.2.</entry>
+      </row>
+      <row>
        <entry>sybase.interface_file</entry>
        <entry>""</entry>
        <entry>PHP_INI_ALL</entry>
        <entry></entry>
+      </row>
+      <row>
+       <entry>sybase.login_timeout</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Eliminat în PHP 4.0.2.</entry>
       </row>
       <row>
        <entry><link linkend="ini.sybase.max-links">sybase.max_links</link></entry>
@@ -2269,6 +2857,12 @@
        <entry>PHP_INI_ALL în PHP &lt;= 4.0.2. PHP_INI_SYSTEM în PHP &lt;= 4.0.3.</entry>
       </row>
       <row>
+       <entry>sybase.min_client_severity</entry>
+       <entry>"10"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Eliminat în PHP 4.0.2.</entry>
+      </row>
+      <row>
        <entry><link linkend="ini.sybase.min-error-severity">sybase.min_error_severity</link></entry>
        <entry>"10"</entry>
        <entry>PHP_INI_ALL</entry>
@@ -2281,10 +2875,22 @@
        <entry></entry>
       </row>
       <row>
+       <entry>sybase.min_server_severity</entry>
+       <entry>"10"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Eliminat în PHP 4.0.2.</entry>
+      </row>
+      <row>
+       <entry>sybase.timeout</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Eliminat în PHP 4.0.2.</entry>
+      </row>
+      <row>
        <entry><link linkend="ini.sybct.allow-persistent">sybct.allow_persistent</link></entry>
        <entry>"1"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry>PHP_INI_ALL în PHP &lt;= 4.0.2. Disponibil începând cu PHP 4.0.2.</entry>
+       <entry>PHP_INI_ALL în PHP &lt;= 4.0.2. Disponibil începând cu PHP 4.0.2. Eliminat în PHP 4.0.3.</entry>
       </row>
       <row>
        <entry><link linkend="ini.sybct.deadlock-retry-count">sybct.deadlock_retry_count</link></entry>
@@ -2296,7 +2902,7 @@
        <entry><link linkend="ini.sybct.hostname">sybct.hostname</link></entry>
        <entry>NULL</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 4.0.2.</entry>
+       <entry>Disponibil începând cu PHP 4.0.2. Eliminat în PHP 4.0.3.</entry>
       </row>
       <row>
        <entry><link linkend="ini.sybct.login-timeout">sybct.login_timeout</link></entry>
@@ -2308,25 +2914,25 @@
        <entry><link linkend="ini.sybct.max-links">sybct.max_links</link></entry>
        <entry>"-1"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry>PHP_INI_ALL în PHP &lt;= 4.0.2. Disponibil începând cu PHP 4.0.2.</entry>
+       <entry>PHP_INI_ALL în PHP &lt;= 4.0.2. Disponibil începând cu PHP 4.0.2. Eliminat în PHP 4.0.3.</entry>
       </row>
       <row>
        <entry><link linkend="ini.sybct.max-persistent">sybct.max_persistent</link></entry>
        <entry>"-1"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry>PHP_INI_ALL în PHP &lt;= 4.0.2. Disponibil începând cu PHP 4.0.2.</entry>
+       <entry>PHP_INI_ALL în PHP &lt;= 4.0.2. Disponibil începând cu PHP 4.0.2. Eliminat în PHP 4.0.3.</entry>
       </row>
       <row>
        <entry><link linkend="ini.sybct.min-client-severity">sybct.min_client_severity</link></entry>
        <entry>"10"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 4.0.2.</entry>
+       <entry>Disponibil începând cu PHP 4.0.2. Eliminat în PHP 4.0.3.</entry>
       </row>
       <row>
        <entry><link linkend="ini.sybct.min-server-severity">sybct.min_server_severity</link></entry>
        <entry>"10"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 4.0.2.</entry>
+       <entry>Disponibil începând cu PHP 4.0.2. Eliminat în PHP 4.0.3.</entry>
       </row>
       <row>
        <entry>sybct.packet_size</entry>
@@ -2349,8 +2955,8 @@
       <row>
        <entry><link linkend="ini.tidy.clean-output">tidy.clean_output</link></entry>
        <entry>"0"</entry>
-       <entry>PHP_INI_PERDIR</entry>
-       <entry>Disponibil începând cu PHP 5.0.0.</entry>
+       <entry>PHP_INI_USER</entry>
+       <entry>PHP_INI_PERDIR în PHP 5. Disponibil începând cu PHP 5.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.tidy.default-config">tidy.default_config</link></entry>
@@ -2365,20 +2971,20 @@
        <entry></entry>
       </row>
       <row>
+       <entry><link linkend="ini.track-vars">track_vars</link></entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Eliminat în PHP 4.0.3.</entry>
+      </row>
+      <row>
        <entry>unicode.fallback_encoding</entry>
        <entry>NULL</entry>
        <entry>PHP_INI_ALL</entry>
        <entry>Disponibil începând cu PHP 6.0.0.</entry>
       </row>
       <row>
-       <entry>unicode.from_error_mode</entry>
-       <entry>"2"</entry>
-       <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 6.0.0.</entry>
-      </row>
-      <row>
-       <entry>unicode.from_error_subst_char</entry>
-       <entry>"3f"</entry>
+       <entry>unicode.filesystem_encoding</entry>
+       <entry>NULL</entry>
        <entry>PHP_INI_ALL</entry>
        <entry>Disponibil începând cu PHP 6.0.0.</entry>
       </row>
@@ -2408,8 +3014,14 @@
       </row>
       <row>
        <entry>unicode.semantics</entry>
-       <entry>"off"</entry>
+       <entry>"0"</entry>
        <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu PHP 6.0.0.</entry>
+      </row>
+      <row>
+       <entry>unicode.stream_encoding</entry>
+       <entry>"UTF-8"</entry>
+       <entry>PHP_INI_ALL</entry>
        <entry>Disponibil începând cu PHP 6.0.0.</entry>
       </row>
       <row>
@@ -2417,6 +3029,12 @@
        <entry>NULL</entry>
        <entry>PHP_INI_ALL</entry>
        <entry>Disponibil începând cu PHP 4.2.0.</entry>
+      </row>
+      <row>
+       <entry>uploadprogress.file.filename_template</entry>
+       <entry>"/tmp/upt_%s.txt"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
       </row>
       <row>
        <entry><link linkend="ini.upload-max-filesize">upload_max_filesize</link></entry>
@@ -2449,6 +3067,18 @@
        <entry></entry>
       </row>
       <row>
+       <entry>user_ini.cache_ttl</entry>
+       <entry>"300"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu PHP 5.3.0.</entry>
+      </row>
+      <row>
+       <entry>user_ini.filename</entry>
+       <entry>".user.ini"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu PHP 5.3.0.</entry>
+      </row>
+      <row>
        <entry>valkyrie.auto_validate</entry>
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
@@ -2467,10 +3097,324 @@
        <entry>PHP_INI_ALL în PHP &lt;= 5.0.5.</entry>
       </row>
       <row>
+       <entry>velocis.max_links</entry>
+       <entry>"-1"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Eliminat în PHP 4.2.0.</entry>
+      </row>
+      <row>
+       <entry>vld.active</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>vld.execute</entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu vld 0.8.0.</entry>
+      </row>
+      <row>
+       <entry>vld.skip_append</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu vld 0.8.0.</entry>
+      </row>
+      <row>
+       <entry>vld.skip_prepend</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu vld 0.8.0.</entry>
+      </row>
+      <row>
        <entry><link linkend="ini.xbithack">xbithack</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
        <entry>Disponibil începând cu PHP 4.0.5.</entry>
+      </row>
+      <row>
+       <entry>xdebug.auto_profile</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Eliminat în Xdebug 2.0.0.</entry>
+      </row>
+      <row>
+       <entry>xdebug.auto_profile_mode</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Eliminat în Xdebug 2.0.0.</entry>
+      </row>
+      <row>
+       <entry>xdebug.auto_trace</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>xdebug.collect_includes</entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu Xdebug 2.0.0.</entry>
+      </row>
+      <row>
+       <entry>xdebug.collect_params</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>xdebug.collect_return</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu Xdebug 2.0.0.</entry>
+      </row>
+      <row>
+       <entry>xdebug.collect_vars</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu Xdebug 2.0.0.</entry>
+      </row>
+      <row>
+       <entry>xdebug.default_enable</entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>PHP_INI_SYSTEM in Xdebug 1.</entry>
+      </row>
+      <row>
+       <entry>xdebug.dump.COOKIE</entry>
+       <entry>NULL</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>xdebug.dump.ENV</entry>
+       <entry>NULL</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>xdebug.dump.FILES</entry>
+       <entry>NULL</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>xdebug.dump.GET</entry>
+       <entry>NULL</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>xdebug.dump.POST</entry>
+       <entry>NULL</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>xdebug.dump.REQUEST</entry>
+       <entry>NULL</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>xdebug.dump.SERVER</entry>
+       <entry>NULL</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>xdebug.dump.SESSION</entry>
+       <entry>NULL</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>xdebug.dump_globals</entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu Xdebug 2.0.0.</entry>
+      </row>
+      <row>
+       <entry>xdebug.dump_once</entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>xdebug.dump_undefined</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>xdebug.extended_info</entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibil începând cu Xdebug 2.0.0.</entry>
+      </row>
+      <row>
+       <entry>xdebug.idekey</entry>
+       <entry>""</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu Xdebug 2.0.0.</entry>
+      </row>
+      <row>
+       <entry>xdebug.manual_url</entry>
+       <entry>"http:
+#if ZEND_EXTENSION_API_NO &lt; 90000000
+        STD_PHP_INI_ENTRY(, "</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>xdebug.max_nesting_level</entry>
+       <entry>"100"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>xdebug.output_dir</entry>
+       <entry>"/tmp"</entry>
+       <entry>PHP_INI_PERDIR</entry>
+       <entry>PHP_INI_SYSTEM in Xdebug &lt;= 1.2.0. Eliminat în Xdebug 2.0.0.</entry>
+      </row>
+      <row>
+       <entry>xdebug.profiler_aggregate</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_PERDIR</entry>
+       <entry>Disponibil începând cu Xdebug 2.0.0.</entry>
+      </row>
+      <row>
+       <entry>xdebug.profiler_append</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_PERDIR</entry>
+       <entry>Disponibil începând cu Xdebug 2.0.0.</entry>
+      </row>
+      <row>
+       <entry>xdebug.profiler_enable</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_PERDIR</entry>
+       <entry>Disponibil începând cu Xdebug 2.0.0.</entry>
+      </row>
+      <row>
+       <entry>xdebug.profiler_enable_trigger</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_PERDIR</entry>
+       <entry>Disponibil începând cu Xdebug 2.0.0.</entry>
+      </row>
+      <row>
+       <entry>xdebug.profiler_output_dir</entry>
+       <entry>"/tmp"</entry>
+       <entry>PHP_INI_PERDIR</entry>
+       <entry>Disponibil începând cu Xdebug 2.0.0.</entry>
+      </row>
+      <row>
+       <entry>xdebug.profiler_output_name</entry>
+       <entry>"cachegrind.out.%p"</entry>
+       <entry>PHP_INI_PERDIR</entry>
+       <entry>Disponibil începând cu Xdebug 2.0.0.</entry>
+      </row>
+      <row>
+       <entry>xdebug.remote_autostart</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu Xdebug 2.0.0.</entry>
+      </row>
+      <row>
+       <entry>xdebug.remote_enable</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_PERDIR</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>xdebug.remote_handler</entry>
+       <entry>"dbgp"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>xdebug.remote_host</entry>
+       <entry>"localhost"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>xdebug.remote_log</entry>
+       <entry>""</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu Xdebug 2.0.0.</entry>
+      </row>
+      <row>
+       <entry>xdebug.remote_mode</entry>
+       <entry>"req"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>xdebug.remote_port</entry>
+       <entry>"9000"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry>xdebug.show_exception_trace</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu Xdebug 2.0.0.</entry>
+      </row>
+      <row>
+       <entry>xdebug.show_local_vars</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu Xdebug 2.0.0.</entry>
+      </row>
+      <row>
+       <entry>xdebug.show_mem_delta</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu Xdebug 2.0.0.</entry>
+      </row>
+      <row>
+       <entry>xdebug.trace_format</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu Xdebug 2.0.0.</entry>
+      </row>
+      <row>
+       <entry>xdebug.trace_options</entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu Xdebug 2.0.0.</entry>
+      </row>
+      <row>
+       <entry>xdebug.trace_output_dir</entry>
+       <entry>"/tmp"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu Xdebug 2.0.0.</entry>
+      </row>
+      <row>
+       <entry>xdebug.trace_output_name</entry>
+       <entry>"trace.%c"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu Xdebug 2.0.0.</entry>
+      </row>
+      <row>
+       <entry>xdebug.var_display_max_children</entry>
+       <entry>"128"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu Xdebug 2.0.0.</entry>
+      </row>
+      <row>
+       <entry>xdebug.var_display_max_data</entry>
+       <entry>"512"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu Xdebug 2.0.0.</entry>
+      </row>
+      <row>
+       <entry>xdebug.var_display_max_depth</entry>
+       <entry>"3"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu Xdebug 2.0.0.</entry>
       </row>
       <row>
        <entry>xmlrpc_errors</entry>
@@ -2503,6 +3447,12 @@
        <entry></entry>
       </row>
       <row>
+       <entry>yami.response.timeout</entry>
+       <entry>"5"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu yami 1.0.1.</entry>
+      </row>
+      <row>
        <entry>yaz.keepalive</entry>
        <entry>"120"</entry>
        <entry>PHP_INI_ALL</entry>
@@ -2512,25 +3462,25 @@
        <entry>yaz.log_file</entry>
        <entry>NULL</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 4.3.0.</entry>
+       <entry>Disponibil începând cu PHP 4.3.0. Eliminat în PHP 5.0.0.</entry>
       </row>
       <row>
        <entry>yaz.log_mask</entry>
        <entry>NULL</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Disponibil începând cu yaz 1.0.3.</entry>
       </row>
       <row>
        <entry>yaz.max_links</entry>
        <entry>"100"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 4.3.0.</entry>
+       <entry>Disponibil începând cu PHP 4.3.0. Eliminat în PHP 5.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.zend.ze1-compatibility-mode">zend.ze1_compatibility_mode</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 5.0.0.</entry>
+       <entry>Disponibil începând cu PHP 5.0.0. Eliminat în PHP 6.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.zlib.output-compression">zlib.output_compression</link></entry>
@@ -2570,23 +3520,24 @@
       <row>
        <entry>PHP_INI_USER</entry>
        <entry>1</entry>
-       <entry>Înregistrarea poate fi setată în scripturile utilizatorilor sau în <link
-       linkend="configuration.changes.windows">registrul Windows</link></entry>
+       <entry>Înregistrarea poate fi stabilită în scripturile utilizatorilor 
+       sau în <link linkend="configuration.changes.windows">registrul Windows
+       </link></entry>
       </row>
       <row>
        <entry>PHP_INI_PERDIR</entry>
        <entry>2</entry>
-       <entry>Înregistrarea poate fi setată în &php.ini;, &htaccess; sau &httpd.conf;</entry>
+       <entry>Înregistrarea poate fi stabilită în &php.ini;, &htaccess; sau &httpd.conf;</entry>
       </row>
       <row>
        <entry>PHP_INI_SYSTEM</entry>
        <entry>4</entry>
-       <entry>Înregistrarea poate fi setată în &php.ini; sau &httpd.conf;</entry>
+       <entry>Înregistrarea poate fi stabilită în &php.ini; sau &httpd.conf;</entry>
       </row>
       <row>
        <entry>PHP_INI_ALL</entry>
        <entry>7</entry>
-       <entry>Înregistrarea poate fi setată oriunde</entry>
+       <entry>Înregistrarea poate fi stabilită oriunde</entry>
       </row>
      </tbody>
     </tgroup>
@@ -2597,11 +3548,11 @@
  <section xml:id="ini.core">
   <title>Descrierea directivelor de bază ale &php.ini;</title>
   <para>
-   Această listă include directivele de bază ale &php.ini;, pe care le puteţi stabili pentru
-   a configura PHP. Directivele ce se referă la extensii sunt listate şi detaliate pe
-   paginile de documentare ale extensiilor respective.
-   Informaţii despre directivele de sesiune, spre exemplu, pot fi găsite pe
-   <link linkend="ref.session">pagina de sesiuni</link>.
+   Această listă include directivele de bază ale &php.ini;, pe care le puteţi
+   stabili pentru a configura PHP. Directivele ce se referă la extensii sunt 
+   listate şi detaliate pe paginile de documentare ale extensiilor 
+   respective. Informaţii despre directivele de sesiune, spre exemplu, pot fi
+   găsite pe <link linkend="ref.session">pagina de sesiuni</link>.
   </para>
 
   <section xml:id="ini.sect.httpd-options">
@@ -2641,10 +3592,10 @@
     <tgroup cols="4">
      <thead>
       <row>
-         <entry>Denumirea</entry>
-         <entry>Valoarea implicită</entry>
-         <entry>Poate fi schimbată în</entry>
-         <entry>Istoria schimbărilor</entry>
+       <entry>Denumirea</entry>
+       <entry>Valoarea implicită</entry>
+       <entry>Poate fi schimbată în</entry>
+       <entry>Istoria schimbărilor</entry>
       </row>
      </thead>
      <tbody>
@@ -2681,7 +3632,7 @@
      <row>
       <entry>expose_php</entry>
       <entry>"1"</entry>
-      <entry>Numai în &php.ini;</entry>
+      <entry>numai în &php.ini;</entry>
       <entry></entry>
      </row>
      <row>
@@ -2707,18 +3658,21 @@
        <listitem>
         <para>
          Indică dacă forma prescurtată (<userinput>&lt;? ?&gt;</userinput>)
-         a etichetei de deschidere a PHP este permisă. Dacă doriţi să utilizaţi PHP în
-         combinaţie cu XML, puteţi dezactiva această opţiune pentru a utiliza
-         <userinput>&lt;?xml ?&gt;</userinput> direct în text. În caz contrar, puteţi 
-         să le tipăriţi cu PHP, de exemplu: <userinput>&lt;?php echo '&lt;?xml 
-         version="1.0"'; ?&gt;</userinput>. De asemenea, dacă este dezactivată, trebuie
-         să utilizaţi forma lungă a etichetei de deschidere PHP (<userinput>&lt;?php ?&gt;</userinput>).
+         a etichetei de deschidere a PHP este permisă. Dacă doriţi să 
+         utilizaţi PHP în combinaţie cu XML, puteţi dezactiva această opţiune
+         pentru a utiliza <userinput>&lt;?xml ?&gt;</userinput> direct în 
+         text. În caz contrar, puteţi să le tipăriţi cu PHP, de exemplu: 
+         <userinput>&lt;?php echo '&lt;?xml version="1.0"'; ?&gt;</userinput>.
+         De asemenea, dacă este dezactivată, trebuie să utilizaţi forma lungă
+         a etichetei de deschidere PHP (<userinput>&lt;?php ?&gt;</userinput>).
         </para>
         <note>
          <para>
-          Această directivă de asemenea afectează scurtătura <userinput>&lt;?=</userinput>, 
-          care este identică cu <userinput>&lt;? echo</userinput>. Utilizarea acestei scurtături
-          necesită ca <systemitem role="directive">short_open_tag</systemitem> să fie activată.
+          Această directivă de asemenea afectează scurtătura
+          <userinput>&lt;?=</userinput>, care este identică cu
+          <userinput>&lt;? echo</userinput>. Utilizarea acestei scurtături
+          necesită ca <systemitem role="directive">short_open_tag</systemitem>
+          să fie activată.
          </para>
         </note>
        </listitem>
@@ -2731,9 +3685,10 @@
        </term>
        <listitem>
         <simpara>
-         Permite utilizarea etichetelor de tip ASP &lt;% %&gt; în plus faţă de etichetele
-         obişnuite &lt;?php ?&gt;. Aceasta include şi scurtătura pentru tiparul valorii
-         variabilei &lt;%= $value %&gt;. Pentru mai multe informaţii accesaţi
+         Permite utilizarea etichetelor de tip ASP &lt;% %&gt; în plus faţă 
+         de etichetele obişnuite &lt;?php ?&gt;. Aceasta include şi 
+         scurtătura pentru tiparul valorii variabilei &lt;%= $value %&gt;. 
+         Pentru mai multe informaţii accesaţi
          <link linkend="language.basic-syntax.phpmode">Evadarea din HTML</link>.
         </simpara>
         <note>
@@ -2751,7 +3706,8 @@
        </term>
        <listitem>
         <simpara>
-         Numărul cifrelor semnificative afişate în numerele cu virgulă flotantă.
+         Numărul cifrelor semnificative afişate în numerele cu virgulă 
+         flotantă.
         </simpara>
        </listitem>
       </varlistentry>
@@ -2763,7 +3719,8 @@
        </term>
        <listitem>
         <simpara>
-         Forţează conformarea cu anul 2000 (va cauza probleme cu navigatoarele nonconformante)
+         Forţează conformarea cu anul 2000 (va cauza probleme cu 
+         navigatoarele nonconformante)
         </simpara>
        </listitem>
       </varlistentry>
@@ -2776,24 +3733,29 @@
        </term>
        <listitem>
         <para>
-         Afişarea avertizării în cazul când argumentele sunt transmise prin referinţă
-         în timpul apelării funcţiei. Această metodă e descurajată şi e posibil să nu mai fie
-         susţinută în versiunile viitoare ale PHP/Zend. Metoda încurajată de specificare a
-         argumentelor ce trebuie transmise prin referinţă este în declaraţia funcţiei.
-         Sunteţi încurajat să încercaţi să dezactivaţi această opţiune şi să aveţi grijă
-         ca scripturile să lucreze în mod normal cu ea, pentru a vă asigura că ele vor
-         funcţiona cu versiunile viitoare ale limbajului (veţi primi o avertizare de fiecare
-         dată când utilizaţi această facilitate).
+         Afişarea avertizării în cazul când argumentele sunt transmise prin 
+         referinţă în timpul apelării funcţiei. Această metodă e descurajată 
+         şi e posibil să nu mai fie susţinută în versiunile viitoare ale 
+         PHP/Zend. Metoda încurajată de specificare a argumentelor ce trebuie
+         transmise prin referinţă este în declaraţia funcţiei.
+         Sunteţi încurajat să încercaţi să dezactivaţi această opţiune şi să 
+         aveţi grijă ca scripturile să lucreze în mod normal cu ea, pentru a 
+         vă asigura că ele vor funcţiona cu versiunile viitoare ale 
+         limbajului (veţi primi o avertizare de fiecare dată când utilizaţi 
+         această facilitate).
         </para>
         <para>
-         Transmiterea argumentelor prin referinţă la momentul apelării funcţiei a fost
-         descurajată din motivul curăţeniei codului-sursă. O funcţie poate să-şi modifice
-         argumentul într-un mod nedocumentat dacă nu a declarat că argumentul este transmis 
-         prin referinţă. Pentru a evita efecte secundare este mai bine de a specifica care
-         argumente sunt transmise prin referinţă numai în declaraţia funcţiei.
+         Transmiterea argumentelor prin referinţă la momentul apelării 
+         funcţiei a fost descurajată din motivul curăţeniei codului-sursă. O 
+         funcţie poate să-şi modifice argumentul într-un mod nedocumentat 
+         dacă nu a declarat că argumentul este transmis prin referinţă. 
+         Pentru a evita efecte secundare este mai bine de a specifica care
+         argumente sunt transmise prin referinţă numai în declaraţia 
+         funcţiei.
         </para>
         <para>
-         Vedeţi de asemenea <link linkend="language.references">explicaţia referinţelor</link>.
+         Accesaţi de asemenea <link linkend="language.references">explicaţia 
+         referinţelor</link>.
         </para>
        </listitem>
       </varlistentry>
@@ -2806,9 +3768,9 @@
        <listitem>
         <para>
          Decide dacă PHP va expune sau nu faptul că este instalat pe server
-         (de ex. prin adăugarea semnăturii sale la antetul Web server-ului). Nu este nici un
-         fel de pericol de securitate, însă acest lucru permite de a determina dacă utilizaţi
-         sau nu PHP pe server.
+         (de ex. prin adăugarea semnăturii sale la antetul Web server-ului). 
+         Nu este nici un fel de pericol de securitate, însă acest lucru 
+         permite de a determina dacă utilizaţi sau nu PHP pe server.
         </para>
        </listitem>
       </varlistentry>
@@ -2820,14 +3782,15 @@
        </term>
        <listitem>
         <para>
-         Activează modul de compatibilitate cu Zend Engine 1 (PHP 4).  Aceasta afectează
-         clonarea, transformarea (obiectele fără proprietăţi se transformă în &false; sau 0), şi
-         <link linkend="language.oop5.object-comparison">comparaţia obiectelor</link>.
-         În acest mod, obiectele sunt transmise prin valoare, dar nu prin referinţă, cum e
-         stabilit implicit.
+         Activează modul de compatibilitate cu Zend Engine 1 (PHP 4).  
+         Aceasta afectează clonarea, transformarea (obiectele fără 
+         proprietăţi se transformă în &false; sau 0), şi
+         <link linkend="language.oop5.object-comparison">comparaţia 
+         obiectelor</link>. În acest mod, obiectele sunt transmise prin 
+         valoare, dar nu prin referinţă, cum e stabilit implicit.
         </para>
         <para>
-         Vedeţi de asemenea secţiunea întitulată
+         Accesaţi de asemenea secţiunea întitulată
          <link linkend="migration5">Migrarea de la PHP 4 la PHP 5</link>.
         </para>
        </listitem>
@@ -2873,17 +3836,18 @@
       </term>
       <listitem>
        <para>
-        Aceata stabileşte mărimea maximă a memoriei în baiţi, pe care un script
-        o poate aloca. Astfel se evită situaţia când scripturile scrise rău
-        consumă toată memoria disponibilă pe server. Atrageţi atenţia că pentru a dezactiva
-        limita de memorie, trebuie să stabiliţi această directivă la valoarea <literal>-1</literal>.
+        Aceata stabileşte mărimea maximă a memoriei în baiţi, pe care un 
+        script o poate aloca. Astfel se evită situaţia când scripturile 
+        scrise rău consumă toată memoria disponibilă pe server. Atrageţi 
+        atenţia că pentru a dezactiva limita de memorie, trebuie să stabiliţi
+        această directivă la valoarea <literal>-1</literal>.
        </para>
        <para>
-        Înainte de PHP 5.2.1, pentru a utiliza această directivă, ea trebuia să fi
-        fost activată la momentul compilării indicând
-        <option role="configure">--enable-memory-limit</option> în linia de configurare.
-        Aceasta era de asemenea necesar pentru a defini funcţiile
-        <function>memory_get_usage</function> şi
+        Înainte de PHP 5.2.1, pentru a utiliza această directivă, ea trebuia
+        să fi fost activată la momentul compilării indicând
+        <option role="configure">--enable-memory-limit</option> în linia de 
+        configurare. Aceasta era de asemenea necesar pentru a defini 
+        funcţiile <function>memory_get_usage</function> şi
         <function>memory_get_peak_usage</function>.
        </para>
 
@@ -2952,9 +3916,9 @@
       </term>
       <listitem>
        <para>
-        Durata de timp (în secunde) pentru a păstra în cache informaţia despre calea
-        unui fişier sau director. Pentru sisteme cu fişiere care se modifică rar,
-        consideraţi mărirea acestei valori.
+        Durata de timp (în secunde) pentru a păstra în cache informaţia 
+        despre calea unui fişier sau director. Pentru sisteme cu fişiere care
+        se modifică rar, consideraţi mărirea acestei valori.
        </para>
       </listitem>
      </varlistentry>
@@ -3089,8 +4053,8 @@
        </term>
        <listitem>
         <para>
-         Dacă este activat, atunci variabilele Environment, GET, POST, Cookie şi Server
-         pot fi găsite în masivele asociative globale
+         Dacă este activat, atunci variabilele Environment, GET, POST, Cookie
+         şi Server pot fi găsite în masivele asociative globale
          <varname>$_ENV</varname>,
          <varname>$_GET</varname>,
          <varname>$_POST</varname>,
@@ -3111,7 +4075,8 @@
        </term>
        <listitem>
         <para>
-         Separatorul utilizat în URL-urile generate de PHP pentru a separa argumentele.
+         Separatorul utilizat în URL-urile generate de PHP pentru a separa 
+         argumentele.
         </para>
        </listitem>
       </varlistentry>
@@ -3123,8 +4088,8 @@
        </term>
        <listitem>
         <para>
-         Lista separator(arelor) folosite de PHP pentru a analiza şi transfera URL-urile
-         de intrare în variabile.
+         Lista separator(arelor) folosite de PHP pentru a analiza şi 
+         transfera URL-urile de intrare în variabile.
         </para>
         <note>
          <para>
@@ -3141,7 +4106,8 @@
        </term>
        <listitem>
         <para>
-         Stabileşte ordinea prelucrării variabileleor EGPCS (<literal>E</literal>nvironment, 
+         Stabileşte ordinea prelucrării variabileleor EGPCS (
+         <literal>E</literal>nvironment, 
          <literal>G</literal>et, <literal>P</literal>ost, 
          <literal>C</literal>ookie şi <literal>S</literal>erver).
          Spre exemplu, dacă variables_order este stabilit în
@@ -3156,32 +4122,34 @@
         <para>
          Dacă directiva dezaprobată 
          <link linkend="ini.register-globals">register_globals</link> 
-         este stabilită (nu mai există începând cu PHP 6), atunci variables_order
-         de asemenea configurează ordinea în care variabilele <literal>ENV</literal>, 
-         <literal>GET</literal>, <literal>POST</literal>, 
-         <literal>COOKIE</literal> şi <literal>SERVER</literal> sunt populate în
-         domeniul global. Deci, spre exemplu, dacă variables_order 
-         este stabilit în <literal>"EGPCS"</literal>, register_globals este activat, 
+         este stabilită (nu mai există începând cu PHP 6), atunci 
+         variables_order de asemenea configurează ordinea în care variabilele
+         <literal>ENV</literal>, <literal>GET</literal>,
+         <literal>POST</literal>, <literal>COOKIE</literal> şi
+         <literal>SERVER</literal> sunt populate în domeniul global. Deci, 
+         spre exemplu, dacă variables_order este stabilit în
+         <literal>"EGPCS"</literal>, register_globals este activat, 
          şi ambele <varname>$_GET['action']</varname> şi
          <varname>$_POST['action']</varname> sunt stabilite, atunci
          <varname>$action</varname> va conţine valoarea
-         <varname>$_POST['action']</varname> deoarece <literal>P</literal> urmează după
-         <literal>G</literal> în valoarea directivei din exemplul dat.
+         <varname>$_POST['action']</varname> deoarece <literal>P</literal> 
+         urmează după <literal>G</literal> în valoarea directivei din 
+         exemplul dat.
         </para>
         <warning>
          <para>
           În ambele SAPI-uri CGI şi FastCGI,
-          <link linkend="reserved.variables.server">$_SERVER</link> este de asemenea
-          populat cu valori din mediu; <literal>S</literal>
-          este întotdeauna echivalent cu <literal>ES</literal> independent de amplasarea
-          <literal>E</literal> în această directivă.
+          <link linkend="reserved.variables.server">$_SERVER</link> este de 
+          asemenea populat cu valori din mediu; <literal>S</literal>
+          este întotdeauna echivalent cu <literal>ES</literal> independent de
+          amplasarea <literal>E</literal> în această directivă.
          </para>
         </warning>
         <note>
          <para>
           Conţinutul şi ordinea valorilor din variabila
-          <link linkend="reserved.variables.request">$_REQUEST</link> sunt de asemenea
-          afectate de această directivă.
+          <link linkend="reserved.variables.request">$_REQUEST</link> sunt de
+          asemenea afectate de această directivă.
          </para>
         </note>
        </listitem>
@@ -3194,19 +4162,21 @@
        </term>
        <listitem>
         <para>
-         Când este activată, variabilele SERVER şi ENV sunt create prima dată când sunt
-         utilizate (Exact la timp - Just In Time) în loc să fie create la lansarea scriptului.
-         Dacă aceste variabile nu sunt utilizate în script, atunci activarea acestei directive
-         va duce la o creştere a performanţei.
+         Când este activată, variabilele SERVER şi ENV sunt create prima dată
+         când sunt utilizate (Exact la timp - Just In Time) în loc să fie 
+         create la lansarea scriptului.
+         Dacă aceste variabile nu sunt utilizate în script, atunci activarea 
+         acestei directive va duce la o creştere a performanţei.
         </para>
         <para>
          Directivele PHP
          <link linkend="ini.register-globals">register_globals</link>,
          <link linkend="ini.register-long-arrays">register_long_arrays</link>
          şi <link linkend="ini.register-argc-argv">register_argc_argv</link>
-         trebuie să fie dezactivate pentru ca această directivă să aibă efect. Începând cu PHP
-         5.1.3 nu este necesar de a avea <link
-         linkend="ini.register-argc-argv">register_argc_argv</link> dezactivat.
+         trebuie să fie dezactivate pentru ca această directivă să aibă 
+         efect. Începând cu PHP 5.1.3 nu este necesar de a avea
+         <link linkend="ini.register-argc-argv">register_argc_argv</link> 
+         dezactivat.
         </para>
        </listitem>
       </varlistentry>
@@ -3219,10 +4189,12 @@
        <listitem>
         <para>
          Indică dacă variabilele EGPCS (Environment, GET,
-         POST, Cookie, Server) trebuie să fie înregistrate ca variabile globale, sau nu.
+         POST, Cookie, Server) trebuie să fie înregistrate ca variabile 
+         globale, sau nu.
         </para>
         <para>
-         Începând cu <link xlink:href="&url.php.release4.2.0;">PHP 4.2.0</link>,
+         Începând cu
+         <link xlink:href="&url.php.release4.2.0;">PHP 4.2.0</link>,
          această directivă are valoarea implicită <emphasis>off</emphasis>.
         </para>
         <para>
@@ -3231,16 +4203,19 @@
          pentru mai multe informaţii.
         </para>
         <para>
-         Vă rugăm să atrageţi atenţia că <systemitem role="directive">register_globals</systemitem>
-         nu poate fi stabilit în timpul execuţiei (<function>ini_set</function>). Cu toate acestea
-         puteţi utiliza &htaccess; dacă serverul permite aceasta, după cum e descris anterior.
-         Un exemplu de înregistrare &htaccess;:
+         Vă rugăm să atrageţi atenţia că
+         <systemitem role="directive">register_globals</systemitem>
+         nu poate fi stabilit în timpul execuţiei (
+         <function>ini_set</function>). Cu toate acestea
+         puteţi utiliza &htaccess; dacă serverul permite aceasta, după cum e 
+         descris anterior. Un exemplu de înregistrare &htaccess;:
          <userinput>php_flag register_globals off</userinput>.
         </para>
         <note>
          <para>
-          <systemitem role="directive">register_globals</systemitem> este afectată de
-          directiva <link linkend="ini.variables-order">variables_order</link>.
+          <systemitem role="directive">register_globals</systemitem> este 
+          afectată de directiva
+          <link linkend="ini.variables-order">variables_order</link>.
          </para>
         </note>
         <para>
@@ -3260,9 +4235,10 @@
          (care ar conţine informaţia GET).
         </simpara>
         <simpara>
-         Accesaţi de asemenea <link linkend="features.commandline">linia de comandă</link>.
-         De asemenea această directivă a apărut în PHP 4.0.0 şi a fost întotdeauna
-         "on" înainte de aceasta.
+         Accesaţi de asemenea <link linkend="features.commandline">linia de 
+         comandă</link>.
+         De asemenea această directivă a apărut în PHP 4.0.0 şi a fost 
+         întotdeauna "on" înainte de aceasta.
         </simpara>
        </listitem>
       </varlistentry>
@@ -3275,16 +4251,18 @@
        <listitem>
         <simpara>
          Indică PHP dacă trebuie înregistrate, sau nu
-         <link linkend="language.variables.predefined">variabilele predefinite</link>
-         lungi dezaprobate de tip <varname>$HTTP_*_VARS</varname>.
-         Când este stabilită în On (implicit), variabilele PHP predefinite lungi, cum
-         ar fi <varname>$HTTP_GET_VARS</varname> vor fi definite.
-         Dacă nu le utilizaţi, este recomandabil să le dezactivaţi din motivul performanţei.
-         În loc, utilizaţi masivele superglobale, cum ar fi <varname>$_GET</varname>.
+         <link linkend="language.variables.predefined">variabilele 
+         predefinite</link> lungi învechite de tip
+         <varname>$HTTP_*_VARS</varname>. Când este stabilită în On 
+         (implicit), variabilele PHP predefinite lungi, cumar fi
+         <varname>$HTTP_GET_VARS</varname> vor fi definite. Dacă nu le 
+         utilizaţi, este recomandabil să le dezactivaţi din motivul 
+         performanţei. În loc, utilizaţi masivele superglobale, cum ar fi 
+         <varname>$_GET</varname>.
         </simpara>
         <simpara>
-         Această directivă a devenit disponibilă în PHP 5.0.0 şi a fost anulată în PHP
-         6.0.0.
+         Această directivă a devenit disponibilă în PHP 5.0.0 şi a fost 
+         anulată în PHP 6.0.0.
         </simpara>
        </listitem>
       </varlistentry>
@@ -3296,16 +4274,17 @@
        </term>
        <listitem>
         <simpara>
-         Stabileţte mărimea maximă permisă a datelor "post". Această mărime de asemenea afectează
-         încărcarea fişierelor. Pentru a încărca fişiere voluminoase această valoare trebuie să fie mai
-         mare decât <link linkend="ini.upload-max-filesize">upload_max_filesize</link>.
+         Stabileţte mărimea maximă permisă a datelor "post". Această mărime 
+         de asemenea afectează încărcarea fişierelor. Pentru a încărca 
+         fişiere voluminoase această valoare trebuie să fie mai mare decât 
+         <link linkend="ini.upload-max-filesize">upload_max_filesize</link>.
         </simpara>
         <simpara>
-         Dacă limita de memorie e activată de către scriptul de configurare, <link
-         linkend="ini.memory-limit">memory_limit</link> de asemenea afectează
-         încărcarea fişierelor. Vorbind la general,
-         <link linkend="ini.memory-limit">memory_limit</link> ar trebui să fie mai mare decât
-         <parameter>post_max_size</parameter>.
+         Dacă limita de memorie e activată de către scriptul de configurare, 
+         <link linkend="ini.memory-limit">memory_limit</link> de asemenea 
+         afectează încărcarea fişierelor. Vorbind la general,
+         <link linkend="ini.memory-limit">memory_limit</link> ar trebui să 
+         fie mai mare decât <parameter>post_max_size</parameter>.
         </simpara>
 
         &ini.shorthandbytes;
@@ -3314,10 +4293,12 @@
          Dacă mărimea datelor post este mai mare decât post_max_size,  
          <link linkend="language.variables.superglobals">superglobalele</link>
          <varname>$_POST</varname> şi <varname>$_FILES</varname> sunt vide.
-         Acest fapt poate fi depistat prin diferite metode, de ex. transmiţând o valoare
-         variabilei <varname>$_GET</varname> în scriptul care procesează datele,
-         de ex. <literal>&lt;form action="edit.php?processed=1"&gt;</literal>,
-         şi apoi verificând dacă <varname>$_GET['processed']</varname> este stabilit.
+         Acest fapt poate fi depistat prin diferite metode, de ex. 
+         transmiţând o valoare variabilei <varname>$_GET</varname> în 
+         scriptul care procesează datele, de ex.
+         <literal>&lt;form action="edit.php?processed=1"&gt;</literal>,
+         şi apoi verificând dacă <varname>$_GET['processed']</varname> este 
+         stabilit.
         </simpara>
        </listitem>
       </varlistentry>
@@ -3329,16 +4310,18 @@
        </term>
        <listitem>
         <para>
-         Stabileşte ordinea analizei şi transferului variabilelor GET/POST/COOKIE.
-         Valoarea implicită a acestei directive este "GPC". Stabilirea acesteia
-         în "GP", spre exemplu, va cauza PHP să ignoreze complet cookie şi să
-         rescrie orice variabilă primită prin metoda GET cu variabilele primite
-         prin metoda POST şi care au acelaşi nume.
+         Stabileşte ordinea analizei şi transferului variabilelor 
+         GET/POST/COOKIE.
+         Valoarea implicită a acestei directive este "GPC". Stabilirea 
+         acesteia în "GP", spre exemplu, va cauza PHP să ignoreze complet 
+         cookie şi să rescrie orice variabilă primită prin metoda GET cu 
+         variabilele primite prin metoda POST şi care au acelaşi nume.
         </para>
         <note>
          <para>
           Această opţiune nu este disponibilă în PHP 4.
-          În loc, utilizaţi <link linkend="ini.variables-order">variables_order</link>.
+          În loc, utilizaţi <link linkend="ini.variables-order">
+          variables_order</link>.
          </para>
         </note>
        </listitem>
@@ -3351,12 +4334,15 @@
        </term>
        <listitem>
         <para>
-         Specifică denumirea unui fişier care va fi automat analizat şi executat înainte
-         de fişierul principal. Acest fişier este inclus, ca şi cum ar fi fost apelat
-         cu funcţia <function>require</function>, deci
-         <link linkend="ini.include-path">include_path</link> este utilizat.</para>
+         Specifică denumirea unui fişier care va fi automat analizat şi 
+         executat înainte de fişierul principal. Acest fişier este inclus, ca
+         şi cum ar fi fost apelat cu funcţia <function>require</function>, 
+         deci <link linkend="ini.include-path">include_path</link> este 
+         utilizat.
+        </para>
         <para>
-         Valoarea specială <constant>none</constant> anulează executarea automată.
+         Valoarea specială <constant>none</constant> anulează executarea 
+         automată.
         </para>
        </listitem>
       </varlistentry>
@@ -3368,12 +4354,14 @@
        </term>
        <listitem>
         <para>
-         Specifică denumirea unui fişier care va fi automat analizat şi executat după
-         fişierul principal. Acest fişier este inclus, ca şi cum ar fi fost apelat
-         cu funcţia <function>require</function>, deci
-         <link linkend="ini.include-path">include_path</link> este utilizat.</para>
+         Specifică denumirea unui fişier care va fi automat analizat şi 
+         executat după fişierul principal. Acest fişier este inclus, ca şi 
+         cum ar fi fost apelat cu funcţia <function>require</function>, deci
+         <link linkend="ini.include-path">include_path</link> este utilizat.
+        </para>
         <para>
-         Valoarea specială <constant>none</constant> anulează executarea automată.
+         Valoarea specială <constant>none</constant> anulează executarea 
+         automată.
          <note>
           <simpara>
            Dacă scriptul este terminat cu <function>exit</function>,
@@ -3401,9 +4389,10 @@
        </term>
        <listitem>
         <para>
-         Începând cu 4.0.0, PHP întotdeauna transmite implicit codificarea caracterelor
-         în antetul Content-type: . Pentru a dezactiva trimiterea setului de caractere,
-         pur şi simplu eliminaţi valoarea acestui parametru.
+         Începând cu 4.0.0, PHP întotdeauna transmite implicit codificarea 
+         caracterelor în antetul Content-type: . Pentru a dezactiva 
+         trimiterea setului de caractere, pur şi simplu eliminaţi valoarea 
+         acestui parametru.
         </para>
        </listitem>
       </varlistentry>
@@ -3415,8 +4404,9 @@
        </term>
        <listitem>
         <para>
-         Întotdeauna populează <varname>$HTTP_RAW_POST_DATA</varname> cu datele crude
-         POST. În caz contrar, variabila este populată numai cu date de tip MIME necunoscut.
+         Întotdeauna populează <varname>$HTTP_RAW_POST_DATA</varname> cu 
+         datele crude POST. În caz contrar, variabila este populată numai cu 
+         date de tip MIME necunoscut.
          Oricum, metoda preferată pentru a accesa datele crude POST este
          <link linkend="wrappers.php">php://input</link>.
          <varname>$HTTP_RAW_POST_DATA</varname> nu este disponibilă în cazul
@@ -3432,11 +4422,11 @@
        </term>
        <listitem>
         <para>
-         Permite prelucrarea cererilor http WebDAV din scripturile PHP (de ex.
-         PROPFIND, PROPPATCH, MOVE, COPY, etc.).
-         Această directivă nu există începând cu PHP 4.3.2.
-         Dacă doriţi să primiţi datele post a acestor cereri, trebuie să stabiliţi
-         de asemenea şi <link linkend="ini.always-populate-raw-post-data">
+         Permite prelucrarea cererilor http WebDAV din scripturile PHP (de 
+         ex. PROPFIND, PROPPATCH, MOVE, COPY, etc.). Această directivă nu 
+         există începând cu PHP 4.3.2. Dacă doriţi să primiţi datele post a 
+         acestor cereri, trebuie să stabiliţi de asemenea şi
+         <link linkend="ini.always-populate-raw-post-data">
          always_populate_raw_post_data</link>.
         </para>
        </listitem>
@@ -3444,8 +4434,10 @@
      </variablelist>
     </para>
     <para>
-     Accesaţi de asemenea: <link linkend="ini.magic-quotes-gpc">magic_quotes_gpc</link>,
-     <link linkend="ini.magic-quotes-runtime">magic_quotes_runtime</link> şi
+     Accesaţi de asemenea:
+     <link linkend="ini.magic-quotes-gpc">magic_quotes_gpc</link>,
+     <link linkend="ini.magic-quotes-runtime">magic_quotes_runtime</link>,
+     şi
      <link linkend="ini.magic-quotes-sybase">magic_quotes_sybase</link>.
     </para>
    </section>
@@ -3467,7 +4459,7 @@
        <tbody>
         <row>
          <entry>include_path</entry>
-         <entry>".;/path/to/php/pear"</entry>
+         <entry>".;/calea/spre/php/pear"</entry>
          <entry>PHP_INI_ALL</entry>
          <entry></entry>
         </row>
@@ -3485,14 +4477,14 @@
         </row>
         <row>
          <entry>extension_dir</entry>
-         <entry>"/path/to/php"</entry>
+         <entry>"/calea/spre/php"</entry>
          <entry>PHP_INI_SYSTEM</entry>
          <entry></entry>
         </row>
         <row>
          <entry>extension</entry>
          <entry>NULL</entry>
-         <entry>Numai în &php.ini;</entry>
+         <entry>numai în &php.ini;</entry>
          <entry></entry>
         </row>
         <row>
@@ -3505,25 +4497,25 @@
          <entry>cgi.fix_pathinfo</entry>
          <entry>"1"</entry>
          <entry>PHP_INI_SYSTEM</entry>
-         <entry>Disponibil începând cu PHP 4.3.0. PHP_INI_ALL înainte de PHP 5.2.1.</entry>
+         <entry>Disponibil începând cu PHP 4.3.0. PHP_INI_ALL prior to PHP 5.2.1.</entry>
         </row>
         <row>
          <entry>cgi.force_redirect</entry>
          <entry>"1"</entry>
          <entry>PHP_INI_SYSTEM</entry>
-         <entry>Disponibil începând cu PHP 4.2.0. PHP_INI_ALL înainte de PHP 5.2.1.</entry>
+         <entry>Disponibil începând cu PHP 4.2.0. PHP_INI_ALL prior to PHP 5.2.1.</entry>
         </row>
         <row>
          <entry>cgi.redirect_status_env</entry>
          <entry>NULL</entry>
          <entry>PHP_INI_SYSTEM</entry>
-         <entry>Disponibil începând cu PHP 4.2.0. PHP_INI_ALL înainte de PHP 5.2.1.</entry>
+         <entry>Disponibil începând cu PHP 4.2.0. PHP_INI_ALL prior to PHP 5.2.1.</entry>
         </row>
         <row>
          <entry>fastcgi.impersonate</entry>
          <entry>"0"</entry>
          <entry>PHP_INI_SYSTEM</entry>
-         <entry>Disponibil începând cu PHP 4.3.0. PHP_INI_ALL înainte de PHP 5.2.1.</entry>
+         <entry>Disponibil începând cu PHP 4.3.0. PHP_INI_ALL prior to PHP 5.2.1.</entry>
         </row>
         <row>
          <entry>cgi.rfc2616_headers</entry>
@@ -3550,10 +4542,11 @@
          Specifică o listă de directoare, unde funcţiile
          <function>require</function>, <function>include</function>, 
          <function>fopen</function>, <function>file</function>, 
-         <function>readfile</function> şi <function>file_get_contents</function> 
-         vor căuta fişierele. Formatul este ca şi în cazul variabilei de mediu a
-         sistemului <envar>PATH</envar>: o listă de directoare separate prin
-         două puncte în Unix, sau punct şi virgulă în Windows.
+         <function>readfile</function> şi
+         <function>file_get_contents</function> 
+         vor căuta fişierele. Formatul este ca şi în cazul variabilei de 
+         mediu a sistemului <envar>PATH</envar>: o listă de directoare 
+         separate prin două puncte în Unix, sau punct şi virgulă în Windows.
         </para>
         <para>
          <example>
@@ -3576,8 +4569,8 @@ include_path=".;c:\php\includes"
          </example>
         </para>
         <para>
-         Utilizarea unui <literal>.</literal> în calea de includere permite includeri
-         relative, deoarece desemnează directorul curent.
+         Utilizarea unui <literal>.</literal> în calea de includere permite 
+         includeri relative, deoarece desemnează directorul curent.
         </para>
        </listitem>
       </varlistentry>
@@ -3589,13 +4582,15 @@ include_path=".;c:\php\includes"
        </term>
        <listitem>
         <para>
-         "Directorul root" al PHP de pe server. Este utilizat numai dacă nu este vid.
-         Dacă PHP este configurat cu &safemode;, nici un fişier din afara acestui
-         director nu este servit.
-         Dacă PHP nu a fost compilat cu FORCE_REDIRECT, <emphasis>trebuie</emphasis>
-         să stabiliţi doc_root dacă rulaţi PHP în calitate de CGI cu orice web
-         server (în afară de IIS). Alternativa este de a utiliza configuraţia
-         <link linkend="ini.cgi.force-redirect">cgi.force_redirect</link> de mai jos.
+         "Directorul root" al PHP de pe server. Este utilizat numai dacă nu 
+         este vid. Dacă PHP este configurat cu &safemode;, nici un fişier din
+         afara acestui director nu este servit.
+         Dacă PHP nu a fost compilat cu FORCE_REDIRECT,
+         <emphasis>trebuie</emphasis> să stabiliţi doc_root dacă rulaţi PHP 
+         în calitate de CGI cu orice web server (în afară de IIS). 
+         Alternativa este de a utiliza configuraţia
+         <link linkend="ini.cgi.force-redirect">cgi.force_redirect</link> de 
+         mai jos.
         </para>
        </listitem>
       </varlistentry>
@@ -3607,9 +4602,9 @@ include_path=".;c:\php\includes"
        </term>
        <listitem>
         <para>
-         Denumirea de bază a directorului utilizat într-un director de bază al utilizatorului
-         pentru fişierele PHP, spre exemplu <filename class="directory">public_html
-         </filename>.
+         Denumirea de bază a directorului utilizat într-un director de bază 
+         al utilizatorului pentru fişierele PHP, spre exemplu
+         <filename class="directory">public_html</filename>.
         </para>
        </listitem>
       </varlistentry>
@@ -3621,9 +4616,10 @@ include_path=".;c:\php\includes"
        </term>
        <listitem>
         <para>
-         În care director PHP ar trebui să caute extensiile încărcate dinamic.
-         Accesaţi de asemenea: <link linkend="ini.enable-dl">enable_dl</link>,
-         şi <function>dl</function>.
+         În care director PHP ar trebui să caute extensiile încărcate 
+         dinamic. Accesaţi de asemenea:
+         <link linkend="ini.enable-dl">enable_dl</link>, şi
+         <function>dl</function>.
         </para>
        </listitem>
       </varlistentry>
@@ -3635,7 +4631,8 @@ include_path=".;c:\php\includes"
        </term>
        <listitem>
         <para>
-         Care extensie dinamică trebuie încărcată atunci când PHP este lansat.
+         Care extensie dinamică trebuie încărcată atunci când PHP este 
+         lansat.
         </para>
        </listitem>
       </varlistentry>
@@ -3647,11 +4644,12 @@ include_path=".;c:\php\includes"
        </term>
        <listitem>
         <para>
-         Controlează dacă CGI PHP verifică existenţa liniei ce începe cu #! (shebang) 
-         la începutul scriptului ce va fi rulat. Această linie poate fi necesară dacă
-         script-ul susţine rularea atât în calitate de script independent, cât şi ca PHP CGI.
-         PHP în mod CGI trece peste această linie şi ignoră conţinutul ei dacă această
-         directivă e activată.
+         Controlează dacă CGI PHP verifică existenţa liniei ce începe cu #! 
+         (shebang) la începutul scriptului ce va fi rulat. Această linie 
+         poate fi necesară dacă script-ul susţine rularea atât în calitate de
+         script independent, cât şi ca PHP CGI. PHP în mod CGI trece peste 
+         această linie şi ignoră conţinutul ei dacă această directivă e 
+         activată.
         </para>
        </listitem>
       </varlistentry>
@@ -3666,12 +4664,13 @@ include_path=".;c:\php\includes"
         <para>
          Oferă susţinerea PATH_INFO/PATH_TRANSLATED <emphasis>reale</emphasis>
          pentru CGI. Comportamentul precedent al PHP era de a stabili
-         PATH_TRANSLATED în SCRIPT_FILENAME şi de a nu analiza care este PATH_INFO.
-         Pentru mai multe informaţii despre PATH_INFO, vedeţi specificările cgi.
-         Stabilirea valorii 1 va cauza PHP CGI să-şi corecteze căile pentru a se
-         conforma specificaţiilor. Stabilirea valorii 0 cauzează PHP să se comporte
-         ca mai înainte. Valoarea implicită este zero. Dumneavoastră ar trebui să vă
-         corectaţi script-urile ca să utilizeze SCRIPT_FILENAME şi nu PATH_TRANSLATED.
+         PATH_TRANSLATED în SCRIPT_FILENAME şi de a nu analiza care este 
+         PATH_INFO. Pentru mai multe informaţii despre PATH_INFO, vedeţi 
+         specificările CGI. Stabilirea valorii 1 va cauza PHP CGI să-şi 
+         corecteze căile pentru a se conforma specificaţiilor. Stabilirea 
+         valorii 0 cauzează PHP să se comporte ca mai înainte. Valoarea 
+         implicită este zero. Dumneavoastră ar trebui să vă corectaţi 
+         script-urile ca să utilizeze SCRIPT_FILENAME şi nu PATH_TRANSLATED.
         </para>
        </listitem>
       </varlistentry>
@@ -3683,17 +4682,18 @@ include_path=".;c:\php\includes"
        </term>
        <listitem>
         <para>
-         cgi.force_redirect este necesar pentru a oferi securitate la rularea PHP în
-         calitate de CGI cu majoritatea serverelor web. Dacă nu este definită, PHP
-         implicit activează această directivă. Puteţi să o dezectivaţi
-         <emphasis>la propriul risc</emphasis>.
+         cgi.force_redirect este necesar pentru a oferi securitate la rularea
+         PHP în calitate de CGI cu majoritatea serverelor web. Dacă nu este 
+         definită, PHP implicit activează această directivă. Puteţi să o 
+         dezectivaţi <emphasis>la propriul risc</emphasis>.
         </para>
         <note>
          <para>
-          Utilizatorii Windows: <emphasis>puteţi</emphasis> să dezactivaţi fără primejdie
-          această directivă pentru IIS, de fapt <emphasis>trebuie</emphasis> să faceţi aceasta.
-          Pentru ca OmniHTTPD sau Xitami să funcţioneze <emphasis>trebuie</emphasis> să
-          o dezactivaţi.
+          Utilizatorii Windows: <emphasis>puteţi</emphasis> să dezactivaţi 
+          fără primejdie această directivă pentru IIS, de fapt
+          <emphasis>trebuie</emphasis> să faceţi aceasta. Pentru ca OmniHTTPD
+          sau Xitami să funcţioneze <emphasis>trebuie</emphasis> să o 
+          dezactivaţi.
          </para>
         </note>
        </listitem>
@@ -3707,14 +4707,15 @@ include_path=".;c:\php\includes"
        <listitem>
         <para>
          Dacă cgi.force_redirect este activată şi nu rulaţi web server-ele
-         Apache sau Netscape (iPlanet), <emphasis>s-ar putea</emphasis> să fie necesar să
-         stabiliţi o variabilă de mediu, pe care PHP o va căuta pentru a şti dacă e
-         OK de a continua execuţia.
+         Apache sau Netscape (iPlanet), <emphasis>s-ar putea</emphasis> să 
+         fie necesar să stabiliţi o variabilă de mediu, pe care PHP o va 
+         căuta pentru a şti dacă e OK de a continua execuţia.
         </para>
         <note>
          <para>
-          Stabilirea acestei variabile <emphasis>ar putea</emphasis> cauza probleme se securitate,
-          <emphasis>întâi clarificaţi ce doriţi să realizaţi</emphasis>.
+          Stabilirea acestei variabile <emphasis>ar putea</emphasis> cauza 
+          probleme se securitate, <emphasis>întâi clarificaţi ce doriţi să 
+          realizaţi</emphasis>.
          </para>
         </note>
        </listitem>
@@ -3727,11 +4728,12 @@ include_path=".;c:\php\includes"
        </term>
        <listitem>
         <para>
-         FastCGI sub IIS (pe sisteme bazate pe WINNT) susţin posibilitatea de a juca
-         rolul tichetelor de securitate ale clientului apelant. Aceasta îi permite IIS să definească
-         contextul de securitate sub care rulează cererea. mod_fastcgi sub Apache
-         nu susţine în prezent (03/17/2002) această facilitate.
-         Stabiliţi valoarea 1 la rularea sub IIS. Implicit este zero.
+         FastCGI sub IIS (pe sisteme bazate pe WINNT) susţin posibilitatea de
+         a juca rolul tichetelor de securitate ale clientului apelant. 
+         Aceasta îi permite IIS să definească contextul de securitate sub 
+         care rulează cererea. mod_fastcgi sub Apache nu susţine în prezent 
+         (03/17/2002) această facilitate. Stabiliţi valoarea 1 la rularea sub
+         IIS. Implicit este zero.
         </para>
        </listitem>
       </varlistentry>
@@ -3743,10 +4745,11 @@ include_path=".;c:\php\includes"
        </term>
        <listitem>
         <para>
-         Indică PHP ce tip de antete să utilizeze la trimiterea codului de răspuns HTTP.
-         Dacă este stabilită în 0, PHP trimite un antet Status: care este susţinut de
-         Apache şi alte servere web. Când această opţiune este stabilită în 1, PHP
-         va trimite antete ce se conformează cu <link xlink:href="&url.rfc;2616">RFC 2616</link>.
+         Indică PHP ce tip de antete să utilizeze la trimiterea codului de 
+         răspuns HTTP. Dacă este stabilită în 0, PHP trimite un antet Status:
+         care este susţinut de Apache şi alte servere web. Când această 
+         opţiune este stabilită în 1, PHP va trimite antete ce se conformează
+         cu <link xlink:href="&url.rfc;2616">RFC 2616</link>.
          Schimbaţi valoarea din 0 numai dacă cunoaşteţi ce faceţi.
         </para>
        </listitem>
@@ -3759,7 +4762,7 @@ include_path=".;c:\php\includes"
    <title>Încărcarea fişierelor</title>
     <para>
      <table>
-      <title>Opţiuni de configurare a încărcării fişierelor</title>
+      <title>Opţiunile de configurare a încărcării fişierelor</title>
       <tgroup cols="4">
        <thead>
         <row>
@@ -3804,8 +4807,9 @@ include_path=".;c:\php\includes"
        </term>
        <listitem>
         <para>
-         Dacă să permită, sau nu <link linkend="features.file-upload">încărcări de fişiere</link>
-         prin HTTP. Vedeţi de asemenea directivele
+         Dacă să permită, sau nu <link linkend="features.file-upload">
+         încărcări de fişiere</link> prin HTTP. Accesaţi de asemenea 
+         directivele 
          <link linkend="ini.upload-max-filesize">upload_max_filesize</link>,
          <link linkend="ini.upload-tmp-dir">upload_tmp_dir</link> şi
          <link linkend="ini.post-max-size">post_max_size</link>.
@@ -3823,9 +4827,10 @@ include_path=".;c:\php\includes"
        </term>
        <listitem>
         <para>
-         Directorul temporar utilizat pentru stocarea fişierelor la încărcare.
-         Trebuie să aibă drept de înscriere pentru utilizatorul cu care rulează PHP.
-         Dacă nu este specificat, PHP va folosi directorul implicit al sistemului.
+         Directorul temporar utilizat pentru stocarea fişierelor la 
+         încărcare. Trebuie să aibă drept de înscriere pentru utilizatorul cu
+         care rulează PHP. Dacă nu este specificat, PHP va folosi directorul 
+         implicit al sistemului.
         </para>
        </listitem>
       </varlistentry>
@@ -3852,7 +4857,7 @@ include_path=".;c:\php\includes"
    <title>SQL general</title>
     <para>
      <table>
-      <title>Opţiuni de configurare SQL general</title>
+      <title>Opţiunile de configurare ale SQL general</title>
       <tgroup cols="4">
        <thead>
         <row>
@@ -3900,8 +4905,8 @@ include_path=".;c:\php\includes"
     <title>Directivele de configurare ale debugger-ului</title>
     <caution>
      <para>
-      Numai PHP 3 are implementat un debugger implicit, pentru mai multe informaţii, accesaţi
-      <xref linkend="debugger"/>.
+      Numai PHP 3 are implementat un debugger implicit, pentru mai multe 
+      informaţii, accesaţi <xref linkend="debugger"/>.
      </para>
     </caution>
 
