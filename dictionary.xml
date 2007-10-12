@@ -355,4 +355,10 @@
     <english_example>Options supported by wrappers that work over sockets.</english_example>
     <romanian_example>Opţiuni susţinute de învelişurile care funcţionează prin socket-uri.</romanian_example>
   </term>
+  <term>
+    <english>see also</english>
+    <romanian>accesaţi de asemenea</romanian>
+    <english_example>See also the section named "Extensions".</english_example>
+    <romanian_example>Accesaţi de asemenea secţiunea întitulată "Extensii".</romanian_example>
+  </term>
 </dictionary>
