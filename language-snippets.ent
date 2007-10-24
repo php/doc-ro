@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.209 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.210 Maintainer: simionea Status: translated -->
 <!-- Keep 'em sorted -->
 
 <!-- Notes -->
@@ -112,6 +112,10 @@ Această extensie este <emphasis>EXPERIMENTALĂ</emphasis>. Comportamentul acest
 inclusiv denumirile funcţiilor sale şi orice alte aspecte documentate în privinţa
 acestei extensii -- pot să fie modificate fără preaviz într-o versiune viitoare a PHP. 
 Utilizaţi această extensie la propriul risc.</simpara></warning>'>
+
+<!ENTITY warn.deprecated.removed-6-0-0 '<warning xmlns="http://docbook.org/ns/docbook"><simpara>Această facilitate este
+<emphasis>DEZAPROBATĂ</emphasis> şi este <emphasis>ELIMINATĂ</emphasis> începând cu PHP 6.0.0.
+Utilizarea acestei facilităţi este foarte nerecomandată.</simpara></warning>'>
 
 <!ENTITY warn.experimental.func '<warning xmlns="http://docbook.org/ns/docbook"><simpara>
 Această funcţie este <emphasis>EXPERIMENTALĂ</emphasis>. Comportamentul acestei funcţii,
