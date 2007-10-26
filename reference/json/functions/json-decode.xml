@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.1 $ -->
+<!-- $Revision: 1.2 $ -->
 <!-- EN-Revision: 1.3 Maintainer: radical Status: ok -->
 <refentry xml:id="function.json-decode" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -15,7 +15,8 @@
    <methodparam choice="opt"><type>bool</type><parameter>assoc</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Un şir de caractere reprezentat JSON şi îl converteşte într-o variabilă .
+   Preia un şir de caractere reprezentat JSON şi îl converteşte într-o 
+   variabilă PHP.
   </para>
  </refsect1>
 
@@ -27,7 +28,8 @@
      <term><parameter>json</parameter></term>
      <listitem>
       <para>
-       Şirul (<type>string</type>) reprezentat <parameter>json</parameter> care trebuie convertit.
+       Şirul (<type>string</type>) reprezentat <parameter>json</parameter> care
+       trebuie convertit.
       </para>
      </listitem>
     </varlistentry>
@@ -36,7 +38,7 @@
      <listitem>
       <para>
        Dacă specificaţi &true;, obiectul va fi convertit într-un
-	   <type>array<-type> asociativ.
+       <type>array</type> asociativ.
       </para>
      </listitem>
     </varlistentry>
@@ -47,9 +49,8 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Întoarce un <type>object</type> sau dacă parametrul opţional
-   <parameter>assoc</parameter> este &true;, un  
-   <type>array</type> asociativ.
+   Întoarce un <type>object</type>, sau dacă parametrul opţional
+   <parameter>assoc</parameter> este &true;, un <type>array</type> asociativ.
   </para>
  </refsect1>
 
@@ -97,8 +98,9 @@ array(5) {
   &reftitle.notes;
   <caution>
    <para>
-    Această funcţie va întoarce &false; dacă datele reprezentate JSON s-ar converti într-un 
-	<type>array</type> sau <type>object</type> cu mai mult de 127 elemente.
+    Această funcţie va întoarce &false; dacă datele reprezentate JSON s-ar
+    converti într-un <type>array</type> sau <type>object</type> cu mai mult de
+    127 elemente.
    </para>
   </caution>
  </refsect1>
