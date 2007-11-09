@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.10 $ -->
-<!-- EN-Revision: 1.61 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.11 $ -->
+<!-- EN-Revision: 1.62 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&php.ini; directives</title>
@@ -3260,9 +3260,7 @@
       </row>
       <row>
        <entry>xdebug.manual_url</entry>
-       <entry>"http:
-#if ZEND_EXTENSION_API_NO &lt; 90000000
-        STD_PHP_INI_ENTRY(, "</entry>
+       <entry>"http://www.php.net"</entry>
        <entry>PHP_INI_ALL</entry>
        <entry></entry>
       </row>
