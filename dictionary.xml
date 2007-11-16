@@ -373,4 +373,10 @@
     <english_example>Arrays overview</english_example>
     <romanian_example>Prezentarea generală a masivelor</romanian_example>
   </term>
+  <term>
+    <english>timezone</english>
+    <romanian>zona orară</romanian>
+    <english_example>You have to specify the timezone in php.ini.</english_example>
+    <romanian_example>Trebuie să specificaţi zona orară în php.ini.</romanian_example>
+  </term>
 </dictionary>
