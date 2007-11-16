@@ -38,7 +38,7 @@
 		<h1><xsl:value-of select="@title" /></h1>
 		<dl>
 			<xsl:for-each select="term"><xsl:sort select="english" />
-				<dt><xsl:value-of select="english" /> &mdash; <xsl:value-of select="romanian" /></dt>
+				<dt><xsl:value-of select="english" />&nbsp;&mdash;&nbsp;<xsl:value-of select="romanian" /></dt>
 				<dd><xsl:value-of select="english_example" /><br />
 				<xsl:value-of select="romanian_example" /></dd>
                 	</xsl:for-each>

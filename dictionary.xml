@@ -361,4 +361,16 @@
     <english_example>See also the section named "Extensions".</english_example>
     <romanian_example>Accesaţi de asemenea secţiunea întitulată "Extensii".</romanian_example>
   </term>
+  <term>
+    <english>developer</english>
+    <romanian>programator</romanian>
+    <english_example>There are no active developers for this extension.</english_example>
+    <romanian_example>Nu sunt programatori activi pentru această extensie.</romanian_example>
+  </term>
+  <term>
+    <english>overview</english>
+    <romanian>prezentare generală</romanian>
+    <english_example>Arrays overview</english_example>
+    <romanian_example>Prezentarea generală a masivelor</romanian_example>
+  </term>
 </dictionary>
