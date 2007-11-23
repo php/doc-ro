@@ -23,12 +23,12 @@
      </simpara>     
      <simpara>
      Urmãtoarele RFC-uri pot fi, de asemenea, folositoare:
-     <link xlink:href="&url.rfc1896;">RFC 1896</link>,
-     <link xlink:href="&url.rfc2045;">RFC 2045</link>,
-     <link xlink:href="&url.rfc2046;">RFC 2046</link>,
-     <link xlink:href="&url.rfc2047;">RFC 2047</link>,
-     <link xlink:href="&url.rfc2048;">RFC 2048</link>, ºi 
-     <link xlink:href="&url.rfc2049;">RFC 2049</link>.
+     <link xlink:href="&url.rfc;1896">RFC 1896</link>,
+     <link xlink:href="&url.rfc;2045">RFC 2045</link>,
+     <link xlink:href="&url.rfc;2046">RFC 2046</link>,
+     <link xlink:href="&url.rfc;2047">RFC 2047</link>,
+     <link xlink:href="&url.rfc;2048">RFC 2048</link>, ºi 
+     <link xlink:href="&url.rfc;2049">RFC 2049</link>.
     </simpara>
     <para>
      <function>mail</function> returneazã &true; dacã mailul a fost trimis cu succes, &false; în caz contrar.
