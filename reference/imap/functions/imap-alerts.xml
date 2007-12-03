@@ -1,37 +1,47 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/imap.xml, last change in rev 1.1 -->
-<!-- last change to 'imap-alerts' in en/ tree in rev 1.33 -->
-  <refentry xml:id="function.imap-alerts" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>imap_alerts</refname>
-    <refpurpose>
-     Aceastã funcþie returneazã toate mesajele de avertizare (dacã existã)
-     care au apãrut pe parcursul cererii paginii curente, sau din momentul
-     în care stiva de mesaje a fost resetatã
-    </refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>array</type><methodname>imap_alerts</methodname>
-      <void/>
-     </methodsynopsis>
-    <para>
-     Aceastã funcþie returneazã toate mesajele IMAP de avertizare
-     generate din momentul ultimului apel al funcþiei
-     <function>imap_alerts</function> sau din momentul inceperii execuþiei
-     scriptului. Apelul funcþiei <function>imap_alerts</function>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.8 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.imap-alerts" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>imap_alerts</refname>
+  <refpurpose>ÃŽntoarce toate mesajele de alertÄƒ IMAP care au avut loc
+  </refpurpose>
+ </refnamediv>
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>array</type><methodname>imap_alerts</methodname>
+   <void/>
+  </methodsynopsis>
+  <para>
+   ÃŽntoarce toate mesajele de alertÄƒ IMAP generate dupÄƒ ultimul apel al 
+   funcÅ£iei <function>imap_alerts</function>, sau Ã®nceputul paginii. 
+  </para>
+  <para>
+   CÃ¢nd <function>imap_alerts</function> este apelatÄƒ, stiva alertelor este 
+   mai apoi curÄƒÅ£itÄƒ. SpecificaÅ£ia IMAP stabileÅŸte ca aceste mesaje sÄƒ fie 
+   transmise utilizatorului.
+  </para>
+ </refsect1>
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   ÃŽntoarce un masiv cu toate mesajele de alertÄƒ IMAP generate sau &false; dacÄƒ
+   nu este disponibil nici un mesaj de alertÄƒ.
+  </para>
+ </refsect1>
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>imap_errors</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
+</refentry>
 
-     This function returns an array of all of the IMAP alert messages
-     generated since the last <function>imap_alerts</function> call,
-     or the beginning of the page. When
-     <function>imap_alerts</function> is called, the alert stack is
-     subsequently cleared. The IMAP specification requires that these
-     messages be passed to the user.
-    </para>
-   </refsect1>
-  </refentry>
+<!-- Translated by Simion Onea. -->
 
 <!-- Keep this comment at the end of the file
 Local variables:

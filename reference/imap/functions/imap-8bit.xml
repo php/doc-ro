@@ -1,34 +1,57 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/imap.xml, last change in rev 1.1 -->
-<!-- last change to 'imap-8bit' in en/ tree in rev 1.33 -->
-  <refentry xml:id="function.imap-8bit" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-   <refnamediv>
-    <refname>imap_8bit</refname>
-    <refpurpose>
-     Converteºte un ºir de caractere pe 8 biþi într-un ºir de caractere
-     tipãribil
-    </refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>string</type><methodname>imap_8bit</methodname>
-      <methodparam><type>string</type><parameter>string</parameter></methodparam>
-     </methodsynopsis>
-    <para>  
-     Converteºte un ºir de caractere pe 8 biþi într-un ºir de caractere
-     tipãribil (conform cu <link xlink:href="&url.rfc;rfc2045.html">RFC2045</link>,
-     secþiunea 6.7).
-    </para>
-    <para>
-     Returneazã un ºir de caractere tipãribil.
-    </para>
-    <para>
-     Mai consultaþi <function>imap_qprint</function>.
-    </para>
-   </refsect1>
-  </refentry>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.6 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.imap-8bit" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <refnamediv>
+  <refname>imap_8bit</refname>
+  <refpurpose>ConverteÅŸte un string "8bit" Ã®ntr-un string "quoted-printable"
+  </refpurpose>
+ </refnamediv>
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>string</type><methodname>imap_8bit</methodname>
+   <methodparam><type>string</type><parameter>string</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   ConverteÅŸte un string "8bit" Ã®ntr-un string "quoted-printable" (Ã®n 
+   conformitate cu <link xlink:href="&url.rfc;2045">RFC2045</link>, section 
+   6.7).
+  </para>
+ </refsect1>
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>string</parameter></term>
+     <listitem>
+      <para>
+       String-ul "8bit" de convertit
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   ÃŽntoarce un string "quoted-printable".
+  </para>
+ </refsect1>
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>imap_qprint</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
+</refentry>
+
+<!-- Translated by Simion Onea. -->
 
 <!-- Keep this comment at the end of the file
 Local variables:
