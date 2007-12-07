@@ -1,46 +1,44 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- $Revision: 1.3 $ -->
-<!-- EN-Revision: 1.0 Maintainer: zamolxe Status: translated -->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.5 Maintainer: simionea Status: translated -->
+<!-- CREDITS: zamolxe -->
 <!-- splitted from ./index.xml, last change in rev 1.66 -->
  <chapter xml:id="security.intro" xmlns="http://docbook.org/ns/docbook">
   <title>Introducere</title>
   <simpara>
-   PHP este un limbaj de programare web puternic iar interpretorul,
-   fie ca este incluse in serverul web ca un modul sau executat separat
-   ca binar <acronym>CGI</acronym>, este capabil sa acceseze fisiere,
-   sa execute comenzi sau sa deschida conexiuni in retea pe server.
-   Aceste proprietati fac posibila rularea oricarui script/program
-   pe serverul web, care este nesecurizat default.
-   PHP este creat pentru a rula scripturi CGI securizate decat
-   Perl si C, si cu o selectare minutioasa a timpilor de compilare si
-   runtime din optiunile de configurare, dublate de o tehnica de programare
-   sigura si eficienta, PHP va poate oferi combinatia perfecta de libertate
-   si securitate pe care o cautati. 
+   PHP este un limbaj de programare web puternic, iar interpretorul său,
+   fie că este inclus în serverul web ca un modul, sau executat separat
+   ca binar <acronym>CGI</acronym>, este capabil să acceseze fişiere,
+   să execute comenzi sau să deschidă conexiuni în reţea pe server.
+   Aceste proprietăţi fac ca totul ce este rulat pe server să fie implicit 
+   nesecurizat. PHP a fost proiectat în mod specific pentru ca să fie un limbaj
+   mai securizat pentru scrierea programelor CGI decât Perl sau C, şi cu o 
+   selectare corectă a opţiunilor de configurare la compilare şi la rulare, 
+   dublate de o tehnică de programare corespunzătoare, PHP vă poate oferi 
+   combinaţia perfectă de libertate şi securitate de care aveţi nevoie. 
   </simpara>
   <simpara>
-   Exista mai multe posibilitati de a utiliza PHP-ul, exista multe 
-   optiuni de configurare care ii controleaza comportamentul in
-   timpul rularii aplicatiilor.
-   O gama larga de optiuni de configurare garanteaza folosirea PHP-ului
-   la capacitate maxima, si pentru o intreaga suita de intrebuintari,
-   dar exista si posibilitatea ca prin anumite combinatii de configurari
-   sa rezulte un setup instabil si nesecurizat.
+   Deoarece există multe modalităţi diferite de a utiliza PHP, există şi multe 
+   opţiuni de configurare care îi controlează comportamentul. O gamă largă de 
+   opţiuni de configurare garantează posibilitatea utilizării PHP pentru o 
+   întreagă suită de întrebuinţări, dar aceasta totodată înseamnă că pot exista
+   combinaţii ale acestor opţiuni şi ale configuraţiilor de servere, care vor
+   duce la crearea unui mediu de execuţie nesecurizat.
   </simpara>
   <simpara>
-   Flexibilitatea configuratiilor in PHP este egala si rivalizeaza
-   cu flexibilitatea codului. PHP poate fi folosit pentru a construi
-   aplicatii complete pentru servere, cu toate avantajele unui utilizator
-   shell, sau poate fi folosit ca un simplu server-side includes cu mici
-   riscuri, intr-un mediu bine controlat.
-   Cum sa construiesti acel mediu si cum sa-l controlezi, este la
-   latitudinea fiecarui developer PHP.
+   Flexibilitatea configuraţiilor în PHP este egală şi rivalizează
+   cu flexibilitatea codului-sursă. PHP poate fi utilizat pentru a construi
+   aplicaţii complete pentru servere, cu toate avantajele unui utilizator
+   shell, sau poate fi utilizat ca o simplă incluziune de partea serverului
+   cu grad de risc redus, într-un mediu bine controlat. Modul de construire a 
+   acestui mediu şi cât de securizat este el depinde în mare măsură de 
+   programatorul PHP.
   </simpara>
   <simpara>
-   Acest capitol incepe cu cateva sfaturi generale de securitate,
-   explica diferite optiuni de configurare si combinatii, precum
-   si situatiile in care pot fi folosite cu siguranta; mai descrie
-   de asemenea, diferite consideratii legate de coding si de diferite
-   nivele de securitate.
+   Acest capitol începe cu câteva sfaturi generale în privinţa securităţii,
+   explică diferite combinaţii ale opţiunilor de configurare, precum şi 
+   situaţiile în care pot fi folosite cu siguranţă; descrie de asemenea,
+   diferite consideraţii legate de programare la diferite nivele de securitate.
   </simpara>
  </chapter>
 
