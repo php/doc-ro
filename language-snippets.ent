@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.210 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.211 Maintainer: simionea Status: translated -->
 <!-- Keep 'em sorted -->
 
 <!-- Notes -->
@@ -163,6 +163,8 @@ documentată în prezent; este disponibilă numai lista de argumente.</simpara><
 
 <!-- Misc -->
 
+<!ENTITY no.function.parameters '<para>Această funcţie nu conţine parametri.</para>'>
+
 <!ENTITY example.outputs '<para>Exemplul de mai sus va afişa:</para>'>
 
 <!ENTITY example.outputs.similar '<para>Exemplul de mai sus va afişa
@@ -271,6 +273,17 @@ dbm_identifier</parameter></term><listitem><para>Identificatorul legăturii DBM
 <!ENTITY imap.imap-stream.description '<varlistentry><term><parameter>
 imap_stream</parameter></term><listitem><para>Un flux IMAP întors de
 <function>imap_open</function>.</para></listitem></varlistentry>'>
+
+<!-- mbstring notes -->
+
+<!ENTITY note.mbstring.encoding.internal '<note><para>Codificarea internă a 
+caracterelor sau codificarea caracterelor specificată de funcţia <function>
+mb_regex_encoding</function> va fi utilizată în calitate de codificare a 
+caracterelor pentru această funcţie.</para></note>'>
+
+<!ENTITY mbstring.encoding.parameter '<para>Parametrul <parameter>encoding
+</parameter> reprezintă codificarea caracterelor. Dacă el este omis, va fi 
+utilizată valoarea internă a codificării caracterelor.</para>'>
 
 <!-- MCVE notes -->
 
