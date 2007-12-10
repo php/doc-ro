@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.2 $ -->
+<!-- $Revision: 1.3 $ -->
 <!-- EN-Revision: 1.4 Maintainer: radical Status: ok -->
 <!-- Purpose: basic.other -->
 <!-- Membership: pecl, bundled -->
@@ -30,7 +30,7 @@
   </section>
  </partintro>
  
- &reference.json.functions;
+ &reference.json.entities.functions;
 
 </reference>
 

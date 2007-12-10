@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.6 $ -->
+<!-- $Revision: 1.7 $ -->
 <!-- EN-Revision: 1.19 Maintainer: simionea Status: translated -->
 <!-- CREDITS: adiju -->
 <!-- Purpose: remote.mail -->
@@ -141,7 +141,7 @@
    </section>
   </partintro>
 
-&reference.imap.functions;
+&reference.imap.entities.functions;
 
  </reference>
  
