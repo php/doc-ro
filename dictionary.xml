@@ -379,4 +379,10 @@
     <english_example>You have to specify the timezone in php.ini.</english_example>
     <romanian_example>Trebuie să specificaţi zona orară în php.ini.</romanian_example>
   </term>
+  <term>
+    <english>native</english>
+    <romanian>indigen</romanian>
+    <english_example>This is a native PHP type.</english_example>
+    <romanian_example>Acesta este un tip PHP indigen.</romanian_example>
+  </term>
 </dictionary>
