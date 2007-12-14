@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.1 $ -->
+<!-- EN-Revision: 1.56 Maintainer: simionea Status: translated -->
+ <appendix xml:id="migration5" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Migrarea de la PHP 4 la PHP 5</title>
+
+  <section xml:id='migration5.changes'>
+   <title>Ce s-a schimbat în PHP 5</title>
+   <para>
+    PHP 5 şi motorul integrat Zend Engine 2 au îmbunătăţit considerabil performanţa
+    şi capacităţile PHP, dar o mare atenţie s-a acordat faptului de a deteriora
+    cât mai puţin posibil codul-sursă existent. Deci migrarea codului dumneavoastră
+    de la PHP 4 la 5 ar trebui să fie foarte uşoară. O bună parte din codul-sursă
+    existent în PHP 4 ar trebui să fie gata de a rula fără schimbări, dar totuşi ar
+    trebui să ştiţi despre
+    <link linkend="migration5.incompatible">puţinele diferenţe</link>
+    şi să aveţi grijă să testaţi codul dumneavoastră sursă înainte de a schimba
+    versiunile în mediile de producere.
+   </para>
+  </section>
+
+  <section xml:id="migration5.incompatible">
+   <title>Schimbări incompatibile în sens invers</title>
+   <para>
+    Cu toate că majoritatea codului-sursă existent în PHP 4 ar trebui să funcţioneze
+    fără schimbări, totuşi ar trebui să atrageţi atenţia la următoarele schimbări
+    incompatibile în sens invers:
+   </para>
+   <itemizedlist>
+    <listitem>
+     <simpara>
+      Sunt unele <link linkend="reserved.keywords">noi cuvinte-cheie rezervate</link>.
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>strrpos</function> şi <function>strripos</function> acum utilizează
+      întregul string în calitate de 'ac'.
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      Utilizarea nelegală a deplasamentelor în string-uri cauzează <constant>E_ERROR</constant>
+      în loc de <constant>E_WARNING</constant>. Un exemplu de utilizare nelegală ar fi: 
+      <literal>$str = 'abc'; unset($str[0]);</literal>.
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>array_merge</function> a fost schimbată pentru ca să accepte numai
+      masivuri. Dacă îi este transmisă o variabilă care nu este masiv, un
+      <constant>E_WARNING</constant> va fi aruncat pentru fiecare astfel de parametru.
+      Fiţi atent, deoarece codul dumneavoastră poate să înceapă să emită
+      <constant>E_WARNING</constant> din senin.
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      Variabila de server PATH_TRANSLATED nu mai este stabilită implicit sub
+      Apache2 SAPI în contrast cu situaţia în PHP 4, unde ea este stabilită
+      la aceeaşi valoare ca şi variabila de server SCRIPT_FILENAME, atunci
+      când nu este populată de Apache. Această schimbare a fost făcută pentru
+      a ne conforma cu <link xlink:href="&url.cgispecs;">specificaţia CGI</link>.
+      Vă rugăm să vă referiţi la <link xlink:href="&url.php.bugs;23610">bug #23610</link>
+      pentru informaţii suplimentare şi vedeţi de asemenea descrierea
+      <link linkend="reserved.variables.server">$_SERVER['PATH_TRANSLATED']</link>
+      în manual. Această problemă de asemenea afectează versiunile PHP &gt;= 4.3.2.
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      Constanta <constant>T_ML_COMMENT</constant> nu mai este definită de către
+      extensia <link linkend="ref.tokenizer">Tokenizer</link>. Dacă error_reporting
+      este stabilită la <constant>E_ALL</constant>, PHP va genera o notificare. Cu
+      toate că <constant>T_ML_COMMENT</constant> niciodată nu a fost utilizată, ea
+      a fost definită în PHP 4. În ambele PHP 4 şi PHP 5 // şi /* */ sunt soluţionate
+      ca constante <constant>T_COMMENT</constant>. Însă comentariile în stil PHPDoc
+      /** */, care începând cu PHP 5 sunt înţelese de PHP, sunt recunoscute ca
+      <constant>T_DOC_COMMENT</constant>. 
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      $_SERVER ar trebui să fie populată cu argc şi argv dacă <link
+      linkend="ini.variables-order">variables_order</link> include "S". Dacă aţi
+      configurat sistemul dumneavoastră în mod specific să nu creeze $_SERVER,
+      atunci desigur ea nu va fi. Schimbarea a fost de a face argc şi argv
+      disponibile în versiunea CLI indiferent de setarea
+      <link linkend="ini.variables-order">variables_order</link>. Deci versiunea
+      CLI acum întotdeauna va popula variabilele globale $argc şi $argv.
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      Un obiect fără proprietăţi nu mai este considerat "vid".
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      În unele cazuri clasele trebuiesc declarate înainte de a fi utilizate. Aceasta
+      se întâmplă numai dacă unele facilităţi noi ale PHP 5 (cum ar fi <link
+      linkend="language.oop5.interfaces">interfeţele</link>) sunt utilizate.
+      În caz contrar, comportamentul este pe vechi.
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>get_class</function>, <function>get_parent_class</function>
+      şi <function>get_class_methods</function> acum întorc numele claselor/metodelor
+      aşa cum ele au fost declarate (respectându-se literele majuscule/minuscule), ceea
+      ce poate duce la probleme cu script-urile mai vechi care se bazează pe comportamentul
+      vechi (numele claselor/metodelor întotdeauna erau întoarse cu litere minuscule).
+      O soluţie posibilă este de a căuta aceste funcţii în toate script-urile şi de a
+      le aplica <function>strtolower</function>.
+     </simpara>
+     <simpara>
+      Această diferenţiere a literelor majuscule/minuscule de asemenea se aplică la
+      <link linkend="language.constants.predefined">constantele predefinite magice</link>
+      <constant>__CLASS__</constant>, <constant>__METHOD__</constant> şi
+      <constant>__FUNCTION__</constant>. Valorile sunt întoarse exact cum sunt declarate
+      (respectându-se literele majuscule/minuscule).
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>ip2long</function> acum întoarce &false; când o adresă IP nevalidă îi este
+      transmisă ca argument şi nu <literal>-1</literal> ca înainte.
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      Dacă există funcţii definite într-un fişier inclus, ele pot fi utilizate în
+      fişierul de bază indiferent dacă se află înainte de <function>return</function>
+      sau după. Dacă fişierul este inclus de două ori, PHP 5 va emite o eroare fatală
+      deoarece funcţiile au fost declarate deja, în timp ce PHP 4 nu se plânge de acest
+      fapt. Este recomandat de a utiliza <function>include_once</function> în loc de a
+      verifica dacă fişierul a fost inclus deja şi de a ieşi în acest caz din fişierul
+      inclus.
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>include_once</function> şi <function>require_once</function>
+      întâi normalizează calea fişierului inclus în Windows astfel încât includerea
+      A.php şi a.php va include fişierul numai o singură dată.
+     </simpara>
+    </listitem>
+   </itemizedlist>
+
+   <para>
+    <example>
+     <title><function>strrpos</function> şi <function>strripos</function> acum utilizează
+      întregul string în calitate de 'ac'</title>
+     <programlisting role="php">
+<![CDATA[
+<?php
+var_dump(strrpos('ABCDEF','DEF')); //int(3)
+
+var_dump(strrpos('ABCDEF','DAF')); //bool(false)
+?>
+]]>
+     </programlisting>
+    </example>
+   </para>
+   <para>
+    <example>
+     <title>Un obiect fără proprietăţi nu mai este considerat "vid"</title>
+     <programlisting role="php">
+<![CDATA[
+<?php
+class test { }
+$t = new test();
+
+var_dump(empty($t)); // echo bool(false)
+
+if ($t) {
+    // Va fi executat
+}
+?>
+]]>
+     </programlisting>
+    </example>
+   </para>
+   <para>
+    <example>
+     <title>În unele cazuri clasele trebuie declarate înainte de a fi utilizate</title>
+     <programlisting role="php">
+<![CDATA[
+<?php
+
+// funcţionează fără erori:
+$a = new a();
+class a {
+}
+
+
+// aruncă o eroare:
+$a = new b();
+
+interface c{
+}
+class b implements c {
+} 
+
+?>
+]]>
+     </programlisting>
+    </example>
+   </para>
+  </section>
+
+  <section xml:id="migration5.cli-cgi">
+   <title>CLI şi CGI</title>
+   <para>
+    În PHP 5 au survenit unele modificări ale denumirilor fişierelor CLI şi CGI.
+    În PHP 5 versiunea CGI a fost redenumită în <filename>php-cgi.exe</filename>
+    (anterior <filename>php.exe</filename>) şi versiunea CLI acum se află în
+    directorul principal (anterior <filename>cli/php.exe</filename>).
+   </para>
+   <para>
+    În PHP 5 a fost introdus un mod nou: <filename>php-win.exe</filename>.
+    Acesta este echivalent cu versiunea CLI, cu excepţia că php-win nu
+    afişează nimic şi astfel nu oferă o consolă (pe ecran nu apare "cutia DOS").
+    Acest comportament este similar cu cel al php-gtk.
+   </para>
+   <para>
+    În PHP 5, versiunea CLI întotdeauna va popula variabilele globale
+    <varname>$argv</varname> şi <varname>$argc</varname> indiferent de careva
+    setări ale directivelor &php.ini;. Chiar având
+    <link linkend="ini.register-argc-argv">register_argc_argv</link> stabilit
+    <literal>off</literal> nu va avea efect în CLI.
+   </para>
+   <para>
+    Accesaţi de asemenea <link linkend="features.commandline">referinţa liniei de comandă</link>.
+   </para>
+  </section>
+
+  <section xml:id="migration5.configuration">
+   <title>Migrarea fişierelor de configurare</title>
+   <para>
+    Deoarece modulele ISAPI şi-au schimbat denumirile din php4xxx în php5xxx, trebuie
+    să faceţi anumite schimbări şi în fişierele de configurare. Au survenit schimbări
+    şi în denumirile fişierelor CLI şi CGI. Vă rugăm să vă referiţi la
+    <link linkend="migration5.cli-cgi">secţiunea corespondenţelor</link> pentru informaţii
+    suplimentare.
+   </para>
+   <para>
+    Migrarea configuraţiei Apache este foarte simplă. Vedeţi în exemplul de mai jos ce
+    schimbare trebuie să faceţi:
+    <example>
+     <title>Migrarea fişierelor de configurare Apache pentru PHP 5</title>
+     <programlisting role="apache-conf">
+<![CDATA[
+# change this line:    
+LoadModule php4_module /php/sapi/php4apache2.dll
+
+# with this one:
+LoadModule php5_module /php/php5apache2.dll
+]]>
+     </programlisting>
+    </example>
+   </para>
+   <para>
+    Dacă serverul dumneavoastră web rulează PHP în mod CGI, ar trebui să ţineţi cont
+    de aceea că versiunea CGI şi-a schimbat denumirea din <filename>php.exe</filename> în
+    <filename>php-cgi.exe</filename>.
+    În Apache, ar trebui să faceţi ceva de felul următor:
+    <example>
+     <title>Migrarea fişierelor de configurare Apache pentru PHP 5, modul CGI</title>
+     <programlisting role="apache-conf">
+<![CDATA[
+# change this line:    
+Action application/x-httpd-php "/php/php.exe" 
+
+# with this one:
+Action application/x-httpd-php "/php/php-cgi.exe" 
+]]>
+     </programlisting>
+    </example>
+   </para>
+   <para>
+    În alte servere web trebuie să schimbaţi denumirea fişierului modulului CGI sau ISAPI.
+   </para>
+  </section>
+
+  <section xml:id="migration5.functions">
+   <title>Funcţii noi</title>
+   <para>
+    În PHP 5 sunt unele funcţii noi. Iată lista lor:
+   </para>
+   <para><link linkend="ref.array">Masive</link>:</para>
+    <itemizedlist>
+    <listitem>
+     <simpara>
+      <function>array_combine</function> - Crează un masiv folosind un masiv pentru
+      chei şi alt masiv pentru valorile lor
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>array_diff_uassoc</function> - Calculează diferenţa dintre masive
+      cu verificarea suplimentară a indicilor, care este efectuată de o funcţie de
+      apel invers furnizată de utilizator
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>array_udiff</function> - Calculează diferenţa dintre masive utilizând
+      o funcţie de apel invers pentru compararea datelor
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>array_udiff_assoc</function> - Calculează diferenţa dintre masive
+      cu verificarea suplimentară a indicilor. Datele sunt comparate utilizând o
+      funcţie de apel invers
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>array_udiff_uassoc</function> - Calculează diferenţa dintre masive
+      cu verificarea suplimentară a indicilor. Datele sunt comparate utilizând o
+      funcţie de apel invers. Verificarea indicilor de asemenea este efectuată cu
+      o funcţie de apel invers
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>array_walk_recursive</function> - Aplică recursiv o funcţie a
+      utilizatorului fiecărui membru (element) al masivului
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>array_uintersect_assoc</function> - Calculează intersecţia masivelor
+      cu o verificare suplimentară a indicilor. Datele sunt comparate utilizând o
+      funcţie de apel invers
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>array_uintersect_uassoc</function> - Calculează intersecţia masivelor
+      cu o verificare suplimentară a indicilor. Atât datele, cât şi indicii sunt comparaţi
+      utilizând funcţii separate de apel invers
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>array_uintersect</function> - Calculează intersecţia masivelor.
+      Datele sunt comparate utilizând o funcţie de apel invers
+     </simpara>
+    </listitem>
+   </itemizedlist>
+
+   <para><link linkend="ref.ibase">InterBase</link>:</para>
+   <itemizedlist>
+    <listitem>
+     <simpara>
+      <function>ibase_affected_rows</function> - Întoarce numărul rândurilor
+      afectate de interpelarea precedentă
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>ibase_backup</function> - Iniţiază o operaţiune de copiere de
+      rezervă în managerul serviciilor şi întoarce controlul imediat
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>ibase_commit_ret</function> - Efectuează tranzacţia fără a o închide
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>ibase_db_info</function> - Cere statistica despre o bază de date
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>ibase_drop_db</function> - Elimină o bază de date
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>ibase_errcode</function> - Întoarce codul erorii
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>ibase_free_event_handler</function> - Anulează o procedură înregistrată
+      de prelucrare a unui eveniment
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>ibase_gen_id</function> - Creşte valoarea generatorului denumit şi întoarce
+      noua sa valoare
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>ibase_maintain_db</function> - Execută o comandă de întreţinere pe server-ul
+      de baze de date
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>ibase_name_result</function> - Atribuie un nume unui set de rezultate
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>ibase_num_params</function> - Întoarce numărul parametrilor într-o
+      interpelare pregătitiă
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>ibase_param_info</function> - Întoarce informaţia despre un parametru
+      într-o interpelare pregătitiă
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>ibase_restore</function> - Iniţiază o operaţiune de restabilire în
+      managerul serviciilor şi întoarce execuţia imediat
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>ibase_rollback_ret</function> - Anulează tranzacţia şi reţine contextul
+      tranzacţiei
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>ibase_server_info</function> - Cere statistica despre un server de baze
+      de date
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>ibase_service_attach</function> - Conectarea la managerul serviciilor
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>ibase_service_detach</function> - Deconectarea de la managerul serviciilor
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>ibase_set_event_handler</function> - Înregistrează o funcţie de apel invers
+      pentru a fi apelată atunci când evenimentele sunt afişate (declanşate)
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>ibase_wait_event</function> - Aşteaptă până când un eveniment este afişat
+      (declanşat) de baza de date
+     </simpara>
+    </listitem>
+   </itemizedlist>
+
+   <para><link linkend="ref.iconv">iconv</link>:</para>
+   <itemizedlist>
+    <listitem>
+     <simpara>
+      <function>iconv_mime_decode</function> - Decodifică un câmp cu antet MIME
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>iconv_mime_decode_headers</function> - Decodifică mai multe câmpuri de antete
+      MIME concomitent
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>iconv_mime_encode</function> - Compune un câmp de antet MIME
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>iconv_strlen</function> - Întoarce numărul de caractere din string
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>iconv_strpos</function> - Găseşte poziţia primei apariţii a acului
+      în stogul de fân (a needle within a haystack)
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>iconv_strrpos</function> - Găseşte poziţia ultimei apariţii a acului
+      în stogul de fân (a needle within a haystack)
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>iconv_substr</function> - Taie o parte a unui string
+     </simpara>
+    </listitem>
+   </itemizedlist>
+
+   <para><link linkend="ref.stream">Fluxuri</link>:</para>
+   <itemizedlist>
+    <listitem>
+     <simpara>
+      <function>stream_copy_to_stream</function> - Copie datele dintr-un flux în altul
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>stream_get_line</function> - Obţine o linie din resursa de flux până la
+      un separator dat
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>stream_socket_accept</function> - Acceptă o conexiune printr-un socket
+      creat cu <function>stream_socket_server</function>
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>stream_socket_client</function> - Deschide o conexiune printr-un socket
+      Internet sau de domeniu Unix
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>stream_socket_get_name</function> - Obţine denumirea socket-urilor locale
+      sau îndepărtate
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>stream_socket_recvfrom</function> - Primeşte date de la un socket,
+      fie connectat, sau nu
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>stream_socket_sendto</function> - Trimite un mesaj către un socket,
+      fie conectat, sau nu
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>stream_socket_server</function> - Crează un socket server Internet
+      sau de domeniu Unix
+     </simpara>
+    </listitem>
+   </itemizedlist>
+
+   <para><link linkend="ref.datetime">Funcţii referitoare la dată şi timp</link>:</para>
+   <itemizedlist>
+    <listitem>
+     <simpara>
+      <function>idate</function> - Formatează o valoare timp/dată locală ca integer
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>date_sunset</function> - Ora apusului Soarelui pentru o zi şi o locaţie date
+    </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>date_sunrise</function> - Ora răsăritului Soarelui pentru o zi şi o locaţie date
+    </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>time_nanosleep</function> - Pauză pentru un număr de secunde şi nanosecunde
+    </simpara>
+    </listitem>
+   </itemizedlist>
+
+   <para><link linkend="ref.strings">String-uri</link>:</para>
+   <itemizedlist>
+    <listitem>
+     <simpara>
+      <function>str_split</function> - Converteşte un string într-un masiv
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>strpbrk</function> - Caută în string un caracter dintr-un set
+      de caractere
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>substr_compare</function> - Comparaţia sigură din punct de
+      vedere binar, opţional nesensibilă la tipul caracterelor (majuscule /
+      minuscule) a două string-uri de la un deplasament, până la un anumit
+      număr de caractere
+     </simpara>
+    </listitem>
+   </itemizedlist>
+
+   <para>Altele:</para>
+   <itemizedlist>
+    <listitem>
+     <simpara>
+      <function>convert_uudecode</function> - decodifică un string codificat cu uuencode
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>convert_uuencode</function> - codifică un string cu uuencode
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>curl_copy_handle</function> - Copie un handle cURL, împreună cu
+      toate preferinţele sale
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>dba_key_split</function> - Desparte o cheie din reprezentare string
+      în reprezentare pentru masive
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>dbase_get_header_info</function> - Obţine informaţia de antet a unei
+      beze de date dBase
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>dbx_fetch_row</function> - Obţine rânduri dintr-un rezultat al
+      interpelării, care a avut stabilit fanionul DBX_RESULT_UNBUFFERED
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>fbsql_set_password</function> - Modifică parola pentru un utilizator dat
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>file_put_contents</function> - Înscrie un string într-un fişier
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>ftp_alloc</function> - Alocă spaţiu pentru încărcarea unui fişier
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>get_declared_interfaces</function> - Întoarce un masiv al tuturor
+      interfeţelor declarate
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>get_headers</function> - Interceptează toate antetele trimise de
+      către server ca răspuns la o interpelare HTTP
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>headers_list</function> - Întoarce lista antetelor de răspuns trimise
+      (sau care sunt gata de a fi trimise)
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>http_build_query</function> - Generează un string de interpelare
+      codificat cu URL-encode
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>image_type_to_extension</function> - Obţine extensia fişierului
+      pentru tipul imaginii întoarse de <function>getimagesize</function>,
+      <function>exif_read_data</function>, <function>exif_thumbnail</function>,
+      <function>exif_imagetype</function>
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>imagefilter</function> - Aplică un filtru asupra unei imagini
+      utilizând argumentele indicate
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>imap_getacl</function> - Obţine ACL-ul pentru o cutie poştală dată
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>ldap_sasl_bind</function> - Legătura cu un director LDAP utilizând SASL
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>mb_list_encodings</function> - Întoarce un masiv al tuturor
+      codificărilor susţinute
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>pcntl_getpriority</function> - Obţine prioritatea oricărui proces
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>pcntl_wait</function> - Aşteaptă sau întoarce starea unui proces-fiu
+      bifurcat, după cum e definit de către apelul de sistem waitpid()
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>pg_version</function> - Întoarce un masiv cu informaţia despre client, protocol
+      şi versiunea server-ului (dacă este disponibilă)
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>php_check_syntax</function> - Verifică sintaxa fişierului specificat
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>php_strip_whitespace</function> - Întoarce sursa cu comentariile şi spaţiile
+      suprimate
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>proc_nice</function> - Modifică prioritatea procesului curent
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>pspell_config_data_dir</function> - Modifică localizarea fişierelor cu date
+      ale limbii
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>pspell_config_dict_dir</function> - Modifică localizarea listei de bază a
+      cuvintelor
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>setrawcookie</function> - Trimite o prăjitură fără a codifica valoarea cu URL-encode
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>scandir</function> - Listează fişierele şi directoarele din calea specificată
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>snmp_read_mib</function> - Citeşte şi încarcă un fişier MIB în arborele MIB activ
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <function>sqlite_fetch_column_types</function> - Întoarce un masiv cu tipurile coloanelor
+      dintr-un careva tabel
+     </simpara>
+    </listitem>
+   </itemizedlist>
+   <note>
+    <para>
+     Extensia <link linkend="ref.tidy">Tidy</link> de asemenea şi-a schimbat complet API-ul.
+    </para>
+   </note>
+  </section>
+
+
+  <section xml:id="migration5.newconf">
+   <title>Directive noi</title>
+   <para>
+    În PHP 5 au fost introduse unele directive noi &php.ini;. Iată lista lor:
+   </para>
+   <itemizedlist>
+    <listitem>
+     <simpara>
+      mail.force_extra_parameters - Forţează trimiterea parametrilor specificaţi
+      în calitate de parametri suplimentari pentru binarul sendmail.
+      Aceşti parametri întotdeauna vor înlocui valoarea parametrului al 5-lea cu
+      <function>mail</function>, chiar şi în modul sigur
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <link linkend="ini.register-long-arrays">register_long_arrays</link> -
+      permite/interzice PHP să înregistreze variabilele lungi dezaprobate $HTTP_*_VARS
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <link linkend="ini.session.hash-function">session.hash_function</link> -
+      selectează o funcţie hash (MD5 sau SHA-1)
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <link linkend="ini.session.hash-bits-per-character">session.hash_bits_per_character</link>
+      - defineşte câţi biţi sunt stocaţi în fiecare caracter la convertirea datelor binare hash
+      în ceva lizibil (de la 4 până la 6)
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      <link linkend="ini.zend.ze1-compatibility-mode">zend.ze1_compatibility_mode</link> 
+      - Activează modul de compatibilitate cu Zend Engine 1 (PHP 4) 
+     </simpara>
+    </listitem>
+   </itemizedlist>
+  </section>
+
+  <section xml:id="migration5.databases">
+   <title>Bazele de date</title>
+   <para>
+    În PHP 5 au survenit unele schimbări în privinţa bazelor de date (MySQL şi SQLite).
+   </para>
+   <para>
+    În PHP 5 bibliotecile clientului MySQL nu sunt încorporate din cauza problemelor
+    de licenţiere şi a altor probleme. Pentru mai multe informaţii citiţi <link
+     linkend="faq.databases.mysql.php5">înregistrarea FAQ</link>.
+   </para>
+   <para>
+    De asemenea este o nouă extensie, <link linkend="ref.mysqli">MySQLi (MySQL
+    îmbunătăţit)</link>, care este proiectat să lucreze cu MySQL 4.1 şi ulterior.
+   </para>
+   <para>
+    Începând cu PHP 5, extensia <link linkend="ref.sqlite">SQLite</link> este
+    încorporată în PHP. SQLite este un motor de baze de date SQL uşor încorporabil
+    şi nu este o bibliotecă-client utilizată pentru conectarea la un server mare
+    de baze de date (ca MySQL sau PostgreSQL). Biblioteca SQLite citeşte şi înscrie
+    direct în fişierele cu baza de date de pe disc.
+   </para>
+  </section>
+
+
+  <section xml:id='migration5.oop'>
+   <title>Noul Model de Obiecte</title>
+   <para>
+    În PHP 5 este un nou Model de Obiecte. Manipularea obiectelor în PHP a
+    fost complet rescrisă, îmbunătăţind performanţa şi introducând mai multe
+    facilităţi. În versiunile precedente ale PHP obiectele erau manipulate ca
+    tipuri primitive (ca de exemplu întregi sau string-uri). Neajunsul acestei
+    metode era că din punct de vedere semantic întregul obiect era copiat atunci
+    când era atribuit unei variabile, sau când era transmis ca parametru unei
+    metode. În noua abordare, obiectele sunt accesate prin handle, şi nu prin
+    valoare (puteţi să consideraţi handle ca un identificator al obiectului).
+   </para>
+   <para>
+    Mulţi programatori PHP nici nu-şi dau seama despre trucurile cu copierea în
+    modelul de obiecte vechi, de aceea majoritatea aplicaţiilor PHP vor lucra
+    fără modificări, sau cu foarte puţine modificări.
+   </para>
+   <para>
+    Noul Model de Obiecte este documentat în <link
+     linkend="language.oop5">Prezentarea Limbajului</link>.
+   </para>
+   <para>
+    În PHP 5, funcţia cu denumirea clasei este numită constructor, dar numai dacă
+    este definită în această clasă. În PHP 4, ea este apelată de asemenea dacă este
+    definită în clasa-părinte.
+   </para>
+   <para>
+    Vedeţi de asemenea directiva <link linkend="ini.zend.ze1-compatibility-mode">
+    zend.ze1_compatibility_mode</link> pentru informaţii despre compatibilitatea
+    cu PHP 4. 
+   </para>
+  </section>
+
+  <section xml:id='migrating5.errorrep'>
+   <title>Raportarea erorilor</title>
+   <para>
+    Începând cu PHP 5 a fost introdusă o nouă constantă de raportare a erorilor
+    E_STRICT cu valoarea 2048. Ea permite afişarea sugestiilor PHP la etapa rulării
+    referitor la interoperabilitatea şi compatibilitatea codului dumneavoastră sursă,
+    ceea ce vă va permite să păstraţi ultimele şi cele mai bune metode de codificare.
+    De ex. un mesaj STRICT vă va preîntâmpina despre utilizarea unor funcţii
+    dezaprobate.
+   </para>
+   <note>
+    <simpara>
+     E_ALL nu include E_STRICT, de aceea ea nu e activată implicit.
+    </simpara>
+   </note>
+  </section>
+
+ </appendix>
+
+<!-- Translated by Simion Onea -->
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:1
+sgml-indent-data:t
+indent-tabs-mode:nil
+sgml-parent-document:nil
+sgml-default-dtd-file:"../../manual.ced"
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+vim600: syn=xml fen fdm=syntax fdl=2 si
+vim: et tw=78 syn=sgml
+vi: ts=1 sw=1
+-->
