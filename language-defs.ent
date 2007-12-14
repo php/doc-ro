@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.33 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.34 Maintainer: simionea Status: translated -->
 
 <!-- Part titles used mostly in manual.xml itself -->
 <!ENTITY PHPManual         "Manualul PHP">
@@ -57,6 +57,7 @@ supplemental files to mark section titles -->
 <!ENTITY reftitle.runtime      '<title>Configuraţia la rulare</title>'>
 <!ENTITY reftitle.returnvalues '<title>Valorile întroarse</title>'>
 <!ENTITY reftitle.seealso      '<title>Vedeţi de asemenea</title>'>
+<!ENTITY reftitle.setup        '<title>Instalarea / configurarea</title>'>
 <!ENTITY reftitle.unicode      '<title>Unicode</title>'>
 
 <!ENTITY url.ro.rophp        "http://www.rophp.net">

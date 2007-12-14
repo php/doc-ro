@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.19 $ -->
-<!-- EN-Revision: 1.52 Maintainer: zamolxe Status: translated -->
+<!-- $Revision: 1.20 $ -->
+<!-- EN-Revision: 1.53 Maintainer: zamolxe Status: translated -->
 <!-- CREDITS: adiju,aspinei,radical,simionea -->
 
  <info xml:id="bookinfo" xmlns="http://docbook.org/ns/docbook">
-  <title>&PHPManual;</title>
   &frontpage.authors;
   <pubdate>&php.build-date;</pubdate>
   &frontpage.editors;

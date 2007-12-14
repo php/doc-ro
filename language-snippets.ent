@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.211 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.212 Maintainer: simionea Status: translated -->
 <!-- Keep 'em sorted -->
 
 <!-- Notes -->
@@ -317,7 +317,7 @@ inserat cu <function>domnode_append_child</function> de exemplu.'>
 
 <!-- Dom Notes -->
 <!ENTITY dom.node.inserted 'Acest nod nu va apărea în document dacă nu este
-inserat cu <link linkend="function.dom-domnode-appendchild">DOMNode->appendChild()</link>
+inserat cu <link linkend="domnode-appendchild">DOMNode->appendChild()</link>
 de exemplu.'>
 
 
@@ -807,7 +807,7 @@ utilizând autentificarea cu chei publice, utilizaţi funcţia <function>ssh2_au
 <!ENTITY returns.http.false.orexits 'Întoarce &false; sau <emphasis>iese</emphasis> în caz de succes'>
 <!ENTITY http.request.affects 'Afectează numai următoarele metode de interpelare:'>
 <!ENTITY http.request.affects.any 'Afectează orice metodă de interpelare.'>
-<!ENTITY http.response.class.php51 'clasa <link linkend="http.HttpResponse">
+<!ENTITY http.response.class.php51 'clasa <link linkend="class.httpresponse">
    <classname>HttpResponse</classname></link> dacă utilizaţi PHP-5.1 sau ulterior'>
 <!ENTITY http.maynotwork.SAPI 'Aceasta poate să nu funcţioneze conform aşteptărilor cu următoarele SAPI(uri):'>
 <!ENTITY http.content.disposition 'Antetul <literal>Content-Disposition</literal> este foarte util
@@ -849,5 +849,49 @@ a afla valorile posibile.'>
 <!ENTITY imagick.imagickdraw.throws 'Aruncă ImagickDrawException în caz de eroare.'>
 <!ENTITY imagick.imagickpixel.throws 'Aruncă ImagickPixelException în caz de eroare.'>
 <!ENTITY imagick.imagickpixeliterator.throws 'Aruncă ImagickPixelIteratorException în caz de eroare.'>
+
+<!ENTITY note.openssl.cnf '<note xmlns="http://docbook.org/ns/docbook">
+ <simpara>
+  Trebuie să aveţi un fişier <filename>openssl.cnf</filename> valid instalat 
+  pentru ca această funcţie să opereze corect.
+  Vedeţi notele în <link linkend="openssl.installation">secţiunea de instalare
+  </link> pentru informaţii suplimentare.
+ </simpara>
+</note>'>
+<!ENTITY note.openssl.param-notext '<para xmlns="http://docbook.org/ns/docbook">
+ Parametrul opţional <parameter>notext</parameter> afectează detalierea 
+ ieşirilor; dacă este &false; atunci informaţii suplimentare lizibile de către 
+ om sunt incluse în ieşiri. Valoarea implicită a <parameter>notext</parameter> 
+ este &true;.
+</para>'>
+
+<!-- COM/Dotnet -->
+<!ENTITY com.variant-arith '<note xmlns="http://docbook.org/ns/docbook">
+<para>
+ Ca şi în cazul tuturor funcţiilor aritmetice de variante, parametrii pentru 
+ această funcţie pot fi sau de un tip PHP indigen (integer, string, floating 
+ point, boolean sau &null;), sau o instanţă a claselor COM, VARIANT sau DOTNET.
+ Tipurile PHP indigene vor fi convertite în variante utilizând aceleaşi reguli 
+ ca şi cele din constructorul <xref linkend="class.variant"/> clasei. De la 
+ obiectele COM şi DOTNET se va lua valoarea proprietăţii lor implicite şi va fi
+ utilizată ca valoare a variantei.
+</para>
+<para>
+ Funcţiile aritmetice ale variantelor sunt nişte învelişuri ale funcţiilor 
+ denumite similar în biblioteca COM; pentru informaţii suplimentare despre 
+ aceste funcţii consultaţi biblioteca MSDN. Funcţiile PHP sunt denumite un pic 
+ diferit; spre exemplu, variant_add() din PHP corespunde VarAdd() în 
+ documentaţia MSDN.
+</para>
+</note>
+'>
+<!ENTITY com.use-oo-instead '<note xmlns="http://docbook.org/ns/docbook">
+ <simpara>
+  Această funcţie nu există în PHP 5; în loc, ar trebui să utilizaţi sintaxa OO
+  care este mai obişnuită şi mai naturală pentru a accesa proprietăţile, sau 
+  pentru a apela metodele.
+ </simpara>
+</note>
+'>
 
 <!-- Translated by Simion Onea -->
