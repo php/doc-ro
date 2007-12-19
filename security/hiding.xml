@@ -1,59 +1,60 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- $Revision: 1.3 $ -->
-<!-- EN-Revision: 1.0 Maintainer: zamolxe Status: translated -->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.3 Maintainer: zamolxe Status: translated -->
+<!-- CREDITS: simionea -->
 <!-- splitted from ./index.xml, last change in rev 1.66 -->
   <chapter xml:id="security.hiding" xmlns="http://docbook.org/ns/docbook">
-   <title>Ascunderea PHP-ului</title>
+   <title>Ascunderea PHP</title>
    <para>
-    In general, securitatea prin obscuritate este una dintre cele mai slabe
-    metode de aplicare a securitatii aplicatiilor. Dar in unele cazuri
-    este necesara implementarea unei asemenea metode.   </para>
-   <para>
-    Cateva tehnici simple prin care se poate ascunde PHP, posibil
-    sa incetineasca un atacator incercand sa scaneze serverul pentru
-    vulnerabilitati, este setarea expose_php = off din &php.ini; ,
-    prin care se reduce cantitatea de informatii trimisa de server.
+    În general, securitatea prin obscuritate este una dintre cele mai slabe
+    forme de securitate. Dar în unele cazuri se doreşte orice sporire, cât de 
+    mică a securităţii.
    </para>
    <para>
-    Alta tactica este configurarea serverelor web ca apache sa parseze
-    diferite tipuri de fisiere prin PHP, ori printr-o directiva &htaccess;
-    , ori printr-o configuratie apache directa. Puteti folosi extensii
-    de fisiere care sa induca in eroare:
+    Câteva tehnici simple pot ajuta la ascunderea PHP, posibil încetinind un 
+    atacator care încearcă să descopere puncte slabe în sistemul dumneavoastră.
+    Stabilind expose_php = off în fişierul &php.ini;, puteţi reduce cantitatea 
+    de informaţii trimisă de server.
+   </para>
+   <para>
+    O altă tactică este configurarea serverelor web, cum ar fi Apache să 
+    prelucreze şi să interpreteze diferite tipuri de fişiere cu PHP, fie 
+    printr-o directivă &htaccess;, fie direct în configuraţia Apache. Apoi 
+    puteţi utiliza extensii de fişiere, care să inducă în eroare:
     <example>
-     <title>Ascunderea PHP-ului ca alt limbaj de scripting</title>
+     <title>Ascunderea PHP ca alt limbaj de scripting</title>
      <programlisting role="apache-conf">
 <![CDATA[
-# Face codul PHP sa arate ca alte limbaje de programare web
+# Face codul PHP să arate ca alte limbaje de programare web
 AddType application/x-httpd-php .asp .py .pl
 ]]>
      </programlisting>
     </example>
-    Sau ascunderea lui completa:
+    Sau ascunderea lui completă:
     <example>
-     <title>Folosirea extensiilor PHP necunoscute</title>
+     <title>Utilizarea tipurilor necunoscute în calitate de extensii PHP</title>
      <programlisting role="apache-conf">
 <![CDATA[
-# Face codul PHP sa aiba extensii ciudate
+# Face codul PHP să aibă extensii ciudate
 AddType application/x-httpd-php .bop .foo .133t
 ]]>
      </programlisting>
     </example>
-    Se poate de asemenea deghizarea drept cod HTML, dar acest lucru
-    are un impact minor asupra vitezei de rulare, pentru ca tot codul
-    html va fi procesat de motorul PHP:
+    Sau deghizarea drept cod HTML, dar acest lucru are un impact minor asupra 
+    performanţei, deoarece tot codul HTML va fi procesat de motorul PHP:
     <example>
      <title>Folosirea tipurilor HTML pentru extensiile PHP</title>
      <programlisting role="apache-conf">
 <![CDATA[
-# Face codul PHP sa arate ca HTML
+# Face codul PHP să arate ca HTML
 AddType application/x-httpd-php .htm .html
 ]]>
      </programlisting>
     </example>
-    Pentru ca aceasta modificare sa functioneze eficient, trebuie sa redenumiti
-    toate fisierele PHP cu extensiile de mai sus. Aceasta metoda reprezinta
-    aplicarea securitatii prin obscuritate si reprezinta o metoda minora de securitate
-    cu impact la fel de mic asupra vitezei de procesare a scripturilor.
+    Pentru ca această modificare să funcţioneze eficient, trebuie să redenumiţi
+    toate fişierele PHP cu extensiile de mai sus. În timp ce aceasta reprezintă
+    o formă a securităţii prin obscuritate, este o măsură de prevenire minoră, 
+    cu mici neajunsuri.
    </para>
   </chapter>
 
