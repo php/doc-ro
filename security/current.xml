@@ -1,20 +1,22 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- $Revision: 1.3 $ -->
-<!-- EN-Revision: 1.0 Maintainer: zamolxe Status: translated -->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.3 Maintainer: zamolxe Status: translated -->
+<!-- CREDITS: simionea -->
 <!-- splitted from ./index.xml, last change in rev 1.66 -->
   <chapter xml:id="security.current" xmlns="http://docbook.org/ns/docbook">
-   <title>Cea mai noua versiune</title>
+   <title>Cea mai nouă versiune</title>
    <simpara>
-    PHP, ca si orice alt sistem, este intr-un proces constant de
-    modificare si imbunatatire. Fiecare versiune noua va include des
-    atat schiimbari minore dar si majore care repara bugurile de securitate,
-    problemele de configurare, precum si alte schimbari care au impact asupra
-    securitatii si stabilitatii sistemului dumneavoastra.
+    PHP, ca şi orice alt sistem major, este într-un proces constant de
+    examinare minuţioasă şi îmbunătăţire. Fiecare versiune nouă deseori va 
+    include atât schimbări minore cât şi majore pentru a îmbunătăţi securitatea
+    şi pentru a repara orice neajunsuri, problemele de configurare, precum şi 
+    alte schimbări care au impact asupra securităţii şi stabilităţii sistemului
+    dumneavoastră.
    </simpara>
    <simpara>
-    Ca alte limbaje de programare care lucreaza cu sistemul, cea mai buna
-    solutie este update-ul regulat, si verificarea aparitiilor ultimelor
-    versiuni stabile si schimbarile survenite in acestea.
+    Ca şi cu alte limbaje de script şi programe care rulează la nivel de 
+    sistem, cea mai bună soluţie este reînnoirea regulată şi evidenţa ultimelor
+    versiuni şi a schimbărilor survenite în acestea.
    </simpara>
   </chapter>
 
