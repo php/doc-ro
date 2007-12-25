@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.1 $ -->
-<!-- EN-Revision: 1.5 Maintainer: simionea Status: translated -->
-<section xml:id="imap.constants" xmlns="http://docbook.org/ns/docbook">
+<!-- $Revision: 1.2 $ -->
+<!-- EN-Revision: 1.6 Maintainer: simionea Status: translated -->
+<appendix xml:id="imap.constants" xmlns="http://docbook.org/ns/docbook">
  &reftitle.constants;
  &extension.constants;
  <variablelist>
@@ -733,7 +733,7 @@
    </listitem>
   </varlistentry>
  </variablelist>
-</section>
+</appendix>
 
 <!-- Translated by Simion Onea. -->
 
