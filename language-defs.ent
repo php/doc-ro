@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.34 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.37 Maintainer: simionea Status: translated -->
 
 <!-- Part titles used mostly in manual.xml itself -->
 <!ENTITY PHPManual         "Manualul PHP">
@@ -11,6 +11,34 @@
 <!ENTITY Features          "Facilităţi">
 <!ENTITY Security          "Securitatea">
 <!ENTITY FunctionReference "Informaţii de referinţă despre funcţii">
+<!ENTITY VariableandTypeRelatedExtensions         "Extensii referitoare la variabile şi tipuri">
+<!ENTITY TextProcessing                           "Procesarea textului">
+<!ENTITY AffectingPHPsBehaviour                   "Afectează comportamentul PHP">
+<!ENTITY SessionExtensions                        "Extensiile sesiunilor">
+<!ENTITY OtherBasicExtensions                     "Alte extensii de bază">
+<!ENTITY DatabaseExtensions                       "Extensii ale bazelor de date">
+<!ENTITY AbstractionLayers                        "Nivele de abstractizare">
+<!ENTITY VendorSpecificDatabaseExtensions         "Extensii ale bazelor de date specifice anumitor producători">
+<!ENTITY XMLManipulation                          "Manipularea XML">
+<!ENTITY WebServices                              "Servicii Web">
+<!ENTITY CreditCardProcessing                     "Procesarea cardurilor de credit">
+<!ENTITY MathematicalExtensions                   "Extensii matematice">
+<!ENTITY CryptographyExtensions                   "Extensii criptografice">
+<!ENTITY HumanLanguageandCharacterEncodingSupport "Susţinerea limbajului uman şi a codificării caracterelor">
+<!ENTITY FileSystemRelatedExtensions              "Extensii referitoare la sistemul de fişiere">
+<!ENTITY ProcessControlExtensions                 "Extensii de control al proceselor">
+<!ENTITY MailRelatedExtensions                    "Extensii teferitoare la poştă">
+<!ENTITY AuthenticationServices                   "Servicii de autentificare">
+<!ENTITY OtherServices                            "Alte servicii">
+<!ENTITY CompressionExtensions                    "Extensii de compresie">
+<!ENTITY CalendarandEventRelatedExtensions        "Extensii referitoare la claendar şi evenimente">
+<!ENTITY NonTextMIMEOutput                        "Ieşiri MIME non-textuale">
+<!ENTITY ImageProcessingandGeneration             "Generarea şi procesarea imaginilor">
+<!ENTITY AudioFormatsManipulation                 "Manipularea cu formatele audio">
+<!ENTITY CommandLineSpecificExtensions            "Extensii specifice liniei de comandă">
+<!ENTITY WindowsOnlyExtensions                    "Extensii doar pentru Windows">
+<!ENTITY ServerSpecificExtensions                 "Extensii specifice serverului">
+<!ENTITY MiscExtensions                           "Extensii diverse">
 <!ENTITY PECLReference     "Informaţii de referinţă despre funcţiile PECL">
 <!ENTITY AddOnReference    "Informaţii de referinţă despre funcţiile extensiilor suplimentare">
 <!ENTITY Appendices        "Anexe">
@@ -39,6 +67,7 @@
 supplemental files to mark section titles -->
 <!ENTITY reftitle.changelog    '<title>Istoria schimbărilor</title>'>
 <!ENTITY reftitle.classes      '<title>Clase predefinite</title>'>
+<!ENTITY reftitle.classsynopsis '<title>Sinopsisul clasei</title>'>
 <!ENTITY reftitle.constants    '<title>Constante predefinite</title>'>
 <!ENTITY reftitle.constructor  '<title>Constructorul</title>'>
 <!ENTITY reftitle.description  '<title>Descrierea</title>'>
