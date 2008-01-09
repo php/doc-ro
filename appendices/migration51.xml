@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.1 $ -->
-<!-- EN-Revision: 1.5 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.2 $ -->
+<!-- EN-Revision: 1.7 Maintainer: simionea Status: translated -->
 <appendix xml:id="migration51" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Migrarea de la PHP 5.0.x la PHP 5.1.x</title>
 
@@ -664,8 +664,8 @@ class test {
     Zend Engine 2.1 API le permite programatorilor de extensii să declare 
     constante de clasă în extensii obiect-orientate. Extensiile noi scrise 
     pentru PHP 5.1.x, inclusiv <link linkend="ref.spl">SPL</link>,
-    <link linkend="ref.pdo">PDO</link>,
-    <link linkend="ref.xmlreader">XMLReader</link> şi
+    <link linkend="intro.pdo">PDO</link>,
+    <link linkend="book.xmlreader">XMLReader</link> şi
     <link linkend="ref.datetime">date</link>, îşi au constantele în formatul 
     <constant>PDO::CLASS_CONSTANT</constant> şi nu în formatul C
     <constant>PDO_CLASS_CONSTANT</constant> pentru a minimiza poluarea 
@@ -750,7 +750,7 @@ class test {
   <section xml:id="migration51.databases-pdo">
    <title>Prezentarea generală a PDO</title>
    <para>
-    <link linkend="ref.pdo">PHP Data Objects (PDO) &mdash; Obiectele de Date 
+    <link linkend="intro.pdo">PHP Data Objects (PDO) &mdash; Obiectele de Date 
     PHP</link> au fost introduse ca extensii PECL în PHP 5.0 şi au devenit 
     parte componentă a distributivului PHP în versiunea PHP 5.1.x. Extensia PDO
     furnizează o interfaţă consistentă pentru acces la baze de date şi este 
@@ -759,7 +759,7 @@ class test {
     de date, dar funcţionalitatea de bază de acces la date, cum ar fi 
     efectuarea interpelărilor şi primirea datelor, este asigurată de funcţiile 
     PDO utilizând driver-ul indicat în
-    <link linkend="function.PDO-construct">PDO::__construct()</link>.
+    <function>PDO::__construct</function>.
    </para>
    <para>
     Observaţi că extensia PDO şi driver-ele sale se intenţionează a fi 
