@@ -302,6 +302,12 @@
     <romanian_example>După această operaţie handle-ul devine invalid.</romanian_example>
   </term>
   <term>
+    <english>handler</english>
+    <romanian>handler</romanian>
+    <english_example>You must write a user-defined handler.</english_example>
+    <romanian_example>Trebuie să scrieţi un handler definit de utilizator.</romanian_example>
+  </term>
+  <term>
     <english>driver</english>
     <romanian>driver</romanian>
     <english_example>The PDO extension uses specific drivers.</english_example>
@@ -384,5 +390,29 @@
     <romanian>indigen</romanian>
     <english_example>This is a native PHP type.</english_example>
     <romanian_example>Acesta este un tip PHP indigen.</romanian_example>
+  </term>
+  <term>
+    <english>upgrade</english>
+    <romanian>îmbunătăţire || reînnoire</romanian>
+    <english_example>You must upgrade your system to the latest PHP version.</english_example>
+    <romanian_example>Trebuie să reînnoiţi sistemul până la ultima versiune PHP.</romanian_example>
+  </term>
+  <term>
+    <english>pattern</english>
+    <romanian>şablon</romanian>
+    <english_example>This function uses a pattern to find the files.</english_example>
+    <romanian_example>Această funcţie utilizează un şablon pentru a găsi fişierele.</romanian_example>
+  </term>
+  <term>
+    <english>security fix</english>
+    <romanian>corectare a unei probleme de securitate</romanian>
+    <english_example>This security fix must be installed as soon as possibe.</english_example>
+    <romanian_example>Această corectare a problemei de securitate trebuie instalată cât mai curând posibil.</romanian_example>
+  </term>
+  <term>
+    <english>type hint</english>
+    <romanian>indicator explicit al tipului</romanian>
+    <english_example>You can use type hints in function definitions.</english_example>
+    <romanian_example>Puteţi utiliza indicatori expliciţi ai tipului în definiţiile funcţiilor.</romanian_example>
   </term>
 </dictionary>
