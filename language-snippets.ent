@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.213 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.214 Maintainer: simionea Status: translated -->
 <!-- Keep 'em sorted -->
 
 <!-- Notes -->
@@ -894,6 +894,16 @@ a afla valorile posibile.'>
   care este mai obişnuită şi mai naturală pentru a accesa proprietăţile, sau 
   pentru a apela metodele.
  </simpara>
+</note>
+'>
+
+<!-- phar -->
+<!ENTITY phar.write '<note xmlns="http://docbook.org/ns/docbook">
+<para>
+ Această funcţie necesită ca parametrul INI <literal>phar.readonly</literal> să
+ fie stabilit în 0 pentru a funcţiona. În caz contrar va fi aruncată o excepţie
+ <classname>PharException</classname>.
+</para>
 </note>
 '>
 
