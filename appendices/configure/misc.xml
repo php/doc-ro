@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.6 $ -->
-<!-- EN-Revision: 1.4 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.7 $ -->
+<!-- EN-Revision: 1.5 Maintainer: simionea Status: translated -->
  <sect3 xml:id="configure.options.misc" xmlns="http://docbook.org/ns/docbook">
   <title>Opţiuni diverse</title>
   <variablelist>
@@ -213,67 +213,6 @@
      <para>
       Exportă numai simbolurile necesare.
       Vezi INSTALL pentru informaţii suplimentare.
-     </para>
-    </listitem>
-   </varlistentry>
-
-   <varlistentry xml:id="configure.with-ismp">
-    <term>
-     <option role="configure">--with-imsp[=DIR]</option>
-    </term>
-    <listitem>
-     <para>
-      Include susţinerea IMSp (DIR este directorul de includere al IMSP
-      şi directorul libimsp.a).
-      Nuami PHP 3!
-     </para>
-    </listitem>
-   </varlistentry>
-
-   <varlistentry xml:id="configure.with-mck">
-    <term>
-     <option role="configure">--with-mck[=DIR]</option>
-    </term>
-    <listitem>
-     <para>
-      Include susţinerea Cybercash MCK. DIR este directorul unde a fost
-      asamblat cybercash mck, implicit este
-      /usr/src/mck-3.2.0.3-linux . Pentru ajutor accesaţi
-      extra/cyberlib. Numai în PHP 3!
-     </para>
-    </listitem>
-   </varlistentry>
-
-   <varlistentry xml:id="configure.with-mod-dav">
-    <term>
-     <option role="configure">--with-mod-dav=DIR</option>
-    </term>
-    <listitem>
-     <para>
-      Include susţinerea DAV prin mod_dav al Apache,
-      DIR este directorul de instalare al mod_dav (Numai versiunea
-      de modul Apache!) Numai în PHP 3!
-     </para>
-    </listitem>
-   </varlistentry>
-   <varlistentry xml:id="configure.enable-debugger">
-    <term>
-     <option role="configure">--enable-debugger</option>
-    </term>
-    <listitem>
-     <para>
-      Compilează cu funcţiile de debugging la distanţă. Numai în PHP 3!
-     </para>
-    </listitem>
-   </varlistentry>
-   <varlistentry xml:id="configure.enable-versioning.php3">
-    <term>
-     <option role="configure">--enable-versioning</option>
-    </term>
-    <listitem>
-     <para>
-      Profitaţi de avantajul divizării pe versiuni şi ţeluri, oferit de
-      Solaris 2.x şi Linux. Numai în PHP 3!
      </para>
     </listitem>
    </varlistentry>
