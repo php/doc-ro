@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.11 $ -->
+<!-- $Revision: 1.12 $ -->
 <!-- EN-Revision: 1.62 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -2821,12 +2821,6 @@
        <entry>PHP_INI_ALL în PHP &lt;= 4.0.2. PHP_INI_SYSTEM în PHP &lt;= 4.0.3.</entry>
       </row>
       <row>
-       <entry><link linkend="ini.sybase.compatability-mode">sybase.compatability_mode</link></entry>
-       <entry>"0"</entry>
-       <entry>PHP_INI_ALL</entry>
-       <entry></entry>
-      </row>
-      <row>
        <entry>sybase.hostname</entry>
        <entry>NULL</entry>
        <entry>PHP_INI_ALL</entry>
@@ -4895,55 +4889,6 @@ include_path=".;c:\php\includes"
       </varlistentry>
      </variablelist>
     </para>
-   </section>
-
-   <section xml:id="ini.sect.debugger">
-    <title>Directivele de configurare ale debugger-ului</title>
-    <caution>
-     <para>
-      Numai PHP 3 are implementat un debugger implicit, pentru mai multe 
-      informaţii, accesaţi <xref linkend="debugger"/>.
-     </para>
-    </caution>
-
-    <variablelist>
-     <varlistentry xml:id="ini.debugger.host">
-      <term>
-       <parameter>debugger.host</parameter>
-       <type>string</type>
-      </term>
-      <listitem>
-       <para>
-        Numele DNS sau adresa IP a serverului utilizat de către debugger.
-       </para>
-      </listitem>
-     </varlistentry>
-
-     <varlistentry xml:id="ini.debugger.port">
-      <term>
-       <parameter>debugger.port</parameter>
-       <type>string</type>
-      </term>
-      <listitem>
-       <para>
-        Numărul portului utilizat de către debugger.
-       </para>
-      </listitem>
-     </varlistentry>
-
-     <varlistentry xml:id="ini.debugger.enabled">
-      <term>
-       <parameter>debugger.enabled</parameter>
-       <type>boolean</type>
-      </term>
-      <listitem>
-       <para>
-        Indică dacă debugger-ul este activat.
-       </para>
-      </listitem>
-     </varlistentry>
-
-    </variablelist>
    </section>
  </section>
 </appendix>
