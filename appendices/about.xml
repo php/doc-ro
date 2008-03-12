@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.4 $ -->
-<!-- EN-Revision: 1.50 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.5 $ -->
+<!-- EN-Revision: 1.52 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="about" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Despre manual</title>
@@ -136,7 +136,7 @@
 <![CDATA[
 strlen
 
-(PHP 3, PHP 4, PHP 5)
+(PHP 4, PHP 5)
 strlen -- Obţine lungimea şirului de caractere
 
 Descrierea
@@ -167,10 +167,10 @@ int strlen ( string $string )
         </row>
         <row>
          <entry>
-          (PHP 3, PHP 4, PHP 5)
+          (PHP 4, PHP 5, PHP 6)
          </entry>
          <entry>
-          strlen() este prezentă în toate versiunile PHP 3, PHP 4 şi PHP 5
+          strlen() este prezentă în toate versiunile PHP 4, PHP 5 şi PHP 6
          </entry>
         </row>
         <row>
@@ -249,7 +249,7 @@ int strlen ( string $string )
      </screen>
     </para>
     <para>
-     Aceasta înseamnă că această funcţie nu a fost disponibilă în PHP 3, şi este
+     Aceasta înseamnă că această funcţie a devenit
      disponibilă numai începând cu versiunea PHP 4.3.0.
     </para>
  </sect1>
@@ -257,10 +257,11 @@ int strlen ( string $string )
  <sect1 xml:id="about.phpversions">
   <title>Versiunile PHP documentate în acest manual</title>
   <para>
-   Această documentaţie conţine informaţii despre versiunile curente şi viitoare ale
-   PHP, cu unele note în privinţa migrării şi compatibilităţii cu PHP 3. Comportamentul,
-   parametrii, valoarea întoarsă şi alte schimbări între diferite versiuni PHP sunt
-   documentate în adnotări şi în textul manualului.
+   Acest manual conţine informaţii despre versiunile trecute, curente şi viitoare ale
+   PHP. Schimbările în comportament sunt documentate ca adnotări, jurnale ale
+   schimbărilor, texte incluse în paginile manualului.
+   Cea mai anterioară versiune documentată este PHP 4.1.0, în timp ce ultima este
+   PHP 6.x.x
   </para>
   <para>
    Există documentaţia parţială a versiunii PHP din CVS, ceea ce întotdeauna înseamnă
