@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.6 $ -->
-<!-- EN-Revision: 1.44 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.7 $ -->
+<!-- EN-Revision: 1.46 Maintainer: simionea Status: translated -->
 <!-- CREDITS: spooky -->
  <chapter xml:id="introduction" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <info><title>Introducere</title></info>
@@ -9,19 +9,19 @@
    <info><title>Ce este PHP?</title></info>
    <para>
     <acronym>PHP</acronym> (acronim recursiv pentru "PHP: Hypertext
-    Preprocessor") este un limbaj de scripting de uz general,
-    cu cod-sursă deschis (Open Source), utilizat pe scară largă,
-    şi care este potrivit în special pentru dezvoltarea
-    aplicaţiilor Web şi poate fi integrat în HTML.
+    Preprocessor") este un limbaj de scripting de uz general, cu cod-sursă 
+    deschis (open source), utilizat pe scară largă, şi care este potrivit în 
+    special pentru dezvoltarea aplicaţiilor web şi poate fi integrat în HTML.
    </para>
    <para>
-    Un răspuns simplu, dar totuşi ce înseamnă aceasta? Un exemplu:
+    Frumos, dar totuşi ce înseamnă aceasta? Un exemplu:
    </para>
    <para>
     <example>
      <info><title>Un exemplu introductiv</title></info>
      <programlisting role="php">
 <![CDATA[
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
     <head>
         <title>Exemplu</title>
@@ -39,23 +39,21 @@
     </example>
    </para>
    <para>
-    Observaţi cum acesta diferă de un script scris în alte limbaje,
-    cum ar fi Perl sau C -- în loc de a scrie un program cu o mulţime
-    de comenzi pentru a afişa HTML, trebuie să scrieţi un script HTML
-    cu cod-sursă încorporat, care realizează ceva (în acest caz,
-    afişează un text). Codul-sursă PHP este încorporat între nişte
-    <link linkend="language.basic-syntax.phpmode">etichete de început
-    şi de sfârşit</link> speciale care vă permit să intraţi şi să
-    ieşiţi din "modul PHP".
+    În locul unei mulţimi de comenzi pentru a afişa HTML (cum este cazul în C 
+    sau Perl), paginile PHP conţin HTML cu cod-sursă încorporat, care 
+    realizează "ceva" (în acest caz, afişează "Salut, sunt un script PHP!"). 
+    Codul-sursă PHP este încorporat între nişte
+    <link linkend="language.basic-syntax.phpmode">instrucţiuni de procesare de 
+    început şi de sfârşit</link> speciale <code>&lt;?php</code> şi
+    <code>?&gt;</code>, care vă permit să intraţi şi să ieşiţi din "modul PHP".
    </para>
    <para>
     Ceea ce face PHP să difere de un JavaScript de partea clientului
-    este că codul său este executat pe server. Dacă aţi avea un script
-    similar celui de mai sus pe serverul dumneavoastră, clientul
-    ar primi rezultatele rulării acelui script, fără a putea determina
-    care este codul-sursă ce stă la bază. Dumneavoastră chiar puteţi să
-    configuraţi web server-ul să proceseze toate fişierele HTML cu PHP,
-    şi atunci într-adevăr nu va fi nici o modalitate ca utilizatorii să
+    este că codul său este executat pe server, generând HTML care este apoi 
+    trimis către client. Clientul va primi rezultatele rulării acelui script, 
+    fără a putea cunoaşte codul-sursă ce stă la bază. Dumneavoastră chiar 
+    puteţi să configuraţi web server-ul să proceseze toate fişierele HTML cu 
+    PHP, şi atunci într-adevăr nu va fi nici o modalitate ca utilizatorii să
     afle ce aveţi ascuns în mânecă.
    </para>
    <para>
