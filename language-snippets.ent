@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.214 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.216 Maintainer: simionea Status: translated -->
 <!-- Keep 'em sorted -->
 
 <!-- Notes -->
@@ -12,161 +12,177 @@ funcţii sunt stocate în cache. Accesaţi <function>clearstatcache</function>
 pentru mai multe detalii.</simpara></note>'>
 
 <!ENTITY note.context-support '<note><simpara>Susţinrea contextelor a fost
-adăugată începând cu PHP 5.0.0. Pentru o descriere a <literal>contextelor</literal>,
-referiţi-vă la <xref linkend="ref.stream"/>.</simpara></note>'>
+adăugată începând cu PHP 5.0.0. Pentru o descriere a
+<literal>contextelor</literal>, referiţi-vă la
+<xref linkend="ref.stream"/>.</simpara></note>'>
 
-<!ENTITY note.exec-bg '<note><para>Dacă lansaţi în execuţie un program cu ajutorul
-acestei funcţii şi doriţi să-l lăsaţi să ruleze în fundal, trebuie să vă asiguraţi
-că ieşirile acelui program sunt redirecţionate spre un fişier sau spre un alt flux
-de ieşire. În caz contrar, PHP se va suspenda până când execuţia programului nu se
-va încheia.</para></note>'>
+<!ENTITY note.exec-bg '<note><para>Dacă un program este lansat în execuţie cu
+ajutorul acestei funcţii, pentru ca el să continue să ruleze în fundal,
+ieşirile acelui program trebuie redirecţionate spre un fişier sau
+spre un alt flux de ieşire. În caz contrar, PHP se va suspenda până când 
+execuţia programului se va încheia.</para></note>'>
 
-<!ENTITY note.func-callback '<note><simpara>În locul denumirii funcţiei poate fi
-indicat un masiv conţinând o referinţă la obiect şi o denumire a metodei.</simpara></note>'>
-
-<!ENTITY note.funcnoparam '<note><para>Deoarece această funcţie îşi determină detaliile
-parametrilor în dependenţă de circumstanţă, ea nu poate fi utilizată în calitate de
-parametru-funcţie. Dacă trebuie să transmiteţi această valoare, atribuiţi rezultatele
-unei variabile, apoi transmiteţi variabila.</para></note>'>
-
-<!ENTITY note.line-endings '<note><simpara>Dacă aveţi probleme de genul:
-PHP nu recunoaşte terminaţia liniilor când citeşte fişiere create, sau aflate pe un
-computer Macintosh, atunci ar trebui să activaţi opţiunea de configurare la rulare
-<link linkend="ini.auto-detect-line-endings">auto_detect_line_endings</link>.
+<!ENTITY note.func-callback '<note><simpara>În locul denumirii funcţiei poate
+fi indicat un masiv conţinând o referinţă la obiect şi o denumire a metodei.
 </simpara></note>'>
 
-<!ENTITY note.no-remote '<note><simpara>Această funcţie nu va lucra cu
-<link linkend="features.remote-files">fişiere la distanţă</link>, deoarece fişierul care
-trebuie să fie examinat trebuie să fie accesibil prin intermediul sistemului de fişiere
-al serverului.</simpara></note>'>
+<!ENTITY note.funcnoparam '<note><para>Deoarece această funcţie îşi determină
+detaliile parametrilor în dependenţă de circumstanţă, ea nu poate fi utilizată
+în calitate de parametru-funcţie. Dacă trebuie transmisă această valoare,
+atunci rezultatele trebuie atribuite unei variabile, şi această variabilă
+trebuie transmisă.</para>
+</note>'>
 
-<!ENTITY note.not-bin-safe '<warning><simpara>Această funcţie nu funcţionează stabil
-(deocamdată) cu date binare!</simpara></warning>'>
+<!ENTITY note.line-endings '<note><simpara>Dacă PHP nu recunoaşte corect 
+terminaţiile liniilor atunci când citeşte fişiere pe, sau create pe un 
+computer Macintosh, atunci activând opţiunea de configurare la rulare
+<link linkend="ini.auto-detect-line-endings">auto_detect_line_endings</link> 
+ar trebui să ajute la soluţionarea problemei.</simpara></note>'>
+
+<!ENTITY note.no-remote '<note><simpara>Această funcţie nu va lucra cu
+<link linkend="features.remote-files">fişiere la distanţă</link>, deoarece
+fişierul care trebuie să fie examinat trebuie să fie accesibil prin 
+intermediul sistemului de fişiere al serverului.</simpara></note>'>
+
+<!ENTITY note.not-bin-safe '<warning><simpara>Această funcţie nu funcţionează 
+stabil (deocamdată) cu date binare!</simpara></warning>'>
 
 <!ENTITY note.no-key-association '<note><simpara>Această funcţie
 atribuie chei noi elementelor din <parameter>array</parameter>.
-Ea va elimina cheile existente, pe care posibil le-aţi atribuit,
+Ea va elimina cheile existente, care posibil au fost atribuite,
 în loc doar să rearanjeze cheile.</simpara></note>'>
 
-<!ENTITY note.no-windows '<note><simpara>Această funcţie nu este implementată pe
-platformele Windows.</simpara></note>'>
-
-<!ENTITY note.no-windows.extension '<note><simpara>Această extensie nu este disponibilă
+<!ENTITY note.no-windows '<note><simpara>Această funcţie nu este implementată
 pe platformele Windows.</simpara></note>'>
 
-<!ENTITY note.randomseed '<note><simpara>Începând cu PHP 4.2.0 nu este nevoie de a
-însămânţa generatorul de numere aleatoare prin intermediul <function>srand</function> sau
-<function>mt_srand</function>, deoarece aceasta se efectuează în mod automat.
-</simpara></note>'>
+<!ENTITY note.no-windows.extension '<note><simpara>Această extensie nu este
+disponibilă pe platformele Windows.</simpara></note>'>
 
-<!ENTITY note.registerglobals '<note><title>register_globals: notă importantă</title>
-<para>Începând cu PHP 4.2.0, valoarea implicită pentru directiva PHP
+<!ENTITY note.randomseed '<note><simpara>Începând cu PHP 4.2.0 nu este nevoie
+de a însămânţa generatorul de numere aleatoare prin intermediul
+<function>srand</function> sau <function>mt_srand</function>, deoarece aceasta
+se efectuează în mod automat.</simpara></note>'>
+
+<!ENTITY note.registerglobals '<note><title>register_globals: notă importantă
+</title><para>Începând cu PHP 4.2.0, valoarea implicită pentru directiva PHP
 <link linkend="ini.register-globals">register_globals</link> este <emphasis>
-off</emphasis>, şi este eliminată complet începând cu PHP 6.0.0. Comunitatea PHP îi
-încurajează pe toţi să nu se bazeze pe această directivă, dar să utilizeze alte mijloace,
-cum ar fi &link.superglobals;.
+off</emphasis>, şi este eliminată complet începând cu PHP 6.0.0. Comunitatea
+PHP îi încurajează pe toţi programatorii să nu se bazeze pe această directivă,
+dar să utilizeze alte mijloace, cum ar fi &link.superglobals;.</para></note>'>
+
+<!ENTITY note.superglobals '<note><title>Superglobalele: notă despre 
+disponibilitate</title><para>Masivele superglobale, cum
+ar fi <varname>$_GET</varname>, <varname>$_POST</varname> şi
+<varname>$_SERVER</varname>, etc. sunt disponibile începând cu PHP 4.1.0. 
+Pentru mai multe informaţii, citiţi secţiunea manualului despre 
+&link.superglobals;</para></note>'>
+
+<!ENTITY note.uses-ob '<note><para>Această funcţie utilizează buferizarea 
+internă a ieşirilor cu acest parametru, de aceea ea nu poate fi utilizată în
+interiorul funcţiei de apel invers (callback) <function>ob_start</function>.
 </para></note>'>
-
-<!ENTITY note.superglobals '<note><title>Superglobalele: notă despre disponibilitate</title>
-<para>Începând cu PHP 4.1.0, masivele superglobale, cum ar fi <varname>$_GET</varname>,
-<varname>$_POST</varname> şi <varname>$_SERVER</varname>, etc. sunt disponibile.
-Pentru mai multe informaţii, citiţi secţiunea manualului despre &link.superglobals;</para></note>'>
-
-<!ENTITY note.uses-ob '<note><para>Această funcţie utilizează în interior buferizarea
-ieşirilor cu acest parametru, de aceea ea nu poate fi utilizată în interiorul funcţiei
-de apel invers (callback) <function>ob_start</function>.</para></note>'>
 
 <!-- Tips -->
 
-<!ENTITY tip.fopen-wrapper '<tip><simpara>Puteţi utiliza un URL în calitate
-de denumire a fişierului în această funcţie dacă <link linkend="ini.allow-url-fopen">
-învelişurile fopen</link> au fost activate.
-Accesaţi <function>fopen</function> pentru mai multe detalii despre modul de specificare
-a denumirii fişierului şi <xref linkend="wrappers"/> pentru lista protocoalelor URL susţinute.
-</simpara></tip>'>
+<!ENTITY tip.fopen-wrapper '<tip><simpara>Un URL poate fi utilizat în calitate
+de denumire a fişierului în această funcţie dacă
+<link linkend="ini.allow-url-fopen"> învelişurile fopen</link> au fost
+activate. Accesaţi <function>fopen</function> pentru mai multe detalii despre
+modul de specificare a denumirii fişierului şi <xref linkend="wrappers"/>
+pentru lista protocoalelor URL susţinute.</simpara></tip>'>
 
-<!ENTITY tip.fopen-wrapper.stat '<tip><simpara>Începând cu PHP 5.0.0 această funcţie
-poate fi utilizată de asemenea cu <emphasis>unele</emphasis> învelişuri URL. Referiţi-vă la
-<xref linkend="wrappers"/> pentru lista învelişurilor care susţin familia de funcţionalitate
+<!ENTITY tip.fopen-wrapper.stat '<tip><simpara>Începând cu PHP 5.0.0 această
+funcţie poate fi utilizată de asemenea cu <emphasis>unele</emphasis> 
+învelişuri URL. Referiţi-vă la <xref linkend="wrappers"/> pentru lista 
+învelişurilor care susţin familia de funcţionalitate
 <function>stat</function>.</simpara></tip>'>
 
-<!ENTITY tip.ob-capture '<tip><simpara>La fel ca şi orice program/script ce afişează
-rezultatele direct în browser, puteţi utiliza <link linkend="ref.outcontrol">funcţiile
-de control al ieşirilor</link> pentru a capta ieşirea acestei funcţii şi de a o salva într-un
+<!ENTITY tip.ob-capture '<tip><simpara>La fel ca şi orice program/script ce 
+afişează rezultatele direct în browser,
+<link linkend="ref.outcontrol">funcţiile de control al ieşirilor</link> pot fi
+utilizate pentru a capta ieşirea acestei funcţii şi de a o salva într-un
 <type>string</type> (spre exemplu).</simpara></tip>'>
 
-<!ENTITY tip.userlandnaming '<tip><simpara>Ar fi bine să accesaţi şi
+<!ENTITY tip.userlandnaming '<tip><simpara>Accesaţi de asemenea 
 <xref linkend="userlandnaming" />.</simpara></tip>'>
 
 
 <!-- Warnings -->
 
-<!ENTITY warn.escapeshell '<warning><para>Dacă doriţi să permiteţi ca datele
-introduse de utilizatori să fie transmise acestei funcţii, atunci ar trebui
-să utilizaţi <function>escapeshellarg</function> sau <function>escapeshellcmd</function>
-pentru a vă asigura că utilizatorii nu vor păcăli sistemul să execute comenzi arbitrare.
-</para></warning>'>
+<!ENTITY warn.escapeshell '<warning><para>Când se permite ca datele
+introduse de utilizatori să fie transmise acestei funcţii, utilizaţi <function>escapeshellarg</function> sau
+<function>escapeshellcmd</function> pentru a vă asigura că utilizatorii nu vor
+păcăli sistemul să execute comenzi arbitrare.</para></warning>'>
 
-<!ENTITY warn.experimental '<warning xmlns="http://docbook.org/ns/docbook"><simpara>
-Această extensie este <emphasis>EXPERIMENTALĂ</emphasis>. Comportamentul acestei extensii --
-inclusiv denumirile funcţiilor sale şi orice alte aspecte documentate în privinţa
-acestei extensii -- pot să fie modificate fără preaviz într-o versiune viitoare a PHP. 
-Utilizaţi această extensie la propriul risc.</simpara></warning>'>
+<!ENTITY warn.experimental '<warning xmlns="http://docbook.org/ns/docbook">
+<simpara>Această extensie este <emphasis>EXPERIMENTALĂ</emphasis>. 
+Comportamentul acestei extensii &#2014; inclusiv denumirile funcţiilor sale şi
+orice alte aspecte documentate în privinţa acestei extensii &#2014; pot să fie
+modificate fără preaviz într-o versiune viitoare a PHP. Utilizaţi această 
+extensie la propriul risc.</simpara></warning>'>
 
-<!ENTITY warn.deprecated.removed-6-0-0 '<warning xmlns="http://docbook.org/ns/docbook"><simpara>Această facilitate este
-<emphasis>DEZAPROBATĂ</emphasis> şi este <emphasis>ELIMINATĂ</emphasis> începând cu PHP 6.0.0.
-Utilizarea acestei facilităţi este foarte nerecomandată.</simpara></warning>'>
+<!ENTITY warn.deprecated.removed-6-0-0 '<warning xmlns="http://docbook.org/ns/docbook">
+<simpara>Această facilitate este <emphasis>DEZAPROBATĂ</emphasis> şi este 
+<emphasis>ELIMINATĂ</emphasis> începând cu PHP 6.0.0. Utilizarea acestei 
+facilităţi este foarte nerecomandată.</simpara></warning>'>
 
-<!ENTITY warn.deprecated.function.removed-5-3-0 '<warning xmlns="http://docbook.org/ns/docbook"><simpara>Această funcţie este
-<emphasis>DEZAPROBATĂ</emphasis> şi este <emphasis>ELIMINATĂ</emphasis> începând cu PHP 5.3.0.</simpara></warning>'>
+<!ENTITY warn.deprecated.function.removed-5-3-0 '<warning xmlns="http://docbook.org/ns/docbook">
+<simpara>Această funcţie este <emphasis>DEZAPROBATĂ</emphasis> şi este 
+<emphasis>ELIMINATĂ</emphasis> începând cu PHP 5.3.0.</simpara></warning>'>
 
-<!ENTITY warn.experimental.func '<warning xmlns="http://docbook.org/ns/docbook"><simpara>
-Această funcţie este <emphasis>EXPERIMENTALĂ</emphasis>. Comportamentul acestei funcţii,
-denumirea sa şi orice alte aspecte documentate în privinţa
-acestei funcţii pot să fie modificate fără preaviz într-o versiune viitoare a PHP. 
-Utilizaţi această funcţie la propriul risc.</simpara></warning>'>
+<!ENTITY warn.experimental.func '<warning xmlns="http://docbook.org/ns/docbook">
+<simpara>Această funcţie este <emphasis>EXPERIMENTALĂ</emphasis>. 
+Comportamentul acestei funcţii, denumirea sa şi orice alte aspecte documentate
+în privinţa acestei funcţii pot să fie modificate fără preaviz într-o versiune
+viitoare a PHP. Utilizaţi această funcţie la propriul risc.</simpara>
+</warning>'>
 
 <!ENTITY warn.imaprecodeyaz '<warning><simpara>Extensiile <link
 linkend="ref.imap">IMAP</link>, <link linkend="ref.recode">recode</link>,
 <link linkend="ref.yaz">YAZ</link> şi <link linkend="ref.cyrus">Cyrus</link>
-nu pot fi utilizate împreună, deoarece ele utilizează acelaşi simbol
-intern.</simpara></warning>'>
+nu pot fi utilizate împreună, deoarece ele utilizează aceleaşi simboluri
+interne.</simpara></warning>'>
 
-<!ENTITY warn.install.cgi '<warning><para>În cazul utilizării regimului CGI,
-serverul dumneavoastră este susceptibil câtorva atacuri posibile. Vă rugăm să citiţi
-<link linkend="security.cgi-bin">secţiunea despre securitatea CGI</link> pentru a afla
-cum să vă apăraţi de aceste atacuri.</para></warning>'>
+<!ENTITY warn.install.cgi '<warning><para>Un server configurat în regim CGI
+este susceptibil câtorva atacuri posibile. Vă rugăm să citiţi
+<link linkend="security.cgi-bin">secţiunea despre securitatea CGI</link> 
+pentru a afla cum să vă apăraţi de astfel de atacuri.</para></warning>'>
 
-<!ENTITY note.magicquotes.gpc '<note><title>Notă asupra directivei: magic_quotes_gpc
-</title><para>Directiva PHP <link linkend="ini.magic-quotes-gpc">
-magic_quotes_gpc</link> are valoarea implicită <literal>on</literal>. În esenţă ea
-execută <function>addslashes</function> asupra tuturor datelor GET, POST şi COOKIE.
-Puteţi să utilizaţi <function>stripslashes</function> pentru a elimina slash-urile
-suplimentare.</para></note>'>
+<!ENTITY note.magicquotes.gpc '<note><title>Notă asupra directivei: 
+magic_quotes_gpc</title><para>Directiva
+<link linkend="ini.magic-quotes-gpc">magic_quotes_gpc</link> are valoarea 
+implicită <literal>on</literal>. În esenţă ea execută
+<function>addslashes</function> asupra tuturor datelor GET, POST şi COOKIE.
+<function>stripslashes</function> poate fi utilizată pentru a elimina 
+slash-urile suplimentare.</para></note>'>
 
-<!ENTITY warn.no-win32-fopen-wrapper '<warning><para>Versiunile PHP pentru Windows
-până la PHP 4.3.0 nu susţin accesarea fişierelor la distanţă prin intermediul
-acestei funcţii, chiar dacă <link linkend="ini.allow-url-fopen">allow_url_fopen</link>
-este activată.</para></warning>'>
+<!ENTITY warn.no-win32-fopen-wrapper '<warning><para>Versiunile PHP pentru 
+Windows până la PHP 4.3.0 nu susţin accesarea fişierelor la distanţă prin 
+intermediul acestei funcţii, chiar dacă <link linkend="ini.allow-url-fopen">
+allow_url_fopen</link> este activată.</para></warning>'>
 
-<!ENTITY warn.ssl-non-standard '<warning><para>La utilizarea SSL, Microsoft IIS
-va viola protocolul prin închiderea conexiunii fără a trimite un indicator
-close_notify. PHP va raporta aceasta ca "SSL: Fatal Protocol Error" (eroare fatală
-de protocol) când se ajunge la sfârşitul datelor. Pentru a evita aceasta trebuie să
-coborâţi nivelul <link linkend="ini.error-reporting">error_reporting</link> pentru
-a nu include avertizări. PHP 4.3.7 şi versiunile ulterioare pot detecta soft-ul
-de server IIS care produce astfel de greşeli când deschideţi fluxul utilizând
-învelişul https:// şi va suprima automat avertizările. Dacă utilizaţi
-<function>fsockopen</function> pentru a crea un socket ssl:// sunteţi responsabil
-singur să detectaţi şi să suprimaţi avertizarea.</para></warning>'>
+<!ENTITY warn.ssl-non-standard '<warning><para>La utilizarea SSL, Microsoft 
+IIS va viola protocolul prin închiderea conexiunii fără a trimite un indicator
+<literal>close_notify</literal>. PHP va raporta aceasta ca "SSL: Fatal 
+Protocol Error" (eroare fatală de protocol) când se ajunge la sfârşitul 
+datelor. Pentru a evita aceasta coborât nivelul
+<link linkend="ini.error-reporting">error_reporting</link> pentru a nu include
+avertizări. PHP 4.3.7 şi versiunile ulterioare pot detecta soft-ul de server 
+IIS care produce astfel de greşeli când deschideţi fluxul utilizând învelişul 
+<literal>https://</literal> şi va suprima automat avertizările. La utilizarea
+<function>fsockopen</function> pentru a crea un socket
+<literal>ssl://</literal> programatorul este responsabil să detecteze şi să 
+suprime această avertizare.</para></warning>'>
 
 <!ENTITY warn.undocumented.func '<warning><simpara>Această funcţie nu este
-documentată în prezent; este disponibilă numai lista de argumente.</simpara></warning>'>
+documentată în prezent; este disponibilă numai lista sa de argumente.
+</simpara></warning>'>
 
 
 <!-- Misc -->
 
-<!ENTITY no.function.parameters '<para>Această funcţie nu conţine parametri.</para>'>
+<!ENTITY no.function.parameters '<para>Această funcţie nu are parametri.
+</para>'>
 
 <!ENTITY example.outputs '<para>Exemplul de mai sus va afişa:</para>'>
 
@@ -177,83 +193,92 @@ ceva similar cu:</para>'>
 <function>reset</function> asupra indicatorului de tip <type>array</type>
 după utilizare.</simpara></note>'>
 
-<!ENTITY seealso.callback 'informaţie despre tipul <link linkend="language.types.callback">callback</link>'>
+<!ENTITY seealso.callback 'informaţie despre tipul
+<link linkend="language.types.callback">callback</link>'>
 
 <!ENTITY avail.register-long-arrays 'Începând cu PHP 5.0.0
 <link linkend="language.variables.predefined">variabilele predefinite</link>
 cu masivele lungi pot fi dezactivate cu ajutorul directivei
 <link linkend="ini.register-long-arrays">register_long_arrays</link>.'>
 
-<!ENTITY ini.shorthandbytes '<simpara>În cazul utilizării unui <type>integer</type>, valoarea 
-este măsurată în baiţi. De asemenea puteţi utiliza notaţia prescurtată, după cum este descris
-în <link linkend="faq.using.shorthandbytes">acest FAQ</link>.</simpara>'>
+<!ENTITY ini.shorthandbytes '<simpara>În cazul utilizării unui <type>integer
+</type>, valoarea este măsurată în baiţi. De asemenea poate fi utilizată 
+notaţia prescurtată, după cum este descris în
+<link linkend="faq.using.shorthandbytes">acest FAQ</link>.</simpara>'>
 
-<!ENTITY info.deprecated.alias 'Pentru compatibilitatea cu versiunile anterioare, următorul
-pseudonim dezaprobat poate fi utilizat: '>
+<!ENTITY info.deprecated.alias 'Pentru compatibilitatea cu versiunile 
+anterioare, următorul pseudonim dezaprobat poate fi utilizat: '>
 
 <!ENTITY info.function.alias 'Această funcţie este pseudonim pentru: '>
 
-<!ENTITY info.function.alias.deprecated '<simpara>Acest pseudonim al funcţiei este dezaprobat
-şi există numai din motivul păstrării compatibilităţii cu versiunile anterioare. Este recomandabil
-de a nu utiliza această funcţie deoarece într-o bună zi ea poate fi eliminată din PHP.</simpara>'>
+<!ENTITY info.function.alias.deprecated '<simpara>Acest pseudonim al funcţiei 
+este dezaprobat şi există numai din motivul păstrării compatibilităţii cu 
+versiunile anterioare. Utilizarea acestei funcţii nu este recomandată,
+deoarece ea poate fi eliminată din PHP în viitor.</simpara>'>
 
-<!ENTITY ext.windows.path.dll 'Pentru ca această extensie să funcţioneze, anumite fişiere
-<acronym>DLL</acronym> trebuie să fie accesibile în calea de sistem a Windows din
-<literal>variabila PATH</literal>. Accesaţi <acronym>FAQ</acronym> întitulat "<link
-linkend="faq.installation.addtopath">Cum să adaug directorul meu PHP la variabila PATH
-din Windows</link>" pentru informaţii despre cum să realizaţi aceasta. Cu toate că copierea
-fişierelor DLL din directorul PHP în directorul de sistem al Windows de asemenea funcţionează
-(deoarece directorul de sistem este în mod implicit inclus în variabila <literal>PATH</literal>),
-acest lucru nu este recomandabil. 
-<emphasis>Această extensie necesită ca următoarele fişiere să existe în calea
-<literal>PATH</literal>:</emphasis> '>
+<!ENTITY ext.windows.path.dll 'Pentru ca această extensie să funcţioneze, 
+anumite fişiere <acronym>DLL</acronym> trebuie să fie accesibile în calea de 
+sistem a Windows din <literal>variabila PATH</literal>. Pentru informaţii 
+despre cum poate fi realizat acest lucru, accesaţi <acronym>FAQ
+</acronym> întitulat "<link linkend="faq.installation.addtopath">Cum să adaug 
+directorul meu PHP la variabila PATH din Windows</link>" pentru informaţii 
+despre cum să realizaţi aceasta. Cu toate că copierea fişierelor DLL din 
+directorul PHP în directorul de sistem al Windows de asemenea funcţionează
+(deoarece directorul de sistem este în mod implicit inclus în variabila 
+<literal>PATH</literal>), acest lucru nu este recomandabil. <emphasis>Această 
+extensie necesită ca următoarele fişiere să existe în calea <literal>PATH
+</literal>:</emphasis> '>
 
 <!-- Returns -->
 
-<!ENTITY return.success 'Întoarce valoarea &true; în cazul succesului sau &false; în cazul eşecului.'>
+<!ENTITY return.success 'Întoarce valoarea &true; în cazul succesului sau 
+&false; în cazul eşecului.'>
 
 <!ENTITY return.void 'Nu este întoarsă nici o valoare.'>
 
 <!ENTITY return.falseproblem '<warning><simpara>Această funcţie poate întoarce
-valoarea Boolean &false;, dar poate de asemenea întoarce o valoare non-Boolean care
-evaluează în &false;, cum ar fi <literal>0</literal> sau
-&quot;&quot;. Vă rugăm să citiţi secţiunea despre tipul
-<link linkend="language.types.boolean">Boolean</link> pentru mai multe informaţii.
-Utilizaţi <link linkend="language.operators.comparison">operatorul ===</link> pentru
+valoarea Boolean &false;, dar poate de asemenea întoarce o valoare non-Boolean
+care evaluează în &false;, cum ar fi <literal>0</literal> sau &quot;&quot;. Vă
+rugăm să citiţi secţiunea despre tipul <link linkend="language.types.boolean">
+Boolean</link> pentru mai multe informaţii. Utilizaţi
+<link linkend="language.operators.comparison">operatorul ===</link> pentru
 a verifica valoarea întoarsă de această funcţie.</simpara></warning>'>
 
 
-
 <!-- Image (GD) Notes -->
-<!ENTITY note.config.t1lib '<note><simpara>Această funcţie e disponibilă numai dacă PHP este
-compilat utilizând <option role="configure">--with-t1lib[=DIR]</option>.
+<!ENTITY note.config.t1lib '<note><simpara>Această funcţie e disponibilă numai
+dacă PHP este compilat utilizând <option role="configure">--with-t1lib[=DIR]
+</option>.
 </simpara></note>'>
 
-<!ENTITY note.config.jpeg '<note><simpara>Susţinerea JPEG este disponibilă numai dacă PHP
-a fost compilat cu GD-1.8 sau ulterior.</simpara></note>'>
+<!ENTITY note.config.jpeg '<note><simpara>Susţinerea JPEG este disponibilă 
+numai dacă PHP a fost compilat cu GD-1.8 sau ulterior.</simpara></note>'>
 
-<!ENTITY note.config.wbmp '<note><simpara>Susţinerea WBMP este disponibilă numai dacă PHP
-a fost compilat cu GD-1.8 sau ulterior.</simpara></note>'>
+<!ENTITY note.config.wbmp '<note><simpara>Susţinerea WBMP este disponibilă 
+numai dacă PHP a fost compilat cu GD-1.8 sau ulterior.</simpara></note>'>
 
-<!ENTITY note.bundled.gd '<note><simpara>Această funcţie este disponibilă numai dacă PHP
-este compilat cu versiunea bibliotecii GD furnizată împreună cu PHP.</simpara></note>'>
+<!ENTITY note.bundled.gd '<note><simpara>Această funcţie este disponibilă 
+numai dacă PHP este compilat cu versiunea bibliotecii GD furnizată împreună cu
+PHP.</simpara></note>'>
 
-<!ENTITY note.freetype '<note><simpara>Această funcţie este disponibilă numai dacă PHP
-este compilat cu susţinerea freetype (<option role="configure">--with-freetype-dir=DIR</option>)
-</simpara></note>'>
+<!ENTITY note.freetype '<note><simpara>Această funcţie este disponibilă numai 
+dacă PHP este compilat cu susţinerea freetype (<option role="configure">
+--with-freetype-dir=DIR</option>)</simpara></note>'>
 
-<!ENTITY note.gd.2 '<note><simpara>Această funcţie necesită GD 2.0.1 sau ulterioară (2.0.28 sau
-ulterioară este recomandată).</simpara></note>'>
+<!ENTITY note.gd.2 '<note><simpara>Această funcţie necesită GD 2.0.1 sau 
+ulterioară (2.0.28 sau ulterioară este recomandată).</simpara></note>'>
 
 <!ENTITY gd.image.description '<varlistentry><term><parameter>
-image</parameter></term><listitem><para>O resursă - imagine, întoarsă de una din funcţiile
-de creare a imaginilor, cum ar fi <function>imagecreatetruecolor</function>.</para></listitem></varlistentry>'>
+image</parameter></term><listitem><para>O resursă - imagine, întoarsă de una 
+din funcţiile de creare a imaginilor, cum ar fi <function>imagecreatetruecolor
+</function>.</para></listitem></varlistentry>'>
 
 <!ENTITY gd.font.description '<varlistentry><term><parameter>
-font</parameter></term><listitem><para>Poate fi 1, 2, 3, 4, 5 pentru font-urile încorporate
-cu codificarea latin2 (unde numerele mai mari corespund font-urilor mai mari) sau orice
-identificator de font al dumneavoastră, înregistrat cu <function>imageloadfont</function>.
-</para></listitem></varlistentry>'>
+font</parameter></term><listitem><para>Poate fi 1, 2, 3, 4, 5 pentru 
+font-urile încorporate cu codificarea latin2 (unde numerele mai mari corespund
+font-urilor mai mari) sau orice identificator de font al dumneavoastră, 
+înregistrat cu <function>imageloadfont</function>.</para></listitem>
+</varlistentry>'>
 
 <!-- DBM notes -->
 
@@ -296,22 +321,23 @@ conn</parameter></term><listitem><para>O resursă MCVE_CONN întoarsă de
 
 <!-- Date and time entities -->
 <!ENTITY date.timezone.errors.description '<para>
-Fiecare apel al unei funcţii de dată/oră va genera o <constant>E_NOTICE</constant> 
-dacă zona orară nu este validă şi/sau un mesaj <constant>E_STRICT</constant> dacă
-se utilizează setările sistemului sau variabila de mediu <varname>TZ</varname>.
-Vedeţi de asemenea <function>date_default_timezone_set</function></para>'>
+Fiecare apel al unei funcţii de dată/oră va genera o <constant>E_NOTICE
+</constant> dacă zona orară nu este validă şi/sau un mesaj <constant>E_STRICT
+</constant> dacă se utilizează setările sistemului sau variabila de mediu 
+<varname>TZ</varname>. Vedeţi de asemenea
+<function>date_default_timezone_set</function></para>'>
 
-<!ENTITY date.timezone.errors.changelog '<row><entry>5.1.0</entry><entry><para>
-Acum generează erori ale zonei orare de tip <constant>E_STRICT</constant> şi
-<constant>E_NOTICE</constant>.</para></entry></row>'>
+<!ENTITY date.timezone.errors.changelog '<row><entry>5.1.0</entry><entry>
+<para>Acum generează erori ale zonei orare de tip <constant>E_STRICT
+</constant> şi <constant>E_NOTICE</constant>.</para></entry></row>'>
 
 <!ENTITY date.timestamp.description '
 <varlistentry><term><parameter>timestamp</parameter></term><listitem><para>
 Parametrul opţional <parameter>timestamp</parameter> este un
 <type>integer</type> şi este un moment de timp Unix şi are valoarea implicită
-a orei locale, dacă parametrul <parameter>timestamp</parameter> nu este indicat.
-Cu alte cuvinte, valoarea implicită este cea a funcţiei <function>time</function>. 
-</para></listitem></varlistentry>'>
+a orei locale, dacă parametrul <parameter>timestamp</parameter> nu este 
+indicat. Cu alte cuvinte, valoarea implicită este cea a funcţiei
+<function>time</function>.</para></listitem></varlistentry>'>
 
 <!-- DomXml Notes -->
 <!ENTITY node.inserted 'Acest nod nu va apărea în document dacă nu este
@@ -325,41 +351,47 @@ de exemplu.'>
 
 
 <!-- FileSystem entities -->
-<!ENTITY fs.validfp.all '<para>Indicatorul fişierului trebuie să fie valid şi trebuie
-să indice la un fişier deschis cu succes cu ajutorul <function>fopen</function> sau
-<function>fsockopen</function> (şi să nu fie închis cu
-<function>fclose</function>).</para>'>
+<!ENTITY fs.validfp.all '<para>Indicatorul fişierului trebuie să fie valid şi 
+trebuie să indice la un fişier deschis cu succes cu ajutorul
+<function>fopen</function> sau <function>fsockopen</function> (şi să nu fie 
+închis cu <function>fclose</function>).</para>'>
 
-<!ENTITY fs.file.pointer '<para>O <type>resursă</type> de tip indicator în sistemul de fişiere
-care este în mod tipic creată utilizând <function>fopen</function>.</para>'>
+<!ENTITY fs.file.pointer '<para>O <type>resursă</type> de tip indicator în 
+sistemul de fişiere care este în mod tipic creată utilizând
+<function>fopen</function>.</para>'>
 
 <!-- Oracle -->
-<!ENTITY oci.charset "<para>Utilizând Oracle server de versiune 9.2 sau ulterioară,
-puteţi să indicaţi parametrul <parameter>charset</parameter>, care va fi utilizat
-în noua conexiune. Dacă utilizaţi Oracle server &lt; 9.2, acest parametru va fi
-ignorat şi în loc va fi utilizată variabila de mediu NLS_LANG.</para>">
+<!ENTITY oci.charset "<para>Utilizând Oracle server de versiune 9.2 sau 
+ulterioară, puteţi să indicaţi <parameter>charset</parameter> în calitate de 
+parametru, care va fi utilizat în noua conexiune. Dacă utilizaţi Oracle server
+&lt; 9.2, acest parametru va fi ignorat şi în loc va fi utilizată variabila de
+mediu <literal>NLS_LANG</literal>.
+</para>">
 
-<!ENTITY oci.datatypes '<para>Pentru detalii despre corespondenţele transformărilor
-tipurilor de date efectuate de driver-ul oci8, accesaţi <link linkend="oci8.datatypes">
-tipurile de date susţinute de driver</link></para>'>
-
-<!ENTITY oracle.deprecated '<para>Utilizarea extensiei <link linkend="ref.oracle">oracle</link> 
-este deyaprobată în favoarea <link linkend="ref.oci8">oci8</link>.
+<!ENTITY oci.datatypes '<para>Pentru detalii despre corespondenţele 
+transformărilor tipurilor de date efectuate de driver-ul oci8, accesaţi
+<link linkend="oci8.datatypes">tipurile de date susţinute de driver</link>
 </para>'>
 
-<!ENTITY oracle.replacement.desc 'Când utilizaţi <link linkend="ref.oci8">oci8</link> 
-în locul extensiei învechite <link linkend="ref.oracle">oracle</link>, consideraţi
-utilizarea: '>
+<!ENTITY oracle.deprecated '<para>Utilizarea extensiei
+<link linkend="ref.oracle">oracle</link> este deyaprobată în favoarea
+<link linkend="ref.oci8">oci8</link>.
+</para>'>
+
+<!ENTITY oracle.replacement.desc 'Când utilizaţi <link linkend="ref.oci8">oci8
+</link> în locul extensiei învechite <link linkend="ref.oracle">oracle</link>,
+consideraţi utilizarea: '>
 
 <!-- PCNTL Notes -->
-<!ENTITY pcntl.parameter.status '<para>Parametrul <parameter>status</parameter>
-reprezintă parametrul de stare furnizat către un apel cu succes al funcţiei
-<function>pcntl_waitpid</function>.</para>'>
+<!ENTITY pcntl.parameter.status '<para>Parametrul <parameter>status
+</parameter> reprezintă parametrul de stare furnizat către un apel cu succes 
+al funcţiei <function>pcntl_waitpid</function>.</para>'>
 
 
 <!-- XSLT Notes -->
-<!ENTITY note.xslt.windows '<note><para>Vă atragem atenţia că este necesar de indicat
-<emphasis>file://</emphasis> în faţa căii, în cazul când utilizaţi Windows.</para></note>'>
+<!ENTITY note.xslt.windows '<note><para>Vă atragem atenţia că este necesar de 
+indicat <literal>file://</literal> în faţa căii, în cazul când utilizaţi 
+Windows.</para></note>'>
 
 
 <!-- Notes for safe-mode limited functions: -->
@@ -367,8 +399,8 @@ reprezintă parametrul de stare furnizat către un apel cu succes al funcţiei
 
 <!ENTITY note.sm.uidcheck '<note><simpara>Când este activat
 <link linkend="features.safe-mode">modul securizat</link>, PHP verifică
-dacă fişierele şi directoarele cu care doriţi să operaţi au acelaşi UID (proprietar)
-ca şi script-ul care se execută.</simpara></note>'>
+dacă fişierele şi directoarele cu care se va opera au acelaşi UID 
+(proprietar) ca şi script-ul care se execută.</simpara></note>'>
 
 <!ENTITY note.sm.uidcheck.dir '<note><simpara>Când este activat
 <link linkend="features.safe-mode">modul securizat</link>, PHP verifică
@@ -379,72 +411,79 @@ script-ul care se execută.</simpara></note>'>
 <link linkend="ini.open-basedir">open_basedir</link>.</para></note>'>
 
 
-<!ENTITY note.language-construct '<note><simpara>Deoarece aceasta este o construcţie
-a limbajului şi nu o funcţie, ea nu poate fi apelată utilizând
-<link linkend="functions.variable-functions">funcţii de operare cu variabile</link></simpara>
-</note>'>
+<!ENTITY note.language-construct '<note><simpara>Deoarece aceasta este o 
+construcţie a limbajului şi nu o funcţie, ea nu poate fi apelată utilizând
+<link linkend="functions.variable-functions">funcţii de operare cu variabile
+</link></simpara></note>'>
 
 <!-- Common pieces in features/safe-mode.xml 
      Jade doesn't allow in-line entities, so I put them here... Though they 
      should have been inline in safe-mode.xml -->
-<!ENTITY sm.uidcheck 'Verifică dacă fişierele şi directoarele cu care doriţi să
-operaţi au acelaşi UID (proprietar) ca şi script-ul care se execută.'>
+<!ENTITY sm.uidcheck 'Verifică dacă fişierele şi directoarele cu care se
+operează au acelaşi UID (proprietar) ca şi script-ul care se execută.'>
 
 <!ENTITY warn.sm.exec '<warning><simpara>Când este activat
 <link linkend="features.safe-mode">modul securizat</link>,
-linia de comandă este prelucrată cu <function>escapeshellcmd</function>. De aceea,
-<literal>echo y | echo x</literal> devine <literal>echo y \| echo x</literal>.</simpara></warning>'>
+linia de comandă este prelucrată cu <function>escapeshellcmd</function>. De 
+aceea, <literal>echo y | echo x</literal> devine <literal>echo y \| echo x
+</literal>.</simpara></warning>'>
 
 <!ENTITY note.exec-path '<note><simpara>Când este activat
-<link linkend="features.safe-mode">modul securizat</link>, puteţi executa fişierele
-executabile aflate în <link linkend="ini.safe-mode-exec-dir">safe_mode_exec_dir</link>.
-Din motive practice, în prezent nu se permite de a avea componente <literal>..</literal>
-în calea către executabil.</simpara></note>'>
+<link linkend="features.safe-mode">modul securizat</link>, puteţi executa 
+fişierele aflate în <link linkend="ini.safe-mode-exec-dir">safe_mode_exec_dir
+</link>. Din motive practice, în prezent nu se permite de a 
+avea componente <literal>..</literal> în calea către executabil.</simpara>
+</note>'>
 
-<!ENTITY sm.uidcheck.dir 'Verifică dacă directorul în care veţi opera are acelaşi
-UID (proprietar) ca şi script-ul ce se execută.'>
+<!ENTITY sm.uidcheck.dir 'Verifică dacă directorul în care se operează are 
+acelaşi UID (proprietar) ca şi script-ul ce se execută.'>
 
-<!ENTITY sm.disabled 'Această funcţie este dezactivată în
-<link linkend="features.safe-mode">modul securizat</link>.'>
+<!ENTITY sm.disabled 'Această funcţie este dezactivată atunci când PHP rulează
+în <link linkend="features.safe-mode">modul securizat</link>.'>
 
 <!-- Common pieces in partintro-sections -->
-<!ENTITY no.config '<para>Această extensie nu are directive de configurare definite în &php.ini;.</para>'>
-<!ENTITY no.resource '<para>Această extensie nu are tipuri de resurse definite.</para>'>
-<!ENTITY no.constants '<para>Această extensie nu are constante definite.</para>'>
-<!ENTITY no.requirement '<para>Nu sunt necesare biblioteci externe pentru a asambla această extensie.</para>'>
-<!ENTITY no.install '<para>Nu este necesar de a instala ceva suplimentar pentru a utiliza aceste funcţii;
-ele fac parte din nucleul PHP.</para>'>
+<!ENTITY no.config '<para>Această extensie nu are directive de configurare 
+definite în &php.ini;.</para>'>
+<!ENTITY no.resource '<para>Această extensie nu are tipuri de resurse 
+definite.</para>'>
+<!ENTITY no.constants '<para>Această extensie nu are constante definite.
+</para>'>
+<!ENTITY no.requirement '<para>Nu sunt necesare biblioteci externe pentru a 
+asambla această extensie.</para>'>
+<!ENTITY no.install '<para>Nu este necesar de a instala ceva suplimentar 
+pentru a utiliza aceste funcţii; ele fac parte din nucleul PHP.</para>'>
 
 <!-- Used in every chapter that has directive descriptions -->
-<!ENTITY ini.descriptions.title '<para>Iată o explicaţie pe scurt a directivelor de configurare.</para>'>
+<!ENTITY ini.descriptions.title '<para>Iată o explicaţie pe scurt a
+directivelor de configurare.</para>'>
 
 <!-- Common pieces for reference part BEGIN-->
 
 <!-- Used in reference/$extname/ini.xml -->
 <!ENTITY extension.runtime '<simpara>
-Comportamentul acestor funcţii este afectat de parametrii stabiliţi în &php.ini;.
-</simpara>'>
+Comportamentul acestor funcţii este afectat de parametrii stabiliţi în 
+&php.ini;.</simpara>'>
 
-<!ENTITY ini.php.constants 'Pentru mai multe detalii şi definiţii ale constantelor
-PHP_INI_* accesaţi <xref linkend="ini"/>.'>
+<!ENTITY ini.php.constants 'Pentru mai multe detalii şi definiţii ale 
+constantelor PHP_INI_* accesaţi <xref linkend="ini"/>.'>
 
 <!-- Used in reference/$extname/constants.xml -->
-<!ENTITY extension.constants '<simpara>
-Constantele de mai jos sunt definite de această extensie şi
-vor fi disponibile doar dacă această extensie a fost compilată în interiorul PHP,
-sau a fost încărcată dinamic în timpul rulării.
+<!ENTITY extension.constants '<simpara>Constantele de mai jos sunt definite de
+această extensie şi vor fi disponibile doar dacă această extensie a fost 
+compilată în interiorul PHP, sau a fost încărcată dinamic în timpul rulării.
 </simpara>'>
 
 <!-- For STANDARD Constants used in reference/$extname/constants.xml -->
 <!ENTITY extension.constants.core '<simpara>
-Constantele de mai jos sunt întotdeauna disponibile ca parte componentă a nucleului PHP.
+Constantele de mai jos sunt întotdeauna disponibile ca parte componentă a 
+nucleului PHP.
 </simpara>'>
 
 <!-- Used in reference/$extname/classes.xml -->
 <!ENTITY extension.classes '<simpara>
 Clasele de mai jos sunt definite de această extensie şi
-vor fi disponibile doar dacă această extensie a fost compilată în interiorul PHP,
-sau a fost încărcată dinamic în timpul rulării.
+vor fi disponibile doar dacă această extensie a fost compilată în interiorul 
+PHP, sau a fost încărcată dinamic în timpul rulării.
 </simpara>'>
 
 <!ENTITY note.extension.php5 '<note><simpara>
@@ -458,16 +497,18 @@ doar când această extensie a fost compilată în interiorul PHP, sau a fost
 driver-ului trebuie utilizate numai dacă utilizaţi acest driver.
 Utilizarea atributelor specifice mysql cu driver-ul postgres poate rezulta
 într-un comportament imprevizibil. <function>PDO::getAttribute</function>
-poate fi utilizată pentru a obţine atributul <constant>PDO_ATTR_DRIVER_NAME</constant>,
-pentru a verifica driver-ul în caz că codul-sursă al dumneavoastră poate rula
-cu mai multe driver-e.</simpara>'>
+poate fi utilizată pentru a obţine atributul <constant>PDO_ATTR_DRIVER_NAME
+</constant>, pentru a verifica driver-ul în caz că codul-sursă al 
+dumneavoastră poate rula cu mai multe driver-e.</simpara>'>
 
 <!-- PECL entities -->
-<!ENTITY pecl.moved 'Această extensie <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.pecl;">PECL</link> nu
-este încorporată în PHP.'>
+<!ENTITY pecl.moved 'Această extensie
+<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.pecl;">PECL
+</link> nu este încorporată în PHP.'>
 
-<!ENTITY pecl.bundled 'Această extensie <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.pecl;">PECL</link>
-este încorporată în PHP.'>
+<!ENTITY pecl.bundled 'Această extensie
+<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.pecl;">PECL
+</link> este încorporată în PHP.'>
 
 <!ENTITY pecl.info 'Informaţie despre instalarea acestei extensii PECL poate
 fi găsită în capitolul manualului, întitulat <link linkend="install.pecl">
@@ -475,69 +516,78 @@ Instalarea extensiilor PECL</link>. Informaţii adiţionale, cum ar fi
 lansări noi, descărcări, fişiere-sursă, informaţii despre persoana care
 întreţine extensia şi istoria schimbărilor poate fi localizată aici: '>
 
-<!ENTITY pecl.source.4 'În PHP 4 sursa acestei extensii <acronym>PECL</acronym>
-poate fi găsită în directorul <filename>ext/</filename> din sursa PHP, sau la
-referinţa <acronym>PECL</acronym> de mai sus.'>
+<!ENTITY pecl.source.4 'În PHP 4 sursa acestei extensii <acronym>PECL
+</acronym> poate fi găsită în directorul <filename>ext/</filename> din sursa 
+PHP, sau la referinţa <acronym>PECL</acronym> de mai sus.'>
 
 <!ENTITY pecl.windows.4 'În PHP 4 acest <acronym>DLL</acronym> se află în
-directorul <filename>extensions/</filename> al distributivului PHP pentru Windows.'>
+directorul <filename>extensions/</filename> al distributivului PHP pentru 
+Windows.'>
 
 <!ENTITY pecl.windows.download '
-Biblioteca <acronym>DLL</acronym> pentru această extensie <acronym>PECL</acronym>
-poate fi descărcată de pe pagina
-<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.php.downloads;">PHP Downloads</link> sau de pe
-<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.pecl.win;">&url.pecl.win;</link>'>
+Biblioteca <acronym>DLL</acronym> pentru această extensie <acronym>PECL
+</acronym> poate fi descărcată de pe pagina
+<link xmlns:xlink="http://www.w3.org/1999/xlink" 
+xlink:href="&url.php.downloads;">PHP Downloads</link> sau de pe
+<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.pecl.win;">
+&url.pecl.win;</link>'>
 
 <!ENTITY pecl.windows.download.unbundled 'Extensiile <acronym>PECL</acronym> 
 care nu sunt furnizate cu PHP pot fi descărcate de pe:
-<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.pecl.win;">&url.pecl.win;</link>'>
+<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.pecl.win;">
+&url.pecl.win;</link>'>
 
 <!ENTITY pecl.moved-ver 'Această extensie a fost transferată în repozitoriul
-<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.pecl;">PECL</link> şi nu mai este furnizată împreună cu PHP
-începând cu versiunea '>
+<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.pecl;">PECL
+</link> şi nu mai este furnizată împreună cu PHP începând cu versiunea '>
 
 <!-- kept for BC -->
 <!ENTITY note.pecl-php5 '<note><simpara>
-Această extensie a fost eliminată începând cu PHP 5 şi transferată în repozitoriul
-<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.pecl;">PECL</link>.
+Această extensie a fost eliminată începând cu PHP 5 şi transferată în 
+repozitoriul
+<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.pecl;">PECL
+</link>.
 </simpara></note>'>
 
 <!-- Common pieces for reference part END -->
 
 
-<!ENTITY windows.builtin '<simpara>Versiunea PHP pentru Windows susţine implicit
-această extensie. Nu este nevoie să încărcaţi vre-o extensie suplimentară pentru
-a putea utiliza aceste funcţii.</simpara>'>
+<!ENTITY windows.builtin '<simpara>Versiunea PHP pentru Windows susţine 
+implicit această extensie. Nu este nevoie să încărcaţi extensii suplimentare 
+pentru a putea utiliza aceste funcţii.</simpara>'>
 
 <!-- These are here as helpers for manual consistency and brievety-->
 <!ENTITY safemode '<link linkend="ini.safe-mode">modul securizat</link>'>
 
-<!ENTITY sqlsafemode '<link linkend="ini.sql.safe-mode">modul SQL securizat</link>'>
+<!ENTITY sqlsafemode '<link linkend="ini.sql.safe-mode">modul SQL securizat
+</link>'>
 
 <!-- APD Notes -->
 <!ENTITY apd.debug-level.description '<varlistentry><term><parameter>
-debug_level</parameter></term><listitem><para>Un integer care se formează sumând împreună
-constante <literal>XXX_TRACE</literal>.</para><para>Nu este recomandabil să utilizaţi
-<constant>MEMORY_TRACE</constant>. Este foarte înceată şi se pare că este imprecisă.
-<constant>ASSIGNMENT_TRACE</constant> nu este implementată deocamdată.</para><para>Pentru a
-activa toate trasările funcţionale (TIMING, FUNCTIONS, ARGS SUMMARY (ca în cazul strace -c))
-utilizaţi valoarea 99</para>
-</listitem></varlistentry>'>
+debug_level</parameter></term><listitem><para>Un integer care se formează 
+sumând împreună constante <literal>XXX_TRACE</literal>.</para><para>Nu este 
+recomandabil să utilizaţi <constant>MEMORY_TRACE</constant>. Este foarte 
+înceată şi se pare că este imprecisă. <constant>ASSIGNMENT_TRACE</constant> nu
+este implementată deocamdată.</para><para>Pentru a activa toate trasările 
+funcţionale (TIMING, FUNCTIONS, ARGS SUMMARY (ca în cazul strace -c))
+utilizaţi valoarea 99</para></listitem></varlistentry>'>
 
 <!-- BCMath Notes -->
 <!ENTITY bc.scale.description '<varlistentry><term><parameter>
-scale</parameter></term><listitem><para>Acest parametru opţional este utilizat pentru a stabili
-numărul cifrelor după virgulă din rezultat. De asemenea puteţi să stabiliţi parametrul global
-scale pentru toate funcţiile utilizând <function>bcscale</function>.</para></listitem></varlistentry>'>
+scale</parameter></term><listitem><para>Acest parametru opţional este utilizat
+pentru a stabili numărul cifrelor după virgulă din rezultat. De asemenea 
+puteţi să stabiliţi parametrul global scale pentru toate funcţiile utilizând 
+<function>bcscale</function>.</para></listitem></varlistentry>'>
 
 <!-- FBSQL Notes -->
 <!ENTITY fbsql.link-identifier.description '<varlistentry><term><parameter>
-link_identifier</parameter></term><listitem><para>Un identificator de legătură FrontBase
-întors de <function>fbsql_connect</function> sau <function>fbsql_pconnect</function>.
-</para><para>Dacă nu este specificat, funcţia va încerca să găsească o legătură
-deschisă către serverul FrontBase şi dacă nu este găsită nici o astfel de legătură,
-se va încerca crearea uneia, ca şi la apelarea <function>fbsql_connect</function>
-fără argumente.</para></listitem></varlistentry>'>
+link_identifier</parameter></term><listitem><para>Un identificator de legătură
+FrontBase întors de <function>fbsql_connect</function> sau
+<function>fbsql_pconnect</function>.</para><para>Dacă nu este specificat, 
+funcţia va încerca să găsească o legătură deschisă către serverul FrontBase şi
+dacă nu este găsită nici o astfel de legătură, se va încerca crearea uneia, ca
+şi la apelarea <function>fbsql_connect</function> fără argumente.</para>
+</listitem></varlistentry>'>
 
 <!ENTITY fbsql.result.description '<varlistentry><term><parameter>
 result</parameter></term><listitem><para>Un identificator al rezultatului
@@ -546,91 +596,99 @@ result</parameter></term><listitem><para>Un identificator al rezultatului
 
 <!-- GMP Notes -->
 <!ENTITY gmp.return 'O <type>resursă</type> număr GMP.'>
-<!ENTITY gmp.parameter '<para>Aceasta poate fi sau o <type>resursă</type> număr GMP, sau 
-un şir de caractere numeric, dacă este posibilă convertirea acestuia într-un număr.</para>'>
+<!ENTITY gmp.parameter '<para>Aceasta poate fi sau o <type>resursă</type> 
+număr GMP, sau un şir de caractere numeric, dacă este posibilă convertirea 
+acestuia într-un număr.</para>'>
 
 <!-- MySQLi Notes -->
 <!ENTITY mysqli.result.description '<varlistentry><term><parameter>
-result</parameter></term><listitem><para>Numai stilul procedural: Un identificator
-al setului de rezultate întors de <function>mysqli_query</function>, <function>mysqli_store_result</function>
-sau <function>mysqli_use_result</function>.</para></listitem></varlistentry>'>
+result</parameter></term><listitem><para>Numai stilul procedural: Un 
+identificator al setului de rezultate întors de <function>mysqli_query
+</function>, <function>mysqli_store_result</function> sau <function>
+mysqli_use_result</function>.</para></listitem></varlistentry>'>
 <!ENTITY mysqli.link.description '<varlistentry><term><parameter>
-link</parameter></term><listitem><para>Numai stilul procedural: Un identificator al legăturii
-întors de <function>mysqli_connect</function> sau <function>mysqli_init</function>
-</para></listitem></varlistentry>'>
+link</parameter></term><listitem><para>Numai stilul procedural: Un 
+identificator al legăturii întors de <function>mysqli_connect</function> sau 
+<function>mysqli_init</function></para></listitem></varlistentry>'>
 <!ENTITY mysqli.stmt.description '<varlistentry><term><parameter>
-stmt</parameter></term><listitem><para>Numai stilul procedural: Un identificator al declaraţiei
-întors de <function>mysqli_stmt_init</function>.</para></listitem></varlistentry>'>
+stmt</parameter></term><listitem><para>Numai stilul procedural: Un 
+identificator al declaraţiei întors de <function>mysqli_stmt_init</function>.
+</para></listitem></varlistentry>'>
 
 
 <!-- Notes for SAPI/Apache -->
-<!ENTITY note.apache.nsapi-module '<note><para>Începând cu PHP 4.3.3 puteţi utiliza această funcţie cu
-<link linkend="ref.nsapi">modulul de server NSAPI</link> şi în webserver-ele Netscape/iPlanet/SunONE.
+<!ENTITY note.apache.nsapi-module '<note><para>Începând cu PHP 4.3.3 puteţi 
+utiliza această funcţie cu <link linkend="ref.nsapi">modulul de server NSAPI
+</link> şi în webserver-ele Netscape/iPlanet/SunONE.
 </para></note>'>
 
-<!ENTITY apache.req.module '<simpara>Această funcţie e susţinută numai dacă PHP este instalat
-ca modul Apache.</simpara>'>
+<!ENTITY apache.req.module '<simpara>Această funcţie e susţinută numai dacă 
+PHP este instalat ca modul Apache.</simpara>'>
 
 <!-- SimpleXML Notes -->
-<!ENTITY simplexml.iteration '<note><simpara>SimpleXML a creat o regulă de a adăuga
-proprietăţi iterative la majoritatea metodelor. Ele nu pot fi vizualizate cu ajutorul
-<function>var_dump</function> sau orice altceva ce poate examina obiecte.</simpara></note>'>
+<!ENTITY simplexml.iteration '<note><simpara>SimpleXML a creat o regulă de a 
+adăuga proprietăţi iterative la majoritatea metodelor. Ele nu pot fi 
+vizualizate cu ajutorul <function>var_dump</function> sau orice altceva ce 
+poate examina obiecte.</simpara></note>'>
 
 <!-- SQLite Notes -->
 <!ENTITY sqlite.case-fold '<para>În denumirile coloanelor întoarse de
 <constant>SQLITE_ASSOC</constant> şi <constant>SQLITE_BOTH</constant> vor fi
-utilizate litere majuscule/minuscule în corespundere cu valoarea opţiunii de configurare
-<link linkend="ini.sqlite.assoc-case">sqlite.assoc_case</link>.</para>'>
+utilizate litere majuscule/minuscule în corespundere cu valoarea opţiunii de 
+configurare <link linkend="ini.sqlite.assoc-case">sqlite.assoc_case</link>.
+</para>'>
 
-<!ENTITY sqlite.decode-bin '<para>Când parametrul <parameter>decode_binary</parameter>
-este stabilit în &true; (implicit), PHP va decodifica codificarea binară pe care a
-aplicat-o asupra datelor, dacă acestea au fost codificate cu
+<!ENTITY sqlite.decode-bin '<para>Când parametrul <parameter>decode_binary
+</parameter> este stabilit în &true; (implicit), PHP va decodifica codificarea
+binară pe care a aplicat-o asupra datelor, dacă acestea au fost codificate cu
 <function>sqlite_escape_string</function>. În mod normal ar trebui să lăsaţi
-valoarea implicită, dacă nu interoperaţi cu baze de date create de alte aplicaţii
-capabile să lucreze cu sqlite.</para>'>
+valoarea implicită, dacă nu interoperaţi cu baze de date create de alte 
+aplicaţii capabile să lucreze cu sqlite.</para>'>
 
-<!ENTITY sqlite.no-unbuffered '<note><para>Această funcţie nu poate fi utilizată cu
-indicatori de rezultate nebuferizaţi.</para></note>'>
+<!ENTITY sqlite.no-unbuffered '<note><para>Această funcţie nu poate fi 
+utilizată cu indicatori de rezultate nebuferizaţi.</para></note>'>
 
 <!ENTITY sqlite.param-compat '<note><simpara>Două sintaxe alternative sunt
-susţinute pentru compatibilitate cu alte extensii de baze de date (cum ar fi MySQL).
-Forma preferată este cae dintâi, unde parametrul <parameter>dbhandle</parameter>
-este primul parametru pentru funcţie.</simpara></note>'>
+susţinute pentru compatibilitate cu alte extensii de baze de date (cum ar fi 
+MySQL). Forma preferată este cae dintâi, unde parametrul <parameter>dbhandle
+</parameter> este primul parametru pentru funcţie.</simpara></note>'>
 
-<!ENTITY sqlite.result-type '<para>Parametrul opţional <parameter>result_type</parameter>
-acceptă o constantă şi determină cum masivul întors va fi indexat. Utilizând
-<constant>SQLITE_ASSOC</constant> vor fi întorşi numai indici asociativi
-(câmpuri denumite) în timp ce cu <constant>SQLITE_NUM</constant> vor fi întorşi
-numai indici numerici (numerele de ordine ale câmpurilor). Cu <constant>SQLITE_BOTH</constant>
-vor fi întorşi atât indici associativi, cât şi numerici.
-<constant>SQLITE_BOTH</constant> este valoarea implicită pentru această funcţie.</para>'>
+<!ENTITY sqlite.result-type '<para>Parametrul opţional <parameter>result_type
+</parameter> acceptă o constantă şi determină cum masivul întors va fi 
+indexat. Utilizând <constant>SQLITE_ASSOC</constant> vor fi întorşi numai 
+indici asociativi (câmpuri denumite) în timp ce cu <constant>SQLITE_NUM
+</constant> vor fi întorşi numai indici numerici (numerele de ordine ale 
+câmpurilor). Cu <constant>SQLITE_BOTH</constant> vor fi întorşi atât indici  
+associativi, cât şi numerici. <constant>SQLITE_BOTH</constant> este valoarea 
+implicită pentru această funcţie.</para>'>
 
 <!-- Database Notes -->
-<!ENTITY database.field-case '<note><simpara>Numele câmpurilor întoarse de această funcţie
-sunt <emphasis>sensibile la literele majuscule/minuscule</emphasis>.</simpara></note>'>
+<!ENTITY database.field-case '<note><simpara>Numele câmpurilor întoarse de 
+această funcţie sunt <emphasis>sensibile la literele majuscule/minuscule
+</emphasis>.</simpara></note>'>
 
-<!ENTITY database.fetch-null '<note><simpara>Această funcţie stabileşte câmpurile NULL la
-valoarea PHP &null;.</simpara></note>'>
+<!ENTITY database.fetch-null '<note><simpara>Această funcţie stabileşte 
+câmpurile NULL la valoarea PHP &null;.</simpara></note>'>
 
 <!-- MSQL Notes -->
 <!-- The msql.*.description entities are used in the parameters refsect1 -->
 <!ENTITY msql.linkid.description '<varlistentry><term><parameter>
 link_identifier</parameter></term><listitem><para>Conexiunea mSQL.
 Dacă nu este specificată, se presupune că este ultima legătură deschisă cu
-<function>msql_connect</function>. Dacă nu se găseşte vre-o legătură de acest fel,
-funcţia va încerca să stabilească o legătură prin apelarea
+<function>msql_connect</function>. Dacă nu se găseşte vre-o legătură de acest 
+fel, funcţia va încerca să stabilească o legătură prin apelarea
 <function>msql_connect</function> şi să o utilizeze pe aceasta.
 </para></listitem></varlistentry>'>
 
 <!ENTITY msql.result.description '<varlistentry><term><parameter>
-result</parameter></term><listitem><para>Rezultatul de tip <type>resource</type>,
-care este evaluat. Acest rezultat provine din apelul către
+result</parameter></term><listitem><para>Rezultatul de tip <type>resource
+</type>, care este evaluat. Acest rezultat provine din apelul către
 <function>msql_query</function>.</para></listitem></varlistentry>'>
 
 <!ENTITY msql.field-offset.req.description '<varlistentry><term><parameter>
-field_offset</parameter></term><listitem><para>Deplasamentul numeric al câmpului. 
-<parameter>field_offset</parameter> începe de la <literal>1</literal>.
-</para></listitem></varlistentry>'>
+field_offset</parameter></term><listitem><para>Deplasamentul numeric al 
+câmpului.<parameter>field_offset</parameter> începe de la
+<literal>1</literal>.</para></listitem></varlistentry>'>
 
 
 <!-- MySQL Notes -->
@@ -641,130 +699,149 @@ identificatorul legăturii nu este specificat, se presupune că este ultima
 legătură deschisă cu ajutorul <function>mysql_connect</function>.
 Dacă nu este găsită nici o astfel de legătură, se va încerca crearea uneia
 prin apelul <function>mysql_connect</function> fără argumente. În caz că nici
-o conexiune nu este găsită sau stabilită, se va genera o avertizare de nivelul
+o conexiune nu este găsită sau stabilită, se va genera o eroare de nivelul
 <constant>E_WARNING</constant>.</para></listitem></varlistentry>'>
 
 <!ENTITY mysql.result.description '<varlistentry><term><parameter>
-result</parameter></term><listitem><para>Rezultatul de tip <type>resource</type>,
-care este evaluat. Acest rezultat provine de la apelul funcţiei
+result</parameter></term><listitem><para>Rezultatul de tip <type>resource
+</type>, care este evaluat. Acest rezultat provine de la apelul funcţiei
 <function>mysql_query</function>.</para></listitem></varlistentry>'>
 
 <!ENTITY mysql.field-offset.req.description '<varlistentry><term><parameter>
-field_offset</parameter></term><listitem><para>Deplasamentul numeric al câmpului.
-<parameter>field_offset</parameter> începe de la <literal>0</literal>. Dacă
-<parameter>field_offset</parameter> nu există, se generează de asemenea o eroare
-de nivel <constant>E_WARNING</constant>.</para></listitem></varlistentry>'>
+field_offset</parameter></term><listitem><para>Deplasamentul numeric al 
+câmpului. <parameter>field_offset</parameter> începe de la
+<literal>0</literal>. Dacă <parameter>field_offset</parameter> nu există, se 
+generează de asemenea o eroare de nivel <constant>E_WARNING</constant>.</para>
+</listitem></varlistentry>'>
 
 <!-- Sybase Notes -->
 <!ENTITY sybase.ct.only '<note><simpara>Această funcţie este disponibilă numai
-în cazul utilizării bibliotecii de interfaţă CT către Sybase, şi nu a interfeţei DB.
-</simpara></note>'>
+în cazul utilizării bibliotecii de interfaţă CT către Sybase, şi nu a 
+bibliotecii DB.</simpara></note>'>
 
 <!ENTITY sybase.db.only '<note><simpara>Această funcţie este disponibilă numai
-în cazul utilizării bibliotecii de interfaţă DB către Sybase, şi nu a interfeţei CT.
-</simpara></note>'>
+în cazul utilizării bibliotecii de interfaţă DB către Sybase, şi nu a 
+bibliotecii CT.</simpara></note>'>
 
 <!ENTITY sybase.linkid.description '<varlistentry><term><parameter>
 link_identifier</parameter></term><listitem><para>Conexiunea Sybase. Dacă
-identificatorul legăturii nu este specificat, ultima legătură deschisă cu ajutorul
-<function>sybase_connect</function> este utilizată. Dacă nu este găsită o astfel de
-legătură, se va încerca crearea uneia prin apelarea <function>sybase_connect</function>
-fără argumente. Dacă din careva motive nu este găsită sau stabilită nici o
-conexiune, o avertizare de nivel <constant>E_WARNING</constant> este generată.</para></listitem>
+identificatorul legăturii nu este specificat, ultima legătură deschisă cu 
+ajutorul <function>sybase_connect</function> este utilizată. Dacă nu este 
+găsită o astfel de legătură, se va încerca crearea uneia prin apelarea 
+<function>sybase_connect</function> fără argumente. Dacă nu este găsită sau 
+stabilită nici o conexiune, o eroare de nivel <constant>E_WARNING</constant> 
+este generată.</para></listitem>
 </varlistentry>'>
 
 <!-- CPDF Notes -->
 <!ENTITY cpdf.ul '<para>Parametrul opţional <parameter>mode</parameter>
-determină lungimea unităţii. Dacă are valoarea 0 sau este omis, va fi utilizată valoarea
-implicită a unităţii după cum e specificată pentru pagină. În caz contrar, coordonatele
-sunt măsurate în puncte postscript, neluându-se în consideraţie unitatea curentă.</para>'>
+determină lungimea unităţii. Dacă are valoarea <literal>0</literal> sau este 
+omis, va fi utilizată valoarea implicită a unităţii după cum e specificată 
+pentru pagină. În alte cazuri coordonatele sunt măsurate în puncte postscript,
+neluându-se în consideraţie unitatea curentă.</para>'>
 
 <!ENTITY cpdf.mode.description '<varlistentry><term><parameter>
-mode</parameter></term><listitem><para>Parametrul opţional <parameter>mode</parameter>
-determină lungimea unităţii. Dacă are valoarea 0 sau este omis, va fi utilizată valoarea
-implicită a unităţii după cum e specificată pentru pagină. În caz contrar, coordonatele
-sunt măsurate în puncte postscript, neluându-se în consideraţie unitatea curentă.
-</para></listitem></varlistentry>'>
+mode</parameter></term><listitem><para>Parametrul opţional <parameter>mode
+</parameter> determină lungimea unităţii. Dacă are valoarea
+<literal>0</literal> sau este omis, va fi utilizată valoarea implicită a 
+unităţii după cum e specificată pentru pagină. În alte cazuri coordonatele 
+sunt măsurate în puncte postscript, neluându-se în consideraţie unitatea 
+curentă.</para></listitem>
+</varlistentry>'>
 
 <!ENTITY cpdf.pdf-document.description '<varlistentry><term><parameter>
-pdf_document</parameter></term><listitem><para>Indicatorul către document, întors de
-<function>cpdf_open</function>.</para></listitem></varlistentry>'>
+pdf_document</parameter></term><listitem><para>Indicatorul către document, 
+întors de <function>cpdf_open</function>.</para></listitem></varlistentry>'>
 
 <!-- Xattr entities -->
-<!ENTITY xattr.namespace '<para>Atributele extinse au două spaţii de nume diferite: spaţiul
-de nume al utilizatorilor şi spaţiul de nume root. Spaţiul de nume al utilizatorilor e
-disponibil tuturor, în timp ce spaţiul de nume root este disponibil numai utilizatorului
-cu privilegii de root. xattr operează implicit în spaţiul utilizatorilor, dar puteţi să
-schimbaţi aceasta utilizând argumentul <parameter>flags</parameter>.</para>'>
+<!ENTITY xattr.namespace '<para>Atributele extinse au două spaţii de nume 
+diferite: spaţiul de nume al utilizatorilor şi spaţiul de nume root. Spaţiul 
+de nume al utilizatorilor e disponibil tuturor, în timp ce spaţiul de nume 
+root este disponibil numai utilizatorilor cu privilegii de root. xattr 
+operează implicit în spaţiul utilizatorilor, dar aceasta poate fi schimbat
+cu parametrul <parameter>flags</parameter>.</para>'>
 
 <!-- Notes for IPv6 -->
-<!ENTITY ipv6.brackets '<note><simpara>La specificarea unei adrese IPv6 numerice
-(de ex. fe80::1), ea trebuie cuprinsă între paranteze pătrate. De exemplu,  
-<literal>tcp://[fe80::1]:80</literal>.</simpara></note>'>
+<!ENTITY ipv6.brackets '<note><simpara>La specificarea unei adrese IPv6 
+numerice (de ex. <literal>fe80::1</literal>), ea trebuie cuprinsă între 
+paranteze pătrate &#2014; de exemplu <literal>tcp://[fe80::1]:80</literal>.
+</simpara></note>'>
 
-<!ENTITY ipv6.php5 '<note><simpara>Susţinerea IPv6 a fost adăugată în PHP 5.0.0.</simpara></note>'>
+<!ENTITY ipv6.php5 '<note><simpara>Susţinerea IPv6 a fost adăugată în PHP 
+5.0.0.</simpara></note>'>
 
 <!-- Notes for tidy -->
-<!ENTITY note.tidy.ze2 '<note><simpara> Această funcţie este disponibilă numai cu 
-Zend Engine 2, ceea ce înseamnă PHP &gt;= 5.0.0.</simpara></note>'>
+<!ENTITY note.tidy.ze2 '<note><simpara> Această funcţie este disponibilă numai
+cu Zend Engine 2 (PHP &gt;= 5.0.0).</simpara></note>'>
 
-<!ENTITY note.tidy.1only '<note><simpara>Această funcţie este disponibilă numai
-în Tidy 1.0. Ea a devenit dezaprobată în Tidy 2.0 şi de aceea a fost eliminată.</simpara></note>'>
+<!ENTITY note.tidy.1only '<note><simpara>Această funcţie este disponibilă 
+numai în Tidy 1.0. Ea a devenit dezaprobată în Tidy 2.0 şi de aceea a fost 
+eliminată.</simpara></note>'>
 
 <!ENTITY note.tidy.2only '<note><simpara>Parametrii opţionali
-<parameter>config</parameter> şi <parameter>encoding</parameter> au fost adăugaţi
-în Tidy 2.0.</simpara></note>'>
+<parameter>config</parameter> şi <parameter>encoding</parameter> au fost 
+adăugaţi în Tidy 2.0.</simpara></note>'>
 
 <!ENTITY tidy.conf-enc '<para>Parametrul <parameter>config</parameter> poate
-fi transmis sau sub forma unui masiv, sau sub forma unui string. Dacă îl transmiteţi
-ca string, el este interpretat ca denumirea fişierului de configurare, în caz contrar
-el este interpretat ca însăşi opţiunile. Accesaţi
-<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.tidy.conf;">&url.tidy.conf;</link>
-pentru explicaţia fiecărei opţiuni.</para><para>Parametrul <parameter>encoding</parameter>
-stabileşte codificarea pentru documentele de intrare/ieşire. Valorile posibile pentru
-<parameter>encoding</parameter> sunt:
-ascii, latin0, latin1, raw, utf8, iso2022, mac, win1252, ibm858, utf16,
-utf16le, utf16be, big5 and shiftjis.</para>'>
+fi transmis sau sub forma unui masiv, sau sub forma unui string. Dacă este 
+transmis ca string, el este interpretat ca denumirea fişierului de 
+configurare, în caz contrar el este interpretat ca însăşi opţiunile. Accesaţi
+<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.tidy.conf;">
+&url.tidy.conf;</link> pentru explicaţia fiecărei opţiuni.</para><para>
+Parametrul <parameter>encoding</parameter> stabileşte codificarea pentru 
+documentele de intrare/ieşire. Valorile posibile pentru <parameter>encoding
+</parameter> sunt: <literal>ascii</literal>, <literal>latin0</literal>,
+<literal>latin1</literal>, <literal>raw</literal>, <literal>utf8</literal>,
+<literal>iso2022</literal>, <literal>mac</literal>,
+<literal>win1252</literal>, <literal>ibm858</literal>,
+<literal>utf16</literal>, <literal>utf16le</literal>,
+<literal>utf16be</literal>, <literal>big5</literal> şi
+<literal>shiftjis</literal>.</para>'>
 
 <!-- Snippets for the installation section -->
-<!ENTITY warn.apache2.compat '<warning><para>Nu vă recomandăm să utilizaţi în modul de
-producere un MPM bazat pe fire de execuţie cu Apache2. În loc, utilizaţi prefork MPM,
-sau utilizaţi Apache1. Pentru informaţii suplimentare despre cauze, citiţi înregistrarea
-corespunzătoare din FAQ despre utilizarea
-<link linkend="faq.installation.apache2">Apache2 cu un MPM bazat pe fire de execuţie
-</link>.</para></warning>'>
+<!ENTITY warn.apache2.compat '<warning><para>Nu vă recomandăm să utilizaţi în 
+modul de producere un MPM bazat pe fire de execuţie cu Apache2. În loc, 
+utilizaţi prefork MPM, sau utilizaţi Apache 1. Pentru informaţii suplimentare 
+despre cauze, citiţi înregistrarea corespunzătoare din FAQ despre utilizarea
+<link linkend="faq.installation.apache2">Apache2 cu un MPM bazat pe fire de 
+execuţie </link>.</para></warning>'>
 
 <!ENTITY note.apache.slashes '<note><simpara>Ţineţi minte că la adăugarea
-căilor în fişierele de configurare Apache pentru Windows, toate backslash-urile
-cum ar fi în <filename>c:\directory\file.ext</filename> trebuie convertite în
-slash-uri normale ca în <filename>c:/directory/file.ext</filename>. De asemenea
-poate fi necesar un slash la sfârşit pentru directoare.</simpara></note>'>
+căilor în fişierele de configurare Apache pentru Windows, toate 
+backslash-urile cum ar fi în <filename>c:\directory\file.ext</filename> 
+trebuie convertite în slash-uri normale: <filename>c:/directory/file.ext
+</filename>. De asemenea poate fi necesar un slash la sfârşit pentru 
+directoare.</simpara></note>'>
 
 <!-- Snippets and titles for the contributors section -->
 <!ENTITY Credit.Authors.and.Contributors 'Autori şi colaboratori'>
 
-<!ENTITY Credit.Introduction '<para> În prezent noi evidenţiem cele mai active persoane
-pe prima pagină a manualului, dar sunt mult mai mulţi colaboratori
-care în prezent ne ajută în lucrul nostru, sau care au acordat un sprijin substanţial
-proiectului în trecut. Există si multe persoane necunoscute, care ajută cu adnotările
-lor pe paginile manualului, care în mod continuu sunt incluse în referinţe; pentru
-lucrul lor le suntem de asemenea foarte recunoscători. Toate listele afişate mai jos
-sunt în ordine alfabetică.</para>'>
+<!ENTITY Credit.Introduction '<para> În prezent noi evidenţiem cele mai active
+persoane pe prima pagină a manualului, dar sunt mult mai mulţi colaboratori
+care în prezent ne ajută în lucrul nostru, sau care au acordat un sprijin 
+substanţial proiectului în trecut. Există si multe persoane necunoscute, care 
+ajută cu adnotări pe paginile manualului, care în mod continuu sunt 
+incluse în referinţe; pentru lucrul lor le suntem de asemenea foarte 
+recunoscători. Toate listele afişate mai jos sunt în ordine alfabetică.
+</para>'>
 
 <!ENTITY Credit.Authors.and.Editors 'Autori şi redactori'>
 
-<!ENTITY Credit.Past.Authors.Text 'Următorii colaboratori trebiue să fie recunoscuţi
-pentru impactul pe care l-au avut, şi/sau continuă să-l aibă asupra conţinutului manualului:'>
+<!ENTITY Credit.Past.Authors.Text 'Următorii colaboratori trebiue să fie 
+recunoscuţi pentru impactul pe care l-au avut, şi/sau continuă să-l aibă 
+asupra conţinutului manualului:'>
 
-<!ENTITY Credit.Past.Editors.Text 'Următorii colaboratori au depus un efort semnificativ
-în redactarea manualului:'>
+<!ENTITY Credit.Past.Editors.Text 'Următorii colaboratori au depus un efort 
+semnificativ în redactarea manualului:'>
 
-<!ENTITY Credit.Note.Editors.Title 'Răspunzătorii pentru întreţinerea adnotărilor utilizatorilor'>
+<!ENTITY Credit.Note.Editors.Title 'Răspunzătorii pentru întreţinerea 
+adnotărilor utilizatorilor'>
 
-<!ENTITY Credit.Note.Editors.Active 'Cei mai activi răspunzători pentru întreţinere în prezent sunt:'>
+<!ENTITY Credit.Note.Editors.Active 'Cei mai activi răspunzători pentru 
+întreţinere în prezent sunt:'>
 
-<!ENTITY Credit.Note.Editors.Inactive 'Aceste persoane de asemenea au depus un mare efort la
-întreţinerea adnotărilor utilizatorilor:'>
+<!ENTITY Credit.Note.Editors.Inactive 'Aceste persoane de asemenea au depus un
+mare efort la întreţinerea adnotărilor utilizatorilor:'>
 
 <!ENTITY listendand ' şi'>
 
@@ -777,81 +854,109 @@ poate fi utilizată pentru a manipula metoda care la moment rulează, sau este
 poate fi utilizată pentru a manipula metoda care la moment rulează, sau este
 înlănţuită.</simpara></note>'>
 
-<!ENTITY note.runkit.sandbox '<note><simpara>Susţinerea cutiei cu nisip (sandbox)
-(necesară pentru <function>runkit_lint</function>, <function>runkit_lint_file</function>,
-şi clasa Runkit_Sandbox) este disponibilă numai în PHP 5.1 sau cu versiuni special
-modificate ale PHP 5.0 şi necesită ca siguranţa firelor de execuţie să fie activată.
-Vedeţi fişierul README inclus în pachetul runkit pentru a afla mai multe informaţii.
-</simpara></note>'>
+<!ENTITY note.runkit.sandbox '<note><simpara>Susţinerea cutiei cu nisip 
+(sandbox) (necesară pentru <function>runkit_lint</function>, <function>
+runkit_lint_file</function>, şi clasa <classname>Runkit_Sandbox</classname>) 
+este disponibilă numai în PHP 5.1 sau cu versiuni special modificate ale PHP 
+5.0 şi necesită ca siguranţa firelor de execuţie să fie activată. Vedeţi 
+fişierul <filename>README</filename> inclus în pachetul runkit pentru a afla 
+mai multe informaţii.</simpara></note>'>
 
 <!ENTITY note.runkit.internal-override '<note><simpara>Implicit numai funcţii
-din spaţiul utilizatorilor pot fi eliminate, redenumite sau modificate. Pentru a
-depăşi (modifica) funcţiile interne, trebuie să activaţi parametrul
-<literal>runkit.internal_override</literal> din fişierul de sistem php.ini .
-</simpara></note>'>
+din spaţiul utilizatorilor pot fi eliminate, redenumite sau modificate. Pentru
+a depăşi (modifica) funcţiile interne, trebuie să activaţi parametrul
+<literal>runkit.internal_override</literal> din &php.ini;.</simpara></note>'>
 
 <!-- SSH2 Extension -->
-<!ENTITY note.ssh2.subsystem.publickey '<note><simpara>Subsistemul de chei publice
-este utilizat pentru a gestiona cheile publice de pe un server la care clientul este
-<emphasis>deja</emphasis> autentificat. Pentru autentificare pe un sistem îndepărtat
-utilizând autentificarea cu chei publice, utilizaţi funcţia <function>ssh2_auth_pubkey_file</function>
-în loc.</simpara></note>'>
+<!ENTITY note.ssh2.subsystem.publickey '<note><simpara>Subsistemul de chei 
+publice este utilizat pentru a gestiona cheile publice de pe un server la care
+clientul este <emphasis>deja</emphasis> autentificat. Pentru autentificare pe 
+un sistem îndepărtat utilizând autentificarea cu chei publice, utilizaţi 
+funcţia <function>ssh2_auth_pubkey_file</function> în loc.</simpara></note>'>
 
 <!-- HTTP -->
-<!ENTITY see.http.request.options '<para>Vedeţi lista întreagă de &link.http.request.options;.</para>'>
+<!ENTITY see.http.request.options '<para>Vedeţi lista întreagă de 
+&link.http.request.options;.</para>'>
 <!ENTITY see.http.configuration.force_exit 'Vedeţi &link.http.configuration;
-   <link linkend="http.configuration.force_exit">http.force_exit</link> pentru a afla ce înseamnă "iese".'>
+<link linkend="http.configuration.force_exit">http.force_exit</link> pentru a 
+afla ce înseamnă "iese".'>
 
-<!ENTITY link.http.configuration '<link linkend="http.configuration">setarea INI</link>'>
-<!ENTITY link.http.request.option '<link linkend="http.request.options">opţiunea interpelării</link>'>
-<!ENTITY link.http.request.options '<link linkend="http.request.options">opţiunile interpelării</link>'>
-<!ENTITY link.http.request.info '<link linkend="http.request.info">Informaţia interpelării/răspunsului</link>'>
-<!ENTITY returns.http.response 'Întoarce răspunsul(urile) HTTP ca string în caz de succes, sau FALSE în caz de eşec.'>
-<!ENTITY returns.http.false.orexits 'Întoarce &false; sau <emphasis>iese</emphasis> în caz de succes'>
-<!ENTITY http.request.affects 'Afectează numai următoarele metode de interpelare:'>
+<!ENTITY link.http.configuration '<link linkend="http.configuration">setarea 
+INI</link>'>
+<!ENTITY link.http.request.option '<link linkend="http.request.options">
+opţiunea interpelării</link>'>
+<!ENTITY link.http.request.options '<link linkend="http.request.options">
+opţiunile interpelării</link>'>
+<!ENTITY link.http.request.info '<link linkend="http.request.info">Informaţia 
+interpelării/răspunsului</link>'>
+<!ENTITY returns.http.response 'Întoarce răspunsul(urile) HTTP ca string în 
+caz de succes, sau &false; în caz de eşec.'>
+<!ENTITY returns.http.false.orexits 'Întoarce &false; sau <emphasis>iese
+</emphasis> în caz de succes'>
+<!ENTITY http.request.affects 'Afectează numai următoarele metode de 
+interpelare:'>
 <!ENTITY http.request.affects.any 'Afectează orice metodă de interpelare.'>
 <!ENTITY http.response.class.php51 'clasa <link linkend="class.httpresponse">
-   <classname>HttpResponse</classname></link> dacă utilizaţi PHP-5.1 sau ulterior'>
-<!ENTITY http.maynotwork.SAPI 'Aceasta poate să nu funcţioneze conform aşteptărilor cu următoarele SAPI(uri):'>
-<!ENTITY http.content.disposition 'Antetul <literal>Content-Disposition</literal> este foarte util
-   în caz că datele transmise provin dintr-un fişier sau ceva similar şi care ar trebui &quot;salvate&quot;
-   de client/utilizator (de ex. în browser fereastra &quot;Salvează în...&quot;).'>
-<!ENTITY http.use.ob_start 'Pentru a fi utilizat cu <function>ob_start</function>.'>
+<classname>HttpResponse</classname></link> dacă utilizaţi PHP 5.1.0 sau 
+ulterior'>
+<!ENTITY http.maynotwork.SAPI 'Aceasta poate să nu funcţioneze conform 
+aşteptărilor cu următoarele SAPI(uri):'>
+<!ENTITY http.content.disposition 'Antetul <literal>Content-Disposition
+</literal> este foarte util în caz că datele transmise provin dintr-un fişier 
+sau ceva similar şi care ar trebui &quot;salvate&quot; de client/utilizator 
+(de ex. în browser fereastra &quot;Salvează în...&quot;).'>
+<!ENTITY http.use.ob_start 'Pentru a fi utilizat cu <function>ob_start
+</function>.'>
 
-<!ENTITY note.http.response.recalculate.etag.lm '<note><simpara><literal>ETag</literal>
-   şi <literal>Last-Modified</literal> calculate sau definite anterior vor fi recalculate sau redefinite.</simpara></note>'>
-<!ENTITY note.http.throttling.yields.process '<note><simpara>Oferă un mecanism de limitare de bază, care va suspenda
-   procesul sau firul de execuţie curent până când entitatea nu este transmisă deplin.</simpara></note>'>
-<!ENTITY note.http.send.API '<note><simpara>Această funcţie ar trebui să fie utilizată împreună cu
-   <function>http_send_data</function>, <function>http_send_file</function> &listendand; <function>http_send_stream</function>.</simpara></note>'>
-<!ENTITY note.http.send.API.mayuse '<note><simpara>Această funcţie ar putea fi utilizată împreună cu 
-   <function>http_send_data</function>, <function>http_send_file</function> &listendand; <function>http_send_stream</function>.</simpara></note>'>
-<!ENTITY note.http.request.encodecookies '<note><simpara>&link.http.request.option; <literal>encodecookies</literal> controlează
-   dacă valorile cookie trebuie procesate cu <function>urlencode</function>.</simpara></note>'>
-<!ENTITY note.http.request.affects.any '<note><simpara>&http.request.affects.any;</simpara></note>'>
-<!ENTITY note.http.ob.once '<note><simpara>Acest handler de ieşire poate fi utilizat numai o singură dată.</simpara></note>'>
+<!ENTITY note.http.response.recalculate.etag.lm '<note><simpara><literal>ETag
+</literal> şi <literal>Last-Modified</literal> calculate sau definite anterior
+vor fi recalculate sau redefinite.</simpara></note>'>
+<!ENTITY note.http.throttling.yields.process '<note><simpara>Oferă un mecanism
+de limitare de bază, care va suspenda procesul sau firul de execuţie curent 
+până când entitatea nu este transmisă deplin.</simpara></note>'>
+<!ENTITY note.http.send.API '<note><simpara>Această funcţie ar trebui să fie 
+utilizată împreună cu <function>http_send_data</function>, <function>
+http_send_file</function> &listendand; <function>http_send_stream</function>.
+</simpara></note>'>
+<!ENTITY note.http.send.API.mayuse '<note><simpara>Această funcţie ar putea fi
+utilizată împreună cu <function>http_send_data</function>, <function>
+http_send_file</function> &listendand; <function>http_send_stream</function>.
+</simpara></note>'>
+<!ENTITY note.http.request.encodecookies '<note><simpara>
+&link.http.request.option; <literal>encodecookies</literal> controlează
+dacă valorile cookie trebuie procesate cu <function>urlencode</function>.
+</simpara></note>'>
+<!ENTITY note.http.request.affects.any '<note><simpara>
+&http.request.affects.any;</simpara></note>'>
+<!ENTITY note.http.ob.once '<note><simpara>Acest handler de ieşire poate fi 
+utilizat numai o singură dată.</simpara></note>'>
 
 <!-- XMLWriter Notes -->
 <!ENTITY xmlwriter.xmlwriter.description '<varlistentry><term><parameter>
-xmlwriter</parameter></term><listitem><para>Numai pentru apelurile procedurale. 
-<type>Resursa</type> XMLWriter care este modificată. Această resursă se obţine în urma apelării
-<function>xmlwriter_open_uri</function> sau <function>xmlwriter_open_memory</function>.</para></listitem></varlistentry>'>
+xmlwriter</parameter></term><listitem><para>Numai pentru apelurile 
+procedurale. <type>Resursa</type> XMLWriter care este modificată. Această 
+resursă se obţine în urma apelării <function>xmlwriter_open_uri</function> sau
+<function>xmlwriter_open_memory</function>.</para></listitem></varlistentry>'>
 
 <!-- SVN notes -->
-<!ENTITY svn.relativepath "<note><simpara>Căile relative vor fi rezolvate ca şi cum directorul curent
-este cel ce conţine binarul PHP. Pentru a utiliza directorul de lucru al scriptului apelant, utilizaţi
-<function>realpath</function> sau dirname(__FILE__).</simpara></note>">
-<!ENTITY svn.referto.status 'Accesaţi <link linkend="svn.constants.status">constantele de stare</link>
-pentru a afla valorile posibile.'>
-<!ENTITY svn.referto.type 'Accesaţi <link linkend="svn.constants.type">constante de tip</link> pentru
-a afla valorile posibile.'>
+<!ENTITY svn.relativepath "<note><simpara>Căile relative vor fi rezolvate ca 
+şi cum directorul curent este cel ce conţine binarul PHP. Pentru a utiliza 
+directorul de lucru al scriptului apelant, utilizaţi <function>realpath
+</function> sau dirname(__FILE__).</simpara></note>">
+<!ENTITY svn.referto.status 'Accesaţi <link linkend="svn.constants.status">
+constantele de stare</link>pentru a afla valorile posibile.'>
+<!ENTITY svn.referto.type 'Accesaţi <link linkend="svn.constants.type">
+constante de tip</link> pentru a afla valorile posibile.'>
 
 <!-- Imagick generic return types -->
 <!ENTITY imagick.return.success 'Întoarce &true; în caz de succes.'>
 <!ENTITY imagick.imagick.throws 'Aruncă ImagickException în caz de eroare.'>
-<!ENTITY imagick.imagickdraw.throws 'Aruncă ImagickDrawException în caz de eroare.'>
-<!ENTITY imagick.imagickpixel.throws 'Aruncă ImagickPixelException în caz de eroare.'>
-<!ENTITY imagick.imagickpixeliterator.throws 'Aruncă ImagickPixelIteratorException în caz de eroare.'>
+<!ENTITY imagick.imagickdraw.throws 'Aruncă ImagickDrawException în caz de 
+eroare.'>
+<!ENTITY imagick.imagickpixel.throws 'Aruncă ImagickPixelException în caz de 
+eroare.'>
+<!ENTITY imagick.imagickpixeliterator.throws 'Aruncă 
+ImagickPixelIteratorException în caz de eroare.'>
 
 <!ENTITY note.openssl.cnf '<note xmlns="http://docbook.org/ns/docbook">
  <simpara>
@@ -863,8 +968,8 @@ a afla valorile posibile.'>
 </note>'>
 <!ENTITY note.openssl.param-notext '<para xmlns="http://docbook.org/ns/docbook">
  Parametrul opţional <parameter>notext</parameter> afectează detalierea 
- ieşirilor; dacă este &false; atunci informaţii suplimentare lizibile de către 
- om sunt incluse în ieşiri. Valoarea implicită a <parameter>notext</parameter> 
+ ieşirilor; dacă este &false; atunci informaţii suplimentare lizibile de către
+ om sunt incluse în ieşiri. Valoarea implicită a <parameter>notext</parameter>
  este &true;.
 </para>'>
 
@@ -873,26 +978,25 @@ a afla valorile posibile.'>
 <para>
  Ca şi în cazul tuturor funcţiilor aritmetice de variante, parametrii pentru 
  această funcţie pot fi sau de un tip PHP indigen (integer, string, floating 
- point, boolean sau &null;), sau o instanţă a claselor COM, VARIANT sau DOTNET.
- Tipurile PHP indigene vor fi convertite în variante utilizând aceleaşi reguli 
- ca şi cele din constructorul <xref linkend="class.variant"/> clasei. De la 
- obiectele COM şi DOTNET se va lua valoarea proprietăţii lor implicite şi va fi
- utilizată ca valoare a variantei.
+ point, boolean sau &null;), sau o instanţă a claselor COM, VARIANT sau 
+ DOTNET. Tipurile PHP indigene vor fi convertite în variante utilizând 
+ aceleaşi reguli ca şi cele din constructorul <xref linkend="class.variant"/> 
+ clasei. De la obiectele COM şi DOTNET se va lua valoarea proprietăţii lor 
+ implicite şi va fi utilizată ca valoare a variantei.
 </para>
 <para>
  Funcţiile aritmetice ale variantelor sunt nişte învelişuri ale funcţiilor 
  denumite similar în biblioteca COM; pentru informaţii suplimentare despre 
- aceste funcţii consultaţi biblioteca MSDN. Funcţiile PHP sunt denumite un pic 
- diferit; spre exemplu, variant_add() din PHP corespunde VarAdd() în 
- documentaţia MSDN.
+ aceste funcţii consultaţi biblioteca MSDN. Funcţiile PHP sunt denumite un pic
+ diferit; spre exemplu, <function>variant_add</function> din PHP corespunde 
+ cu <literal>VarAdd()</literal> în documentaţia MSDN.
 </para>
-</note>
-'>
+</note>'>
 <!ENTITY com.use-oo-instead '<note xmlns="http://docbook.org/ns/docbook">
  <simpara>
-  Această funcţie nu există în PHP 5; în loc, ar trebui să utilizaţi sintaxa OO
-  care este mai obişnuită şi mai naturală pentru a accesa proprietăţile, sau 
-  pentru a apela metodele.
+  Această funcţie nu există în PHP 5; în loc, ar trebui să utilizaţi sintaxa 
+  OO care este mai obişnuită şi mai naturală pentru a accesa proprietăţile, 
+  sau pentru a apela metodele.
  </simpara>
 </note>
 '>
@@ -900,11 +1004,11 @@ a afla valorile posibile.'>
 <!-- phar -->
 <!ENTITY phar.write '<note xmlns="http://docbook.org/ns/docbook">
 <para>
- Această funcţie necesită ca parametrul INI <literal>phar.readonly</literal> să
- fie stabilit în 0 pentru a funcţiona. În caz contrar va fi aruncată o excepţie
- <classname>PharException</classname>.
+ Această funcţie necesită ca parametrul &php.ini;
+ <literal>phar.readonly</literal> să fie stabilit în <literal>0</literal> 
+ pentru a funcţiona. În caz contrar va fi aruncată o 
+ excepţie <classname>PharException</classname>.
 </para>
-</note>
-'>
+</note>'>
 
 <!-- Translated by Simion Onea -->
