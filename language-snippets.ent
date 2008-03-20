@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.216 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.217 Maintainer: simionea Status: translated -->
 <!-- Keep 'em sorted -->
 
 <!-- Notes -->
@@ -372,15 +372,6 @@ mediu <literal>NLS_LANG</literal>.
 transformărilor tipurilor de date efectuate de driver-ul oci8, accesaţi
 <link linkend="oci8.datatypes">tipurile de date susţinute de driver</link>
 </para>'>
-
-<!ENTITY oracle.deprecated '<para>Utilizarea extensiei
-<link linkend="ref.oracle">oracle</link> este deyaprobată în favoarea
-<link linkend="ref.oci8">oci8</link>.
-</para>'>
-
-<!ENTITY oracle.replacement.desc 'Când utilizaţi <link linkend="ref.oci8">oci8
-</link> în locul extensiei învechite <link linkend="ref.oracle">oracle</link>,
-consideraţi utilizarea: '>
 
 <!-- PCNTL Notes -->
 <!ENTITY pcntl.parameter.status '<para>Parametrul <parameter>status
