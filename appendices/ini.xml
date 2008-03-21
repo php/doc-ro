@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.13 $ -->
-<!-- EN-Revision: 1.63 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.14 $ -->
+<!-- EN-Revision: 1.65 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&php.ini; directives</title>
@@ -2709,8 +2709,8 @@
       <row>
        <entry><link linkend="ini.short-open-tag">short_open_tag</link></entry>
        <entry>"1"</entry>
-       <entry>PHP_INI_PERDIR</entry>
-       <entry>PHP_INI_ALL în PHP &lt;= 4.0.0.</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>PHP_INI_ALL în PHP &lt;= 4.0.0. PHP_INI_PERDIR în PHP &lt;= 5.3.0.</entry>
       </row>
       <row>
        <entry>simple_cvs.authMethod</entry>
@@ -3594,8 +3594,8 @@
      <row>
       <entry>short_open_tag</entry>
       <entry>"1"</entry>
-      <entry>PHP_INI_PERDIR</entry>
-      <entry>PHP_INI_ALL în PHP &lt;= 4.0.0.</entry>
+      <entry>PHP_INI_ALL</entry>
+      <entry>PHP_INI_ALL în PHP &lt;= 4.0.0. PHP_INI_PERDIR în PHP &lt;= 5.3.0.</entry>
      </row>
      <row>
       <entry>asp_tags</entry>
