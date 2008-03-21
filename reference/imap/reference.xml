@@ -1,90 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.8 $ -->
-<!-- EN-Revision: 1.20 Maintainer: simionea Status: translated -->
-<!-- CREDITS: adiju -->
-<!-- Purpose: remote.mail -->
-<!-- Membership: bundled, external -->
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- $Revision: 1.9 $ -->
+<!-- EN-Revision: 1.21 Maintainer: simionea Status: translated -->
 
- <reference xml:id='ref.imap' xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <title>Funcţii IMAP, POP3 şi NNTP</title>
+ <reference xml:id="ref.imap" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>&Functions; IMAP, POP3 si NNTP</title>
   <titleabbrev>IMAP</titleabbrev>
 
   <partintro>
-   <section xml:id="imap.intro">
-    &reftitle.intro;
-    <para>
-     Aceste funţii vă permit să lucraţi cu protocolul <acronym>IMAP</acronym>,
-     precum şi cu <acronym>NNTP</acronym>, <acronym>POP3</acronym> şi oferă
-     metode de acces la cutia poştală locală.
-    </para>
-    <para>
-     Însă vă avertizăm că unele funcţii IMAP nu vor funcţiona corect cu
-     protocolul POP.
-    </para>
-   </section>
-
-   <section xml:id="imap.requirements">
-    &reftitle.required;
-    <para>
-     Această extensie necesită instalarea bibliotecii c-client.
-     Obţineţi ultima versiune de la
-     <link xlink:href="&url.imap;">&url.imap;</link>
-     şi compilaţi-o.
-    </para>
-    <para>
-     Este important să nu copiaţi fişierele-sursă IMAP direct în directorul de 
-     includeri de sistem, deoarece pot apărea conflicte. În loc, creaţi un nou
-     director în interiorul directorului de includeri de sistem, cum ar fi de
-     exemplu <filename>/usr/local/imap-2000b/</filename> (amplasarea şi
-     denumirea depind de setările dumneavoastră şi de versiunea IMAP), şi în 
-     interiorul acestui nou director creaţi directoare suplimentare denumite
-     <filename>lib/</filename> şi <filename>include/</filename>. Din directorul
-     <filename>c-client</filename> din arborele cu sursele IMAP copiaţi toate 
-     fişierele <filename>*.h</filename> în <filename>include/</filename> şi 
-     toate fişierele <filename>*.c</filename> în <filename>lib/</filename>.  
-     Suplimentar, când aţi compilat IMAP, a fost creat un fişier cu denumirea
-     <filename>c-client.a</filename>. De asemenea puneţi-l în directorul
-     <filename>lib/</filename>, dar redenumiţi-l în
-     <filename>libc-client.a</filename>.
-    </para>
-    <note>
-     <para>
-      Pentru a asambla biblioteca c-client cu susţinerea SSL şi/sau Kerberos 
-      citiţi documentaţia furnizată cu pachetul.
-     </para>
-    </note>
-    <note>
-     <simpara>
-      În Mandrake Linux, biblioteca IMAP (<filename>libc-client.a</filename>)
-      este compilată fără susţinerea Kerberos. O versiune separată cu SSL
-      (<filename>client-PHP4.a</filename>) este instalată. Biblioteca trebuie 
-      să fie recompilată pentru a adăuga susţinerea Kerberos.
-     </simpara>
-    </note>
-   </section>
-
-   &reference.imap.configure;
-
-   <section xml:id="imap.configuration">
-    &reftitle.runtime;
-    &no.config;
-   </section>
-
-   <section xml:id="imap.resources">
-    &reftitle.resources;
-    <para>
-    </para>
-   </section>
-
-   &reference.imap.constants;
-
-   <section xml:id="imap.seealso">
    &reftitle.seealso;
     <para>
-     Acest document nu poate cuprinde toate amănuntele subiectelor atinse de
-     funcţiile date. Informaţii suplimentare sunt oferite de documentaţia 
-     codului-sursă al bibliotecii c-client
-     (<filename>docs/internal.txt</filename>) şi de utmătoarele documente RFC:
+     Acest document nu poate cuprinde toate amanuntele subiectelor atinse de
+     functiile date. Informatii suplimentare sunt oferite de documentatia 
+     codului-sursa al bibliotecii c-client
+     (<filename>docs/internal.txt</filename>) si de utmatoarele documente RFC:
      <itemizedlist>
       <listitem>
        <simpara>
@@ -106,7 +34,7 @@
       </listitem>
       <listitem>
        <simpara>
-        <link xlink:href="&url.rfc;1939">RFC1939</link>:  Post
+        <link xlink:href="&url.rfc;1939">RFC1939</link>: Post
         Office Protocol Version 3 (POP3).
        </simpara>
       </listitem>
@@ -133,20 +61,16 @@
        </simpara>
       </listitem>
      </itemizedlist> 
-     O privire generală de detaliu este disponibilă în cărţile
+     O privire generala de detaliu este disponibila �n cartile
      <link xlink:href="&url.email.book;">Programming Internet Email</link>
-     de David Wood şi <link xlink:href="&url.imap.book;">Managing
+     de David Wood si <link xlink:href="&url.imap.book;">Managing
      IMAP</link> de Dianna Mullet &amp; Kevin Mullet.
     </para>
-   </section>
   </partintro>
 
 &reference.imap.entities.functions;
 
  </reference>
- 
-<!-- Translated by Simion Onea. -->
- 
 <!-- Keep this comment at the end of the file
 Local variables:
 mode: sgml
