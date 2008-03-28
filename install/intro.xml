@@ -1,166 +1,76 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.1 $ -->
-<!-- EN-Revision: 1.1 Maintainer: spooky Status: ready -->
-<chapter xml:id="installation" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
- <title>Instalare</title>
-  <sect1 xml:id="install.general">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.2 $ -->
+<!-- EN-Revision: 1.5 Maintainer: simionea Status: translated -->
+<!-- CREDITS: spooky -->
+  <chapter xml:id="install.general" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
    <title>Aspecte generale privind instalarea</title>
    <para>
-    Înainte de începerea instalării, trebuie să şti pentru ce vrei să 
-foloseşti 
-PHP-ul. Sunt trei domenii principale în care poţi folosi PHP-ul descrise în 
-secţiunea <link linkend="intro-whatcando">Ce poate face PHP?</link>
+    Ănainte de a ĂŽncepe instalarea, trebuie sÄ ĹtiĹŁi pentru ce doriĹŁi sÄ 
+    utilizaĹŁi PHP. ExistÄ trei domenii principale de utilizare a PHP. Ele sunt 
+    descrise ĂŽn secĹŁiunea <link linkend="intro-whatcando">Ce poate face
+    PHP?</link>
     <itemizedlist>
-     <listitem><simpara>Scripturi ce rulează pe partea de server</simpara></listitem>
-     <listitem><simpara>Scripturi ce rulează din linia de comandă</simpara></listitem>
-     <listitem><simpara>Aplicaţii GUI ce rulează la client</simpara></listitem>
+     <listitem><simpara>Site-uri web Ĺi aplicaĹŁii web (scripting de partea 
+     server-ului)</simpara></listitem>
+     <listitem><simpara>Scripting pentru linia de comandÄ</simpara></listitem>
+     <listitem><simpara>AplicaĹŁii de birou cu interfaĹŁÄ graficÄ (GUI)</simpara></listitem>
     </itemizedlist>
    </para>
    <para>
-    Pentru prima şi cea mai utilizată formă, ai nevoie de trei lucruri: însuşi 
-PHP-ul, un server de web şi un navigator web. Probabil ai deja un navigator 
-web şi, depinzând de instalarea sistemului tău de operare, s-ar putea să 
-ai şi un server de web (ex. Apache pe Linux sau IIS pe Windows).
-    Ai putea, de asemenea, să inchiriezi spaţiu pe web de la o companie. În acest 
-fel, nu trebuie să setezi tu personal, doar să scrii scripturile PHP, le 
-transferi pe server pe care ai închiriat spaţiul şi vezi rezultatul obţinut 
-în browser. Poţi găsi o listă cu companii care oferă hosting la <link xlink:href="&url.php.hosts;">&url.php.hosts;</link>.
+    Pentru prima, Ĺi cea mai des ĂŽntĂ˘lnitÄ formÄ, veĹŁi avea nevoie de trei
+    lucruri: ĂŽnsuĹi PHP, un server web Ĺi un navigator web. Probabil deja aveĹŁi
+    un navigator web Ĺi, ĂŽn dependenĹŁÄ de sistemul dumneavoastrÄ de operare,
+    puteĹŁi sÄ aveĹŁi Ĺi un server web (de ex. Apache pe Linux Ĺi MacOS X; IIS pe
+    Windows). PuteĹŁi de asemenea sÄ ĂŽnchiriaĹŁi spaĹŁiu web de la o companie.
+    Ăn acest caz nu trebuie personal sÄ configuraĹŁi ceva, numai sÄ scrieĹŁi
+    script-urile PHP, sÄ le ĂŽncÄrcaĹŁi pe server-ul care ĂŽl ĂŽnchiriaĹŁi Ĺi sÄ
+    vedeĹŁi rezultatele ĂŽn navigator. 
    </para>
    <para>
-    Dacă instalezi serverul şi PHP de unul singur, ai la dispoziţie două 
-metode de a conecta PHP de server. Pentru majoritatea serverelor PHP are un modul 
-direct de interfaţă (numit şi SAPI). Aceste servere includ Apache, Microsoft 
-Internet Information Server, Netscape şi iPlanet. Multe alte server au 
-suport pentru ISAPI, modulul de interfata Microsoft (OmniHTTPd spre 
-exemplu). Dacă PHP nu are suport de modul pentru serverul tău de web, îl 
-poţi folosi întotdeauna ca un procesor CGI. Aceasta înseamnă că trebuie sa 
-configurezi serverul tău de web să folosească executabilul în linie de 
-comandă a PHP-ului (<filename>php.exe</filename> în Windows) să proceseze 
-toate fişierele PHP cerute pe server.
+    Ăn caz cÄ configuraĹŁi personal server-ul Ĺi PHP, aveĹŁi douÄ posibilitÄĹŁi ĂŽn
+    alegerea metodei de conectare dintre PHP Ĺi server. Pentru multe servere 
+    PHP are o interfaĹŁÄ-modul directÄ (denumitÄ de asemenea SAPI). Aceste 
+    servere includ Apache, Microsoft Internet Information Server, serverele 
+    Netscape Ĺi iPlanet. Multe alte servere susĹŁin ISAPI - interfaĹŁa-modul 
+    Microsoft (OmniHTTPd spre exemplu). DacÄ PHP nu este susĹŁinut ca modul 
+    pentru server-ul dumneavoastrÄ web, atunci oricĂ˘nd ĂŽl puteĹŁi utiliza ca 
+    procesor CGI sau FastCGI. Aceasta ĂŽnseamnÄ sÄ configuraĹŁi serverul 
+    dumneavoastrÄ sÄ utilizeze executabilul CGI al PHP pentru a procesa toate
+    cererile de fiĹiere PHP de pe server.
    </para>
    <para>
-    Dacă eşti deasemenea interesat să foloseşti php în scripting linie de 
-comandă (ex. scriearea de scripturi care să autogenereze imagini pentru tine 
-offline, sau procesarea de fişiere text depinzând de argumentele care le 
-trimiţi), întotdeauna ai nevoie de executabilul în linia de comandă. Pentru 
-mai multe informaţii, citeşte secţiunea despre <link 
-linkend="commandline">scrierea de aplicaţii PHP în linia de comandă</link>. 
-În acest caz nu ai nevoie de serveru şi nici de navigator.
+    DacÄ de asemenea sunteĹŁi interesat sÄ utilizaĹŁi PHP pentru scripting ĂŽn
+    linia de comandÄ (de ex. sÄ scrieĹŁi scripturi care sÄ genereze automat
+    careva imagini offline, sau sÄ procesaĹŁi fiĹiere textuale ĂŽn dependenĹŁÄ de
+    careva argumente pe care le transmiteĹŁi), ĂŽntotdeauna veĹŁi avea nevoie de 
+    executabilul pentru linia de comandÄ. Pentru a afla mai multe informaĹŁii, 
+    citiĹŁi secĹŁiunea despre <link linkend="features.commandline">scrierea 
+    aplicaĹŁiilor PHP pentru linia de comandÄ</link>. Ăn acest caz nu veĹŁi avea 
+    nevoie de server sau navigator.
    </para>
    <para>
-    Cu PHP poţi deasemenea să scrii aplicaţii GUI ce rulează de partea 
-clientului folosind extensia PHP-GTK. Aceasta este o abordare total diferită 
-decât cea a scrierii paginilor web, deoarece tu nu scoţi nici un rezultat 
-HTML, dar manevrezi ferestre şi obiecte din interiorul lor. Pentru mai multe 
-detalii despre PHP-GTK, te rog <link xlink:href="&url.php.gtk;">vizitează site-ul 
-dedicat acestei extensii</link>. PHP-GTK nu este inclus în distribuţia 
-oficială a PHP-ului.
+    Cu PHP de asemenea puteĹŁi scrie aplicaĹŁii de birou cu interfaĹŁÄ GUI 
+    utilizĂ˘nd extensia PHP-GTK. Aceasta este o abordare total diferitÄ decĂ˘t 
+    scrierea paginilor web, deoarece nu afiĹaĹŁi careva HTML, dar gestionaĹŁi 
+    ferestre Ĺi obiecte din cadrul lor. Pentru mai multe informaĹŁii despre
+    PHP-GTK, vÄ rugÄm sÄ <link xlink:href="&url.php.gtk;">vizitaĹŁi site-ul
+    dedicat acestei extensii</link>. PHP-GTK nu este inclusÄ ĂŽn distributivul 
+    oficial al PHP.
    </para>
    <para>
-    De acum în colo, această secţiune se preocupă de instalarea şi 
-configurarea PHP-ului pentru serverul de web sub Unix şi Windows ca modul 
-de server şi executabil CGI.
+    De acum ĂŽnainte, aceastÄ secĹŁiune va lÄmuri configurarea PHP pentru servere
+    web pe Unix Ĺi Windows cu interfeĹŁe-modul Ĺi executabile CGI. De asemenea 
+    veĹŁi gÄsi ĂŽn urmÄtoarele secĹŁiuni informaĹŁii despre executabilul pentru 
+    linia de comandÄ.
    </para>
    <para>
-    Descărcaţi PHP, codul sursă, şi distribuţiile binare pentru Windows care 
-pot fi găsite la <link xlink:href="&url.php;">&url.php;</link>.
-    Îţi recomandăm să alegi un <link xlink:href="&url.mirrors;">server</link> care 
-se află mai aproape de tine pentru a descărca mai repede distribuşiile.
+    Codul-sursÄ PHP Ĺi distributivele binare pentru Windows pot fi gÄsite la
+    <link xlink:href="&url.php.downloads;">&url.php.downloads;</link>.
+    VÄ recomandÄm sÄ alegeĹŁi o
+    <link xlink:href="&url.mirrors;">oglindÄ</link> mai apropiatÄ pentru a 
+    descÄrca distributivele.
    </para>
-  </sect1>
-
-<!-- EN-Revision: install.hpux.xml 1.1 Maintainer: spooky Status: ready -->
-  <sect1 xml:id="install.hpux">
-   <title>Instalarea pe Unix/HP-UX</title>
-   <para>
-    Această secţiune conţine notiţe şi ajutoare pentru a instala PHP pe 
-sistemele HP-UX.
-   </para>
-   <example xml:id="install.hpux.example">
-    <title>
-     Instrucţiuni instalare pentru HP-UX 10
-    </title>
-    <screen>
-<![CDATA[
-From: paul_mckay@clearwater-it.co.uk
-04-Jan-2001 09:49
-(Aceste trucuri sunt pentgru PHP 4.0.4 şi Apache v1.3.9) 
-
-Deci vrei să instalezi PHP şi Apache pe o maşină HP-UX 10.20? 
-
-1. Ai nevoie de gzip, descarcă o distribuţie binară de la 
-http://hpux.connect.org.uk/ftp/hpux/Gnu/gzip-1.2.4a/gzip-1.2.4a-sd-10.20.depot
-.Z
-decompactează fişierul şi instalează utilizând using swinstall 
-
-2. Ai nevoie de gcc, descarcă o distribuţie binară de la 
-http://gatekeep.cs.utah.edu/ftp/hpux/Gnu/gcc-2.95.2/gcc-2.95.2-sd-10.20.depot.
-gz 
-gunzip acest fişier şi instalează gcc utilizând swinstall. 
-
-3. Ai nevoie de GNU binutils, descarcă o distribuţie binară de la 
-http://hpux.connect.org.uk/ftp/hpux/Gnu/binutils-2.9.1/binutils-2.9.1-sd-10.20
-.depot.gz 
-gunzip acest fişier şi instalează utilizând swinstall. 
-
-4. Ai nevoie de bison, descarcă o distribuţie binară de la 
-http://hpux.connect.org.uk/ftp/hpux/Gnu/bison-1.28/bison-1.28-sd-10.20.depot.g
-z 
-şi instalează ca mai sus. 
-
-5. Ai nevoie de flex, trebuie să descarci sursele de la
-http://www.gnu.org mirrors. Este în directorul <filename>non-gnu</filename> 
-a site-ului FTP. 
-Descarcă fişierul, gunzip, apoi tar -xvf asupra lui. Du-te în directorul flex nou creat
-şi dă-i ./configure, apoi make, după care make install 
-
-Dacă apar erori, acestea se datorează, probabil, faptului că gcc etc. nu sînt în
-PATH aşa că adaugă-le în PATH. 
-
-Ei, şi-acum începe partea grea. 
-
-6. Descarcă sursele PHP şi Apache. 
-
-7. gunzip şi tar -xvf asupra lor. 
-
-Trebuie să modificăm o serie de fişiere pentru a putea compila sursele.
-
-8. Mai întîi fişierul de configurare are nevoie să fie modificat deoarece pare să nu sesizeze 
-faptul că rulează pe o maşină hpux; cea mai bună cale de a remedia 
-problema este să adaugi  
-    lt_target=hpux10.20 
-în linia 47286 a scriptului de configurare. 
-
-9. Urmează să fie modificat fişierul Apache GuessOS. În 
-apache_1.3.9/src/helpers schimbă linia 89 de la 
-    "echo "hp${HPUXMACH}-hpux${HPUXVER}"; exit 0" 
-la: 
-    "echo "hp${HPUXMACH}-hp-hpux${HPUXVER}"; exit 0" 
-    
-10. Nu poţi instala PHP ca obiect partajat sub HP-UX aşa că trebuie să-l compilezi
-static, pentru asta vezi instrucţiunile de pe site-ul Apache. 
-
-11. PHP şi Apache pot fi compilate OK, dar Apache nu porneşte. Trebuie
-să creezi un nou user pentru Apache, de exemplu www, sau apache. Schimbă apoi liniile 252
-şi 253 a fişierului conf/httpd.conf al Apache-ului aşa încât în loc de 
-    User nobody 
-    Group nogroup 
-să ai ceva de genul 
-    User www 
-    Group sys 
-
-Asta deoarece nu poţi rula Apache ca nimeni sub hp-ux. 
-Acum Apache şi PHP ar trebui să meargă. 
-
-Cu speranţa că va ajuta pe cineva,
-Paul Mckay.
-]]>
-  </screen>
- </example>
-
-</sect1>
-
-</chapter>
+  </chapter>
 
 <!-- Keep this comment at the end of the file
 Local variables:
