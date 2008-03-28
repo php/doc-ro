@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.217 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.219 Maintainer: simionea Status: translated -->
 <!-- Keep 'em sorted -->
 
 <!-- Notes -->
@@ -995,11 +995,9 @@ ImagickPixelIteratorException în caz de eroare.'>
 <!-- phar -->
 <!ENTITY phar.write '<note xmlns="http://docbook.org/ns/docbook">
 <para>
- Această funcţie necesită ca parametrul &php.ini;
+ Această metodă necesită ca parametrul &php.ini;
  <literal>phar.readonly</literal> să fie stabilit în <literal>0</literal> 
- pentru a funcţiona. În caz contrar va fi aruncată o 
- excepţie <classname>PharException</classname>.
+ pentru ca obiectele <classname>Phar</classname> să funcţioneze. În caz
+ contrar va fi aruncată o excepţie <classname>PharException</classname>.
 </para>
 </note>'>
-
-<!-- Translated by Simion Onea -->
