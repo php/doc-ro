@@ -1,57 +1,9 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.6 $ -->
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
- <reference xml:id="ref.mail" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <title>Mail - funcţii</title>
-  <titleabbrev>Mail</titleabbrev>
-  <partintro>
-   <simpara>
-    Funcţia <function>mail</function> vă permite să trimiteţi e-mail-uri
-   </simpara>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.7 $ -->
+<!-- EN-Revision: 1.14 Maintainer: simionea Status: translated -->
 
-   <variablelist>
-    <title>Directive de configurare ale funcţiei Mail</title>
-
-    <varlistentry xml:id="ini.smtp">
-     <term>
-      <parameter>SMTP</parameter>
-      <type>string</type>
-     </term>
-     <listitem>
-      <para>
-       Numele DNS sau adresa IP a serverului SMTP pe care versiunea pentru Windows a PHP trebuie să o folosească pentru a trimite e-mail-uri cu funcţia <function>mail</function>.
-      </para>
-     </listitem>
-    </varlistentry>
-
-    <varlistentry xml:id="ini.sendmail-from">
-     <term>
-      <parameter>sendmail_from</parameter>
-      <type>string</type>
-     </term>
-     <listitem>
-      <para>
-       Adresa de e-mail care va fi utilizată în câmpul "From:" la trimiterea de e-mail-uri în versiunea Windows a PHP.
-      </para>
-     </listitem>
-    </varlistentry>
-
-    <varlistentry xml:id="ini.sendmail-path">
-     <term>
-      <parameter>sendmail_path</parameter>
-      <type>string</type>
-     </term>
-     <listitem>
-      <para>
-       Calea către programul <command>sendmail</command>, de regulă <filename>/usr/sbin/sendmail</filename> sau <filename>/usr/lib/sendmail</filename> <command>configure</command> încearcă să-l localizeze şi să-l seteze ca implicit, dar dacă acest lucru nu se întâmplă puteţi seta calea în această directivă.
-      </para>
-      <para>
-       Pe sistemele care nu utilizează sendmail această directivă trebuie pentru a conţine calea către programul care înlocuieşte sendmail, dacă există vreunul. De exemplu, cei care utilizează <link xlink:href="&url.qmail;">Qmail</link> pot seta valoarea directivei la <filename>/var/qmail/bin/sendmail</filename>.
-      </para>
-     </listitem>
-    </varlistentry>
-   </variablelist>
-  </partintro>
+ <reference xml:id="ref.mail" xmlns="http://docbook.org/ns/docbook">
+  <title>Mail &Functions; de poĹtÄ</title>
 
 &reference.mail.entities.functions;
 
@@ -76,4 +28,3 @@ vim600: syn=xml fen fdm=syntax fdl=2 si
 vim: et tw=78 syn=sgml
 vi: ts=1 sw=1
 -->
-
