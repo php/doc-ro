@@ -1,35 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.3 $ -->
-<!-- EN-Revision: 1.4 Maintainer: radical Status: ok -->
-<!-- Purpose: basic.other -->
-<!-- Membership: pecl, bundled -->
-<reference xml:id="ref.json" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
- <title>Funcţii JSON</title>
- <titleabbrev>JSON</titleabbrev>
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.6 Maintainer: radical Status: ok -->
+<!-- CREDITS: simionea -->
 
- <partintro>
-  <section xml:id="json.intro">
-   &reftitle.intro;
-   <para>
-    Această extensie implementează formatul de schimb de date
-    <link xlink:href="&url.json;">JavaScript Object Notation (JSON)</link>.
-    Decodarea este facută de interpretorul JSON_checker create de Douglas
-    Crockford.
-   </para>
-  </section>
-  
-  <section xml:id="json.requirements">
-   &reftitle.required;
-   <para>
-    De la PHP 5.2.0, extensia JSON este integrată şi compilată în PHP implicit.
-   </para>
-   <para>
-    &pecl.info; 
-    <link xlink:href="&url.pecl.package;json">&url.pecl.package;json</link>
-   </para>
-  </section>
- </partintro>
- 
+<reference xml:id="ref.json" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <title>&Functions; JSON</title>
+
  &reference.json.entities.functions;
 
 </reference>

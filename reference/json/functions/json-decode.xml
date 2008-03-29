@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.2 $ -->
-<!-- EN-Revision: 1.3 Maintainer: radical Status: ok -->
+<!-- $Revision: 1.3 $ -->
+<!-- EN-Revision: 1.4 Maintainer: radical Status: ok -->
+<!-- CREDITS: simionea -->
 <refentry xml:id="function.json-decode" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>json_decode</refname>
@@ -90,6 +91,20 @@ array(5) {
 }
 ]]>
     </screen>
+   </example>
+   <example>
+    <programlisting role="php">
+<![CDATA[
+<?php
+
+$json = '{"foo-bar": 12345}';
+
+$obj = json_decode($json);
+print $obj->{'foo-bar'}; // 12345
+
+?>
+]]>
+    </programlisting>
    </example>
   </para>
  </refsect1>

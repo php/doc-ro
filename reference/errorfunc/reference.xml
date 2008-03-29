@@ -1,31 +1,20 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.5 $ -->
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
- <reference xml:id="ref.errorfunc" xmlns="http://docbook.org/ns/docbook">
-  <title>Erori - gestiune şi înregistrare</title>
-  <titleabbrev>Erorile şi înregistrarea</titleabbrev>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.6 $ -->
+<!-- EN-Revision: 1.10 Maintainer: simionea Status: translated -->
 
-  <partintro>
+<reference xml:id="ref.errorfunc" xmlns="http://docbook.org/ns/docbook">
+ <title>&Functions; de gestiune a erorilor Ĺi de logare</title>
+ <partintro>
+  &reftitle.seealso;
    <para>
-    Aceste funcţii se ocupă cu tratarea şi înregistrarea erorilor. Ele permit definirea
-    propriilor reguli pentru tratarea erorilor, precum şi modificarea modului în care
-    erorile pot fi înregistrate. Veţi putea adapta şi îmbunătăţi modul în care erorile sunt
-    raportate şi înregistrate, pentru satisfacerea propriilor nevoi.
+    AccesaĹŁi de asemenea <function>syslog</function>.
    </para>
-   <para> 
-    Cu funcţiile de înregistrare puteţi trimite mesaje la alte maşini, la o adresa de email
-    (sau la un sistem email pe pager!), la sisteme jurnal etc. În acest fel, puteţi
-    înregistra şi monitoriza cele mai importante părţi ale aplicaţiilor şi ale paginilor web.
-   </para>
-   <para> 
-    Funcţiile pentru raportarea erorilor vă permit personalizarea nivelului şi a tipului de
-    erori raportate, plecând de la simple notificări şi până la funcţii personalizate.
-   </para>
-  </partintro>
+ </partintro>
 
-&reference.errorfunc.entities.functions;
+ &reference.errorfunc.entities.functions;
 
- </reference>
+</reference>
+
 <!-- Keep this comment at the end of the file
 Local variables:
 mode: sgml
