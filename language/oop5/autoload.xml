@@ -1,37 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.2 $ -->
-<!-- EN-Revision: 1.1 Maintainer: radical Status: translated -->
+<!-- $Revision: 1.3 $ -->
+<!-- EN-Revision: 1.10 Maintainer: radical Status: translated -->
+<!-- CREDITS: simionea -->
  <sect1 xml:id="language.oop5.autoload" xmlns="http://docbook.org/ns/docbook">
   <title>Autoîncărcarea claselor</title>
   <para>
-   Mulţi dezvoltatori care scriu aplicaţii orientate pe obiecte
-   crează un fişier PHP pentru fiecare clasă pe care o definesc.
-   O problema delicată era lista mare de fişiere ce trebuiau 
-   incluse la inceputul fiecărui script.
+   Mulţi programatori care scriu aplicaţii orientate pe obiecte
+   crează câte un fişier PHP pentru fiecare clasă pe care o definesc.
+   O problemă delicată era lista mare de fişiere ce trebuiau 
+   incluse la începutul fiecărui script.
   </para>
   <para>
    În PHP 5, acest lucru nu mai este necasar. Se poate defini funcţia
    __autoload care este apelată automat în cazul în care doriţi să folosiţi
-   o clasă care nu a fost încă definită. Apelelul la aceasta funcţie
-   oferă scriptuui o ultimă şansă de a defini clasa pentur a nu 
+   o clasă care nu a fost încă definită. Apelul la această funcţie
+   oferă script-ului o ultimă şansă de a defini clasa pentru a nu 
    termina cu eroare.
   </para>
   <note>
    <para>
     Excepţiile aruncate în __autoload nu pot fi captate într-un bloc
     <link linkend="language.exceptions">catch</link> şi rezultând
-	astfel eroare fatală.
+    astfel eroare fatală.
    </para>
   </note>
   <note>
    <para>
-    Această funcţie speciala nu este disponibila daca folosiţi PHP in mod CLI
-    <link linkend="features.commandline">mod interactiv</link>.
+    Această funcţie specială nu este disponibilă dacă folosiţi PHP în
+    <link linkend="features.commandline">mod CLI interactiv</link>.
+   </para>
+  </note>
+  <note>
+   <para>
+    Dacă denumirea clasei este utilizată de ex. în
+    <function>call_user_func</function>, atunci ea poate conţine caractere 
+    periculoase, cum ar fi <literal>../</literal>.
+    Nu este recomandabil să utilizaţi datele introduse de utilizator în 
+    asemenea funcţii, sau, cel puţin, să verificaţi ce s-a introdus în
+    <function>__autoload</function>.
    </para>
   </note>
   <para>
    <example>
-    <title>Exemplu autoîncărcarea</title>
+    <title>Exemplu cu autoîncărcare</title>
     <para>
      Acest exemplu încearcă să încarce clasele <literal>MyClass1</literal>
      şi <literal>MyClass2</literal> din fişierele <filename>MyClass1.php</filename>
@@ -46,6 +57,30 @@ function __autoload($class_name) {
 
 $obj  = new MyClass1();
 $obj2 = new MyClass2(); 
+?>
+]]>
+    </programlisting>
+   </example>
+   <example>
+    <para>
+     Acest exemplu încearcă să încarce interfaţa <literal>ITest</literal>.
+    </para>
+    <programlisting role="php">
+<![CDATA[
+<?php
+
+function __autoload($name) {
+    var_dump($name);
+}
+
+class Foo implements ITest {
+}
+
+/*
+string(5) "ITest"
+
+Fatal error: Interface 'ITest' not found in ...
+*/
 ?>
 ]]>
     </programlisting>
