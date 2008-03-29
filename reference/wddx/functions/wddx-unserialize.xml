@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.4 $ -->
-<!-- EN-Revision: 1.6 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.1 $ -->
+<!-- EN-Revision: 1.4 Maintainer: simionea Status: translated -->
 <!-- CREDITS: adiju -->
-<refentry xml:id="function.wddx-packet-end" xmlns="http://docbook.org/ns/docbook">
+<refentry xml:id="function.wddx-unserialize" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
-  <refname>wddx_packet_end</refname>
-  <refpurpose>Sfârşeşte un pachet WDDX cu un ID specificat</refpurpose>
+  <refname>wddx_unserialize</refname>
+  <refpurpose>Deserializează un pachet WDDX</refpurpose>
  </refnamediv>
  
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>string</type><methodname>wddx_packet_end</methodname>
-   <methodparam><type>resource</type><parameter>packet_id</parameter></methodparam>
+   <type>mixed</type><methodname>wddx_unserialize</methodname>
+   <methodparam><type>string</type><parameter>packet</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Sfârşeşte şi întoarce pachetul WDDX dat.
+   Deserializează un <parameter>packet</parameter> WDDX.
   </para>
  </refsect1>
 
@@ -24,10 +24,10 @@
   <para>
    <variablelist>
     <varlistentry>
-     <term><parameter>packet_id</parameter></term>
+     <term><parameter>packet</parameter></term>
      <listitem>
       <para>
-       Un pachet WDDX întors de <function>wddx_packet_start</function>.
+       Un pachet WDDX, în calitate de string sau stream.
       </para>
      </listitem>
     </varlistentry>
@@ -38,7 +38,8 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Întoarce string-ul conţinând pachetul WDDX.
+   Întoarce valoarea deserializată, care poate fi un string, un număr sau un
+   array. Observaţi că structurile sunt deserializate în masive asociative.
   </para>
  </refsect1>
 </refentry>

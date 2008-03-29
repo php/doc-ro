@@ -1,39 +1,66 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/wddx.xml, last change in rev 1.1 -->
-<!-- last change to 'wddx-add-vars' in en/ tree in rev 1.2 -->
-	<refentry xml:id="function.wddx-add-vars" xmlns="http://docbook.org/ns/docbook">
-		<refnamediv>
-			<refname>wddx_add_vars</refname>
-			<refpurpose>
-     Adaugă variabile în pachetul WDDX cu ID-ul specificat
-    </refpurpose>
-		</refnamediv>
-		<refsect1>
-			<title>Descriere</title>
-			<methodsynopsis>
-				<methodname>wddx_add_vars</methodname>
-				<methodparam>
-					<type>int</type>
-					<parameter>packet_id</parameter>
-				</methodparam>
-				<methodparam>
-					<type>mixed</type>
-					<parameter>name_var</parameter>
-				</methodparam>
-				<methodparam choice="opt">
-					<type>mixed</type>
-					<parameter>...</parameter>
-				</methodparam>
-			</methodsynopsis>
-			<para>
-				<function>wddx_add_vars</function> este folosită pentru a serializa variabilele transmise
-				şi pentru a adauga rezultatul în pachetul specificat de 
-     <parameter>packet_id</parameter>.  Variabilele ce vor fi serializate trebuie specificate
-     într-un mod identic cu cel de la <function>wddx_serialize_vars</function>.
-    </para>
-		</refsect1>
-	</refentry>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.6 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.wddx-add-vars" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>wddx_add_vars</refname>
+  <refpurpose>AdaugÄ variable la un pachet WDDX cu un ID specificat</refpurpose>
+ </refnamediv>
+ 
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>bool</type><methodname>wddx_add_vars</methodname>
+   <methodparam><type>resource</type><parameter>packet_id</parameter></methodparam>
+   <methodparam><type>mixed</type><parameter>var_name</parameter></methodparam>
+   <methodparam choice="opt"><type>mixed</type><parameter>...</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   SerializeazÄ variabilele transmise Ĺi adaugÄ rezultatul la pachetul dat.
+  </para>
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   AceastÄ funcĹŁie preia un numÄr variabil de parametri.
+   <variablelist>
+    <varlistentry>
+     <term><parameter>packet_id</parameter></term>
+     <listitem>
+      <para>
+       Un pachet WDDX, ĂŽntors de <function>wddx_packet_start</function>.
+      </para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><parameter>var_name</parameter></term>
+     <listitem>
+      <para>
+       Poate fi sau un string cu denumirea variabilei, sau un array conĹŁinĂ˘nd
+       string-uri cu denumirile variabilelor, sau un alt array, etc.
+      </para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><parameter>...</parameter></term>
+     <listitem>
+      <para>
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   &return.success;
+  </para>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:

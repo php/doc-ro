@@ -1,35 +1,56 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/wddx.xml, last change in rev 1.1 -->
-<!-- last change to 'wddx-serialize-value' in en/ tree in rev 1.2 -->
-	<refentry xml:id="function.wddx-serialize-value" xmlns="http://docbook.org/ns/docbook">
-		<refnamediv>
-			<refname>wddx_serialize_value</refname>
-			<refpurpose>Serializarea unei valori unice într-un pachet WDDX</refpurpose>
-		</refnamediv>
-		<refsect1>
-			<title>Descriere</title>
-			<methodsynopsis>
-				<type>string</type>
-				<methodname>wddx_serialize_value</methodname>
-				<methodparam>
-					<type>mixed</type>
-					<parameter>var</parameter>
-				</methodparam>
-				<methodparam choice="opt">
-					<type>string</type>
-					<parameter>comment</parameter>
-				</methodparam>
-			</methodsynopsis>
-			<para>
-				<function>wddx_serialize_value</function> este folosită pentru a crea un pachet
-     WDDX dintr-o singură valoare dată.  Funcţia preia valoarea aflată
-     în <parameter>var</parameter>, şi un parametru opţional
-     <parameter>comment</parameter> şir de caractere ce va apare in antetul pachetului,
-     şi va întoarce un pachet WDDX.
-    </para>
-		</refsect1>
-	</refentry>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.5 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.wddx-serialize-value" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>wddx_serialize_value</refname>
+  <refpurpose>SerializeazÄ o singurÄ valoare ĂŽntr-un pachet WDDX</refpurpose>
+ </refnamediv>
+ 
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>string</type><methodname>wddx_serialize_value</methodname>
+   <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
+   <methodparam choice="opt"><type>string</type><parameter>comment</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   CreeazÄ un pachet WDDX dintr-o singurÄ valoare transmisÄ.
+  </para>
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>var</parameter></term>
+     <listitem>
+      <para>
+       Valoarea pentru a fi serializatÄ
+      </para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><parameter>comment</parameter></term>
+     <listitem>
+      <para>
+       Un string cu comentariu opĹŁional, care apare ĂŽn antetul pachetului.
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Ăntoarce pachetul WDDX, sau &false; ĂŽn caz de eroare.
+  </para>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:

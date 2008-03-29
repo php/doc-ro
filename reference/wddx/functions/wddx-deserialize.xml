@@ -1,30 +1,21 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/wddx.xml, last change in rev 1.1 -->
-<!-- last change to 'wddx-deserialize' in en/ tree in rev 1.2 -->
-	<refentry xml:id="function.wddx-deserialize" xmlns="http://docbook.org/ns/docbook">
-		<refnamediv>
-			<refname>wddx_deserialize</refname>
-			<refpurpose>Deserializează un pachet WDDX</refpurpose>
-		</refnamediv>
-		<refsect1>
-			<title>Descriere</title>
-			<methodsynopsis>
-				<type>mixed</type>
-				<methodname>wddx_deserialize</methodname>
-				<methodparam>
-					<type>string</type>
-					<parameter>packet</parameter>
-				</methodparam>
-			</methodsynopsis>
-			<para>
-				<function>wddx_deserialize</function> prelucrează un pachet
-     <parameter>packet</parameter> ca şi şir de caractere şi îl deserializează.
-     Funcţia întoarce rezultatul care poate fi şir de caractere, număr sau tablou.
-     Structurile sunt deserializate într-un tablou asociativ.
-    </para>
-		</refsect1>
-	</refentry>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.4 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.wddx-deserialize" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>wddx_deserialize</refname>
+  <refpurpose>&Alias; <function>wddx_unserialize</function></refpurpose>
+ </refnamediv>
+
+ <refsect1 role="description">
+  &reftitle.description;
+  <simpara>
+   &info.function.alias;
+   <function>wddx_unserialize</function>.
+  </simpara>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:

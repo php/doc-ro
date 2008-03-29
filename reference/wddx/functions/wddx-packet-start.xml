@@ -1,33 +1,50 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/wddx.xml, last change in rev 1.1 -->
-<!-- last change to 'wddx-packet-start' in en/ tree in rev 1.2 -->
-	<refentry xml:id="function.wddx-packet-start" xmlns="http://docbook.org/ns/docbook">
-		<refnamediv>
-			<refname>wddx_packet_start</refname>
-			<refpurpose>
-			Generează un pachet WDDX nou cu structura iniţială a acestuia
-    </refpurpose>
-		</refnamediv>
-		<refsect1>
-			<title>Descriere</title>
-			<methodsynopsis>
-				<type>int</type>
-				<methodname>wddx_packet_start</methodname>
-				<methodparam choice="opt">
-					<type>string</type>
-					<parameter>comment</parameter>
-				</methodparam>
-			</methodsynopsis>
-			<para>
-     Folosiţi <function>wddx_packet_start</function> pentru a genera un nou pachet WDDX
-     în scopul adaugării incrementale de variabile.  Funcţia acceptă un parametru opţional
-     <parameter>comment</parameter> şi întoarce un identificator ID de pachet WDDX
-     pentru o folosire ulterioară.  Funcţia creează în mod automat definiţia
-     structurii ce va conţine variabilele.
-    </para>
-		</refsect1>
-	</refentry>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.6 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.wddx-packet-start" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>wddx_packet_start</refname>
+  <refpurpose>IniĹŁiazÄ un pachet nou WDDX cu structura sa internÄ</refpurpose>
+ </refnamediv>
+ 
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>resource</type><methodname>wddx_packet_start</methodname>
+   <methodparam choice="opt"><type>string</type><parameter>comment</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   IniĹŁiazÄ un nou pachet WDDX pentru adÄugÄri consecutive de variabile.
+   FuncĹŁia creeazÄ ĂŽn mod automat definiĹŁia structurii din interiorul 
+   pachetului pentru ca acesta sÄ conĹŁinÄ variabilele.
+  </para>
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>comment</parameter></term>
+     <listitem>
+      <para>
+       Un string cu comentariu opĹŁional.
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Ăntoarce un ID al pachetului, pentru a fi utilizat ulterior ĂŽn funcĹŁii, sau
+   &false; ĂŽn caz de eroare.
+  </para>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
