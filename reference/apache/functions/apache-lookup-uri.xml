@@ -1,52 +1,125 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/apache.xml, last change in rev 1.1 -->
-<!-- last change to 'apache-lookup-uri' in en/ tree in rev 1.2 -->
-  <refentry xml:id="function.apache-lookup-uri" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>apache_lookup_uri</refname>
-    <refpurpose>Trimite o cerere parþialã pentru URI-ul specificat ºi returneazã toate informaþiile despre el
-    </refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>object</type><methodname>apache_lookup_uri</methodname>
-      <methodparam><type>string</type><parameter>filename</parameter></methodparam>
-     </methodsynopsis>
-    <para>
-	Aceastã funcþie trimite o cerere parþialã pentru un URI.  Ruleazã doar atât cât este necesar pentru a obþine toate informaþiile importante despre resursa datã ºi returneazã aceste informaþii într-o clasã. Proprietãþile clasei returnate sunt:
-     <simplelist>
-      <member>status</member>
-      <member>the_request</member>
-      <member>status_line</member>
-      <member>method</member>
-      <member>content_type</member>
-      <member>handler</member>
-      <member>uri</member>
-      <member>filename</member>
-      <member>path_info</member>
-      <member>args</member>
-      <member>boundary</member>
-      <member>no_cache</member>
-      <member>no_local_copy</member>
-      <member>allowed</member>
-      <member>send_bodyct</member>
-      <member>bytes_sent</member>
-      <member>byterange</member>
-      <member>clength</member>
-      <member>unparsed_uri</member>
-      <member>mtime</member>
-      <member>request_time</member>
-     </simplelist>
-    </para>
-    <note>
-     <simpara>
-      <function>apache_lookup_uri</function> funcþioneazã numai când PHP este instalat ca modul Apache.
-     </simpara>
-    </note>
-   </refsect1>
-  </refentry>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.9 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<!-- splitted from ./en/functions/apache.xml, last change in rev 1.2 -->
+<refentry xml:id="function.apache-lookup-uri" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>apache_lookup_uri</refname>
+  <refpurpose>EfectueazÄƒ o interpelare parÅ£ialÄƒ pentru URI specificat ÅŸi
+  Ã®ntoarce toate informaÅ£iile despre el</refpurpose>
+ </refnamediv>
+
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>object</type><methodname>apache_lookup_uri</methodname>
+   <methodparam><type>string</type><parameter>filename</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   Aceasta efectueazÄƒ o interpelare parÅ£ialÄƒ pentru un URI. Interpelarea se 
+   deruleazÄƒ doar pÃ¢nÄƒ la etapa obÅ£inerii tuturor informaÅ£iilor importante 
+   despre resursa datÄƒ.
+  </para>
+  &apache.req.module;
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>filename</parameter></term>
+     <listitem>
+      <para>
+       Denumirea fiÅŸierului (URI) care este interpelat.
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Un <type>object</type> cu informaÅ£iile ce se referÄƒ la URI. ProprietÄƒÅ£ile 
+   acestui <type>object</type> sunt:
+  </para>
+  <para>
+   <simplelist>
+    <member>status</member>
+    <member>the_request</member>
+    <member>status_line</member>
+    <member>method</member>
+    <member>content_type</member>
+    <member>handler</member>
+    <member>uri</member>
+    <member>filename</member>
+    <member>path_info</member>
+    <member>args</member>
+    <member>boundary</member>
+    <member>no_cache</member>
+    <member>no_local_copy</member>
+    <member>allowed</member>
+    <member>send_bodyct</member>
+    <member>bytes_sent</member>
+    <member>byterange</member>
+    <member>clength</member>
+    <member>unparsed_uri</member>
+    <member>mtime</member>
+    <member>request_time</member>
+   </simplelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemplu <function>apache_lookup_uri</function></title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+$info = apache_lookup_uri('index.php?var=value');
+print_r($info);
+
+if (file_exists($info->filename)) {
+    echo 'file exists!';
+}
+?>
+]]>
+    </programlisting>
+    &example.outputs.similar;
+    <screen>
+<![CDATA[
+stdClass Object
+(
+    [status] => 200
+    [the_request] => GET /dir/file.php HTTP/1.1
+    [method] => GET
+    [mtime] => 0
+    [clength] => 0
+    [chunked] => 0
+    [content_type] => application/x-httpd-php
+    [no_cache] => 0
+    [no_local_copy] => 1
+    [unparsed_uri] => /dir/index.php?var=value
+    [uri] => /dir/index.php
+    [filename] => /home/htdocs/dir/index.php
+    [args] => var=value
+    [allowed] => 0
+    [sent_bodyct] => 0
+    [bytes_sent] => 0
+    [request_time] => 1074282764
+)
+file exists!
+]]>
+    </screen>
+   </example>
+  </para>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:

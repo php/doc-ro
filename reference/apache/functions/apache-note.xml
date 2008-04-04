@@ -1,26 +1,134 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/apache.xml, last change in rev 1.1 -->
-<!-- last change to 'apache-note' in en/ tree in rev 1.2 -->
-  <refentry xml:id="function.apache-note" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>apache_note</refname>
-    <refpurpose>Citeºte ºi seteazã notificãri despre cereri Apache</refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>string</type><methodname>apache_note</methodname>
-      <methodparam><type>string</type><parameter>note_name</parameter></methodparam>
-      <methodparam choice="opt"><type>string</type><parameter>
-        note_value
-       </parameter></methodparam>
-     </methodsynopsis>
-    <para>
-     <function>apache_note</function> este o funcþie specificã Apache care citeºte ºi seteazã valori în tabela <literal>notes</literal>. Dacã este apelatã cu un argument returneazã valoarea curentã a <literal>note_name</literal>. Dacã este apelatã cu douã argumente seteazã valoarea notificãrii <literal>note_name</literal> la <literal>note_value</literal> ºi returneazã valoarea precedentã a notificãrii <literal>note_name</literal>.
-    </para>
-   </refsect1>
-  </refentry>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.7 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.apache-note" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>apache_note</refname>
+  <refpurpose>ObÅ£ine ÅŸi stabileÅŸte note ale interpelÄƒrilor apache</refpurpose>
+ </refnamediv>
+
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>string</type><methodname>apache_note</methodname>
+   <methodparam><type>string</type><parameter>note_name</parameter></methodparam>
+   <methodparam choice="opt"><type>string</type><parameter>note_value</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   AceastÄƒ funcÅ£ie este un Ã®nveliÅŸ pentru <literal>table_get</literal> ÅŸi
+   <literal>table_set</literal> ale Apache. Ea redacteazÄƒ tabelul notelor care 
+   existÄƒ Ã®n timpul derulÄƒrii interpelÄƒrii. Scopul tabelului este de a permite
+   modulelor Apache sÄƒ comunice Ã®ntre ele.
+  </para>
+  <para>
+   Utilizarea de bazÄƒ a <function>apache_note</function> este pentru a
+   transmite informaÅ£ii dintr-un modul Ã®n altul Ã®n cadrul aceleiaÅŸi
+   interpelÄƒri.
+  </para>
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>note_name</parameter></term>
+     <listitem>
+      <para>
+       Denumirea notei.
+      </para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><parameter>note_value</parameter></term>
+     <listitem>
+      <para>
+       Valoarea notei.
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   DacÄƒ este apelatÄƒ cu un singur argument, funcÅ£ia Ã®ntoarce valoarea curentÄƒ 
+   a notei <literal>note_name</literal>. DacÄƒ este apelatÄƒ cu doi argumenÅ£i,
+   funcÅ£ia stabileÅŸte valoarea notei <literal>note_name</literal> Ã®n
+   <literal>note_value</literal> ÅŸi Ã®ntoarce valoarea precedentÄƒ a notei
+   <literal>note_name</literal>. DacÄƒ nota nu poate fi obÅ£inutÄƒ se Ã®ntoarce 
+   &false;.
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Transmiterea informaÅ£iei Ã®ntre PHP ÅŸi Perl</title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+
+apache_note('name', 'Fredrik Ekengren');
+
+// Call perl script
+virtual("/perl/some_script.pl");
+
+$result = apache_note("resultdata");
+?>
+]]>
+    </programlisting>
+    <programlisting role="perl">
+<![CDATA[
+# Get Apache request object
+my $r = Apache->request()->main();
+
+# Get passed data
+my $name = $r->notes('name');
+
+# some processing
+
+# Pass result back to PHP
+$r->notes('resultdata', $result);
+]]>
+    </programlisting>
+   </example>
+  </para>
+  <para>
+   <example>
+    <title>Logarea valorilor Ã®n access.log</title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+
+apache_note('sessionID', session_id());
+
+?>
+]]>
+    </programlisting>
+    <programlisting role="apache">
+<![CDATA[
+# "%{sessionID}n" poate fi utilizat Ã®n directiva LogFormat
+]]>
+    </programlisting>
+   </example>
+  </para>
+ </refsect1>
+
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>virtual</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
+
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
