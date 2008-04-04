@@ -1,0 +1,2054 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.1 $ -->
+<!-- EN-Revision: 1.34 Maintainer: simionea Status: translated -->
+<appendix xml:id="migration52" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <title>Migrarea de la PHP 5.1.x la PHP 5.2.x</title>
+
+ <section xml:id="migration52.changes">
+  <title>Ce s-a schimbat în PHP 5.2.x</title>
+  <para>
+   Majoritatea îmbunătăţirilor din PHP 5.2.x nu au nici un impact asupra
+   codului-sursă existent. Sunt însă unele
+   <link linkend="migration52.incompatible">mici incompatibilităţi</link>
+   şi <link linkend="migration52.error-messages">noi mesaje de eroare</link>
+   care trebuie luate în considerare, iar codul-sursă trebuie testat înainte
+   de a schimba versiunile PHP în mediile de producţie.
+  </para>
+  <para>
+   Dacă sistemul este schimbat de la PHP 5.0.x, este necesar de citit şi
+   secţiunea manualului întitulată
+   <link linkend="migration51">Note la reînnoirea până la PHP 5.1.x</link>.
+  </para>
+  <para>
+   Similar, dacă sistemul este schimbat de la PHP 4, trebuie citită şi
+   secţiunea manualului întitulată <link linkend="migration5">Migrarea de la
+   PHP 4 la PHP 5</link>.
+  </para>
+ </section>
+
+ <section xml:id="migration52.incompatible">
+  <title>Schimbări incompatibile în sens invers</title>
+  <para>
+   Cu toate că codul-sursă existent în PHP 5 trebuie să funcţioneze fără
+   schimbări, ar trebui să atrageţi atenţia la următoarele schimbări
+   incompatibile în sens invers:
+  </para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>getrusage</function> întoarce &null; când îi sunt transmise
+     argumente incompatibile începând cu PHP 5.2.1.
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <link linkend="function.ziparchive-setCommentName">
+     <function>ZipArchive::setCommentName</function></link> întoarce &true;
+     în caz de succes începând cu PHP 5.2.1.
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <link linkend="function.ziparchive-setcommentindex">
+     <function>ZipArchive::setCommentIndex</function></link> întoarce &true;
+     în caz de succes începând cu PHP 5.2.1.
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>SplFileObject::getFilename</function> întoarce denumirea
+     fişierului, şi nu calea/relativă/spre/fişier, începând cu PHP 5.2.1.
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     S-a modificat prioritatea variabilei de mediu <varname>PHPRC</varname>
+     pe sistemele Win32.
+    </simpara>
+    <simpara>
+     Variabila de mediu <varname>PHPRC</varname> acum are prioritate faţă de
+     calea stocată în registrul Windows.
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     CLI SAPI nu mai caută fişierele &php.ini; sau
+     <filename>php-cli.ini</filename> în directorul curent.
+    </simpara>
+    <simpara>
+     În PHP 5.1.x a fost introdusă o facilitate nedocumentată care făcea ca
+     binarul CLI să caute în Directorul de Lucru Curent (DLC) un fişier de
+     configurare PHP, ducând potenţial la un comportament imprevizibil atunci
+     când era citit un fişier de configurare neaşteptat. Această
+     funcţionalitate a fost eliminată în versiunea 5.2.0, şi PHP nu mai caută
+     în DLC fişierele &php.ini; sau <filename>php-cli.ini</filename>. Accesaţi
+     de asemenea secţiunea manualului referitoare la
+     <link linkend="features.commandline">linia de comandă</link>.
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     A fost adăugată o preîntâmpinare la efectuarea operaţiei modulus 0.
+    </simpara>
+    <simpara>
+     În versiunile anterioare ale PHP, efectuarea operaţiei "integer % 0" nu
+     emitea nici un mesaj de preîntâmpinare, întorcând, în loc, o valoare
+     neaşteptată &false;. Începând cu PHP 5.2.0 această operaţie va emite un
+     <constant>E_WARNING</constant>, după cum e cazul şi în orice altă
+     situaţie când se efectuează împărţirea la zero.
+    </simpara>
+    <informalexample>
+     <programlisting role="php">
+<![CDATA[
+<?php
+print 10 % 0;
+/* Warning:  Division by zero in filename on line n */
+?>
+]]>
+     </programlisting>
+    </informalexample>
+   </listitem>
+   <listitem>
+    <simpara>
+     A fost modificat <function>__toString</function> pentru a fi apelat
+     oricând este aplicabil.
+    </simpara>
+    <simpara>
+     Metoda magică <function>__toString</function> acum va fi apelată în
+     contextul unui string, adică oriunde un obiect este utilizat ca string.
+    </simpara>
+    <simpara>
+     Situaţia când se întoarce un string care conţine identificatorul
+     obiectului a fost abandonată în PHP 5.2.0. Aceasta devenise problematică
+     deoarece identificatorul obiectului nu poate fi considerat unic. Această
+     schimbare va însemna că aplicaţia dumneavoastră este defectuoasă dacă
+     v-aţi bazat pe identificatorul obiectului în calitate de valoare întoarsă.
+     Acum încercarea de a utiliza această valoare în calitate de string va
+     rezulta în emiterea unei erori fatale interceptabile.
+    </simpara>
+    <informalexample>
+     <programlisting role="php">
+<![CDATA[
+<?php
+class foo {}
+$foo = new foo;
+print $foo;
+/* Catchable fatal error:  Object of class foo could
+   not be converted to string in filename on line n */
+?>
+]]>
+     </programlisting>
+    </informalexample>
+    <simpara>
+     Chiar şi cu <function>__toString</function> obiectele nu pot fi utilizate
+     ca indici ai masivului sau chei. S-ar putea să adăugăm ulterior susţinerea
+     încorporată a hash-urilor pentru aceasta, însă în PHP 5.2.x va trebui sau
+     să creaţi propria funcţie hash, sau să utilizaţi noua funcţie SPL
+     <function>spl_object_hash</function>.
+    </simpara>
+    <simpara>
+     Din metodele <function>__toString</function> nu pot fi atuncate excepţii.
+    </simpara>
+    <informalexample>
+     <programlisting role="php">
+<![CDATA[
+<?php
+class foo {
+    public function __toString() {
+        throw new Exception;
+    }
+}
+
+try {
+    print new foo;
+    /* Fatal error:  Method foo::__toString() must
+       not throw an exception in filename on line n */
+} catch(Exception $e) {}
+?>
+]]>
+     </programlisting>
+    </informalexample>
+   </listitem>
+   <listitem>
+    <simpara>
+     Au fost abandonate funcţiile de clasă statice abstracte.
+    </simpara>
+    <simpara>
+     Din cauza unei scăpări, PHP 5.0.x şi 5.1.x permiteau funcţii abstracte
+     statice în clase. Începând cu PHP 5.2.x, numai interfeţele le pot avea.
+    </simpara>
+    <informalexample>
+     <programlisting role="php">
+<![CDATA[
+<?php
+abstract class foo {
+    abstract static function bar();
+    /* Strict Standards:  Static function foo::bar()
+    should not be abstract in filename on line n */
+}
+?>
+]]>
+     </programlisting>
+    </informalexample>
+   </listitem>
+   <listitem>
+    <simpara>
+     <link linkend="ref.oci8">Extensia Oracle</link> necesită prezenţa a cel
+     puţin Oracle 10 pe Windows.
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     A fost adăugată susţinerea RFC2397 (fluxurile <literal>data:</literal>).
+    </simpara>
+    <simpara>
+     Introducerea schemei URL 'data' poate duce la o schimbare în comportament
+     sub Windows. Dacă lucraţi cu un sistem de fişiere <acronym>NTFS</acronym>
+     şi utilizaţi meta-fluxurile în aplicaţia dumneavoastră, şi dacă se
+     întâmplă să utlizaţi un fişier cu denumirea 'data:', accesat fără
+     informaţia despre cale - aceasta nu va mai funcţiona. Pentru a corecta
+     aceasta, utilizaţi protocolul 'file:' pentru a-l accesa.
+    </simpara>
+    <simpara>
+     Accesaţi de asemenea <link xlink:href="&url.rfc;2397">RFC 2397</link> 
+    </simpara>
+    <informalexample>
+     <programlisting role="php">
+<![CDATA[
+<?php
+/* when allow_url_include is OFF (default) */
+include "data:;base64,PD9waHAgcGhwaW5mbygpOz8+";
+/* Warning:  include(): URL file-access is disabled
+   in the server configuration in filename on line n */
+?>
+]]>
+     </programlisting>
+    </informalexample>
+   </listitem>
+   <listitem>
+    <simpara>
+     Regresul în şabloanele <literal>glob()</literal>
+    </simpara>
+    <simpara>
+     În versiunea 5.2.4 o corectare a unei probleme de securitate cauza un
+     regres al şabloanelor de forma "/foo/*/bar/*". Începând cu versiunea
+     5.2.5 în loc de a emite o preîntâmpinare, funcţia
+     <literal>glob()</literal> va întoarce &false; când restricţiile 
+     <literal>openbase_dir</literal> sunt încălcate.
+    </simpara>
+   </listitem>
+  </itemizedlist>
+ </section>
+
+ <section xml:id="migration52.error-messages">
+  <title>Noile mesaje de eroare</title>
+  <para>
+   Mai jos sunt enumerate noile mesaje de eroare, care nu au fost discutate
+   în alte secţiuni din acest document.
+  </para>
+  <para>
+   <example>
+    <title>În nucleul PHP</title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+echo " ";
+session_regenerate_id();
+/*  Warning:  session_regenerate_id(): Cannot regenerate
+    session id - headers already sent in filename on line n */
+
+str_word_count("string", 4);
+/* Warning:  str_word_count(): Invalid format value 4
+   in filename on line n */
+
+strripos("foo", "f", 4);
+/* Notice:  strripos(): Offset is greater than the
+   length of haystack string in filename on line n */
+
+strrpos("foo", "f", 4);
+/* Notice:  strrpos(): Offset is greater than the
+   length of haystack string in filename on line n */
+
+/* As of PHP 5.2.1, when allow_url_include is OFF (default) */
+include "php://input";
+/* Warning:  include(): URL file-access is disabled
+   in the server configuration in filename on line n */
+?>
+]]>
+    </programlisting>
+   </example>
+  </para>
+  <para>
+   <example>
+    <title><link linkend="language.oop5">Cod-sursă obiect-orientat</link> în nucleul PHP</title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+interface foo {
+}
+class bar implements foo, foo {
+}
+/* Fatal error: Class bar cannot implement previously
+   implemented interface foo in filename on line n */
+
+
+class foo {
+    public $bar;
+    function __get($var)
+    {
+        return $this->bar;
+    }
+}
+
+$foo = new foo;
+$bar =& $foo->prop;
+/* Notice: Indirect modification of overloaded property
+   foo::$prop has no effect in filename on line n */
+
+
+class foo implements iterator {
+    public function current() {
+    }
+    public function next() {
+    }
+    public function key() {
+    }
+    public function valid() {
+    }
+    public function rewind() {
+    }
+}
+
+$foo = new foo();
+foreach($foo as &$ref) {}
+/* Fatal error: An iterator cannot be used with foreach
+   by reference in filename on line n */
+
+
+class foo {
+    private function __construct() {
+    }
+}
+class bar extends foo {
+    public function __construct() {
+        parent::__construct();
+        /* Fatal error:  Cannot call private
+           foo::__construct() in filename on line n */
+    }
+}
+new bar;
+
+
+stream_filter_register("", "class");
+/* Warning:  stream_filter_register(): Filter name
+   cannot be empty in filename on line n */
+
+
+stream_filter_register("filter", "");
+/* Warning:  stream_filter_register(): Class name
+   cannot be empty in filename on line n */
+?>
+]]>
+    </programlisting>
+   </example>
+  </para>
+  <para>
+   <example>
+    <title>În extensia <link linkend="ref.bzip2">bzip2</link></title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+bzopen("", "w");
+/* Warning:  bzopen(): filename cannot be empty
+   in filename on line n */
+
+bzopen("foo", "a");
+/* Warning:  bzopen(): 'a' is not a valid mode for
+   bzopen(). Only 'w' and 'r' are supported in
+   filename on line n */
+
+$fp = fopen("foo", "w");
+bzopen($fp, "r");
+/* Warning:  bzopen(): cannot read from a stream
+   opened in write only mode in filename on line n */
+?>
+]]>
+    </programlisting>
+   </example>
+  </para>
+  <para>
+   <example>
+    <title>În extensia <link linkend="ref.datetime">datetime</link></title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+strtotime("today", "now");
+/* Warning:  strtotime() expects parameter 2 to be
+   long, string given in filename on line n */
+
+/* As of PHP 5.2.1 */
+new DateTime(new stdclass);
+/* Fatal error: Uncaught exception 'Exception' with
+   message 'DateTime::__construct() expects parameter
+   1 to be string, object given' in filename:n */
+?>
+]]>
+    </programlisting>
+   </example>
+  </para>
+  <para>
+   <example>
+    <title>În extensia <link linkend="ref.dbase">dBase</link></title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+dbase_open("foo", -1);
+/* Warning: Invalid access mode -1 in filename on line n */
+
+/* As of PHP 5.2.1 */
+dbase_open("foo", null);
+/* Warning: The filename cannot be empty in filename on line n */
+?>
+]]>
+    </programlisting>
+   </example>
+  </para>
+  <para>
+   <example>
+    <title>În extensia <link linkend="ref.mcrypt">mcrypt</link></title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+$key = "this is a secret key";
+$td = mcrypt_module_open('tripledes', '', 'ecb', '');
+$iv = mcrypt_create_iv (mcrypt_enc_get_iv_size($td),
+                        MCRYPT_RAND);
+mcrypt_generic_init($td, $key, $iv);
+$encrypted_data = mcrypt_generic($td, "");
+/* Warning: mcrypt_generic(): An empty string was
+   passed in filename on line n */
+?>
+]]>
+    </programlisting>
+   </example>
+  </para>
+  <para>
+   <example>
+    <title>În extensia <link linkend="ref.oci8">oci8</link></title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+oci_connect("user", "pass", "db", "bogus_charset");
+/* Warning: Invalid character set name:
+   bogus_charset in filename on line n */
+
+$oci = oci_connect("user", "pass", "db");
+oci_password_change($oci, "", "old", "new");
+/* Warning: username cannot be empty in filename
+   on line n */
+
+oci_password_change($oci, "user", "", "new");
+/* Warning: old password cannot be empty in filename
+   on line n */
+
+oci_password_change($oci, "user", "old", "");
+/* Warning: new password cannot be empty in filename
+   on line n */
+?>
+]]>
+    </programlisting>
+   </example>
+  </para>
+  <para>
+   <example>
+    <title>În extensia <link linkend="ref.spl">SPL</link></title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+$obj = new SplFileObject(__FILE__);
+$obj->fgetcsv("foo");
+/* Warning:  SplFileObject::fgetcsv(): delimiter must
+   be a character in filename on line n */
+
+$obj->fgetcsv(",", "foo");
+/* Warning:  SplFileObject::fgetcsv(): enclosure must
+   be a character in filename on line n */
+?>
+]]>
+    </programlisting>
+   </example>
+  </para>
+  <para>
+   <example>
+    <title>În extensia <link linkend="ref.sem">Semaphore</link> (sysvmsg)</title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+/* Warning:  maximum size of the message has to be
+   greater then zero in filename on line n */
+?>
+]]>
+    </programlisting>
+   </example>
+  </para>
+  <para>
+   <example>
+    <title>Un exemplu <link linkend="ref.zip">Zip</link> 5.2.1+</title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+$obj = new ZipArchive();
+$obj->open('archive.zip');
+$obj->setCommentName('', 'comment');
+/* Notice:  ZipArchive::setCommentName(): Empty string
+   as entry name in filename on line n */
+
+/* As of PHP 5.2.1 */
+$obj->getCommentName('');
+/* Notice:  ZipArchive::getCommentName(): Empty string
+   as entry name in filename on line n */
+?>
+]]>
+    </programlisting>
+   </example>
+  </para>
+ </section>
+
+ <section xml:id="migration52.datetime">
+  <title>Schimbările PHP în susţinerea funcţiilor
+  <link linkend="ref.datetime">datetime</link></title>
+
+  <para>
+   Începând cu PHP 5.1.0, exista o extensie denumită <literal>date</literal>
+   în nucleul PHP. Aceasta este noua implementare a susţinerii în PHP a
+   funcţiilor datetime. Cu toate că PHP va încerca să ghicească setările
+   fusului orar ale sistemului, ar trebui să stabiliţi în mod manual fusul
+   orar. Puteţi realiza acest lucru prin oricare dintre următoarele trei metode:
+  </para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     în fişierul &php.ini; utilizând directiva INI
+     <link linkend="ini.date.timezone">date.timezone</link>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     în sistemul de operare utilizând variabila de mediu <varname>TZ</varname>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     din script utilizând funcţia 
+     <link linkend="function.date-default-timezone-get">
+     <function>date_default_timezone_set</function></link>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+  <para>
+   Toate <link linkend="timezones">fusele orare</link> susţinute sunt 
+   enumerate în manualul PHP.
+  </para>
+  <para>
+   Odată cu apariţia PHP 5.2.x, au apărut reprezentări-<type>obiect</type> ale
+   datei şi fuselor orare, denumite <literal>DateTime</literal> şi 
+   <literal>DateTimeZone</literal> respectiv.
+   Metodele apelează funcţiile procedurale de date existente.
+  </para>
+ </section>
+
+ <section xml:id="migration52.parameters">
+  <title>Parametri noi</title>
+  <para>
+   Unor funcţii li s-au dat parametri noi, opţionali, în PHP 5.2.x:
+  </para>
+
+  <para>Nucleul PHP:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>htmlentities</function>
+     - s-a adăugat <parameter>double_encode</parameter> în PHP 5.2.3.
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>htmlspecialchars</function>
+     - s-a adăugat <parameter>double_encode</parameter> în PHP 5.2.3.
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>base64_decode</function>
+     - s-a adăugat <parameter>strict</parameter>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>setcookie</function>
+     - s-a adăugat <parameter>httponly</parameter>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>setrawcookie</function>
+     - s-a adăugat <parameter>httponly</parameter>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>session_set_cookie_params</function>
+     - s-a adăugat <parameter>httponly</parameter>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>memory_get_usage</function>
+     - s-a adăugat <parameter>real_usage</parameter>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>get_loaded_extensions</function>
+     - s-a adăugat <parameter>zend_extensions</parameter> în PHP 5.2.4
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.curl">curl</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>curl_multi_info_read</function>
+     - s-a adăugat <parameter>msgs_in_queue</parameter>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.datetime">datetime</link></para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>date</function>
+     - s-a adăugat caracterul de formatare "u" (milisecunde) în PHP 5.2.2
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.imap">imap</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>imap_open</function>
+     - s-a adăugat <parameter>n_retries</parameter>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>imap_reopen</function>
+     - s-a adăugat <parameter>n_retries</parameter>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.mbstring">mbstring</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>mb_strrpos</function>
+     - s-a adăugat <parameter>offset</parameter>
+    </simpara>
+    <warning>
+     <simpara>
+      Parametrul <parameter>offset</parameter> a fost pus în poziţia unde se
+      afla parametrul <parameter>encoding</parameter>. Compatibilitatea în
+      sens invers a fost realizată permiţând ca <parameter>encoding</parameter>
+      să fie specificat ca al treilea parametru. Utilizarea acestui mod de
+      compatibilitate inversă nu e recomandat deoarece va fi eliminat într-o
+      versiune ulterioară a PHP.
+     </simpara>
+    </warning>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.ming">ming</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <link linkend="function.swfmovie.streammp3"><function>swfmovie::streamMP3</function></link>
+     - s-a adăugat <parameter>skip</parameter> în PHP 5.2.1
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.openssl">openssl</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>openssl_verify</function>
+     - s-a adăugat <parameter>signature_algo</parameter>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.pgsql">pgsql</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>pg_escape_bytea</function>
+     - s-a adăugat <parameter>connection</parameter>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>pg_escape_string</function>
+     - s-a adăugat <parameter>connection</parameter>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.simplexml">simplexml</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <link linkend="function.simplexml-element-construct"><function>SimpleXMLElement::__construct</function></link>
+     - s-a adăugat <parameter>is_prefix</parameter>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <link linkend="function.simplexml-element-attributes"><function>SimpleXMLElement::attributes</function></link>
+     - s-a adăugat <parameter>is_prefix</parameter>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <link linkend="function.simplexml-element-children"><function>SimpleXMLElement::children</function></link>
+     - s-a adăugat <parameter>is_prefix</parameter>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>simplexml_load_file</function>
+     - s-a adăugat <parameter>is_prefix</parameter>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>simplexml_load_string</function>
+     - s-a adăugat <parameter>is_prefix</parameter>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.spl">spl</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     array iterator_to_array(Traversable it [, bool use_keys = true])
+     - s-a adăugat <parameter>use_keys</parameter> în PHP 5.2.1
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="book.xmlreader">xmlreader</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>XMLReader::open</function>
+     - s-au adăugat <parameter>encoding</parameter> şi
+     <parameter>options</parameter>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>XMLReader::XML</function>
+     - s-au adăugat <parameter>encoding</parameter> şi
+     <parameter>options</parameter>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.xmlwriter">XMLWriter</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <link linkend="function.xmlwriter-write-element">
+     <function>XMLWriter::WriteElement</function></link>
+     - parametrul <parameter>content</parameter> a devenit opţional în PHP 5.2.3
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <link linkend="function.xmlwriter-write-element-ns">
+     <function>XMLWriter::WriteElementNs</function></link>
+     - parametrul <parameter>content</parameter> a devenit opţional în PHP 5.2.3
+    </simpara>
+   </listitem>
+  </itemizedlist>
+ </section>
+
+ <section xml:id="migration52.functions">
+  <title>Funcţii noi</title>
+  <para>
+   În PHP 5.2.x au fost introduse unele noi funcţii:
+  </para>
+
+  <para>Nucleul PHP:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>array_fill_keys</function>
+     - Creează un masiv utilizând elementele primului parametru în calitate de
+     chei, fiecare iniţializată cu <literal>val</literal>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>error_get_last</function>
+     - Întoarce ultima eroare survenită ca masiv asociativ. Întoarce &null;
+     dacă încă nu a survenit nici o eroare
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>image_type_to_extension</function>
+     - Întoarce extensia fişierului pentru tipul-imagine întors de 
+     <function>getimagesize</function>, <function>exif_read_data</function>,
+     <function>exif_thumbnail</function>, <function>exif_imagetype</function>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>memory_get_peak_usage</function>
+     - Întoarce maximul de memorie alocat de PHP
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>sys_get_temp_dir</function>
+     - Întoarce calea directorului utilizat pentru fişiere temporare.
+     (Adăugat în 5.2.1)
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>timezone_abbreviations_list</function>
+     - Întoarce un masiv asociativ conţinând DST, deplasamentul şi denumirea
+     fusului orar
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>timezone_identifiers_list</function>
+     - Întoarce un masiv numeric indexat cu toate identificatoarele fusurilor
+     orare
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>timezone_name_from_abbr</function>
+     - Întoarce denumirea fusului orar din abreviere
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>stream_socket_shutdown</function>
+     - Cauzează deconectarea totală sau parţială a unei conexiuni full-duplex
+     realizată prin intermediul unui socket asociat cu un flux. Începând cu
+     PHP 5.2.1.
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.image">Imagini</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>imagegrabscreen</function>
+     - Interceptează imaginea întregului ecran. Începând cu PHP 5.2.2.
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>imagegrabwindow</function>
+     - Capturează o fereastră. Începând cu PHP 5.2.2.
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.mbstring">mbstring</link>:</para>
+  <itemizedlist>
+   <!--
+   FIXME: Apparently these two never made it into a release
+          see bug#41070
+   <listitem>
+    <simpara>
+     <function>mb_list_encodings_alias_names</function>
+     - Returns an array of all supported entity encodings
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>mb_list_mime_names</function>
+     - Returns an array or string of all supported mime names
+    </simpara>
+   </listitem>
+   -->
+   <listitem>
+    <simpara>
+     <function>mb_stripos</function>
+     - Găseşte poziţia primei apariţii a unui string în cadrul altuia, fără a
+     lua în consideraţie caracterele minuscule/majuscule
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>mb_stristr</function>
+     - Găseşte prima apariţie a unui string în cadrul altuia, luând în
+     consideraţie caracterele minuscule/majuscule
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>mb_strrchr</function>
+     - Găseşte ultima apariţie a unui caracter dintr-un string în cadrul altui
+     string
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>mb_strrichr</function>
+     - Găseşte ultima apariţie a unui caracter dintr-un string în cadrul altui
+     string, luând în consideraţie caracterele minuscule/majuscule
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>mb_strripos</function>
+     - Găseşte ultima apariţie a unui caracter dintr-un string în cadrul altui
+     string, fără a lua în consideraţie caracterele minuscule/majuscule
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>mb_strstr</function>
+     - Găseşte prima apariţie a unui string în cadrul altuia
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.ming">ming</link> (Începând cu PHP 5.2.1):</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     void ming_setSWFCompression(int num)
+     - Stabileşte compresia ieşirii
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     void swfmovie::namedanchor(string name)
+     - Crează o ancoră
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     void swfmovie::protect([string pasword])
+     - Protejează
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.openssl">openssl</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>openssl_csr_get_public_key</function>
+     - Extrage cheia publică dintr-un CERT şi o pregăteşte pentru utilizare
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>openssl_csr_get_subject</function>
+     - Întoarce subiectul unui CERT
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>openssl_pkey_get_details</function>
+     - Întoarce un masiv cu detaliile cheii (biţii, pkey, tipul)
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.spl">spl</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>spl_object_hash</function>
+     - Întoarce id-ul hash-ului pentru un obiect dat
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     int iterator_apply(Traversable it, mixed function [, mixed params])
+     - Apelează o funcţie pentru fiecare element într-un iterator
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.pcre">pcre</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>preg_last_error</function>
+     - Întoarce codul erorii a ultimei execuţii regex
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.pgsql">pgsql</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>pg_field_table</function>
+     - Întoarce denumirea tabelei căreia îi aparţine câmpul, sau oid-ul
+     tabelei dacă <literal>oid_only</literal> este &true;
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.posix">posix</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>posix_initgroups</function>
+     - Calculează lista de acces a grupului pentru utilizatorul specificat în
+     denumire
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.gmp">gmp</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>gmp_nextprime</function>
+     - Calculează următorul număr prim
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.xmlwriter">xmlwriter</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>xmlwriter_full_end_element</function>
+     - Finalizează elementul curent - întoarce &false; la eroare
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>xmlwriter_write_raw</function>
+     - Înscrie textul - întoarce &false; la eroare
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>xmlwriter_start_dtd_entity</function>
+     - Crează o entitate DTD de start - întoarce &false; la eroare
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>xmlwriter_end_dtd_entity</function>
+     - Finalizează entitatea DTD curentă - întoarce &false; la eroare
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>xmlwriter_write_dtd_entity</function>
+     - Înscrie eticheta entităţii DTD depline - întoarce &false; la eroare
+    </simpara>
+   </listitem>
+  </itemizedlist>
+ </section>
+
+ <section xml:id="migration52.methods">
+  <title>Metode noi</title>
+  <para>
+   În 5.2.0 au fost introduse metode noi:
+  </para>
+
+  <para><link linkend="book.dom">dom</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>DOMDocument::registerNodeClass</function>
+     - Înregistrează clasa extinsă utilizată pentru a crea tipul de bază al
+     nodului
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>DOMElement::setIDAttribute</function>
+     - Declară atributul specificat după denumire pentru a fi de tip ID
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>DOMElement::setIDAttributeNode</function>
+     - Declară atributul specificat după nod pentru a fi de tip ID
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <function>DOMElement::setIDAttributeNS</function>
+     - Declară atributul specificat după numele local şi spaţiul de nume URI
+     pentru a fi de tip ID
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     DOMNode::C14N([bool exclusive [, bool with_comments [, array xpath [, array ns_prefixes]]]])
+     - Efectuează transformarea canonică a nodurilor într-un string
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     DOMNode::C14NFile(string uri [, bool exclusive [, bool with_comments [, array xpath [, array ns_prefixes]]]])
+     - Efectuează transformarea canonică a nodurilor într-un fişier
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     DOMNode::getNodePath()
+     - Obţine un <literal>xpath</literal> pentru un nod
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.soap">soap</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     SoapServer::setObject(object obj)
+     - Stabileşte obiectul care va gestiona interpelările SOAP
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.spl">spl</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     int ArrayObject::asort(void)
+     - Sortează înregistrările după valori
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     int ArrayObject::ksort(void)
+     - Sortează înregistrările după cheie
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     int ArrayObject::natcasesort(void)
+     - Sortează înregistrările după cheie utilizând algoritmul "ordinii
+     naturale", ce nu diferenţiază caracterele minuscule / majuscule.
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     int ArrayObject::natsort(void)
+     - Sortează înregistrările după valori utilizând algoritmul "ordinii
+     naturale".
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     int ArrayObject::uasort(callback cmp_function)
+     - Sortează înregistrările după valori utilizând o funcţie definită de
+     utilizator
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     int ArrayObject::uksort(callback cmp_function)
+     - Sortează înregistrările după cheie utilizând o funcţie definită de
+     utilizator
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     ArrayIterator AppendIterator::getArrayIterator()
+     - Obţine acces la <literal>ArrayIterator</literal> intern
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     int AppendIterator::getIteratorIndex()
+     - Obţine indicele iteratorului
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     bool CachingIterator::getCache()
+     - Întoarce cache-ul
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     int CachingIterator::getFlags()
+     - Întoarce fanioanele interne
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     bool CachingIterator::offsetExists(mixed index)
+     - Întoarce &true; dacă indicele cerut există
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     string CachingIterator::offsetGet(mixed index)
+     - Întoarce cache-ul intern dacă este utilizat
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     void CachingIterator::offsetSet(mixed index, mixed newval)
+     - Stabileşte indicele dat în cache
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     void CachingIterator::offsetUnset(mixed index)
+     - Elimină indicele dat din cache
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     void CachingIterator::setFlags()
+     - Stabileşte fanioanele interne
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     array("delimiter" =>, "enclosure" =>) SplFileObject::getCsvControl(void)
+     - Obţine caracterele de delimitare şi încapsulare utilizate în
+     <function>fgetcsv</function>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     void SplFileObject::setCsvControl([string delimiter = ',' [, string enclosure = '"']])
+     - Stabileşte caracterele de delimitare şi încapsulare utilizate în 
+     <function>fgetcsv</function>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.tidy">Tidy</link></para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     tidyNode <link linkend="function.tidynode-getparent">tidyNode::getParent(void)</link>
+     - Întoarce nodul-părinte al nodului curent (adăugat în PHP 5.2.2)
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="book.xmlreader">XMLReader</link></para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     boolean XMLReader::setSchema(string filename)
+     - Utilizează schema W3C XSD pentru a valida documentul în timp ce este
+     procesat. Activarea este posibilă numai înainte de primul
+     <literal>Read()</literal>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.zip">zip</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <link linkend="function.ziparchive-addemptydir">ZipArchive::addEmptyDir()</link>
+     - Creează un director vid în arhivă
+    </simpara>
+   </listitem>
+  </itemizedlist>
+ </section>
+
+ <section xml:id="migration52.removed-extensions">
+  <title>Extensiile eliminate</title>
+  <para>
+   Aceste extensii au fost transferate în PECL şi nu mai fac parte din
+   distributivul PHP. Versiunile-pachete PECL ale acestor extensii vor fi
+   create conform cerinţelor utilizatorilor.
+  </para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <link linkend="ref.filepro">filePro</link>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <link linkend="ref.hwapi">Hyperwave API</link>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+ </section>
+
+ <section xml:id="migration52.new-extensions">
+  <title>Extensii noi</title>
+  <para>
+   Următoarele sunt extensii noi adăugate (implicit) începând cu PHP 5.2.0:
+  </para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <link linkend="ref.filter">Filtru</link>
+     - validează şi filtrează datele şi este proiectat pentru a fi utilizat cu
+     date nesecurizate, cum ar fi cele introduse de utilizator. Această
+     extensie este activată implicit; modul implicit RAW nu ar vre-un impact
+     asupra datelor introduse.
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <link linkend="ref.json">JSON</link>
+     - implementează formatul de schimb al datelor JavaScript Object Notation
+     (JSON) &mdash; Notarea Obiectelor în JavaScript. Această extensie este
+     activată implicit.
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <link linkend="ref.zip">Zip</link>
+     - vă permite să înscrieţi şi să citiţi în mod transparent arhive
+     comprimate ZIP şi fişierele din interiorul lor.
+    </simpara>
+   </listitem>
+  </itemizedlist>
+ </section>
+
+ <section xml:id="migration52.classes">
+  <title>Clase noi</title>
+  <para>
+   Următoarele clase au fost introduse în PHP 5.2.0:
+  </para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <link linkend="ref.datetime">DateTime</link>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <link linkend="ref.datetime">DateTimeZone</link>
+    </simpara>
+   </listitem>
+
+   <listitem>
+    <simpara>
+     RegexIterator - extinde <classname>FilterIterator</classname>;
+     implementează <classname>Iterator</classname>,
+     <classname>Traversable</classname>, <classname>OuterIterator</classname>
+    </simpara>
+    <simpara>
+     Constante:
+    </simpara>
+    <itemizedlist>
+     <listitem>
+      <simpara>
+       <constant>RegexIterator::ALL_MATCHES</constant>
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       <constant>RegexIterator::GET_MATCH</constant>
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       <constant>RegexIterator::MATCH</constant>
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       <constant>RegexIterator::REPLACE</constant>
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       <constant>RegexIterator::SPLIT</constant>
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       <constant>RegexIterator::USE_KEY</constant>
+      </simpara>
+     </listitem>
+    </itemizedlist>
+    <simpara>
+     Proprietăţi:
+    </simpara>
+    <itemizedlist>
+     <listitem>
+      <simpara>
+       public <property>replacement</property>
+      </simpara>
+     </listitem>
+    </itemizedlist>
+    <simpara>
+     Metode:
+    </simpara>
+    <itemizedlist>
+     <listitem>
+      <simpara>
+       RegexIterator::__construct(Iterator it, string regex [, int mode [, int flags [, int preg_flags]]])
+       - Creează un <literal>RegexIterator</literal> dintr-un alt iterator şi
+       o expresie regulară
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       bool RegexIterator::accept()
+       - Potriveşte (string)current() conform expresiei regulare
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       bool RegexIterator::getFlags()
+       - Întoarce fanioanele operaţionale curente
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       bool RegexIterator::getMode()
+       - Întoarce modul operaţional curent
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       bool RegexIterator::getPregFlags()
+       - Întoarce fanioanele PREG curente (dacă se utilizează) sau &null;
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       bool RegexIterator::setFlags(int new_flags)
+       - Stabileşte fanioanele operaţionale
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       bool RegexIterator::setMode(int new_mode)
+       - Stabileşte noul mod operaţional
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       bool RegexIterator::setPregFlags(int new_flags)
+       - Stabileşte fanioanele PREG
+      </simpara>
+     </listitem>
+    </itemizedlist>
+   </listitem>
+
+   <listitem>
+    <simpara>
+     RecursiveRegexIterator
+    </simpara>
+    <simpara>
+     Constante:
+    </simpara>
+    <itemizedlist>
+     <listitem>
+      <simpara>
+       <constant>RecursiveRegexIterator::ALL_MATCHES</constant>
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       <constant>RecursiveRegexIterator::GET_MATCH</constant>
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       <constant>RecursiveRegexIterator::MATCH</constant>
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       <constant>RecursiveRegexIterator::REPLACE</constant>
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       <constant>RecursiveRegexIterator::SPLIT</constant>
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       <constant>RecursiveRegexIterator::USE_KEY</constant>
+      </simpara>
+     </listitem>
+    </itemizedlist>
+    <simpara>
+     Metode:
+    </simpara>
+    <itemizedlist>
+     <listitem>
+      <simpara>
+       RecursiveRegexIterator::__construct(RecursiveIterator it, string regex [, int mode [, int flags [, int preg_flags]]])
+       - Creează un <literal>RecursiveRegexIterator</literal> dintr-un alt 
+       iterator recursiv şi o expresie regulară
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       RecursiveRegexIterator RecursiveRegexIterator::getChildren()
+       - Întoarce fiii iteratorului intern, ce se conţin într-un
+       <literal>RecursiveRegexIterator</literal>
+      </simpara>
+     </listitem>
+     <listitem>
+      <simpara>
+       bool RecursiveRegexIterator::hasChildren()
+       - Verifică dacă elementul curent al iteratorului intern posedă fii
+      </simpara>
+     </listitem>
+    </itemizedlist>
+   </listitem>
+  </itemizedlist>
+ </section>
+
+ <section xml:id="migration52.global-constants">
+  <title>Constante globale noi</title>
+
+  <para>Nucleul PHP:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <constant>M_EULER</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>M_LNPI</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>M_SQRT3</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>M_SQRTPI</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>PATHINFO_FILENAME</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>PREG_BACKTRACK_LIMIT_ERROR</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>PREG_BAD_UTF8_ERROR</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>PREG_INTERNAL_ERROR</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>PREG_NO_ERROR</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>PREG_RECURSION_LIMIT_ERROR</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>UPLOAD_ERR_EXTENSION</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>STREAM_SHUT_RD</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>STREAM_SHUT_WR</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>STREAM_SHUT_RDWR</constant>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.curl">curl</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <constant>CURLE_FILESIZE_EXCEEDED</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>CURLE_FTP_SSL_FAILED</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>CURLE_LDAP_INVALID_URL</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>CURLFTPAUTH_DEFAULT</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>CURLFTPAUTH_SSL</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>CURLFTPAUTH_TLS</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>CURLFTPSSL_ALL</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>CURLFTPSSL_CONTROL</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>CURLFTPSSL_NONE</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>CURLFTPSSL_TRY</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>CURLOPT_FTP_SSL</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>CURLOPT_FTPSSLAUTH</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>CURLOPT_TCP_NODELAY</constant>
+    </simpara>
+    <simpara>
+     Adăugată în PHP 5.2.1.
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>CURLOPT_TIMEOUT_MS</constant>
+    </simpara>
+    <simpara>
+     Adăugată în PHP 5.2.3
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>CURLOPT_CONNECTTIMEOUT_MS</constant>
+    </simpara>
+    <simpara>
+     Adăugată în PHP 5.2.3
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.gmp">GMP</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <constant>GMP_VERSION</constant>
+    </simpara>
+    <simpara>
+     Adăugată în PHP 5.2.2.
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.ming">ming</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <constant>SWFTEXTFIELD_USEFONT</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>SWFTEXTFIELD_AUTOSIZE</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>SWF_SOUND_NOT_COMPRESSED</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>SWF_SOUND_ADPCM_COMPRESSED</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>SWF_SOUND_MP3_COMPRESSED</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>SWF_SOUND_NOT_COMPRESSED_LE</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>SWF_SOUND_NELLY_COMPRESSED</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>SWF_SOUND_5KHZ</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>SWF_SOUND_11KHZ</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>SWF_SOUND_22KHZ</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>SWF_SOUND_44KHZ</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>SWF_SOUND_8BITS</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>SWF_SOUND_16BITS</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>SWF_SOUND_MONO</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>SWF_SOUND_STEREO</constant>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.openssl">openssl</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <constant>OPENSSL_VERSION_NUMBER</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>OPENSSL_VERSION_TEXT</constant>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.snmp">snmp</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <constant>SNMP_OID_OUTPUT_FULL</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>SNMP_OID_OUTPUT_NUMERIC</constant>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.sem">Semaphore</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <constant>MSG_EAGAIN</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>MSG_ENOMSG</constant>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+ </section>
+
+ <section xml:id="migration52.class-constants">
+  <title>Constante de clase noi</title>
+
+  <para><link linkend="intro.pdo">pdo</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <constant>PDO::ATTR_DEFAULT_FETCH_MODE</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>PDO::FETCH_PROPS_LATE</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>PDO::FETCH_KEY_PAIR</constant>
+    </simpara>
+    <simpara>
+     Translează un set de rezultate în 2 coloane într-un masiv asociativ.
+     (Adăugată în PHP 5.2.3)
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="ref.spl">spl</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <constant>CachingIterator::FULL_CACHE</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>CachingIterator::TOSTRING_USE_INNER</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>SplFileObject::READ_AHEAD</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>SplFileObject::READ_CSV</constant>
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <constant>SplFileObject::SKIP_EMPTY</constant>
+    </simpara>
+   </listitem>
+  </itemizedlist>
+ </section>
+
+ <section xml:id="migration52.newconf">
+  <title>Noile directive de configurare INI</title>
+  <para>
+   Noi directive ale &php.ini; au fost introduse în PHP 5.2.0:
+  </para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <link linkend="ini.allow-url-include">allow_url_include</link>
+    </simpara>
+    <simpara>
+     Această opţiune utilă face posibilă diferenţierea dintre operaţiunile
+     standarde asupra fişierelor la distanţă şi includerea
+     fişierelor la distanţă. În timp ce prima este de obicei dezirabilă,
+     ultima poate fi un risc de securitate dacă este utilizată naiv. Începând
+     cu PHP 5.2.0 puteţi permite efectuarea operaţiunilor asupra fişierelor la
+     distanţă, interzicând totodată includerea fişierelor la distanţă în
+     script-urile locale. De fapt, aceasta este configuraţia implicită.
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <link linkend="ini.pcre.backtrack-limit">pcre.backtrack_limit</link>
+    </simpara>
+    <simpara>
+     Limita de backtracking a PCRE.
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <link linkend="ini.pcre.recursion-limit">pcre.recursion_limit</link>
+    </simpara>
+    <simpara>
+     Limita de recursie a PCRE. Observaţi că dacă stabiliţi această valoare prea
+     mare, puteţi să consumaţi toată stiva disponibilă a procesului şi eventual
+     să suspendaţi PHP (din cauza atingerii limitei dimensiunii stivei, impusă
+     de sistemul de operare).
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     <link linkend="ini.session.cookie-httponly">session.cookie_httponly</link>
+    </simpara>
+    <simpara>
+     Marchează prăjiturile ca fiind accesibile numai prin intermediul
+     protocolului HTTP. Aceasta înseamnă că prăjitura nu va fi accesibilă prin
+     intermediul limbajelor de scriptare, cum ar fi JavaScript. Această opţiune
+     poate efectiv ajuta la reducerea furtului de identitate prin atacuri XSS
+     (cu toate că aceasta nu este susţinut de toate navigatoarele).
+    </simpara>
+   </listitem>
+  </itemizedlist>
+  <para>
+   Directive noi în PHP 5.2.2:
+  </para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <link linkend="ini.max-input-nesting-level">max_input_nesting_level</link>
+    </simpara>
+    <simpara>
+     Limitează adâncimea încorporării
+     <link linkend="language.variables.external">variabilelor de intrare</link>,
+     implicit este 64.
+    </simpara>
+   </listitem>
+  </itemizedlist>
+ </section>
+
+ <section xml:id="migration52.errorrep">
+  <title>Raportarea erorilor</title>
+  <para>
+   Unele din condiţiile <constant>E_ERROR</constant> existente au fost
+   convertite în ceva ce poate fi interceptat cu ajutorul unui handler de erori
+   definit de utilizator. Dacă o
+   <link linkend="errorfunc.constants"><constant>E_RECOVERABLE_ERROR</constant></link>
+   nu este interceptată, ea se va comporta la fel ca şi
+   <constant>E_ERROR</constant> în toate versiunile PHP. Erorile de acest tip
+   sunt înscrise în jurnal ca <literal>Eroare fatală interceptabilă</literal>.
+  </para>
+  <para>
+   Această schimbare înseamnă că valoarea <constant>E_ALL</constant> a
+   constantei <link linkend="ini.error-reporting">error_reporting</link> este
+   acum 6143, în timp ce valoarea precedentă era 2047. Deoarece constantele 
+   PHP nu au nici o însemnătate în afara PHP, în unele cazuri este utilizată
+   valoarea întreagă, de aceea ea va trebui ajustată. Deci, spre exemplu,
+   stabilind modul <literal>error_reporting</literal> în fişierele 
+   <link linkend="apache.configuration">httpd.conf</link> sau
+   <filename>.htaccess</filename>, valoarea trebuie schimbată corespunzător.
+   Acelaşi lucru este valabil atunci când valorile numerice sunt utilizate în
+   locul constantelor în script-urile PHP.
+  </para>
+  <para>
+   Ca efect secundar a unei schimbări efectuate pentru a preveni dublarea
+   mesajelor de eroare atunci când
+   <link linkend="ini.track-errors">track_errors</link> este
+   <literal>On</literal>, acum este necesar de a întoarce &false; din
+   handler-ele de erori definite de utilizator pentru a popula
+   <link linkend="reserved.variables.phperrormsg">$php_errormsg</link>. Aceasta
+   oferă un control granular asupra nivelelor mesajelor stocate.
+  </para>
+ </section>
+
+ <section xml:id="migration52.other">
+  <title>Alte îmbunătăţiri</title>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     Managerul îmbunătăţit al memoriei şi limita implicită mărită a memoriei.
+    </simpara>
+    <simpara>
+     Noul manager al memoriei alocă mai puţină memorie şi lucrează mai rapid
+     decât încarnarea precedentă. El alocă memorie din sistem în blocuri largi
+     şi apoi gestionează grămada (heap) independent. Valoarea
+     <literal>memory_limit</literal> din &php.ini; este verificată nu la
+     fiecare apel <literal>emalloc()</literal> (ca înainte), dar pentru
+     blocurile de facto cerute de la sistem. Aceasta înseamnă că
+     <literal>memory_limit</literal> este mult mai exact decât era, deoarece
+     vechiul manager al memoriei nu calcula tot necesarul de memorie utilizat
+     de biblioteca <literal>malloc</literal>.
+    </simpara>
+    <simpara>
+     Datorită acestei precizii obţinute utilizarea memoriei poate părea să se
+     fi mărit, cu toate că, de fapt, nu este aşa. Pentru a acomoda această
+     mărire aparentă, valoarea implicită a <literal>memory_limit</literal> de
+     asemenea a fost mărită - de la 8 la 16 megaocteţi.
+    </simpara>
+   </listitem>
+   <listitem>
+    <simpara>
+     S-a adăugat susţinerea constructorilor în interfeţe pentru a forţa
+     verificarea semnăturilor constructorilor în implementări.
+    </simpara>
+    <simpara>
+     Începând cu PHP 5.2.0, interfeţele pot avea constructori. Însă dacă
+     alegeţi să declaraţi un constructor într-o interfaţă, fiecare clasă ce va
+     implementa această interfaţă TREBUIE să includă un constructor cu o
+     semnătură identică cu acea a constructorului din interfaţa de bază. Prin
+     'semnătură' se înţeleg definiţiile tipurilor parametrilor şi a valorii
+     întoarse, inclusiv orice fel de indicatori expliciţi ai tipurilor şi 
+     faptul dacă datele sunt transmise prin referinţă, sau prin valoare.
+    </simpara>
+   </listitem>
+  </itemizedlist>
+ </section>
+</appendix>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:1
+sgml-indent-data:t
+indent-tabs-mode:nil
+sgml-parent-document:nil
+sgml-default-dtd-file:"../../manual.ced"
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+vim600: syn=xml fen fdm=syntax fdl=2 si
+vim: et tw=78 syn=sgml
+vi: ts=1 sw=1
+-->
