@@ -1,25 +1,23 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/xmlrpc.xml, last change in rev 1.1 -->
-<!-- last change to 'xmlrpc-server-add-introspection-data' in en/ tree in rev 1.1 -->
-  <refentry xml:id="function.xmlrpc-server-add-introspection-data" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>xmlrpc_server_add_introspection_data</refname>
-    <refpurpose>Adaugă documentaţia generata automat prin introspecţie  </refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>int</type><methodname>xmlrpc_server_add_introspection_data</methodname>
-      <methodparam><type>resource</type><parameter>server</parameter></methodparam>
-      <methodparam><type>array</type><parameter>desc</parameter></methodparam>
-     </methodsynopsis>
-     &warn.experimental.func;
-    <para>
-     &warn.undocumented.func;
-    </para>
-   </refsect1>
-  </refentry>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.4 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.xmlrpc-server-add-introspection-data" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>xmlrpc_server_add_introspection_data</refname>
+  <refpurpose>AdaugÄ documentaĹŁia de introspecĹŁie</refpurpose>
+ </refnamediv>
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>int</type><methodname>xmlrpc_server_add_introspection_data</methodname>
+   <methodparam><type>resource</type><parameter>server</parameter></methodparam>
+   <methodparam><type>array</type><parameter>desc</parameter></methodparam>
+  </methodsynopsis>
+  &warn.experimental.func;
+  &warn.undocumented.func;
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:

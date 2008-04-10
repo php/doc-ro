@@ -1,24 +1,22 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/xmlrpc.xml, last change in rev 1.1 -->
-<!-- last change to 'xmlrpc-encode' in en/ tree in rev 1.1 -->
-  <refentry xml:id="function.xmlrpc-encode" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>xmlrpc_encode</refname>
-    <refpurpose>Generează XML pentru o valoare PHP</refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>string</type><methodname>xmlrpc_encode</methodname>
-      <methodparam><type>mixed</type><parameter>value</parameter></methodparam>
-     </methodsynopsis>
-     &warn.experimental.func;
-    <para>
-     &warn.undocumented.func;
-    </para>
-   </refsect1>
-  </refentry>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.4 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.xmlrpc-encode" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>xmlrpc_encode</refname>
+  <refpurpose>GenereazÄ XML pentru o valoare PHP</refpurpose>
+ </refnamediv>
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>string</type><methodname>xmlrpc_encode</methodname>
+   <methodparam><type>mixed</type><parameter>value</parameter></methodparam>
+  </methodsynopsis>
+  &warn.experimental.func;
+  &warn.undocumented.func;
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:

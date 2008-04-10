@@ -1,25 +1,23 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/xmlrpc.xml, last change in rev 1.1 -->
-<!-- last change to 'xmlrpc-server-register-introspection-callback' in en/ tree in rev 1.1 -->
-  <refentry xml:id="function.xmlrpc-server-register-introspection-callback" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>xmlrpc_server_register_introspection_callback</refname>
-    <refpurpose>Înregistrează o funcţie PHP pentru introspecţie în vederea generării automate de documentaţie </refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>bool</type><methodname>xmlrpc_server_register_introspection_callback</methodname>
-      <methodparam><type>resource</type><parameter>server</parameter></methodparam>
-      <methodparam><type>string</type><parameter>function</parameter></methodparam>
-     </methodsynopsis>
-     &warn.experimental.func;
-    <para>
-     &warn.undocumented.func;
-    </para>
-   </refsect1>
-  </refentry>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.4 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.xmlrpc-server-register-introspection-callback" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>xmlrpc_server_register_introspection_callback</refname>
+  <refpurpose>ĂnregistreazÄ o funcĹŁie PHP pentru a genera documentaĹŁie</refpurpose>
+ </refnamediv>
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>bool</type><methodname>xmlrpc_server_register_introspection_callback</methodname>
+   <methodparam><type>resource</type><parameter>server</parameter></methodparam>
+   <methodparam><type>string</type><parameter>function</parameter></methodparam>
+  </methodsynopsis>
+  &warn.experimental.func;
+  &warn.undocumented.func;
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:

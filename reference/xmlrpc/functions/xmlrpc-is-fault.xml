@@ -1,18 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.4 $ -->
+<?xml version='1.0' encoding='iso-8859-1'?>
+<!-- $Revision: 1.1 $ -->
 <!-- EN-Revision: 1.6 Maintainer: simionea Status: translated -->
 <!-- CREDITS: adiju -->
-<refentry xml:id="function.xmlrpc-decode" xmlns="http://docbook.org/ns/docbook">
+<refentry xml:id="function.xmlrpc-is-fault" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
-  <refname>xmlrpc_decode</refname>
-  <refpurpose>Decodifică XML în tipuri indigene PHP</refpurpose>
+  <refname>xmlrpc_is_fault</refname>
+  <refpurpose>Determină dacă o valoare din array reprezintă o greşeală XMLRPC</refpurpose>
  </refnamediv>
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>mixed</type><methodname>xmlrpc_decode</methodname>
-   <methodparam><type>string</type><parameter>xml</parameter></methodparam>
-   <methodparam choice="opt"><type>string</type><parameter>encoding</parameter></methodparam>
+   <type>bool</type><methodname>xmlrpc_is_fault</methodname>
+   <methodparam><type>array</type><parameter>arg</parameter></methodparam>
   </methodsynopsis>
   &warn.experimental.func;
  </refsect1>
@@ -22,18 +21,10 @@
   <para>
    <variablelist>
     <varlistentry>
-     <term><parameter>xml</parameter></term>
+     <term><parameter>arg</parameter></term>
      <listitem>
       <para>
-       Răspunsul XML întors de metoda XMLRPC.
-      </para>
-     </listitem>
-    </varlistentry>
-    <varlistentry>
-     <term><parameter>encoding</parameter></term>
-     <listitem>
-      <para>
-       Codificarea întrării susţinută de iconv (implicit "iso-8859-1").
+       Masivul întors de <function>xmlrpc_decode</function>.
       </para>
      </listitem>
     </varlistentry>
@@ -44,8 +35,9 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Întoarce un array, un integer, un string sau un boolean în dependenţă
-   de răspunsul întors de metoda XMLRPC.
+   Întoarce &true; dacă argumentul exprimă o greşeală, &false; în caz contrar. Descrierea
+   erorii este disponibilă în <literal>$arg["faultString"]</literal>, codul greşelii
+   este în <literal>$arg["faultCode"]</literal>.
   </para>
  </refsect1>
 
@@ -60,8 +52,7 @@
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function>xmlrpc_encode_request</function></member>
-    <member><function>xmlrpc_is_fault</function></member>
+    <member><function>xmlrpc_decode</function></member>
    </simplelist>
   </para>
  </refsect1>
