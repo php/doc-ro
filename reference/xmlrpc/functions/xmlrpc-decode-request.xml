@@ -1,26 +1,24 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/xmlrpc.xml, last change in rev 1.1 -->
-<!-- last change to 'xmlrpc-decode-request' in en/ tree in rev 1.1 -->
-  <refentry xml:id="function.xmlrpc-decode-request" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>xmlrpc_decode_request</refname>
-    <refpurpose>Decodează XML într-un tip PHP nativ </refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>array</type><methodname>xmlrpc_decode_request</methodname>
-      <methodparam><type>string</type><parameter>xml</parameter></methodparam>
-      <methodparam><type>string</type><parameter>method</parameter></methodparam>
-      <methodparam choice="opt"><type>string</type><parameter>encoding</parameter></methodparam>
-     </methodsynopsis>
-     &warn.experimental.func;
-    <para>
-     &warn.undocumented.func;
-    </para>
-   </refsect1>
-  </refentry>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.9 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.xmlrpc-decode-request" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>xmlrpc_decode_request</refname>
+  <refpurpose>DecodificÄ XML ĂŽn tipuri PHP indigene</refpurpose>
+ </refnamediv>
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>mixed</type><methodname>xmlrpc_decode_request</methodname>
+   <methodparam><type>string</type><parameter>xml</parameter></methodparam>
+   <methodparam><type>string</type><parameter role="reference">method</parameter></methodparam>
+   <methodparam choice="opt"><type>string</type><parameter>encoding</parameter></methodparam>
+  </methodsynopsis>
+  &warn.experimental.func;
+  &warn.undocumented.func;
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
