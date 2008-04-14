@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.5 $ -->
-<!-- EN-Revision: 1.52 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.6 $ -->
+<!-- EN-Revision: 1.53 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="about" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Despre manual</title>
@@ -8,41 +8,47 @@
  <sect1 xml:id="about.formats">
   <title>Formate</title>
   <para>
-   Manualul PHP este disponibil în câteva formate. Aceste formate pot fi divizate
-   în două grupuri: formate, ce pot fi citite online şi pachete, ce pot fi descărcate.
+   Manualul PHP este disponibil în câteva formate. Aceste formate pot fi 
+   divizate în două grupuri: formate, ce pot fi citite online şi pachete, ce 
+   pot fi descărcate.
   </para>
   <note>
    <para>
-    Unii editori au pus la dispoziţie versiuni tipărite ale acestui manual. Nu putem
-    să vă recomandăm careva din acestea, deoarece ele tind să se învechească foarte repede.
+    Unii editori au pus la dispoziţie versiuni tipărite ale acestui manual. Nu 
+    putem să vă recomandăm careva din acestea, deoarece ele tind să se 
+    învechească foarte repede.
    </para>
   </note>
   <para>
-   Manualul poate fi citit online pe <link xlink:href="&url.php;">web site-ul PHP.net</link>,
-   şi pe numeroasele oglinzi ale acestuia. Pentru  performanţa optimă, alegeţi cea mai
-   apropiată oglindă. Versiunea online a manualului PHP are în prezent două foi de stil
-   <acronym>CSS</acronym>, o foaie de stil pentru  acces web şi una pentru tipar.
+   Manualul poate fi citit online pe <link xlink:href="&url.php;">web site-ul 
+   PHP.net</link>, şi pe numeroasele oglinzi ale acestuia. Pentru  performanţa 
+   optimă, alegeţi cea mai apropiată oglindă. Versiunea online a manualului PHP
+   are în prezent două foi de stil <acronym>CSS</acronym>, o foaie de stil 
+   pentru acces web şi una pentru tipar.
   </para>
   <para>
-   Două avantaje remarcabile ale manualului online faţă de majoritatea formatelor offline
-   este integrarea <link linkend="about.notes">adnotărilor contribuite de utilizatori</link>
-   şi <link xlink:href="&url.php.urlhowto;">scurtăturilor URL</link> , care pot fi utilizate
-   pentru a ajunge rapid la secţiunea dorită a manualului. Un dezavantaj evident este
-   necesitatea de a fi conectat online pentru a vizualiza această ediţie a manualului.
+   Două avantaje remarcabile ale manualului online faţă de majoritatea 
+   formatelor offline este integrarea <link linkend="about.notes">adnotărilor 
+   contribuite de utilizatori</link> şi <link xlink:href="&url.php.urlhowto;">
+   scurtăturilor URL</link> , care pot fi utilizate pentru a ajunge rapid la 
+   secţiunea dorită a manualului. Un dezavantaj evident este necesitatea de a 
+   fi conectat online pentru a vizualiza această ediţie a manualului.
   </para>
   <para>
-   Există cîteva formate offline ale manualului, iar cel mai potrivit format depinde
-   de sistemul de operare şi stilul personal al cititorului. Pentru informaţii despre
-   modul în care manualul este generat în aşa multe formate, puteţi citi secţiunea
-   <link linkend="about.generate">'Cum generăm formatele'</link> a acestei anexe.
+   Există cîteva formate offline ale manualului, iar cel mai potrivit format 
+   depinde de sistemul de operare şi stilul personal al cititorului. Pentru 
+   informaţii despre modul în care manualul este generat în aşa multe formate, 
+   puteţi citi secţiunea <link linkend="about.generate">'Cum generăm formatele'
+   </link> a acestei anexe.
   </para>
   <para>
-   Formatul manualului potrivit pentru cele mai multe platforme (sisteme de operare)
-   este versiunea HTML. Aceasta este oferită în două modalităţi &mdash; sub forma unui
-   fişier HTML unic şi sub forma unui pachet din mai multe fişiere individuale pentru
-   fiecare secţiune (ceea ce rezultă într-o colecţie de câteva mii de fişiere).
-   Noi furnizăm aceste versiuni în formă comprimată, deci este necesară o utilită de
-   decompresie pentru a căpăta fişierele conţinute în arhive.
+   Formatul manualului potrivit pentru cele mai multe platforme (sisteme de 
+   operare) este versiunea HTML. Aceasta este oferită în două modalităţi 
+   &mdash; sub forma unui fişier HTML unic şi sub forma unui pachet din mai 
+   multe fişiere individuale pentru fiecare secţiune (ceea ce rezultă într-o 
+   colecţie de câteva mii de fişiere). Noi furnizăm aceste versiuni în formă 
+   comprimată, deci este necesară o utilită de decompresie pentru a căpăta 
+   fişierele conţinute în arhive.
   </para>
   <!--
    The PDF version of the PHP Manual is "currently" unavailable. Perhaps
@@ -60,50 +66,53 @@
   </note>
   -->
   <para>
-   Pentru platformele Windows, versiunea <productname>Windows HTML Help</productname> 
-   a manualului îmbunătăţeşte formatul HTML pentru a fi utilizat în cadrul aplicaţiei
-   <productname>Windows HTML Help</productname>. Această versiune oferă căutare deplină
-   în text, un indice complet şi repere de carte. Multe medii de dezvoltare PHP în Windows
-   utilizate pe larg, de asemenea se integrează cu această versiune a documentaţiei,
-   pentru a oferi un acces simplu. De asemenea sunt disponibile şi programe de vizualizare
-   CHM pentru sistemele Linux. Verificaţi
+   Pentru platformele Windows, versiunea
+   <productname>Windows HTML Help</productname> a manualului îmbunătăţeşte 
+   formatul HTML pentru a fi utilizat în cadrul aplicaţiei <productname>Windows
+   HTML Help</productname>. Această versiune oferă căutare deplină în text, un 
+   indice complet şi repere de carte. Multe medii de dezvoltare PHP în Windows
+   utilizate pe larg, de asemenea se integrează cu această versiune a 
+   documentaţiei, pentru a oferi un acces simplu. De asemenea sunt disponibile 
+   şi programe de vizualizare CHM pentru sistemele Linux. Verificaţi
    <link xlink:href="&url.xchm;">xCHM</link> sau
    <link xlink:href="&url.gnochm;">GnoCHM</link>.
   </para>
   
   <para>
-   De asemenea este disponibilă si o <link xlink:href="&url.php.echm;">versiune CHM extinsă</link>,
-   care este reînnoită mai rar, dar oferă multe facilităţi suplimentare. Doar că ea va
-   funcţiona numai pe <productname>Microsoft Windows</productname>, din cauza tehnologiilor
-   folosite pentru a construi paginile de ajutor.
+   De asemenea este disponibilă si o <link xlink:href="&url.php.echm;">versiune
+   CHM extinsă</link>, care este reînnoită mai rar, dar oferă multe facilităţi 
+   suplimentare. Doar că ea va funcţiona numai pe <productname>Microsoft 
+   Windows</productname>, din cauza tehnologiilor folosite pentru a construi 
+   paginile de ajutor.
   </para>
  </sect1>
  
  <sect1 xml:id="about.notes">
   <title>Despre adnotările utilizatorilor</title>
   <para>
-   Adnotările scrise de utilizatori joacă un rol important în dezvoltarea acestui
-   manual. Oferind cititorilor manualului posibilitatea de a contribui cu exemple,
-   obiecţii şi clarificări suplimentare direct din navigatorul lor, suntem în stare
-   să le încorporăm apoi în textul de bază al manualului. Şi până când adnotările
-   nu au fost încorporate, ele pot fi vizualizate în forma în care au fost înscrise
-   online şi în unele formate offline.
+   Adnotările scrise de utilizatori joacă un rol important în dezvoltarea 
+   acestui manual. Oferind cititorilor manualului posibilitatea de a contribui 
+   cu exemple, obiecţii şi clarificări suplimentare direct din navigatorul lor,
+   suntem în stare să le încorporăm apoi în textul de bază al manualului. Şi 
+   până când adnotările nu au fost încorporate, ele pot fi vizualizate în forma
+   în care au fost înscrise online şi în unele formate offline.
   </para>
   <note>
    <para>
-    Adnotările scrise de către utilizatori nu sunt verificate înainte ca să apară
-    online, deci calitatea scrierii sau exemplele de cod-sursă, şi chiar veridicitatea 
-    contribuţiei nu pot fi garantate. (De fapt, nu există nici o garanţie a calităţii
-    sau exactităţii textului manualului însuşi.)
+    Adnotările scrise de către utilizatori nu sunt verificate înainte ca să 
+    apară online, deci calitatea scrierii sau exemplele de cod-sursă, şi chiar 
+    veridicitatea contribuţiei nu pot fi garantate. (De fapt, nu există nici o 
+    garanţie a calităţii sau exactităţii textului manualului însuşi.)
    </para>
   </note>
   <note>
    <para>
-    În scopul licenţierii corecte a materialului, adnotările scrise de utilizatori
-    sunt considerate ca parte integrantă a manualului PHP şi deci sunt sub incidenţa
-    aceleiaşi licenţe, care cuprinde această  documentaţie (Open Publication License &mdash;
-    Licenţa Publicaţiei Deschise pentru moment). Pentru mai multe detalii, accesaţi
-    pagina de <link linkend="copyright">copyright a manualului</link>.
+    În scopul licenţierii corecte a materialului, adnotările scrise de 
+    utilizatori sunt considerate ca parte integrantă a manualului PHP şi deci 
+    sunt sub incidenţa aceleiaşi licenţe, care cuprinde această  documentaţie 
+    (Open Publication License &mdash; Licenţa Publicaţiei Deschise pentru 
+    moment). Pentru mai multe detalii, accesaţi pagina de
+    <link linkend="copyright">copyright a manualului</link>.
    </para>
   </note>
  </sect1>
@@ -111,19 +120,20 @@
  <sect1 xml:id="about.prototypes">
    <title>Cum se citeşte definiţia unei funcţii (prototipul)</title>
    <para>
-    Fiecare funcţie din manual este documentată pentru referinţă rapidă. Ştiind cum se
-    citeşte şi se interpretează textul va face studierea PHP mult mai facilă.  În loc
-    să se bazeze pe exemple sau pe 'tăiere/inserare', oricine ar trebui să ştie cum să
-    citească definiţiile funcţiilor (prototipurile). Să începem:
+    Fiecare funcţie din manual este documentată pentru referinţă rapidă. Ştiind
+    cum se citeşte şi se interpretează textul va face studierea PHP mult mai 
+    facilă. În loc să se bazeze pe exemple sau pe 'tăiere/inserare', oricine ar
+    trebui să ştie cum să citească definiţiile funcţiilor (prototipurile). Să 
+    începem:
    </para>
    <note>
     <title>
      Condiţie esenţială: Cunoştinţe de bază a <link linkend="language.types">tipurilor</link>
     </title>
     <para>
-     Cu toate că PHP este un limbaj liber tipizat, este important de a avea cunoştinţe
-     de bază a <link linkend="language.types">tipurilor</link> deoarece ele au o
-     însemnătate importantă.
+     Cu toate că PHP este un limbaj liber tipizat, este important de a avea 
+     cunoştinţe de bază a <link linkend="language.types">tipurilor</link> 
+     deoarece ele au o însemnătate importantă.
     </para>
    </note>
    <para>
@@ -179,7 +189,8 @@ int strlen ( string $string )
          </entry>
          <entry>
           Tipul valorii, pe care această funcţie o întoarce, care este 
-          <type>integer</type> (adică lungimea şirului de caractere măsurată în numere). 
+          <type>integer</type> (adică lungimea şirului de caractere măsurată în
+	  numere). 
          </entry>
         </row>
         <row>
@@ -187,8 +198,9 @@ int strlen ( string $string )
           ( string $string )
          </entry>
          <entry>
-          Primul (şi în cazul dat unicul) parametru/argument pentru această funcţie
-          este numit <parameter>string</parameter>, şi este de tipul <type>string</type>.
+          Primul (şi în cazul dat unicul) parametru/argument pentru această 
+	  funcţie este numit <parameter>string</parameter>, şi este de tipul 
+	  <type>string</type>.
          </entry>
         </row>
        </tbody>
@@ -206,8 +218,8 @@ int strlen ( string $string )
      </screen>
     </para>
     <para>
-     Multe funcţii preiau parametri multipli, cum ar fi <function>in_array</function>.
-     Prototipul său este după cum urmează:
+     Multe funcţii preiau parametri multipli, cum ar fi
+     <function>in_array</function>. Prototipul său este după cum urmează:
     </para>
     <para>
      <screen>    
@@ -218,8 +230,8 @@ int strlen ( string $string )
     </para>
     <para>
      Ce înseamnă aceasta? in_array() întoarce o valoare
-     <link linkend="language.types.boolean">boolean</link>, &true; în cazul succesului
-     (dacă <parameter>needle</parameter> a fost găsit în 
+     <link linkend="language.types.boolean">boolean</link>, &true; în cazul 
+     succesului (dacă <parameter>needle</parameter> a fost găsit în 
      <parameter>haystack</parameter>), sau &false; în cazul eşecului (dacă 
      <parameter>needle</parameter> nu a fost găsit în
      <parameter>haystack</parameter>).  Primul parametru este numit 
@@ -229,13 +241,14 @@ int strlen ( string $string )
      (ceea ce căutăm) poate fi o valoare scalară (string, integer, sau
      <link linkend="language.types.float">float</link>), sau un
      <link linkend="language.types.array">array</link>.
-     <parameter>haystack</parameter> (masivul în care efectuăm căutarea) este al
-     doilea parametru. Al treilea parametru <emphasis>opţional</emphasis> este numit 
-     <parameter>strict</parameter>. Toţi parametrii opţionali se găsesc între 
-     <emphasis>[</emphasis> astfel de paranteze <emphasis>]</emphasis>. Mmanual afirmă
-     că parametrul <parameter>strict</parameter> are valoarea implicită boolean &false;.
-     Vedeţi pagina manualului referitoare la fiecare funcţie pentru detalii despre cum
-     ea funcţionează.
+     <parameter>haystack</parameter> (masivul în care efectuăm căutarea) este 
+     al doilea parametru. Al treilea parametru <emphasis>opţional</emphasis> 
+     este numit <parameter>strict</parameter>. Toţi parametrii opţionali se 
+     găsesc între <emphasis>[</emphasis> astfel de paranteze
+     <emphasis>]</emphasis>. Mmanual afirmă că parametrul
+     <parameter>strict</parameter> are valoarea implicită boolean &false;.
+     Vedeţi pagina manualului referitoare la fiecare funcţie pentru detalii 
+     despre cum ea funcţionează.
     </para>
     <para>
      Există funcţii cu informaţie mai complexă despre versiunea PHP. Să luăm
@@ -257,42 +270,43 @@ int strlen ( string $string )
  <sect1 xml:id="about.phpversions">
   <title>Versiunile PHP documentate în acest manual</title>
   <para>
-   Acest manual conţine informaţii despre versiunile trecute, curente şi viitoare ale
-   PHP. Schimbările în comportament sunt documentate ca adnotări, jurnale ale
-   schimbărilor, texte incluse în paginile manualului.
-   Cea mai anterioară versiune documentată este PHP 4.1.0, în timp ce ultima este
-   PHP 6.x.x
+   Acest manual conţine informaţii despre versiunile trecute, curente şi 
+   viitoare ale PHP. Schimbările în comportament sunt documentate ca adnotări, 
+   jurnale ale schimbărilor, texte incluse în paginile manualului.
+   Cea mai anterioară versiune documentată este PHP 4.1.0, în timp ce ultima 
+   este PHP 6.x.x
   </para>
   <para>
-   Există documentaţia parţială a versiunii PHP din CVS, ceea ce întotdeauna înseamnă
-   ultima versiune în dezvoltare. Aceasta încă urmează să fie lansată, de aceea e
-   disponibilă numai în sistemul de gestiune a versiunilor CVS, sau prin intermediul
-   unei <link xlink:href="&url.php.snapshots;">imagini instantanee (snapshot)</link>.
-   Deci fiţi conştient că facilităţile marcate "disponibil în CVS" în mod normal nu
-   sunt disponibile. Însă aceste facilităţi, cel mai probabil, vor fi disponibile în
-   următoarea versiune stabilă a PHP. Pentru a descărca versiunea CVS, verificaţi
+   Există documentaţia parţială a versiunii PHP din CVS, ceea ce întotdeauna 
+   înseamnă ultima versiune în dezvoltare. Aceasta încă urmează să fie lansată,
+   de aceea e disponibilă numai în sistemul de gestiune a versiunilor CVS, sau 
+   prin intermediul unei <link xlink:href="&url.php.snapshots;">imagini 
+   instantanee (snapshot)</link>. Deci fiţi conştient că facilităţile marcate 
+   "disponibil în CVS" în mod normal nu sunt disponibile. Însă aceste 
+   facilităţi, cel mai probabil, vor fi disponibile în următoarea versiune 
+   stabilă a PHP. Pentru a descărca versiunea CVS, verificaţi
    <link xlink:href="&url.php.anoncvs;">pagina de acces anonim la CVS</link>.
   </para>
   <para>
-   Deci poate exista documentaţie pentru versiuni PHP care încă nu sunt lansate.
-   (Ceva de tipul PHP 6.x.x în timp ce ultima versiune stabilă este 5.x.x). În cele
-   mai multe cazuri, aceasta nu este o eroare în documentaţie. Deseori sunt incluse
-   explicaţii pentru facilităţi care nu sunt disponibile în versiunea curentă PHP,
-   dar vor fi disponibile într-o versiune PHP viitoare, cunoscută deja. De obicei
-   PHP capătă noi facilităţi în lansările majore, în caz contrar numai erorile
-   sunt corectate. Utilizând formatul A.B.C pentru versiuni, o lansare majoră
-   măreşte numărul A sau B, în timp ce lansările minore măresc numărul C. De
-   aceea nu este ceva ieşit din comun ca, de exemplu, o facilitate să fie
-   documentată ca disponibilă în PHP x.1.x, atunci cînd ultima versiune este PHP
-   x.0.x. Observaţi, de asemenea, că manualul este scris la timpul prezent, nu la
-   timpul viitor.
+   Deci poate exista documentaţie pentru versiuni PHP care încă nu sunt 
+   lansate. (Ceva de tipul PHP 6.x.x în timp ce ultima versiune stabilă este 
+   5.x.x). În cele mai multe cazuri, aceasta nu este o eroare în documentaţie. 
+   Deseori sunt incluse explicaţii pentru facilităţi care nu sunt disponibile 
+   în versiunea curentă PHP, dar vor fi disponibile într-o versiune PHP 
+   viitoare, cunoscută deja. De obicei PHP capătă noi facilităţi în lansările 
+   majore, în caz contrar numai erorile sunt corectate. Utilizând formatul 
+   A.B.C pentru versiuni, o lansare majoră măreşte numărul A sau B, în timp ce 
+   lansările minore măresc numărul C. De aceea nu este ceva ieşit din comun ca,
+   de exemplu, o facilitate să fie documentată ca disponibilă în PHP x.1.x, 
+   atunci cînd ultima versiune este PHP x.0.x. Observaţi, de asemenea, că 
+   manualul este scris la timpul prezent, nu la timpul viitor.
   </para>
   <para>
    Deseori manualul PHP oferă "Valori Implicite" pentru directivele PHP. Aceste
    valori se bazează pe <filename>php.ini-dist</filename> şi nu pe
-   <filename>php.ini-recommended</filename>. Ele de asemenea se referă la ultima
-   versiune PHP. Vezi <link linkend="ini.list">anexa directivelor PHP</link>
-   pentru detalii despre aceste valori şi schimbările survenite.
+   <filename>php.ini-recommended</filename>. Ele de asemenea se referă la 
+   ultima versiune PHP. Vezi <link linkend="ini.list">anexa directivelor PHP
+   </link> pentru detalii despre aceste valori şi schimbările survenite.
   </para>
  </sect1>
    
@@ -327,9 +341,10 @@ int strlen ( string $string )
    Dacă în acest manual este găsită o eroare, în orice limbă, vă rugăm să o
    raportaţi folosind sistemul de erori la adresa
    <link xlink:href="&url.php.bugs;">&url.php.bugs;</link>.
-   Clasificaţi eroarea ca "Documentation Problem" &mdash; "Problemă în documentaţie".
-   Toate problemele ce ţin de documentaţie, inclusiv cele ce ţin de formatele
-   manualului, trebuie să fie înaintate în calitate de rapoarte de erori.
+   Clasificaţi eroarea ca "Documentation Problem" &mdash; "Problemă în 
+   documentaţie". Toate problemele ce ţin de documentaţie, inclusiv cele ce ţin
+   de formatele manualului, trebuie să fie înaintate în calitate de rapoarte de
+   erori.
   </para>
   <note>
    <para>
@@ -339,17 +354,18 @@ int strlen ( string $string )
    </para>
   </note>
   <para>
-   Contribuind cu adnotări, utilizatorii pot furniza propriile exemple, obiecţii
-   şi clarificări pentru alţi cititori. Dar vă rugăm să nu trimiteţi rapoarte de
-   erori folosind sistemul de adnotări. Pentru detalii, puteţi citi secţiunea
-   întitulată <link linkend="about.notes">'Despre adnotările utilizatorilor'</link>.
+   Contribuind cu adnotări, utilizatorii pot furniza propriile exemple, 
+   obiecţii şi clarificări pentru alţi cititori. Dar vă rugăm să nu trimiteţi 
+   rapoarte de erori folosind sistemul de adnotări. Pentru detalii, puteţi citi
+   secţiunea întitulată <link linkend="about.notes">'Despre adnotările 
+   utilizatorilor'</link>.
   </para>
   <para>
-   Manualul PHP este tradus în multe limbi. Cunoaşterea englezei şi a unei limbi
-   străine oferă încă o modalitate de a îmbunătăţi manualul PHP, lucrînd într-o
-   echipă de traducători. Pentru informaţii despre începerea unei traduceri noi,
-   sau contribuirea la o versiune deja tradusă, vă rugăm să citiţi
-   <link xlink:href="&url.php.dochowto;">&url.php.dochowto;</link>.
+   Manualul PHP este tradus în multe limbi. Cunoaşterea englezei şi a unei 
+   limbi străine oferă încă o modalitate de a îmbunătăţi manualul PHP, lucrînd 
+   într-o echipă de traducători. Pentru informaţii despre începerea unei 
+   traduceri noi, sau contribuirea la o versiune deja tradusă, vă rugăm să 
+   citiţi <link xlink:href="&url.php.dochowto;">&url.php.dochowto;</link>.
   </para>
   <para>
    Proiectul de Documentare PHP are de asemenea şi un canal IRC, unde se adună
@@ -364,22 +380,16 @@ int strlen ( string $string )
   <para>
    Acest manual este scris în <acronym>XML</acronym> folosind <link
    xlink:href="&url.docbook.xml;">DocBook XML DTD</link>, folosind <link
-   xlink:href="&url.xslt;"><acronym>XSLT</acronym></link> (Extensible
-   Stylesheet Language Transformations &mdash; Transformările Limbajului
-   Extensibil al Foilor de Stil) pentru întreţinere şi formatare.
+   xlink:href="&url.phd;"><acronym>PhD</acronym></link> (The [PH]P based
+   [D]ocBook renderer &mdash; interpretorul DocBook bazat pe PHP)
+   pentru întreţinere şi formatare.
   </para>
   <para>
    Utilizarea <acronym>XML</acronym> în calitate de format al sursei oferă
    posibilitatea de a genera multe formate de ieşire din fişierele sursă,
    întreţinerea efectuându-se pentru doar un document sursă pentru toate
-   formatele. Uneltele utilizate pentru formatarea manualului online sunt
-   <link xlink:href="&url.xsltproc;">xsltproc</link> şi <link
-   xlink:href="&url.dbxsl;">DocBook XSL Stylesheets</link>.
-   Versiunile <acronym>HTML</acronym> şi <acronym>TeX</acronym> utilizează
-   <link xlink:href="&url.jade;">Jade</link>, scrisă de către <link
-   xlink:href="&url.jclark;">James Clark</link>; şi <link
-   xlink:href="&url.dbstyle;">The Modular DocBook Stylesheets</link>,
-   scrisă de către <link xlink:href="&url.nwalsh;">Norman Walsh</link>.
+   formatele. Unealta utilizată pentru formatarea manualului online este
+   <link xlink:href="&url.phd;">PhD</link>.
    Noi utilizăm <link xlink:href="&url.winhelp;">Microsoft HTML Help
    Workshop</link> pentru a genera formatul 'Windows HTML Help' al manualului,
    şi desugur însuşi PHP pentru a face careva transformări şi formatări
@@ -387,10 +397,10 @@ int strlen ( string $string )
   </para>
   <para>
    Manualul PHP este generat în diverse limbi şi formate, vezi
-   <link xlink:href="&url.php.docs;">&url.php.docs;</link> pentru detalii suplimentare.
-   Codul sursă <acronym>XML</acronym> poate fi descărcat din CVS şi vizualizat la
-   <link xlink:href="&url.php.cvs;">&url.php.cvs;</link>. Documentaţia este stocată în
-   modulul <literal>phpdoc</literal>.
+   <link xlink:href="&url.php.docs;">&url.php.docs;</link> pentru detalii 
+   suplimentare. Codul sursă <acronym>XML</acronym> poate fi descărcat din CVS 
+   şi vizualizat la <link xlink:href="&url.php.cvs;">&url.php.cvs;</link>. 
+   Documentaţia este stocată în modulul <literal>phpdoc</literal>.
   </para>
  </sect1>
 
@@ -400,9 +410,9 @@ int strlen ( string $string )
    Manualul PHP este disponibil nu numai în diverse formate, dar şi în diverse
    limbi. Textul manualului este scris mai întâi în engleză, apoi echipe de
    oameni din toată lumea au grijă să-l traducă în limba lor de origine. Dacă
-   traducerea unei funcţii specifice sau a unui capitol nu a fost încă efectuată,
-   sistemul de asamblare automată a manualului revine la versiunea engleză a
-   documentului respectiv.
+   traducerea unei funcţii specifice sau a unui capitol nu a fost încă 
+   efectuată, sistemul de asamblare automată a manualului revine la versiunea 
+   engleză a documentului respectiv.
   </para>
   <para>
    Persoanele implicate în traducere încep de la sursa în <acronym>XML</acronym>
@@ -427,20 +437,15 @@ int strlen ( string $string )
    </para>
   </note>
   <para>
-   La moment manualul este disponibil, parţial sau integral, în următoarele limbi:
-   Portugheză Braziliană, Chineză (Simplificată), Chineză (Cantoneză din Hong Kong),
-   Chineză (Tradiţională), Cehă, Olandeză, Finlandeză, Franceză, Germană, Greacă,
-   Ebraică, Ungară, Italiană, Japaneză, Koreană, Poloneză, Română, Rusă, Slovacă,
-   Slovenă, Spaniolă, Suedeză şi Turcă.
+   La moment manualul este disponibil, parţial sau integral, în peste 10 limbi.
   </para>
   <para>
-   Toate acestea pot fi descărcate aici: <link xlink:href="&url.php.docs;">&url.php.docs;</link>.
+   Toate acestea pot fi descărcate aici:
+   <link xlink:href="&url.php.docs;">&url.php.docs;</link>.
   </para>
  </sect1>
 
 </appendix>
-
-<!-- Translated by Simion Onea -->
 
 <!-- Keep this comment at the end of the file
 Local variables:
