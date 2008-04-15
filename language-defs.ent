@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.37 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.38 Maintainer: simionea Status: translated -->
 
 <!-- Part titles used mostly in manual.xml itself -->
 <!ENTITY PHPManual         "Manualul PHP">
@@ -80,6 +80,7 @@ supplemental files to mark section titles -->
 <!ENTITY reftitle.methods      '<title>Metode</title>'>
 <!ENTITY reftitle.notes        '<title>Note</title>'>
 <!ENTITY reftitle.parameters   '<title>Parametri</title>'>
+<!ENTITY reftitle.options      '<title>Opţiuni</title>'>
 <!ENTITY reftitle.properties   '<title>Proprietăţi</title>'>
 <!ENTITY reftitle.required     '<title>Necesităţi</title>'>
 <!ENTITY reftitle.resources    '<title>Tipurile resurselor</title>'>
@@ -91,5 +92,3 @@ supplemental files to mark section titles -->
 
 <!ENTITY url.ro.rophp        "http://www.rophp.net">
 <!ENTITY url.ro.phpromania   "http://www.phpromania.net">
-
-<!-- Translated by Simion Onea -->

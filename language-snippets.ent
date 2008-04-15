@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.219 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.220 Maintainer: simionea Status: translated -->
 <!-- Keep 'em sorted -->
 
 <!-- Notes -->
@@ -69,6 +69,13 @@ se efectuează în mod automat.</simpara></note>'>
 off</emphasis>, şi este eliminată complet începând cu PHP 6.0.0. Comunitatea
 PHP îi încurajează pe toţi programatorii să nu se bazeze pe această directivă,
 dar să utilizeze alte mijloace, cum ar fi &link.superglobals;.</para></note>'>
+
+<!ENTITY note.is-superglobal "<note><para>Aceasta este o variabilă
+'superglobală', sau globală automată. Aceasta pur şi simplu înseamnă că ea
+este disponibilă în toate circumstanţele pe parcursul script-ului. Nu este
+nevoie de a scrie <command>global $variable;</command> pentru a o accesa din
+funcţii sau metode.
+</para></note>">
 
 <!ENTITY note.superglobals '<note><title>Superglobalele: notă despre 
 disponibilitate</title><para>Masivele superglobale, cum
