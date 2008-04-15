@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.14 $ -->
-<!-- EN-Revision: 1.65 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.15 $ -->
+<!-- EN-Revision: 1.67 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&php.ini; directives</title>
@@ -3091,6 +3091,12 @@
        <entry>PHP_INI_ALL în PHP &lt;= 5.0.5.</entry>
       </row>
       <row>
+       <entry><link linkend="ini.request-order">request_order</link></entry>
+       <entry>""</entry>
+       <entry>PHP_INI_SYSTEM|PHP_INI_PERDIR</entry>
+       <entry>Adăugat în PHP 5.3.0</entry>
+      </row>
+      <row>
        <entry>velocis.max_links</entry>
        <entry>"-1"</entry>
        <entry>PHP_INI_ALL</entry>
@@ -3472,7 +3478,7 @@
        <entry><link linkend="ini.zend.ze1-compatibility-mode">zend.ze1_compatibility_mode</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>Disponibil începând cu PHP 5.0.0. Eliminat în PHP 6.0.0.</entry>
+       <entry>Disponibil începând cu PHP 5.0.0. Eliminat în PHP 5.3.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.zlib.output-compression">zlib.output_compression</link></entry>
@@ -3631,7 +3637,7 @@
       <entry>zend.ze1_compatibility_mode</entry>
       <entry>"0"</entry>
       <entry>PHP_INI_ALL</entry>
-      <entry>Disponibil începând cu PHP 5.0.0.</entry>
+      <entry>Disponibil începând cu PHP 5.0.0. Eliminat în PHP 5.3.0.</entry>
      </row>
     </tbody>
     </tgroup>
@@ -3958,6 +3964,12 @@
          <entry>PHP_INI_ALL în PHP &lt;= 5.0.5.</entry>
         </row>
         <row>
+         <entry>request_order</entry>
+         <entry>""</entry>
+         <entry>PHP_INI_SYSTEM|PHP_INI_PERDIR</entry>
+         <entry>Disponibil începând cu PHP 5.3.0</entry>
+        </row>
+        <row>
          <entry>auto_globals_jit</entry>
          <entry>"1"</entry>
          <entry>PHP_INI_PERDIR</entry>
@@ -4144,6 +4156,25 @@
           asemenea afectate de această directivă.
          </para>
         </note>
+       </listitem>
+      </varlistentry>
+
+      <varlistentry xml:id="ini.request-order">
+       <term>
+        <parameter>request_order</parameter>
+        <type>string</type>
+       </term>
+       <listitem>
+        <para>
+         Această directuvă descrie ordinea în care PHP PHP înregistrează 
+         variabilele GET, POST şi Cookie în masivul _REQUEST. Înregistrarea 
+         este efectuată de la stânga la dreapta, valorile noi se suprapun 
+         peste cele vechi.
+        </para>
+        <para>
+         Dacă această directivă nu este stabilită, variables_order este 
+         utilizată pentru a umple conţinutul <varname>$_REQUEST</varname>.
+        </para>
        </listitem>
       </varlistentry>
 
