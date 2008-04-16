@@ -1,47 +1,50 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- $Revision: 1.4 $ -->
-<!-- EN-Revision: 1.0 Maintainer: zamolxe Status: translated -->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.5 $ -->
+<!-- EN-Revision: 1.4 Maintainer: zamolxe Status: translated -->
+<!-- CREDITS: simionea -->
 <!-- splitted from ./index.xml, last change in rev 1.66 -->
   <chapter xml:id="security.apache" xmlns="http://docbook.org/ns/docbook">
    <title>Instalat ca modul Apache</title>
    <simpara>
-    Cand PHP este utilizat ca modul in Apache, el mosteneste permisiile default
-    Apache (de obicei acelea ale utilizatorului "nobody"). Acest fapt are mai multe impacte
-    asupra securitatii sistemului. De exemplu, daca folositi PHP 
-    pentru a accesa o baza de date, si aceasta nu are management de acces inclus,
-    va trebui sa faceti in asa fel incat aceasta sa fie accesibila utilizatorului "nobody".
-    Aceasta inseamna ca oricine cu drepturi default "nobody" poate actiona si modifica
-    baza de date, fara sa fie nevoit sa introduca username sau parola.
-    Este posibil ca un robot de indexare web sa acceseze accidental panoul de administrare
-    al bazei de date (ex. phpMyAdmin) si sa modifice sau sa stearga toate datele.
-    Va puteti proteja cu ajutorul sistemului de autorizatie folosit de Apache,
-    sau printr-un model de acces personalizat folosind LDAP, fisiere tip &htaccess; , etc.
-    pe care sa le introduceti in scripturile PHP create.
+    Când PHP este utilizat ca modul în Apache, el moşteneşte permisiunile
+    implicite ale Apache (de obicei acelea ale utilizatorului "nobody"). Acest
+    fapt are mai multe impacte asupra securităţii şi autorizării. De exemplu,
+    dacă utilizaţi PHP pentru a accesa o bază de date, şi dacă aceasta nu are
+    control de acces inclus, va trebui să faceti această bază de date să fie
+    accesibilă utilizatorului "nobody". Aceasta înseamnă că un script malefic
+    va putea accesa şi modifica baza de date chiar fără a introduce numele
+    utilizatorului şi parola. Este posibil ca un robot de indexare web să
+    acceseze accidental panoul de administrare al bazei de date şi să modifice
+    sau să şteargă toate datele. Vă puteţi proteja cu ajutorul sistemului de
+    autorizare al Apache, sau printr-un model de acces personalizat folosind
+    LDAP, fişiere tip &htaccess;, etc. pe care să le introduceţi în scripturile
+    PHP create.
    </simpara>
    <simpara>
-    Adesea, dupa ce politica de securitate a fost stabilita, iar utilizatorul PHP
-    (in acest caz, utilizatorul Apache) prezinta risc redus fata de sistem,
-    iese la iveala faptul ca PHP este restrictionat in a scrie in fisierele si 
-    directoarele utilizatorilor, sau nu poate accesa si schimba anumite baze de date.
-    De asemenea, a fost securizat asemanator in a scrie fisiere bune si rele, sau
-    inserarea de tranzactii benefice sau daunatoare bazelor de date.
+    Adesea, după ce politica de securitate a fost stabilită, iar utilizatorul 
+    PHP (în acest caz, utilizatorul Apache) prezintă risc redus faţă de sistem,
+    iese la iveală faptul că PHP este restricţionat în a scrie în fişierele şi 
+    directoarele utilizatorilor, sau nu poate accesa şi schimba anumite baze de
+    date. El a fost securizat atât în a scrie fişiere bune, cât şi rele, sau 
+    inserarea de tranzacţii atât benefice, cât şi dăunătoare bazelor de date.
    </simpara>
    <simpara>
-    O greseala de securitate frecventa este ca atunci cand se ajunge in acest moment,
-    sa se dea pemisii de root serverului Apache, sau sa se escaladeze voit privilegiile din acesta,
-    pentru a facilita anumite actiuni.
+    O greşeală de securitate frecventă este că atunci când se ajunge în acest 
+    moment, să se dea pemisii de root serverului Apache, sau să se extindă 
+    permisiunile într-un careva alt mod. 
    </simpara>
    <simpara>
-    Escaladarea privilegiilor utilizatorilor Apache catre root este deosebit de periculoasa
-    si poate duce la compromiterea intregului sistem, asa ca sudo'ing,
-    chroot'ing, sau alte modalitati de a rula root nu ar trebui luate in considerare
-    de catre administratorii de sistem.
+    Extinderea privilegiilor utilizatorului Apache către root este deosebit de
+    periculoasă şi poate duce la compromiterea întregului sistem, aşa că 
+    operaţiunile 'sudo', 'chroot', sau alte modalităţi de a rula root nu ar 
+    trebui luate în considerare în caz că nu sunteţi expert în securitare.
    </simpara>
    <simpara>
-    Exista si solutii mai simple. Utilizand
-    <link linkend="ini.open-basedir">open_basedir</link> puteti controla si restrictiona
-    ce directorii doriti, in care poate avea acces PHP. In plus puteti seta zone apache-only,
-    pentru a restrictiona toate activitatile non-user, sau non-system, fisiere venite via web.
+    Există şi soluţii mai simple. Utilizând
+    <link linkend="ini.open-basedir">open_basedir</link> puteţi controla şi 
+    restricţiona ce directorii doriţi, în care poate avea acces PHP. În plus 
+    puteţi stabili zone numai pentru Apache, pentru a preveni toate acţiunile 
+    din web asupra fişierelor utilizatorilor şi de sistem.
    </simpara>
   </chapter>
 
