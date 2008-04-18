@@ -1,26 +1,61 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/apache.xml, last change in rev 1.1 -->
-<!-- last change to 'ascii2ebcdic' in en/ tree in rev 1.10 -->
-  <refentry xml:id="function.ascii2ebcdic" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>ascii2ebcdic</refname>
-    <refpurpose>Traduce un ºir din ASCII în EBCDIC</refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>int</type><methodname>ascii2ebcdic</methodname>
-      <methodparam><type>string</type><parameter>ascii_str</parameter></methodparam>
-     </methodsynopsis>
-    <para>
-     <function>ascii2ebcdic</function> este o funcþie specificã Apache care este disponibilã doar pe sistemele de operare bazate pe EBCDIC (OS/390, BS2000). Traduce ºirul ASCII <parameter>ascii_str</parameter> în reprezentarea echivalentã EBCDIC (binar sigurã), ºi returneazã rezultatul.
-    </para>
-    <para>
-     Vezi, de asemenea, funcþia inversã <function>ebcdic2ascii</function> 
-    </para>
-   </refsect1>
-  </refentry>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.5 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<!-- splitted from ./en/functions/apache.xml, last change in rev 1.10 -->
+<refentry xml:id="function.ascii2ebcdic" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>ascii2ebcdic</refname>
+  <refpurpose>TransleazÄƒ un string din ASCII Ã®n EBCDIC</refpurpose>
+ </refnamediv>
+
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>int</type><methodname>ascii2ebcdic</methodname>
+   <methodparam><type>string</type><parameter>ascii_str</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   <function>ascii2ebcdic</function> este o funcÅ£ie specificÄƒ Apache, care 
+   este disponibilÄƒ numai pe sisteme de operare bazate pe EBCDIC (OS/390, 
+   BS2000). Ea transleazÄƒ string-ul codificat ASCII
+   <parameter>ascii_str</parameter> Ã®n echivalentul sÄƒu Ã®n reprezentarea EBCDIC
+   (sigurÄƒ din punct de vedere binar) ÅŸi Ã®ntoarce rezultatul.
+  </para>
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>ascii_str</parameter></term>
+     <listitem>
+      <para>
+       String-ul ASCII ce va fi translat.
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Reprezentarea EBCDIC a string-ului ASCII.
+  </para>
+ </refsect1>
+
+  <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>ebcdic2ascii</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
