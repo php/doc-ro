@@ -1,51 +1,100 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/apache.xml, last change in rev 1.1 -->
-<!-- last change to 'getallheaders' in en/ tree in rev 1.2 -->
-  <refentry xml:id="function.getallheaders" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>getallheaders</refname>
-    <refpurpose>Prelucreazã toate header-ele cererii HTTP</refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>array</type><methodname>getallheaders</methodname>
-      <void/>
-     </methodsynopsis>
-    <para>
-	 Aceastã funcþie returneazã un tablou asociativ care conþine toate header-ele cererii HTTP curente.
-    </para>
-    <para>
-     <note>
-      <para>
-	   De asemenea, se pot recupera toate valorile variabilelor CGI prin preluarea lor din mediul Apache, indiferent dacã PHP este rulat sau nu ca ºi modul Apache. Utilizaþi <function>phpinfo</function> pentru a vedea o listã cu toate variabilele de mediu definite în acest fel.
-      </para>
-     </note>
-    </para>
-    <para>
-     <example>
-      <title>Exemplu <function>getallheaders</function></title>
-      <programlisting role="php">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.13 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<!-- splitted from ./en/functions/apache.xml, last change in rev 1.2 -->
+<refentry xml:id="function.getallheaders" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>getallheaders</refname>
+  <refpurpose>ObÅ£ine toate antetele interpelÄƒrii HTTP</refpurpose>
+ </refnamediv>
+
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>array</type><methodname>getallheaders</methodname>
+   <void/>
+  </methodsynopsis>
+  <para>
+   ObÅ£ine toate antetele HTTP ale interpelÄƒrii curente.
+  </para>
+  <para>
+   AceastÄƒ funcÅ£ie este un pseudonim al
+   <function>apache_request_headers</function>. VÄƒ rugÄƒm sÄƒ citiÅ£i documentaÅ£ia
+   <function>apache_request_headers</function> pentru informaÅ£ii suplimentare 
+   despre cum funcÅ£ioneazÄƒ aceastÄƒ funcÅ£ie.
+  </para>
+  &apache.req.module;
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Un masiv asociativ cu toate antetele HTTP din interpelarea curentÄƒ, sau
+   &false; Ã®n caz de eÅŸec.
+  </para>
+ </refsect1>
+
+ <refsect1 role="changelog">
+  &reftitle.changelog;
+  <para>
+   <informaltable>
+    <tgroup cols="2">
+     <thead>
+      <row>
+       <entry>&Version;</entry>
+       <entry>&Description;</entry>
+      </row>
+     </thead>
+     <tbody>
+      <row>
+       <entry>4.3.0</entry>
+       <entry>
+        A devenit un pseudonim al <function>apache_request_headers</function>.
+        FuncÅ£ia, de fapt, a fost redenumitÄƒ din cauza cÄƒ funcÅ£ioneazÄƒ numai cu
+	Apache.
+       </entry>
+      </row>
+     </tbody>
+    </tgroup>
+   </informaltable>
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemplu <function>getallheadres</function></title>
+    <programlisting role="php">
 <![CDATA[
-$headers = getallheaders();
-while (list ($header, $value) = each ($headers)) {
-    echo "$header: $value<br />\n";
+<?php
+
+foreach (getallheaders() as $name => $value) {
+    echo "$name: $value\n";
 }
+
+?>
 ]]>
-      </programlisting>
-     </example>
-    </para>
-    <para>
-	 Acest exemplu va afiºa toate header-ele pentru cererea curentã.
-     <note>
-      <simpara>
-       <function>getallheaders</function> este deocamdatã suportatã numai când PHP ruleazã ca modul <productname>Apache</productname>.
-      </simpara>
-     </note>
-    </para>
-   </refsect1>
-  </refentry>
+    </programlisting>
+   </example>
+  </para>
+ </refsect1>
+
+ <refsect1 role="notes">
+  &reftitle.notes;
+  &note.apache.nsapi-module;
+ </refsect1>
+
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>apache_response_headers</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
