@@ -1,142 +1,418 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/mail.xml, last change in rev 1.1 -->
-<!-- last change to 'mail' in en/ tree in rev 1.2 -->
-  <refentry xml:id="function.mail" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-   <refnamediv>
-    <refname>mail</refname>
-    <refpurpose>trimite mail</refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>bool</type><methodname>mail</methodname>
-      <methodparam><type>string</type><parameter>to</parameter></methodparam>
-      <methodparam><type>string</type><parameter>subject</parameter></methodparam>
-      <methodparam><type>string</type><parameter>message</parameter></methodparam>
-      <methodparam choice="opt"><type>string</type><parameter>additional_headers</parameter></methodparam>
-      <methodparam choice="opt"><type>string</type><parameter>additional_parameters
-       </parameter></methodparam>
-     </methodsynopsis>
-    <simpara>
-     <function>mail</function> trimite automat mesajele specificate �n <parameter>message</parameter> c�tre destinatarul specificat �n <parameter>to</parameter>. Pot fi specifica�i mai mul�i destinatari, separ�nd adresele prin virgul� �n parametrul <parameter>to</parameter>. Pot fi trimise e-mail-uri cu fi�iere ata�ate �i cu tipuri speciale de con�inut utiliz�nd aceast� func�ie. Aceasta se realizeaz� prin codificare MIME; Pentru mai multe informa�ii vezi <link xlink:href="&url.email.mime.zend;">un articol ZEND</link> sau <link xlink:href="&url.email.mime.pear;">Clasele PEAR - MIME</link>.
-     </simpara>     
-     <simpara>
-     Urm�toarele RFC-uri pot fi, de asemenea, folositoare:
-     <link xlink:href="&url.rfc;1896">RFC 1896</link>,
-     <link xlink:href="&url.rfc;2045">RFC 2045</link>,
-     <link xlink:href="&url.rfc;2046">RFC 2046</link>,
-     <link xlink:href="&url.rfc;2047">RFC 2047</link>,
-     <link xlink:href="&url.rfc;2048">RFC 2048</link>, �i 
-     <link xlink:href="&url.rfc;2049">RFC 2049</link>.
-    </simpara>
-    <para>
-     <function>mail</function> returneaz� &true; dac� mailul a fost trimis cu succes, &false; �n caz contrar.
-    </para>
-    <para>
-     <example>
-      <title>Trimiterea unui e-mail.</title>
-      <programlisting>
-<![CDATA[
-mail("joecool@example.com", "Subiectul", "Linia 1\nLinia 2\nLinia 3");
-]]>
-      </programlisting>
-     </example></para>
-    <simpara>
-     Dac� �i cel de-al patrulea argument este trimis c�tre func�ie, acest �ir este inserat la finalul antetului. Acest parametru se utilizeaz� pentru a ad�uga antete adi�ionale. Antetele multiple se separ� cu un �nceput de r�nd (<literal>\r</literal>) �i cu o linie nou� (<literal>\n</literal>).
-    </simpara>
-    <note>
-     <para>
-     Trebuie utilizat� combina�ia <literal>\r\n</literal> pentru separarea antetelor, cu toate c� unii agen�i de transfer mail din Unix pot lucra cu un singur caracter linie nou� (<literal>\n</literal>). Antetul Cc: este sensibil la distinc�ia majuscule/minuscule �i trebuie scris <literal>Cc:</literal> pe sisteme Win32. Antetul Bcc: nu este suportat pe sistemele Win32.
-     </para>
-    </note>
-    <para>
-     <example>
-      <title>Trimiterea de mail-uri cu antete adi�ionale.</title>
-      <programlisting>
-<![CDATA[
-mail("nobody@example.com", "subiectul", $mesaj,
-     "From: webmaster@$NUME_SERVER\r\n"
-    ."Reply-To: webmaster@$NUME_SERVER\r\n"
-    ."X-Mailer: PHP/" . phpversion());
-]]>
-      </programlisting>
-     </example>
-    </para>
-    <para>
-     <parameter>additional_parameters</parameter> poate fi utilizat pentru a trimite parametri adi�ionali programului folosit pentru trimiterea de e-mail-uri specificat �n <literal>sendmail_path</literal>. De exemplu ace�ti parametri adi�ionali pot fi folosi�i pentru a indica adresa expeditorului. Pentru a preveni trimiterea unui antet 'X-Warning' odat� cu mesajul atunci c�nd utiliza�i aceast� metod� este posibil s� fie necesar s� ad�uga�i utilizatorul care ruleaz� serverul web.
-     <example>
-      <title>Expedierea de mesaje cu antete adi�ionale �i setarea unui parametru linie de comand� adi�ional.</title>
-      <programlisting>
-<![CDATA[
-mail("nimeni@exemplu.com", "subiectul", $mesaj,
-     "From: webmaster@$SERVER_NAME", "-fwebmaster@$SERVER_NAME");
-]]>
-      </programlisting>
-     </example>
-    </para>
-    <note>
-     <para>
-      Cel de-al cincilea parametru a fost ad�ugat �n PHP 4.0.5.
-     </para>
-    </note>
-    <para>
-    Se pot utiliza �iruri simple pentru a constru mesaje de e-mail complexe.
-     <example>
-      <title>Expedierea de mesaje complexe.</title>
-      <programlisting>
-<![CDATA[
-/* destinatari */
-$catre  = "Mary <mary@example.com>" . ", " ; //nota�i virgula
-$catre .= "Kelly <kelly@example.com>";
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.5 $ -->
+<!-- EN-Revision: 1.37 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.mail" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <refnamediv>
+  <refname>mail</refname>
+  <refpurpose>Trimite mesaje e-mail</refpurpose>
+ </refnamediv>
 
-/* subiect */
-$subiect = "Zile de na�tere �n august";
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>bool</type><methodname>mail</methodname>
+   <methodparam><type>string</type><parameter>to</parameter></methodparam>
+   <methodparam><type>string</type><parameter>subject</parameter></methodparam>
+   <methodparam><type>string</type><parameter>message</parameter></methodparam>
+   <methodparam choice="opt"><type>string</type><parameter>additional_headers</parameter></methodparam>
+   <methodparam choice="opt"><type>string</type><parameter>additional_parameters</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   Trimite un mesaj e-mail.
+  </para>
+ </refsect1>
 
-/* mesaj */
-$mesaj = '
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>to</parameter></term>
+     <listitem>
+      <para>
+       Destinatarul sau destinatarii mesajului.
+      </para>
+      <para>
+       Formatul acestui string trebuie să respecte
+       <link xlink:href="&url.rfc;2822">RFC 2822</link>. Unele exemple:
+       <simplelist>
+        <member>user@example.com</member>
+        <member>user@example.com, anotheruser@example.com</member>
+        <member>User &lt;user@example.com&gt;</member>
+        <member>User &lt;user@example.com&gt;, Another User &lt;anotheruser@example.com&gt;</member>
+       </simplelist>
+      </para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><parameter>subject</parameter></term>
+     <listitem>
+      <para>
+       Subiectul mesajului spre a fi trimis.
+      </para>
+      <caution>
+       <para>
+        Acesta nu trebuie să conţină caractere de trecere în linie nouă, 
+        deoarece mesajul poate să nu fie trimis corect.
+       </para>
+      </caution>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><parameter>message</parameter></term>
+     <listitem>
+      <para>
+       Mesajul spre a fi trimis.
+      </para>
+      <para>
+       Fiecare rând trebuie să fie încheiat cu LF (\n). Lungimea rândurilor nu 
+       trebuie să depăşească 70 de caractere.
+      </para>
+      <caution>
+       <para>
+        (Numai pentru Windows) Când PHP conlucrează direct cu un server SMTP, 
+	dacă este întâlnit un punct la începutul unui rând, el este eliminat. 
+	Pentru a depăşi aceste situaţii, dublaţi punctul de la începutul
+	rândului.
+        <programlisting role="php">
+<![CDATA[
+<?php
+$text = str_replace("\n.", "\n..", $text);
+?>
+]]>
+        </programlisting>
+       </para>
+      </caution>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><parameter>additional_headers</parameter> (opţional)</term>
+     <listitem>
+      <para>
+       Un string spre a fi inserat la sfârşitul antetelor mesajului.
+      </para>
+      <para>
+       Acesta este utilizat de obicei pentru a adăuga antete suplimentare 
+       (From, Cc, şi Bcc). Antetele suplimentare multiple trebuie separate cu  
+       CRLF (\r\n).
+      </para>
+      <note>
+       <para>
+        La trimiterea mesajului, acesta <emphasis>trebuie</emphasis> să conţină
+	antetul <literal>From</literal>. Acesta poate fi stabilit cu ajutorul 
+	parametrului <parameter>additional_headers</parameter>, sau poate fi 
+	stabilită o valoare implicită în &php.ini;.
+       </para>
+       <para>
+        În caz că nu se respectă această condiţie, se va produce un mesaj de 
+	eroare similar cu acesta: <literal>Warning: mail(): "sendmail_from" not
+        set in php.ini or custom "From:" header missing</literal>
+	(<literal>Avertizare: mail(): "sendmail_from" nu este stabilit în 
+	php.ini sau antetul "From:" lipseşte</literal>).
+        Antetul <literal>From</literal> stabileşte de asemenea <literal>
+	Return-Path</literal> în Windows.
+       </para>
+      </note>
+      <note>
+       <para>
+        Dacă mesajele nu sunt primite, încercaţi să utilizaţi numai LF (\n).
+        Unii agenţi de transfer a mesajelor de calitate proastă în Unix 
+	înlocuiesc LF cu CRLF în mod automat (ceea ce duce la dublarea CR dacă 
+	este utilizat CRLF). Utilizaţi acest procedeu numai în caz excepţional,
+	deoarece acesta nu se conformaeză cu <link xlink:href="&url.rfc;2822">
+	RFC 2822</link>.
+       </para>
+      </note>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><parameter>additional_parameters</parameter> (opţional)</term>
+     <listitem>
+      <para>
+       Parametrul <parameter>additional_parameters</parameter> poate fi 
+       utilizat pentru a transmite un parametru suplimentar programului 
+       configurat pentru a transmite poşta utilizând opţiunea de configurare 
+       <literal>sendmail_path</literal>. Spre exemplu, acesta poate fi utilizat
+       pentru a stabili adresa expeditorului de pe plic când se utilizează
+       sendmail cu opţiunea <literal>-f</literal>.
+      </para>
+      <para>
+       Utilizatorul cu care rulează serveul web trebuie adăugat în calitate de 
+       utilizator de încredere în configuraţia sendmail pentru a preveni
+       adăugarea unui antet 'X-Warning' la mesaj atunci când expeditorul de pe 
+       plic (-f) este stabilit prin această metodă.
+       Pentru utilizatorii sendmail acest fişier este
+       <filename>/etc/mail/trusted-users</filename>.
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Întoarce &true; dacă mesajul a fost acceptat cu succes pentru trimitere,
+   &false; în caz contrar.
+  </para>
+  <para>
+   Este important să ştiţi că cu toate că mesajul a fost acceptat spre 
+   trimitere, aceasta NU înseamnă că mesajul într-adevăr va ajunge la 
+   destinaţie.
+  </para>
+ </refsect1>
+
+ <refsect1 role="changelog">
+  &reftitle.changelog;
+  <para>
+   <informaltable>
+    <tgroup cols="2">
+     <thead>
+      <row>
+       <entry>&Version;</entry>
+       <entry>&Description;</entry>
+      </row>
+     </thead>
+     <tbody>
+      <row>
+       <entry>4.3.0 (numai pentru Windows)</entry>
+       <entry>
+        Toate antetele personalizate (cum ar fi From, Cc, Bcc şi Date) sunt
+	susţinute şi nu fac diferenţiere între caracterele minuscule /
+	majuscule. (Deoarece antetele personalizate nu sunt interpretate de
+	MTA, dar sunt procesate de PHP, PHP &lt; 4.3 susţinea numai elementul 
+	de antet Cc, care făcea diferenţiere între caracterele minuscule /
+	majuscule).
+       </entry>
+      </row>
+      <row>
+       <entry>4.2.3</entry>
+       <entry>
+        Parametrul <parameter>additional_parameters</parameter> este dezactivat
+	în <link linkend="ini.safe-mode">safe_mode</link> şi funcţia
+        <function>mail</function> va emite un mesaj de avertizare şi va
+	întoarce &false; atunci când este utilizat.
+       </entry>
+      </row>
+      <row>
+       <entry>4.0.5</entry>
+       <entry>
+        Parametrul <parameter>additional_parameters</parameter> a fost adăugat.
+       </entry>
+      </row>
+     </tbody>
+    </tgroup>
+   </informaltable>
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Trimiterea mesajelor.</title>
+    <para>
+     Utilizarea <function>mail</function> pentru a transmite un mesaj simplu:
+    </para>
+    <programlisting role="php">
+<![CDATA[
+<?php
+// Mesajul
+$message = "Line 1\nLine 2\nLine 3";
+
+// În caz că vre-un rând depăşeşte 70 de caractere, trebuie să utilizăm
+// wordwrap()
+$message = wordwrap($message, 70);
+
+// Trimiterea
+mail('caffinated@example.com', 'My Subject', $message);
+?>
+]]>
+    </programlisting>
+   </example>
+   <example>
+    <title>Trimiterea unui mesaj cu antete suplimentare.</title>
+    <para>
+     Adăugarea antetelor de bază, transmiţându-i MUA adresele From şi Reply-To:
+    </para>
+    <programlisting role="php">
+<![CDATA[
+<?php
+$to      = 'nobody@example.com';
+$subject = 'the subject';
+$message = 'hello';
+$headers = 'From: webmaster@example.com' . "\r\n" .
+    'Reply-To: webmaster@example.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+mail($to, $subject, $message, $headers);
+?>
+]]>
+    </programlisting>
+   </example>
+   <example>
+    <title>Trimiterea unui mesaj cu un parametru suplimentar în linia de
+    comandă.</title>
+    <para>
+     Parametrul <parameter>additional_parameters</parameter> poate fi utilizat 
+     pentru a transmite un parametru suplimentar programului configurat pentru 
+     a fi utilizat la trimiterea poştei cu ajutorul
+     <literal>sendmail_path</literal>.
+    </para>
+    <programlisting role="php">
+<![CDATA[
+<?php
+mail('nobody@example.com', 'the subject', 'the message', null,
+   '-fwebmaster@example.com');
+?>
+]]>
+    </programlisting>
+   </example>
+   <example>
+    <title>Transmiterea unui mesaj HTML</title>
+    <para>
+     Este posibil de a trimite mesaje HTML cu <function>mail</function>.
+    </para>
+    <programlisting role="php">
+<![CDATA[
+<?php
+// Destinatari multipli
+$to  = 'aidan@example.com' . ', '; // observaţi virgula
+$to .= 'wez@example.com';
+
+// Subiectul
+$subject = 'Birthday Reminders for August';
+
+// Mesajul
+$message = '
 <html>
 <head>
- <title>Zile de na�tere �n august</title>
+  <title>Birthday Reminders for August</title>
 </head>
 <body>
-<p>Zile de na�tere care se s�rb�toresc �n august!</p>
-<table>
- <tr>
-  <th>Persoana</th><th>Ziua</th><th>Luna</th><th>Anul</th>
- </tr>
- <tr>
-  <td>Joe</td><td>3</td><td>august</td><td>1970</td>
-  <td>Sally</td><td>17</td><td>august</td><td>1973</td>
- </tr>
-</table>
+  <p>Here are the birthdays upcoming in August!</p>
+  <table>
+    <tr>
+      <th>Person</th><th>Day</th><th>Month</th><th>Year</th>
+    </tr>
+    <tr>
+      <td>Joe</td><td>3rd</td><td>August</td><td>1970</td>
+    </tr>
+    <tr>
+      <td>Sally</td><td>17th</td><td>August</td><td>1973</td>
+    </tr>
+  </table>
 </body>
 </html>
 ';
 
-/* Pentru a trimite un e-mail �n format HTML trebuie setat antetul Content-type. */
-$antete  = "MIME-Version: 1.0\r\n";
-$antete .= "Content-type: text/html; charset=iso-8859-1\r\n";
+// Pentru a trimite mesaje HTML, trebuie stabilit antetul Content-type
+$headers  = 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
-/* Antete adi�ionale */
-$antete .= "From: Monitorizare zile de nastere <birthday@example.com>\r\n";
+// Antete suplimentare
+$headers .= 'To: Mary <mary@example.com>, Kelly <kelly@example.com>' . "\r\n";
+$headers .= 'From: Birthday Reminder <birthday@example.com>' . "\r\n";
+$headers .= 'Cc: birthdayarchive@example.com' . "\r\n";
+$headers .= 'Bcc: birthdaycheck@example.com' . "\r\n";
 
-$antete .= "Cc: birthdayarchive@example.com\r\n";
-$antete .= "Bcc: birthdaycheck@example.com\r\n";
-
-/* �i acum s�-i d�m drumul... */
-mail($catre, $subiect, $mesaj, $antete);
+// Trimiterea mesajului
+mail($to, $subject, $message, $headers);
+?>
 ]]>
-      </programlisting>
-     </example>
+    </programlisting>
+    <para>
+     <note>
+      <para>
+       Dacă se intenţionează trimiterea mesajelor HTML, sau a altor mesaje 
+       complexe, este recomandată utilizarea pachetului PEAR
+       <link xlink:href="&url.pear.package;Mail_Mime">PEAR::Mail_Mime</link>.
+      </para>
+     </note>
     </para>
-    <note>
-     <para>
-       Ave�i grij� s� nu fie vreun caracter linie nou� (\n) �n parametrii <parameter>to</parameter> sau <parameter>subject</parameter>, dac� dori�i ca mesajul s� fie trimis.
-     </para>
-    </note>
-   </refsect1>
-  </refentry>
+   </example>
+  </para>
+ </refsect1>
+
+ <refsect1 role="notes">    
+  &reftitle.notes;
+  <note>
+   <para>
+    Implementarea funcţiei <function>mail</function> în Windows diferă în multe
+    aspecte de cea din Unix. În primul rând ea nu utilizează un binar local 
+    pentru a compune mesajele, dar operează direct asupra socket-urilor, ceea 
+    ce înseamnă că este necesar ca un <literal>MTA</literal> să asculte pe un 
+    socket de reţea (care poate fi pe serverul local sau pe unul îndepărtat).
+   </para>
+   <para>
+    În al doilea rând, antetele personalizate, cum ar fi
+    <literal>From:</literal>,
+    <literal>Cc:</literal>,
+    <literal>Bcc:</literal> şi
+    <literal>Date:</literal>
+    <emphasis role="strong">nu</emphasis> sunt interpretate de către
+    <literal>MTA</literal> în primul rând, dar sunt procesate de PHP.
+   </para>
+   <para>
+    Prin urmare, parametrul <parameter>to</parameter> nu trebuie să fie o 
+    adresă de forma &quot;Ceva &lt;cineva@exemplu.com&gt;&quot;. Comanda mail 
+    poate să nu prelucreze aceasta în mod corect în timp ce conlucrează cu MTA.
+   </para>
+  </note>
+  
+  <note>
+   <para>
+    Mesajele cu ataşamente şi tipuri speciale de conţinut (de ex. HTML) pot fi 
+    trimise utilizând această funcţie. Aceasta poate fi realizat cu ajutorul 
+    codificărilor MIME - pentru informaţii suplimentare, accesaţi acest
+    <link xlink:href="&url.email.mime.zend;">
+    articol Zend</link> sau <link xlink:href="&url.pear.package;Mail_Mime">
+    Clasele Mime PEAR</link>.
+   </para>
+  </note>
+
+  <note>
+   <para>
+    Face de menţionat că funcţia <function>mail</function> nu este potrivită 
+    pentru volume mari de masaje trimise consecutiv. Această funcţie deschide 
+    şi închide socket-ul SMTP pentru fiecare mesaj, ceea ce nu este foarte
+    eficient.
+   </para>
+   <para>
+    Pentru transmiterea volumelor mari de mesaje consideraţi pachetele
+    <link xlink:href="&url.pear.package;Mail">PEAR::Mail</link> şi
+    <link xlink:href="&url.pear.package;Mail_Queue">PEAR::Mail_Queue</link>.
+   </para>
+  </note>
+
+  <note>
+   <para>
+    Următoarele RFC-uri pot fi de folos:
+    <link xlink:href="&url.rfc;1896">RFC 1896</link>,
+    <link xlink:href="&url.rfc;2045">RFC 2045</link>,
+    <link xlink:href="&url.rfc;2046">RFC 2046</link>,
+    <link xlink:href="&url.rfc;2047">RFC 2047</link>,
+    <link xlink:href="&url.rfc;2048">RFC 2048</link>,
+    <link xlink:href="&url.rfc;2049">RFC 2049</link> şi
+    <link xlink:href="&url.rfc;2822">RFC 2822</link>.
+   </para>
+  </note>
+ </refsect1>
+
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>imap_mail</function></member>
+    <member><link xlink:href="&url.pear.package;Mail">PEAR::Mail</link></member>
+    <member><link xlink:href="&url.pear.package;Mail_Mime">PEAR::Mail_Mime</link></member>
+   </simplelist>
+  </para>
+ </refsect1>
+</refentry>
+
 
 <!-- Keep this comment at the end of the file
 Local variables:
