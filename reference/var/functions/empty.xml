@@ -1,61 +1,149 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/var.xml, last change in rev 1.1 -->
-<!-- last change to 'empty' in en/ tree in rev 1.2 -->
-  <refentry xml:id="function.empty" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>empty</refname>
-    <refpurpose>Determin� dac� o variabil� este definit�</refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>boolean</type><methodname>empty</methodname>
-      <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
-     </methodsynopsis>
-    <note>
-     <para>
-      <function>empty</function> este o construc�ie de limbaj.
-     </para>
-    </note>
-    <para>
-     Este inversul folosirii construc�iei 
-     <literal>(boolean) var</literal>,
-     cu deosebirea c� nu se genereaz� mesaj de aten�ionare dac�
-     variabila nu este definit�. Consulta�i
-     <link linkend="language.types.boolean.casting">conversia la
-     boolean</link> pentru detalii.
-    </para>
-     <informalexample>
-      <programlisting role="php">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.5 $ -->
+<!-- EN-Revision: 1.13 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.empty" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>empty</refname>
+  <refpurpose>Determină dacă o variabilă este vidă</refpurpose>
+ </refnamediv>
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>bool</type><methodname>empty</methodname>
+   <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   Determină dacă o variabilă este considerată vidă.
+  </para>
+ </refsect1>
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>var</parameter></term>
+     <listitem>
+      <para>
+       Variabla pentru a fi verificată
+      </para>
+      <note>
+       <para>
+        <function>empty</function> verifică numai variabile, deoarece orice 
+	altceva va duce la o eroare de interpretare. Cu alte cuvinte, 
+	următoarea comandă nu va funcţiona:
+        <command>empty(trim($name))</command>.
+       </para>
+      </note>
+      <para>
+       <function>empty</function> este opusa <literal>(boolean) var</literal>,
+       cu excepţia că nu se generează o avertizare atunci când variabila nu 
+       este stabilită (iniţializată).
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Întoarce &false; dacă <parameter>var</parameter> are o valoare nevidă şi
+   neegală cu zero.
+  </para>
+  <para>
+   Următoarele entităţi sunt considerate a fi vide:
+   <simplelist>
+    <member><literal>"" (un string vid)</literal></member>
+    <member><literal>0 (0 în calitate de integer)</literal></member>
+    <member><literal>"0" (0 în calitate de string)</literal></member>
+    <member>&null;</member>
+    <member>&false;</member>
+    <member><literal>array() (un masiv vid)</literal></member>
+    <member><literal>var $var; (o variabilă declarată, dar fără o valoare
+    într-o clasă)</literal></member>
+   </simplelist>
+  </para>
+ </refsect1>
+ <refsect1 role="changelog">
+  &reftitle.changelog;
+  <para>
+   <informaltable>
+    <tgroup cols="2">
+     <thead>
+      <row>
+       <entry>&Version;</entry>
+       <entry>&Description;</entry>
+      </row>
+     </thead>
+     <tbody>
+      <row>
+       <entry>PHP 5</entry>
+       <entry>
+        <para>
+         Începând cu PHP 5 obiectele fără proprietăţi nu mai sunt considerate
+	 vide.
+        </para>
+       </entry>
+      </row>
+      <row>
+       <entry>PHP 4</entry>
+       <entry>
+        <para>
+         Începând cu PHP 4 valoarea string "0" este considerată vidă.
+        </para>
+       </entry>
+      </row>
+     </tbody>
+    </tgroup>
+   </informaltable>
+  </para>
+ </refsect1>
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>
+     O comparaţie simplă <function>empty</function> / <function>isset</function>.
+    </title>  
+    <programlisting role="php">
 <![CDATA[
 <?php
 $var = 0;
 
-if (empty($var)) {  // este evaluat� ca TRUE
-    echo '$var este 0 sau nu este definit�';
+// Evaluează în true deoarece $var este vidă
+if (empty($var)) {
+    echo '$var is either 0, empty, or not set at all';
 }
 
-if (!isset($var)) { // este evaluat� ca FALSE
-    echo '$var nu este definit�';
+// Evaluează în true deoarece $var este iniţializat
+if (isset($var)) {
+    echo '$var is set even though it is empty';
 }
-?>]]>
-      </programlisting>
-     </informalexample>
-
-    <simpara>
-     De notat c� este lipsit� de sens folosirea cu un parametru care
-     nu reprezint� o variabil�. De exemplu,
-     <command>empty (addslashes ($name))</command> nu are sens.
-     In acest exemplu este verificat ceva ce nu reprezint� o variabil�
-     c� ar avea valoarea &false;.
-    </simpara>
-    <simpara>
-     Mai consulta�i <function>isset</function> �i
-     <function>unset</function>.
-    </simpara>
-   </refsect1>
-  </refentry>
+?>
+]]>
+    </programlisting>
+   </example>
+  </para>
+ </refsect1>
+ <refsect1 role="notes">
+  &reftitle.notes;
+  &note.language-construct;
+ </refsect1>
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>isset</function></member>
+    <member><function>unset</function></member>
+    <member><function>array_key_exists</function></member>
+    <member><function>count</function></member> 
+    <member><function>strlen</function></member>
+    <member><link linkend="types.comparisons">Tabelele de comparare a tipurilor</link></member>
+   </simplelist>
+  </para>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
