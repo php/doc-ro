@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.220 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.221 Maintainer: simionea Status: translated -->
 <!-- Keep 'em sorted -->
 
 <!-- Notes -->
@@ -327,6 +327,21 @@ conn</parameter></term><listitem><para>O resursă MCVE_CONN întoarsă de
 <function>m_initengine</function>.</para></listitem></varlistentry>'>
 
 <!-- Date and time entities -->
+<!ENTITY date.timezone.intro.title '<title>Lista zonelor orare susţinute</title>'>
+
+<!ENTITY date.timezone.intro "<para>
+Aici puteţi găsi lista deplină a zonelor orare susţinute de PHP, care pot fi
+utilizate cu de ex. <function>date_default_timezone_set</function>.
+</para><note><simpara>Ultima versiune a bazei de date cu zonele orare poate fi
+instalată prin <link xlink:href='&url.pecl.package.get;timezonedb' xmlns:xlink='http://www.w3.org/1999/xlink'>timezonedb</link> al PECL.
+Pentru utilizatorii Windows, este plasată o bibliotecă DLL pre-compilată pe  
+site-ul PECL4Win: <link xlink:href='&url.pecl.timezonedb.dll;' xmlns:xlink='http://www.w3.org/1999/xlink'>php_timezonedb.dll</link>.
+</simpara></note>">
+
+<!ENTITY date.timezone.bc '<simpara>Sunteţi rugat să nu utilizaţi zonele orare
+enumerate aici (afară de UTC), ele există numai din motive de compatibilitate 
+inversă.</simpara>'>
+
 <!ENTITY date.timezone.errors.description '<para>
 Fiecare apel al unei funcţii de dată/oră va genera o <constant>E_NOTICE
 </constant> dacă zona orară nu este validă şi/sau un mesaj <constant>E_STRICT
@@ -1006,5 +1021,4 @@ ImagickPixelIteratorException în caz de eroare.'>
  <literal>phar.readonly</literal> să fie stabilit în <literal>0</literal> 
  pentru ca obiectele <classname>Phar</classname> să funcţioneze. În caz
  contrar va fi aruncată o excepţie <classname>PharException</classname>.
-</para>
-</note>'>
+</para></note>'>

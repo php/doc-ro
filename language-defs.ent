@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.38 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.39 Maintainer: simionea Status: translated -->
 
 <!-- Part titles used mostly in manual.xml itself -->
 <!ENTITY PHPManual         "Manualul PHP">
@@ -75,6 +75,7 @@ supplemental files to mark section titles -->
 <!ENTITY reftitle.examples     '<title>Exemple</title>'>
 <!ENTITY reftitle.exceptions   '<title>Excepţii</title>'>
 <!ENTITY reftitle.errors       '<title>Erori/Excepţii</title>'>
+<!ENTITY reftitle.faq          '<title>&FAQ;</title>'>
 <!ENTITY reftitle.install      '<title>Instalarea</title>'>
 <!ENTITY reftitle.intro        '<title>Introducere</title>'>
 <!ENTITY reftitle.methods      '<title>Metode</title>'>

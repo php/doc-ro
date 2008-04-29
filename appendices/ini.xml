@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.15 $ -->
-<!-- EN-Revision: 1.67 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.16 $ -->
+<!-- EN-Revision: 1.68 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&php.ini; directives</title>
@@ -3689,11 +3689,6 @@
          Pentru mai multe informaţii accesaţi
          <link linkend="language.basic-syntax.phpmode">Evadarea din HTML</link>.
         </simpara>
-        <note>
-         <para>
-          Susţinerea etichetelor de tip ASP a fost adăugată în 3.0.4.
-         </para>
-        </note>
        </listitem>
       </varlistentry>
 
