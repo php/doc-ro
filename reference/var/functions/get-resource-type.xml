@@ -1,46 +1,83 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/var.xml, last change in rev 1.1 -->
-<!-- last change to 'get-resource-type' in en/ tree in rev 1.75 -->
-  <refentry xml:id="function.get-resource-type" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>get_resource_type</refname>
-    <refpurpose>
-     Returnează tipul resursei
-    </refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>string</type><methodname>get_resource_type</methodname>
-      <methodparam><type>resource</type><parameter>handle</parameter></methodparam>
-     </methodsynopsis>
-    <para>
-     Această funcţie returnează un şir de caractere care reprezintă tipul
-     resursei <type>resource</type> care i-a fost pasată. Dacă parametrul
-     <type>resource</type> nu este o resursă validă, se va genera o eroare.
-     <informalexample>
-      <programlisting role="php">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.9 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<!-- splitted from ./en/functions/var.xml, last change in rev 1.75 -->
+<refentry xml:id="function.get-resource-type" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>get_resource_type</refname>
+  <refpurpose>
+   Ăntoarce tipul resursei
+  </refpurpose>
+ </refnamediv>
+
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>string</type><methodname>get_resource_type</methodname>
+   <methodparam><type>resource</type><parameter>handle</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   AceastÄ funcĹŁie obĹŁine tipul unei resurse date.
+  </para>
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>handle</parameter></term>
+     <listitem>
+      <para>
+       Handle-ul resursei ĂŽn cauzÄ.
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   DacÄ <parameter>handle-ul</parameter> furnizat este o resursÄ, aceastÄ 
+   funcĹŁie va ĂŽntoarce un string reprezentĂ˘nd tipul sÄu. DacÄ funcĹŁia nu poate 
+   identifica tipul, valoarea ĂŽntoarsÄ va fi string-ul
+   <literal>Unknown</literal>.
+  </para>
+  <para>
+   AceastÄ funcĹŁie va ĂŽntoarce &false; Ĺi va genera o eroare dacÄ 
+   <parameter>handle</parameter> nu este o <type>resource</type>.
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemplu <function>get_resource_type</function></title>
+    <programlisting role="php">
 <![CDATA[
 <?php
+// AfiĹeazÄ: mysql link
 $c = mysql_connect();
 echo get_resource_type($c) . "\n";
-// afişează: mysql link
 
+// AfiĹeazÄ: file
 $fp = fopen("foo", "w");
 echo get_resource_type($fp) . "\n";
-// afişează: file
 
+// AfiĹeazÄ: domxml document
 $doc = new_xmldoc("1.0");
 echo get_resource_type($doc->doc) . "\n";
-// afişează: domxml document
 ?>
 ]]>
-      </programlisting>
-     </informalexample>
-    </para>
-   </refsect1>
-  </refentry>
+    </programlisting>
+   </example>
+  </para>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
