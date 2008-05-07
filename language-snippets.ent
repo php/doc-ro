@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.221 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.222 Maintainer: simionea Status: translated -->
 <!-- Keep 'em sorted -->
 
 <!-- Notes -->
@@ -1022,3 +1022,16 @@ ImagickPixelIteratorException în caz de eroare.'>
  pentru ca obiectele <classname>Phar</classname> să funcţioneze. În caz
  contrar va fi aruncată o excepţie <classname>PharException</classname>.
 </para></note>'>
+
+<!ENTITY phar.removed.pharcompress '<note xmlns="http://docbook.org/ns/docbook">
+<para>Această metodă a fost eliminată din cadrul extensiei phar începând cu 
+versiunea 2.0.0. Implementări alternative sunt disponibile utilizând 
+<function>Phar::compress</function>, <function>Phar::decompress</function>, 
+<function>Phar::compressFiles</function> şi
+<function>Phar::decompressFiles</function>.</para></note>'>
+
+<!ENTITY phar.removed.pharfileinfocompress '<note xmlns="http://docbook.org/ns/docbook">
+<para>Această metodă a fost eliminată din cadrul extensiei phar începând cu 
+versiunea 2.0.0. Implementări alternative sunt disponibile utilizând
+<function>PharFileInfo::isCompressed</function>,
+<function>PharFileInfo::decompress</function> şi <function>PharFileInfo::compress</function>.</para></note>'>

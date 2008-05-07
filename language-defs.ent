@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.39 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.40 Maintainer: simionea Status: translated -->
 
 <!-- Part titles used mostly in manual.xml itself -->
 <!ENTITY PHPManual         "Manualul PHP">
@@ -30,7 +30,7 @@
 <!ENTITY MailRelatedExtensions                    "Extensii teferitoare la poştă">
 <!ENTITY AuthenticationServices                   "Servicii de autentificare">
 <!ENTITY OtherServices                            "Alte servicii">
-<!ENTITY CompressionExtensions                    "Extensii de compresie">
+<!ENTITY CompressionExtensions                    "Extensii de compresie şi arhivare">
 <!ENTITY CalendarandEventRelatedExtensions        "Extensii referitoare la claendar şi evenimente">
 <!ENTITY NonTextMIMEOutput                        "Ieşiri MIME non-textuale">
 <!ENTITY ImageProcessingandGeneration             "Generarea şi procesarea imaginilor">
