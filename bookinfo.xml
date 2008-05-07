@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.22 $ -->
-<!-- EN-Revision: 1.54 Maintainer: zamolxe Status: translated -->
-<!-- CREDITS: adiju,aspinei,radical,simionea -->
+<!-- $Revision: 1.23 $ -->
+<!-- EN-Revision: 1.54 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju,aspinei,radical,zamolxe -->
 
  <info xml:id="bookinfo" xmlns="http://docbook.org/ns/docbook">
   &frontpage.authors;
   <pubdate>&php.build-date;</pubdate>
   &frontpage.editors;
 
+  <simpara>Traducerea în limba română</simpara>
   <authorgroup xml:id="translators">
-   <author>
-    <personname>Traducerea în limba română a fost efectuată de</personname>
-   </author>
    <author><personname>Paul Dorneanu</personname></author>
    <author><personname>Adrian Jurjică</personname></author>
    <author><personname>Cristi Rădulescu</personname></author>
