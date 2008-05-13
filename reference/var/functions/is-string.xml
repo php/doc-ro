@@ -1,33 +1,91 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/var.xml, last change in rev 1.1 -->
-<!-- last change to 'is-string' in en/ tree in rev 1.19 -->
-  <refentry xml:id="function.is-string" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>is_string</refname>
-    <refpurpose>Decide dacă o variabilă este de tip string</refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>bool</type><methodname>is_string</methodname>
-      <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
-     </methodsynopsis>
-    <para>
-     Returnează &true; dacă <parameter>var</parameter> este de tip
-     <type>string</type>, &false; în caz contrar.
-    </para>
-    <para>
-     Mai consultaţi <function>is_bool</function>,
-     <function>is_int</function>,
-     <function>is_integer</function>,
-     <function>is_float</function>,
-     <function>is_real</function>,
-     <function>is_object</function>, şi
-     <function>is_array</function>.
-    </para>
-   </refsect1>
-  </refentry>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.8 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.is-string" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>is_string</refname>
+  <refpurpose>DeterminÄ dacÄ tipul variabilei este string</refpurpose>
+ </refnamediv>
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>bool</type><methodname>is_string</methodname>
+   <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   DeterminÄ dacÄ tipul variabilei date este string.
+  </para>
+ </refsect1>
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>var</parameter></term>
+     <listitem>
+      <para>
+       Variabila care este evaluatÄ.
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Ăntoarce &true; dacÄ <parameter>var</parameter> este de tip <type>string</type>,
+   &false; ĂŽn caz contrar.
+  </para>
+ </refsect1>
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemplu <function>is_string</function></title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+if (is_string("23")) {
+ echo "este string\n";
+} else {
+ echo "nu este string\n";
+}
+var_dump(is_string('abc'));
+var_dump(is_string("23"));
+var_dump(is_string(23.5));
+var_dump(is_string(true));
+?>
+]]>
+    </programlisting>
+    &example.outputs;
+    <screen>
+<![CDATA[
+este string
+bool(true)
+bool(true)
+bool(false)
+bool(false)
+]]>
+    </screen>
+   </example>
+  </para>
+ </refsect1>
+
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>is_float</function></member>
+    <member><function>is_int</function></member>
+    <member><function>is_bool</function></member>
+    <member><function>is_object</function></member>
+    <member><function>is_array</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
