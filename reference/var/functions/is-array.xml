@@ -1,29 +1,82 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/var.xml, last change in rev 1.1 -->
-<!-- last change to 'is-array' in en/ tree in rev 1.2 -->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.9 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
   <refentry xml:id="function.is-array" xmlns="http://docbook.org/ns/docbook">
    <refnamediv>
     <refname>is_array</refname>
-    <refpurpose>Decide dacă o variabilă este un tablou</refpurpose>
+    <refpurpose>DeterminÄ dacÄ o variabilÄ este un array</refpurpose>
    </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
+   <refsect1 role="description">
+    &reftitle.description;
      <methodsynopsis>
       <type>bool</type><methodname>is_array</methodname>
       <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
      </methodsynopsis>
     <para>
-     Returnează &true; dacă <parameter>var</parameter> este de tip <type>array</type>,
-     &false; în caz contrar.
+     DeterminÄ dacÄ variabila datÄ este un array.
     </para>
+   </refsect1>
+   <refsect1 role="parameters">
+    &reftitle.parameters;
     <para>
-     Mai consultaţi 
-     <function>is_float</function>,
-     <function>is_int</function>,
-     <function>is_integer</function>,
-     <function>is_string</function>, şi
-     <function>is_object</function>.
+     <variablelist>
+      <varlistentry>
+       <term><parameter>var</parameter></term>
+       <listitem>
+        <para>
+         Variabila ce este evaluatÄ.
+        </para>
+       </listitem>
+      </varlistentry>
+     </variablelist>
+    </para>
+   </refsect1>
+   <refsect1 role="returnvalues">
+    &reftitle.returnvalues;
+    <para>
+     Ăntoarce &true; dacÄ <parameter>var</parameter> este un <type>array</type>, 
+     &false; ĂŽn caz contrar.
+    </para>
+   </refsect1>
+   <refsect1 role="examples">
+    &reftitle.examples;
+    <para>
+     <example>
+      <title>VerificÄ dacÄ variabla este un array</title>
+      <programlisting role="php">
+<![CDATA[
+<?php
+$yes = array('this', 'is', 'an array');
+
+echo is_array($yes) ? 'Array' : 'not an Array';
+echo "\n";
+
+$no = 'this is a string';
+
+echo is_array($no) ? 'Array' : 'not an Array';
+?>
+]]>
+      </programlisting>
+      &example.outputs;
+      <screen>
+<![CDATA[
+Array
+not an Array
+]]>
+      </screen>
+     </example>
+    </para>
+   </refsect1>
+   <refsect1 role="seealso">
+    &reftitle.seealso;
+    <para>
+     <simplelist>
+      <member><function>is_float</function></member>
+      <member><function>is_int</function></member>
+      <member><function>is_string</function></member>
+      <member><function>is_object</function></member>
+     </simplelist>
     </para>
    </refsect1>
   </refentry>
