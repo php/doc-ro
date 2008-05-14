@@ -1,35 +1,85 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/var.xml, last change in rev 1.1 -->
-<!-- last change to 'is-bool' in en/ tree in rev 1.19 -->
-  <refentry xml:id="function.is-bool" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>is_bool</refname>
-     <refpurpose>
-      Decide dacă o variabilă este de tip boolean
-     </refpurpose>
-    </refnamediv>
-    <refsect1>
-     <title>Descriere</title>
-     <methodsynopsis>
-       <type>bool</type><methodname>is_bool</methodname>
-       <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
-     </methodsynopsis>
-     <para>
-      Returnează &true; dacă <parameter>var</parameter> este de tip
-      <type>boolean</type>, &false; în caz contrar.
-     </para>
-     <para>
-     Mai consultaţi 
-     <function>is_array</function>,
-     <function>is_float</function>,
-     <function>is_int</function>,
-     <function>is_integer</function>,
-     <function>is_string</function>, şi
-     <function>is_object</function>.
-    </para>
-   </refsect1>
-  </refentry>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.9 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.is-bool" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>is_bool</refname>
+  <refpurpose>
+   DeterminÄ dacÄ o variablÄ este un boolean
+  </refpurpose>
+ </refnamediv>
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>bool</type><methodname>is_bool</methodname>
+   <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   DeterminÄ dacÄ variabila datÄ este un boolean.
+  </para>
+ </refsect1>
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>var</parameter></term>
+     <listitem>
+      <para>
+       Variabila ce este evaluatÄ.
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Ăntoarce &true; dacÄ <parameter>var</parameter> este un <type>boolean</type>,
+   &false; ĂŽn caz contrar.
+  </para>
+ </refsect1>
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemple <function>is_bool</function></title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+$a = false;
+$b = 0;
+
+// Deoarece $a este un boolean, aceasta este adevÄrat
+if (is_bool($a)) {
+    echo "Da, aceasta este un boolean";
+}
+
+// Deoarece $b nu este un boolean, aceasta nu este adevÄrat
+if (is_bool($b)) {
+    echo "Da, aceasta este un boolean";
+}
+?>
+]]>
+    </programlisting>
+   </example>
+  </para>
+ </refsect1>
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>is_float</function></member>
+    <member><function>is_int</function></member>
+    <member><function>is_string</function></member>
+    <member><function>is_object</function></member>
+    <member><function>is_array</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
