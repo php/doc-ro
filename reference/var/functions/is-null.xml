@@ -1,37 +1,63 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/var.xml, last change in rev 1.1 -->
-<!-- last change to 'is-null' in en/ tree in rev 1.35 -->
-  <refentry xml:id="function.is-null" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>is_null</refname>
-    <refpurpose>
-     Decide dacă o variabilă este &null;
-    </refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>bool</type><methodname>is_null</methodname>
-      <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
-     </methodsynopsis>
-    <para>
-      Returnează &true; dacă <parameter>var</parameter> este
-      <type>null</type>, &false; în caz contrar.
-    </para>
-    <para>
-     Mai consultaţi <function>is_bool</function>,
-     <function>is_numeric</function>,
-     <function>is_float</function>,
-     <function>is_int</function>,
-     <function>is_string</function>,
-     <function>is_object</function>,
-     <function>is_array</function>,
-     <function>is_integer</function> şi
-     <function>is_real</function>.
-    </para>
-   </refsect1>
-  </refentry>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.8 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.is-null" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>is_null</refname>
+  <refpurpose>
+   DeterminÄ dacÄ o variabilÄ este &null;
+  </refpurpose>
+ </refnamediv>
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>bool</type><methodname>is_null</methodname>
+   <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   DeterminÄ dacÄ tipul variabilei date este &null;.
+  </para>
+ </refsect1>
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>var</parameter></term>
+     <listitem>
+      <para>
+       Variabila ce este evaluatÄ.
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Ăntoarce &true; dacÄ <parameter>var</parameter> este <type>null</type>,
+   &false; ĂŽn caz contrar.
+  </para>
+ </refsect1>
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member>Tipul <link linkend="language.types.null.syntax">&null;</link></member>
+    <member><function>isset</function></member>
+    <member><function>is_bool</function></member>
+    <member><function>is_numeric</function></member>
+    <member><function>is_float</function></member>
+    <member><function>is_int</function></member>
+    <member><function>is_string</function></member>
+    <member><function>is_object</function></member>
+    <member><function>is_array</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
