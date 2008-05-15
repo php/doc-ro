@@ -1,29 +1,64 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/var.xml, last change in rev 1.1 -->
-<!-- last change to 'is-object' in en/ tree in rev 1.2 -->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.6 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
   <refentry xml:id="function.is-object" xmlns="http://docbook.org/ns/docbook">
    <refnamediv>
     <refname>is_object</refname>
-    <refpurpose>Decide dac� o variabil� este de tip object</refpurpose>
+    <refpurpose>Determină dacă o variabilă este un obiect</refpurpose>
    </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
+   <refsect1 role="description">
+    &reftitle.description;
      <methodsynopsis>
       <type>bool</type><methodname>is_object</methodname>
       <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
      </methodsynopsis>
     <para>
-     Returneaz� &true; dac� <parameter>var</parameter> este de tip <type>object</type>,
-     &false; �n caz contrar.
+     Determină dacă variabila dată este un obiect.
     </para>
+   </refsect1>
+   <refsect1 role="parameters">
+    &reftitle.parameters;
     <para>
-     Mai consulta�i <function>is_bool</function>,
-     <function>is_int</function>,
-     <function>is_integer</function>,
-     <function>is_float</function>,
-     <function>is_string</function>, �i
-     <function>is_array</function>.
+     <variablelist>
+      <varlistentry>
+       <term><parameter>var</parameter></term>
+       <listitem>
+        <para>
+         Variabila ce este evaluată.
+        </para>
+       </listitem>
+      </varlistentry>
+     </variablelist>
+    </para>
+   </refsect1>
+   <refsect1 role="returnvalues">
+    &reftitle.returnvalues;
+    <para>
+     Întoarce &true; dacă <parameter>var</parameter> este un <type>object</type>, 
+     &false; în caz contrar.
+    </para>
+   </refsect1>
+   <refsect1 role="notes">
+    &reftitle.notes;
+    <note>
+     <para>
+      Această funcţie va întoarce &false; dacă este utilizată cu un obiect
+      neserializat, unde definiţia clasei nu este prezentă (cu toate că
+      <function>gettype</function> întoarce <type>object</type>).
+     </para>
+    </note>
+   </refsect1>
+   <refsect1 role="seealso">
+    &reftitle.seealso;
+    <para>
+     <simplelist>
+      <member><function>is_bool</function></member>
+      <member><function>is_int</function></member>
+      <member><function>is_float</function></member>
+      <member><function>is_string</function></member>
+      <member><function>is_array</function></member>
+     </simplelist>
     </para>
    </refsect1>
   </refentry>

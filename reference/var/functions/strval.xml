@@ -1,34 +1,66 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/var.xml, last change in rev 1.1 -->
-<!-- last change to 'strval' in en/ tree in rev 1.28 -->
-  <refentry xml:id="function.strval" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>strval</refname>
-    <refpurpose>Returnează valoarea ca şir de caractere a unei variabile</refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>string</type><methodname>strval</methodname>
-      <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
-     </methodsynopsis>
-    <simpara>
-     Returnează valoarea ca şir de caractere a parametrului <parameter>var</parameter>.
-     Consultaţi documentaţia tipului <type>string</type> pentru mai multe informaţii
-     legate de conversia la şiruri de caractere.
-    </simpara>
-    <simpara>
-     <parameter>var</parameter> poate fi orice tip scalar. Nu se poate folosi
-     <function>strval</function> pentru tablouri şi obiecte.
-    </simpara>
-    <simpara>
-     Mai consultaţi <function>floatval</function>,
-     <function>intval</function>, <function>settype</function> şi
-     <link linkend="language.types.type-juggling">Tipuri de date</link>.
-    </simpara>
-   </refsect1>
-  </refentry>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.6 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.strval" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>strval</refname>
+  <refpurpose>ObĹŁine valoarea string a unei variabile</refpurpose>
+ </refnamediv>
+ 
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>string</type><methodname>strval</methodname>
+   <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
+  </methodsynopsis>
+  <simpara>
+   ObĹŁine valoarea string a unei variabile.
+   AccesaĹŁi documentaĹŁia tipului <type>string</type> pentru a obĹŁine mai multe
+   informaĹŁii despre convertirea ĂŽn string.
+  </simpara>
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>var</parameter></term>
+     <listitem>
+      <para>
+       Variabila ce este convertitÄ ĂŽn <type>string</type>.
+      </para>
+      <para>
+       <parameter>var</parameter> poate fi de orice tip scalar. Nu puteĹŁi
+       utiliza <function>strval</function> cu masive sau obiecte.
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Valoarea <type>string</type> a <parameter>var</parameter>.
+  </para>
+ </refsect1>
+
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>floatval</function></member>
+    <member><function>intval</function></member>
+    <member><function>settype</function></member>
+    <member><link linkend="language.types.type-juggling">Manipularea tipurilor</link></member>
+   </simplelist>
+  </para>
+ </refsect1>
+
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
