@@ -1,35 +1,67 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/var.xml, last change in rev 1.1 -->
-<!-- last change to 'is-numeric' in en/ tree in rev 1.14 -->
-  <refentry xml:id="function.is-numeric" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>is_numeric</refname>
-    <refpurpose>
-     Decide dac� o variabil� este numeric� sau un �ir de caractere numeric
-    </refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>bool</type><methodname>is_numeric</methodname>
-      <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
-     </methodsynopsis>
-    <para>
-      Returneaz� &true; dac� <parameter>var</parameter> este numeric�
-      sau un �ir de caractere numeric, &false; �n caz contrar.
-    </para>
-    <para>
-     Mai consulta�i <function>is_bool</function>,
-     <function>is_float</function>,
-     <function>is_int</function>,
-     <function>is_string</function>,
-     <function>is_object</function>,
-     <function>is_array</function>, �i
-     <function>is_integer</function>.
-    </para>
-   </refsect1>
-  </refentry>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.6 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.is-numeric" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>is_numeric</refname>
+  <refpurpose>
+   Determină dacă o variabilă este un număr sau un string numeric
+  </refpurpose>
+ </refnamediv>
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>bool</type><methodname>is_numeric</methodname>
+   <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   Determină dacă variabila dată este numerică. String-urile numerice constau
+   din semnul opţional, orice număr de cifre, partea decimală opţională şi
+   partea exponenţială opţională. Astfel <literal>+0123.45e6</literal> este
+   o valoare numerică validă. Notarea hexadecimală (<literal>0xFF</literal>)
+   este de asemenea permisă, dar numai fără semn, parte decimală şi parte
+   exponenţială.
+  </para>
+ </refsect1>
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>var</parameter></term>
+     <listitem>
+      <para>
+       Variabila ce este evaluată.
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Întoarce &true; dacă <parameter>var</parameter> este un număr sau un string
+   numeric, &false; în caz contrar.
+  </para>
+ </refsect1>
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>ctype_digit</function></member>
+    <member><function>is_bool</function></member>
+    <member><function>is_null</function></member>
+    <member><function>is_float</function></member>
+    <member><function>is_int</function></member>
+    <member><function>is_string</function></member>
+    <member><function>is_object</function></member>
+    <member><function>is_array</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
