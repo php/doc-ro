@@ -1,91 +1,136 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/var.xml, last change in rev 1.1 -->
-<!-- last change to 'settype' in en/ tree in rev 1.2 -->
-  <refentry xml:id="function.settype" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>settype</refname>
-    <refpurpose>Setează tipul unei variable</refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>bool</type><methodname>settype</methodname>
-      <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
-      <methodparam><type>string</type><parameter>type</parameter></methodparam>
-     </methodsynopsis>
-    <para>
-     Setează tipul <parameter>type</parameter> pentru variabila
-     <parameter>var</parameter>.
-    </para>
-    <para>
-     Valorile posibile pentru <parameter>type</parameter> sunt:
-     <itemizedlist>
-      <listitem>
-       <simpara>
-        "boolean" (sau, până la PHP 4.2.0, "bool")
-       </simpara>
-      </listitem>
-      <listitem>
-       <simpara>
-        "integer" (sau, până la PHP 4.2.0, "int")
-       </simpara>
-      </listitem>
-      <listitem>
-       <simpara>
-        "float" (disponibil începând cu PHP 4.2.0, pentru versiunile anterioare
-        se foloseşte varianta învechită "double")
-       </simpara>
-      </listitem>
-      <listitem>
-       <simpara>
-        "string"
-       </simpara>
-      </listitem>
-      <listitem>
-       <simpara>
-        "array"
-       </simpara>
-      </listitem>
-      <listitem>
-       <simpara>
-        "object"
-       </simpara>
-      </listitem>
-      <listitem>
-       <simpara>
-        "null" (începând cu PHP 4.0.8)
-       </simpara>
-      </listitem>
-     </itemizedlist>
-    </para>
-    <para>
-     Returnează &true; în cazul în care operaţia s-a executat cu succes,
-     altfel returnează &false;.
-    </para>
-    <para>
-     <example>
-      <title>Exemplu pentru funcţia <function>settype</function></title>
-      <programlisting role="php">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.10 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.settype" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>settype</refname>
+  <refpurpose>StabileĹte tipul unei variabile</refpurpose>
+ </refnamediv>
+
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>bool</type><methodname>settype</methodname>
+   <methodparam><type>mixed</type><parameter role="reference">var</parameter></methodparam>
+   <methodparam><type>string</type><parameter>type</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   StabileĹte tipul variabilei <parameter>var</parameter> ĂŽn
+   <parameter>type</parameter>.
+  </para>
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>var</parameter></term>
+     <listitem>
+      <para>
+       Variabila ce este convertitÄ.
+      </para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><parameter>type</parameter></term>
+     <listitem>
+      <para>
+       Valorile posibile ale <parameter>type</parameter> sunt:
+       <itemizedlist>
+        <listitem>
+         <simpara>
+          "boolean" (sau, ĂŽncepĂ˘nd cu PHP 4.2.0, "bool")
+         </simpara>
+        </listitem>
+        <listitem>
+         <simpara>
+          "integer" (sau, ĂŽncepĂ˘nd cu PHP 4.2.0, "int")
+         </simpara>
+        </listitem>
+        <listitem>
+         <simpara>
+          "float" (posibil numai ĂŽncepĂ˘nd cu PHP 4.2.0, pentru versiunile
+          anterioare utilizaĹŁi varianta ĂŽnvechitÄ "double")
+         </simpara>
+        </listitem>
+        <listitem>
+         <simpara>
+          "string"
+         </simpara>
+        </listitem>
+        <listitem>
+         <simpara>
+          "array"
+         </simpara>
+        </listitem>
+        <listitem>
+         <simpara>
+          "object"
+         </simpara>
+        </listitem>
+        <listitem>
+         <simpara>
+          "null" (ĂŽncepĂ˘nd cu PHP 4.2.0)
+         </simpara>
+        </listitem>
+       </itemizedlist>
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   &return.success;
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemplu <function>settype</function></title>
+    <programlisting role="php">
 <![CDATA[
 <?php
 $foo = "5bar"; // string
 $bar = true;   // boolean
 
 settype($foo, "integer"); // $foo este acum 5   (integer)
-settype($bar, "string");  // $bar devine "1" (string)
+settype($bar, "string");  // $bar este acum "1" (string)
 ?>
 ]]>
-      </programlisting>
-     </example>
-    </para>
-    <para>
-     Mai consultaţi <function>gettype</function>,
-     <link linkend="language.types.typecasting">Conversia tipurilor</link> şi
-     <link linkend="language.types.type-juggling">Tipuri de date</link>.
-    </para>
-   </refsect1>
-  </refentry>
+    </programlisting>
+   </example>
+  </para>
+ </refsect1>
+
+ <refsect1 role="notes">
+  &reftitle.notes;
+  <note>
+   <para>
+    Valoarea maximÄ pentru "int" este <constant>PHP_INT_MAX</constant>.
+   </para>
+  </note>
+ </refsect1>
+
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>gettype</function></member>
+    <member><link linkend="language.types.typecasting">Transformarea tipurilor</link></member>
+    <member><link linkend="language.types.type-juggling">Manipularea tipurilor</link></member>
+   </simplelist>
+  </para>
+ </refsect1>
+
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
