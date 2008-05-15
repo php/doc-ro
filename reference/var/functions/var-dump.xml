@@ -1,39 +1,74 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/var.xml, last change in rev 1.1 -->
-<!-- last change to 'var-dump' in en/ tree in rev 1.84 -->
-  <refentry xml:id="function.var-dump" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>var_dump</refname>
-    <refpurpose>Afişează informaţii despre o variabilă</refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>void</type><methodname>var_dump</methodname>
-      <methodparam><type>mixed</type><parameter>expression</parameter></methodparam>
-      <methodparam choice="opt"><type>mixed</type><parameter>expression</parameter></methodparam>
-      <methodparam choice="opt"><parameter>...</parameter></methodparam>
-     </methodsynopsis>
-    <simpara>
-     Această funcţie afişează o informaţie structurată despre una sau mai multe
-     variabile. Tablourile sunt explorate recursiv pentru a afişa valorile
-     în această structură.
-    </simpara>
-    &tip.ob-capture;
-    <simpara>
-     Comparaţi <function>var_dump</function> cu
-     <function>print_r</function>.
-    </simpara>
-    <para>
-     <informalexample>
-      <programlisting role="php">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.13 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<!-- splitted from ./en/functions/var.xml, last change in rev 1.84 -->
+<refentry xml:id="function.var-dump" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>var_dump</refname>
+  <refpurpose>AfiĹeazÄ informaĹŁia despre o variabilÄ</refpurpose>
+ </refnamediv>
+
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>void</type><methodname>var_dump</methodname>
+   <methodparam><type>mixed</type><parameter>expression</parameter></methodparam>
+   <methodparam choice="opt"><type>mixed</type><parameter>expression</parameter></methodparam>
+   <methodparam choice="opt"><parameter>...</parameter></methodparam>
+  </methodsynopsis>
+  <simpara>
+   AceastÄ funcĹŁie afiĹeazÄ informaĹŁia structuratÄ despre una sau mai multe
+   expresii, ce include tipul Ĺi valoarea sa. Masivele Ĺi obiectele sunt
+   traversate recursiv Ĺi valorile sunt amplasate vizual astfel ĂŽncĂ˘t sÄ
+   reflecte structura.
+  </simpara>
+  <simpara>
+   Ăn PHP 5 toate proprietÄĹŁile publice, private Ĺi protejate ale obiectelor
+   vor fi afiĹate.
+  </simpara>
+  &tip.ob-capture;
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>expression</parameter></term>
+     <listitem>
+      <para>
+       Variabila, pe care doriĹŁi sÄ o exportaĹŁi.
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+ 
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   &return.void;
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemple <function>var_dump</function></title>
+    <programlisting role="php">
 <![CDATA[
 <?php
-$a = array (1, 2, array ("a", "b", "c"));
-var_dump ($a);
-
-/* afişează:
+$a = array(1, 2, array("a", "b", "c"));
+var_dump($a);
+?>
+]]>
+    </programlisting>
+    &example.outputs;
+    <screen>
+<![CDATA[
 array(3) {
   [0]=>
   int(1)
@@ -49,25 +84,40 @@ array(3) {
     string(1) "c"
   }
 }
-
-*/
+]]>
+    </screen>
+    <programlisting role="php">
+<![CDATA[
+<?php
 
 $b = 3.1;
-$c = TRUE;
-var_dump($b,$c);
+$c = true;
+var_dump($b, $c);
 
-/* afişează:
-float(3.1)
-bool(true)
-
-*/
 ?>
 ]]>
-      </programlisting>
-     </informalexample>
-    </para>
-   </refsect1>
-  </refentry>
+    </programlisting>
+    &example.outputs;
+    <screen>
+<![CDATA[
+float(3.1)
+bool(true)
+]]>
+    </screen>
+   </example>
+  </para>
+ </refsect1>
+
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>var_export</function></member>
+    <member><function>print_r</function></member>
+   </simplelist>
+  </para>  
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
