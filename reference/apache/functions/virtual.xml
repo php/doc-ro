@@ -1,23 +1,124 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/apache.xml, last change in rev 1.1 -->
-<!-- last change to 'virtual' in en/ tree in rev 1.20 -->
-  <refentry xml:id="function.virtual" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>virtual</refname>
-    <refpurpose>Realizeaz� o sub-cerere Apache</refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>int</type><methodname>virtual</methodname>
-      <methodparam><type>string</type><parameter>filename</parameter></methodparam>
-     </methodsynopsis>
-    <para>
-     <function>virtual</function> este o func�ie specific� Apache care este echivalent� cu &lt;!--#include virtual...--&gt; �n mod_include. Realizeaz� o sub-cerere Apache. Este folositoare pentru includerea de scripturi CGI sau fi�iere .shtml, sau pentru orice altceva ce poate fi parsat prin intermediul Apache. Nota�i c� pentru un script CGI, acesta va trebui s� genereze header-e CGI valide. Minimal, aceasta �nseamn� c� va trebui s� genereze un header Content-type. Pentru fi�ierele PHP va trebui s� folosi�i <function>include</function> or <function>require</function>; <function>virtual</function> nu poate fi utilizat� pentru a include un document PHP.
-    </para>
-   </refsect1>
-  </refentry>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.16 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<!-- splitted from ./en/functions/apache.xml, last change in rev 1.20 -->
+<refentry xml:id="function.virtual" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>virtual</refname>
+  <refpurpose>Efectuează o sub-interpelare Apache</refpurpose>
+ </refnamediv>
+
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>bool</type><methodname>virtual</methodname>
+   <methodparam><type>string</type><parameter>filename</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   <function>virtual</function> este o funcţie specifică Apache, care este
+   similară cu <literal>&lt;!--#include virtual...--&gt;</literal> în
+   mod_include. Ea efectuează o sub-interpelare Apache. Ea este folositoare
+   pentru includerea script-urilor CGI, sau a fişierelor .shtml, sau orice
+   altceva ce se interpretează de către Apache. Atrageţi atenţia că în cazul
+   unui script CGI, acesta trebuie să genereze antete CGI valide. Aceasta
+   înseamnă că el trebuie să genereze cel puţin un antet Content-type.
+  </para>
+  <para>
+   Pentru a rula sub-interpelarea toate zonele-tampon sunt închise şi trimise
+   către navigator, antetele rămase sunt de asemenea trimise.
+  </para>
+  &apache.req.module;
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>filename</parameter></term>
+     <listitem>
+      <para>
+       Fişierul asupra căruia se va efectua comanda virtuală.
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Efectuează comanda virtuală în cazul de succes, sau întoarce &false; în caz
+   de eşec.
+  </para>
+ </refsect1>
+
+ <refsect1 role="changelog">
+  &reftitle.changelog;
+  <para>
+   <informaltable>
+    <tgroup cols="2">
+     <thead>
+      <row>
+       <entry>&Version;</entry>
+       <entry>&Description;</entry>
+      </row>
+     </thead>
+     <tbody>
+      <row>
+       <entry>4.0.6</entry>
+       <entry>
+        Această funcţie poate fi utilizată asupra fişierelor PHP. Însă în mod
+        normal e mai bine de a utiliza <function>include</function> sau
+        <function>require</function> pentru fişiere PHP.
+       </entry>
+      </row>
+     </tbody>
+    </tgroup>
+   </informaltable>
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   Accesaţi <function>apache_note</function> pentru un exemplu.
+  </para>
+ </refsect1>
+
+ <refsect1 role="notes">
+  &reftitle.notes;
+  <warning>
+   <para>
+    String-ul cu interpelarea poate fi transmis fişierului inclus, însă
+    <varname>$_GET</varname> este copiat din script-ul părinte şi numai
+    <varname>$_SERVER['QUERY_STRING']</varname> este completată cu string-ul
+    cu interpelarea. String-ul cu interpelarea poate fi transmis când se
+    utilizează Apache 2. Fişierul interpelat nu va fi afişat în jurnalul de
+    acces al Apache.
+   </para>
+  </warning>
+  <note>
+   <para>
+    Variabilele de mediu stabilite în fişierul interpelat nu sunt vizibile
+    script-ului apelant.
+   </para>
+  </note>
+  &note.apache.nsapi-module;
+ </refsect1>
+
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>apache_note</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
+
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
