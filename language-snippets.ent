@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.222 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.226 Maintainer: simionea Status: translated -->
 <!-- Keep 'em sorted -->
 
 <!-- Notes -->
@@ -381,6 +381,21 @@ trebuie să indice la un fişier deschis cu succes cu ajutorul
 <!ENTITY fs.file.pointer '<para>O <type>resursă</type> de tip indicator în 
 sistemul de fişiere care este în mod tipic creată utilizând
 <function>fopen</function>.</para>'>
+
+<!-- GNUPG -->
+<!ENTITY gnupg.identifier '<para>Identificatorul gnupg, obţinut în rezultatul
+apelării <function>gnupg_init</function> sau <classname>gnupg</classname>.
+</para>'>
+
+<!ENTITY gnupg.fingerprint '<para>Cheia amprentei.</para>'>
+
+<!-- ODBC -->
+<!ENTITY odbc.connection.id '<para>Identificatorul conexiunii ODBC, accesaţi
+<function>odbc_connect</function> pentru detalii.</para>'>
+
+<!ENTITY odbc.parameter.search 'Acest parametru acceptă următoarele şabloane
+de căutare: "&#x25;" pentru a se potrivi cu zero sau mai multe caractere şi
+"_" pentru a se potrivi cu un singur caracter.'>
 
 <!-- Oracle -->
 <!ENTITY oci.charset "<para>Utilizând Oracle server de versiune 9.2 sau 
