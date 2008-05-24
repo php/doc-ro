@@ -1,26 +1,74 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/datetime.xml, last change in rev 1.1 -->
-<!-- last change to 'time' in en/ tree in rev 1.2 -->
-  <refentry xml:id="function.time" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>time</refname>
-    <refpurpose>Returneaz� valoarea UNIX timestamp curent�</refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>int</type><methodname>time</methodname>
-      <void/>
-     </methodsynopsis>
-    <para>
-	 Returneaz� timpul curent m�surat �n num�r de secunde �ncep�nd cu Epoca UNIX (1 ianuarie 1970 00:00:00 GMT).
-    </para>
-    <para>
-     Vezi, de asemenea, <function>date</function>.
-    </para>
-   </refsect1>
-  </refentry>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.10 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.time" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>time</refname>
+  <refpurpose>Întoarce timpul curent Unix</refpurpose>
+ </refnamediv>
+
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>int</type><methodname>time</methodname>
+   <void/>
+  </methodsynopsis>
+  <para>
+   Întoarce timpul curent măsurat în numărul de secunde de la Epoca Unix
+   (January 1 1970 00:00:00 GMT).
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemplu <function>time</function></title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+$nextWeek = time() + (7 * 24 * 60 * 60);
+                   // 7 zile; 24 ore; 60 minute; 60 secunde
+echo 'Acum:                '. date('Y-m-d') ."\n";
+echo 'Săptămâna următoare: '. date('Y-m-d', $nextWeek) ."\n";
+// sau utilizând strtotime():
+echo 'Săptămâna următoare: '. date('Y-m-d', strtotime('+1 week')) ."\n";
+?>
+]]>
+    </programlisting>
+    &example.outputs.similar;
+    <screen>
+<![CDATA[
+Acum:                2005-03-30
+Săptămâna următoare: 2005-04-06
+Săptămâna următoare: 2005-04-06
+]]>
+    </screen>
+   </example>
+  </para>
+ </refsect1>
+
+ <refsect1 role="notes">
+  &reftitle.notes;
+  <tip>
+   <para>
+    Momentul de timp al începutului interpelării este disponibil în
+    <varname>$_SERVER['REQUEST_TIME']</varname> începând cu PHP 5.1.
+   </para>
+  </tip>
+ </refsect1>
+
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>date</function></member>
+    <member><function>microtime</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
