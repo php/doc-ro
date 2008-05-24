@@ -1,45 +1,131 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/datetime.xml, last change in rev 1.1 -->
-<!-- last change to 'gettimeofday' in en/ tree in rev 1.2 -->
-  <refentry xml:id="function.gettimeofday" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>gettimeofday</refname>
-    <refpurpose>Cite�te timpul curent</refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>array</type><methodname>gettimeofday</methodname>
-      <void/>
-     </methodsynopsis>
-    <para>
-     Aceasta este o interfa�� pentru gettimeofday(2). Returneaz� un tablou asociativ con�in�nd data returnat� de un apel sistem.
-     <itemizedlist>
-      <listitem>
-       <simpara>
-        "sec" - secunde
-       </simpara>
-      </listitem>
-      <listitem>
-       <simpara>
-        "usec" - microsecunde
-       </simpara>
-      </listitem>
-      <listitem>
-       <simpara>
-        "minuteswest" - minute la vest de Greenwich
-       </simpara>
-      </listitem>
-      <listitem>
-       <simpara>
-        "dsttime" - tipul corec�iei dst
-       </simpara>
-      </listitem>
-     </itemizedlist>
-    </para>
-   </refsect1>
-  </refentry>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.9 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.gettimeofday" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>gettimeofday</refname>
+  <refpurpose>Obţine timpul curent</refpurpose>
+ </refnamediv>
+
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>mixed</type><methodname>gettimeofday</methodname>
+   <methodparam choice="opt"><type>bool</type><parameter>return_float</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   Aceasta este o interfaţă pentru gettimeofday(2). Ea întoarce un masiv
+   asociativ ce conţine datele întoarse în rezultatul apelului funcţiei
+   de sistem.
+  </para>
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>return_float</parameter></term>
+     <listitem>
+      <para>
+       Când este stabilit în &true;, este întors un float în locul unui masiv.
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Implicit este întors un <type>array</type>. Dacă <parameter>return_float</parameter>
+   este stabilit, este întors un <type>float</type>.
+  </para>
+  <para>
+   Cheile masivului:
+   <itemizedlist>
+    <listitem>
+     <simpara>
+      "sec" - secunde începând cu Epoca Unix
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      "usec" - microsecunde
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      "minuteswest" - minute de la Vest de Greenwich
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      "dsttime" - tipul ajustării la timpul de vară
+     </simpara>
+    </listitem>
+   </itemizedlist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="changelog">
+  &reftitle.changelog;
+  <para>
+   <informaltable>
+    <tgroup cols="2">
+     <thead>
+      <row>
+       <entry>&Version;</entry>
+       <entry>&Description;</entry>
+      </row>
+     </thead>
+     <tbody>
+      <row>
+       <entry>5.1.0</entry>
+       <entry>
+        A fost adăugat parametrul <parameter>return_float</parameter>.
+       </entry>
+      </row>
+     </tbody>
+    </tgroup>
+   </informaltable>
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemplu <function>gettimeofday</function></title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+print_r(gettimeofday());
+
+echo gettimeofday(true);
+?>
+]]>
+    </programlisting>
+    &example.outputs.similar;
+    <screen>
+<![CDATA[
+Array
+(
+    [sec] => 1073504408
+    [usec] => 238215
+    [minuteswest] => 0
+    [dsttime] => 1
+)
+
+1073504408.23910
+]]>
+    </screen>
+   </example>
+  </para>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
