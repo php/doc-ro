@@ -1,37 +1,84 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/datetime.xml, last change in rev 1.1 -->
-<!-- last change to 'gmstrftime' in en/ tree in rev 1.2 -->
-  <refentry xml:id="function.gmstrftime" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>gmstrftime</refname>
-    <refpurpose>Formateaz� data/timpul GMT/CUT conform cu set�rile locale</refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>string</type><methodname>gmstrftime</methodname>
-      <methodparam><type>string</type><parameter>format</parameter></methodparam>
-      <methodparam choice="opt"><type>int</type><parameter>timestamp</parameter></methodparam>
-     </methodsynopsis>
-    <para>
-     Se comport� la fel ca <function>strftime</function> except�nd faptul c� timpul returnat este Greenwich Mean Time (GMT). De exemplu, c�nd este rulat �n Timpul Standard Estic (GMT -0500), prima linie de mai jos va afi�a "Dec 31 1998 20:00:00", �n timp ce a doua va afi�a "Jan 01 1999 01:00:00".
-     <example>
-      <title>Exemplu <function>gmstrftime</function></title>
-      <programlisting role="php">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.11 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.gmstrftime" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>gmstrftime</refname>
+  <refpurpose>Formatează o dată/oră GMT/UTC în conformitate cu setările locale</refpurpose>
+ </refnamediv>
+
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>string</type><methodname>gmstrftime</methodname>
+   <methodparam><type>string</type><parameter>format</parameter></methodparam>
+   <methodparam choice="opt"><type>int</type><parameter>timestamp</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   Se comportă în acelaşi mod ca şi <function>strftime</function> cu excepţia
+   că ora întoarsă este Greenwich Mean Time (GMT) - Ora Medie Greenwich. Spre
+   exemplu, când se rulează în Eastern Standard Time (GMT -0500), prima linie
+   de mai jos afişează "Dec 31 1998 20:00:00", în timp ce a doua afişează
+   "Jan 01 1999 01:00:00".
+  </para>
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>format</parameter></term>
+     <listitem>
+      <para>
+       Vezi descrierea în <function>strftime</function>.
+      </para>
+     </listitem>
+    </varlistentry>
+    &date.timestamp.description;
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Întoarce un string formatat în conformitate cu string-ul format, utilizând
+   <parameter>timestamp</parameter>-ul dat sau ora locală curentă, dacă nu este
+   dat un timestamp. Denumirile lunilor şi zilelor săptămânii şi alte string-uri
+   ce depind de limbă respectă setările locale stabilite cu ajutorul
+   <function>setlocale</function>.
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemplu <function>gmstrftime</function></title>
+    <programlisting role="php">
 <![CDATA[
-setlocale ('LC_TIME', 'en_US');
-echo strftime ("%b %d %Y %H:%M:%S", mktime (20,0,0,12,31,98))."\n";
-echo gmstrftime ("%b %d %Y %H:%M:%S", mktime (20,0,0,12,31,98))."\n";
+<?php
+setlocale(LC_TIME, 'en_US');
+echo strftime("%b %d %Y %H:%M:%S", mktime(20, 0, 0, 12, 31, 98)) . "\n";
+echo gmstrftime("%b %d %Y %H:%M:%S", mktime(20, 0, 0, 12, 31, 98)) . "\n";
+?>
 ]]>
-      </programlisting>
-     </example>
-    </para>
-    <para>
-     Vezi, de asemenea, <function>strftime</function>.
-    </para>
-   </refsect1>
-  </refentry>
+    </programlisting>
+   </example>
+  </para>
+ </refsect1>
+
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>strftime</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
