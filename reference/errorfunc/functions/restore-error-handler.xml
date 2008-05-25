@@ -1,31 +1,90 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/errorfunc.xml, last change in rev 1.2 -->
-<!-- last change to 'restore-error-handler' in en/ tree in rev 1.1 -->
-  <refentry xml:id="function.restore-error-handler" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>restore_error_handler</refname>
-    <refpurpose>
-     Restaurează funcţia anterioară de tratare a erorilor
-    </refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>void</type><methodname>restore_error_handler</methodname>
-      <void/>
-     </methodsynopsis>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.15 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.restore-error-handler" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>restore_error_handler</refname>
+  <refpurpose>RestabileĹte funcĹŁia precedentÄ de gestionare a erorilor</refpurpose>
+ </refnamediv>
+
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>bool</type><methodname>restore_error_handler</methodname>
+   <void/>
+  </methodsynopsis>
+  <para>
+   Se utilizeazÄ dupÄ modificarea funcĹŁiei de gestionare a erorilor cu ajutorul
+   <function>set_error_handler</function>, pentru a reveni la gestionarul
+   erorilor precedent (care poate fi cel ĂŽncorporat, sau o funcĹŁie definitÄ de
+   utilizator).
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   AceastÄ funcĹŁie ĂŽntotdeuna ĂŽntoarce &true;.
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemplu <function>restore_error_handler</function></title>
     <para>
-     Se foloseşte după schimbarea funcţiei de tratare a erorilor prin apelarea funcţiei
-     <function>set_error_handler</function>, pentru a reveni la funcţia anterioară de tratare a erorilor (care poate fi nativă sau definită de utilizator).
+     Decide dacÄ <function>unserialize</function> a cauzat o eroare, apoi
+     restabileĹte gestionarul de erori original.
     </para>
-    <para>
-     Mai consultaţi <function>error_reporting</function>,
-     <function>set_error_handler</function>,
-     <function>trigger_error</function>, <function>user_error</function>
-    </para>
-   </refsect1>
-  </refentry>
+    <programlisting role="php">
+<![CDATA[
+<?php
+function unserialize_handler($errno, $errstr)
+{
+    echo "Invalid serialized value.\n";
+}
+
+$serialized = 'foo';
+set_error_handler('unserialize_handler');
+$original = unserialize($serialized);
+restore_error_handler();
+?>
+]]>
+    </programlisting>
+    &example.outputs;
+    <screen>
+<![CDATA[
+Invalid serialized value.
+]]>
+    </screen>
+   </example>
+  </para>
+ </refsect1>
+
+ <refsect1 role="notes">
+  &reftitle.notes;
+  <note>
+   <para>
+    Apelarea <function>restore_error_handler</function> din interiorul funcĹŁiei
+    <literal>error_handler</literal> este ignoratÄ.
+   </para>
+  </note>
+ </refsect1>
+
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>error_reporting</function></member>
+    <member><function>set_error_handler</function></member>
+    <member><function>restore_exception_handler</function></member>
+    <member><function>trigger_error</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
