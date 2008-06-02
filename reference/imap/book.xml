@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.1 $ -->
-<!-- EN-Revision: 1.2 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.2 $ -->
+<!-- EN-Revision: 1.3 Maintainer: simionea Status: translated -->
 <!-- Purpose: remote.mail -->
 <!-- Membership: bundled, external -->
  
 <book xml:id="book.imap" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>IMAP, POP3 şi NNTP</title>
+ <titleabbrev>IMAP</titleabbrev>
  
  <!-- {{{ preface -->
  <preface xml:id="intro.imap">

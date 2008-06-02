@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.1 $ -->
-<!-- EN-Revision: 1.5 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.2 $ -->
+<!-- EN-Revision: 1.6 Maintainer: simionea Status: translated -->
 <!-- Purpose: basic.other -->
 <!-- Membership: pecl, bundled -->
 
 <book xml:id="book.json" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
- <title>&Functions; JSON</title>
+ <title>Notarea Obiect JavaScript</title>
  <titleabbrev>JSON</titleabbrev>
 
  <preface xml:id="intro.json">

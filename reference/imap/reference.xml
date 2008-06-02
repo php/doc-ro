@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- $Revision: 1.9 $ -->
-<!-- EN-Revision: 1.21 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.10 $ -->
+<!-- EN-Revision: 1.22 Maintainer: simionea Status: translated -->
 
  <reference xml:id="ref.imap" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <title>&Functions; IMAP, POP3 si NNTP</title>
-  <titleabbrev>IMAP</titleabbrev>
+  <title>&Functions; IMAP</title>
 
   <partintro>
    &reftitle.seealso;

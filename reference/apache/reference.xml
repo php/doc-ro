@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.7 $ -->
-<!-- EN-Revision: 1.14 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.8 $ -->
+<!-- EN-Revision: 1.15 Maintainer: simionea Status: translated -->
 <!-- CREDITS: adiju -->
 
  <reference xml:id="ref.apache" xmlns="http://docbook.org/ns/docbook">
-  <title>&Functions; specifice pentru Apache</title>
+  <title>&Functions; Apache</title>
 
  &reference.apache.entities.functions;
 

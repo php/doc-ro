@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.1 $ -->
-<!-- EN-Revision: 1.2 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.2 $ -->
+<!-- EN-Revision: 1.3 Maintainer: simionea Status: translated -->
 <!-- Purpose: basic.vartype -->
 <!-- Membership: core -->
 
 <book xml:id="book.var" xmlns="http://docbook.org/ns/docbook">
- <title>&Functions; de manipulare a variabilelor</title>
- <titleabbrev>Manipulare a variabilelor</titleabbrev>
+ <title>Manipularea variabilelor</title>
 
  <preface xml:id="intro.var">
   &reftitle.intro;
