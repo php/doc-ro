@@ -1,53 +1,109 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.5 $ -->
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./en/functions/array.xml, last change in rev 1.113 -->
-  <refentry xml:id="function.array-change-key-case" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>array_change_key_case</refname>
-    <refpurpose>Returnează un tablou cu toţi indecşii literali reprezentaţi ca minuscule sau majuscule</refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>array</type><methodname>array_change_key_case</methodname>
-      <methodparam><type>array</type><parameter>input</parameter></methodparam>
-      <methodparam choice="opt"><type>int</type><parameter>case</parameter></methodparam>
-     </methodsynopsis>
-    <para>
-     <function>array_change_key_case</function> schimbă indecşii
-	 literali ai tabloului <parameter>input</parameter> pentru a fi
-	 toţi minuscule sau majuscule. Schimbarea depinde
-	 de cel de-al doilea parametru, opţional, <parameter>case</parameter>.
-	 Acesta poate primi două constante:
-	 <constant>CASE_UPPER</constant> şi
-	 <constant>CASE_LOWER</constant>. Implicită este
-	 <constant>CASE_LOWER</constant>. Funcţia nu va
-	 influenţa indicii numerici.
-    </para>
-    <example>
-     <title>Exemplu de utilizare <function>array_change_key_case</function></title>
-     <programlisting role="php">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.6 $ -->
+<!-- EN-Revision: 1.14 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.array-change-key-case" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>array_change_key_case</refname>
+  <refpurpose>ModificÄ toate cheile dintr-un masiv</refpurpose>
+ </refnamediv>
+ 
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>array</type><methodname>array_change_key_case</methodname>
+   <methodparam><type>array</type><parameter>input</parameter></methodparam>
+   <methodparam choice="opt"><type>int</type><parameter>case</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   Ăntoarce un masiv cu toate cheile din <parameter>input</parameter>
+   transferate ĂŽn caractere minuscule sau majuscule. Indicii-numere rÄmĂ˘n precum
+   sunt.
+  </para>
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+
+    <varlistentry>
+     <term><parameter>input</parameter></term>
+     <listitem>
+      <para>
+       Masivul asupra cÄruia se lucreazÄ
+      </para>
+     </listitem>
+    </varlistentry>
+
+    <varlistentry>
+     <term><parameter>case</parameter></term>
+     <listitem>
+      <para>
+       Poate lua valoarea <constant>CASE_UPPER</constant> sau
+       <constant>CASE_LOWER</constant> (implicit)
+      </para>
+     </listitem>
+    </varlistentry>
+
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Ăntoarce un masiv cu cheile transferate ĂŽn caractere minuscule sau majuscule,
+   sau false dacÄ <parameter>input</parameter> nu este un masiv.
+  </para>
+ </refsect1>
+
+ <refsect1 role="errors">
+  &reftitle.errors;
+  <para>
+   AruncÄ <constant>E_WARNING</constant> dacÄ <parameter>input</parameter> nu
+   este un masiv.
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example xml:id="function.array-change-key-case.example-1">
+    <title>Exemplu <function>array_change_key_case</function></title>
+    <programlisting role="php">
 <![CDATA[
+<?php
 $input_array = array("FirSt" => 1, "SecOnd" => 4);
 print_r(array_change_key_case($input_array, CASE_UPPER));
+?>
 ]]>
-     </programlisting>
-     <para>
-      Rezultatul va fi:
-      <screen>
+    </programlisting>
+    &example.outputs;
+    <screen>
 <![CDATA[
 Array
 (
     [FIRST] => 1
-    [SECOND] => 2
+    [SECOND] => 4
 )
 ]]>
-      </screen>
-     </para>
-    </example>
-   </refsect1>
-  </refentry>
+    </screen>
+   </example>
+  </para>
+ </refsect1>
+
+ <refsect1 role="notes">
+  &reftitle.notes;
+  <note>
+   <para>
+    DacÄ un masiv are indici care vor deveni la fel odatÄ ce se va rula aceastÄ
+    funcĹŁie (de ex. "keY" Ĺi "kEY"), valoarea cea mai de pe urmÄ din masiv se va
+    suprapune peste ceilalĹŁi indici.
+   </para>
+  </note>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
