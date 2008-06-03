@@ -1,51 +1,74 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- $Revision: 1.3 $ -->
-<!-- EN-Revision: 1.0 Maintainer: zamolxe Status: outdated -->
-<!-- splitted from ./en/functions/mysql.xml, last change in rev 1.100 -->
-  <refentry xml:id="function.mysql-client-encoding" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>mysql_client_encoding</refname>
-    <refpurpose>Intoarce numele setului de caractere curent</refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-    <methodsynopsis>
-     <type>string</type><methodname>mysql_client_encoding</methodname>
-     <methodparam choice="opt"><type>resource</type>
-	  <parameter>link_identifier</parameter></methodparam>
-    </methodsynopsis>
-    <para>
-     <function>mysql_client_encoding</function> intoarce numele setului
-	 de caractere implicit pentru conexiunea curenta.
-    </para>
-    <para>
-     <example>
-      <title>Exemplu <function>mysql_client_encoding</function></title>
-      <programlisting role="php">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.10 Maintainer: simionea Status: translated -->
+<!-- CREDITS: yamolxe -->
+<refentry xml:id="function.mysql-client-encoding" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>mysql_client_encoding</refname>
+  <refpurpose>Întoarce denumirea setului de caractere</refpurpose>
+ </refnamediv>
+
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>string</type><methodname>mysql_client_encoding</methodname>
+   <methodparam choice="opt"><type>resource</type><parameter>link_identifier</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   Întoarce valoarea variabilei <literal>character_set</literal> din MySQL.
+  </para>
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    &mysql.linkid.description;
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Întoarce denumirea setului de caractere implicit pentru conexiunea curentă.
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemplu <function>mysql_client_encoding</function></title>
+    <programlisting role="php">
 <![CDATA[
 <?php
-$link = mysql_connect('localhost', 'mysql_user', 'mysql_password');
+$link    = mysql_connect('localhost', 'mysql_user', 'mysql_password');
 $charset = mysql_client_encoding($link);
-printf("Setul de caractere este: %s\n", $charset);
+
+echo "Setul de caractere curent este: $charset\n";
 ?>
 ]]>
-      </programlisting>
-      <para>
-       Exemplul de mai sus va afisa urmatoarele:
-      </para>
-      <screen>
+    </programlisting>
+    &example.outputs.similar;
+    <screen>
 <![CDATA[
-Setul de caractere este: latin1
+Setul de caractere curent este: latin1
 ]]>
-      </screen>
-     </example>
-    </para>
-    <para>
-     Vedeti de asemenea
-     <function>mysql_real_escape_string</function>
-    </para>
-   </refsect1>
-  </refentry>
+    </screen>
+   </example>
+  </para>
+ </refsect1>
+ 
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>mysql_real_escape_string</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
