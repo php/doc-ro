@@ -23,7 +23,7 @@ spre un alt flux de ieşire. În caz contrar, PHP se va suspenda până când
 execuţia programului se va încheia.</para></note>'>
 
 <!ENTITY note.func-callback '<note><simpara>În locul denumirii funcţiei poate
-fi indicat un masiv conţinând o referinţă la obiect şi o denumire a metodei.
+fi indicat un tablou conţinând o referinţă la obiect şi o denumire a metodei.
 </simpara></note>'>
 
 <!ENTITY note.funcnoparam '<note><para>Deoarece această funcţie îşi determină
@@ -78,7 +78,7 @@ funcţii sau metode.
 </para></note>">
 
 <!ENTITY note.superglobals '<note><title>Superglobalele: notă despre 
-disponibilitate</title><para>Masivele superglobale, cum
+disponibilitate</title><para>Tablourile superglobale, cum
 ar fi <varname>$_GET</varname>, <varname>$_POST</varname> şi
 <varname>$_SERVER</varname>, etc. sunt disponibile începând cu PHP 4.1.0. 
 Pentru mai multe informaţii, citiţi secţiunea manualului despre 
@@ -205,7 +205,7 @@ după utilizare.</simpara></note>'>
 
 <!ENTITY avail.register-long-arrays 'Începând cu PHP 5.0.0
 <link linkend="language.variables.predefined">variabilele predefinite</link>
-cu masivele lungi pot fi dezactivate cu ajutorul directivei
+cu tablourile lungi pot fi dezactivate cu ajutorul directivei
 <link linkend="ini.register-long-arrays">register_long_arrays</link>.'>
 
 <!ENTITY ini.shorthandbytes '<simpara>În cazul utilizării unui <type>integer
@@ -682,7 +682,7 @@ MySQL). Forma preferată este cae dintâi, unde parametrul <parameter>dbhandle
 </parameter> este primul parametru pentru funcţie.</simpara></note>'>
 
 <!ENTITY sqlite.result-type '<para>Parametrul opţional <parameter>result_type
-</parameter> acceptă o constantă şi determină cum masivul întors va fi 
+</parameter> acceptă o constantă şi determină cum tablouul întors va fi 
 indexat. Utilizând <constant>SQLITE_ASSOC</constant> vor fi întorşi numai 
 indici asociativi (câmpuri denumite) în timp ce cu <constant>SQLITE_NUM
 </constant> vor fi întorşi numai indici numerici (numerele de ordine ale 
@@ -811,7 +811,7 @@ eliminată.</simpara></note>'>
 adăugaţi în Tidy 2.0.</simpara></note>'>
 
 <!ENTITY tidy.conf-enc '<para>Parametrul <parameter>config</parameter> poate
-fi transmis sau sub forma unui masiv, sau sub forma unui string. Dacă este 
+fi transmis sau sub forma unui tablou, sau sub forma unui string. Dacă este 
 transmis ca string, el este interpretat ca denumirea fişierului de 
 configurare, în caz contrar el este interpretat ca însăşi opţiunile. Accesaţi
 <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.tidy.conf;">
