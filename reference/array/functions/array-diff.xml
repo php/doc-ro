@@ -1,62 +1,137 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.5 $ -->
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./en/functions/array.xml, last change in rev 1.14 -->
-  <refentry xml:id="function.array-diff" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>array_diff</refname>
-    <refpurpose>Calculează diferenţa tablourilor</refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>array</type><methodname>array_diff</methodname>
-      <methodparam><type>array</type><parameter>array1</parameter></methodparam>
-      <methodparam><type>array</type><parameter>array2</parameter></methodparam>
-      <methodparam choice="opt"><type>array</type><parameter> ...</parameter></methodparam>
-     </methodsynopsis>
-    <para>
-     <function>array_diff</function> returnează un tablou
-	 ce conţine toate valorile din <parameter>array1</parameter>
-	 care nu sunt prezente în celelalte argumente.
-	 Indecşii sunt păstraţi.
-    </para>
-    <para>
-     <example>
-      <title>Exemplu de utilizare <function>array_diff</function></title>
-      <programlisting role="php">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.6 $ -->
+<!-- EN-Revision: 1.16 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.array-diff" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>array_diff</refname>
+  <refpurpose>CalculeazÄ diferenĹŁa dintre tablouri</refpurpose>
+ </refnamediv>
+
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>array</type><methodname>array_diff</methodname>
+   <methodparam><type>array</type><parameter>array1</parameter></methodparam>
+   <methodparam><type>array</type><parameter>array2</parameter></methodparam>
+   <methodparam choice="opt"><type>array</type><parameter> ...</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   ComparÄ <parameter>array1</parameter> cu <parameter>array2</parameter> Ĺi
+   ĂŽntoarce diferenĹŁa.
+  </para>
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>array1</parameter></term>
+     <listitem>
+      <para>
+       Tabloul de referinĹŁÄ
+      </para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><parameter>array2</parameter></term>
+     <listitem>
+      <para>
+       Tabloul care se comparÄ
+      </para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><parameter>...</parameter></term>
+     <listitem>
+      <para>
+       Mai multe tablouri pentru a se compara
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Ăntoarce un <type>array</type> ce conĹŁine toate ĂŽnregistrÄrile din
+   <parameter>array1</parameter> care nu sunt prezente nici ĂŽn unul din
+   celelalte tablouri.
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemplu <function>array_diff</function></title>
+    <programlisting role="php">
 <![CDATA[
-$array1 = array ("a" => "green", "red", "blue", "red");
-$array2 = array ("b" => "green", "yellow", "red");
-$result = array_diff ($array1, $array2);
+<?php
+$array1 = array("a" => "green", "red", "blue", "red");
+$array2 = array("b" => "green", "yellow", "red");
+$result = array_diff($array1, $array2);
+
+print_r($result);
+?>
 ]]>
-      </programlisting>
-     </example>
-    </para>
+    </programlisting>
     <para>
-     Variabila <varname>$result</varname> va conţine
-	 <literal>array ("blue");</literal>. Mai multe apariţii ale aceleaşi valori în
-	 $array1 sunt tratate în acelaşi fel.
+     ApariĹŁiile multiple ĂŽn $array1 sunt toate tratate ĂŽn acelaĹi mod.
+     Aceasta va afiĹa :
     </para>
-    <note>
-     <simpara>
-      Două elemente sunt considerate egale dacă şi numai dacă
-	  <literal>(string) $elem1 === (string) $elem2</literal>. Cu alte cuvinte:
-	  atunci când reprezentările ca şiruri a celor două valori sunt identice.
-      <!-- TODO: example of it... -->
-     </simpara>
-    </note>
-    <warning>
-     <simpara>
-      Această funcţie nu a funcţionat în PHP 4.0.4!
-      <!-- TODO: when exactly was this broken?... -->
-     </simpara>
-    </warning>
-    <para>
-     Vezi de asemenea şi <function>array_intersect</function>.
-    </para>
-   </refsect1>
-  </refentry>
+    <screen>
+<![CDATA[
+Array
+(
+    [1] => blue
+)
+]]>
+    </screen>
+   </example>
+  </para>
+ </refsect1>
+
+ <refsect1 role="notes">
+  &reftitle.notes;
+  <note>
+   <para>
+    DouÄ elemente sunt considerate egale dacÄ Ĺi numai dacÄ <literal>(string)
+    $elem1 === (string) $elem2</literal>. Ăn cuvinte: dacÄ reprezentarea lor
+    ca Ĺiruri de caractere este aceeaĹi.
+    <!-- TODO: example of it... -->
+   </para>
+  </note>
+  <note>
+   <para>
+    AceastÄ funcĹŁie verificÄ numai o dimensiune a unui tablou n-dimensional.
+    Desigur cÄ puteĹŁi sÄ verificaĹŁi dimensiunile mai adĂ˘nci utilizĂ˘nd
+    <literal>array_diff($array1[0], $array2[0]);</literal>.
+   </para>
+  </note>
+  <warning>
+   <simpara>
+    Aceasta era greĹit ĂŽn PHP 4.0.4!
+    <!-- TODO: when exactly was this broken?... -->
+   </simpara>
+  </warning>
+ </refsect1>
+
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>array_diff_assoc</function></member>
+    <member><function>array_intersect</function></member>
+    <member><function>array_intersect_assoc</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
+
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:

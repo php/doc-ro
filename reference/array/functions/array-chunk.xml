@@ -1,47 +1,97 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- $Revision: 1.6 $ -->
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./en/functions/array.xml, last change in rev 1.2 -->
-  <refentry xml:id="function.array-chunk" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>array_chunk</refname>
-    <refpurpose>Împarte un tablou în mai multe tablouri</refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>array</type><methodname>array_chunk</methodname>
-      <methodparam><type>array</type><parameter>input</parameter></methodparam>
-      <methodparam><type>int</type><parameter>size</parameter></methodparam>
-      <methodparam choice="opt"><type>bool</type><parameter>preserve_keys</parameter></methodparam>
-     </methodsynopsis>
-    <para>
-     <function>array_chunk</function> împarte un tablou în
-	 mai multe tablouri, fiecare având cel mult <parameter>size</parameter> valori.
-	 Unul dintre tablourile returnate poate avea mai puţine valori
-	 la sfîrşit. Tablourile rezultate vor face parte dintr-un
-	 tablou multidimensional cu index numeric care începe
-	 de la zero.
-    </para>
-    <para>
-     Prin setarea parametrului opţional <parameter>preserve_keys</parameter>
-	 ca &true;, PHP poate fi forţat să păstreze indecşii originali
-	 din tabloul iniţial. Dacă se specifică &false; în fiecare tablou
-	 rezultat vor fi utilizaţi indecşi numerici noi
-	 pornind de la zero. Valoarea implicită este &false;.
-    </para>
-    <example>
-     <title>Exempul de utilizare <function>array_chunk</function></title>
-     <programlisting role="php">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.7 $ -->
+<!-- EN-Revision: 1.13 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.array-chunk" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>array_chunk</refname>
+  <refpurpose>Desparte un tablou ĂŽn porĹŁiuni</refpurpose>
+ </refnamediv>
+ 
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>array</type><methodname>array_chunk</methodname>
+   <methodparam><type>array</type><parameter>input</parameter></methodparam>
+   <methodparam><type>int</type><parameter>size</parameter></methodparam>
+   <methodparam choice="opt"><type>bool</type><parameter>preserve_keys</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   Desparte un tablou ĂŽn porĹŁiuni de dimensiunea <parameter>size</parameter>.
+   Ultima porĹŁiune poate sÄ conĹŁinÄ mai puĹŁine elemente decĂ˘t
+   <parameter>size</parameter>.
+  </para>
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+
+    <varlistentry>
+     <term><parameter>input</parameter></term>
+     <listitem>
+      <para>
+       Tabloul cu care se lucreazÄ
+      </para>
+     </listitem>
+    </varlistentry>
+
+    <varlistentry>
+     <term><parameter>size</parameter></term>
+     <listitem>
+      <para>
+       Dimensiunea fiecÄrei porĹŁiuni
+      </para>
+     </listitem>
+    </varlistentry>
+
+    <varlistentry>
+     <term><parameter>preserve_keys</parameter></term>
+     <listitem>
+      <para>
+       CĂ˘nd este stabilit ĂŽn &true; cheile vor fi pÄstrate.
+       Implicit sete &false;, ceea ce va reindexa numeric porĹŁiunea
+      </para>
+     </listitem>
+    </varlistentry>
+
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Ăntoarce un tablou multidimensional indexat numeric, ĂŽncepĂ˘nd cu zero,
+   fiecare dimensiune conĹŁinĂ˘nd <parameter>size</parameter> elemente.
+  </para>
+ </refsect1>
+
+ <refsect1 role="errors">
+  &reftitle.errors;
+  <para>
+   DacÄ <parameter>size</parameter> este mai mic decĂ˘t 1 va fi emisÄ o eroare
+   <constant>E_WARNING</constant> Ĺi se va ĂŽntoarce &null;.
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemplu <function>array_chunk</function></title>
+    <programlisting role="php">
 <![CDATA[
+<?php
 $input_array = array('a', 'b', 'c', 'd', 'e');
 print_r(array_chunk($input_array, 2));
-print_r(array_chunk($input_array, 2, TRUE));
+print_r(array_chunk($input_array, 2, true));
+?>
 ]]>
-     </programlisting>
-     <para>
-      Rezultatul va fi:
-      <screen>
+    </programlisting>
+    &example.outputs;
+    <screen>
 <![CDATA[
 Array
 (
@@ -84,11 +134,11 @@ Array
 
 )
 ]]>
-      </screen>
-     </para>
-    </example>
-   </refsect1>
-  </refentry>
+    </screen>
+   </example>
+  </para>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
