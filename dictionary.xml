@@ -327,9 +327,15 @@
   </term>
   <term>
     <english>array</english>
-    <romanian>masiv</romanian>
+    <romanian>tablou</romanian>
     <english_example>Defines an array of 5 elements.</english_example>
-    <romanian_example>Defineşte un masiv de 5 elemente.</romanian_example>
+    <romanian_example>Defineşte un tablou de 5 elemente.</romanian_example>
+  </term>
+  <term>
+    <english>string</english>
+    <romanian>string || şir</romanian>
+    <english_example>The parameter represents a string of characters.</english_example>
+    <romanian_example>Parametrul reprezintă un şir de caractere.</romanian_example>
   </term>
   <term>
     <english>statement</english>
@@ -377,7 +383,7 @@
     <english>overview</english>
     <romanian>prezentare generală</romanian>
     <english_example>Arrays overview</english_example>
-    <romanian_example>Prezentarea generală a masivelor</romanian_example>
+    <romanian_example>Prezentarea generală a tablourilor</romanian_example>
   </term>
   <term>
     <english>timezone</english>
