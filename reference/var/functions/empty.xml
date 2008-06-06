@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.5 $ -->
+<!-- $Revision: 1.6 $ -->
 <!-- EN-Revision: 1.13 Maintainer: simionea Status: translated -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.empty" xmlns="http://docbook.org/ns/docbook">
@@ -59,7 +59,7 @@
     <member><literal>"0" (0 în calitate de string)</literal></member>
     <member>&null;</member>
     <member>&false;</member>
-    <member><literal>array() (un masiv vid)</literal></member>
+    <member><literal>array() (un tablou vid)</literal></member>
     <member><literal>var $var; (o variabilă declarată, dar fără o valoare
     într-o clasă)</literal></member>
    </simplelist>

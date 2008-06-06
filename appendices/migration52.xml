@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.1 $ -->
+<!-- $Revision: 1.2 $ -->
 <!-- EN-Revision: 1.34 Maintainer: simionea Status: translated -->
 <appendix xml:id="migration52" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Migrarea de la PHP 5.1.x la PHP 5.2.x</title>
@@ -141,7 +141,7 @@ print $foo;
     </informalexample>
     <simpara>
      Chiar şi cu <function>__toString</function> obiectele nu pot fi utilizate
-     ca indici ai masivului sau chei. S-ar putea să adăugăm ulterior susţinerea
+     ca indici ai tabloului sau chei. S-ar putea să adăugăm ulterior susţinerea
      încorporată a hash-urilor pentru aceasta, însă în PHP 5.2.x va trebui sau
      să creaţi propria funcţie hash, sau să utilizaţi noua funcţie SPL
      <function>spl_object_hash</function>.
@@ -799,14 +799,14 @@ $obj->getCommentName('');
    <listitem>
     <simpara>
      <function>array_fill_keys</function>
-     - Creează un masiv utilizând elementele primului parametru în calitate de
+     - Creează un tablou utilizând elementele primului parametru în calitate de
      chei, fiecare iniţializată cu <literal>val</literal>
     </simpara>
    </listitem>
    <listitem>
     <simpara>
      <function>error_get_last</function>
-     - Întoarce ultima eroare survenită ca masiv asociativ. Întoarce &null;
+     - Întoarce ultima eroare survenită ca tablou asociativ. Întoarce &null;
      dacă încă nu a survenit nici o eroare
     </simpara>
    </listitem>
@@ -834,14 +834,14 @@ $obj->getCommentName('');
    <listitem>
     <simpara>
      <function>timezone_abbreviations_list</function>
-     - Întoarce un masiv asociativ conţinând DST, deplasamentul şi denumirea
+     - Întoarce un tablou asociativ conţinând DST, deplasamentul şi denumirea
      fusului orar
     </simpara>
    </listitem>
    <listitem>
     <simpara>
      <function>timezone_identifiers_list</function>
-     - Întoarce un masiv numeric indexat cu toate identificatoarele fusurilor
+     - Întoarce un tablou numeric indexat cu toate identificatoarele fusurilor
      orare
     </simpara>
    </listitem>
@@ -977,7 +977,7 @@ $obj->getCommentName('');
    <listitem>
     <simpara>
      <function>openssl_pkey_get_details</function>
-     - Întoarce un masiv cu detaliile cheii (biţii, pkey, tipul)
+     - Întoarce un tablou cu detaliile cheii (biţii, pkey, tipul)
     </simpara>
    </listitem>
   </itemizedlist>
@@ -1849,7 +1849,7 @@ $obj->getCommentName('');
      <constant>PDO::FETCH_KEY_PAIR</constant>
     </simpara>
     <simpara>
-     Translează un set de rezultate în 2 coloane într-un masiv asociativ.
+     Translează un set de rezultate în 2 coloane într-un tablou asociativ.
      (Adăugată în PHP 5.2.3)
     </simpara>
    </listitem>

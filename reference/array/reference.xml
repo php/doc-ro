@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.6 $ -->
+<!-- $Revision: 1.7 $ -->
 <!-- EN-Revision: 1.17 Maintainer: simionea Status: translated -->
 <!-- CREDITS: adiju -->
 
 <reference xml:id="ref.array" xmlns="http://docbook.org/ns/docbook">
- <title>&Functions; ale masivelor (Array)</title>
+ <title>&Functions; ale tablourilor (Array)</title>
  <partintro xml:id="array.seealso">
    &reftitle.seealso;
    <para>
-    Accesaţi de asemenea <function>is_array</function>, <function>explode</function>,
-    <function>implode</function>, <function>split</function>,
-    <function>preg_split</function>, and <function>unset</function>.
+    Accesaţi de asemenea <function>is_array</function>,
+    <function>explode</function>, <function>implode</function>,
+    <function>split</function>, <function>preg_split</function> şi
+    <function>unset</function>.
    </para>
  </partintro>
 

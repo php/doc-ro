@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.4 $ -->
+<!-- $Revision: 1.5 $ -->
 <!-- EN-Revision: 1.9 Maintainer: simionea Status: translated -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.gettimeofday" xmlns="http://docbook.org/ns/docbook">
@@ -15,7 +15,7 @@
    <methodparam choice="opt"><type>bool</type><parameter>return_float</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Aceasta este o interfaţă pentru gettimeofday(2). Ea întoarce un masiv
+   Aceasta este o interfaţă pentru gettimeofday(2). Ea întoarce un tablou
    asociativ ce conţine datele întoarse în rezultatul apelului funcţiei
    de sistem.
   </para>
@@ -29,7 +29,7 @@
      <term><parameter>return_float</parameter></term>
      <listitem>
       <para>
-       Când este stabilit în &true;, este întors un float în locul unui masiv.
+       Când este stabilit în &true;, este întors un float în locul unui tablou.
       </para>
      </listitem>
     </varlistentry>
@@ -44,7 +44,7 @@
    este stabilit, este întors un <type>float</type>.
   </para>
   <para>
-   Cheile masivului:
+   Cheile tabloului:
    <itemizedlist>
     <listitem>
      <simpara>

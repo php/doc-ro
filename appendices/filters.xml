@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.3 $ -->
+<!-- $Revision: 1.4 $ -->
 <!-- EN-Revision: 1.16 Maintainer: simionea Status: translated -->
 <appendix xml:id="filters" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Lista filtrelor disponibile</title>
@@ -113,7 +113,7 @@ fwrite($fp, "This is a test.\n");
    El acceptă parametrii în unul din aceste două moduri:
    un string conţinând o listă de tag-uri, similar celui de-al doilea
    parametru al funcţiei <function>strip_tags</function>,
-   sau ca un masiv cu denumirile tag-urilor.
+   sau ca un tablou cu denumirile tag-urilor.
   </simpara>
   <example>
    <title>string.strip_tags</title>
@@ -154,7 +154,7 @@ fclose($fp);
    Utilizarea acestor filtre este echivalentă cu procesarea tuturor datelor din
    flux prin funcţiile <function>base64_encode</function> şi
    <function>base64_decode</function> respectiv.
-   <literal>convert.base64-encode</literal> susţine parametri sub forma unui masiv
+   <literal>convert.base64-encode</literal> susţine parametri sub forma unui tablou
    asociativ. Dacă parametrul <parameter>line-length</parameter> este specificat,
    ieşirile sub forma base64 for fi separate în porţiuni de câte <parameter>line-length</parameter>
    caractere fiecare. Dacă parametrul <parameter>line-break-chars</parameter> este specificat, fiecare
@@ -201,7 +201,7 @@ fclose($fp);
    Utilizarea versiunii decode a acestui filtru este echivalentă cu procesarea tuturor
    datelor din flux prin funcţia <function>quoted_printable_decode</function>.
    Nu există o funcţie echivalentă pentru <literal>convert.quoted-printable-encode</literal>.
-   <literal>convert.quoted-printable-encode</literal> susţine parametrii sub forma unui masiv
+   <literal>convert.quoted-printable-encode</literal> susţine parametrii sub forma unui tablou
    asociativ. Adăugător la parametrii susţinuţi de <literal>convert.base64-encode</literal>,
    <literal>convert.quoted-printable-encode</literal> de asemenea susţine argumente boolean
    <parameter>binary</parameter> şi <parameter>force-encode-first</parameter>.
@@ -253,7 +253,7 @@ fwrite($fp, "This is a test.\n");
    <literal>zlib.inflate</literal> (decompresie) sunt implementări ale metodelor de
    compresie descrise în <link xlink:href="&url.rfc;1951">RFC 1951</link>.
    Filtrul <literal>deflate</literal> preia până la trei parametri transmişi sub
-   forma unui masiv asociativ.
+   forma unui tablou asociativ.
 
    <parameter>level</parameter> descrie nivelul de compresie utilizat (1-9).
    Numere mai mari vor produce în general încărcături utile mai mici fără a necesita
@@ -276,7 +276,7 @@ fwrite($fp, "This is a test.\n");
   <note>
    <simpara>
     Deoarece nivelul compresiei este cel mai des utilizat parametru, el poate fi transmis, îm mod
-    alternativ, sub forma unei simple valori întregi (şi nu sub forma unui masiv dintr-un element).
+    alternativ, sub forma unei simple valori întregi (şi nu sub forma unui tablou dintr-un element).
    </simpara>
   </note>
 
@@ -362,7 +362,7 @@ The compressed file is 56 bytes long.
    funcţionează în acelaşi mod ca şi filtrele zlib descrise anterior.
 
    Filtrul <literal>bzip2.compress</literal> acceptă până la doi parametri transmişi sub
-   formă de elemente ale unui masiv asociativ:
+   formă de elemente ale unui tablou asociativ:
 
    <parameter>blocks</parameter> este o valoare de tip întreg de la 1 până la 9, specificând
    numărul de blocuri de memorie de 100 kbaiţi pentru a fi alocaţi în spaţiul de lucru.
@@ -376,7 +376,7 @@ The compressed file is 56 bytes long.
 
    Filtrul <literal>bzip2.decompress</literal> acceptă doar un parametru, care poate fi
    transmis sub forma unei valori boolean obişnuite sau sub forma elementului
-   <parameter>small</parameter> al unui masiv asociativ.
+   <parameter>small</parameter> al unui tablou asociativ.
 
    <parameter>small</parameter>, când este stabilit la valoarea &true;, instruieşte biblioteca
    bzip să efectueze decomprimarea cu utilizarea unui volum minimal al memoriei la costul

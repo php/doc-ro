@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.5 $ -->
+<!-- $Revision: 1.6 $ -->
 <!-- EN-Revision: 1.6 Maintainer: simionea Status: translated -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.floatval" xmlns="http://docbook.org/ns/docbook">
@@ -26,7 +26,7 @@
      <listitem>
       <para>
        Poate fi orice tip scalar. Nu puteţi utiliza <function>floatval</function> 
-       cu masive sau obiecte.
+       cu tablouri sau obiecte.
       </para>
      </listitem>
     </varlistentry>

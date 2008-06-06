@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.5 $ -->
+<!-- $Revision: 1.6 $ -->
 <!-- EN-Revision: 1.10 Maintainer: zamolxe Status: translated -->
 <!-- CREDITS: simionea -->
 <appendix xml:id="mysql.constants" xmlns="http://docbook.org/ns/docbook">
@@ -48,7 +48,7 @@
 
  <para>
   Funcţia <function>mysql_fetch_array</function> utilizează o constantă pentru 
-  diferite tipuri ale masivelor rezultante. Următoarele constante sunt
+  diferite tipuri ale tablourilor rezultante. Următoarele constante sunt
   definite:
   <table>
    <title>Constante MySQL fetch</title>
@@ -63,21 +63,21 @@
      <row>
       <entry>MYSQL_ASSOC</entry>
       <entry>
-       Coloanele sunt întoarse într-un masiv având în calitate de indice
+       Coloanele sunt întoarse într-un tablou având în calitate de indice
        denumirea câmpului.
       </entry>
      </row>
      <row>
       <entry>MYSQL_BOTH</entry>
       <entry>
-       Coloanele sunt întoarse într-un masiv având atât un indice numeric, cât 
+       Coloanele sunt întoarse într-un tablou având atât un indice numeric, cât 
        şi denumirea câmpului în calitate de indice.
       </entry>
      </row>
      <row>
       <entry>MYSQL_NUM</entry>
       <entry>
-       Coloanele sunt întoarse într-un masiv având un indice numeric către
+       Coloanele sunt întoarse într-un tablou având un indice numeric către
        câmpuri. Acest indice începe cu 0, primul câmp din rezultat.
       </entry>
      </row>

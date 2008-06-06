@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.6 $ -->
+<!-- $Revision: 1.7 $ -->
 <!-- EN-Revision: 1.53 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="about" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -241,7 +241,7 @@ int strlen ( string $string )
      (ceea ce căutăm) poate fi o valoare scalară (string, integer, sau
      <link linkend="language.types.float">float</link>), sau un
      <link linkend="language.types.array">array</link>.
-     <parameter>haystack</parameter> (masivul în care efectuăm căutarea) este 
+     <parameter>haystack</parameter> (tabloul în care efectuăm căutarea) este 
      al doilea parametru. Al treilea parametru <emphasis>opţional</emphasis> 
      este numit <parameter>strict</parameter>. Toţi parametrii opţionali se 
      găsesc între <emphasis>[</emphasis> astfel de paranteze

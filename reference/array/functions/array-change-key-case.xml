@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.6 $ -->
+<!-- $Revision: 1.7 $ -->
 <!-- EN-Revision: 1.14 Maintainer: simionea Status: translated -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.array-change-key-case" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>array_change_key_case</refname>
-  <refpurpose>Modifică toate cheile dintr-un masiv</refpurpose>
+  <refpurpose>Modifică toate cheile dintr-un tablou</refpurpose>
  </refnamediv>
  
  <refsect1 role="description">
@@ -16,7 +16,7 @@
    <methodparam choice="opt"><type>int</type><parameter>case</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Întoarce un masiv cu toate cheile din <parameter>input</parameter>
+   Întoarce un tablou cu toate cheile din <parameter>input</parameter>
    transferate în caractere minuscule sau majuscule. Indicii-numere rămân precum
    sunt.
   </para>
@@ -31,7 +31,7 @@
      <term><parameter>input</parameter></term>
      <listitem>
       <para>
-       Masivul asupra căruia se lucrează
+       Tabloul asupra căruia se lucrează
       </para>
      </listitem>
     </varlistentry>
@@ -53,8 +53,8 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Întoarce un masiv cu cheile transferate în caractere minuscule sau majuscule,
-   sau false dacă <parameter>input</parameter> nu este un masiv.
+   Întoarce un tablou cu cheile transferate în caractere minuscule sau majuscule,
+   sau false dacă <parameter>input</parameter> nu este un tablou.
   </para>
  </refsect1>
 
@@ -62,7 +62,7 @@
   &reftitle.errors;
   <para>
    Aruncă <constant>E_WARNING</constant> dacă <parameter>input</parameter> nu
-   este un masiv.
+   este un tablou.
   </para>
  </refsect1>
 
@@ -97,8 +97,8 @@ Array
   &reftitle.notes;
   <note>
    <para>
-    Dacă un masiv are indici care vor deveni la fel odată ce se va rula această
-    funcţie (de ex. "keY" şi "kEY"), valoarea cea mai de pe urmă din masiv se va
+    Dacă un tablou are indici care vor deveni la fel odată ce se va rula această
+    funcţie (de ex. "keY" şi "kEY"), valoarea cea mai de pe urmă din tablou se va
     suprapune peste ceilalţi indici.
    </para>
   </note>

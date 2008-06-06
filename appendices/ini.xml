@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.16 $ -->
+<!-- $Revision: 1.17 $ -->
 <!-- EN-Revision: 1.68 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -4053,7 +4053,7 @@
        <listitem>
         <para>
          Dacă este activat, atunci variabilele Environment, GET, POST, Cookie
-         şi Server pot fi găsite în masivele asociative globale
+         şi Server pot fi găsite în tablourile asociative globale
          <varname>$_ENV</varname>,
          <varname>$_GET</varname>,
          <varname>$_POST</varname>,
@@ -4162,7 +4162,7 @@
        <listitem>
         <para>
          Această directuvă descrie ordinea în care PHP PHP înregistrează 
-         variabilele GET, POST şi Cookie în masivul _REQUEST. Înregistrarea 
+         variabilele GET, POST şi Cookie în tabloul _REQUEST. Înregistrarea 
          este efectuată de la stânga la dreapta, valorile noi se suprapun 
          peste cele vechi.
         </para>
@@ -4273,7 +4273,7 @@
          (implicit), variabilele PHP predefinite lungi, cumar fi
          <varname>$HTTP_GET_VARS</varname> vor fi definite. Dacă nu le 
          utilizaţi, este recomandabil să le dezactivaţi din motivul 
-         performanţei. În loc, utilizaţi masivele superglobale, cum ar fi 
+         performanţei. În loc, utilizaţi tablourile superglobale, cum ar fi 
          <varname>$_GET</varname>.
         </simpara>
         <simpara>

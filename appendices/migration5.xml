@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.1 $ -->
+<!-- $Revision: 1.2 $ -->
 <!-- EN-Revision: 1.56 Maintainer: simionea Status: translated -->
  <appendix xml:id="migration5" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Migrarea de la PHP 4 la PHP 5</title>
@@ -48,7 +48,7 @@
     <listitem>
      <simpara>
       <function>array_merge</function> a fost schimbată pentru ca să accepte numai
-      masivuri. Dacă îi este transmisă o variabilă care nu este masiv, un
+      tablouri. Dacă îi este transmisă o variabilă care nu este tablou, un
       <constant>E_WARNING</constant> va fi aruncat pentru fiecare astfel de parametru.
       Fiţi atent, deoarece codul dumneavoastră poate să înceapă să emită
       <constant>E_WARNING</constant> din senin.
@@ -288,37 +288,37 @@ Action application/x-httpd-php "/php/php-cgi.exe"
    <para>
     În PHP 5 sunt unele funcţii noi. Iată lista lor:
    </para>
-   <para><link linkend="ref.array">Masive</link>:</para>
+   <para><link linkend="ref.array">Tablouri</link>:</para>
     <itemizedlist>
     <listitem>
      <simpara>
-      <function>array_combine</function> - Crează un masiv folosind un masiv pentru
-      chei şi alt masiv pentru valorile lor
+      <function>array_combine</function> - Crează un tablou folosind un tablou pentru
+      chei şi alt tablou pentru valorile lor
      </simpara>
     </listitem>
     <listitem>
      <simpara>
-      <function>array_diff_uassoc</function> - Calculează diferenţa dintre masive
+      <function>array_diff_uassoc</function> - Calculează diferenţa dintre tablouri
       cu verificarea suplimentară a indicilor, care este efectuată de o funcţie de
       apel invers furnizată de utilizator
      </simpara>
     </listitem>
     <listitem>
      <simpara>
-      <function>array_udiff</function> - Calculează diferenţa dintre masive utilizând
+      <function>array_udiff</function> - Calculează diferenţa dintre tablouri utilizând
       o funcţie de apel invers pentru compararea datelor
      </simpara>
     </listitem>
     <listitem>
      <simpara>
-      <function>array_udiff_assoc</function> - Calculează diferenţa dintre masive
+      <function>array_udiff_assoc</function> - Calculează diferenţa dintre tablouri
       cu verificarea suplimentară a indicilor. Datele sunt comparate utilizând o
       funcţie de apel invers
      </simpara>
     </listitem>
     <listitem>
      <simpara>
-      <function>array_udiff_uassoc</function> - Calculează diferenţa dintre masive
+      <function>array_udiff_uassoc</function> - Calculează diferenţa dintre tablouri
       cu verificarea suplimentară a indicilor. Datele sunt comparate utilizând o
       funcţie de apel invers. Verificarea indicilor de asemenea este efectuată cu
       o funcţie de apel invers
@@ -327,26 +327,26 @@ Action application/x-httpd-php "/php/php-cgi.exe"
     <listitem>
      <simpara>
       <function>array_walk_recursive</function> - Aplică recursiv o funcţie a
-      utilizatorului fiecărui membru (element) al masivului
+      utilizatorului fiecărui membru (element) al tabloului
      </simpara>
     </listitem>
     <listitem>
      <simpara>
-      <function>array_uintersect_assoc</function> - Calculează intersecţia masivelor
+      <function>array_uintersect_assoc</function> - Calculează intersecţia tablourilor
       cu o verificare suplimentară a indicilor. Datele sunt comparate utilizând o
       funcţie de apel invers
      </simpara>
     </listitem>
     <listitem>
      <simpara>
-      <function>array_uintersect_uassoc</function> - Calculează intersecţia masivelor
+      <function>array_uintersect_uassoc</function> - Calculează intersecţia tablourilor
       cu o verificare suplimentară a indicilor. Atât datele, cât şi indicii sunt comparaţi
       utilizând funcţii separate de apel invers
      </simpara>
     </listitem>
     <listitem>
      <simpara>
-      <function>array_uintersect</function> - Calculează intersecţia masivelor.
+      <function>array_uintersect</function> - Calculează intersecţia tablourilor.
       Datele sunt comparate utilizând o funcţie de apel invers
      </simpara>
     </listitem>
@@ -584,7 +584,7 @@ Action application/x-httpd-php "/php/php-cgi.exe"
    <itemizedlist>
     <listitem>
      <simpara>
-      <function>str_split</function> - Converteşte un string într-un masiv
+      <function>str_split</function> - Converteşte un string într-un tablou
      </simpara>
     </listitem>
     <listitem>
@@ -624,7 +624,7 @@ Action application/x-httpd-php "/php/php-cgi.exe"
     <listitem>
      <simpara>
       <function>dba_key_split</function> - Desparte o cheie din reprezentare string
-      în reprezentare pentru masive
+      în reprezentare pentru tablouri
      </simpara>
     </listitem>
     <listitem>
@@ -656,7 +656,7 @@ Action application/x-httpd-php "/php/php-cgi.exe"
     </listitem>
     <listitem>
      <simpara>
-      <function>get_declared_interfaces</function> - Întoarce un masiv al tuturor
+      <function>get_declared_interfaces</function> - Întoarce un tablou al tuturor
       interfeţelor declarate
      </simpara>
     </listitem>
@@ -704,7 +704,7 @@ Action application/x-httpd-php "/php/php-cgi.exe"
     </listitem>
     <listitem>
      <simpara>
-      <function>mb_list_encodings</function> - Întoarce un masiv al tuturor
+      <function>mb_list_encodings</function> - Întoarce un tablou al tuturor
       codificărilor susţinute
      </simpara>
     </listitem>
@@ -721,7 +721,7 @@ Action application/x-httpd-php "/php/php-cgi.exe"
     </listitem>
     <listitem>
      <simpara>
-      <function>pg_version</function> - Întoarce un masiv cu informaţia despre client, protocol
+      <function>pg_version</function> - Întoarce un tablou cu informaţia despre client, protocol
       şi versiunea server-ului (dacă este disponibilă)
      </simpara>
     </listitem>
@@ -770,7 +770,7 @@ Action application/x-httpd-php "/php/php-cgi.exe"
     </listitem>
     <listitem>
      <simpara>
-      <function>sqlite_fetch_column_types</function> - Întoarce un masiv cu tipurile coloanelor
+      <function>sqlite_fetch_column_types</function> - Întoarce un tablou cu tipurile coloanelor
       dintr-un careva tabel
      </simpara>
     </listitem>
