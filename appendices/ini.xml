@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.17 $ -->
-<!-- EN-Revision: 1.68 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.18 $ -->
+<!-- EN-Revision: 1.69 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&php.ini; directives</title>
@@ -4647,8 +4647,7 @@ include_path=".;c:\php\includes"
        </term>
        <listitem>
         <para>
-         Care extensie dinamică trebuie încărcată atunci când PHP este 
-         lansat.
+         Care extensie dinamică trebuie încărcată atunci când PHP este lansat.
         </para>
        </listitem>
       </varlistentry>
@@ -4824,8 +4823,7 @@ include_path=".;c:\php\includes"
        <listitem>
         <para>
          Dacă să permită, sau nu <link linkend="features.file-upload">
-         încărcări de fişiere</link> prin HTTP. Accesaţi de asemenea 
-         directivele 
+         încărcări de fişiere</link> prin HTTP. Accesaţi de asemenea directivele
          <link linkend="ini.upload-max-filesize">upload_max_filesize</link>,
          <link linkend="ini.upload-tmp-dir">upload_tmp_dir</link> şi
          <link linkend="ini.post-max-size">post_max_size</link>.
