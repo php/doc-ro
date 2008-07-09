@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.40 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.41 Maintainer: simionea Status: translated -->
 
 <!-- Part titles used mostly in manual.xml itself -->
 <!ENTITY PHPManual         "Manualul PHP">
@@ -62,6 +62,7 @@
 <!ENTITY Functions         "Funcţii">
 <!ENTITY Name              "Denumirea">
 <!ENTITY Alias             "Pseudonim pentru">
+<!ENTITY Type              "Tipul">
 
 <!-- These are used in reference/$extname/reference.xml and other
 supplemental files to mark section titles -->

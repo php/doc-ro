@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.7 $ -->
-<!-- EN-Revision: 1.14 Maintainer: radical Status: translated -->
+<!-- $Revision: 1.8 $ -->
+<!-- EN-Revision: 1.15 Maintainer: radical Status: translated -->
+<!-- Credits: simionea -->
  <chapter xml:id="language.oop5" xmlns="http://docbook.org/ns/docbook">
   <title>Clase şi Obiecte (PHP 5)</title>
 
@@ -32,6 +33,7 @@
   &language.oop5.reflection;
   &language.oop5.typehinting;
   &language.oop5.late-static-bindings;
+  &language.oop5.references;
 </chapter>
  
 <!-- Keep this comment at the end of the file
