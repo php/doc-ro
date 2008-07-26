@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.3 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.4 Maintainer: simionea Status: translated -->
 
 <!--
   Entities for the categorized extension list, so it does not need
@@ -9,6 +9,8 @@
 <!ENTITY extcat.intro '<title>Categorizarea extensiilor</title><para>Această
 anexă categorizează peste 150 extensii documentate în Manualul PHP
 după câteva criterii.</para>'>
+
+<!ENTITY extcat.alphabetical '<title>În ordine alfabetică</title>'>
 
 <!-- ======================================================================= -->
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.24 $ -->
-<!-- EN-Revision: 1.54 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.25 $ -->
+<!-- EN-Revision: 1.56 Maintainer: simionea Status: translated -->
 <!-- CREDITS: adiju,aspinei,radical,zamolxe -->
 
  <info xml:id="bookinfo" xmlns="http://docbook.org/ns/docbook">
@@ -41,19 +41,11 @@
    <simpara>
     Copyright &copy; 1997 - 2008 de către Grupul de Documentare PHP.
     Acest material poate fi distribuit numai în baza termenelor şi condiţiilor
-    stabilite în documentul "Open Publication License" (Licenţa Publicaţiei Deschise), 
-    v1.0 sau ulterioară. O copie a <link linkend="opl.license">Licenţa Publicaţiei
-    Deschise</link> este distribuită cu acest manual, cea mai recentă versiune
-    este prezentată şi disponibilă la adresa <link xlink:href="&url.opl;">&url.opl;</link>.
-   </simpara>
-   <simpara>
-    Distribuirea unor versiuni ale acestui document modificate substanţial 
-    este interzisă fara acordul explicit al deţinătorilor dreptului de reproducere.
-   </simpara>
-   <simpara>
-    Distribuţia lucrării, sau a derivatelor ei sub formă de carte (manual) tipărită
-    este interzisă dacă nu a fost obţinută anterior permisiunea deţinătorilor
-    dreptului de reproducere.
+    stabilite în documentul "Creative Commons Attribution 3.0 License"
+    sau ulterioară. O copie a licenţei
+    <link linkend="cc.license">Creative Commons Attribution 3.0</link>
+    este distribuită cu acest manual. Cea mai recentă versiune
+    disponibilă la moment la adresa <link xlink:href="&url.cc.by;">&url.cc.by;</link>.
    </simpara>
    <simpara>
     În caz că sunteţi cointeresat în redistribuirea sau republicarea acestui document
@@ -62,10 +54,6 @@
     <link xlink:href="mailto:&email.php.doc.license;">&email.php.doc.license;</link>.
     Vă rugăm să ţineţi cont că această adresă este mapată (redirecţionată) către
     arhiva listei publice de distribuţie poştală.
-   </simpara>
-   <simpara>
-    Secţiunea documentaţiei referitoare la <xref linkend="internals2.ze1"/> este
-    bazată pe contribuţia iniţială a Zend Technologies.
    </simpara>
   </legalnotice>
 

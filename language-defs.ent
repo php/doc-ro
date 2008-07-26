@@ -1,8 +1,9 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.41 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.43 Maintainer: simionea Status: translated -->
 
 <!-- Part titles used mostly in manual.xml itself -->
 <!ENTITY PHPManual         "Manualul PHP">
+<!ENTITY Seealso           "Accesaţi de asemenea">
 <!ENTITY Date              "Data:">
 <!ENTITY GettingStarted    "Pentru început">
 <!ENTITY InstallAndConfigure "Installarea şi configurarea">
@@ -38,6 +39,7 @@
 <!ENTITY CommandLineSpecificExtensions            "Extensii specifice liniei de comandă">
 <!ENTITY WindowsOnlyExtensions                    "Extensii doar pentru Windows">
 <!ENTITY ServerSpecificExtensions                 "Extensii specifice serverului">
+<!ENTITY SearchEngineExtensions                   "Extensii ale motorului de căutare">
 <!ENTITY MiscExtensions                           "Extensii diverse">
 <!ENTITY PECLReference     "Informaţii de referinţă despre funcţiile PECL">
 <!ENTITY AddOnReference    "Informaţii de referinţă despre funcţiile extensiilor suplimentare">
