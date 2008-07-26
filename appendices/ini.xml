@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.19 $ -->
+<!-- $Revision: 1.20 $ -->
 <!-- EN-Revision: 1.70 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -4411,6 +4411,18 @@ auto_prepend_file=security.php
          şi apoi verificând dacă <varname>$_GET['processed']</varname> este 
          stabilit.
         </simpara>
+        <para>
+         <note>
+          <para>
+           PHP permite prescurtări pentru valori în biţi, inclusiv K (kilo),
+	   M (mega) şi G (giga). PHP va efectua convertirea automat dacă veţi
+	   utiliza una din acestea. Fiţi atent să nu depăşiţi limita de 32 biţi
+	   pentru numere întregi cu semn (dacă utilizaţi versiuni pe 32 de biţi)
+	   deoarece aceasta va cauza eşuarea script-ului dumneavoastră.
+          </para>
+         </note>
+        </para>
+
        </listitem>
       </varlistentry>
 

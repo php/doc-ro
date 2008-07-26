@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.7 $ -->
-<!-- EN-Revision: 1.53 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.8 $ -->
+<!-- EN-Revision: 1.54 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="about" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Despre manual</title>
@@ -110,7 +110,7 @@
     În scopul licenţierii corecte a materialului, adnotările scrise de 
     utilizatori sunt considerate ca parte integrantă a manualului PHP şi deci 
     sunt sub incidenţa aceleiaşi licenţe, care cuprinde această  documentaţie 
-    (Open Publication License &mdash; Licenţa Publicaţiei Deschise pentru 
+    (Licenţa "Creative Commons Attribution" pentru 
     moment). Pentru mai multe detalii, accesaţi pagina de
     <link linkend="copyright">copyright a manualului</link>.
    </para>
