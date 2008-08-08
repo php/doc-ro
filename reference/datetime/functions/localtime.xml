@@ -1,75 +1,180 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/datetime.xml, last change in rev 1.1 -->
-<!-- last change to 'localtime' in en/ tree in rev 1.10 -->
-  <refentry xml:id="function.localtime" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>localtime</refname>
-    <refpurpose>Citeşte timpul local</refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>array</type><methodname>localtime</methodname>
-      <methodparam choice="opt"><type>int</type><parameter>
-        timestamp
-       </parameter></methodparam>
-      <methodparam choice="opt"><type>bool</type><parameter>
-        is_associative
-       </parameter></methodparam>
-     </methodsynopsis>
-    <para>
-     Funcţia <function>localtime</function> returnează un tablou identic cu cel al structurii returnate de un apel al funcţiei C. Primul argument al <function>localtime</function> este timestamp; dacă nu este dat, se utilizează timpul curent. Al doilea argument al funcţiei <function>localtime</function> este <parameter>is_associative</parameter>; dacă este 0 sau nu este dat atunci tabloul returnat va fi unul obişnuit, având chei numerice. Dacă acest argument este 1 atunci <function>localtime</function> este un tablou asociativ conţinând toate elementele structurii returnate de apelul funcţiei C. Numele cheilor din tabloul asociativ sunt după cum urmează:
-     <itemizedlist>
-      <listitem>
-       <simpara>
-        "tm_sec" - secunde
-       </simpara>
-      </listitem>
-      <listitem>
-       <simpara>
-        "tm_min" - minute
-       </simpara>
-      </listitem>
-      <listitem>
-       <simpara>
-        "tm_hour" - ore
-       </simpara>
-      </listitem>
-      <listitem>
-       <simpara>
-        "tm_mday" - ziua din lună
-       </simpara>
-      </listitem>
-      <listitem>
-       <simpara>
-        "tm_mon" - luna din an începând cu 0 pentru ianuarie
-       </simpara>
-      </listitem>
-      <listitem>
-       <simpara>
-        "tm_year" - anii începând cu 1900
-       </simpara>
-      </listitem>
-      <listitem>
-       <simpara>
-        "tm_wday" - ziua din săptămână
-       </simpara>
-      </listitem>
-      <listitem>
-       <simpara>
-        "tm_yday" - ziua din an
-       </simpara>
-      </listitem>
-      <listitem>
-       <simpara>
-        "tm_isdst" - este activă ora de vară
-       </simpara>
-      </listitem>
-     </itemizedlist>
-    </para>
-   </refsect1>
-  </refentry>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.13 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.localtime" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>localtime</refname>
+  <refpurpose>ObĹŁine timpul local</refpurpose>
+ </refnamediv>
+
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>array</type><methodname>localtime</methodname>
+   <methodparam choice="opt"><type>int</type><parameter>timestamp</parameter></methodparam>
+   <methodparam choice="opt"><type>bool</type><parameter>is_associative</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   FuncĹŁia <function>localtime</function> ĂŽntoarce un tablou identic ca
+   structurÄ cu cel ĂŽntors de funcĹŁia C.
+  </para>
+ </refsect1>
+ 
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    
+    &date.timestamp.description;
+   
+    <varlistentry>
+     <term><parameter>is_associative</parameter></term>
+     <listitem>
+      <para>
+       DacÄ este stabilit ĂŽn &false; sau nu este furnizat, atunci tabloul ĂŽntors
+       este unul obiĹnuit, indexat numeric. DacÄ argumentul este stabilit ĂŽn
+       &true;, atunci <function>localtime</function> ĂŽntoarce un tablou
+       asociativ conĹŁinĂ˘nd diferitele elemente ale structurii ĂŽntoarse ĂŽn
+       rezultatul apelÄrii funcĹŁiei C localtime. Denumirile cheilor tabloului
+       asociativ sunt urmÄtoarele:
+      </para>
+      <para>
+       <itemizedlist>
+        <listitem>
+         <simpara>
+          "tm_sec" - secunde
+         </simpara>
+        </listitem>
+        <listitem>
+         <simpara>
+          "tm_min" - minute
+         </simpara>
+        </listitem>
+        <listitem>
+         <simpara>
+          "tm_hour" - ora
+         </simpara>
+        </listitem>
+        <listitem>
+         <simpara>
+          "tm_mday" - ziua lunii
+         </simpara>
+         <simpara>
+          Lunile sunt de la 0 (Ian) pĂ˘nÄ la 11 (Dec) Ĺi zilele sÄptÄmĂ˘nii sunt
+          de la 0 (DuminicÄ) pĂ˘nÄ la 6 (SĂ˘mbÄtÄ).
+         </simpara>
+        </listitem>
+        <listitem>
+         <simpara>
+          "tm_mon" - luna ĂŽn an, ĂŽncepĂ˘nd cu 0 pentru Ianuarie
+         </simpara>
+        </listitem>
+        <listitem>
+         <simpara>
+          "tm_year" - NumÄrul de ani de la 1900
+         </simpara>
+        </listitem>
+        <listitem>
+         <simpara>
+          "tm_wday" - Ziua din sÄptÄmĂ˘nÄ
+         </simpara>
+        </listitem>
+        <listitem>
+         <simpara>
+          "tm_yday" - Ziua din an
+         </simpara>
+        </listitem>
+        <listitem>
+         <simpara>
+          "tm_isdst" - DacÄ timpul de varÄ este ĂŽn vigoare
+         </simpara>
+        </listitem>
+       </itemizedlist>
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="errors">
+  &reftitle.errors;
+   
+   &date.timezone.errors.description;
+ 
+ </refsect1>
+
+ <refsect1 role="changelog">
+  &reftitle.changelog;
+  <para>
+   <informaltable>
+    <tgroup cols="2">
+     <thead>
+      <row>
+       <entry>&Version;</entry>
+       <entry>&Description;</entry>
+      </row>
+     </thead>
+     <tbody>
+      
+      &date.timezone.errors.changelog;
+     
+     </tbody>
+    </tgroup>
+   </informaltable>
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemplu <function>localtime</function></title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+$localtime = localtime();
+$localtime_assoc = localtime(time(), true);
+print_r($localtime);
+print_r($localtime_assoc);
+?>
+]]>
+    </programlisting>
+    &example.outputs.similar;
+    <screen>
+<![CDATA[
+Array
+(
+    [0] => 24
+    [1] => 3
+    [2] => 19
+    [3] => 3
+    [4] => 3
+    [5] => 105
+    [6] => 0
+    [7] => 92
+    [8] => 1
+)
+
+Array
+(
+    [tm_sec] => 24
+    [tm_min] => 3
+    [tm_hour] => 19
+    [tm_mday] => 3
+    [tm_mon] => 3
+    [tm_year] => 105
+    [tm_wday] => 0
+    [tm_yday] => 92
+    [tm_isdst] => 1
+)
+]]>
+    </screen>
+   </example>
+  </para>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
