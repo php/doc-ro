@@ -1,105 +1,151 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/errorfunc.xml, last change in rev 1.2 -->
-<!-- last change to 'error-log' in en/ tree in rev 1.1 -->
-  <refentry xml:id="function.error-log" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>error_log</refname>
-    <refpurpose>Trimite un mesaj de eroare către o destinaţie</refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>int</type><methodname>error_log</methodname>
-      <methodparam><type>string</type><parameter>message</parameter></methodparam>
-      <methodparam choice="opt"><type>int</type><parameter>message_type</parameter></methodparam>
-      <methodparam choice="opt"><type>string</type><parameter>destination</parameter></methodparam>
-      <methodparam choice="opt"><type>string</type><parameter>extra_headers</parameter></methodparam>
-     </methodsynopsis>
-    <para>
-     Trimite un mesaj de eroare către jurnalul de erori al serverului web, către un port
-     <acronym>TCP</acronym> sau către un fişier. Primul parametru,
-     <parameter>message</parameter>, este mesajul de eroare care trebuie înregistrat.
-     Cel de-al doilea parametru, <parameter>message_type</parameter>, spune unde trebuie
-     să fie trimis mesajul:
-     <table>
-      <title>Tipuri de înregistrări <function>error_log</function></title>
-      <tgroup cols="2">
-       <tbody>
-    <row>
-     <entry>0</entry>
-     <entry>
-      <parameter>message</parameter> este trimis la sistemul de înregistrare al PHP, folosind
-      mecanismul de înregistrare al sistemului de operare sau un fişier, în funcţie de cum este
-      setată directiva de configurare <link linkend="ini.error-log">error_log</link>.
-     </entry>
-    </row>
-    <row>
-     <entry>1</entry>
-     <entry>
-      <parameter>message</parameter> va fi trimis către adresa de email setată de către parametrul
-      <parameter>destination</parameter>. Acesta este singurul tip de înregistrare unde este
-      folosit cel de-al patrulea parametru, <parameter>extra_headers</parameter>. Acest tip de
-      mesaj foloseşte aceeaşi funcţie internă ca şi <function>mail</function>.
-     </entry>
-    </row>
-    <row>
-     <entry>2</entry>
-     <entry>
-      <parameter>message</parameter> este trimis către conexiunea de depanare PHP. Această
-      opţiune este disponibilă doar dacă directiva
-      <link linkend="install.configure.enable-debugger">remote_debugging</link> a fost activată.
-      În acest caz, parametrul <parameter>destination</parameter> specifică numele gazdei sau
-      adresa IP, opţional numărul portului, pentru socket-ul de recepţionare al informaţiilor
-      de depanare.
-     </entry>
-    </row>
-    <row>
-     <entry>3</entry>
-     <entry>
-      <parameter>message</parameter>  este adăugat la fişierul
-      <parameter>destination</parameter>.
-     </entry>
-    </row>
-       </tbody>
-      </tgroup>
-     </table>
-    </para>
-    <warning>
-     <para>
-      Depanarea distantă via TCP/IP este o facilitate disponibilă în PHP 3 şi
-      <emphasis>nu</emphasis> este disponibilă în PHP 4.
-     </para>
-    </warning>
-    <para>
-     <example role="php">
-      <title>Exemple <function>error_log</function></title>
-      <programlisting role="php">
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.18 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.error-log" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>error_log</refname>
+  <refpurpose>Trimite undeva un mesaj de eroare</refpurpose>
+ </refnamediv>
+
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>bool</type><methodname>error_log</methodname>
+   <methodparam><type>string</type><parameter>message</parameter></methodparam>
+   <methodparam choice="opt"><type>int</type><parameter>message_type</parameter></methodparam>
+   <methodparam choice="opt"><type>string</type><parameter>destination</parameter></methodparam>
+   <methodparam choice="opt"><type>string</type><parameter>extra_headers</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   Trimite un mesaj de eroare ĂŽn log-ul de erori al server-ului web, spre un
+   port <acronym>TCP</acronym>, sau ĂŽntr-un fiĹier.
+  </para>
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>message</parameter></term>
+     <listitem>
+      <para>
+       Mesajul de eroare ce trebuie logat.
+      </para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><parameter>message_type</parameter></term>
+     <listitem>
+      <para>
+       IndicÄ unde ar trebui sÄ fie trimisÄ eroarea. Tipurile posibile ale
+       mesajului sunt urmÄtoarele:
+      </para>
+      <para>
+       <table>
+        <title>Tipurile de logÄri <function>error_log</function></title>
+        <tgroup cols="2">
+         <tbody>
+          <row>
+           <entry>0</entry>
+           <entry>
+            <parameter>message</parameter> este transmis log-ului de sistem al
+            PHP utilizĂ˘nd mecanismul de logare al Sistemului de Operare, sau un
+            fiĹier, ĂŽn dependenĹŁÄ de setÄrile directivei de configurare
+            <link linkend="ini.error-log">error_log</link>. Aceasta este
+            opĹŁiunea implicitÄ.
+           </entry>
+          </row>
+          <row>
+           <entry>1</entry>
+           <entry>
+            <parameter>message</parameter> este transmis prin email spre adresa
+            indicatÄ ĂŽn parametrul <parameter>destination</parameter>. Acesta
+            este unicul tip de mesaj, unde se utilizeazÄ al patrulea parametru
+            <parameter>extra_headers</parameter>.
+           </entry>
+          </row>
+          <row>
+           <entry>2</entry>
+           <entry>
+            AceastÄ opĹŁiune nu mai existÄ deja.
+           </entry>
+          </row>
+          <row>
+           <entry>3</entry>
+           <entry>
+            <parameter>message</parameter> este adÄugat la sfĂ˘rĹitul fiĹierului
+            <parameter>destination</parameter>. SfĂ˘rĹitul de linie nu este
+            adÄugat automat la string-ul <parameter>message</parameter>.
+           </entry>
+          </row>
+         </tbody>
+        </tgroup>
+       </table>
+      </para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><parameter>destination</parameter></term>
+     <listitem>
+      <para>
+       DestinaĹŁia. SemnificaĹŁia acesteia depinde de valoarea parametrului
+       <parameter>message_type</parameter> descris mai sus.
+      </para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><parameter>extra_headers</parameter></term>
+     <listitem>
+      <para>
+       Antete suplimentare. Acestea sunt utilizate ĂŽn caz cÄ parametrul
+       <parameter>message_type</parameter> are valoarea <literal>1</literal>.
+       Acest tip de mesaj utilizeazÄ aceeaĹi funcĹŁie internÄ ca Ĺi
+       <function>mail</function>.
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   &return.success;
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example role="php">
+    <title>Exemple <function>error_log</function></title>
+    <programlisting role="php">
 <![CDATA[
 <?php
-// se trimite o notificare prin serverul de înregistrare
-// dacă nu se poate conecta la baza de date
-if (!Ora_Logon ($username, $password)) {
-    error_log ('Baza de date Oracle nu este disponibila!', 0);
+// Trimite o ĂŽnĹtiinĹŁare prin intermediul log-ului server-ului ĂŽn caz cÄ nu este
+// posibilÄ conectarea la baza de date.
+if (!Ora_Logon($username, $password)) {
+    error_log("Baza de date Oracle nu este disponibilÄ!", 0);
 }
 
-// notifică administratorul prin email
-if (!($foo = allocate_new_foo()) {
-    error_log('A apărut o problemă, nu s-a alocat memorie pentru FOO!', 1,
-              'operator@example.com');
+// ĂnĹtiinĹŁeazÄ administratorul prin email dacÄ rÄmĂ˘nem fÄrÄ FOO
+if (!($foo = allocate_new_foo())) {
+    error_log("Nevoie mare, nu mai avem FOO!", 1,
+               "operator@example.com");
 }
 
-// alte modalităţi de apelare error_log():
-error_log('Ai dat-o-n bară!', 2, '127.0.0.1:7000');
-error_log('Ai dat-o-n bară!', 2, 'loghost');
-error_log('Ai dat-o-n bară!', 3, '/var/tmp/my-errors.log');
+// Un alt mod de a apela error_log():
+error_log("Ai dat-o ĂŽn barÄ!", 3, "/var/tmp/my-errors.log");
 ?>
 ]]>
-      </programlisting>
-     </example>
-    </para>
-   </refsect1>
-  </refentry>
+    </programlisting>
+   </example>
+  </para>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
