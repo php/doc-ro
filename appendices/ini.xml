@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.21 $ -->
-<!-- EN-Revision: 1.72 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.22 $ -->
+<!-- EN-Revision: 1.73 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&php.ini; directives</title>
@@ -784,7 +784,7 @@
        <entry>fastcgi.logging</entry>
        <entry>"1"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry>PHP_INI_ALL în PHP &lt;= 5.2.0. Disponibil începând cu PHP 4.4.0. Eliminat în PHP 5.0.0.</entry>
+       <entry>PHP_INI_ALL în PHP &lt;= 5.2.0. Disponibil începând cu PHP 4.4.0.</entry>
       </row>
       <row>
        <entry>fbsql.allow_persistant</entry>

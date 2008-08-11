@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.4 $ -->
-<!-- EN-Revision: 1.10 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.5 $ -->
+<!-- EN-Revision: 1.11 Maintainer: simionea Status: translated -->
 <!-- CREDITS: yamolxe -->
 <refentry xml:id="function.mysql-client-encoding" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -64,6 +64,7 @@ Setul de caractere curent este: latin1
   &reftitle.seealso;
   <para>
    <simplelist>
+    <member><function>mysql_set_charset</function></member>
     <member><function>mysql_real_escape_string</function></member>
    </simplelist>
   </para>
