@@ -1,125 +1,150 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- $Revision: 1.4 $ -->
-<!-- EN-Revision: 1.0 Maintainer: zamolxe Status: outdated -->
-<!-- splitted from ./en/functions/mysql.xml, last change in rev 1.2 -->
-  <refentry xml:id="function.mysql-affected-rows" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>mysql_affected_rows</refname>
-    <refpurpose>Numarul de randuri afectate de ultima
-     operatie MySQL</refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>int</type><methodname>mysql_affected_rows</methodname>
-      <methodparam choice="opt"><type>resource</type><parameter>
-        link_identifier
-       </parameter></methodparam>
-     </methodsynopsis>
-    <para>
-     <function>mysql_affected_rows</function> intoarce numarul de randuri
-     afectate de ultima cerere de tip INSERT, UPDATE sau DELETE asociata
-     cu <parameter>link_identifier</parameter>.  Daca nu se specifica 
-     un identificator de conectare, se foloseste implicit ultima conexiune 
-     creata cu <function>mysql_connect</function>.
-    </para>
-    <note>
-     <para>
-      Daca folositi tranzactii, trebuie sa apelati 
-      <function>mysql_affected_rows</function> imediat dupa INSERT,
-      UPDATE, sau DELETE, nu dupa commit.
-     </para>
-    </note>
-    <para>
-     Daca ultima cerere a fost DELETE fara clauza WHERE, toate randurile vor fi sterse
-	 din tabel dar functia va returna zero.
-    </para>
-    <note>
-     <para>
-      Daca folositi UPDATE, MySQL nu va modifica coloanele unde valorile noi
-      sunt egale/identice cu valorile noi. Astfel exista posibilitatea 
-      ca <function>mysql_affected_rows</function> sa nu returneze numarul exact 
-	  de randuri care indeplineau conditiile, ci numai randurile care au fost
-	  efectiv modificate.
-     </para>
-     <para>
-      Cererile de tip REPLACE intai sterg randurile cu aceeasi cheie primara
-      si apoi introduc un rand nou. Aceasta functie va returna numarul de randuri sterse
-	  plus numarul de randuri introduse.
-     </para>
-    </note>
-    <para>
-     Pentru a gasi numarul de randuri in intoarse ca raspuns la o cerere de tip SELECT, 
-	 este recomandat sa folositi <function>mysql_num_rows</function>.
-    </para>
-    <para>
-     Daca ultima cerere a esuat, aceasta functie va intoarce -1.
-     <example>
-      <title>Solicitare DELETE</title>
-      <programlisting role="php">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.5 $ -->
+<!-- EN-Revision: 1.23 Maintainer: simionea Status: translated -->
+<!-- CREDITS: zamolxe -->
+<refentry xml:id="function.mysql-affected-rows" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>mysql_affected_rows</refname>
+  <refpurpose>Obţine numărul de rânduri afectate de precedenta operaţiune MySQL</refpurpose>
+ </refnamediv>
+
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>int</type><methodname>mysql_affected_rows</methodname>
+   <methodparam choice="opt"><type>resource</type><parameter>link_identifier</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   Obţine numărul de rânduri afectate de ultima interpelare INSERT, UPDATE,
+   REPLACE sau DELETE asociată cu <parameter>link_identifier</parameter>.  
+  </para>
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    &mysql.linkid.description;
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Întoarce numărul de rânduri afectate în caz de succes şi -1 dacă ultima
+   interpelare a eşuat.
+  </para>
+  <para>
+   Dacă ultima interpelare a fost o interpelare DELETE fără o clauză WHERE,
+   atunci toate rândurile din tabel au fost eliminate, dar această funcţie
+   va întoarce zero în cazul versiunilor MySQL înainte de 4.1.2.
+  </para>
+  <para>
+   La utilizarea UPDATE, MySQL nu va reînnoi coloanele unde valoarea nouă
+   coincide cu cea veche. Aceasta crează posibilitatea că
+   <function>mysql_affected_rows</function> nu va coincide cu numărul de rânduri
+   ce se potrivesc condiţiei de selectare, dar va fi doar numărul de rânduri ce
+   au fost direct afectate de interpelare.
+  </para>
+  <para>
+   Interpelarea REPLACE întâi elimină înregistrarea cu aceeaşi cheie primară,
+   apoi inserează noua înregistrare. Această funcţie întoarce numărul
+   înregistrărilor eliminate plus numărul înregistrărilor inserate.
+  </para> 
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemplu <function>mysql_affected_rows</function></title>
+    <programlisting role="php">
 <![CDATA[
 <?php
-/* conectare la baza de date */
 $link = mysql_connect('localhost', 'mysql_user', 'mysql_password');
 if (!$link) {
-    die('Nu am putut stabili o conexiune: ' . mysql_error());
+    die('A eşuat conectarea: ' . mysql_error());
 }
 mysql_select_db('mydb');
 
-/* acest cod ar trebui sa intoarca numarul corect de randuri sterse */
+/* aceasta ar trebui să întoarcă numerele corecte ale înregistrărilor eliminate */
 mysql_query('DELETE FROM mytable WHERE id < 10');
-printf("Inregistrari sterse: %d\n", mysql_affected_rows());
+printf("Înregistrări eliminate: %d\n", mysql_affected_rows());
 
-/* cu o clauza care nu valideaza niciodata, va intoarce 0 */
+/* cu o clauză WHERE care nici o dată nu este adevărată, aceasta ar trebui să întoarcă 0 */
 mysql_query('DELETE FROM mytable WHERE 0');
-printf("Inregistrari sterse: %d\n", mysql_affected_rows());
+printf("Înregistrări eliminate: %d\n", mysql_affected_rows());
 ?>
 ]]>
-      </programlisting>
-      <para>
-       Exemplul de mai sus va avea urmatorul rezultat:
-      </para>
-      <screen>
+    </programlisting>
+    &example.outputs.similar;
+    <screen>
 <![CDATA[
-Inregistrari sterse: 10
-Inregistrari sterse: 0
+Înregistrări eliminate: 10
+Înregistrări eliminate: 0
 ]]>
-      </screen>
-     </example>
-    </para>
-    <para>
-     <example>
-      <title>Solicitare UPDATE</title>
-      <programlisting role="php">
+    </screen>
+   </example>
+  </para>
+  <para>
+   <example>
+    <title>Exemplu <function>mysql_affected_rows</function> utilizând tranzacţii</title>
+    <programlisting role="php">
 <![CDATA[
 <?php
-/* conectare la baza de date */
-mysql_connect("localhost", "mysql_user", "mysql_password") or
-    die('Nu am putut stabili o conexiune: ' . mysql_error());
-mysql_select_db("mydb");
+$link = mysql_connect('localhost', 'mysql_user', 'mysql_password');
+if (!$link) {
+    die('A eşuat conectarea: ' . mysql_error());
+}
+mysql_select_db('mydb');
 
+/* Reînnoieşte înregistrările */
 mysql_query("UPDATE mytable SET used=1 WHERE id < 10");
-printf ("Inregistrari modificate: %d\n", mysql_affected_rows());
+printf ("Înregistrări reînnoite: %d\n", mysql_affected_rows());
 mysql_query("COMMIT");
 ?>
 ]]>
-      </programlisting>
-      <para>
-       Exemplul de mai sus va avea urmatorul rezultat:
-      </para>
-      <screen>
+    </programlisting>
+    &example.outputs.similar;
+    <screen>
 <![CDATA[
-Inregistrari modificate: 10
+Înregistrări reînnoite: 10
 ]]>
-      </screen>
-     </example> 
-    </para>
-    <para>
-     Va mai recomandam: <function>mysql_num_rows</function>, si
-     <function>mysql_info</function>.
-    </para>
-   </refsect1>
-  </refentry>
+    </screen>
+   </example>
+  </para>
+ </refsect1>
+
+ <refsect1 role="notes">
+  &reftitle.notes;
+  <note>
+   <title>Tranzacţii</title>
+   <para>
+    Dacă utilizaţi tranzacţii trebuie să apelaţi
+    <function>mysql_affected_rows</function> după interpelarea INSERT, UPDATE
+    sau DELETE, şi nu după COMMIT.
+   </para>
+  </note>
+  <note>
+   <title>Interpelări SELECT</title>
+   <para>
+    Pentru a căpăta numărul de rânduri întoarse de un SELECT, utilizaţi
+    <function>mysql_num_rows</function>.
+   </para>
+  </note>
+ </refsect1>
+
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>mysql_num_rows</function></member>
+    <member><function>mysql_info</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
