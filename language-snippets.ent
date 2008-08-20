@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.227 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.228 Maintainer: simionea Status: translated -->
 <!-- Keep 'em sorted -->
 
 <!-- Notes -->
@@ -235,6 +235,9 @@ directorul PHP în directorul de sistem al Windows de asemenea funcţionează
 <literal>PATH</literal>), acest lucru nu este recomandabil. <emphasis>Această 
 extensie necesită ca următoarele fişiere să existe în calea <literal>PATH
 </literal>:</emphasis> '>
+
+<!ENTITY manual.migration.seealso 'Accesaţi de asemenea ghidurile de migrare
+pentru versiunile PHP'>
 
 <!-- Returns -->
 
