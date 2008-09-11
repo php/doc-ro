@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.6 $ -->
-<!-- EN-Revision: 1.14 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.7 $ -->
+<!-- EN-Revision: 1.15 Maintainer: simionea Status: translated -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.array-fill" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -126,6 +126,7 @@ Array
   &reftitle.seealso;
   <para>
    <simplelist>
+    <member><function>array_fill_keys</function></member>
     <member><function>str_repeat</function></member>
     <member><function>range</function></member>
    </simplelist>

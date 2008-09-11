@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.3 $ -->
-<!-- EN-Revision: 1.35 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.36 Maintainer: simionea Status: translated -->
 <appendix xml:id="migration52" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Migrarea de la PHP 5.1.x la PHP 5.2.x</title>
   <para>
@@ -1986,10 +1986,10 @@ $obj->getCommentName('');
    Ca efect secundar a unei schimbări efectuate pentru a preveni dublarea
    mesajelor de eroare atunci când
    <link linkend="ini.track-errors">track_errors</link> este
-   <literal>On</literal>, acum este necesar de a întoarce &false; din
-   handler-ele de erori definite de utilizator pentru a popula
-   <link linkend="reserved.variables.phperrormsg">$php_errormsg</link>. Aceasta
-   oferă un control granular asupra nivelelor mesajelor stocate.
+   <literal>On</literal>, acum este necesar de a întoarce &false; din handler-ele
+   de erori definite de utilizator pentru a popula
+   <varname>$php_errormsg</varname>. Aceasta oferă un control granular asupra
+   nivelelor mesajelor stocate.
   </para>
  </section>
 

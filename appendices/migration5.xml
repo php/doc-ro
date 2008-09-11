@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.3 $ -->
-<!-- EN-Revision: 1.57 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.58 Maintainer: simionea Status: translated -->
  <appendix xml:id="migration5" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Migrarea de la PHP 4 la PHP 5.0.x</title>
   <para>
@@ -68,8 +68,8 @@
       a ne conforma cu <link xlink:href="&url.cgispecs;">specificaţia CGI</link>.
       Vă rugăm să vă referiţi la <link xlink:href="&url.php.bugs;23610">bug #23610</link>
       pentru informaţii suplimentare şi vedeţi de asemenea descrierea
-      <link linkend="reserved.variables.server">$_SERVER['PATH_TRANSLATED']</link>
-      în manual. Această problemă de asemenea afectează versiunile PHP &gt;= 4.3.2.
+      <varname>$_SERVER['PATH_TRANSLATED']</varname> în manual. Această problemă
+      de asemenea afectează versiunile PHP &gt;= 4.3.2.
      </simpara>
     </listitem>
     <listitem>
@@ -86,13 +86,16 @@
     </listitem>
     <listitem>
      <simpara>
-      $_SERVER ar trebui să fie populată cu argc şi argv dacă <link
-      linkend="ini.variables-order">variables_order</link> include "S". Dacă aţi
-      configurat sistemul dumneavoastră în mod specific să nu creeze $_SERVER,
-      atunci desigur ea nu va fi. Schimbarea a fost de a face argc şi argv
+      <varname>$_SERVER</varname> ar trebui să fie populată cu
+      <varname>argc</varname> şi <varname>argv</varname> dacă
+      <link linkend="ini.variables-order">variables_order</link> include "S".
+      Dacă aţi configurat sistemul dumneavoastră în mod specific să nu creeze
+      <varname>$_SERVER</varname>, atunci desigur ea nu va fi. Schimbarea a
+      fost de a face <varname>argc</varname> şi <varname>argv</varname>
       disponibile în versiunea CLI indiferent de setarea
-      <link linkend="ini.variables-order">variables_order</link>. Deci versiunea
-      CLI acum întotdeauna va popula variabilele globale $argc şi $argv.
+      <link linkend="ini.variables-order">variables_order</link>. Deci
+      versiunea CLI acum întotdeauna va popula variabilele globale
+      <varname>$argc</varname> şi <varname>$argv</varname>.
      </simpara>
     </listitem>
     <listitem>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.22 $ -->
-<!-- EN-Revision: 1.73 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.23 $ -->
+<!-- EN-Revision: 1.75 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&php.ini; directives</title>
@@ -4233,7 +4233,7 @@ auto_prepend_file=security.php
         <warning>
          <para>
           În ambele SAPI-uri CGI şi FastCGI,
-          <link linkend="reserved.variables.server">$_SERVER</link> este de 
+          <varname>$_SERVER</varname> este de 
           asemenea populat cu valori din mediu; <literal>S</literal>
           este întotdeauna echivalent cu <literal>ES</literal> independent de
           amplasarea <literal>E</literal> în această directivă.
@@ -4242,7 +4242,7 @@ auto_prepend_file=security.php
         <note>
          <para>
           Conţinutul şi ordinea valorilor din variabila
-          <link linkend="reserved.variables.request">$_REQUEST</link> sunt de
+          <varname>$_REQUEST</varname> sunt de
           asemenea afectate de această directivă.
          </para>
         </note>
