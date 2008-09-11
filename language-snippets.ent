@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.228 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.231 Maintainer: simionea Status: translated -->
 <!-- Keep 'em sorted -->
 
 <!-- Notes -->
@@ -88,6 +88,9 @@ Pentru mai multe informaţii, citiţi secţiunea manualului despre
 internă a ieşirilor cu acest parametru, de aceea ea nu poate fi utilizată în
 interiorul funcţiei de apel invers (callback) <function>ob_start</function>.
 </para></note>'>
+
+<!ENTITY note.filesystem-time-res '<note><para>Observaţi că rezoluţia timpului
+poate să difere de la un sistem de fişiere la altul.</para></note>'>
 
 <!-- Tips -->
 
@@ -1052,4 +1055,10 @@ versiunea 2.0.0. Implementări alternative sunt disponibile utilizând
 <para>Această metodă a fost eliminată din cadrul extensiei phar începând cu 
 versiunea 2.0.0. Implementări alternative sunt disponibile utilizând
 <function>PharFileInfo::isCompressed</function>,
-<function>PharFileInfo::decompress</function> şi <function>PharFileInfo::compress</function>.</para></note>'>
+<function>PharFileInfo::decompress</function> şi
+<function>PharFileInfo::compress</function>.</para></note>'>
+
+<!-- XMLReader -->
+<!ENTITY xmlreader.libxml20620.note '<caution><para>Această funcţie este
+disponibilă numai când PHP este compilat cu libxml 20620 sau ulterioară.
+</para></caution>'>
