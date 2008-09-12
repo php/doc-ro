@@ -1,63 +1,121 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/var.xml, last change in rev 1.1 -->
-<!-- last change to 'import-request-variables' in en/ tree in rev 1.34 -->
-  <refentry xml:id="function.import-request-variables" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>import_request_variables</refname>
-    <refpurpose>Importă variabilele GET/POST/Cookie variabile globale</refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>bool</type><methodname>import_request_variables</methodname>
-      <methodparam><type>string</type><parameter>types</parameter></methodparam>
-      <methodparam choice="opt"><type>string</type><parameter>prefix</parameter></methodparam>
-     </methodsynopsis>
-    <simpara>
-     Importsă variabilele de tip GET/POST/Cookie, făcându-le vizibile ca variabile
-     globale. Este util dacă se dezactivează
-     <link linkend="ini.register-globals">register_globals</link>,
-     dar se doreşte totuşi vizibilitatea unor variabile in mod global.
-    </simpara>
-    <simpara>
-     Folosind parametrul <parameter>types</parameter>
-     se poate specifica ce variabile să fie importate. Se pot folosi caracterele
-     'G', 'P' şi 'C' pentru variabile GET, POST, respectiv Cookie.
-     Aceste caractere nu sunt cu majuscule nesemnificative, adică
-     se poate folosi şi o combinaţie a caracterelor 'g', 'p' şi 'c'.
-     POST include şi informaţiile despre fişiere încărcate.
-     De notat că ordinea în care sunt scrie caracterele este importantă.
-     Dacă se foloseşte combinaţia "gp", variabilele POST vor suprascrie
-     variabilele GET cu aceleaşi nume. Orice litere în afară de GPC sunt
-     ignorate.
-    </simpara>
-    <note>
-     <para>
-      Deşi parametrul <parameter>prefix</parameter> este opţional,
-      se va genera o atenţionare la nivelul utilizatorului dacă acesta lipseşte
-      sau este un şir de caractere vid. Acest lucru se face din motive de
-      securitate. Dacă se foloseşte nivelul implicit de raportare a erorilor,
-      atenţionările la nivelul utilizatorului nu sunt afişate.
-     </para>
-    </note>
-    <informalexample>
-     <programlisting role="php">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.15 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.import-request-variables" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>import_request_variables</refname>
+  <refpurpose>ImportÄ variabilele GET/POST/Cookie ĂŽn circumstanĹŁa globalÄ</refpurpose>
+ </refnamediv>
+
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>bool</type><methodname>import_request_variables</methodname>
+   <methodparam><type>string</type><parameter>types</parameter></methodparam>
+   <methodparam choice="opt"><type>string</type><parameter>prefix</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   ImportÄ variabilele GET/POST/Cookie ĂŽn circumstanĹŁa globalÄ. AceastÄ funcĹŁie
+   este utilÄ dacÄ aĹŁi dezactivat <link linkend="ini.register-globals">register_globals</link>,
+   ĂŽnsÄ doriĹŁi sÄ aveĹŁi acces la unele variabile din circumstanĹŁa globalÄ.
+  </para>
+  <para>
+   DacÄ vÄ intereseazÄ importul altor variabile ĂŽn circumstanĹŁa globalÄ, cum ar
+   fi SERVER, consideraĹŁi utilizarea <function>extract</function>.
+  </para>
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>types</parameter></term>
+     <listitem>
+      <para>
+       UtilizĂ˘nd parametrul <parameter>types</parameter> puteĹŁi specifica care
+       variabile de interpelare vor fi importate. PuteĹŁi utiliza caracterele
+       'G', 'P' Ĺi 'C' respectiv pentru GET, POST Ĺi Cookie. Nu importÄ dacÄ
+       caracterele sunt majuscule sau minuscule, de aceea puteĹŁi utiliza orice 
+       combinaĹŁie cu 'g', 'p' Ĺi 'c'. POST include Ĺi informaĹŁia despre
+       fiĹierele ĂŽncÄrcate prin metoda POST.
+      </para>
+      <note>
+       <para>
+        ObservaĹŁi cÄ ordinea literelor conteazÄ, de aceea la utilizarea "gp"
+        variabilele POST vor acoperi variabilele GET cu acelaĹi nume. Orice alte
+        litere decĂ˘t GPC sunt ignorate.
+       </para>
+      </note>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><parameter>prefix</parameter></term>
+     <listitem>
+      <para>
+       Prefixul denumirilor variabilelor, plasat ĂŽnaintea denumirilor tuturor
+       variabilelor importate ĂŽn circumstanĹŁa globalÄ. Deci dacÄ aveĹŁi o valoare
+       GET denumitÄ "userid" Ĺi indicaĹŁi prefixul "pref_", atunci veĹŁi obĹŁine o
+       variabilÄ globalÄ denumitÄ <varname>$pref_userid</varname>.
+      </para>
+      <note>
+       <para>
+        Cu toate cÄ parametrul <parameter>prefix</parameter> este opĹŁional, veĹŁi
+        obĹŁine o eroare de nivel
+        <link linkend="errorfunc.constants.errorlevels.e-notice">E_NOTICE</link>
+        dacÄ nu specificaĹŁi un prefix, sau specificaĹŁi un string vid ĂŽn calitate
+        de prefix. Acesta probabil cÄ nu este un pericol de securitate. Erorile
+        de nivel notice nu sunt afiĹate la nivelul de <link 
+        linkend="ini.error-reporting">raportare al erorilor</link> implicit.
+       </para>
+      </note>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   &return.success;
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemplu <function>import_request_variables</function></title>
+    <programlisting role="php">
 <![CDATA[
 <?php
-// vor fi importate variabilele GET şi POST
-// cu prefixul "rvar_"
-import_request_variables("gP", "rvar_");
+// Aceasta va importa variabilele GET Ĺi POST
+// Ĺi le va prefixa cu "rvar_"
+import_request_variables("gp", "rvar_");
+
+echo $rvar_foo;
 ?>
 ]]>
-     </programlisting>
-    </informalexample>
-    <simpara>
-     Mai consultaţi <link linkend="ini.register-globals">register_globals</link>
-     şi <link linkend="ini.track-vars">track_vars</link>.
-    </simpara>
-   </refsect1>
-  </refentry>
+    </programlisting>
+   </example>
+  </para>
+ </refsect1>
+
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><varname>$_REQUEST</varname></member>
+    <member><link linkend="ini.register-globals">register_globals</link></member>
+    <member><link linkend="language.variables.predefined">Variabilele predefinite</link></member>
+    <member><function>extract</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
+
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
