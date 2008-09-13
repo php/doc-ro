@@ -1,44 +1,131 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/var.xml, last change in rev 1.1 -->
-<!-- last change to 'intval' in en/ tree in rev 1.2 -->
-  <refentry xml:id="function.intval" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>intval</refname>
-    <refpurpose>Returneaz� valoarea �ntreag� a unei variabile</refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>int</type><methodname>intval</methodname>
-      <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
-      <methodparam choice="opt"><type>int</type><parameter>base</parameter></methodparam>
-     </methodsynopsis>
-    <simpara>
-     Returneaz� valoarea �ntreag� a variabilei <parameter>var</parameter>,
-     folosind baza specificat� �n <parameter>base</parameter> pentru conversie
-     (implicit se folose�te baza 10).
-    </simpara>
-    <simpara>
-     <parameter>var</parameter> poate s� fie orice tip scalar. Nu se poate folosi
-     <function>intval</function> pentru tablouri (<type>array</type>) sau
-     obiecte (<type>object</type>).
-    </simpara>
-    <note>
-     <para>
-      Parametrul <parameter>base</parameter> are efect pentru
-      <function>intval</function> doar dac� parametrul
-      <parameter>var</parameter> este un �ir de caractere.
-     </para>
-    </note>
-    <simpara>
-     Mai consulta�i <function>floatval</function>,
-     <function>strval</function>, <function>settype</function> �i
-     <link linkend="language.types.type-juggling">Tipuri
-     de date</link>.
-    </simpara>
-   </refsect1>
-  </refentry>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.5 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.intval" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>intval</refname>
+  <refpurpose>Obţine valoarea întreagă a unei variabile</refpurpose>
+ </refnamediv>
+
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>int</type><methodname>intval</methodname>
+   <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
+   <methodparam choice="opt"><type>int</type><parameter>base</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   Întoarce valoarea de tip <type>integer</type> a parametrului
+   <parameter>var</parameter>, utilizând baza
+   <parameter>base</parameter> specificată pentru a efectua conversia (baza
+   implicită este 10).
+  </para>
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>var</parameter></term>
+     <listitem>
+      <para>
+       Valoarea scalară ce va fi convertită într-un integer
+      </para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><parameter>base</parameter></term>
+     <listitem>
+      <para>
+       Baza pentru efectuarea conversiei (baza implicită este 10)
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Valoarea întreagă a <parameter>var</parameter> în cazul succesului sau 0 în
+   caz de eşec. Tablourile şi obiectele vide întorc 0, tablourile şi obiectele
+   nevide întorc 1.
+  </para>
+  <para>
+   Valoarea maximală depinde de sistem. Sistemele pe 32 biţi au diapazonul 
+   maxim al numerelor întregi cu semn de la -2147483648 până la 2147483647.
+   Deci, de exemplu, pe un aşa sistem <literal>intval('1000000000000')</literal>
+   va întoarce 2147483647. Valoarea maximă pentru numerele întregi cu semn pe
+   sistemele pe 64 biţi este 9223372036854775807.
+  </para>
+  <para>
+   String-urile cel mai probabil vor întoarce 0, cu toate că aceasta depinde de
+   caracterul cel mai din stânga din string. Regulile obişnuite pentru
+   <link linkend="language.types.integer.casting">transformările integer</link>
+   se aplică în acest caz.
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemple <function>intval</function></title>
+    <para>
+     Următoarele exemple se bazează pe un sistem de 32 de biţi.
+    </para>
+    <programlisting role="php">
+<![CDATA[
+<?php
+echo intval(42);                      // 42
+echo intval(4.2);                     // 4
+echo intval('42');                    // 42
+echo intval('+42');                   // 42
+echo intval('-42');                   // -42
+echo intval(042);                     // 34
+echo intval('042');                   // 42
+echo intval(1e10);                    // 1410065408
+echo intval('1e10');                  // 1
+echo intval(0x1A);                    // 26
+echo intval(42000000);                // 42000000
+echo intval(420000000000000000000);   // 0
+echo intval('420000000000000000000'); // 2147483647
+echo intval(42, 8);                   // 42
+echo intval('42', 8);                 // 34
+?>
+]]>
+    </programlisting>
+   </example>
+  </para>
+ </refsect1>
+
+ <refsect1 role="notes">
+  &reftitle.notes;
+  <note>
+   <para>
+    Parametrul <parameter>base</parameter> are efect numai dacă parametrul
+    <parameter>var</parameter> este un string.
+   </para>
+  </note>
+ </refsect1>
+
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>floatval</function></member>
+    <member><function>strval</function></member>
+    <member><function>settype</function></member>
+    <member><function>is_numeric</function></member>
+    <member><link linkend="language.types.type-juggling">Manipularea tipurilor</link></member>
+    <member><link linkend="ref.bc">Funcţiile matematice de precizie arbitrară BCMath</link></member>
+   </simplelist>
+  </para>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
