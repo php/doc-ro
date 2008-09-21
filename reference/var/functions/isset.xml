@@ -1,60 +1,169 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/var.xml, last change in rev 1.1 -->
-<!-- last change to 'isset' in en/ tree in rev 1.2 -->
-  <refentry xml:id="function.isset" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>isset</refname>
-    <refpurpose>Determin� dac� o variabil� este definit�</refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>boolean</type><methodname>isset</methodname>
-      <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
-      <methodparam choice="opt"><type>mixed</type><parameter>var</parameter></methodparam>
-      <methodparam choice="opt"><parameter>...</parameter></methodparam>
-     </methodsynopsis>
-    <note> 
-       <para> 
-        <function>isset</function> este o construc�ie de limbaj. 
-       </para> 
-      </note> 
-    <simpara>
-     Returneaz� &true; dac� <parameter>var</parameter>
-     exists�, &false; �n caz contrar.
-    </simpara>
-    <para>
-     Dac� o variabil� a fost �tears� cu <function>unset</function>,
-     <function>isset</function> va returna &false;. De asemenea,
-     <function>isset</function> va returna &false; dac� se testeaz� o variabil�
-     a c�rei valoare a fost setat� ca &null;. De notat c� octetul nul
-     (<literal>"\0"</literal>) nu este echivalent cu constanta PHP &null;.
-     <informalexample>
-      <programlisting role="php">
-<![CDATA[
-$a = "test";
-$b = "alt_test";
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.20 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.isset" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>isset</refname>
+  <refpurpose>Determină dacă o variablă este stabilită</refpurpose>
+ </refnamediv>
+ 
+ <refsect1 role="description">
+ &reftitle.description;
+  <methodsynopsis>
+   <type>bool</type><methodname>isset</methodname>
+   <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
+   <methodparam choice="opt"><type>mixed</type><parameter>var</parameter></methodparam>
+   <methodparam choice="opt"><parameter>...</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   Determină dacă o variablă este stabilită.
+  </para>
+  <para>
+   Dacă o variabilă a fost eliminată cu <function>unset</function>, ea nu va
+   mai fi stabilită. <function>isset</function> va întoarce &false; la testarea
+   unei variabile care a fost stabilită în &null;. De asemenea observaţi că un
+   byte &null; (<literal>"\0"</literal>) nu este echivalent cu constanta PHP
+   &null;.
+  </para>
+  <para>
+   Dacă se furnizează mai mulţi parametri, atunci <function>isset</function>
+   va întoarce &true; numai dacă toţi parametrii sunt stabiliţi. Evaluarea
+   se petrece de la stânga spre dreapta şi se încheie de îndată ce se
+   întâlneşte o variabilă "ne-stabilită".
+  </para>
+ </refsect1>
 
-echo isset ($a); // TRUE
-echo isset ($a, $b) //TRUE
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>var</parameter></term>
+     <listitem>
+      <para>
+       Variabila ce va fi verificată.
+      </para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><parameter>var</parameter></term>
+     <listitem>
+      <para>
+       O altă variabilă ..
+      </para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><parameter>...</parameter></term>
+     <listitem>
+      <para>
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Întoarce &true; dacă <parameter>var</parameter> există; &false; în caz
+   contrar.
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemple <function>isset</function></title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+
+$var = '';
+
+// Aceasta va evalua în TRUE, deci textul va fi afişat.
+if (isset($var)) {
+    echo "Această variabilă este stabilită, deci eu mă voi afişa.";
+}
+
+// În următorul exemplu vom utiliza var_dump pentru a afişa valoarea întoarsă
+// de isset().
+
+$a = "test";
+$b = "anothertest";
+
+var_dump(isset($a));      // TRUE
+var_dump(isset($a, $b)); // TRUE
 
 unset ($a);
-echo isset ($a); // FALSE
-echo isset ($a, $b); //FALSE
+
+var_dump(isset($a));     // FALSE
+var_dump(isset($a, $b)); // FALSE
 
 $foo = NULL;
-print isset ($foo); // FALSE
+var_dump(isset($foo));   // FALSE
+
+?>
 ]]>
-      </programlisting>
-     </informalexample>
-    </para>
-    <simpara>
-     Mai consulta�i <function>empty</function> �i
-     <function>unset</function>.
-    </simpara>
-   </refsect1>
-  </refentry>
+    </programlisting>
+   </example>
+  </para>
+  <para>
+   Aceasta de asemenea funcţionează şi pentru elementele din tablouri:
+   <informalexample>
+    <programlisting role="php">
+<![CDATA[
+<?php
+
+$a = array ('test' => 1, 'hello' => NULL);
+
+var_dump(isset($a['test']));            // TRUE
+var_dump(isset($a['foo']));             // FALSE
+var_dump(isset($a['hello']));           // FALSE
+
+// Cheia 'hello' este egală cu NULL, de aceea este considerată "ne-stabilită"
+// Dacă doriţi să verificaţi valorile NULL ale cheii, încercaţi: 
+var_dump(array_key_exists('hello', $a)); // TRUE
+
+?>
+]]>
+    </programlisting>
+   </informalexample>
+  </para>
+ </refsect1>
+
+ <refsect1 role="notes">
+  &reftitle.notes;
+  <warning>
+   <para>
+    <function>isset</function> funcţionează numai cu variabile, deoarece la
+    furnizarea a orice altceva se va genera o eroare de interpretare. Pentru a
+    verifica dacă <link linkend="language.constants">constantele</link> sunt
+    stabilite utilizaţi funcţia <function>defined</function>.
+   </para>
+  </warning>
+  &note.language-construct;
+ </refsect1>
+
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>empty</function></member>
+    <member><function>unset</function></member>
+    <member><function>defined</function></member>
+    <member><link linkend="types.comparisons">tabelele de comparare a tipurilor</link></member>
+    <member><function>array_key_exists</function></member>
+    <member><function>is_null</function></member>
+    <member>operatorul de control al erorilor <link linkend="language.operators.errorcontrol">@</link></member>
+   </simplelist>
+  </para>
+ </refsect1>
+
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
