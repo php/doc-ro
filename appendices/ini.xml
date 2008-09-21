@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.23 $ -->
-<!-- EN-Revision: 1.75 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.24 $ -->
+<!-- EN-Revision: 1.76 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&php.ini; directives</title>
@@ -4291,6 +4291,14 @@ auto_prepend_file=security.php
          <link linkend="ini.register-argc-argv">register_argc_argv</link> 
          dezactivat.
         </para>
+       <warning>
+        <para>
+         Utilizarea variabilelor SERVER şi ENV este verificată în timpul
+         compilării de aceea utilizarea lor prin de ex.
+         <link linkend="language.variables.variable">variabile variabile</link>
+         nu va cauza iniţializarea lor.
+        </para>
+       </warning>
        </listitem>
       </varlistentry>
 
