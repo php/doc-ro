@@ -1,55 +1,143 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/var.xml, last change in rev 1.1 -->
-<!-- last change to 'print-r' in en/ tree in rev 1.5 -->
-  <refentry xml:id="function.print-r" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>print_r</refname>
-    <refpurpose>
-     Afişează informaţii despre o variabilă într-un format uşor de înţeles
-    </refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>void</type><methodname>print_r</methodname>
-      <methodparam><type>mixed</type><parameter>expression</parameter></methodparam>
-     </methodsynopsis>
-    <simpara>
-     <function>print_r</function> afişează informaţii espre o variabilă
-     într-un format uşor de citit de către utilizatori. Dacă se pasează
-     un parametru de tip <type>string</type>, <type>integer</type> sau
-     <type>float</type>, va fi afişată chiar valoarea parametrului.
-     Dacă se pasează un parametru de tip <type>array</type>,
-     valorile vor fi prezentate într-o formă care arată cheile şi valorile.
-     Asemănător se întâmplă şi cu tipul <type>object</type>.
-    </simpara>
-    <simpara>
-     De reţinut că <function>print_r</function> va muta pointer-ul tabloului
-     la sfârşit. Trebuie folosită funcţia <function>reset</function> pentru
-     a aduce pointer-ul la început.
-    </simpara>
-     &tip.ob-capture;
-    <para>
-     <informalexample>
-      <programlisting role="php">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.18 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.print-r" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>print_r</refname>
+  <refpurpose>
+   AfiĹeazÄ informaĹŁie lizibilÄ de om despre o variabilÄ
+  </refpurpose>
+ </refnamediv>
+ 
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>mixed</type><methodname>print_r</methodname>
+   <methodparam><type>mixed</type><parameter>expression</parameter></methodparam>
+   <methodparam choice="opt"><type>bool</type><parameter>return</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   <function>print_r</function> afiĹeazÄ informaĹŁia despre o variabilÄ ĂŽntr-un
+   mod care poate fi citit de oameni.  
+  </para>
+  <para>
+   <function>print_r</function>, <function>var_dump</function> Ĺi
+   <function>var_export</function> de asemenea vor afiĹa proprietÄĹŁile
+   protejate Ĺi private ale obiectelor ĂŽn PHP 5. Membrii statici ai
+   claselor nu vor fi afiĹaĹŁi.
+  </para>
+  <para>
+   Ĺ˘ineĹŁi minte cÄ <function>print_r</function> va deplasa indicatorul
+   tabloului spre sfĂ˘rĹit. UtilizaĹŁi <function>reset</function> pentru a-l
+   readuce la ĂŽnceput.
+  </para>
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>expression</parameter></term>
+     <listitem>
+      <para>
+       Expresia pentru a fi afiĹatÄ.
+      </para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><parameter>return</parameter></term>
+     <listitem>
+      <para>
+       DacÄ doriĹŁi sÄ captaĹŁi ceea ce afiĹeazÄ <function>print_r</function>,
+       utilizaĹŁi parametrul <parameter>return</parameter>. DacÄ acest parametru
+       este stabilit ĂŽn &true;, <function>print_r</function> va ĂŽntoarce
+       ceea ce genereazÄ, ĂŽn loc sÄ afiĹeze (ceea ce este implicit).
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   DacÄ se furnizeazÄ un <type>string</type>, <type>integer</type> sau
+   <type>float</type>, ĂŽnsÄĹi valoarea va fi afiĹatÄ. DacÄ este furnizat un
+   <type>array</type>, valorile vor fi prezentate ĂŽntr-un format care aratÄ
+   cheile Ĺi elementele. O notare similarÄ este utilizatÄ pentru tipuri
+   <type>object</type>.
+  </para>
+ </refsect1>
+
+ <refsect1 role="notes">
+  &reftitle.notes;
+  &note.uses-ob;
+ </refsect1>
+
+ <refsect1 role="changelog">
+  &reftitle.changelog;
+  <para>
+   <informaltable>
+    <tgroup cols="2">
+     <thead>
+      <row>
+       <entry>&Version;</entry>
+       <entry>&Description;</entry>
+      </row>
+     </thead>
+     <tbody>
+      <row>
+       <entry>4.3.0</entry>
+       <entry>
+        Parametrul <parameter>return</parameter> a fost adÄugat. DacÄ aveĹŁi
+        nevoie sÄ captaĹŁi ceea ce afiĹeazÄ <function>print_r</function> cu o
+        versiune anterioarÄ a PHP, utilizaĹŁi
+        <link linkend="ref.outcontrol">funcĹŁiile de control al ieĹirilor</link>.
+       </entry>
+      </row>
+      <row>
+       <entry>4.0.4</entry>
+       <entry>
+        Ănainte de PHP 4.0.4, <function>print_r</function> va rula neĂŽncetat
+        dacÄ i se furnizeazÄ un <type>array</type> sau <type>object</type> care
+        conĹŁine o referinĹŁÄ directÄ sau indirectÄ la sine ĂŽnsuĹi. Un exemplu
+        este <literal>print_r($GLOBALS)</literal> deoarece
+        <literal>$GLOBALS</literal> este ĂŽnÄĹi o variabilÄ globalÄ ce conĹŁine
+        o referinĹŁÄ la sine ĂŽnsÄĹi.
+       </entry>
+      </row>
+     </tbody>
+    </tgroup>
+   </informaltable>
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemplu <function>print_r</function></title>
+    <programlisting role="php">
 <![CDATA[
+<pre>
 <?php
-$a = array ('a' => 'măr', 'b' => 'pară', 'c' => array ('x','y','z'));
-print_r($a);
+$a = array ('a' => 'apple', 'b' => 'banana', 'c' => array ('x', 'y', 'z'));
+print_r ($a);
 ?>
+</pre>
 ]]>
-      </programlisting>
-     </informalexample>
-    </para>
-    <para>
-     Care va afişa:
-     <screen>
+    </programlisting>
+    &example.outputs;
+    <screen>
 <![CDATA[
+<pre>
 Array
 (
-    [a] => măr
-    [b] => pară
+    [a] => apple
+    [b] => banana
     [c] => Array
         (
             [0] => x
@@ -57,26 +145,38 @@ Array
             [2] => z
         )
 )
+</pre>
 ]]>
-      </screen>
-     </para>
-    <note>
-     <simpara>
-      La versiunile mai mici decât PHP 4.0.4, <function>print_r</function>
-      va rula la infinit dacă se pasează un <type>array</type> sau un
-      <type>object</type> care conţine o referinţă directă la el însuşi.
-      Un exemplu este <literal>print_r($GLOBALS)</literal> deoarece
-      <literal>$GLOBALS</literal> este o variabilă globală,
-      care conţine o referinţă la ea insăşi.
-     </simpara>
-    </note>
-    <simpara>
-      Mai consultaţi <function>ob_start</function>, <function>var_dump</function>,
-      şi <function>var_export</function>.
-    </simpara>
+    </screen>
+   </example>
+  </para>
+  <para>
+   <example>
+    <title>Exemplu cu parametrul <parameter>return</parameter></title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+$b = array ('m' => 'monkey', 'foo' => 'bar', 'x' => array ('x', 'y', 'z'));
+$results = print_r($b, true); // $results acum conĹŁine ceea ce afiĹeazÄ print_r
+?>
+]]>
+    </programlisting>
+   </example>
+  </para>
+ </refsect1>
 
-   </refsect1>
-  </refentry>
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>ob_start</function></member>
+    <member><function>var_dump</function></member>
+    <member><function>var_export</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
+
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
