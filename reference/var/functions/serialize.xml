@@ -1,78 +1,153 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/var.xml, last change in rev 1.1 -->
-<!-- last change to 'serialize' in en/ tree in rev 1.28 -->
-  <refentry xml:id="function.serialize" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>serialize</refname>
-    <refpurpose>
-     Generează o reprezentare liniară a unei variabile
-    </refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>string</type><methodname>serialize</methodname>
-      <methodparam><type>mixed</type><parameter>value</parameter></methodparam>
-     </methodsynopsis>
-    <simpara>
-     <function>serialize</function> returnează un şir de caractere care conţine
-     reprezentarea liniară a parametrului <parameter>value</parameter>, care
-     poate fi stocată uşor sub această formă.
-    </simpara>
-    <simpara>
-     Este utilă pentru a stoca sau pentru a transmite variabile PHP
-     fără alterarea tipului şi structurii acestora.
-    </simpara>
-   <simpara>
-    Pentru a reveni de la reprezentarea liniară la cea a unei variabile PHP
-    se foloseşte funcţia <function>unserialize</function>.
-    <function>serialize</function> lucrează cu toate tipurile de variabile,
-    mai puţin cu tipul <type>resource</type>.
-    Se poate folosi <function>serialize</function> chiar şi pentru tablouri
-    care conţin referinţe circulare (către sine). Aceste referinţe
-    vor fi şi ele liniarizate şi stocate.
-   </simpara>
-   <note>
-    <para>
-     În PHP 3, proprietăţile obiectelor sunt păstrate, însă metodele
-     se pierd. PHP 4 a eliminat această limitare. Consultaţi şi secţiunea
-     <link linkend="language.oop.serialization">Liniarizarea obiectelor</link>
-     a capitolului <link linkend="language.oop">Clase şi
-     obiecte</link> pentru mai multe informaţii.
-    </para>
-   </note>
-    <para>
-     <example>
-      <title>Exemplu pentru funcţia <function>serialize</function></title>
-      <programlisting role="php">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.15 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.serialize" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>serialize</refname>
+  <refpurpose>GenereazÄ o reprezentare ce poate fi stocatÄ a unei valori</refpurpose>
+ </refnamediv>
+ 
+ <refsect1 role="description">
+  &reftitle.description;
+   <methodsynopsis>
+    <type>string</type><methodname>serialize</methodname>
+    <methodparam><type>mixed</type><parameter>value</parameter></methodparam>
+   </methodsynopsis>
+  <para>
+   GenereazÄ o reprezentare ce poate fi stocatÄ a unei valori.
+  </para>
+  <para>
+   Aceasta este utilÄ pentru pÄstrarea sau interpretarea valorilor PHP fÄrÄ a
+   pierde tipul sau structura lor.
+  </para>
+  <para>
+   Pentru a transforma invers un string serializat ĂŽntr-o valoare PHP, utilizaĹŁi
+   <function>unserialize</function>.  
+  </para>
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>value</parameter></term>
+     <listitem>
+      <para>
+       Valoarea ce trebuie serializatÄ. <function>serialize</function>
+       prelucreazÄ toate tipurile, cu excepĹŁia <type>resource</type>.
+       PuteĹŁi chiar aplica <function>serialize</function> asupra tablourilor ce
+       conĹŁin referinĹŁe la sine ĂŽnsele. ReferinĹŁele circulare din interiorul
+       tabloului/obiectului asupra cÄruia aplicaĹŁi <function>serialize</function>
+       de asemenea vor fi stocate. Orice altÄ referinĹŁÄ va fi pierdutÄ.
+      </para>
+      <para>
+       La serializarea obiectelor, PHP va ĂŽncerca sÄ apeleze funcĹŁia-membru
+       <link linkend="language.oop5.magic">__sleep</link> ĂŽnainte de
+       serializare. Aceasta se efectueazÄ pentru a-i permite obiectului sÄ
+       efectueze orice curÄĹŁiri, etc. ĂŽnainte de a fi serializat. La fel, cĂ˘nd
+       obiectul este restabilit cu ajutorul <function>unserialize</function>
+       funcĹŁia-membru <link linkend="language.oop5.magic">__wakeup</link>
+       este apelatÄ.
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Ăntoarce un string conĹŁinĂ˘nd reprezentarea <parameter>value</parameter> sub
+   formÄ de byte-stream care poate fi stocatÄ oriunde.
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemplu <function>serialize</function></title>
+    <programlisting role="php">
 <![CDATA[
 <?php
-// $session_data conţine un tablou multi-dimensional cu informaţii
-// ale sesiunii pentru utilizatorul curent
-// se foloseşte serialize() pentru a stoca acest tablou
-// intr-o bază de date la încheierea cererii
+// $session_data conĹŁine un tablou multi-dimensional cu informaĹŁie despre
+// sesiune pentru utilizatorul curent. Vom utiliza serialize() pentru a
+// stoca aceastÄ informaĹŁie ĂŽntr-o bazÄ de date dupÄ ĂŽncheierea interpelÄrii.
 
 $conn = odbc_connect("webdb", "php", "chicken");
 $stmt = odbc_prepare($conn,
-            "UPDATE sessions SET data = ? WHERE id = ?");
-$sqldata = array (serialize($session_data), $PHP_AUTH_USER);
+      "UPDATE sessions SET data = ? WHERE id = ?");
+$sqldata = array (serialize($session_data), $_SERVER['PHP_AUTH_USER']);
 if (!odbc_execute($stmt, &$sqldata)) {
     $stmt = odbc_prepare($conn,
-                "INSERT INTO sessions (id, data) VALUES(?, ?)");
+     "INSERT INTO sessions (id, data) VALUES(?, ?)");
     if (!odbc_execute($stmt, &$sqldata)) {
-    // ceva nu a funcţionat cum trebuie
+        /* Ceva nu este ĂŽn regulÄ.. */
     }
 }
+?>
 ]]>
-      </programlisting>
-     </example>
-    </para>
+    </programlisting>
+   </example>
+  </para>
+ </refsect1>
+
+ <refsect1 role="changelog">
+  &reftitle.changelog;
+  <para>
+   <informaltable>
+    <tgroup cols="2">
+     <thead>
+      <row>
+       <entry>&Version;</entry>
+       <entry>&Description;</entry>
+      </row>
+     </thead>
+     <tbody>
+      <row>
+       <entry>4.0.7</entry>
+       <entry>
+        Procesul serializÄrii obiectelor a fost corectat.
+       </entry>
+      </row>
+      <row>
+       <entry>4.0.0</entry>
+       <entry>
+        La serializarea unui obiect, metodele nu mai sunt pierdute. 
+        VÄ rugÄm sÄ accesaĹŁi
+        <link linkend="language.oop.serialization">Serializarea obiectelor</link>
+        pentru informaĹŁii suplimentare.
+       </entry>
+      </row>
+     </tbody>
+    </tgroup>
+   </informaltable>
+  </para>
+ </refsect1>
+
+ <refsect1 role="notes">
+  &reftitle.notes;
+  <note>
    <para>
-    Mai consultaţi: <function>unserialize</function>.
+    Nu este posibil de a serializa obiecte ĂŽncorporate ale PHP.
    </para>
-   </refsect1>
-  </refentry>
+  </note>
+ </refsect1>
+
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>unserialize</function></member>
+    <member><link linkend="language.oop.serialization">Serializarea Obiectelor</link></member>
+   </simplelist>
+  </para>
+ </refsect1>
+
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
