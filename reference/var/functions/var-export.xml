@@ -1,41 +1,105 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/var.xml, last change in rev 1.1 -->
-<!-- last change to 'var-export' in en/ tree in rev 1.6 -->
-  <refentry xml:id="function.var-export" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>var_export</refname>
-    <refpurpose>Afi�eaz� o reprezentare ca �ir de caractere a unei variabile</refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>mixed</type><methodname>var_export</methodname>
-      <methodparam><type>mixed</type><parameter>expression</parameter></methodparam>
-      <methodparam choice="opt"><type>bool</type><parameter>return</parameter></methodparam>
-     </methodsynopsis>
-    <simpara>
-     Aceast� func�ie returneaz� o informa�ie structurat� despre o variabil�.
-     Este similar� func�iei <function>var_dump</function>, cu excep�ia faptului
-     c� reprezentarea returnat� este un cod PHP valid.
-    </simpara>
-    <simpara>
-     Dac� se folose�te cel de-al doilea parametru optional cu valoarea &true;
-     se poate returna aceast� reprezentare pentru a fi atribuit� unei variabile.
-    </simpara>
-    <simpara>
-     Compara�i <function>var_export</function> cu
-     <function>var_dump</function>.
-    </simpara>
-    <para>
-     <informalexample>
-      <programlisting role="php">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.15 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<!-- splitted from ./en/functions/var.xml, last change in rev 1.6 -->
+<refentry xml:id="function.var-export" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>var_export</refname>
+  <refpurpose>Afişează sau întoarce o reprezentare string, ce poate fi prelucrată, a unei variabile</refpurpose>
+ </refnamediv>
+
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>mixed</type><methodname>var_export</methodname>
+   <methodparam><type>mixed</type><parameter>expression</parameter></methodparam>
+   <methodparam choice="opt"><type>bool</type><parameter>return</parameter></methodparam>
+  </methodsynopsis>
+  <simpara>
+   <function>var_export</function> poate obţine informaţia structurată despre
+   variabila dată. Este similară cu <function>var_dump</function> cu o singură
+   excepţie: reprezentarea întoarsă este cod PHP valid.
+  </simpara>
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>expression</parameter></term>
+     <listitem>
+      <para>
+       Variabila pe care doriţi să o exportaţi.
+      </para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><parameter>return</parameter></term>
+     <listitem>
+      <para>
+       Dacă este utilizat şi stabilit în &true;, <function>var_export</function>
+       va întoarce reprezentarea variabilei în loc să o afişeze.
+      </para>
+      &note.uses-ob;
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Întoarce reprezentarea variabilei când parametrul <parameter>return</parameter>
+   este utilizat şi evaluează în &true;. În caz contrar, această funcţie va
+   întoarce &null;.
+  </para>
+ </refsect1>
+
+ <refsect1 role="changelog">
+  &reftitle.changelog;
+  <para>
+   <informaltable>
+    <tgroup cols="2">
+     <thead>
+      <row>
+       <entry>&Version;</entry>
+       <entry>&Description;</entry>
+      </row>
+     </thead>
+     <tbody>
+      <row>
+       <entry>5.1.0</entry>
+       <entry>
+        Posibilitatea de a exporta clase şi tablouri conţinând clase utilizând
+        metoda magică
+        <link linkend="language.oop5.magic.set-state">__set_state</link>.
+       </entry>
+      </row>
+     </tbody>
+    </tgroup>
+   </informaltable>
+  </para>
+ </refsect1>
+ 
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemple <function>var_export</function></title>
+    <programlisting role="php">
 <![CDATA[
 <?php
 $a = array (1, 2, array ("a", "b", "c"));
-var_export ($a);
-
-/* afi�eaz�:
+var_export($a);
+?>
+]]>
+    </programlisting>
+    &example.outputs;
+    <screen>
+<![CDATA[
 array (
   0 => 1,
   1 => 2,
@@ -46,22 +110,126 @@ array (
     2 => 'c',
   ),
 )
-*/
+]]>
+    </screen>
+    <programlisting role="php">
+<![CDATA[
+<?php
 
 $b = 3.1;
-$v = var_export($b, TRUE);
+$v = var_export($b, true);
 echo $v;
 
-/* afi�eaz�:
-3.1
-*/
 ?>
 ]]>
-      </programlisting>
-     </informalexample>
-    </para>
-   </refsect1>
-  </refentry>
+    </programlisting>
+    &example.outputs;
+    <screen>
+<![CDATA[
+3.1
+]]>
+    </screen>
+   </example>
+  </para>
+  <para>
+   <example>
+    <title>Exportarea claselor începând cu PHP 5.1.0</title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+class A { public $var; }
+$a = new A;
+$a->var = 5;
+var_export($a);
+?>
+]]>
+    </programlisting>
+    &example.outputs;
+    <screen>
+<![CDATA[
+A::__set_state(array(
+   'var' => 5,
+))
+]]>
+    </screen>
+   </example>
+  </para>
+  <para>
+   <example>
+    <title>Utilizarea <link linkend="language.oop5.magic.set-state">__set_state</link> (începând cu PHP 5.1.0)</title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+class A
+{
+    public $var1;
+    public $var2;
+
+    public static function __set_state($an_array)
+    {
+        $obj = new A;
+        $obj->var1 = $an_array['var1'];
+        $obj->var2 = $an_array['var2'];
+        return $obj;
+    }
+}
+
+$a = new A;
+$a->var1 = 5;
+$a->var2 = 'foo';
+
+eval('$b = ' . var_export($a, true) . ';'); // $b = A::__set_state(array(
+                                            //    'var1' => 5,
+                                            //    'var2' => 'foo',
+                                            // ));
+var_dump($b);
+?>
+]]>
+    </programlisting>
+    &example.outputs;
+    <screen>
+<![CDATA[
+object(A)#2 (2) {
+  ["var1"]=>
+  int(5)
+  ["var2"]=>
+  string(3) "foo"
+}
+]]>
+    </screen>
+   </example>
+  </para>
+ </refsect1>
+
+ <refsect1 role="notes">
+  &reftitle.notes;
+  <note>
+   <para>
+    Variabile de tip <type>resource</type> nu pot fi exportate cu această
+    funcţie.
+   </para>
+  </note>
+  <note>
+   <para>
+    <function>var_export</function> nu prelucrează referinţe circulare, deoarece
+    ar fi aproape imposibil de a genera cod PHP prelucrabil în acest caz. Dacă
+    doriţi să faceţi ceva cu reprezentarea deplină a unui tablou sau obiect,
+    utilizaţi <function>serialize</function>.
+   </para>
+  </note>
+ </refsect1>
+
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>print_r</function></member>
+    <member><function>serialize</function></member>
+    <member><function>var_dump</function></member>
+   </simplelist>
+  </para>  
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
