@@ -1,102 +1,186 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/var.xml, last change in rev 1.1 -->
-<!-- last change to 'unserialize' in en/ tree in rev 1.2 -->
-  <refentry xml:id="function.unserialize" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>unserialize</refname>
-    <refpurpose>
-     Creează o variabilă PHP dintr-o reprezentare liniară
-    </refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>mixed</type><methodname>unserialize</methodname>
-      <methodparam><type>string</type><parameter>str</parameter></methodparam>
-     </methodsynopsis>
-    <simpara>
-     <function>unserialize</function> primeşte ca parametru o singură variabilă
-     liniarizată (vezi <function>serialize</function>) şi o converteşte
-     "înapoi" într-o variabilă PHP. Este returnată valoarea convertită, care poate 
-     să aibă tipurile <type>integer</type>, <type>float</type>,
-     <type>string</type>, <type>array</type> sau <type>object</type>.
-    </simpara>
-    <note>
-     <para>
-      Este posibilă setarea unei funcţii callback ce va fi apelată
-      dacă o clasă nedefinită trebuie instanţiată în timpul conversiei din
-      forma liniară (pentru a preveni preluarea incompletă a unui <type>object</type>).
-      Se poate folosi &php.ini;, <function>ini_set</function> sau un fisier .htaccess
-      pentru a defini 'unserialize_callback_func'.
-      De câte ori o clasă trebuie instanţiată, se va apela această funcţie.
-      Pentru a dezactiva această facilitate, trebuie doar să ştergeţi această
-      setare.
-     </para>
-    </note>
-    <para>
-     <example>
-      <title>Exemplu unserialize_callback_func</title>
-      <programlisting role="php">
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.23 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.unserialize" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>unserialize</refname>
+  <refpurpose>
+   CreeazÄ o valoare PHP dintr-o reprezentare stocatÄ
+  </refpurpose>
+ </refnamediv>
+ 
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>mixed</type><methodname>unserialize</methodname>
+   <methodparam><type>string</type><parameter>str</parameter></methodparam>
+  </methodsynopsis>
+  <simpara>
+   <function>unserialize</function> preia o singurÄ variabilÄ serializatÄ Ĺi o
+   converteĹte invers ĂŽntr-o valoare PHP.  
+  </simpara>
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>str</parameter></term>
+     <listitem>
+      <para>
+       String-ul serializat.
+      </para>
+      <para>
+       DacÄ variabila ce se deserializeazÄ este un obiect, dupÄ ce se
+       reconstituie cu succes, PHP automat va ĂŽncerca sÄ apeleze funcĹŁia-membru
+       <function>__wakeup</function> (dacÄ aceasta existÄ).
+      </para>
+      <para>
+       <note>
+        <title>directiva unserialize_callback_func</title>
+        <para>
+         Este posibil de a stabili o funcĹŁie de apel invers ce se va apela cĂ˘nd
+         o clasÄ nedefinitÄ trebuie instanĹŁiatÄ ĂŽn timpul deserializÄrii.
+         (pentru a preveni obĹŁinerea unui <type>object</type> incomplet
+         "__PHP_Incomplete_Class".) UtilizaĹŁi &php.ini;,
+         <function>ini_set</function> sau &htaccess; pentru a defini
+         'unserialize_callback_func'. De fiecare datÄ cĂ˘nd o clasÄ nedefinitÄ
+         va trebui instanĹŁiatÄ, aceastÄ funcĹŁie va fi apelatÄ. Pentru a
+         dezactiva aceastÄ facilitate lÄsaĹŁi aceastÄ opĹŁiune vidÄ.
+        </para>
+       </note>
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Valoarea convertitÄ este ĂŽntoarsÄ, Ĺi poate fi de tip <type>boolean</type>,
+   <type>integer</type>, <type>float</type>, <type>string</type>,
+   <type>array</type> sau <type>object</type>.
+  </para>
+  <para>
+   Ăn caz cÄ string-ul furnizat nu poate fi deserializat se va ĂŽntoarce &false;
+   Ĺi se va emite o eroare <literal>E_NOTICE</literal>.
+  </para>
+ </refsect1>
+
+ <refsect1 role="changelog">
+  &reftitle.changelog;
+  <para>
+   <informaltable>
+    <tgroup cols="2">
+     <thead>
+      <row>
+       <entry>&Version;</entry>
+       <entry>&Description;</entry>
+      </row>
+     </thead>
+     <tbody>
+      <row>
+       <entry>4.2.0</entry>
+       <entry>
+        Directiva unserialize_callback_func a devenit disponibilÄ.
+       </entry>
+      </row>
+      <row>
+       <entry>4.0.0</entry>
+       <entry>
+        La serializarea unui obiect metodele nu mai sunt pierdute. 
+        VÄ rugÄm sÄ accesaĹŁi
+        <link linkend="language.oop.serialization">Serializarea Obiectelor</link>
+        pentru informaĹŁii suplimentare.
+       </entry>
+      </row>
+     </tbody>
+    </tgroup>
+   </informaltable>
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemplu <function>unserialize</function></title>
+    <programlisting role="php">
 <![CDATA[
 <?php
-$serialized_object='O:1:"a":1:{s:7:"valoare";s:3:"100";}';
+// Aici vom utiliza unserialize() pentru a ĂŽncÄrca datele sesiunii ĂŽn tabloul
+// $session_data din string-ul selectat dintr-o bazÄ de date.
+// Acest exemplu ĂŽl complementeazÄ pe cel descris ĂŽn funcĹŁia serialize().
 
-ini_set('unserialize_callback_func','mycallback'); // setează callback_function
-
-function mycallback($classname) {
-    // includeţi fişierul care conţine definiţia clasei
-    // se foloseşte $classname pentru a decide ce definiţie de clasă este vizată
-}
-?>
-]]>
-      </programlisting>
-     </example>
-    </para>
-    <note>
-     <para>
-      În PHP 3, metodele nu sunt păstrate când se foloseşte unserialize pentru un obiect.
-      PHP 4 elimină această limitare şi restaurează stât proprietăţile cât şi metodele.
-      Consultaţi secţiunea <link linkend="language.oop.serialization">Serializarea
-      obiectelor</link> a capitolului <link linkend="language.oop">Clase şi obiecte</link>
-      pentru mai multe informaţii.
-     </para>
-    </note>
-    <para>
-     <example>
-      <title>Exemplu pentru <function>unserialize</function></title>
-      <programlisting role="php">
-<![CDATA[
-<?php
-// Aici se foloseşte unserialize() pentru a încărca datele unei sesiuni
-// în $session_data dintr-un string selectat dintr-o bază de date.
-// Acest exemplu este complementar celui pentru funcţia
-// serialize.
-
-$conn = odbc_connect ("webdb", "php", "chicken");
-$stmt = odbc_prepare ($conn, "SELECT data FROM sessions WHERE id = ?");
-$sqldata = array ($PHP_AUTH_USER);
-if (!odbc_execute ($stmt, &$sqldata) || !odbc_fetch_into ($stmt, &$tmp)) {
-    // se iniţializează cu tablou vid în cazul in care execute sau fetch nu funcţionează
+$conn = odbc_connect("webdb", "php", "chicken");
+$stmt = odbc_prepare($conn, "SELECT data FROM sessions WHERE id = ?");
+$sqldata = array($_SERVER['PHP_AUTH_USER']);
+if (!odbc_execute($stmt, &$sqldata) || !odbc_fetch_into($stmt, &$tmp)) {
+    // dacÄ execute sau fetch eĹueazÄ, se iniĹŁializeazÄ un tablou vid
     $session_data = array();
 } else {
-    // acum datele liniarizate sunt în $tmp[0].
-    $session_data = unserialize ($tmp[0]);
-    if (!is_array ($session_data)) {
-    // dacă ceva nu merge cum trebuie, se iniţializează cu tablou vid
-    $session_data = array();
+    // acum trebuie sÄ avem datele serializate ĂŽn $tmp[0].
+    $session_data = unserialize($tmp[0]);
+    if (!is_array($session_data)) {
+        // ceva nu este ĂŽn regulÄ, iniĹŁializeazÄ ĂŽntr-un tablou vid
+        $session_data = array();
     }
 }
 ?>
 ]]>
-      </programlisting>
-     </example>
-    </para>
+    </programlisting>
+   </example>
+  </para>
+  <para>
+   <example>
+    <title>Exemplu unserialize_callback_func</title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+$serialized_object='O:1:"a":1:{s:5:"value";s:3:"100";}';
+
+// directiva unserialize_callback_func este disponibilÄ ĂŽncepĂ˘nd cu PHP 4.2.0
+ini_set('unserialize_callback_func', 'mycallback'); // stabileĹte funcĹŁia de apel invers
+
+function mycallback($classname) 
+{
+    // doar includeĹŁi un fiĹier ce conĹŁine definiĹŁia clasei
+    // veĹŁi lÄsa ca $classname sÄ-Ĺi dea seama care definiĹŁie a clasei este necesarÄ
+}
+?>
+]]>
+    </programlisting>
+   </example>
+  </para>
+ </refsect1>
+
+ <refsect1 role="notes">
+  &reftitle.notes;
+  <warning>
    <para>
-    Mai consultaţi: <function>serialize</function>.
+    &false; este ĂŽntors atĂ˘t ĂŽn cazul unei erori, cĂ˘t Ĺi ĂŽn cazul deserializÄrii
+    unei valori &false; serializate. Este posibil de a intercepta acest caz
+    special comparĂ˘nd <parameter>str</parameter> cu
+    <literal>serialize(false)</literal> sau interceptĂ˘nd eroarea
+    <literal>E_NOTICE</literal> emisÄ.
    </para>
-   </refsect1>
-  </refentry>
+  </warning>
+ </refsect1>
+
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>serialize</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
+
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
