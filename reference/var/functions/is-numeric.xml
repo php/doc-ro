@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.4 $ -->
-<!-- EN-Revision: 1.6 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.5 $ -->
+<!-- EN-Revision: 1.7 Maintainer: simionea Status: translated -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.is-numeric" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -9,6 +9,7 @@
    Determină dacă o variabilă este un număr sau un string numeric
   </refpurpose>
  </refnamediv>
+
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
@@ -24,6 +25,7 @@
    exponenţială.
   </para>
  </refsect1>
+
  <refsect1 role="parameters">
   &reftitle.parameters;
   <para>
@@ -39,6 +41,7 @@
    </variablelist>
   </para>
  </refsect1>
+
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
@@ -46,6 +49,42 @@
    numeric, &false; în caz contrar.
   </para>
  </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemple <function>is_numeric</function></title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+$tests = Array(
+		"42", 
+		1337, 
+		"1e4", 
+		"non numeric", 
+		Array(), 
+		9.1
+		);
+
+foreach($tests as $element)
+{
+	if(is_numeric($element))
+	{
+		echo "'{$element}' este numeric", PHP_EOL;
+	}
+	else
+	{
+		echo "'{$element}' NU este numeric", PHP_EOL;
+	}
+}
+?>
+]]>
+    </programlisting>
+   </example>
+  </para>
+ </refsect1>
+
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>

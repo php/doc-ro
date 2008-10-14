@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.4 $ -->
-<!-- EN-Revision: 1.8 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.5 $ -->
+<!-- EN-Revision: 1.9 Maintainer: simionea Status: translated -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.is-null" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -39,6 +39,33 @@
   <para>
    Întoarce &true; dacă <parameter>var</parameter> este <type>null</type>,
    &false; în caz contrar.
+  </para>
+ </refsect1>
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemplu <function>is_null</function></title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+
+error_reporting(E_ALL);
+
+$foo = NULL;
+var_dump(is_null($inexistent), is_null($foo));
+
+?>
+]]>
+    </programlisting>
+    <screen>
+<![CDATA[
+Notice: Undefined variable: inexistent in ...
+bool(true)
+bool(true)
+]]>
+    </screen>
+   </example>
   </para>
  </refsect1>
  <refsect1 role="seealso">
