@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.231 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.232 Maintainer: simionea Status: translated -->
 <!-- Keep 'em sorted -->
 
 <!-- Notes -->
@@ -1062,3 +1062,7 @@ versiunea 2.0.0. Implementări alternative sunt disponibile utilizând
 <!ENTITY xmlreader.libxml20620.note '<caution><para>Această funcţie este
 disponibilă numai când PHP este compilat cu libxml 20620 sau ulterioară.
 </para></caution>'>
+
+<!-- inotify -->
+<!ENTITY inotify.instance.description 'Resursa întoarsă de
+<function>inotify_init</function>'>

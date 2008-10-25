@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.24 $ -->
-<!-- EN-Revision: 1.76 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.25 $ -->
+<!-- EN-Revision: 1.77 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&php.ini; directives</title>
@@ -610,7 +610,7 @@
        <entry><link linkend="ini.define-syslog-variables">define_syslog_variables</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry></entry>
+       <entry>Eliminat în PHP 6.0.0.</entry>
       </row>
       <row>
        <entry>detect_unicode</entry>
