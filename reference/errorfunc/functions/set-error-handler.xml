@@ -1,133 +1,319 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/errorfunc.xml, last change in rev 1.2 -->
-<!-- last change to 'set-error-handler' in en/ tree in rev 1.1 -->
-  <refentry xml:id="function.set-error-handler" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>set_error_handler</refname>
-    <refpurpose>
-     Setează o funcţie de tratare a erorilor definită de utilizator
-    </refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>string</type><methodname>set_error_handler</methodname>
-      <methodparam><type>string</type><parameter>error_handler</parameter></methodparam>
-     </methodsynopsis>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.39 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.set-error-handler" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>set_error_handler</refname>
+  <refpurpose>StabileĹte o funcĹŁie definitÄ de utilizator pentru prelucrarea erorilor</refpurpose>
+ </refnamediv>
+
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>mixed</type><methodname>set_error_handler</methodname>
+   <methodparam><type>callback</type><parameter>error_handler</parameter></methodparam>
+   <methodparam choice="opt"><type>int</type><parameter>error_types</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   StabileĹte o funcĹŁie a utilizatorului (<parameter>error_handler</parameter>)
+   pentru a prelucra erorile ĂŽntr-un script.
+  </para>
+  <para>
+   AceastÄ funcĹŁie poate fi utilizatÄ pentru definirea propriului dumneavoastrÄ
+   mod de a prelucra erorile ĂŽn timpul rulÄrii, spre exemplu ĂŽn aplicaĹŁii ĂŽn
+   care este nevoie de a efectua curÄĹŁirea datelor / fiĹierelor atunci cĂ˘nd
+   survine o eroare criticÄ, sau cĂ˘nd aveĹŁi nevoie sÄ declanĹaĹŁi o eroare ĂŽn
+   anumite circumstanĹŁe (utilizĂ˘nd <function>trigger_error</function>).
+  </para>
+  <para>
+   Este important de a ĹŁine minte cÄ funcĹŁia standardÄ de prelucrare a erorii a
+   PHP este ocolitÄ complet. SetÄrile <function>error_reporting</function> nu
+   vor avea nici un efect Ĺi funcĹŁia dumneavoastrÄ de prelucrare a erorii va fi
+   apelatÄ ĂŽn orice caz - ĂŽnsÄ puteĹŁi totuĹi citi valoarea curentÄ a
+   <link linkend="ini.error-reporting">error_reporting</link> Ĺi sÄ acĹŁionaĹŁi
+   corespunzÄtor. MeritÄ de menĹŁionat cÄ aceastÄ valoare va fi 0 dacÄ
+   instrucĹŁiunea care a cauzat eroarea a fost prefixatÄ cu
+   <link linkend="language.operators.errorcontrol">operatorul de
+   control al erorii @</link>.
+  </para>
+  <para>
+   De asemenea observaĹŁi ca este responsabilitatea dumneavoastrÄ sÄ efectuaĹŁi
+   <function>die</function> dacÄ este necesar. DacÄ funcĹŁia de prelucrare a
+   erorii ĂŽntoarce controlul execuĹŁiei, execuĹŁia scriptului continuÄ cu
+   urmÄtoarea instrucĹŁiune dupÄ acea care a cauzat eroarea.
+  </para>
+  <para>
+   UrmÄtoarele tipuri de erori nu pot fi prelucrate de o funcĹŁie definitÄ de
+   utilizator: <constant>E_ERROR</constant>, <constant>E_PARSE</constant>,
+   <constant>E_CORE_ERROR</constant>, <constant>E_CORE_WARNING</constant>,
+   <constant>E_COMPILE_ERROR</constant>, <constant>E_COMPILE_WARNING</constant>
+   Ĺi majoritatea <constant>E_STRICT</constant> ce survin ĂŽn fiĹier, unde
+   <function>set_error_handler</function> este apelat.
+  </para>
+  <para>
+   DacÄ erorile survin ĂŽnainte de execuĹŁia script-ului (de ex. la ĂŽncÄrcarea
+   fiĹierelor), funcĹŁiile proprii de prelucrare a erorilor nu pot fi apelate,
+   deoarece ĂŽncÄ nu sunt ĂŽnregistrate la acel moment.
+  </para>
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>error_handler</parameter></term>
+     <listitem>
+      <para>
+       FuncĹŁia utilizatorului trebuie sÄ accepte doi parametri: codul erorii
+       Ĺi un string ce descrie eroarea. Apoi sunt trei parametri opĹŁionali ce
+       pot fi furnizaĹŁi: denumirea fiĹierului ĂŽn care a survenit eroarea,
+       numÄrul liniei ĂŽn care a survenit eroarea Ĺi contextul ĂŽn care a
+       survenit eroarea (un tablou ce indicÄ spre tabelul de simboluri activ
+       la momentul apariĹŁiei erorii). FuncĹŁia poate fi definitÄ ca:
+      </para>
+      <para>
+       <methodsynopsis>
+        <methodname><replaceable>handler</replaceable></methodname>
+        <methodparam><type>int</type><parameter>errno</parameter></methodparam>
+        <methodparam><type>string</type><parameter>errstr</parameter></methodparam>
+        <methodparam choice="opt"><type>string</type><parameter>errfile</parameter></methodparam>
+        <methodparam choice="opt"><type>int</type><parameter>errline</parameter></methodparam>
+        <methodparam choice="opt"><type>array</type><parameter>errcontext</parameter></methodparam>
+       </methodsynopsis>
+       <variablelist>
+        <varlistentry>
+         <term><parameter>errno</parameter></term>
+         <listitem>
+          <simpara>
+           Primul parametru, <parameter>errno</parameter>, conĹŁine nivelul
+           erorii (tip integer).
+          </simpara>
+         </listitem>
+        </varlistentry>
+        <varlistentry>
+         <term><parameter>errstr</parameter></term>
+         <listitem>
+          <simpara>
+           Al doilea parametru, <parameter>errstr</parameter>, conĹŁine mesajul
+           de eroare (tip string).
+          </simpara>
+         </listitem>
+        </varlistentry>
+        <varlistentry>
+         <term><parameter>errfile</parameter></term>
+         <listitem>
+          <simpara>
+           Al treilea parametru opĹŁional, <parameter>errfile</parameter>,
+           conĹŁine denumirea fiĹierului ĂŽn care a avut loc eroarea (tip string).
+          </simpara>
+         </listitem>
+        </varlistentry>
+        <varlistentry>
+         <term><parameter>errline</parameter></term>
+         <listitem>
+          <simpara>
+           Al patrulea parametru opĹŁional, <parameter>errline</parameter>,
+           conĹŁine numÄrul liniei unde a avut loc eroarea (tip integer).
+          </simpara>
+         </listitem>
+        </varlistentry>
+        <varlistentry>
+         <term><parameter>errcontext</parameter></term>
+         <listitem>
+          <simpara>
+           Al cincilea parametru opĹŁional, <parameter>errcontext</parameter>,
+           este un tablou ce indicÄ spre tabelul de simboluri activ la momentul
+           cĂ˘nd a avut loc eroarea. Cu alte cuvinte,
+           <parameter>errcontext</parameter> va conĹŁine un tablou cu toate
+           variabilele ce au existat ĂŽn contextul ĂŽn care s-a produs eroarea.
+           FuncĹŁia de prelucrare a erorii definitÄ de utilizator nu trebuie sÄ
+           modifice contextul erorii.
+          </simpara>
+         </listitem>
+        </varlistentry>
+       </variablelist>
+      </para>
+      <para>
+       DacÄ funcĹŁia ĂŽntoarce &false;, atunci funcĹŁia normalÄ de gestiune a
+       erorii continuÄ.
+      </para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><parameter>error_types</parameter></term>
+     <listitem>
+      <para>
+       Poate fi utilizat pentru a masca declanĹarea funcĹŁiei
+       <parameter>error_handler</parameter> ĂŽn mod asemÄnÄtor cum setarea ini
+       <link linkend="ini.error-reporting">error_reporting</link> controleazÄ
+       care erori sunt afiĹate. FÄrÄ aceastÄ mascÄ stabilitÄ
+       <parameter>error_handler</parameter> va fi apelatÄ la orice eroare,
+       indiferent de setÄrile
+       <link linkend="ini.error-reporting">error_reporting</link>.
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Ăntoarce un string conĹŁinĂ˘nd funcĹŁia de prelucrare a erorii definitÄ
+   anterior (dacÄ existÄ), sau &null; ĂŽn caz de eroare. DacÄ funcĹŁia precedentÄ
+   de prelucrare a erorii era o metodÄ a unei clase, aceastÄ funcĹŁie va
+   ĂŽntoarce un tablou indexat, incluzĂ˘nd clasa Ĺi denumirea metodei.
+  </para>
+ </refsect1>
+
+ <refsect1 role="changelog">
+  &reftitle.changelog;
+  <para>
+   <informaltable>
+    <tgroup cols="2">
+     <thead>
+      <row>
+       <entry>&Version;</entry>
+       <entry>&Description;</entry>
+      </row>
+     </thead>
+     <tbody>
+      <row>
+       <entry>5.2.0</entry>
+       <entry>
+        FuncĹŁia de prelucrare a erorii trebuie sÄ ĂŽntoarcÄ &false; pentru a
+        popula <varname>$php_errormsg</varname>.
+       </entry>
+      </row>
+      <row>
+       <entry>5.0.0</entry>
+       <entry>
+        A fost introdus parametrul <parameter>error_types</parameter>.
+       </entry>
+      </row>
+      <row>
+       <entry>4.3.0</entry>
+       <entry>
+        Ăn locul denumirii funcĹŁiei, poate fi furnizat de asemenea Ĺi un tablou
+        conĹŁinĂ˘nd o referinĹŁÄ la un obiect Ĺi denumirea unei metode ĂŽn
+        parametrul <parameter>error_handler</parameter>.
+       </entry>
+      </row>
+      <row>
+       <entry>4.0.2</entry>
+       <entry>
+        Au fost introduĹi trei parametri opĹŁionali pentru funcĹŁia
+        utilizatorului <parameter>error_handler</parameter>. AceĹtia sunt
+        denumirea fiĹierului, numÄrul liniei Ĺi contextul.
+       </entry>
+      </row>
+     </tbody>
+    </tgroup>
+   </informaltable>
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Controlul erorilor cu <function>set_error_handler</function> Ĺi <function>trigger_error</function></title>
     <para>
-     Setează o funcţie utilizator (<parameter>error_handler</parameter>) pentru gestionarea
-     erorilor într-un script. Returnează funcţia anterioară de gestiune (dacă există),
-     sau &false; în cazul unei erori. Această funcţie vă permite definirea propriului mod
-     de tratare a erorilor la execuţie, de exemplu în aplicaţii în care
-     este nevoie de refacerea unor date/fişiere când apare o eroare critică,
-     sau este necesară declanşarea unei erori dacă sunt îndeplinite anumite condiţii
-     (folosind <function>trigger_error</function>).
+     Exemplul ce urmeazÄ demonstreazÄ prelucrarea excepĹŁiilor interne prin
+     generarea erorilor Ĺi prelucrarea lor cu ajutorul unei funcĹŁii definite de
+     utilizator:
     </para>
-    <para>
-     Funcţia definită de utilizator trebuie să accepte doi parametri: codul de eroare
-     şi un şir de caractere care descrie eroarea. Începând cu versiunea PHP 4.0.2 sunt
-     acceptaţi încă trei parametri opţionali: numele fişierului în care a apărut eroarea,
-     numărul liniei la care s-a produs această eroare şi contextul în care ea a apărut
-     (un tablou care indică tabela de simboluri activă în punctul în care a apărut eroarea).
-    </para>
-    <para>
-     Mai jos este exemplificată tratarea unei excepţii interne prin declanşarea erorilor
-     şi tratarea lor cu o funcţie definită de utilizator:
-    </para>
-    <para>
-     <example>
-      <title>
-       Tratarea erorilor cu ajutorul funcţiilor <function>set_error_handler</function> şi
-       <function>trigger_error</function>
-      </title>
-      <programlisting role="php">
+    <programlisting role="php">
 <![CDATA[
 <?php
-// redefinirea constantelor de eroare - doar în PHP 4
-define ('FATAL',   E_USER_ERROR);
-define ('ERROR',   E_USER_WARNING);
-define ('WARNING', E_USER_NOTICE);
-
-// setarea nivelului de raportare a erorilor pentru acest script
-error_reporting(FATAL | ERROR | WARNING);
-
-// funcţia de tratare a erorilor
-function myErrorHandler ($errlevel, $errstr, $errfile, $errline)
+// FuncĹŁia de prelucrare a erorilor
+function myErrorHandler($errno, $errstr, $errfile, $errline)
 {
-    switch ($errlevel) {
-    case FATAL:
-        echo "<b>FATAL</b> [$errlevel] $errstr<br>\n" .
-            "  Eroare fatala la linia $errline in fisierul $errfile,"
-            "  PHP " . PHP_VERSION . " (" . PHP_OS . ")<br>\n";
-            "Abandon...<br>\n";
+    switch ($errno) {
+    case E_USER_ERROR:
+        echo "<b>My ERROR</b> [$errno] $errstr<br />\n";
+        echo "  Fatal error on line $errline in file $errfile";
+        echo ", PHP " . PHP_VERSION . " (" . PHP_OS . ")<br />\n";
+        echo "Aborting...<br />\n";
         exit(1);
         break;
-    case ERROR:
-        echo "<b>ERROR</b> [$errlevel] $errstr<br>\n";
+
+    case E_USER_WARNING:
+        echo "<b>My WARNING</b> [$errno] $errstr<br />\n";
         break;
-    case WARNING:
-        echo "<b>WARNING</b> [$errlevel] $errstr<br>\n";
+
+    case E_USER_NOTICE:
+        echo "<b>My NOTICE</b> [$errno] $errstr<br />\n";
         break;
+
     default:
-        echo "Eroare de tip necunoscut: [$errlevel] $errstr<br>\n";
+        echo "Unknown error type: [$errno] $errstr<br />\n";
         break;
     }
+
+    /* Nu executa funcĹŁia internÄ a PHP de prelucrare a erorii */
+    return true;
 }
 
-// funcţie pentru testarea tratării erorilor
-function scale_by_log ($vect, $scale)
+// FuncĹŁie pentru a verifica prelucrarea erorilor
+function scale_by_log($vect, $scale)
 {
     if (!is_numeric($scale) || $scale <= 0) {
-        trigger_error("log(x) pentru x <= 0 nu este definita, ati folosit: scale = $scale", FATAL);
+        trigger_error("log(x) for x <= 0 is undefined, you used: scale = $scale", E_USER_ERROR);
     }
+
     if (!is_array($vect)) {
-        trigger_error("Tablou de intrare incorect, trebuia un tablou de valori", ERROR);
+        trigger_error("Incorrect input vector, array of values expected", E_USER_WARNING);
         return null;
     }
-    for ($i = 0; $i < count($vect); $i++) {
-        if (!is_numeric($vect[$i])) {
-            trigger_error("Valoarea de la pozitia $i nu este un numar, se va folosi 0 (zero)", WARNING);
+
+    $temp = array();
+    foreach($vect as $pos => $value) {
+        if (!is_numeric($value)) {
+            trigger_error("Value at position $pos is not a number, using 0 (zero)", E_USER_NOTICE);
+            $value = 0;
         }
-        $temp[$i] = log($scale) * $vect[$i];
+        $temp[$pos] = log($scale) * $value;
     }
+
     return $temp;
 }
 
-// setarea gestionarului de erori definit de utilizator
+// Se stabileĹte funcĹŁia de prelucrare a erorilor definitÄ de utilizator
 $old_error_handler = set_error_handler("myErrorHandler");
 
-// se defineşte un tablou cu un element non-numeric
-// şi se declanşează eroare
-echo "tablou a<pre>\n";
+// declanĹÄm unele erori, ĂŽn primul rĂ˘nd definim un tablou mixt cu un element non-numeric
+echo "vector a\n";
 $a = array(2, 3, "foo", 5.5, 43.3, 21.11);
 print_r($a);
-echo "</pre>";
 
-// se generează al doilea tablou şi se declanşează o avertizare
-echo "----<br>\ntablou b - o atentionare (b = log(PI) * a)\n<pre>";
+// acum generÄm urmÄtorul tablou
+echo "----\nvector b - a notice (b = log(PI) * a)\n";
+/* Valoarea din poziĹŁia $pos nu este un numÄr, se va utiliza 0 (zero) */
 $b = scale_by_log($a, M_PI);
 print_r($b);
-echo "</pre>";
 
-// se transmite un şir de caractere în loc de un tablou
-echo "----<br>\ntablou c - eroare\n<pre>";
-$c = scale_by_log("nu este tablou", 2.3);
-var_dump($c);
-echo "</pre>\n";
+// aici este o problemÄ: se transmite un string ĂŽn loc de un array
+echo "----\nvector c - a warning\n";
+/* Vector de intrare incorect, se aĹteaptÄ un tablou de valori */
+$c = scale_by_log("not array", 2.3);
+var_dump($c); // NULL
 
-// o eroare critica: nu este definit log() pentru zero sau numere negative
-echo "----<br>\ntablou d - eroare fatala\n";
+// aceasta este o eroare criticÄ, logaritmul lui zero, sau a unui numÄr negativ este nedefinit
+echo "----\nvector d - fatal error\n";
+/* log(x) pentru x <= 0 nu este definit, aĹŁi utilizat: scale = $scale" */
 $d = scale_by_log($a, -2.5);
+var_dump($d); // NiciodatÄ nu se ajunge aici
 ?>
 ]]>
-      </programlisting>
-     </example>
-     Rularea script-ului va produce:
-     <informalexample>
-      <programlisting>
+    </programlisting>
+    &example.outputs.similar;
+    <screen>
 <![CDATA[
-tablou a
+vector a
 Array
 (
     [0] => 2
@@ -137,10 +323,9 @@ Array
     [4] => 43.3
     [5] => 21.11
 )
-
 ----
-tablou b - o atentionare (b = log(PI) * a) 
-WARNING [1024] Valoarea de la pozitia 2 nu este un numar, se va folosi 0 (zero)
+vector b - a notice (b = log(PI) * a)
+<b>My NOTICE</b> [1024] Value at position 2 is not a number, using 0 (zero)<br />
 Array
 (
     [0] => 2.2894597716988
@@ -150,42 +335,34 @@ Array
     [4] => 49.566804057279
     [5] => 24.165247890281
 )
-
 ----
-tablou c - eroare 
-ERROR [512] Tablou de intrare incorect, trebuia un tablou de valori
+vector c - a warning
+<b>My WARNING</b> [512] Incorrect input vector, array of values expected<br />
 NULL
-
 ----
-tablou d - eroare fatala FATAL [256] log(x) pentru x <= 0 nu este definita, ati folosit: scale = -2.5
-Eroare fatala la linia 37 in fisierul /softure/htdocs/test.php, PHP 4.0.6 (Linux)
-Abandon...
-1
+vector d - fatal error
+<b>My ERROR</b> [256] log(x) for x <= 0 is undefined, you used: scale = -2.5<br />
+  Fatal error on line 35 in file trigger_error.php, PHP 5.2.1 (FreeBSD)<br />
+Aborting...<br />
 ]]>
-      </programlisting>
-     </informalexample>
-    </para>
-    <para>
-     Este important de reţinut că gestionarul standard PHP al erorilor va fi ignorat
-     complet. Setările efectuate de <function>error_reporting</function> nu vor mai avea
-     nici un efect şi va fi apelată doar funcţia definită de utilizator. Se poate citi în
-     continuare valoarea curentă setată de <function>error_reporting</function> pentru folosire
-     adecvată. Trebuie făcută menţiunea că această valoare va fi zero dacă instrucţiunea
-     care a generat eroarea este precedată de
-     <link linkend="language.operators.errorcontrol">operatorul @</link> de control a erorilor.
-    </para>
-    <para>
-     De asemenea, trebuie precizat că este responsabilitatea programatorului să apeleze funcţia
-     <function>die</function> dacă este necesar. Dacă funcţia de tratare a erorii nu întrerupe
-     explicit execuţia, scriptul va continua cu instrucţiunea următoare celei care a generat eroarea.
-    </para>
-    <para>
-     Mai consultaţi <function>error_reporting</function>,
-     <function>restore_error_handler</function>,
-     <function>trigger_error</function>, <function>user_error</function>.
-    </para>
-   </refsect1>
-  </refentry>
+    </screen>
+   </example>
+  </para>
+ </refsect1>
+
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>error_reporting</function></member>
+    <member><function>restore_error_handler</function></member>
+    <member><function>trigger_error</function></member>
+    <member><link linkend="errorfunc.constants">constantele nivelelor de erori</link></member>
+    <member>&seealso.callback;</member>
+   </simplelist>
+  </para>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
