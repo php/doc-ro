@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- $Revision: 1.7 $ -->
-<!-- EN-Revision: 1.0 Maintainer: zamolxe Status: translated -->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.8 $ -->
+<!-- EN-Revision: 1.5 Maintainer: zamolxe Status: translated -->
+<!-- CREDITS: simionea -->
 <!-- splitted from ./index.xml, last change in rev 1.66 -->
   <chapter xml:id="security.cgi-bin" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
    <title>Instalat ca un binar CGI</title>
@@ -8,103 +9,113 @@
    <sect1 xml:id="security.cgi-bin.attacks">
     <title>Atacuri posibile</title>
     <simpara>
-     Folosind PHP ca pe un binar <acronym>CGI</acronym> este o optiune pe care
-     setup-urile, dintr-un anume motiv, nu doresc sa o configureze si sa o integreze
-     in PHP ca pe un modul in serverul software (precum Apache), sau vor folosi PHP cu
-     ajutorul diferitelor metode de CGI wrap pentru a crea medii securizate chroot si setuid
-     pentru scripturi. Acest setup implica de obicei instalarea binarului PHP executabil in
-     directorul cgi-bin din serverul web. Indrumarul CERT <link xlink:href="&url.cert;">CA-96.11</link>
-     nu recomanda plasarea oricarui tip de interpretor de acest gen in directorul cgi-bin.
-     Chiar daca binarul PHP poate fi folosit ca un interpretor de sine statator, PHP
-     a fost conceput in asa fel incat sa anticipeze atacuri generate de un asemenea setup:
+     Utilizarea PHP în calitate de binar <acronym>CGI</acronym> este o opţiune
+     pentru cazurile când dintr-un anume motiv nu se doreşte integrarea PHP în
+     calitate de modul în serverul software (precum Apache), sau PHP se va
+     utiliza cu diferite tipuri de învelişuri CGI pentru a crea medii
+     securizate cu ajutorul chroot şi setuid pentru scripturi. Această variantă
+     implică de obicei instalarea binarului PHP executabil în directorul
+     cgi-bin al serverului web. Îndrumarul CERT
+     <link xlink:href="&url.cert;">CA-96.11</link> nu recomandă plasarea
+     oricărui tip de interpretor de acest gen în directorul cgi-bin. Chiar dacă
+     binarul PHP poate fi folosit ca un interpretor de sine stătător, PHP a
+     fost conceput în aşa fel, încât să prevină atacuri, pe care o asemenea
+     variantă de utilizare le face posibilă:
     </simpara>
     <itemizedlist>
      <listitem>
       <simpara>
-       Accesarea fisierelor din sistem:
-       <filename role="url">http://host.ext/cgi-bin/php?/etc/passwd</filename>
+       Accesarea fişierelor din sistem:
+       <filename role="url">http://my.host/cgi-bin/php?/etc/passwd</filename>
       </simpara>
       <simpara>
-       Informatia din URL de dupa semnul de intrebare (?) este pasata
-       liniei de comanda ca argumente si interpretata de interfata CGI. De obicei
-       interpretoarele deschid si executa fisierul specificat ca prim argument in
-       linia de comanda.
+       Informaţia din URL de după semnul de întrebare (?) este transmisă
+       interpretorului în calitate de argumente în linia de comandă de către
+       interfaţa CGI. De obicei interpretoarele deschid şi execută fişierul
+       specificat ca prim argument în linia de comandă.
       </simpara>
       <simpara>
-       Cand este apelat ca un binar CGI, PHP refuza sa interpreteze
-       argumentele din linia de comanda.
+       Când este apelat ca un binar CGI, PHP refuză să interpreteze argumentele
+       din linia de comandă.
       </simpara>
      </listitem>
      <listitem>
       <simpara>
-       Puteti accesa orice document de pe server:
-       <filename role="url">http://host.ext/cgi-bin/php/secret/doc.html</filename>
+       Accesarea oricărui document web de pe server:
+       <filename role="url">http://my.host/cgi-bin/php/secret/doc.html</filename>
       </simpara>
       <simpara>
-       Informatiile introduse in URL dupa numele binarului
+       Informaţiile introduse în URL după denumirea binarului
        PHP, <filename role="uri">/secret/doc.html</filename> sunt de obicei
-       utilizate pentru a specifica numele si calea catre fisierul
-       care trebuie deschis de catre interpretorul <acronym>CGI</acronym>.
-       De obicei directivele din configuratia unui server web
-       (Apache: Action) sunt folosite pentru a redirecta cererile
-       catre documente ca
-       <filename role="url">http://www.host_victima.ro/secret/script.php</filename>
-       catre interpretorul PHP.  Cu acest setup, serverul web verifica
-       mai intai permisiile de acces catre directorul <filename role="uri">/secret</filename>,
-       si dupa aceea creaza cererea de redirectionare catre
-       <filename role="url">http://www.host.ro/cgi-bin/php/secret/script.php</filename>.
-       Din pacate, daca cererea originala se face sub aceasta forma
-       nu sunt facute nici un fel de verificari de catre serverul web
-       catre fisierul <filename role="uri">/secret/script.php</filename>,
-       ci numai pentru fisierul <filename role="uri">/cgi-bin/php</filename>.
-       In acest fel, orice utilizator care poate executa
-       <filename role="uri">/cgi-bin/php</filename>,
-       poate accesa automat orice director sau fisier protejat de pe server.
+       utilizate pentru a specifica denumirea şi calea către fişierul care
+       trebuie deschis de către interpretorul <acronym>CGI</acronym>.
+       De obicei directivele din configuraţia unui server web
+       (Apache: Action) sunt folosite pentru a redirecţiona interpelările
+       către documente ca
+       <filename role="url">http://my.host/secret/script.php</filename> către
+       interpretorul PHP. În acest caz, serverul web verifică mai întâi
+       permisiunile de acces către directorul
+       <filename role="uri">/secret</filename>, şi după aceea creează
+       interpelarea de redirecţionare către
+       <filename role="url">http://my.host/cgi-bin/php/secret/script.php</filename>.
+       Cu regret, dacă interpelarea este iniţial scrisă în această formă,
+       serverul web nu efectuează nici o verificare de acces către fişierul
+       <filename role="uri">/secret/script.php</filename>, ci numai către
+       fişierul <filename role="uri">/cgi-bin/php</filename>. În acest fel,
+       orice utilizator care poate accesa fişierul
+       <filename role="uri">/cgi-bin/php</filename>, poate accesa şi orice
+       document protejat de pe serverul web.
       </simpara>
       <simpara>
-       In PHP, optiunea din timpul compilarii
-       <link linkend="install.configure.enable-force-cgi-redirect">--enable-force-cgi-redirect</link>
-       si directivele de configuratie <link linkend="ini.doc-root">doc_root</link> si
-       <link linkend="ini.user-dir">user_dir</link> pot fi folosite pentru a preveni
-       acest atac, daca structura documentelor de pe server contine vreun
-       director cu acces restrictionat.  Observati mai jos explicatii detaliate
-       despre diferite combinatii.
+       În PHP, opţiunea din timpul compilării
+       <link linkend="configure.enable-force-cgi-redirect">--enable-force-cgi-redirect</link>
+       şi directivele de configuraţie la rulare
+       <link linkend="ini.doc-root">doc_root</link> şi
+       <link linkend="ini.user-dir">user_dir</link> pot fi utilizate pentru a
+       preveni acest atac, dacă arborele de documente de pe server conţine
+       directoare cu acces restricţionat. Observaţi mai jos explicaţii detaliate
+       despre diferite combinaţii.
       </simpara>
      </listitem>
     </itemizedlist>
    </sect1>
 
    <sect1 xml:id="security.cgi-bin.default">
-    <title>Cazul 1: numai fisierele publice sunt servite clientului</title>
+    <title>Cazul 1: numai fişierele publice sunt servite clientului</title>
 
     <simpara>
-     Daca serverul dumneavoastra nu are nici un fel de continut (directoare/fisiere) care este
-     restrictionat prin parola sau pe baza de IP, atunci nu este nevoie de aceste configuratii.
-     Daca serverul web nu da voie la redirectari, sau nu comunica cu binarul PHP pentru
-     a-i transmite daca cererea este una sigura, puteti specifica optiunea
-     <link linkend="install.configure.enable-force-cgi-redirect">--enable-force-cgi-redirect</link>
-     scriptului de configurare.  Totusi trebuie sa va asigurati ca scripturile dumneavoastra PHP
-     nu depind intr-un fel sau altul de modul in care este facuta cererea - direct
+     Dacă serverul dumneavoastră nu are nici un fel de conţinut (directoare /
+     fişiere) care este restricţionat prin parolă sau pe bază de IP, atunci nu
+     este nevoie de aceste opţiuni de configurare. Dacă serverul web nu vă
+     permite să efectuaţi redirecţionări, sau nu posedă mijloace de a comunica
+     binarului PHP că interpelarea este redirecţionată securizat, puteţi
+     specifica opţiunea
+     <link linkend="configure.enable-force-cgi-redirect">--enable-force-cgi-redirect</link>
+     scriptului de configurare. Totuşi trebuie să vă asiguraţi că scripturile
+     dumneavoastră PHP nu se bazează pe una din metodele de apelare a
+     scriptului - direct
      <filename role="php">http://my.host/cgi-bin/php/dir/script.php</filename>
-     sau prin redirectie <filename role="php">http://my.host/dir/script.php</filename>.
+     sau prin redirecţionare
+     <filename role="php">http://my.host/dir/script.php</filename>.
     </simpara>
     <simpara>
-     Redirectarea poate fi configurata in Apache folosind directivele
-     AddHandler si Action (vezi mai jos).
+     Redirecţionarea poate fi configurată în Apache utilizând directivele
+     AddHandler şi Action (vezi mai jos).
     </simpara>
    </sect1>
 
    <sect1 xml:id="security.cgi-bin.force-redirect">
     <title>Cazul 2: utilizarea --enable-force-cgi-redirect</title>
     <simpara>
-     Aceasta optiune disponibila in timpul compilarii este folosita pentru
-     a preveni rularea unui script PHP direct printr-un URL gen 
+     Această opţiune disponibilă în timpul compilării este folosită pentru a
+     preveni rularea unui script PHP direct printr-un URL gen 
      <filename role="php">http://my.host/cgi-bin/php/secretdir/script.php</filename>.
-     In schimb, PHP va actiona in acest mod numai dupa ce se va trece de regulile impuse
-     de redirectionare din serverul web.
+     PHP va acţiona în acest mod numai dacă a trecut printr-o regulă de
+     redirecţionare a serverului web.
     </simpara>
     <simpara>
-     De obicei redirectarea in configuratia Apache se face dupa urmatoarele directive:
+     De obicei redirecţionarea în configuraţia Apache se efectuează cu ajutorul
+     următoarelor directive:
     </simpara>
     <programlisting role="apache-conf">
 <![CDATA[
@@ -113,78 +124,81 @@ AddHandler php-script .php
 ]]>
     </programlisting>
     <simpara>
-     Aceasta optiune a fost testata numai cu serverul Apache, si se bazeaza
-     pe setarea variabilei non-standard CGI <envar>REDIRECT_STATUS</envar>,
-     pentru cererile de redirectionare.  Daca serverul dumneavoastra nu suporta
-     nici o metoda de a analiza daca o cerere este directa sau redirectata,
-     nu puteti folosi aceasta optiune, si trebuie sa folositi alte cai 
-     descrise in subcapitolele de mai jos.
+     Această opţiune a fost testată numai cu serverul Apache, şi se bazează pe
+     setarea variabilei non-standard CGI <envar>REDIRECT_STATUS</envar>,
+     pentru interpelările redirecţionate. Dacă serverul dumneavoastră nu
+     susţine nici o metodă de a determina dacă interpelarea este directă sau
+     redirecţionată, nu puteţi folosi această opţiune, şi trebuie să folosiţi
+     alte căi de a rula versiunea CGI descrise aici.
     </simpara>
    </sect1>
 
    <sect1 xml:id="security.cgi-bin.doc-root">
-    <title>Cazul 3: configurarea doc_root sau user_dir</title>
+    <title>Cazul 3: stabilirea doc_root sau user_dir</title>
     <simpara>
-     Includerea de continut activ, de pilda scripturi si executabile,
-     in directoarele serverului web este de multe ori considerata
-     o metoda nesigura. Daca, din cauza unor configuratii gresite,
-     scripturile nu sunt executate ci afisate ca documente HTML,
-     atunci securitatea sistemului si informatii vitale cum ar fi parolele
-     pot fi desconspirate.  De aceea multi administratori de sistem
-     configureaza un director creat special, in care ruleaza scripturi
-     accesibile numai via PHP CGI, deci care sunt interpretate
-     tot timpul ca atare.
+     Includerea de conţinut activ, de pildă scripturi şi executabile, în
+     directoarele serverului web destinate documentelor este de multe ori
+     considerată o metodă nesigură. Dacă, din cauza unei greşeli în
+     configuraţie, scripturile nu sunt executate ci afişate ca documente HTML,
+     aceasta va duce la dezvăluirea proprietăţii intelectuale sau a informaţiei
+     securizate, cum ar fi parolele. De aceea mulţi administratori de sistem
+     configurează o altă structură de directoare pentru scripturile care sunt
+     accesibile numai prin PHP CGI, deci care vor fi întotdeauna interpretate
+     şi nu afişate direct.
     </simpara>
     <simpara>
-     De asemenea daca metoda de transmitere a cererilor, descrisa
-     mai sus, nu este disponibila, atunci este necesara configurarea
-     unui director doc_root care este diferit de documentul web root.
+     De asemenea dacă metoda de determinare a redirecţionării interpelării,
+     descrisă mai sus, nu este disponibilă, atunci este necesară configurarea
+     unui director doc_root pentru scripturi, care este diferit de cel pentru
+     documente web.
     </simpara>
     <simpara>
-     Puteti configura documentul radacina al scripturilor PHP prin
-     directiva <link linkend="ini.doc-root">doc_root</link> din
-     <link linkend="configuration.file">fisierul de configuratie</link>, 
-     sau puteti configura variabila de mediu <envar>PHP_DOCUMENT_ROOT</envar>.
-     Daca este setata, versiunea PHP pe care o detineti va constui intotdeauna
-     numele fisierului deschis din <parameter>doc_root</parameter> 
-     si informatiile despre cale din cerere, pentru a fi siguri ca scriptul
-     este executat in afara acestui director (exceptie facand <parameter>user_dir</parameter>
+     Puteţi stabili directorul-rădăcină al scripturilor PHP prin directiva
+     <link linkend="ini.doc-root">doc_root</link> din
+     <link linkend="configuration.file">fişierul de configuraţie</link>, 
+     sau puteţi configura variabila de mediu <envar>PHP_DOCUMENT_ROOT</envar>.
+     Dacă este setată, versiunea CGI a PHP întotdeauna va construi denumirea
+     fişierului astfel ca să fie deschis cu acest
+     <parameter>doc_root</parameter> şi informaţiile despre cale din
+     interpelare, de aceea puteţi fi sigur că nici un script nu va fi executat
+     în afara acestui director (excepţie fiind <parameter>user_dir</parameter>
      de mai jos).
     </simpara>
     <simpara>
-     Alta optiune folosita este <link linkend="ini.user-dir">user_dir</link>.  
-     Cand user_dir nu este configurat, singurul lucru care controleaza fisierul deschis este
-     <parameter>doc_root</parameter>.  Deschiderea unui URL ca
-     <filename role="url">http://my.host/~user/doc.php</filename> nu rezulta din accesarea
-     unui fisier din directorul home al utilizatorilor, ci a unui fisier
-     numit <filename role="uri">~user/doc.php</filename> din
-     doc_root (da, un director a carui nume incepe cu tilda
+     O altă opţiune folosită este <link linkend="ini.user-dir">user_dir</link>.
+     Când user_dir nu este configurat, singurul lucru care controlează fişierul
+     deschis este <parameter>doc_root</parameter>. Deschiderea unui URL ca
+     <filename role="url">http://my.host/~user/doc.php</filename> nu va rezulta
+     în deschiderea unui fişier din directorul home al utilizatorului, ci a
+     unui fişier numit <filename role="uri">~user/doc.php</filename> din
+     doc_root (da, un director a cărui denumire începe cu tildă
      [<literal>~</literal>]).
     </simpara>
     <simpara>
-     Daca user_dir este configurat spre exemplu ca
-     <filename role="dir">public_php</filename>, o cerere in genul
-     <filename role="url">http://my.host/~user/doc.php</filename> va
-     deschide un fisier numit <filename>doc.php</filename> din directorul numit
-     <filename role="dir">public_php</filename> aflat sub directorul radacina
-     al utilizatorului user.  Daca directorul radacina al utilizatorului user este
-     <filename role="dir">/home/user</filename>, fisierul executat este
+     Dacă user_dir este configurat spre exemplu ca
+     <filename role="dir">public_php</filename>, o interpelare de genul
+     <filename role="url">http://my.host/~user/doc.php</filename> va deschide
+     un fişier numit <filename>doc.php</filename> din directorul numit
+     <filename role="dir">public_php</filename> aflat în directorul home al
+     utilizatorului "user". Dacă directorul rădăcină al utilizatorului "user"
+     este <filename role="dir">/home/user</filename>, fişierul executat este
      <filename>/home/user/public_php/doc.php</filename>.
     </simpara>
     <simpara>
-     Expansiunea <parameter>user_dir</parameter> se poate face fara a tine cont de paramentrul
-     <parameter>doc_root</parameter> din setari, deci puteti controla accesul la directorul radacina
-     si la directoarele utilizatorilor in mod separat.
+     Expansiunea <parameter>user_dir</parameter> se petrece independent de
+     setarea <parameter>doc_root</parameter>, deci puteţi controla accesul la
+     directorul rădăcină şi la directoarele utilizatorilor în mod separat.
     </simpara>
    </sect1>
 
    <sect1 xml:id="security.cgi-bin.shell">
-    <title>Cazul 4: parserul PHP in afara directorului radacina web</title>
+    <title>Cazul 4: interpretorul PHP se află în afara directorului rădăcină web</title>
     <para>
-     O metoda foarte sigura si eleganta este de a plasa compilatorul PHP
-     in afara directorului radacina web. In
-     <filename role="dir">/usr/local/bin</filename>, spre exemplu. Singura dezamagire
-     pe care o veti avea, este ca trebuie sa puneti urmatoarea linie:
+     O metodă foarte sigură este de a plasa binarul interpretorului PHP undeva
+     în afara arborelui fişierelor pentru web. În
+     <filename role="dir">/usr/local/bin</filename>, spre exemplu. Singurul
+     dezavantaj al acestei opţiuni este că trebuie să introduceţi următoarea
+     linie:
      <informalexample>
       <programlisting>
 <![CDATA[
@@ -192,16 +206,17 @@ AddHandler php-script .php
 ]]>
       </programlisting>
      </informalexample>
-      la inceputul fiecarui fisier care contine taguri PHP. De asemenea va
-      trebui sa faceti fisierul executabil. Acesta este tratat exact ca un script
-      CGI scris in Perl sau sh sau orice alt limbaj de scripting care utilizeaza
-      <literal>#!</literal> mecanismul shell-escape pentru a se lansa.
+     la începutul fiecărui fişier care conţine tag-uri PHP. De asemenea va
+     trebui să faceţi fişierul executabil. Adică trataţi-l exact ca pe un
+     script CGI scris în Perl, sau sh, sau orice alt limbaj de scripting care
+     utilizează mecanismul <literal>#!</literal> de evadare din învelişul
+     sistemului pentru a se lansa.
     </para>
     <para>
-     Pentru ca PHP sa utilizeze informatiile <envar>PATH_INFO</envar> si
-     <envar>PATH_TRANSLATED</envar> in mod corect, acesta trebuie compilat
-     cu optiunea de configurare
-     <link linkend="install.configure.enable-discard-path">--enable-discard-path</link>
+     Pentru ca PHP să utilizeze informaţiile din <envar>PATH_INFO</envar> şi
+     <envar>PATH_TRANSLATED</envar> în mod corect, interpretorul PHP trebuie
+     compilat cu opţiunea de configurare
+     <link linkend="configure.enable-discard-path">--enable-discard-path</link>.
     </para>
    </sect1>
 
