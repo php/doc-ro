@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.4 $ -->
-<!-- EN-Revision: 1.15 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.5 $ -->
+<!-- EN-Revision: 1.17 Maintainer: simionea Status: translated -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.serialize" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -39,8 +39,8 @@
        prelucrează toate tipurile, cu excepţia <type>resource</type>.
        Puteţi chiar aplica <function>serialize</function> asupra tablourilor ce
        conţin referinţe la sine însele. Referinţele circulare din interiorul
-       tabloului/obiectului asupra căruia aplicaţi <function>serialize</function>
-       de asemenea vor fi stocate. Orice altă referinţă va fi pierdută.
+       tabloului/obiectului pe care îl serializaţi de asemenea vor fi stocate.
+       Orice altă referinţă va fi pierdută.
       </para>
       <para>
        La serializarea obiectelor, PHP va încerca să apeleze funcţia-membru
@@ -51,6 +51,13 @@
        funcţia-membru <link linkend="language.oop5.magic">__wakeup</link>
        este apelată.
       </para>
+      <note>
+       <para>
+       Membrii privaţi ai obiectului au denumirea clasei prefixată la denumirea
+       membrului; membrii privaţi au un '*' prefixat la denumirea membrului.
+       Aceste valori prefixate au câte un octet nul din ambele părţi.
+       </para>
+      </note>
      </listitem>
     </varlistentry>
    </variablelist>
