@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.232 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.233 Maintainer: simionea Status: translated -->
 <!-- Keep 'em sorted -->
 
 <!-- Notes -->
@@ -366,6 +366,16 @@ Parametrul opţional <parameter>timestamp</parameter> este un
 a orei locale, dacă parametrul <parameter>timestamp</parameter> nu este 
 indicat. Cu alte cuvinte, valoarea implicită este cea a funcţiei
 <function>time</function>.</para></listitem></varlistentry>'>
+
+<!ENTITY date.datetime.description '<varlistentry><term><parameter>
+object</parameter></term><listitem><para>Doar pentru stilul procedural: Un
+obiect <classname>DateTime</classname> întors de funcţia
+<function>date_create</function></para></listitem></varlistentry>'>
+
+<!ENTITY date.datetimezone.description '<varlistentry><term><parameter>
+object</parameter></term><listitem><para>Doar pentru stilul procedural: Un
+obiect <classname>DateTimeZone</classname> întors de funcţia
+<function>timezone_open</function></para></listitem></varlistentry>'>
 
 <!-- DomXml Notes -->
 <!ENTITY node.inserted 'Acest nod nu va apărea în document dacă nu este
