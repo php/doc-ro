@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.5 $ -->
-<!-- EN-Revision: 1.37 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.6 $ -->
+<!-- EN-Revision: 1.38 Maintainer: simionea Status: translated -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.mail" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
@@ -53,8 +53,8 @@
       </para>
       <caution>
        <para>
-        Acesta nu trebuie să conţină caractere de trecere în linie nouă, 
-        deoarece mesajul poate să nu fie trimis corect.
+        Subiectul trebuie să satisfacă cerinţelor
+        <link xlink:href="&url.rfc;2047">RFC 2047</link>.
        </para>
       </caution>
      </listitem>
