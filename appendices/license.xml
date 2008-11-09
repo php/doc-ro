@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.4 $ -->
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.5 $ -->
 <!-- EN-Revision: 1.5 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="cc.license" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Creative Commons Atribuire 3.0 România</title>
 
- <note>
+ <simpara>
   Textul de mai jos al licenţei a fost tradus în limba română şi adaptat de
   către echipa de contribuitori ai proiectului "Creative Commons
   International"
@@ -13,8 +13,8 @@
   http://creativecommons.org/international/ro/</link>). Ultima variantă a
   licenţei poate fi accesată on-line la adresa
   <link xlink:href="http://creativecommons.org/licenses/by/3.0/ro/legalcode">
-  http://creativecommons.org/licenses/by/3.0/ro/legalcode</link>
- </note>
+  http://creativecommons.org/licenses/by/3.0/ro/legalcode</link>.
+ </simpara>
 
  <simpara>
   Opera (aşa cum este definită mai jos) este furnizată în condiţiile acestei

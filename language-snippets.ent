@@ -1,4 +1,4 @@
-<!-- $Revision$ -->
+﻿<!-- $Revision$ -->
 <!-- EN-Revision: 1.233 Maintainer: simionea Status: translated -->
 <!-- Keep 'em sorted -->
 
@@ -384,7 +384,7 @@ inserat cu <function>domnode_append_child</function> de exemplu.'>
 
 <!-- Dom Notes -->
 <!ENTITY dom.node.inserted 'Acest nod nu va apărea în document dacă nu este
-inserat cu <link linkend="domnode-appendchild">DOMNode->appendChild()</link>
+inserat cu <link linkend="domnode.appendchild">DOMNode->appendChild()</link>
 de exemplu.'>
 
 
