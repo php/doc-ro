@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.5 $ -->
-<!-- EN-Revision: 1.13 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.6 $ -->
+<!-- EN-Revision: 1.14 Maintainer: simionea Status: translated -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/apache.xml, last change in rev 1.2 -->
 <refentry xml:id="function.getallheaders" xmlns="http://docbook.org/ns/docbook">
@@ -65,7 +65,7 @@
   &reftitle.examples;
   <para>
    <example>
-    <title>Exemplu <function>getallheadres</function></title>
+    <title>Exemplu <function>getallheaders</function></title>
     <programlisting role="php">
 <![CDATA[
 <?php
