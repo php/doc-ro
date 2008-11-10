@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.5 $ -->
+<!-- $Revision: 1.6 $ -->
 <!-- EN-Revision: 1.4 Maintainer: zamolxe Status: translated -->
 <!-- CREDITS: simionea -->
 <!-- splitted from ./index.xml, last change in rev 1.66 -->
@@ -21,29 +21,29 @@
     PHP create.
    </simpara>
    <simpara>
-    Adesea, după ce politica de securitate a fost stabilită, iar utilizatorul 
+    Adesea, după ce politica de securitate a fost stabilită, iar utilizatorul
     PHP (în acest caz, utilizatorul Apache) prezintă risc redus faţă de sistem,
-    iese la iveală faptul că PHP este restricţionat în a scrie în fişierele şi 
+    iese la iveală faptul că PHP este restricţionat în a scrie în fişierele şi
     directoarele utilizatorilor, sau nu poate accesa şi schimba anumite baze de
-    date. El a fost securizat atât în a scrie fişiere bune, cât şi rele, sau 
+    date. El a fost securizat atât în a scrie fişiere bune, cât şi rele, sau
     inserarea de tranzacţii atât benefice, cât şi dăunătoare bazelor de date.
    </simpara>
    <simpara>
-    O greşeală de securitate frecventă este că atunci când se ajunge în acest 
-    moment, să se dea pemisii de root serverului Apache, sau să se extindă 
-    permisiunile într-un careva alt mod. 
+    O greşeală de securitate frecventă este că atunci când se ajunge în acest
+    moment, să se dea permisiuni de root serverului Apache, sau să se extindă
+    permisiunile într-un careva alt mod.
    </simpara>
    <simpara>
     Extinderea privilegiilor utilizatorului Apache către root este deosebit de
-    periculoasă şi poate duce la compromiterea întregului sistem, aşa că 
-    operaţiunile 'sudo', 'chroot', sau alte modalităţi de a rula root nu ar 
+    periculoasă şi poate duce la compromiterea întregului sistem, aşa că
+    operaţiunile 'sudo', 'chroot', sau alte modalităţi de a rula root nu ar
     trebui luate în considerare în caz că nu sunteţi expert în securitare.
    </simpara>
    <simpara>
     Există şi soluţii mai simple. Utilizând
-    <link linkend="ini.open-basedir">open_basedir</link> puteţi controla şi 
-    restricţiona ce directorii doriţi, în care poate avea acces PHP. În plus 
-    puteţi stabili zone numai pentru Apache, pentru a preveni toate acţiunile 
+    <link linkend="ini.open-basedir">open_basedir</link> puteţi controla şi
+    restricţiona ce directorii doriţi, în care poate avea acces PHP. În plus
+    puteţi stabili zone numai pentru Apache, pentru a preveni toate acţiunile
     din web asupra fişierelor utilizatorilor şi de sistem.
    </simpara>
   </chapter>
