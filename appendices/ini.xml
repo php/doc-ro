@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.25 $ -->
-<!-- EN-Revision: 1.77 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.26 $ -->
+<!-- EN-Revision: 1.78 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&php.ini; directives</title>
@@ -3415,13 +3415,13 @@
        <entry>Disponibil începând cu Xdebug 2.0.0.</entry>
       </row>
       <row>
-       <entry>xmlrpc_errors</entry>
+       <entry><link linkend="ini.xmlrpc-errors">xmlrpc_errors</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_SYSTEM</entry>
        <entry>Disponibil începând cu PHP 4.1.0.</entry>
       </row>
       <row>
-       <entry>xmlrpc_error_number</entry>
+       <entry><link linkend="ini.xmlrpc-error-number">xmlrpc_error_number</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
        <entry>Disponibil începând cu PHP 4.1.0.</entry>
