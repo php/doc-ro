@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.5 $ -->
-<!-- EN-Revision: 1.41 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.6 $ -->
+<!-- EN-Revision: 1.42 Maintainer: simionea Status: translated -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.set-error-handler" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -356,6 +356,7 @@ Aborting...<br />
   &reftitle.seealso;
   <para>
    <simplelist>
+    <member><classname>ErrorException</classname></member>
     <member><function>error_reporting</function></member>
     <member><function>restore_error_handler</function></member>
     <member><function>trigger_error</function></member>

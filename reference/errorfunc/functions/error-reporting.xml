@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.4 $ -->
-<!-- EN-Revision: 1.22 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.5 $ -->
+<!-- EN-Revision: 1.23 Maintainer: simionea Status: translated -->
 <!-- CREDITS: adiju -->
 <refentry xmlns="http://docbook.org/ns/docbook" xml:id="function.error-reporting">
  <refnamediv>
@@ -254,6 +254,8 @@ ini_set('error_reporting', E_ALL);
   <para>
    <simplelist>
     <member>Directiva <link linkend="ini.display-errors">display_errors</link></member>
+    <member>Directiva <link linkend="ini.html-errors">html_errors</link></member>
+    <member>Directiva <link linkend="ini.xmlrpc-errors">xmlrpc_errors</link></member>
     <member><function>ini_set</function></member>
    </simplelist>
   </para>
