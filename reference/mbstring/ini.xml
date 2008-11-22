@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.1 $ -->
-<!-- EN-Revision: 1.17 Maintainer: alexxed Status: translated -->
+<!-- $Revision: 1.2 $ -->
+<!-- EN-Revision: 1.18 Maintainer: alexxed Status: translated -->
+<!-- CREDITS: simionea -->
 <section xml:id="mbstring.configuration" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.runtime;
  &extension.runtime;
@@ -80,8 +81,8 @@
     </tbody>
    </tgroup>
   </table>
-  Pentru definiţia constantelor PHP_INI_* , vă rugăm consultaţi funcţia 
-  <function>ini_set</function>.
+  Pentru definiţia directivelor PHP_INI_* , vă rugăm consultaţi
+  <link linkend="ini">directivele php.ini</link>.
  </para>
  
  &ini.descriptions.title;
