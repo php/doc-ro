@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.4 $ -->
-<!-- EN-Revision: 1.36 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.5 $ -->
+<!-- EN-Revision: 1.37 Maintainer: simionea Status: translated -->
 <appendix xml:id="migration52" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Migrarea de la PHP 5.1.x la PHP 5.2.x</title>
   <para>
@@ -1270,10 +1270,10 @@ $obj->getCommentName('');
   <itemizedlist>
    <listitem>
     <simpara>
-     boolean XMLReader::setSchema(string filename)
+     boolean <function>XMLReader::setSchema</function>
      - Utilizează schema W3C XSD pentru a valida documentul în timp ce este
      procesat. Activarea este posibilă numai înainte de primul
-     <literal>Read()</literal>
+     <function>XMLReader::read</function>
     </simpara>
    </listitem>
   </itemizedlist>
