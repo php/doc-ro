@@ -1,10 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.1 $ -->
-<!-- EN-Revision: 1.4 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.2 $ -->
+<!-- EN-Revision: 1.5 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="json.constants" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.constants;
- &no.constants;
+ &extension.constants;
+ <para>
+  Următoarele constante indică tipul erorii întoarse de funcţia
+  <function>json_last_error</function> şi sunt toate disponibile începând cu PHP
+  5.3.0.
+ </para>
+ <variablelist>
+  <varlistentry>
+   <term>
+    <constant>JSON_ERROR_NONE</constant>
+     (<type>integer</type>)
+   </term>
+   <listitem>
+    <simpara>
+     Nu s-a produs vre-o eroare.
+    </simpara>
+   </listitem>
+  </varlistentry>
+  <varlistentry>
+   <term>
+    <constant>JSON_ERROR_DEPTH</constant>
+     (<type>integer</type>)
+   </term>
+   <listitem>
+    <simpara>
+     A fost depăşită adâncimea maximă a stivei.
+    </simpara>
+   </listitem>
+  </varlistentry>
+  <varlistentry>
+   <term>
+    <constant>JSON_ERROR_CTRL_CHAR</constant>
+     (<type>integer</type>)
+   </term>
+   <listitem>
+    <simpara>
+     Eroare în caracterul de control, posibil a fost codificat greşit.
+    </simpara>
+   </listitem>
+  </varlistentry>
+  <varlistentry>
+   <term>
+    <constant>JSON_ERROR_SYNTAX</constant>
+     (<type>integer</type>)
+   </term>
+   <listitem>
+    <simpara>
+     Eroare în sintaxă.
+    </simpara>
+   </listitem>
+  </varlistentry>
+ </variablelist>
+
 </appendix>
  
 <!-- Keep this comment at the end of the file
