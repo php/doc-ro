@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.27 $ -->
-<!-- EN-Revision: 1.79 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.28 $ -->
+<!-- EN-Revision: 1.80 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&php.ini; directives</title>
@@ -2398,7 +2398,7 @@
        <entry><link linkend="ini.register-globals">register_globals</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_PERDIR</entry>
-       <entry>PHP_INI_ALL în PHP &lt;= 4.2.3. Eliminat în PHP 6.0.0.</entry>
+       <entry>PHP_INI_ALL în PHP &lt;= 4.2.3. Dezaprobat în PHP 5.3.0. Eliminat în PHP 6.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.register-long-arrays">register_long_arrays</link></entry>
@@ -4339,7 +4339,7 @@ auto_prepend_file=security.php
           <link linkend="ini.variables-order">variables_order</link>.
          </para>
         </note>
-        &warn.deprecated.removed-6-0-0;
+        &warn.deprecated.feature-5-3-0.removed-6-0-0;
        </listitem>
       </varlistentry>
 
