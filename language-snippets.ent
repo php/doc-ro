@@ -1,5 +1,5 @@
 ﻿<!-- $Revision$ -->
-<!-- EN-Revision: 1.233 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.234 Maintainer: simionea Status: translated -->
 <!-- Keep 'em sorted -->
 
 <!-- Notes -->
@@ -125,16 +125,22 @@ introduse de utilizatori să fie transmise acestei funcţii, utilizaţi <functio
 păcăli sistemul să execute comenzi arbitrare.</para></warning>'>
 
 <!ENTITY warn.experimental '<warning xmlns="http://docbook.org/ns/docbook">
-<simpara>Această extensie este <emphasis>EXPERIMENTALĂ</emphasis>. 
+<simpara>Această extensie este <emphasis>EXPERIMENTALĂ</emphasis>.
 Comportamentul acestei extensii &#2014; inclusiv denumirile funcţiilor sale şi
 orice alte aspecte documentate în privinţa acestei extensii &#2014; pot să fie
-modificate fără preaviz într-o versiune viitoare a PHP. Utilizaţi această 
+modificate fără preaviz într-o versiune viitoare a PHP. Utilizaţi această
 extensie la propriul risc.</simpara></warning>'>
 
-<!ENTITY warn.deprecated.removed-6-0-0 '<warning xmlns="http://docbook.org/ns/docbook">
-<simpara>Această facilitate este <emphasis>DEZAPROBATĂ</emphasis> şi este 
-<emphasis>ELIMINATĂ</emphasis> începând cu PHP 6.0.0. Utilizarea acestei 
+<!ENTITY warn.deprecated.feature-5-3-0.removed-6-0-0 '<warning xmlns="http://docbook.org/ns/docbook">
+<simpara>Această facilitate este <emphasis>DEZAPROBATĂ</emphasis> şi este
+<emphasis>ELIMINATĂ</emphasis> începând cu PHP 6.0.0. Utilizarea acestei
 facilităţi este foarte nerecomandată.</simpara></warning>'>
+
+<!ENTITY warn.deprecated.function-5-3-0.removed-6-0-0 '<warning
+xmlns="http://docbook.org/ns/docbook"><simpara>Această funcţie a fost
+<emphasis>DEZAPROBATĂ</emphasis> începând cu PHP 5.3.0 şi <emphasis>ELIMINATĂ</emphasis>
+începând cu PHP 6.0.0. Utilizarea acestei facilităţi este foarte nerecomandată.
+</simpara></warning>'>
 
 <!ENTITY warn.deprecated.function.removed-5-3-0 '<warning xmlns="http://docbook.org/ns/docbook">
 <simpara>Această funcţie este <emphasis>DEZAPROBATĂ</emphasis> şi este 
