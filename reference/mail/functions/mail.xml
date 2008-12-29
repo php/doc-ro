@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.6 $ -->
-<!-- EN-Revision: 1.38 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.7 $ -->
+<!-- EN-Revision: 1.39 Maintainer: simionea Status: translated -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.mail" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
@@ -227,7 +227,7 @@ $message = "Line 1\nLine 2\nLine 3";
 $message = wordwrap($message, 70);
 
 // Trimiterea
-mail('caffinated@example.com', 'My Subject', $message);
+mail('caffeinated@example.com', 'My Subject', $message);
 ?>
 ]]>
     </programlisting>

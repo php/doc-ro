@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.28 $ -->
-<!-- EN-Revision: 1.80 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.29 $ -->
+<!-- EN-Revision: 1.81 Maintainer: simionea Status: translated -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&php.ini; directives</title>
@@ -3497,45 +3497,6 @@
        <entry>""</entry>
        <entry>PHP_INI_ALL</entry>
        <entry>Disponibil începând cu PHP 4.3.0.</entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </table>
-  </para>
-
-  <para>
-   <table>
-    <title>Definiţiile constantelor PHP_INI_*</title>
-    <tgroup cols="3">
-     <thead>
-      <row>
-       <entry>Constanta</entry>
-       <entry>Valoarea</entry>
-       <entry>Semnificaţia</entry>
-      </row>
-     </thead>
-     <tbody>
-      <row>
-       <entry>PHP_INI_USER</entry>
-       <entry>1</entry>
-       <entry>Înregistrarea poate fi stabilită în scripturile utilizatorilor 
-       sau în <link linkend="configuration.changes.windows">registrul Windows
-       </link></entry>
-      </row>
-      <row>
-       <entry>PHP_INI_PERDIR</entry>
-       <entry>2</entry>
-       <entry>Înregistrarea poate fi stabilită în &php.ini;, &htaccess; sau &httpd.conf;</entry>
-      </row>
-      <row>
-       <entry>PHP_INI_SYSTEM</entry>
-       <entry>4</entry>
-       <entry>Înregistrarea poate fi stabilită în &php.ini; sau &httpd.conf;</entry>
-      </row>
-      <row>
-       <entry>PHP_INI_ALL</entry>
-       <entry>7</entry>
-       <entry>Înregistrarea poate fi stabilită oriunde</entry>
       </row>
      </tbody>
     </tgroup>

@@ -1,5 +1,5 @@
 ﻿<!-- $Revision$ -->
-<!-- EN-Revision: 1.234 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.235 Maintainer: simionea Status: translated -->
 <!-- Keep 'em sorted -->
 
 <!-- Notes -->
@@ -515,7 +515,7 @@ Comportamentul acestor funcţii este afectat de parametrii stabiliţi în
 &php.ini;.</simpara>'>
 
 <!ENTITY ini.php.constants 'Pentru mai multe detalii şi definiţii ale 
-constantelor PHP_INI_* accesaţi <xref linkend="ini"/>.'>
+modurilor PHP_INI_* accesaţi <xref linkend="configuration.changes.modes"/>.'>
 
 <!-- Used in reference/$extname/constants.xml -->
 <!ENTITY extension.constants '<simpara>Constantele de mai jos sunt definite de
