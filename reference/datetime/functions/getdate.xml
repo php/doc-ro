@@ -1,89 +1,170 @@
-<?xml version="1.0" encoding="iso-8859-2"?>
-<!-- EN-Revision: 1.0 Maintainer: adiju Status: outdated -->
-<!-- splitted from ./ro/functions/datetime.xml, last change in rev 1.1 -->
-<!-- last change to 'getdate' in en/ tree in rev 1.2 -->
-  <refentry xml:id="function.getdate" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>getdate</refname>
-    <refpurpose>Cite�te informa�ii despre dat�/timp</refpurpose>
-   </refnamediv>
-   <refsect1>
-    <title>Descriere</title>
-     <methodsynopsis>
-      <type>array</type><methodname>getdate</methodname>
-      <methodparam choice="opt"><type>int</type><parameter>timestamp</parameter></methodparam>
-     </methodsynopsis>
-    <para>
-     Returneaz� un tablou asociativ con�in�nd informa�ii despre dat� din <parameter>timestamp</parameter>, sau timpul local curent dac� nu este dat <parameter>timestamp</parameter>; tabloul returnat are urm�toarele chei asociative:
-     <itemizedlist>
-      <listitem>
-       <simpara>
-        "seconds" - secunde
-       </simpara>
-      </listitem>
-      <listitem>
-       <simpara>
-        "minutes" - minute
-       </simpara>
-      </listitem>
-      <listitem>
-       <simpara>
-        "hours" - ore
-       </simpara>
-      </listitem>
-      <listitem>
-       <simpara>
-        "mday" - ziua din lun�
-       </simpara>
-      </listitem>
-      <listitem>
-       <simpara>
-        "wday" - ziua din s�pt�m�n�, numeric: de la 0 ca duminic� p�n� la 6 ca s�mb�t�
-       </simpara>
-      </listitem>
-      <listitem>
-       <simpara>
-        "mon" - luna, numeric
-       </simpara>
-      </listitem>
-      <listitem>
-       <simpara>
-        "year" - anul, numeric
-       </simpara>
-      </listitem>
-      <listitem>
-       <simpara>
-        "yday" - ziua din an, numeric; de exemplu "299"
-       </simpara>
-      </listitem>
-      <listitem>
-       <simpara>
-        "weekday" - ziua din s�pt�m�n�, textual, �n englez�, complet; de exemplu "Friday"
-       </simpara>
-      </listitem>
-      <listitem>
-       <simpara>
-        "month" - luna, textual, �n englez�, complet; de exemplu "January"
-       </simpara>
-      </listitem>
-     </itemizedlist>
-     <example>
-      <title>
-       Exemplu <function>getdate</function>
-      </title>
-      <programlisting role="php">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.14 Maintainer: simionea Status: translated -->
+<!-- CREDITS: adiju -->
+<refentry xml:id="function.getdate" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>getdate</refname>
+  <refpurpose>Obţine informaţia despre dată/oră</refpurpose>
+ </refnamediv>
+
+ <refsect1 role="description">
+  &reftitle.description;
+  <methodsynopsis>
+   <type>array</type><methodname>getdate</methodname>
+   <methodparam choice="opt"><type>int</type><parameter>timestamp</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   Întoarce un <type>array</type> asociativ conţinând informaţia despre dată şi
+   oră a parametrului <parameter>timestamp</parameter>, sau a datei/orei locale
+   în caz că parametrul <parameter>timestamp</parameter> nu este furnizat.
+  </para>
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+
+    &date.timestamp.description;
+
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Întoarce un <type>array</type> asociativ cu informaţii ce ţin de parametrul
+   <parameter>timestamp</parameter>. Elementele tabloului asociativ întors sunt
+   următoarele:
+  </para>
+  <para>
+   <table>
+    <title>Elementele-cheie ale tabloului asociativ întors</title>
+    <tgroup cols="3">
+     <thead>
+      <row>
+       <entry>Cheie</entry>
+       <entry>Descriere</entry>
+       <entry>Exemplu de valori întoarse</entry>
+      </row>
+     </thead>
+     <tbody>
+      <row>
+       <entry><literal>"seconds"</literal></entry>
+       <entry>Reprezentarea numerică a secundelor</entry>
+       <entry>De la <literal>0</literal> până la <literal>59</literal></entry>
+      </row>
+      <row>
+       <entry><literal>"minutes"</literal></entry>
+       <entry>Reprezentarea numerică a minutelor</entry>
+       <entry>De la <literal>0</literal> până la <literal>59</literal></entry>
+      </row>
+      <row>
+       <entry><literal>"hours"</literal></entry>
+       <entry>Reprezentarea numerică a orelor</entry>
+       <entry>De la <literal>0</literal> până la <literal>23</literal></entry>
+      </row>
+      <row>
+       <entry><literal>"mday"</literal></entry>
+       <entry>Reprezentarea numerică a zilei lunii</entry>
+       <entry>De la <literal>1</literal> până la <literal>31</literal></entry>
+      </row>
+      <row>
+       <entry><literal>"wday"</literal></entry>
+       <entry>Reprezentarea numerică a zilei săptămânii</entry>
+       <entry>De la <literal>0</literal> (Duminică) până la <literal>6</literal> (Sâmbătă)</entry>
+      </row>
+      <row>
+       <entry><literal>"mon"</literal></entry>
+       <entry>Reprezentarea numerică a lunii</entry>
+       <entry>De la <literal>1</literal> până la <literal>12</literal></entry>
+      </row>
+      <row>
+       <entry><literal>"year"</literal></entry>
+       <entry>Reprezentarea numerică deplină a anului, 4 cifre</entry>
+       <entry>Exemple: <literal>1999</literal> sau <literal>2003</literal></entry>
+      </row>
+      <row>
+       <entry><literal>"yday"</literal></entry>
+       <entry>Reprezentarea numerică a zilei anului</entry>
+       <entry>De la <literal>0</literal> până la <literal>365</literal></entry>
+      </row>
+      <row>
+       <entry><literal>"weekday"</literal></entry>
+       <entry>Reprezentarea textuală deplină a zilei săptămânii în limba engleză</entry>
+       <entry>De la <literal>Sunday</literal> până la <literal>Saturday</literal></entry>
+      </row>
+      <row>
+       <entry><literal>"month"</literal></entry>
+       <entry>Reprezentarea textuală deplină a lunii în limba engleză, cum ar fi January sau March</entry>
+       <entry>De la <literal>January</literal> până la <literal>December</literal></entry>
+      </row>
+      <row>
+       <entry><literal>0</literal></entry>
+       <entry>
+        Secunde de la Epoca Unix, similare cu valorile întoarse de
+        <function>time</function> şi utilizate de <function>date</function>.
+       </entry>
+       <entry>
+        Depinde de sistem, de obicei de la <literal>-2147483648</literal> până la
+        <literal>2147483647</literal>.
+       </entry>
+      </row>
+     </tbody>
+    </tgroup>
+   </table>
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemplu <function>getdate</function></title>
+    <programlisting role="php">
 <![CDATA[
-$azi = getdate(); 
-$luna = $azi['month']; 
-$ziua = $azi['mday']; 
-$anul = $azi['year']; 
-echo "$luna $ziua, $anul";
+<?php
+$today = getdate();
+print_r($today);
+?>
 ]]>
-      </programlisting>
-     </example>
-    </para>
-   </refsect1>
-  </refentry>
+    </programlisting>
+    &example.outputs.similar;
+    <screen>
+<![CDATA[
+Array
+(
+    [seconds] => 40
+    [minutes] => 58
+    [hours]   => 21
+    [mday]    => 17
+    [wday]    => 2
+    [mon]     => 6
+    [year]    => 2003
+    [yday]    => 167
+    [weekday] => Tuesday
+    [month]   => June
+    [0]       => 1055901520
+)
+]]>
+    </screen>
+   </example>
+  </para>
+ </refsect1>
+
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>date</function></member>
+    <member><function>time</function></member>
+    <member><function>setlocale</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:
