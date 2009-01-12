@@ -1,5 +1,5 @@
 ﻿<!-- $Revision$ -->
-<!-- EN-Revision: 1.235 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.238 Maintainer: simionea Status: translated -->
 <!-- Keep 'em sorted -->
 
 <!-- Notes -->
@@ -373,8 +373,8 @@ a orei locale, dacă parametrul <parameter>timestamp</parameter> nu este
 indicat. Cu alte cuvinte, valoarea implicită este cea a funcţiei
 <function>time</function>.</para></listitem></varlistentry>'>
 
-<!ENTITY date.datetime.description '<varlistentry><term><parameter>
-object</parameter></term><listitem><para>Doar pentru stilul procedural: Un
+<!ENTITY date.datetime.description '<varlistentry><term><parameter>object</parameter></term>
+<listitem><para>Doar pentru stilul procedural: Un
 obiect <classname>DateTime</classname> întors de funcţia
 <function>date_create</function></para></listitem></varlistentry>'>
 
@@ -664,7 +664,8 @@ identificator al legăturii întors de <function>mysqli_connect</function> sau
 stmt</parameter></term><listitem><para>Numai stilul procedural: Un 
 identificator al declaraţiei întors de <function>mysqli_stmt_init</function>.
 </para></listitem></varlistentry>'>
-
+<!ENTITY mysqli.available.mysqlnd 'Disponibil numai cu <link
+linkend="mysqli.overview.mysqlnd">mysqlnd</link>.'>
 
 <!-- Notes for SAPI/Apache -->
 <!ENTITY note.apache.nsapi-module '<note><para>Începând cu PHP 4.3.3 puteţi 

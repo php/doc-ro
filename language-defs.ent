@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.45 Maintainer: simionea Status: translated -->
+<!-- EN-Revision: 1.46 Maintainer: simionea Status: translated -->
 
 <!-- Part titles used mostly in manual.xml itself -->
 <!ENTITY PHPManual         "Manualul PHP">
@@ -41,8 +41,6 @@
 <!ENTITY ServerSpecificExtensions                 "Extensii specifice serverului">
 <!ENTITY SearchEngineExtensions                   "Extensii ale motorului de căutare">
 <!ENTITY MiscExtensions                           "Extensii diverse">
-<!ENTITY PECLReference     "Informaţii de referinţă despre funcţiile PECL">
-<!ENTITY AddOnReference    "Informaţii de referinţă despre funcţiile extensiilor suplimentare">
 <!ENTITY Appendices        "Anexe">
 <!ENTITY PEAR              "PEAR: colecţia de extensii şi aplicaţii PHP">
 <!ENTITY FAQ               "FAQ: Întrebări frecvente">

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.26 $ -->
-<!-- EN-Revision: 1.56 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.27 $ -->
+<!-- EN-Revision: 1.57 Maintainer: simionea Status: translated -->
 <!-- CREDITS: adiju,aspinei,radical,zamolxe -->
 
  <info xml:id="bookinfo" xmlns="http://docbook.org/ns/docbook">
@@ -32,14 +32,14 @@
   </authorgroup>
 
   <copyright>
-   <year>1997-2008</year>
+   <year>1997-2009</year>
    <holder>Grupul de Documentare PHP</holder>
   </copyright>
 
   <legalnotice xml:id="copyright" xmlns:xlink="http://www.w3.org/1999/xlink">
    <title>Copyright</title>
    <simpara>
-    Copyright &copy; 1997 - 2008 de către Grupul de Documentare PHP.
+    Copyright &copy; 1997 - 2009 de către Grupul de Documentare PHP.
     Acest material poate fi distribuit numai în baza termenelor şi condiţiilor
     stabilite în documentul "Creative Commons Attribution 3.0 License"
     sau ulterioară. O copie a licenţei
