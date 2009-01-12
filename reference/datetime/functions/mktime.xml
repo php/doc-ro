@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.4 $ -->
-<!-- EN-Revision: 1.27 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.5 $ -->
+<!-- EN-Revision: 1.28 Maintainer: simionea Status: translated -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/datetime.xml, last change in rev 1.2 -->
 <refentry xml:id="function.mktime" xmlns="http://docbook.org/ns/docbook">
@@ -13,13 +13,13 @@
   &reftitle.description;
   <methodsynopsis>
    <type>int</type><methodname>mktime</methodname>
-   <methodparam choice="opt"><type>int</type><parameter>hour</parameter></methodparam>
-   <methodparam choice="opt"><type>int</type><parameter>minute</parameter></methodparam>
-   <methodparam choice="opt"><type>int</type><parameter>second</parameter></methodparam>
-   <methodparam choice="opt"><type>int</type><parameter>month</parameter></methodparam>
-   <methodparam choice="opt"><type>int</type><parameter>day</parameter></methodparam>
-   <methodparam choice="opt"><type>int</type><parameter>year</parameter></methodparam>
-   <methodparam choice="opt"><type>int</type><parameter>is_dst</parameter></methodparam>
+   <methodparam choice="opt"><type>int</type><parameter>hour</parameter><initializer>date("H")</initializer></methodparam>
+   <methodparam choice="opt"><type>int</type><parameter>minute</parameter><initializer>date("i")</initializer></methodparam>
+   <methodparam choice="opt"><type>int</type><parameter>second</parameter><initializer>date("s")</initializer></methodparam>
+   <methodparam choice="opt"><type>int</type><parameter>month</parameter><initializer>date("n")</initializer></methodparam>
+   <methodparam choice="opt"><type>int</type><parameter>day</parameter><initializer>date("j")</initializer></methodparam>
+   <methodparam choice="opt"><type>int</type><parameter>year</parameter><initializer>date("Y")</initializer></methodparam>
+   <methodparam choice="opt"><type>int</type><parameter>is_dst</parameter><initializer>-1</initializer></methodparam>
   </methodsynopsis>
   <para>
    Întoarce timestamp-ul Unix ce corespunde argumentelor furnizate. Acest

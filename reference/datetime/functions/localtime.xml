@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.4 $ -->
-<!-- EN-Revision: 1.13 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.5 $ -->
+<!-- EN-Revision: 1.14 Maintainer: simionea Status: translated -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.localtime" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -12,8 +12,8 @@
   &reftitle.description;
   <methodsynopsis>
    <type>array</type><methodname>localtime</methodname>
-   <methodparam choice="opt"><type>int</type><parameter>timestamp</parameter></methodparam>
-   <methodparam choice="opt"><type>bool</type><parameter>is_associative</parameter></methodparam>
+   <methodparam choice="opt"><type>int</type><parameter>timestamp</parameter><initializer>time()</initializer></methodparam>
+   <methodparam choice="opt"><type>bool</type><parameter>is_associative</parameter><initializer>false</initializer></methodparam>
   </methodsynopsis>
   <para>
    Funcţia <function>localtime</function> întoarce un tablou identic ca
