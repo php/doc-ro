@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.6 $ -->
-<!-- EN-Revision: 1.8 Maintainer: radical Status: translated -->
+<!-- $Revision: 1.7 $ -->
+<!-- EN-Revision: 1.9 Maintainer: radical Status: translated -->
 <!-- CREDITS: simionea -->
 <refentry xml:id="function.json-decode" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -13,7 +13,8 @@
   <methodsynopsis>
    <type>mixed</type><methodname>json_decode</methodname>
    <methodparam><type>string</type><parameter>json</parameter></methodparam>
-   <methodparam choice="opt"><type>bool</type><parameter>assoc</parameter></methodparam>
+   <methodparam choice="opt"><type>bool</type><parameter>assoc</parameter><initializer>false</initializer></methodparam>
+   <methodparam choice="opt"><type>int</type><parameter>depth</parameter><initializer>512</initializer></methodparam>
   </methodsynopsis>
   <para>
    Preia un şir de caractere reprezentat JSON şi îl converteşte într-o 
@@ -40,6 +41,14 @@
       <para>
        Dacă specificaţi &true;, obiectul va fi convertit într-un
        <type>array</type> asociativ.
+      </para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><parameter>depth</parameter></term>
+     <listitem>
+      <para>
+       
       </para>
      </listitem>
     </varlistentry>
