@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- $Revision: 1.10 $ -->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.11 $ -->
 <!-- EN-Revision: 1.22 Maintainer: simionea Status: translated -->
 
  <reference xml:id="ref.imap" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -8,10 +8,10 @@
   <partintro>
    &reftitle.seealso;
     <para>
-     Acest document nu poate cuprinde toate amanuntele subiectelor atinse de
-     functiile date. Informatii suplimentare sunt oferite de documentatia 
-     codului-sursa al bibliotecii c-client
-     (<filename>docs/internal.txt</filename>) si de utmatoarele documente RFC:
+     Acest document nu poate cuprinde toate amănuntele subiectelor atinse de
+     funcţiile date. Informaţii suplimentare sunt oferite de documentaţia
+     codului-sursă al bibliotecii c-client
+     (<filename>docs/internal.txt</filename>) şi de utmătoarele documente RFC:
      <itemizedlist>
       <listitem>
        <simpara>
@@ -59,10 +59,10 @@
         Internet Mail Extensions (MIME).
        </simpara>
       </listitem>
-     </itemizedlist> 
-     O privire generala de detaliu este disponibila �n cartile
+     </itemizedlist>
+     O privire generală de detaliu este disponibilă în cărţile
      <link xlink:href="&url.email.book;">Programming Internet Email</link>
-     de David Wood si <link xlink:href="&url.imap.book;">Managing
+     de David Wood şi <link xlink:href="&url.imap.book;">Managing
      IMAP</link> de Dianna Mullet &amp; Kevin Mullet.
     </para>
   </partintro>
