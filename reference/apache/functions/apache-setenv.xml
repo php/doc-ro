@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.5 $ -->
-<!-- EN-Revision: 1.12 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.6 $ -->
+<!-- EN-Revision: 1.13 Maintainer: simionea Status: translated -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/apache.xml, last change in rev 1.7 -->
 <refentry xml:id="function.apache-setenv" xmlns="http://docbook.org/ns/docbook">
@@ -15,7 +15,7 @@
    <type>bool</type><methodname>apache_setenv</methodname>
    <methodparam><type>string</type><parameter>variable</parameter></methodparam>
    <methodparam><type>string</type><parameter>value</parameter></methodparam>
-   <methodparam choice="opt"><type>bool</type><parameter>walk_to_top</parameter></methodparam>
+   <methodparam choice="opt"><type>bool</type><parameter>walk_to_top</parameter><initializer>false</initializer></methodparam>
   </methodsynopsis>
   <para>
    <function>apache_setenv</function> stabileşte valoarea unei variabile de

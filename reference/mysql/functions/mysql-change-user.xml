@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.4 $ -->
-<!-- EN-Revision: 1.7 Maintainer: simionea Status: translated -->
+<!-- $Revision: 1.5 $ -->
+<!-- EN-Revision: 1.8 Maintainer: simionea Status: translated -->
 <!-- CREDITS: zamolxe -->
 <refentry xml:id="function.mysql-change-user" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -69,30 +69,6 @@
   &reftitle.returnvalues;
   <para>
    &return.success;
-  </para>
- </refsect1>
-
- <refsect1 role="changelog">
-  &reftitle.changelog;
-  <para>
-   <informaltable>
-    <tgroup cols="2">
-     <thead>
-      <row>
-       <entry>&Version;</entry>
-       <entry>&Description;</entry>
-      </row>
-     </thead>
-     <tbody>
-      <row>
-       <entry>3.0.14</entry>
-       <entry>
-        Această funcţie a fost eliminată din PHP.
-       </entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
   </para>
  </refsect1>
 
