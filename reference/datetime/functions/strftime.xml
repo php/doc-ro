@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.4 $ -->
+<!-- $Revision: 1.5 $ -->
 <!-- EN-Revision: 1.26 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.strftime" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -24,10 +24,10 @@
   <para>
    Nu toate specificările de convertire pot fi susţinute de biblioteca
    dumneavoastră C, în care caz ele nu vor fi susţinute de funcţia PHP
-   <function>strftime</function>. În plus, nu toate platforele susţin
+   <function>strftime</function>. În plus, nu toate platformele susţin
    timestamp-uri negative, de aceea domeniul de date poate fi limitat la valori
    nu mai mici de Epoca Unix. Aceasta înseamnă că de ex. %e, %T, %R şi %D (pot
-   fi mai multe) şi date anterioare la <literal>Jan 1, 1970</literal> nu vor
+   fi mai multe) cu date anterioare la <literal>Jan 1, 1970</literal> nu vor
    funcţiona în Windows, unele distibuţii Linux, şi alte câteva sisteme de
    operare. Pentru sisteme Windows o privire de ansamblu a specificatorilor de
    conversie susţinuţi poate fi găsită pe acest
@@ -54,214 +54,214 @@
         </listitem>
         <listitem>
          <simpara>
-          %A - full weekday name according to the current locale
+          %A - denumirea deplină a zilei săptămânii în conformitate cu setările
+          locale curente
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %b - abbreviated month name according to the current locale
+          %b - denumirea lunii abreviată în conformitate cu setările locale
+          curente
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %B - full month name according to the current locale
+          %B - denumirea deplină a lunii în conformitate cu setările locale
+          curente
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %c - preferred date and time representation for the current
-          locale
+          %c - reprezentarea preferenţială a datei şi a orei pentru setările
+          locale curente
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %C - century number (the year divided by 100 and truncated to
-          an integer, range 00 to 99)
+          %C - numărul secolului (anul divizat la 100 şi trunchiat până la
+          valoarea întreagă, domeniul de la 00 până la 99)
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %d - day of the month as a decimal number (range 01 to 31)
+          %d - ziua lunii ca valoare zecimală (domeniul de la 01 până la 31)
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %D - same as %m/%d/%y
+          %D - echivalent cu %m/%d/%y
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %e - day of the month as a decimal number, a single digit is
-          preceded by a space (range ' 1' to '31')
+          %e - ziua lunii ca valoare zecimală. Când este formată dintr-o cifră,
+          se prefixează cu un spaţiu (domeniul de la ' 1' până la '31')
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %g - like %G, but without the century.
+          %g - la fel ca şi %G, dar fără secol.
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %G - The 4-digit year corresponding to the ISO week number (see %V).
-          This has the same format and value as %Y, except that if the ISO week
-          number belongs to the previous or next year, that year is used
-          instead.
+          %G - anul din 4 cifre ce corespunde numărului săptămânii conform
+          standardului ISO (vezi %V). Aceasta are acelaşi format şi valoare ca
+          şi %Y, cu excepţia că dacă numărul săptămânii conform ISO aparţine
+          anului precedent sau următor, atunci este utilizat acel an.
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %h - same as %b
+          %h - echivalent cu %b
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %H - hour as a decimal number using a 24-hour clock (range 00
-          to 23)
+          %H - ora ca număr zecimal, utilizându-se 24 ore (domeniul de la 00
+          până la 23)
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %I - hour as a decimal number using a 12-hour clock (range 01
-          to 12)
+          %I - ora ca număr zecimal, utilizându-se 12 ore (domeniul de la 01
+          până la 12)
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %j - day of the year as a decimal number (range 001 to 366)
+          %j - ziua anului ca număr zecimal (domeniul de la 001 până la 366)
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %m - month as a decimal number (range 01 to 12)
+          %m - luna ca număr zecimal (domeniul de la 01 până la 12)
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %M - minute as a decimal number
+          %M - minuta ca număr zecimal
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %n - newline character
+          %n - caracterul 'newline'
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %p - UPPER-CASE `AM' or `PM' according to the given time value, or
-          the corresponding strings for the current locale
+          %p - `AM' sau `PM' (cu litere majuscule) în corespundere cu valoarea
+          orei, sau string-urile corespunzătoare pentru setările locale curente
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %P - lower-case `am' or `pm' according to the given time value, or
-          the corresponding strings for the current locale
+          %P - `am' sau `pm' (cu litere minuscule) în corespundere cu valoarea
+          orei, sau string-urile corespunzătoare pentru setările locale curente
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %r - time in a.m. and p.m. notation
+          %r - ora în notarea a.m. şi p.m.
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %R - time in 24 hour notation
+          %R - ora în notarea cu 24 de ore
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %S - second as a decimal number
+          %S - secunde ca număr zecimal
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %t - tab character
+          %t - caracterul 'tab'
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %T - current time, equal to %H:%M:%S
+          %T - ora curentă, echivalent cu %H:%M:%S
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %u - weekday as a decimal number [1,7], with 1 representing
-          Monday
+          %u - ziua săptămânii ca număr zecimal din domeniul [1,7], 1
+          reprezentând Luni
          </simpara>
          <warning>
           <simpara>
-           Sun Solaris seems to start with Sunday as 1
-           although ISO 9889:1999 (the current C standard) clearly
-           specifies that it should be Monday.
+           Sun Solaris se pare că consideră Duminica ca 1, cu toate că
+           ISO 9889:1999 (standardul curent C) în mod explicit specifică că
+           aceasta tebuie să fie Luni.
           </simpara>
          </warning>
         </listitem>
         <listitem>
          <simpara>
-          %U - week number of the current year as a decimal number,
-          starting with the first Sunday as the first day of the first
-          week
+          %U - numărul săptămânii a anului curent ca număr zecimal, începând cu
+          prima Duminică ca prima zi a primei săptămâni
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %V - The  ISO 8601:1988 week number of the current year as a
-          decimal number, range 01 to 53, where week 1 is the first
-          week that has at least 4 days in the current year, and with
-          Monday as the first day of the week. (Use %G or %g for the year
-          component that corresponds to the week number for the specified
-          timestamp.)
+          %V - numărul săptămânii anului curent, conform standardului ISO 8601:1988,
+          ca număr zecimal, cuprins între 01 şi 53, unde săptămâna 1 este prima
+          săptămână care are cel puţin 4 zile în anul curent, şi cu Luni ca
+          prima zi a săptămânii. (Utilizaţi %G sau %g pentru a afla componenta
+          anului, ce corespunde numărului săptămânii pentru timestamp-ul
+          specificat.)
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %W - week number of the current year as a decimal number,
-          starting with the first Monday as the first day of the first
-          week
+          %W - numărul săptămânii a anului curent ca număr zecimal, începând cu
+          prima zi de Luni ca primă zi a primei săptămâni
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %w - day of the week as a decimal, Sunday being 0
+          %w - ziua săptămânii ca număr zecimal, Duminică fiind 0
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %x - preferred date representation for the current locale
-          without the time
+          %x - reprezentarea preferenţială a datei pentru setările locale
+          curente, fără oră
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %X - preferred time representation for the current locale
-          without the date
+          %X - reprezentarea preferenţială a orei pentru setările locale
+          curente, fără dată
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %y - year as a decimal number without a century (range 00 to
-          99)
+          %y - anul, ca număr zecimal, fără secol (domeniul de la 00 până la 99)
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %Y - year as a decimal number including the century
+          %Y - anul, ca număr zecimal, inclusiv şi secolul
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %Z or %z - time zone offset or name or abbreviation (Operating
-          System dependent)
+          %Z sau %z - deplasamentul fusului orar, sau denumirea sa, sau
+          abreviatura (depinde de Sistemul de Operare)
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          %% - a literal `%' character
+          %% - caracterul literal `%'
          </simpara>
         </listitem>
        </itemizedlist>
       </para>
       <para>
-       Maximum length of this parameter is 1023 characters.
+       Lungimea maximă a acestui parametru este de 1023 caractere.
       </para>
      </listitem>
     </varlistentry>
@@ -275,11 +275,11 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Returns a string formatted according to the given format string
-   using the given <parameter>timestamp</parameter> or the current
-   local time if no timestamp is given.  Month and weekday names and
-   other language dependent strings respect the current locale set
-   with <function>setlocale</function>.
+   Întoarce un string formatat în corespundere cu string-ul de formatare dat,
+   utilizând <parameter>timestamp</parameter>-ul dat sau data şi ora locală,
+   dacă nu este furnizat un timestamp. Denumirile lunilor şi a zilelor
+   săptămânii şi alte string-uri dependente de limbă sunt în corespundere cu
+   setările locale stabilite cu <function>setlocale</function>.
   </para>
  </refsect1>
 
@@ -312,10 +312,10 @@
  <refsect1 role="examples">
   &reftitle.examples;
   <para>
-   This example works if you have the respective locales installed
-   in your system.
+   Acest exemplu funcţionează dacă aveţi setările locale respective instalate
+   în sistem.
    <example>
-    <title><function>strftime</function> locale examples</title>
+    <title>Exemple <function>strftime</function></title>
     <programlisting role="php">
 <![CDATA[
 <?php
@@ -332,7 +332,7 @@ echo strftime(" in German %A.\n");
     </programlisting>
    </example>
    <example>
-    <title>ISO 8601:1988 week number example</title>
+    <title>Exemplu al numerelor săptămânilor conform standardului ISO 8601:1988</title>
     <programlisting role="php">
 <![CDATA[
 <?php
@@ -345,18 +345,17 @@ ISOWk  M   Tu  W   Thu F   Sa  Su
 2       6   7   8   9  10  11  12
 3      13  14  15  16  17  18  19   */
 
-// Outputs: 12/28/2002 - %V,%G,%Y = 52,2002,2002
+// Afişează: 12/28/2002 - %V,%G,%Y = 52,2002,2002
 echo "12/28/2002 - %V,%G,%Y = " . strftime("%V,%G,%Y", strtotime("12/28/2002")) . "\n";
 
-// Outputs: 12/30/2002 - %V,%G,%Y = 1,2003,2002
+// Afişează: 12/30/2002 - %V,%G,%Y = 1,2003,2002
 echo "12/30/2002 - %V,%G,%Y = " . strftime("%V,%G,%Y", strtotime("12/30/2002")) . "\n";
 
-// Outputs: 1/3/2003 - %V,%G,%Y = 1,2003,2003
+// Afişează: 1/3/2003 - %V,%G,%Y = 1,2003,2003
 echo "1/3/2003 - %V,%G,%Y = " . strftime("%V,%G,%Y",strtotime("1/3/2003")) . "\n";
 
-// Outputs: 1/10/2003 - %V,%G,%Y = 2,2003,2003
+// Afişează: 1/10/2003 - %V,%G,%Y = 2,2003,2003
 echo "1/10/2003 - %V,%G,%Y = " . strftime("%V,%G,%Y",strtotime("1/10/2003")) . "\n";
-
 
 
 /*     December 2004 / January 2005
@@ -368,16 +367,16 @@ ISOWk  M   Tu  W   Thu F   Sa  Su
 1       3   4   5   6   7   8   9
 2      10  11  12  13  14  15  16   */
 
-// Outputs: 12/23/2004 - %V,%G,%Y = 52,2004,2004
+// Afişează: 12/23/2004 - %V,%G,%Y = 52,2004,2004
 echo "12/23/2004 - %V,%G,%Y = " . strftime("%V,%G,%Y",strtotime("12/23/2004")) . "\n";
 
-// Outputs: 12/31/2004 - %V,%G,%Y = 53,2004,2004
+// Afişează: 12/31/2004 - %V,%G,%Y = 53,2004,2004
 echo "12/31/2004 - %V,%G,%Y = " . strftime("%V,%G,%Y",strtotime("12/31/2004")) . "\n";
 
-// Outputs: 1/2/2005 - %V,%G,%Y = 53,2004,2005
+// Afişează: 1/2/2005 - %V,%G,%Y = 53,2004,2005
 echo "1/2/2005 - %V,%G,%Y = " . strftime("%V,%G,%Y",strtotime("1/2/2005")) . "\n";
 
-// Outputs: 1/3/2005 - %V,%G,%Y = 1,2005,2005
+// Afişează: 1/3/2005 - %V,%G,%Y = 1,2005,2005
 echo "1/3/2005 - %V,%G,%Y = " . strftime("%V,%G,%Y",strtotime("1/3/2005")) . "\n";
 
 ?>
@@ -391,9 +390,10 @@ echo "1/3/2005 - %V,%G,%Y = " . strftime("%V,%G,%Y",strtotime("1/3/2005")) . "\n
   &reftitle.notes;
   <note>
    <simpara>
-    %G and %V, which are based on ISO 8601:1988 week numbers can
-    give unexpected (albeit correct) results if the numbering system
-    is not thoroughly understood.  See %V examples in this manual page.
+    %G şi %V, care se bazează pe numerele săptămânilor conform standardului
+    ISO 8601:1988 pot oferi rezultate neaşteptate (dar corecte) dacă sistemul
+    de numerotare nu este înţeles în detaliu. Vedeţi exemplele %V în această
+    pagină a manualului.
    </simpara>
   </note>
  </refsect1>
@@ -406,7 +406,7 @@ echo "1/3/2005 - %V,%G,%Y = " . strftime("%V,%G,%Y",strtotime("1/3/2005")) . "\n
     <member><function>mktime</function></member>
     <member><function>strptime</function></member>
     <member><function>gmstrftime</function></member>
-    <member><link xlink:href="&spec.strftime;">Open Group specification of <function>strftime</function></link></member>
+    <member><link xlink:href="&spec.strftime;">Specificaţia Open Group a <function>strftime</function></link></member>
    </simplelist>
   </para>
  </refsect1>
