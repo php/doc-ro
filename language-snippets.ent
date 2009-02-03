@@ -929,7 +929,7 @@ funcţia <function>ssh2_auth_pubkey_file</function> în loc.</simpara></note>'>
 <!ENTITY see.http.request.options '<para>Vedeţi lista întreagă de 
 &link.http.request.options;.</para>'>
 <!ENTITY see.http.configuration.force_exit 'Vedeţi &link.http.configuration;
-<link linkend="http.configuration.force_exit">http.force_exit</link> pentru a 
+<link linkend="http.configuration.force-exit">http.force_exit</link> pentru a 
 afla ce înseamnă "iese".'>
 
 <!ENTITY link.http.configuration '<link linkend="http.configuration">setarea 
