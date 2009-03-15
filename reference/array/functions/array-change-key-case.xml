@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.9 $ -->
-<!-- EN-Revision: 1.15 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.10 $ -->
+<!-- EN-Revision: 1.16 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.array-change-key-case" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -54,7 +54,7 @@
   &reftitle.returnvalues;
   <para>
    Întoarce un tablou cu cheile transferate în caractere minuscule sau majuscule,
-   sau false dacă <parameter>input</parameter> nu este un tablou.
+   sau &false; dacă <parameter>input</parameter> nu este un tablou.
   </para>
  </refsect1>
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.6 $ -->
-<!-- EN-Revision: 1.17 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.7 $ -->
+<!-- EN-Revision: 1.18 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.array" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -168,7 +168,7 @@ echo "Salut, {$foo['bar']}!"; // Salut, baz!
     <member><function>list</function></member>
     <member><function>count</function></member>
     <member><function>range</function></member>
-    <member><link linkend="control-structures.foreach">foreach</link></member>
+    <member>&foreach;</member>
     <member>Tipul <link linkend="language.types.array">array</link></member>
    </simplelist>
   </para>
