@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.2 $ -->
-<!-- EN-Revision: 1.2 Maintainer: zamolxe Status: ready -->
+<!-- $Revision: 1.3 $ -->
+<!-- EN-Revision: 1.3 Maintainer: zamolxe Status: ready -->
 <!-- CREDITS: simionea -->
 <!-- Purpose: database.vendors -->
 <!-- Membership: bundled, external -->
@@ -19,6 +19,10 @@
   <para>
    Documentaţia pentru MySQL poate fi găsită la 
    <link xlink:href="&url.mysql.docs;">&url.mysql.docs;</link>.
+  </para>
+  <para>
+   Pentru o privire de ansamblu asupra termenelor de conectare la baze de date
+   şi a produselor accesaţi <xref linkend="mysqli.overview"/>.
   </para>
  </preface>
  <!-- }}} -->
