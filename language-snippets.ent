@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.246 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 1.247 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!-- Notes -->
@@ -1016,6 +1016,10 @@ xmlwriter</parameter></term><listitem><para>Numai pentru apelurile
 procedurale. <type>Resursa</type> XMLWriter care este modificată. Această 
 resursă se obţine în urma apelării <function>xmlwriter_open_uri</function> sau
 <function>xmlwriter_open_memory</function>.</para></listitem></varlistentry>'>
+
+<!-- SOAP notes -->
+<!ENTITY soap.wsdl.mode.only "<note><para>Această funcţie funcţionează doar în
+modul WSDL.</para></note>">
 
 <!-- SVN notes -->
 <!ENTITY svn.relativepath "<note><simpara>Căile relative vor fi rezolvate ca 
