@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.4 $ -->
-<!-- EN-Revision: 1.2 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.5 $ -->
+<!-- EN-Revision: 1.3 Maintainer: simionea Status: ready -->
  <sect3 xml:id="configure.options.php" xmlns="http://docbook.org/ns/docbook">
   <title>Opţiunile PHP</title>
   <variablelist>
@@ -21,7 +21,7 @@
     </term>
     <listitem>
      <para>
-      Setează calea în care este căutat &php.ini;, implicit aceasta este PREFIX/lib.
+      Setează calea în care este căutat &php.ini;, implicit aceasta este <literal>PREFIX/lib</literal>.
      </para>
     </listitem>
    </varlistentry>
@@ -42,7 +42,7 @@
     <listitem>
      <para>
       Permite executarea fişierelor numai din directorul DIR, atunci când
-      este activat modul sigur. Implicit este /usr/local/php/bin.
+      este activat modul sigur. Implicit este <literal>/usr/local/php/bin</literal>.
      </para>
     </listitem>
    </varlistentry>

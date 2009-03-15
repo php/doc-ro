@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.10 $ -->
-<!-- EN-Revision: 1.49 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.11 $ -->
+<!-- EN-Revision: 1.50 Maintainer: simionea Status: ready -->
 <!-- CREDITS: spooky -->
  <chapter xml:id="introduction" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <info><title>Introducere</title></info>
@@ -8,8 +8,8 @@
   <section xml:id="intro-whatis">
    <info><title>Ce este PHP?</title></info>
    <para>
-    <acronym>PHP</acronym> (acronim recursiv pentru "PHP: Hypertext
-    Preprocessor") este un limbaj de scripting de uz general, cu cod-sursă 
+    <acronym>PHP</acronym> (acronim recursiv pentru <literal>PHP: Hypertext
+    Preprocessor</literal>) este un limbaj de scripting de uz general, cu cod-sursă 
     deschis (open source), utilizat pe scară largă, şi care este potrivit în 
     special pentru dezvoltarea aplicaţiilor web şi poate fi integrat în HTML.
    </para>
