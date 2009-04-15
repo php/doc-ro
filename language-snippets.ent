@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.247 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 1.258 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!-- Notes -->
@@ -202,12 +202,18 @@ documentată în prezent; este disponibilă numai lista sa de argumente.
 
 <!ENTITY example.outputs '<para>Exemplul de mai sus va afişa:</para>'>
 
+<!ENTITY example.outputs.32bit '<para>Exemplul de mai sus va afișa pe mașini pe 32 de biți:</para>'>
+
+<!ENTITY example.outputs.64bit '<para>Exemplul de mai sus va afișa pe mașini pe 64 de biți:</para>'>
+
 <!ENTITY example.outputs.similar '<para>Exemplul de mai sus va afişa
 ceva similar cu:</para>'>
 
 <!ENTITY array.resetspointer '<note><simpara>Această funcţie va efectua
 <function>reset</function> asupra indicatorului de tip <type>array</type>
 după utilizare.</simpara></note>'>
+
+<!ENTITY seealso.array.sorting '<link linkend="array.sorting">Comparația funcțiilor de sortare a tablourilor</link>'>
 
 <!ENTITY seealso.callback 'informaţie despre tipul
 <link linkend="language.types.callback">callback</link>'>
@@ -411,6 +417,9 @@ object</parameter></term><listitem><para>Doar pentru stilul procedural: Un
 obiect <classname>DateTimeZone</classname> întors de funcţia
 <function>timezone_open</function></para></listitem></varlistentry>'>
 
+<!ENTITY date.datetime.retval.changelog '<row><entry>5.3.0</entry><entry>A fost schimbată
+valoarea întoarsă din &null; în <classname>DateTime</classname>.</entry></row>'>
+
 <!-- DomXml Notes -->
 <!ENTITY node.inserted 'Acest nod nu va apărea în document dacă nu este
 inserat cu <function>domnode_append_child</function> de exemplu.'>
@@ -439,6 +448,9 @@ apelării <function>gnupg_init</function> sau <classname>gnupg</classname>.
 
 <!ENTITY gnupg.fingerprint '<para>Cheia amprentei.</para>'>
 
+<!-- HaruDoc -->
+<!ENTITY haru.error '<para>Aruncă un <classname>HaruException</classname> în caz de eroare.</para>'>
+
 <!-- ODBC -->
 <!ENTITY odbc.connection.id '<para>Identificatorul conexiunii ODBC, accesaţi
 <function>odbc_connect</function> pentru detalii.</para>'>
@@ -465,12 +477,15 @@ transformărilor tipurilor de date efectuate de driver-ul oci8, accesaţi
 </parameter> reprezintă parametrul de stare furnizat către un apel cu succes 
 al funcţiei <function>pcntl_waitpid</function>.</para>'>
 
+<!-- PS Notes -->
+<!ENTITY ps.note.visible '<para>Nota nu va fi viziblă dacă documentul este
+tipărit sau vizualizat, dar va apare dacă documentul este convertit în
+pdf fie de Acrobat Distiller™ sau de Ghostview.</para>'>
 
 <!-- XSLT Notes -->
 <!ENTITY note.xslt.windows '<note><para>Vă atragem atenţia că este necesar de 
 indicat <literal>file://</literal> în faţa căii, în cazul când utilizaţi 
 Windows.</para></note>'>
-
 
 <!-- Notes for safe-mode limited functions: -->
 <!ENTITY note.sm.disabled '<note><simpara>&sm.disabled;</simpara></note>'>
@@ -487,7 +502,6 @@ script-ul care se execută.</simpara></note>'>
 
 <!ENTITY note.open-basedir.func '<note><para>Această funcţie este afectată de
 <link linkend="ini.open-basedir">open_basedir</link>.</para></note>'>
-
 
 <!ENTITY note.language-construct '<note><simpara>Deoarece aceasta este o 
 construcţie a limbajului şi nu o funcţie, ea nu poate fi apelată utilizând
@@ -853,6 +867,8 @@ paranteze pătrate &#2014; de exemplu <literal>tcp://[fe80::1]:80</literal>.
 <!ENTITY note.tidy.ze2 '<note><simpara> Această funcţie este disponibilă numai
 cu Zend Engine 2 (PHP &gt;= 5.0.0).</simpara></note>'>
 
+<!ENTITY tidy.object 'Obiectul <classname>Tidy</classname>.'>
+
 <!ENTITY note.tidy.1only '<note><simpara>Această funcţie este disponibilă 
 numai în Tidy 1.0. Ea a devenit dezaprobată în Tidy 2.0 şi de aceea a fost 
 eliminată.</simpara></note>'>
@@ -1045,6 +1061,9 @@ ImagickPixelIteratorException în caz de eroare.'>
 <!ENTITY imagick.method.available.0x629 'Această metodă este disponibilă dacă
 Imagick a fost compilat cu ImageMagick de versiunea 6.2.9 sau ulterior.'>
 
+<!ENTITY imagick.imagickexception.throw 'Aruncă un
+<classname>ImagickException</classname> în caz de eroare.'>
+
 <!ENTITY note.openssl.cnf '<note xmlns="http://docbook.org/ns/docbook">
  <simpara>
   Trebuie să aveţi un fişier <filename>openssl.cnf</filename> valid instalat 
@@ -1119,3 +1138,12 @@ disponibilă numai când PHP este compilat cu libxml 20620 sau ulterioară.
 <!-- inotify -->
 <!ENTITY inotify.instance.description 'Resursa întoarsă de
 <function>inotify_init</function>'>
+
+<!-- User streams -->
+<!ENTITY userstream.not.implemented.warning '<para>Emite o eroare
+<constant>E_WARNING</constant> dacă apelul acestei metode eșuează
+(de ex. nu este implementată).</para>'>
+
+<!ENTITY userstream.updates.context '<note><para>Proprietatea
+<varname linkend="streamwrapper.props.context">streamWrapper->context</varname>
+este reînnoită dacă un context valid este transmis funcției apelante.</para></note>'>
