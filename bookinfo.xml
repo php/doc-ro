@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.28 $ -->
-<!-- EN-Revision: 1.57 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.29 $ -->
+<!-- EN-Revision: 1.59 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju,aspinei,radical,zamolxe -->
 
  <info xml:id="bookinfo" xmlns="http://docbook.org/ns/docbook">
@@ -39,7 +39,7 @@
   <legalnotice xml:id="copyright" xmlns:xlink="http://www.w3.org/1999/xlink">
    <title>Copyright</title>
    <simpara>
-    Copyright &copy; 1997 - 2009 de către Grupul de Documentare PHP.
+    Copyright © 1997 - 2009 de către Grupul de Documentare PHP.
     Acest material poate fi distribuit numai în baza termenelor şi condiţiilor
     stabilite în documentul "Creative Commons Attribution 3.0 License"
     sau ulterioară. O copie a licenţei
