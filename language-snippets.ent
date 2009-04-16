@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.258 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 1.259 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!-- Notes -->
@@ -305,6 +305,9 @@ dacă PHP este compilat cu susţinerea freetype (<option role="configure">
 
 <!ENTITY note.gd.2 '<note><simpara>Această funcţie necesită GD 2.0.1 sau 
 ulterioară (2.0.28 sau ulterioară este recomandată).</simpara></note>'>
+
+<!ENTITY note.gd.notrequired '<note><para>Această funcție nu necesită biblioteca
+de prelucrare a imaginilor GD.</para></note>'>
 
 <!ENTITY gd.image.description '<varlistentry><term><parameter>
 image</parameter></term><listitem><para>O resursă - imagine, întoarsă de una 

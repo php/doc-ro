@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.6 $ -->
-<!-- EN-Revision: 1.27 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.7 $ -->
+<!-- EN-Revision: 1.28 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/datetime.xml, last change in rev 1.8 -->
 <refentry xml:id="function.strtotime" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -55,8 +55,7 @@
      <term><parameter>now</parameter></term>
      <listitem>
       <para>
-       Timestamp-ul ce reprezintă ora curentă, utilizată pentru calcularea
-       datelor relative.
+       Timestamp-ul care este utilizat ca bază pentru calcularea datelor relative.
       </para>
      </listitem>
     </varlistentry>
