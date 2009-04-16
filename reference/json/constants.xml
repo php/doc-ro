@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.5 $ -->
-<!-- EN-Revision: 1.8 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.6 $ -->
+<!-- EN-Revision: 1.9 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="json.constants" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.constants;
@@ -57,6 +57,70 @@
   </varlistentry>
  </variablelist>
 
+ <para>
+  Următoarele constante pot fi combinate pentru a forma opțiuni pentru
+  <function>json_encode</function>. Toate sunt disponibile începând cu
+  PHP 5.3.0.
+ </para>
+ <variablelist>
+  <varlistentry>
+   <term>
+    <constant>JSON_HEX_TAG</constant>
+     (<type>integer</type>)
+   </term>
+   <listitem>
+    <simpara>
+     Toate &lt; și &gt; sunt convertite în \u003C și \u003E.
+    </simpara>
+   </listitem>
+  </varlistentry>
+  <varlistentry>
+   <term>
+    <constant>JSON_HEX_AMP</constant>
+     (<type>integer</type>)
+   </term>
+   <listitem>
+    <simpara>
+     Toate &amp; sunt convertite în \u0026.
+    </simpara>
+   </listitem>
+  </varlistentry>
+  <varlistentry>
+   <term>
+    <constant>JSON_HEX_APOS</constant>
+     (<type>integer</type>)
+   </term>
+   <listitem>
+    <simpara>
+     Toate ' sunt convertite în \u0027.
+    </simpara>
+   </listitem>
+  </varlistentry>
+  <varlistentry>
+   <term>
+    <constant>JSON_HEX_QUOT</constant>
+     (<type>integer</type>)
+   </term>
+   <listitem>
+    <simpara>
+     Toate " sunt convertite în \u0022.
+    </simpara>
+   </listitem>
+  </varlistentry>
+  <varlistentry>
+   <term>
+    <constant>JSON_FORCE_OBJECT</constant>
+     (<type>integer</type>)
+   </term>
+   <listitem>
+    <simpara>
+     Întoarce un obiect în loc de tablou când este utilizat un tablou
+     non-associativ. Util în special când receptorul rezultatului se așteaptă la
+     un obiect, iar tabloul este vid.
+    </simpara>
+   </listitem>
+  </varlistentry>
+ </variablelist>
 </appendix>
 
 <!-- Keep this comment at the end of the file
