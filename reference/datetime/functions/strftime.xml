@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.5 $ -->
-<!-- EN-Revision: 1.26 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.6 $ -->
+<!-- EN-Revision: 1.29 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.strftime" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
@@ -16,7 +16,7 @@
    <methodparam choice="opt"><type>int</type><parameter>timestamp</parameter><initializer>time()</initializer></methodparam>
   </methodsynopsis>
   <para>
-   Formatează o oră/dată locală în conformitate cu setările locale. Denumirile
+   Formatează ora și/sau data în conformitate cu setările locale. Denumirile
    lunilor şi a zilelor săptămânii şi alte string-uri dependente de limbă sunt
    în conformitate cu setările locale stabilite prin fincţia
    <function>setlocale</function>.
@@ -26,9 +26,9 @@
    dumneavoastră C, în care caz ele nu vor fi susţinute de funcţia PHP
    <function>strftime</function>. În plus, nu toate platformele susţin
    timestamp-uri negative, de aceea domeniul de date poate fi limitat la valori
-   nu mai mici de Epoca Unix. Aceasta înseamnă că de ex. %e, %T, %R şi %D (pot
-   fi mai multe) cu date anterioare la <literal>Jan 1, 1970</literal> nu vor
-   funcţiona în Windows, unele distibuţii Linux, şi alte câteva sisteme de
+   nu mai mici de Epoca Unix. Aceasta înseamnă că %e, %T, %R şi %D (pot
+   fi mai multe), precum și date anterioare la <literal>Jan 1, 1970</literal> nu
+   vor funcţiona în Windows, unele distibuţii Linux, şi alte câteva sisteme de
    operare. Pentru sisteme Windows o privire de ansamblu a specificatorilor de
    conversie susţinuţi poate fi găsită pe acest
    <link xlink:href="&url.strftime.win32;">website <acronym>MSDN</acronym></link>.
@@ -43,226 +43,278 @@
      <term><parameter>format</parameter></term>
      <listitem>
       <para>
-       Următorii specificatori de conversie sunt recunoscuţi în string-ul de
-       formatare:
-       <itemizedlist>
-        <listitem>
-         <simpara>
-          %a - denumirea zilei săptămânii prescurtată în conformitate cu
-          setările locale curente
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %A - denumirea deplină a zilei săptămânii în conformitate cu setările
-          locale curente
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %b - denumirea lunii abreviată în conformitate cu setările locale
-          curente
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %B - denumirea deplină a lunii în conformitate cu setările locale
-          curente
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %c - reprezentarea preferenţială a datei şi a orei pentru setările
-          locale curente
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %C - numărul secolului (anul divizat la 100 şi trunchiat până la
-          valoarea întreagă, domeniul de la 00 până la 99)
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %d - ziua lunii ca valoare zecimală (domeniul de la 01 până la 31)
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %D - echivalent cu %m/%d/%y
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %e - ziua lunii ca valoare zecimală. Când este formată dintr-o cifră,
-          se prefixează cu un spaţiu (domeniul de la ' 1' până la '31')
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %g - la fel ca şi %G, dar fără secol.
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %G - anul din 4 cifre ce corespunde numărului săptămânii conform
-          standardului ISO (vezi %V). Aceasta are acelaşi format şi valoare ca
-          şi %Y, cu excepţia că dacă numărul săptămânii conform ISO aparţine
-          anului precedent sau următor, atunci este utilizat acel an.
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %h - echivalent cu %b
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %H - ora ca număr zecimal, utilizându-se 24 ore (domeniul de la 00
-          până la 23)
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %I - ora ca număr zecimal, utilizându-se 12 ore (domeniul de la 01
-          până la 12)
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %j - ziua anului ca număr zecimal (domeniul de la 001 până la 366)
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %m - luna ca număr zecimal (domeniul de la 01 până la 12)
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %M - minuta ca număr zecimal
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %n - caracterul 'newline'
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %p - `AM' sau `PM' (cu litere majuscule) în corespundere cu valoarea
-          orei, sau string-urile corespunzătoare pentru setările locale curente
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %P - `am' sau `pm' (cu litere minuscule) în corespundere cu valoarea
-          orei, sau string-urile corespunzătoare pentru setările locale curente
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %r - ora în notarea a.m. şi p.m.
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %R - ora în notarea cu 24 de ore
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %S - secunde ca număr zecimal
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %t - caracterul 'tab'
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %T - ora curentă, echivalent cu %H:%M:%S
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %u - ziua săptămânii ca număr zecimal din domeniul [1,7], 1
-          reprezentând Luni
-         </simpara>
-         <warning>
-          <simpara>
-           Sun Solaris se pare că consideră Duminica ca 1, cu toate că
-           ISO 9889:1999 (standardul curent C) în mod explicit specifică că
-           aceasta tebuie să fie Luni.
-          </simpara>
-         </warning>
-        </listitem>
-        <listitem>
-         <simpara>
-          %U - numărul săptămânii a anului curent ca număr zecimal, începând cu
-          prima Duminică ca prima zi a primei săptămâni
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %V - numărul săptămânii anului curent, conform standardului ISO 8601:1988,
-          ca număr zecimal, cuprins între 01 şi 53, unde săptămâna 1 este prima
-          săptămână care are cel puţin 4 zile în anul curent, şi cu Luni ca
-          prima zi a săptămânii. (Utilizaţi %G sau %g pentru a afla componenta
-          anului, ce corespunde numărului săptămânii pentru timestamp-ul
-          specificat.)
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %W - numărul săptămânii a anului curent ca număr zecimal, începând cu
-          prima zi de Luni ca primă zi a primei săptămâni
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %w - ziua săptămânii ca număr zecimal, Duminică fiind 0
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %x - reprezentarea preferenţială a datei pentru setările locale
-          curente, fără oră
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %X - reprezentarea preferenţială a orei pentru setările locale
-          curente, fără dată
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %y - anul, ca număr zecimal, fără secol (domeniul de la 00 până la 99)
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %Y - anul, ca număr zecimal, inclusiv şi secolul
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %Z sau %z - deplasamentul fusului orar, sau denumirea sa, sau
-          abreviatura (depinde de Sistemul de Operare)
-         </simpara>
-        </listitem>
-        <listitem>
-         <simpara>
-          %% - caracterul literal `%'
-         </simpara>
-        </listitem>
-       </itemizedlist>
+       <table>
+        <title>Următoarele caractere sunt recunoscute în cadrul parametrului <parameter>format</parameter></title>
+        <tgroup cols="3">
+         <thead>
+          <row>
+           <entry><parameter>format</parameter></entry>
+           <entry>Descriere</entry>
+           <entry>Exemplu de valori întoarse</entry>
+          </row>
+         </thead>
+         <tbody>
+          <row>
+           <entry align="center"><emphasis>Ziua</emphasis></entry>
+           <entry>---</entry>
+           <entry>---</entry>
+          </row>
+          <row>
+           <entry><literal>%a</literal></entry>
+           <entry>Reprezentarea textuală abreviată a zilei săptămânii</entry>
+           <entry>De la <literal>Sun</literal> până la <literal>Sat</literal></entry>
+          </row>
+          <row>
+           <entry><literal>%A</literal></entry>
+           <entry>Reprezentarea textuală deplină a zilei săptămânii</entry>
+           <entry>De la <literal>Sunday</literal> până la <literal>Saturday</literal></entry>
+          </row>
+          <row>
+           <entry><literal>%d</literal></entry>
+           <entry>Ziua lunii din două cifre (prefixată cu zero)</entry>
+           <entry>De la <literal>01</literal> până la <literal>31</literal></entry>
+          </row>
+          <row>
+           <entry><literal>%e</literal></entry>
+           <entry>Ziua lunii prefixată cu spațiu în cazul unei singure cifre</entry>
+           <entry>De la <literal> 1</literal> până la <literal>31</literal></entry>
+          </row>
+          <row>
+           <entry><literal>%j</literal></entry>
+           <entry>Ziua anului, 3 cifre prefixate cu zerouri</entry>
+           <entry>De la <literal>001</literal> până la <literal>366</literal></entry>
+          </row>
+          <row>
+           <entry><literal>%u</literal></entry>
+           <entry>Reprezentarea numerică a zilei săptămânii în conformitate cu ISO-8601</entry>
+           <entry>De la <literal>1</literal> (Luni) până la <literal>7</literal> (Duminică)</entry>
+          </row>
+          <row>
+           <entry><literal>%w</literal></entry>
+           <entry>Reprezentarea numerică a zilei săptămânii</entry>
+           <entry>De la <literal>0</literal> (Duminică) până la <literal>6</literal> (Sâmbătă)</entry>
+          </row>
+          <row>
+           <entry align="center"><emphasis>Săptămâna</emphasis></entry>
+           <entry>---</entry>
+           <entry>---</entry>
+          </row>
+          <row>
+           <entry><literal>%U</literal></entry>
+           <entry>Numărul săptămânii anului dat. Prima Duminică din an este
+           începutul primei săptămâni</entry>
+           <entry><literal>13</literal> (pentru a 13-a săptămână deplină a anului)</entry>
+          </row>
+          <row>
+           <entry><literal>%V</literal></entry>
+           <entry>Numărul săptămânii anului dat în conformitate cu
+           ISO-8601:1988, începând cu prima săptămână a anului cu cel puțin 4
+           zile de lucru, ziua de Luni fiind prima zi a săptămânii</entry>
+           <entry>De la <literal>01</literal> până la <literal>53</literal>
+           (unde 53 reprezintă o săptămână suprapusă)</entry>
+          </row>
+          <row>
+           <entry><literal>%W</literal></entry>
+           <entry>Reprezentarea numerică a săptămânii din an, începând cu prima
+           zi de Luni ca prima săptămână</entry>
+           <entry><literal>46</literal> (pentru a 46-a săptămână a anului
+           începând cu Luni)</entry>
+          </row>
+          <row>
+           <entry align="center"><emphasis>Luna</emphasis></entry>
+           <entry>---</entry>
+           <entry>---</entry>
+          </row>
+          <row>
+           <entry><literal>%b</literal></entry>
+           <entry>Denumirea abreviată a lunii bazată pe setările locale</entry>
+           <entry>De la <literal>Jan</literal> până la <literal>Dec</literal></entry>
+          </row>
+          <row>
+           <entry><literal>%B</literal></entry>
+           <entry>Denumirea deplină a lunii bazată pe setările locale</entry>
+           <entry>De la <literal>January</literal> până la <literal>December</literal></entry>
+          </row>
+          <row>
+           <entry><literal>%h</literal></entry>
+           <entry>Denumirea abreviată a lunii bazată pe setările locale (un
+           pseudonim pentru %b)</entry>
+           <entry>De la <literal>Jan</literal> până la <literal>Dec</literal></entry>
+          </row>
+          <row>
+           <entry><literal>%m</literal></entry>
+           <entry>Reprezentarea din două cifre a lunii</entry>
+           <entry>De la <literal>01</literal> (Ianuarie) până la <literal>12</literal> (Decembrie)</entry>
+          </row>
+          <row>
+           <entry align="center"><emphasis>Anul</emphasis></entry>
+           <entry>---</entry>
+           <entry>---</entry>
+          </row>
+          <row>
+           <entry><literal>%C</literal></entry>
+           <entry>Reprezentarea din două cifre a secolului (anul divizat la 100,
+           trunchiat până la un întreg)</entry>
+           <entry><literal>19</literal> pentru secolul 20</entry>
+          </row>
+          <row>
+           <entry><literal>%g</literal></entry>
+           <entry>Reprezentarea din două cifre a anului conform standardului ISO-8601:1988 (vezi %V)</entry>
+           <entry>Exemplu: <literal>09</literal> pentru 6 Ianuarie, 2009</entry>
+          </row>
+          <row>
+           <entry><literal>%G</literal></entry>
+           <entry>Versiunea deplină din patru cifre a %g</entry>
+           <entry>Exemplu: <literal>2008</literal> pentru 3 Ianuarie 2009</entry>
+          </row>
+          <row>
+           <entry><literal>%y</literal></entry>
+           <entry>Reprezentarea din două cifre a anului</entry>
+           <entry>Exemplu: <literal>09</literal> pentru 2009, <literal>79</literal> pentru 1979</entry>
+          </row>
+          <row>
+           <entry><literal>%Y</literal></entry>
+           <entry>Reprezentarea din patru cifre a anului</entry>
+           <entry>Exemplu: <literal>2038</literal></entry>
+          </row>
+          <row>
+           <entry align="center"><emphasis>Ora</emphasis></entry>
+           <entry>---</entry>
+           <entry>---</entry>
+          </row>
+          <row>
+           <entry><literal>%H</literal></entry>
+           <entry>Reprezentarea din două cifre a orei în formatul cu 24 de ore</entry>
+           <entry>De la <literal>00</literal> până la <literal>23</literal></entry>
+          </row>
+          <row>
+           <entry><literal>%I</literal></entry>
+           <entry>Reprezentarea din două cifre a orei în formatul cu 12 ore</entry>
+           <entry>De la <literal>01</literal> până la <literal>12</literal></entry>
+          </row>
+          <row>
+           <entry><literal>%l (litera minusculă 'L')</literal></entry>
+           <entry>Ora în formatul cu 12 ore, cu un spațiu înaintea orei cu o singură cifră</entry>
+           <entry><literal> 1</literal> through <literal>12</literal></entry>
+          </row>
+          <row>
+           <entry><literal>%M</literal></entry>
+           <entry>Reprezentarea din două cifre a minutei</entry>
+           <entry>De la <literal>00</literal> până la <literal>59</literal></entry>
+          </row>
+          <row>
+           <entry><literal>%p</literal></entry>
+           <entry>'AM' sau 'PM' cu litere majuscule în dependență de oră</entry>
+           <entry>Exemplu: <literal>AM</literal> pentru 00:31, <literal>PM</literal> pentru 22:23</entry>
+          </row>
+          <row>
+           <entry><literal>%P</literal></entry>
+           <entry>'am' sau 'pm' cu litere minuscule în dependență de oră</entry>
+           <entry>Exemplu: <literal>am</literal> pentru 00:31, <literal>pm</literal> pentru 22:23</entry>
+          </row>
+          <row>
+           <entry><literal>%r</literal></entry>
+           <entry>Echivalent cu "%I:%M:%S %p"</entry>
+           <entry>Exemplu: <literal>09:34:17 PM</literal> pentru 21:34:17</entry>
+          </row>
+          <row>
+           <entry><literal>%R</literal></entry>
+           <entry>Echivalent cu "%H:%M"</entry>
+           <entry>Exemplu: <literal>00:35</literal> pentru 12:35 AM, <literal>16:44</literal> pentru 4:44 PM</entry>
+          </row>
+          <row>
+           <entry><literal>%S</literal></entry>
+           <entry>Reprezentarea din două cifre a secundei</entry>
+           <entry>De la <literal>00</literal> până la <literal>59</literal></entry>
+          </row>
+          <row>
+           <entry><literal>%T</literal></entry>
+           <entry>Echivalent cu "%H:%M:%S"</entry>
+           <entry>Exemplu: <literal>21:34:17</literal> pentru 09:34:17 PM</entry>
+          </row>
+          <row>
+           <entry><literal>%X</literal></entry>
+           <entry>Reprezentarea preferențială a orei în baza setărilor locale, fără dată</entry>
+           <entry>Exemplu: <literal>03:59:16</literal> sau <literal>15:59:16</literal></entry>
+          </row>
+          <row>
+           <entry><literal>%z</literal></entry>
+           <entry>Deplasamentul fusului orar relativ la UTC sau abrevierea
+           (depinde de sistemul de operare)</entry>
+           <entry>Exemplu: <literal>-0500</literal> sau <literal>EST</literal> pentru Eastern Time</entry>
+          </row>
+          <row>
+           <entry><literal>%Z</literal></entry>
+           <entry>Deplasamentul/abrevierea fusului orar ce NU este dată de %z
+           (depinde de sistemul de operare)</entry>
+           <entry>Exemplu: <literal>-0500</literal> sau <literal>EST</literal> pentru Eastern Time</entry>
+          </row>
+          <row>
+           <entry align="center"><emphasis>Data și ora</emphasis></entry>
+           <entry>---</entry>
+           <entry>---</entry>
+          </row>
+          <row>
+           <entry><literal>%c</literal></entry>
+           <entry>Reprezentarea preferențială a datei și orei bazate pe setările locale</entry>
+           <entry>Exemplu: <literal>Tue Feb  5 00:45:10 2009</literal> pentru
+           4 februarie 2009, ora 12:45:10 AM</entry>
+          </row>
+          <row>
+           <entry><literal>%D</literal></entry>
+           <entry>Echivalent cu "%m/%d/%y"</entry>
+           <entry>Exemplu: <literal>02/05/09</literal> pentru February 5, 2009</entry>
+          </row>
+          <row>
+           <entry><literal>%F</literal></entry>
+           <entry>Echivalent cu "%y-%m-%d" (utilizat deseori la bazele de date)</entry>
+           <entry>Exemplu: <literal>2009-02-05</literal> pentru February 5, 2009</entry>
+          </row>
+          <row>
+           <entry><literal>%s</literal></entry>
+           <entry>Momentul de timp după Epoca Unix (la fel ca și în cazul
+           funcției <function>time</function>)</entry>
+           <entry>Exemplu: <literal>305815200</literal> pentru September 10, 1979 08:40:00 AM</entry>
+          </row>
+          <row>
+           <entry><literal>%x</literal></entry>
+           <entry>Reprezentarea preferențială a datei în baza setărilor locale, fără oră</entry>
+           <entry>Exemplu: <literal>02/05/09</literal> pentru February 5, 2009</entry>
+          </row>
+          <row>
+           <entry align="center"><emphasis>Diverse</emphasis></entry>
+           <entry>---</entry>
+           <entry>---</entry>
+          </row>
+          <row>
+           <entry><literal>%n</literal></entry>
+           <entry>Trecerea la linie nouă ("\n")</entry>
+           <entry>---</entry>
+          </row>
+          <row>
+           <entry><literal>%t</literal></entry>
+           <entry>Caracterul Tab ("\t")</entry>
+           <entry>---</entry>
+          </row>
+          <row>
+           <entry><literal>%%</literal></entry>
+           <entry>Caracterul "procent" ("%")</entry>
+           <entry>---</entry>
+          </row>
+         </tbody>
+        </tgroup>
+       </table>
       </para>
       <para>
        Lungimea maximă a acestui parametru este de 1023 caractere.
       </para>
+      <warning>
+       <simpara>
+        Contrar standardului ISO-9889:1999, Sun Solaris âncepe cu Duminică ca 1.
+        În rezultat, %u poate să nu funcționeze după cum este descris în acest
+        manual.
+       </simpara>
+      </warning>
      </listitem>
     </varlistentry>
 
@@ -275,11 +327,12 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Întoarce un string formatat în corespundere cu string-ul de formatare dat,
-   utilizând <parameter>timestamp</parameter>-ul dat sau data şi ora locală,
-   dacă nu este furnizat un timestamp. Denumirile lunilor şi a zilelor
-   săptămânii şi alte string-uri dependente de limbă sunt în corespundere cu
-   setările locale stabilite cu <function>setlocale</function>.
+   Întoarce un string formatat în corespundere cu parametrul
+   <parameter>format</parameter>, utilizând <parameter>timestamp</parameter>-ul
+   dat sau data şi ora locală, dacă nu este furnizat un timestamp. Denumirile
+   lunilor şi a zilelor săptămânii şi alte string-uri dependente de limbă sunt
+   în corespundere cu setările locale stabilite cu
+   <function>setlocale</function>.
   </para>
  </refsect1>
 
@@ -312,7 +365,7 @@
  <refsect1 role="examples">
   &reftitle.examples;
   <para>
-   Acest exemplu funcţionează dacă aveţi setările locale respective instalate
+   Acest exemplu va funcţiona dacă aveţi setările locale respective instalate
    în sistem.
    <example>
     <title>Exemple <function>strftime</function></title>
