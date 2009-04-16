@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.31 $ -->
-<!-- EN-Revision: 1.81 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.32 $ -->
+<!-- EN-Revision: 1.84 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&php.ini; directives</title>
@@ -765,6 +765,12 @@
       <row>
        <entry><link linkend="ini.expose-php">expose_php</link></entry>
        <entry>"1"</entry>
+       <entry>numai în &php.ini;</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.extension">extension</link></entry>
+       <entry>NULL</entry>
        <entry>numai în &php.ini;</entry>
        <entry></entry>
       </row>
@@ -3007,12 +3013,6 @@
        <entry>Disponibil începând cu PHP 6.0.0.</entry>
       </row>
       <row>
-       <entry>unicode.semantics</entry>
-       <entry>"0"</entry>
-       <entry>PHP_INI_SYSTEM</entry>
-       <entry>Disponibil începând cu PHP 6.0.0.</entry>
-      </row>
-      <row>
        <entry>unicode.stream_encoding</entry>
        <entry>"UTF-8"</entry>
        <entry>PHP_INI_ALL</entry>
@@ -3479,6 +3479,30 @@
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
        <entry>Disponibil începând cu PHP 5.0.0. Eliminat în PHP 5.3.0.</entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.zend-extension">zend_extension</link></entry>
+       <entry>NULL</entry>
+       <entry>numai în &php.ini;</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.zend-extension-debug">zend_extension_debug</link></entry>
+       <entry>NULL</entry>
+       <entry>numai în &php.ini;</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.zend-extension-debug-ts">zend_extension_debug_ts</link></entry>
+       <entry>NULL</entry>
+       <entry>numai în &php.ini;</entry>
+       <entry></entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.zend-extension-ts">zend_extension_ts</link></entry>
+       <entry>NULL</entry>
+       <entry>numai în &php.ini;</entry>
+       <entry></entry>
       </row>
       <row>
        <entry><link linkend="ini.zlib.output-compression">zlib.output_compression</link></entry>
@@ -4715,7 +4739,7 @@ include_path=".;c:\php\includes"
         </para>
        </listitem>
       </varlistentry>
-     
+
       <varlistentry xml:id="ini.extension">
        <term>
         <parameter>extension</parameter>
@@ -4727,7 +4751,61 @@ include_path=".;c:\php\includes"
         </para>
        </listitem>
       </varlistentry>
-      
+
+     <varlistentry xml:id="ini.zend-extension">
+      <term>
+       <parameter>zend_extension</parameter>
+       <type>string</type>
+      </term>
+      <listitem>
+       <para>
+        Calea absolută spre extensia Zend încărcată dinamic (spre exemplu
+        <link linkend="book.apd">APD</link>) ce va fi încărcată la startarea
+        PHP.
+       </para>
+      </listitem>
+     </varlistentry>
+
+     <varlistentry xml:id="ini.zend-extension-debug">
+      <term>
+       <parameter>zend_extension_debug</parameter>
+       <type>string</type>
+      </term>
+      <listitem>
+       <para>
+        Varianta <link linkend="ini.zend-extension">zend_extension</link>
+        pentru extensii compilate cu informații de debug.
+       </para>
+      </listitem>
+     </varlistentry>
+
+     <varlistentry xml:id="ini.zend-extension-debug-ts">
+      <term>
+       <parameter>zend_extension_debug_ts</parameter>
+       <type>string</type>
+      </term>
+      <listitem>
+       <para>
+        Varianta <link linkend="ini.zend-extension">zend_extension</link>
+        pentru extensii compilate cu informații de debug și protecția firelor de
+        execuție.
+       </para>
+      </listitem>
+     </varlistentry>
+
+     <varlistentry xml:id="ini.zend-extension-ts">
+      <term>
+       <parameter>zend_extension_ts</parameter>
+       <type>string</type>
+      </term>
+      <listitem>
+       <para>
+        Varianta <link linkend="ini.zend-extension">zend_extension</link>
+        pentru extensii compilate cu protecția firelor de execuție.
+       </para>
+      </listitem>
+     </varlistentry>
+
       <varlistentry xml:id="ini.cgi.check-shebang-line">
        <term>
         <parameter>cgi.check_shebang_line</parameter>
