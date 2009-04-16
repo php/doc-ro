@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.6 $ -->
-<!-- EN-Revision: 1.14 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.7 $ -->
+<!-- EN-Revision: 1.15 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.is-callable" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -14,7 +14,7 @@
   &reftitle.description;
   <methodsynopsis>
    <type>bool</type><methodname>is_callable</methodname>
-   <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
+   <methodparam><type>callback</type><parameter>name</parameter></methodparam>
    <methodparam choice="opt"><type>bool</type><parameter>syntax_only</parameter><initializer>false</initializer></methodparam>
    <methodparam choice="opt"><type>string</type><parameter role="reference">callable_name</parameter></methodparam>
   </methodsynopsis>
@@ -31,7 +31,7 @@
   <para>
    <variablelist>
     <varlistentry>
-     <term><parameter>var</parameter></term>
+     <term><parameter>name</parameter></term>
      <listitem>
       <para>
        Poate fi denumirea unei funcţii stocate într-o variabilă string, sau
@@ -46,7 +46,7 @@
      <listitem>
       <para>
        Dacă este stabilit în &true; atunci funcţia verifică numai dacă
-       <parameter>var</parameter> poate fi o funcţie sau o metodă. Ea doar va
+       <parameter>name</parameter> poate fi o funcţie sau o metodă. Ea doar va
        respinge variabilele simple care nu sunt stringuri, sau tablourile care
        nu au structuri valide pentru a fi utilizate în calitate de funcţie de
        apel invers. Cele valide trebuie să aibă doar 2 înregistrări, prima
@@ -72,7 +72,7 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Întoarce &true; dacă <parameter>var</parameter> este apelabilă, &false; în
+   Întoarce &true; dacă <parameter>name</parameter> este apelabilă, &false; în
    caz contrar.
   </para>
  </refsect1>
