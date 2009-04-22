@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.9 $ -->
-<!-- EN-Revision: 1.5 Maintainer: zamolxe Status: ready -->
+<!-- $Revision: 1.10 $ -->
+<!-- EN-Revision: 1.6 Maintainer: zamolxe Status: ready -->
 <!-- CREDITS: simionea -->
 <!-- splitted from ./index.xml, last change in rev 1.66 -->
   <chapter xml:id="security.cgi-bin" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -12,10 +12,10 @@
      Utilizarea PHP în calitate de binar <acronym>CGI</acronym> este o opţiune
      pentru cazurile când dintr-un anume motiv nu se doreşte integrarea PHP în
      calitate de modul în serverul software (precum Apache), sau PHP se va
-     utiliza cu diferite tipuri de învelişuri CGI pentru a crea medii
-     securizate cu ajutorul chroot şi setuid pentru scripturi. Această variantă
-     implică de obicei instalarea binarului PHP executabil în directorul
-     cgi-bin al serverului web. Îndrumarul CERT
+     utiliza cu diferite tipuri de învelişuri <acronym>CGI</acronym> pentru a
+     crea medii securizate cu ajutorul chroot şi setuid pentru scripturi.
+     Această variantă implică de obicei instalarea binarului PHP executabil în
+     directorul cgi-bin al serverului web. Îndrumarul CERT
      <link xlink:href="&url.cert;">CA-96.11</link> nu recomandă plasarea
      oricărui tip de interpretor de acest gen în directorul cgi-bin. Chiar dacă
      binarul PHP poate fi folosit ca un interpretor de sine stătător, PHP a
@@ -105,7 +105,7 @@
    </sect1>
 
    <sect1 xml:id="security.cgi-bin.force-redirect">
-    <title>Cazul 2: utilizarea --enable-force-cgi-redirect</title>
+    <title>Cazul 2: utilizarea <literal>--enable-force-cgi-redirect</literal></title>
     <simpara>
      Această opţiune disponibilă în timpul compilării este folosită pentru a
      preveni rularea unui script PHP direct printr-un URL gen 
@@ -157,7 +157,7 @@ AddHandler php-script .php
      <link linkend="ini.doc-root">doc_root</link> din
      <link linkend="configuration.file">fişierul de configuraţie</link>, 
      sau puteţi configura variabila de mediu <envar>PHP_DOCUMENT_ROOT</envar>.
-     Dacă este setată, versiunea CGI a PHP întotdeauna va construi denumirea
+     Dacă este setată, versiunea <acronym>CGI</acronym> a PHP întotdeauna va construi denumirea
      fişierului astfel ca să fie deschis cu acest
      <parameter>doc_root</parameter> şi informaţiile despre cale din
      interpelare, de aceea puteţi fi sigur că nici un script nu va fi executat

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.7 $ -->
-<!-- EN-Revision: 1.24 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.8 $ -->
+<!-- EN-Revision: 1.26 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.unserialize" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -46,7 +46,7 @@
          (pentru a preveni obţinerea unui <type>object</type> incomplet
          "__PHP_Incomplete_Class".) Utilizaţi &php.ini;,
          <function>ini_set</function> sau &htaccess; pentru a defini
-         'unserialize_callback_func'. De fiecare dată când o clasă nedefinită
+         '<literal>unserialize_callback_func</literal>'. De fiecare dată când o clasă nedefinită
          va trebui instanţiată, această funcţie va fi apelată. Pentru a
          dezactiva această facilitate lăsaţi această opţiune vidă.
         </para>
@@ -176,6 +176,8 @@ function mycallback($classname)
   <para>
    <simplelist>
     <member><function>serialize</function></member>
+    <member><link linkend="language.oop5.autoload">Autoîncărcarea obiectelor</link></member>
+    <member><link linkend="unserialize-callback-func">unserialize_callback_func</link></member>
    </simplelist>
   </para>
  </refsect1>

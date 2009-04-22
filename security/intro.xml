@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.5 $ -->
-<!-- EN-Revision: 1.5 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.6 $ -->
+<!-- EN-Revision: 1.6 Maintainer: simionea Status: ready -->
 <!-- CREDITS: zamolxe -->
 <!-- splitted from ./index.xml, last change in rev 1.66 -->
  <chapter xml:id="security.intro" xmlns="http://docbook.org/ns/docbook">
@@ -10,12 +10,12 @@
    fie că este inclus în serverul web ca un modul, sau executat separat
    ca binar <acronym>CGI</acronym>, este capabil să acceseze fişiere,
    să execute comenzi sau să deschidă conexiuni în reţea pe server.
-   Aceste proprietăţi fac ca totul ce este rulat pe server să fie implicit 
+   Aceste proprietăţi fac ca totul ce este rulat pe server să fie implicit
    nesecurizat. PHP a fost proiectat în mod specific pentru ca să fie un limbaj
-   mai securizat pentru scrierea programelor CGI decât Perl sau C, şi cu o 
-   selectare corectă a opţiunilor de configurare la compilare şi la rulare, 
-   dublate de o tehnică de programare corespunzătoare, PHP vă poate oferi 
-   combinaţia perfectă de libertate şi securitate de care aveţi nevoie. 
+   mai securizat pentru scrierea programelor <acronym>CGI</acronym> decât Perl
+   sau C, şi cu o selectare corectă a opţiunilor de configurare la compilare şi
+   la rulare, dublate de o tehnică de programare corespunzătoare, PHP vă poate
+   oferi combinaţia perfectă de libertate şi securitate de care aveţi nevoie.
   </simpara>
   <simpara>
    Deoarece există multe modalităţi diferite de a utiliza PHP, există şi multe 
