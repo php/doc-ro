@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.259 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 1.261 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!-- Notes -->
@@ -343,15 +343,29 @@ dbm_identifier</parameter></term><listitem><para>Identificatorul legăturii DBM
 imap_stream</parameter></term><listitem><para>Un flux IMAP întors de
 <function>imap_open</function>.</para></listitem></varlistentry>'>
 
+<!ENTITY imap.pattern '<para>Specifică poziția în ierarhia cutiilor poștale
+de unde va începe căutarea.</para><para>Sunt două caractere speciale pe care
+puteți să le transmiteți în cadrul <parameter>pattern</parameter>:
+&apos;<literal>*</literal>&apos; și &apos;<literal>&#37;</literal>&apos;.
+&apos;<literal>*</literal>&apos; înseamnă a returna toate cutiile poștale.
+Dacă transmiteți <parameter>pattern</parameter> ca &apos;<literal>*</literal>&apos;,
+veți obține o listă a întregii ierarhii a cutiilor poștale.
+&apos;<literal>&#37;</literal>&apos; înseamnă a întoarce doar nivelul curent.
+&apos;<literal>&#37;</literal>&apos; în calitate de <parameter>pattern</parameter>
+va întoarce doar cutiile poștale de la nivelul superior;
+&apos;<literal>~/mail/&#37;</literal>&apos; pe <literal>UW_IMAPD</literal>
+va întoarce toate cutiile poștale în directorul <filename>~/mail</filename>,
+dar nici una din submapele acstui director.</para>'>
+
 <!-- mbstring notes -->
 
-<!ENTITY note.mbstring.encoding.internal '<note><para>Codificarea internă a 
+<!ENTITY note.mbstring.encoding.internal '<note><para>Codificarea internă a
 caracterelor sau codificarea caracterelor specificată de funcţia <function>
-mb_regex_encoding</function> va fi utilizată în calitate de codificare a 
+mb_regex_encoding</function> va fi utilizată în calitate de codificare a
 caracterelor pentru această funcţie.</para></note>'>
 
 <!ENTITY mbstring.encoding.parameter '<para>Parametrul <parameter>encoding
-</parameter> reprezintă codificarea caracterelor. Dacă el este omis, va fi 
+</parameter> reprezintă codificarea caracterelor. Dacă el este omis, va fi
 utilizată valoarea internă a codificării caracterelor.</para>'>
 
 <!-- MCVE notes -->

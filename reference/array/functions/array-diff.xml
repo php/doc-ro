@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.9 $ -->
-<!-- EN-Revision: 1.17 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.10 $ -->
+<!-- EN-Revision: 1.18 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.array-diff" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -109,7 +109,7 @@ print_r($result);
 ]]>
     </programlisting>
     <para>
-     Apariţiile multiple în $array1 sunt toate tratate în acelaşi mod.
+     Apariţiile multiple în <varname>$array1</varname> sunt toate tratate în acelaşi mod.
      Aceasta va afişa :
     </para>
     <screen>

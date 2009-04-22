@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.7 $ -->
-<!-- EN-Revision: 1.29 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.8 $ -->
+<!-- EN-Revision: 1.30 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.strftime" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
@@ -267,7 +267,7 @@
           </row>
           <row>
            <entry><literal>%F</literal></entry>
-           <entry>Echivalent cu "%y-%m-%d" (utilizat deseori la bazele de date)</entry>
+           <entry>Echivalent cu "%Y-%m-%d" (utilizat deseori la bazele de date)</entry>
            <entry>Exemplu: <literal>2009-02-05</literal> pentru February 5, 2009</entry>
           </row>
           <row>

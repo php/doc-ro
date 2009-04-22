@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.10 $ -->
-<!-- EN-Revision: 1.16 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.11 $ -->
+<!-- EN-Revision: 1.17 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.array-change-key-case" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -98,8 +98,9 @@ Array
   <note>
    <para>
     Dacă un tablou are indici care vor deveni la fel odată ce se va rula această
-    funcţie (de ex. "keY" şi "kEY"), valoarea cea mai de pe urmă din tablou se va
-    suprapune peste ceilalţi indici.
+    funcţie (de ex. "<literal>keY</literal>" şi "<literal>kEY</literal>"),
+    valoarea cea mai de pe urmă din tablou se va suprapune peste ceilalţi
+    indici.
    </para>
   </note>
  </refsect1>
