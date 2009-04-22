@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.4 $ -->
-<!-- EN-Revision: 1.15 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.5 $ -->
+<!-- EN-Revision: 1.16 Maintainer: simionea Status: ready -->
 <section xml:id="mail.configuration" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.runtime;
  &extension.runtime;
@@ -125,8 +125,9 @@
    </term>
    <listitem>
     <para>
-     Indică adresa ce trebuie înscrisă în câmpul "From:" în poşta trimisă din
-     PHP sub Windows. Această directivă de asemenea stabileşte antetul "Return-Path:".
+     Indică adresa ce trebuie înscrisă în câmpul <literal>"From:"</literal> în
+     poşta trimisă din PHP sub Windows. Această directivă de asemenea
+     stabileşte antetul <literal>"Return-Path:"</literal>.
     </para>
    </listitem>
   </varlistentry>
@@ -146,9 +147,9 @@
      stabiliţi aici.
     </para>
     <para>
-     Sistemele ce nu utilizează sendmail ar trebui să stabilească această
-     directivă către învelişul/înlocuitorul sendmail pe care îl oferă sistemul
-     lor, dacă există.
+     Sistemele ce nu utilizează <command>sendmail</command> ar trebui să
+     stabilească această directivă către învelişul/înlocuitorul sendmail
+     pe care îl oferă sistemul lor, dacă există.
      Spre exemplu, utilizatorii <link xlink:href="&url.qmail;">Qmail</link>
      în mod mormal pot să stabilească valoarea în
      <filename>/var/qmail/bin/sendmail</filename> sau <filename>

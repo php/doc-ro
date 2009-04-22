@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.7 $ -->
-<!-- EN-Revision: 1.10 Maintainer: zamolxe Status: ready -->
+<!-- $Revision: 1.8 $ -->
+<!-- EN-Revision: 1.11 Maintainer: zamolxe Status: ready -->
 <!-- CREDITS: simionea -->
 <appendix xml:id="mysql.constants" xmlns="http://docbook.org/ns/docbook">
  &reftitle.constants;
@@ -21,20 +21,20 @@
      </thead>
      <tbody>
       <row>
-       <entry>MYSQL_CLIENT_COMPRESS</entry>
+       <entry><constant>MYSQL_CLIENT_COMPRESS</constant></entry>
        <entry>Utilizează protocolul de compresie</entry>
       </row>
       <row>
-       <entry>MYSQL_CLIENT_IGNORE_SPACE</entry>
+       <entry><constant>MYSQL_CLIENT_IGNORE_SPACE</constant></entry>
        <entry>Permite spaţiu după denumirea funcţiei</entry>
       </row>
       <row>
-       <entry>MYSQL_CLIENT_INTERACTIVE</entry>
+       <entry><constant>MYSQL_CLIENT_INTERACTIVE</constant></entry>
        <entry>Permite o inactivitate cu durata de interactive_timeout secunde 
        (în loc de wait_timeout) înainte de a închide conexiunea.</entry>
       </row>
       <row>
-       <entry>MYSQL_CLIENT_SSL</entry>
+       <entry><constant>MYSQL_CLIENT_SSL</constant></entry>
        <entry>Utilizează criptarea SSL. Acest fanion este disponibil numai 
        începând cu versiunea 4.x sau ulterioară a bibliotecii-client MySQL. 
        Versiunea 3.23.x este inclusă atât în PHP 4, cât şi în binarele Windows 
@@ -61,21 +61,21 @@
     </thead>
     <tbody>
      <row>
-      <entry>MYSQL_ASSOC</entry>
+      <entry><constant>MYSQL_ASSOC</constant></entry>
       <entry>
        Coloanele sunt întoarse într-un tablou având în calitate de indice
        denumirea câmpului.
       </entry>
      </row>
      <row>
-      <entry>MYSQL_BOTH</entry>
+      <entry><constant>MYSQL_BOTH</constant></entry>
       <entry>
        Coloanele sunt întoarse într-un tablou având atât un indice numeric, cât 
        şi denumirea câmpului în calitate de indice.
       </entry>
      </row>
      <row>
-      <entry>MYSQL_NUM</entry>
+      <entry><constant>MYSQL_NUM</constant></entry>
       <entry>
        Coloanele sunt întoarse într-un tablou având un indice numeric către
        câmpuri. Acest indice începe cu 0, primul câmp din rezultat.

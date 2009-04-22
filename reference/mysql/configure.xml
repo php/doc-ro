@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.7 $ -->
-<!-- EN-Revision: 1.16 Maintainer: zamolxe Status: ready -->
+<!-- $Revision: 1.8 $ -->
+<!-- EN-Revision: 1.17 Maintainer: zamolxe Status: ready -->
 <!-- CREDITS: simionea -->
 <section xml:id="mysql.installation" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.install;
@@ -34,9 +34,10 @@
     instalare al MySQL, PHP va utiliza bibliotecile-client MySQL încorporate.
    </para>
    <para>
-    Utilizatorii care rulează alte aplicaţii care utilizează MySQL (spre 
-    exemplu, auth-mysql) nu ar trebui să utilizeze biblioteca furnizată, dar să
-    specifice calea către directorul de instalare al MySQL, în felul următor:
+    Utilizatorii care rulează alte aplicaţii care utilizează MySQL (spre
+    exemplu, <literal>auth-mysql</literal>) nu ar trebui să utilizeze biblioteca
+    furnizată, dar să specifice calea către directorul de instalare al MySQL,
+    în felul următor:
     <option role="configure">--with-mysql=/path/to/mysql</option>.
     Aceasta va forţa PHP să utilizeze bibliotecile-client instalate de MySQL, 
     evitând în acest fel orice conflicte.
@@ -66,18 +67,18 @@
   <section>
    <title>PHP 5+</title>
    <para>
-    MySQL nu mai este activat implicit, deci biblioteca DLL 
-    <filename>php_mysql.dll</filename> trebuie activată în &php.ini;. De 
-    asemenea PHP are nevoie de access la biblioteca-client MySQL. Un fişier 
+    MySQL nu mai este activat implicit, deci biblioteca DLL
+    <filename>php_mysql.dll</filename> trebuie activată în &php.ini;. De
+    asemenea PHP are nevoie de access la biblioteca-client MySQL. Un fişier
     numit <filename>libmysql.dll</filename> este inclus în distributivul PHP
-    pentru Windows şi pentru ca PHP să poată comunica cu MySQL, acest fişier 
-    trebuie să fie disponibil în căile din variabila <envar>PATH</envar> a 
+    pentru Windows şi pentru ca PHP să poată comunica cu MySQL, acest fişier
+    trebuie să fie disponibil în căile din variabila <envar>PATH</envar> a
     sistemului Windows. Accesaţi şi FAQ întitulat
     "<link linkend="faq.installation.addtopath">Cum să adaug directorul PHP
-    în variabila PATH din Windows</link>" pentru informaţii despre cum să 
+    în variabila PATH din Windows</link>" pentru informaţii despre cum să
     realizaţi acest lucru. Cu toate că copierea <filename>libmysql.dll
     </filename> în directorul de sistem al Windows de asemenea funcţionează
-    (deoarece directorul de sistem se află implicit înscris în variabila  
+    (deoarece directorul de sistem se află implicit înscris în variabila
     <envar>PATH</envar> a sistemului), aceasta nu e recomandabil.
    </para>
    <para>

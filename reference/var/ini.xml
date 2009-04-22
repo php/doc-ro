@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.3 $ -->
-<!-- EN-Revision: 1.8 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.9 Maintainer: simionea Status: ready -->
 <section xml:id="var.configuration" xmlns="http://docbook.org/ns/docbook">
  &reftitle.runtime;
  &extension.runtime;
@@ -49,7 +49,8 @@
       implementaţi o astfel de funcţie de apel invers.
      </para>
      <para>
-      Accesaţi de asemenea <function>unserialize</function>.
+      Accesaţi de asemenea <function>unserialize</function> și
+      <link linkend="language.oop5.autoload">Autoîncărcarea obiectelor</link>.
      </para>
     </listitem>
    </varlistentry>

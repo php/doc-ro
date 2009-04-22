@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.6 $ -->
-<!-- EN-Revision: 1.8 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.7 $ -->
+<!-- EN-Revision: 1.9 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.imap-alerts" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -15,13 +15,14 @@
    <void/>
   </methodsynopsis>
   <para>
-   Întoarce toate mesajele de alertă IMAP generate după ultimul apel al 
-   funcţiei <function>imap_alerts</function>, sau începutul paginii. 
+   Întoarce toate mesajele de alertă <acronym>IMAP</acronym> generate după
+   ultimul apel al funcţiei <function>imap_alerts</function>, sau începutul
+   paginii.
   </para>
   <para>
-   Când <function>imap_alerts</function> este apelată, stiva alertelor este 
-   mai apoi curăţită. Specificaţia IMAP stabileşte ca aceste mesaje să fie 
-   transmise utilizatorului.
+   Când <function>imap_alerts</function> este apelată, stiva alertelor este
+   mai apoi curăţită. Specificaţia <acronym>IMAP</acronym> stabileşte ca
+   aceste mesaje să fie transmise utilizatorului.
   </para>
  </refsect1>
  <refsect1 role="returnvalues">
