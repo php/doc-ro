@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.7 $ -->
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 1.8 $ -->
 <!-- EN-Revision: 1.38 Maintainer: simionea Status: ready -->
 <appendix xml:id="migration52" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Migrarea de la PHP 5.1.x la PHP 5.2.x</title>
@@ -1260,7 +1260,7 @@ $obj->getCommentName('');
   <itemizedlist>
    <listitem>
     <simpara>
-     tidyNode <link linkend="function.tidynode-getparent">tidyNode::getParent(void)</link>
+     tidyNode <methodname>tidyNode::getParent</methodname>()
      - Întoarce nodul-părinte al nodului curent (adăugat în PHP 5.2.2)
     </simpara>
    </listitem>
