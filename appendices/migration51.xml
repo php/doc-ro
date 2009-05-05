@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.6 $ -->
-<!-- EN-Revision: 1.12 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.7 $ -->
+<!-- EN-Revision: 1.13 Maintainer: simionea Status: ready -->
 <appendix xml:id="migration51" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Migrarea de la PHP 5.0.x la PHP 5.1.x</title>
   <para>
@@ -574,10 +574,7 @@ class test {
     este că câteva extensii mai vechi au dispărut. Acele extensii care 
     deocamdată sunt menţinute activ sunt disponibile în PHP Extension
     Community Library (PECL) &mdash; Biblioteca Comunităţii de Extensii PHP, la
-    adresa <link xlink:href="&url.pecl;">&url.pecl;</link>. Binarele Windows 
-    sunt asamblate în mod regulat, şi puteţi obţine binarele pentru extensiile 
-    PECL asamblate pentru PHP 5.1.x la adresa
-    <link xlink:href="&url.pecl.win;">&url.pecl.win;</link>.
+    adresa <link xlink:href="&url.pecl;">&url.pecl;</link>.
    </para>
    <table>
     <title>Extensiile eliminate</title>
@@ -647,7 +644,7 @@ class test {
       <row>
        <entry>ext/activescript</entry>
        <entry>
-        <link xlink:href="url.pecl.win.ext;php5activescript.dll">pecl/activescript</link>
+        <link xlink:href="url.pecl.package;activescript">pecl/activescript</link>
        </entry>
       </row>
      </tbody>

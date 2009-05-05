@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.6 $ -->
-<!-- EN-Revision: 1.59 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.7 $ -->
+<!-- EN-Revision: 1.60 Maintainer: simionea Status: ready -->
  <appendix xml:id="migration5" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Migrarea de la PHP 4 la PHP 5.0.x</title>
   <para>
@@ -61,12 +61,13 @@
     </listitem>
     <listitem>
      <simpara>
-      Variabila de server PATH_TRANSLATED nu mai este stabilită implicit sub
-      Apache2 SAPI în contrast cu situaţia în PHP 4, unde ea este stabilită
-      la aceeaşi valoare ca şi variabila de server SCRIPT_FILENAME, atunci
-      când nu este populată de Apache. Această schimbare a fost făcută pentru
-      a ne conforma cu <link xlink:href="&url.cgispecs;">specificaţia CGI</link>.
-      Vă rugăm să vă referiţi la <link xlink:href="&url.php.bugs;23610">bug #23610</link>
+      Variabila de server <constant>PATH_TRANSLATED</constant> nu mai este
+      stabilită implicit sub Apache2 SAPI în contrast cu situaţia în PHP 4, unde
+      ea este stabilită la aceeaşi valoare ca şi variabila de server
+      <constant>SCRIPT_FILENAME</constant>, atunci când nu este populată de
+      Apache. Această schimbare a fost făcută pentru a ne conforma cu
+      <link xlink:href="&url.cgispecs;">specificaţia CGI</link>. Vă rugăm să vă
+      referiţi la <link xlink:href="&url.php.bugs;23610">bug #23610</link>
       pentru informaţii suplimentare şi vedeţi de asemenea descrierea
       <varname>$_SERVER['PATH_TRANSLATED']</varname> în manual. Această problemă
       de asemenea afectează versiunile PHP &gt;= 4.3.2.
@@ -644,7 +645,8 @@ Action application/x-httpd-php "/php/php-cgi.exe"
     <listitem>
      <simpara>
       <function>dbx_fetch_row</function> - Obţine rânduri dintr-un rezultat al
-      interpelării, care a avut stabilit fanionul DBX_RESULT_UNBUFFERED
+      interpelării, care a avut stabilit fanionul
+      <constant>DBX_RESULT_UNBUFFERED</constant>
      </simpara>
     </listitem>
     <listitem>
@@ -724,7 +726,8 @@ Action application/x-httpd-php "/php/php-cgi.exe"
     <listitem>
      <simpara>
       <function>pcntl_wait</function> - Aşteaptă sau întoarce starea unui proces-fiu
-      bifurcat, după cum e definit de către apelul de sistem waitpid()
+      bifurcat, după cum e definit de către apelul de sistem
+      <literal>waitpid()</literal>
      </simpara>
     </listitem>
     <listitem>
@@ -808,7 +811,8 @@ Action application/x-httpd-php "/php/php-cgi.exe"
     <listitem>
      <simpara>
       <link linkend="ini.register-long-arrays">register_long_arrays</link> -
-      permite/interzice PHP să înregistreze variabilele lungi dezaprobate $HTTP_*_VARS
+      permite/interzice PHP să înregistreze variabilele lungi dezaprobate
+      <varname>$HTTP_*_VARS</varname>
      </simpara>
     </listitem>
     <listitem>
@@ -894,15 +898,16 @@ Action application/x-httpd-php "/php/php-cgi.exe"
    <title>Raportarea erorilor</title>
    <para>
     Începând cu PHP 5 a fost introdusă o nouă constantă de raportare a erorilor
-    E_STRICT cu valoarea 2048. Ea permite afişarea sugestiilor PHP la etapa rulării
-    referitor la interoperabilitatea şi compatibilitatea codului dumneavoastră sursă,
-    ceea ce vă va permite să păstraţi ultimele şi cele mai bune metode de codificare.
-    De ex. un mesaj STRICT vă va preîntâmpina despre utilizarea unor funcţii
-    dezaprobate.
+    <constant>E_STRICT</constant> cu valoarea 2048. Ea permite afişarea
+    sugestiilor PHP la etapa rulării referitor la interoperabilitatea şi
+    compatibilitatea codului dumneavoastră sursă, ceea ce vă va permite să
+    păstraţi ultimele şi cele mai bune metode de codificare. De ex. un mesaj
+    STRICT vă va preîntâmpina despre utilizarea unor funcţii dezaprobate.
    </para>
    <note>
     <simpara>
-     E_ALL nu include E_STRICT, de aceea ea nu e activată implicit.
+     <constant>E_ALL</constant> nu include <constant>E_STRICT</constant>, de
+     aceea ea nu e activată implicit.
     </simpara>
    </note>
   </section>

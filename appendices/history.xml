@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.5 $ -->
-<!-- EN-Revision: 1.30 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.6 $ -->
+<!-- EN-Revision: 1.31 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="history" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Istoria PHP şi a proiectelor asociate</title>
@@ -171,33 +171,34 @@
    <title>PHP 5</title>
    <para>
     PHP 5 a fost lansat în iulie 2004 după o lungă perioadă de dezvoltare
-    şi câteva lansări preliminare. El este condus de nucleul său, Zend
-    Engine 2.0 cu un nou model de obiecte şi o duzină de alte noi facilităţi.
+    şi câteva lansări preliminare. El este condus de nucleul său,
+    <literal>Zend Engine 2.0</literal> cu un nou model de obiecte şi o duzină
+    de alte noi facilităţi.
    </para>
   </sect2>
  </sect1>
- 
+
  <sect1 xml:id="history.php.related">
   <title>Istoria proiectelor asociate cu PHP</title>
-  
+
   <!-- Hope Stig and/or Egon can do this
-  
+
   <sect2 xml:id="history.phpdoc">
    <title>PHP Documentation Project</title>
    <para>
    </para>
   </sect2>
-  
+
   -->
 
   <sect2 xml:id="history.pear">
    <title>PEAR</title>
    <para>
-    <link xlink:href="&url.php.pear;">PEAR</link>, Repozitoriul de Extensii
-    şi Aplicaţii PHP (original, Repozitoriul de Extensii şi Suplimente PHP)
-    este versiunea PHP a claselor fundamentale, care în viitor poate deveni
-    una din modalităţile cheie de distribuire a extensiilor PHP între
-    programatori.
+    <link xlink:href="&url.php.pear;">PEAR</link>, <literal>Repozitoriul de
+    Extensii şi Aplicaţii PHP</literal> (original, Repozitoriul de Extensii
+    şi Suplimente PHP) este versiunea PHP a claselor fundamentale, care în
+    viitor poate deveni una din modalităţile cheie de distribuire a extensiilor
+    PHP între programatori.
    </para>
    <para>
     PEAR s-a născut din discuţiile purtate la Întrunirea Programatorilor PHP
@@ -258,10 +259,11 @@
      Scrierea manuală a interfeţelor pentru toate funcţiile Gtk+ era în
      afara oricăror discuţii, de aceea am precăutat ideea unui generator
      de cod similar celui realizat în PyGtk. Generatorul de cod este un
-     program PHP care citeşte un set de fişiere .defs conţinând informaţii
-     despre clasele, constantele şi metodele Gtk+ şi generează cod C care
-     face posibilă interfaţa PHP cu ele. Ceea ce nu poate fi generat în
-     mod automat, poate fi scris cu mâna în fişiere .overrides .
+     program PHP care citeşte un set de fişiere <filename>.defs</filename>
+     conţinând informaţii despre clasele, constantele şi metodele Gtk+ şi
+     generează cod C care face posibilă interfaţa PHP cu ele. Ceea ce nu poate
+     fi generat în mod automat, poate fi scris cu mâna în fişiere
+     <filename>.overrides</filename>.
     </para>
     <para>
      Lucrul asupra generatorului de cod şi asupra infrastructurii a durat

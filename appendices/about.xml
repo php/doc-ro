@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.9 $ -->
-<!-- EN-Revision: 1.54 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.10 $ -->
+<!-- EN-Revision: 1.55 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="about" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Despre manual</title>
@@ -341,10 +341,10 @@ int strlen ( string $string )
    Dacă în acest manual este găsită o eroare, în orice limbă, vă rugăm să o
    raportaţi folosind sistemul de erori la adresa
    <link xlink:href="&url.php.bugs;">&url.php.bugs;</link>.
-   Clasificaţi eroarea ca "Documentation Problem" &mdash; "Problemă în 
-   documentaţie". Toate problemele ce ţin de documentaţie, inclusiv cele ce ţin
-   de formatele manualului, trebuie să fie înaintate în calitate de rapoarte de
-   erori.
+   Clasificaţi eroarea ca <literal>"Documentation Problem"</literal> &mdash;
+   "Problemă în documentaţie". Toate problemele ce ţin de documentaţie,
+   inclusiv cele ce ţin de formatele manualului, trebuie să fie înaintate în
+   calitate de rapoarte de erori.
   </para>
   <note>
    <para>
@@ -391,9 +391,9 @@ int strlen ( string $string )
    formatele. Unealta utilizată pentru formatarea manualului online este
    <link xlink:href="&url.phd;">PhD</link>.
    Noi utilizăm <link xlink:href="&url.winhelp;">Microsoft HTML Help
-   Workshop</link> pentru a genera formatul 'Windows HTML Help' al manualului,
-   şi desugur însuşi PHP pentru a face careva transformări şi formatări
-   adiţionale.
+   Workshop</link> pentru a genera formatul <productname>Windows HTML Help
+   </productname> al manualului, şi desugur însuşi PHP pentru a face careva
+   transformări şi formatări adiţionale.
   </para>
   <para>
    Manualul PHP este generat în diverse limbi şi formate, vezi
