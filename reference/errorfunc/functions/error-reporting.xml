@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.6 $ -->
-<!-- EN-Revision: 1.23 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.7 $ -->
+<!-- EN-Revision: 1.24 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xmlns="http://docbook.org/ns/docbook" xml:id="function.error-reporting">
  <refnamediv>
@@ -191,7 +191,7 @@
        <entry>Au fost introduse <constant>E_DEPRECATED</constant> şi <constant>E_USER_DEPRECATED</constant>.</entry>
       </row>
       <row>
-       <entry>6</entry>
+       <entry>6.0.0</entry>
        <entry><constant>E_STRICT</constant> a devenit parte a <constant>E_ALL</constant>.</entry>
       </row>
      </tbody>
@@ -224,8 +224,11 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
 // Aceasta este valoarea implicită stabilită în php.ini
 error_reporting(E_ALL ^ E_NOTICE);
 
-// Raportează toate erorile PHP
+// Raportează toate erorile PHP (vezi jurnalul schimbărilor)
 error_reporting(E_ALL);
+
+// Raportează toate erorile PHP
+error_reporting(-1);
 
 // La fel ca şi error_reporting(E_ALL);
 ini_set('error_reporting', E_ALL);
@@ -247,6 +250,14 @@ ini_set('error_reporting', E_ALL);
     incluse şi erorile <constant>E_STRICT</constant> (şi vice versa).
    </simpara>
   </warning>
+  <tip>
+   <simpara>
+    Transmiterea valorii <literal>-1</literal> va afișa toate erorile posibile,
+    chiar și atunci când vor fi adăugate nivele și constante noi în versiunile
+    viitoare ale PHP. Constanta <constant>E_ALL</constant> se comportă în
+    același mod începând cu PHP 6.
+   </simpara>
+  </tip>
  </refsect1>
 
  <refsect1 role="seealso">
