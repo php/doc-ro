@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.7 $ -->
-<!-- EN-Revision: 1.28 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.8 $ -->
+<!-- EN-Revision: 1.29 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/datetime.xml, last change in rev 1.8 -->
 <refentry xml:id="function.strtotime" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -32,7 +32,9 @@
   <note>
    <para>
     Dacă anul este specificat cu două cifre, valorile între 00-69 sunt
-    interpretate ca 2000-2069, iar valorile între 70-99 ca 1970-1999.
+    interpretate ca 2000-2069, iar valorile între 70-99 ca 1970-1999. Vedeți
+    notele de mai jos pentru posibilele diferențe pe sistemele pe 32 de biți
+    (datele posibile pot să se încheie cu 2038-01-19 03:14:07)
    </para>
   </note>
  </refsect1>
