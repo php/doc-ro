@@ -387,9 +387,9 @@
   </term>
   <term>
     <english>timezone</english>
-    <romanian>zona orară</romanian>
+    <romanian>fus orar</romanian>
     <english_example>You have to specify the timezone in php.ini.</english_example>
-    <romanian_example>Trebuie să specificaţi zona orară în php.ini.</romanian_example>
+    <romanian_example>Trebuie să specificaţi fusul orar în php.ini.</romanian_example>
   </term>
   <term>
     <english>native</english>
@@ -420,5 +420,11 @@
     <romanian>indicator explicit al tipului</romanian>
     <english_example>You can use type hints in function definitions.</english_example>
     <romanian_example>Puteţi utiliza indicatori expliciţi ai tipului în definiţiile funcţiilor.</romanian_example>
+  </term>
+  <term>
+    <english>synopsis</english>
+    <romanian>descriere succintă</romanian>
+    <english_example>Interface synopsis</english_example>
+    <romanian_example>Descrierea succintă a interfeței</romanian_example>
   </term>
 </dictionary>

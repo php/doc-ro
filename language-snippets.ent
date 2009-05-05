@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.261 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 1.263 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!-- Notes -->
@@ -397,8 +397,6 @@ Aici puteţi găsi lista deplină a zonelor orare susţinute de PHP, care pot fi
 utilizate cu de ex. <function>date_default_timezone_set</function>.
 </para><note><simpara>Ultima versiune a bazei de date cu zonele orare poate fi
 instalată prin <link xlink:href='&url.pecl.package.get;timezonedb' xmlns:xlink='http://www.w3.org/1999/xlink'>timezonedb</link> al PECL.
-Pentru utilizatorii Windows, este plasată o bibliotecă DLL pre-compilată pe  
-site-ul PECL4Win: <link xlink:href='&url.pecl.timezonedb.dll;' xmlns:xlink='http://www.w3.org/1999/xlink'>php_timezonedb.dll</link>.
 </simpara></note>">
 
 <!ENTITY date.timezone.bc '<simpara>Sunteţi rugat să nu utilizaţi zonele orare
@@ -633,18 +631,12 @@ PHP, sau la referinţa <acronym>PECL</acronym> de mai sus.'>
 directorul <filename>extensions/</filename> al distributivului PHP pentru 
 Windows.'>
 
-<!ENTITY pecl.windows.download '
-Biblioteca <acronym>DLL</acronym> pentru această extensie <acronym>PECL
-</acronym> poate fi descărcată de pe pagina
-<link xmlns:xlink="http://www.w3.org/1999/xlink" 
-xlink:href="&url.php.downloads;">PHP Downloads</link> sau de pe
-<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.pecl.win;">
-&url.pecl.win;</link>'>
+<!ENTITY pecl.windows.download 'O bibliotecă <acronym>DLL</acronym> pentru
+această extensie <acronym>PECL</acronym> nu este disponibilă în prezent.
+Accesați de asemenea și secțiunea
+<link linkend="install.windows.building">compilarea în Windows</link>.'>
 
-<!ENTITY pecl.windows.download.unbundled 'Extensiile <acronym>PECL</acronym> 
-care nu sunt furnizate cu PHP pot fi descărcate de pe:
-<link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.pecl.win;">
-&url.pecl.win;</link>'>
+<!ENTITY pecl.windows.download.unbundled '&pecl.windows.download;'>
 
 <!ENTITY pecl.moved-ver 'Această extensie a fost transferată în repozitoriul
 <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.pecl;">PECL
@@ -1077,6 +1069,12 @@ ImagickPixelIteratorException în caz de eroare.'>
 <!-- Imagick version infos -->
 <!ENTITY imagick.method.available.0x629 'Această metodă este disponibilă dacă
 Imagick a fost compilat cu ImageMagick de versiunea 6.2.9 sau ulterior.'>
+
+<!ENTITY imagick.method.available.0x631 'Această metodă este disponibilă dacă
+Imagick a fost compilat cu ImageMagick de versiunea 6.3.1 sau ulterior.'>
+
+<!ENTITY imagick.method.available.0x632 'Această metodă este disponibilă dacă
+Imagick a fost compilat cu ImageMagick de versiunea 6.3.2 sau ulterior.'>
 
 <!ENTITY imagick.imagickexception.throw 'Aruncă un
 <classname>ImagickException</classname> în caz de eroare.'>
