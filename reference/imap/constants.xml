@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.3 $ -->
-<!-- EN-Revision: 1.6 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.4 $ -->
+<!-- EN-Revision: 1.7 Maintainer: simionea Status: ready -->
 <appendix xml:id="imap.constants" xmlns="http://docbook.org/ns/docbook">
  &reftitle.constants;
  &extension.constants;
  <variablelist>
   <varlistentry>
    <term>
-    <constant>NIL</constant> 
+    <constant>NIL</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>OP_DEBUG</constant> 
+    <constant>OP_DEBUG</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>OP_READONLY</constant> 
+    <constant>OP_READONLY</constant>
     (<type>integer</type>)
    </term>
    <listitem>
@@ -40,86 +40,86 @@
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>OP_ANONYMOUS</constant> 
+    <constant>OP_ANONYMOUS</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     Nu utiliza sau reînnoi <filename>.newsrc</filename> pentru noutăţi
+     Nu utiliza sau reînnoi <filename>.newsrc</filename>pentru noutăţi
      (numai NNTP)
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>OP_SHORTCACHE</constant> 
+    <constant>OP_SHORTCACHE</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>OP_SILENT</constant> 
+    <constant>OP_SILENT</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>OP_PROTOTYPE</constant> 
+    <constant>OP_PROTOTYPE</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>OP_HALFOPEN</constant> 
+    <constant>OP_HALFOPEN</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     Pentru nume IMAP şi NNTP deschide o conexiune, dar nu deschide o cutie
-     poştală.
+     Pentru nume <acronym>IMAP</acronym> şi <acronym>NNTP</acronym> deschide o
+     conexiune, dar nu deschide o cutie poştală.
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>OP_EXPUNGE</constant> 
+    <constant>OP_EXPUNGE</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>OP_SECURE</constant> 
+    <constant>OP_SECURE</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>CL_EXPUNGE</constant> 
+    <constant>CL_EXPUNGE</constant>
     (<type>integer</type>)
    </term>
    <listitem>
@@ -131,7 +131,7 @@
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>FT_UID</constant> 
+    <constant>FT_UID</constant>
     (<type>integer</type>)
    </term>
    <listitem>
@@ -142,7 +142,7 @@
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>FT_PEEK</constant> 
+    <constant>FT_PEEK</constant>
     (<type>integer</type>)
    </term>
    <listitem>
@@ -153,18 +153,18 @@
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>FT_NOT</constant> 
+    <constant>FT_NOT</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>FT_INTERNAL</constant> 
+    <constant>FT_INTERNAL</constant>
     (<type>integer</type>)
    </term>
    <listitem>
@@ -175,18 +175,18 @@
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>FT_PREFETCHTEXT</constant> 
+    <constant>FT_PREFETCHTEXT</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>ST_UID</constant> 
+    <constant>ST_UID</constant>
     (<type>integer</type>)
    </term>
    <listitem>
@@ -197,29 +197,29 @@
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>ST_SILENT</constant> 
+    <constant>ST_SILENT</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>ST_SET</constant> 
+    <constant>ST_SET</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>CP_UID</constant> 
+    <constant>CP_UID</constant>
     (<type>integer</type>)
    </term>
    <listitem>
@@ -230,19 +230,19 @@
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>CP_MOVE</constant> 
+    <constant>CP_MOVE</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     Elimină mesajul din cutia poştală curentă după copierea cu 
+     Elimină mesajul din cutia poştală curentă după copierea cu
      <function>imap_mail_copy</function>
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>SE_UID</constant> 
+    <constant>SE_UID</constant>
     (<type>integer</type>)
    </term>
    <listitem>
@@ -253,18 +253,18 @@
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>SE_FREE</constant> 
+    <constant>SE_FREE</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>SE_NOPREFETCH</constant> 
+    <constant>SE_NOPREFETCH</constant>
     (<type>integer</type>)
    </term>
    <listitem>
@@ -275,95 +275,95 @@
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>SO_FREE</constant> 
+    <constant>SO_FREE</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>SO_NOSERVER</constant> 
+    <constant>SO_NOSERVER</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>SA_MESSAGES</constant> 
+    <constant>SA_MESSAGES</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>SA_RECENT</constant> 
+    <constant>SA_RECENT</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>SA_UNSEEN</constant> 
+    <constant>SA_UNSEEN</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>SA_UIDNEXT</constant> 
+    <constant>SA_UIDNEXT</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>SA_UIDVALIDITY</constant> 
+    <constant>SA_UIDVALIDITY</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>SA_ALL</constant> 
+    <constant>SA_ALL</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>LATT_NOINFERIORS</constant> 
+    <constant>LATT_NOINFERIORS</constant>
     (<type>integer</type>)
    </term>
    <listitem>
@@ -375,7 +375,7 @@
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>LATT_NOSELECT</constant> 
+    <constant>LATT_NOSELECT</constant>
     (<type>integer</type>)
    </term>
    <listitem>
@@ -386,7 +386,7 @@
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>LATT_MARKED</constant> 
+    <constant>LATT_MARKED</constant>
     (<type>integer</type>)
    </term>
    <listitem>
@@ -397,7 +397,7 @@
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>LATT_UNMARKED</constant> 
+    <constant>LATT_UNMARKED</constant>
     (<type>integer</type>)
    </term>
    <listitem>
@@ -408,7 +408,7 @@
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>SORTDATE</constant> 
+    <constant>SORTDATE</constant>
     (<type>integer</type>)
    </term>
    <listitem>
@@ -420,7 +420,7 @@
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>SORTARRIVAL</constant> 
+    <constant>SORTARRIVAL</constant>
     (<type>integer</type>)
    </term>
    <listitem>
@@ -432,7 +432,7 @@
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>SORTFROM</constant> 
+    <constant>SORTFROM</constant>
     (<type>integer</type>)
    </term>
    <listitem>
@@ -444,7 +444,7 @@
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>SORTSUBJECT</constant> 
+    <constant>SORTSUBJECT</constant>
     (<type>integer</type>)
    </term>
    <listitem>
@@ -456,7 +456,7 @@
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>SORTTO</constant> 
+    <constant>SORTTO</constant>
     (<type>integer</type>)
    </term>
    <listitem>
@@ -468,7 +468,7 @@
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>SORTCC</constant> 
+    <constant>SORTCC</constant>
     (<type>integer</type>)
    </term>
    <listitem>
@@ -480,7 +480,7 @@
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>SORTSIZE</constant> 
+    <constant>SORTSIZE</constant>
     (<type>integer</type>)
    </term>
    <listitem>
@@ -492,243 +492,243 @@
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>TYPETEXT</constant> 
+    <constant>TYPETEXT</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>TYPEMULTIPART</constant> 
+    <constant>TYPEMULTIPART</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>TYPEMESSAGE</constant> 
+    <constant>TYPEMESSAGE</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>TYPEAPPLICATION</constant> 
+    <constant>TYPEAPPLICATION</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>TYPEAUDIO</constant> 
+    <constant>TYPEAUDIO</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>TYPEIMAGE</constant> 
+    <constant>TYPEIMAGE</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>TYPEVIDEO</constant> 
+    <constant>TYPEVIDEO</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>TYPEOTHER</constant> 
+    <constant>TYPEOTHER</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>ENC7BIT</constant> 
+    <constant>ENC7BIT</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>ENC8BIT</constant> 
+    <constant>ENC8BIT</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>ENCBINARY</constant> 
+    <constant>ENCBINARY</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>ENCBASE64</constant> 
+    <constant>ENCBASE64</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>ENCQUOTEDPRINTABLE</constant> 
+    <constant>ENCQUOTEDPRINTABLE</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>ENCOTHER</constant> 
+    <constant>ENCOTHER</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>IMAP_OPENTIMEOUT</constant> 
+    <constant>IMAP_OPENTIMEOUT</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>IMAP_READTIMEOUT</constant> 
+    <constant>IMAP_READTIMEOUT</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>IMAP_WRITETIMEOUT</constant> 
+    <constant>IMAP_WRITETIMEOUT</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>IMAP_CLOSETIMEOUT</constant> 
+    <constant>IMAP_CLOSETIMEOUT</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>LATT_REFERRAL</constant> 
+    <constant>LATT_REFERRAL</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>LATT_HASCHILDREN</constant> 
+    <constant>LATT_HASCHILDREN</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>LATT_HASNOCHILDREN</constant> 
+    <constant>LATT_HASNOCHILDREN</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>TYPEMODEL</constant> 
+    <constant>TYPEMODEL</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
