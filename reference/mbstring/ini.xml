@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.5 $ -->
-<!-- EN-Revision: 1.20 Maintainer: alexxed Status: ready -->
+<!-- $Revision: 1.6 $ -->
+<!-- EN-Revision: 1.21 Maintainer: alexxed Status: ready -->
 <!-- CREDITS: simionea -->
 <section xml:id="mbstring.configuration" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.runtime;
@@ -198,15 +198,18 @@
  </para>
 
  <para>
-  Conform <link xlink:href="http://www.w3.org/TR/REC-html40/interact/forms.html#adef-accept-charset">specificaţiilor HTML 4.01</link>,
-  navigatoarelor web le este permis să codeze un formular completat cu o codare de caractere diferită de cea utilizată de pagină.
-  Vedeţi funcţia <function>mb_http_input</function> pentru a detecta codările de caractere utilizate de navigatoare.
+  Conform <link xlink:href="&url.spec.html401.accept-charset;">specificaţiilor
+  HTML 4.01</link>, navigatoarelor web le este permis să codeze un formular
+  completat cu o codare de caractere diferită de cea utilizată de pagină. Vedeţi
+  funcţia <function>mb_http_input</function> pentru a detecta codările de
+  caractere utilizate de navigatoare.
  </para>
  <para>
-  Deşi navigatoarele cele mai utilizate sunt capabile să intuiască destul de precis codarea caracterelor dintr-un document 
-  HTML, ar fi mai bine să setaţi parametrul <literal>charset</literal> din antetul HTTP
+  Deşi navigatoarele cele mai utilizate sunt capabile să intuiască destul de
+  precis codarea caracterelor dintr-un document HTML, ar fi mai bine să setaţi
+  parametrul <literal>charset</literal> din antetul HTTP
   <literal>Content-Type</literal> la o valoare corespunzătoare folosind funcţia
-  <function>header</function> sau setarea ini 
+  <function>header</function> sau setarea ini
   <link linkend="ini.sect.data-handling">default_charset</link>.
  </para>
  <para>

@@ -1,44 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.10 $ -->
-<!-- EN-Revision: 1.35 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.11 $ -->
+<!-- EN-Revision: 1.36 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <preface xml:id="preface" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://docbook.org/ns/docbook">
  <info><title>Prefaţă</title>
  <abstract>
   <simpara>
-   <acronym>PHP</acronym>, ce înseamnă "PHP: Hypertext
-   Preprocessor" este un limbaj de scripting de uz general,
-   cu cod-sursă deschis (Open Source), utilizat pe scară largă, 
-   şi care este potrivit în special pentru dezvoltarea
-   aplicaţiilor Web şi poate fi integrat în HTML.
-   Sintaxa sa provine din C, Java şi Perl şi este uşor de învăţat.
-   Scopul principal al limbajului este acela de a permite
-   programatorilor web să creeze rapid pagini web generate
-   dinamic, însă cu PHP puteţi realiza mult mai multe.
+   <acronym>PHP</acronym>, ce înseamnă &quot;<literal>PHP: Hypertext
+   Preprocessor</literal>&quot; este un limbaj de scripting de uz general, cu
+   cod-sursă deschis (Open Source), utilizat pe scară largă, şi care este
+   potrivit în special pentru dezvoltarea aplicaţiilor Web şi poate fi integrat
+   în HTML. Sintaxa sa provine din C, Java şi Perl şi este uşor de învăţat.
+   Scopul principal al limbajului este acela de a permite programatorilor web să
+   creeze rapid pagini web generate dinamic, însă cu PHP puteţi realiza mult mai
+   multe.
   </simpara>
  </abstract>
 </info>
 
  <para>
-  Acest manual constă în primul rând dintr-o <link linkend="funcref">
-  referinţă a funcţiilor</link>, dar de asemenea conţine şi o
-  <link linkend="langref">prezentare a limbajului</link>, explicaţia
-  celor mai importante <link linkend="features">facilităţi</link>
-  oferite de PHP, şi alte informaţii
+  Acest manual constă în primul rând dintr-o <link linkend="funcref"> referinţă
+  a funcţiilor</link>, dar de asemenea conţine şi o <link linkend="langref">
+  prezentare a limbajului</link>, explicaţia celor mai importante
+  <link linkend="features">facilităţi</link> oferite de PHP, şi alte informaţii
   <link linkend="appendices">suplimentare</link>.
  </para>
  <para>
-  Puteţi descărca acest manual în câteva formate la adresa <link
-  xlink:href="&url.php.doc.downloads;">&url.php.doc.downloads;</link>.
-  Informaţii suplimentare despre modul în care acest manual este dezvoltat
-  pot fi găsite în anexa <link linkend="about">'Despre manual'</link>.
-  Dacă vă interesează <link linkend="history">istoria PHP</link>,
-  vizitaţi anexa corespunzătoare.
+  Puteţi descărca acest manual în câteva formate la adresa
+  <link xlink:href="&url.php.doc.downloads;">&url.php.doc.downloads;</link>.
+  Informaţii suplimentare despre modul în care acest manual este dezvoltat pot
+  fi găsite în anexa <link linkend="about">'Despre manual'</link>. Dacă vă
+  interesează <link linkend="history">istoria PHP</link>, vizitaţi anexa
+  corespunzătoare.
  </para>
 
  &contributors;
- 
+
  <section>
   <info><title>Traducerea în limba Română</title></info>
   <para>
@@ -64,9 +62,9 @@
   </para>
 
   <para>
-   Dacă doriţi să contribuiţi la traducerea manualului PHP, este de ajuns să
-   vă înscrieţi la lista de discuţii doc-ro@lists.php.net şi să ne contactaţi.
-   De asemenea vă recomandăm să vizitaţi următoarele resurse PHP româneşti:
+   Dacă doriţi să contribuiţi la traducerea manualului PHP, este de ajuns să vă
+   înscrieţi la lista de discuţii doc-ro@lists.php.net şi să ne contactaţi. De
+   asemenea vă recomandăm să vizitaţi următoarele resurse PHP româneşti:
    <link xlink:href="&url.ro.rophp;">&url.ro.rophp;</link> şi
    <link xlink:href="&url.ro.phpromania;">&url.ro.phpromania;</link>.
   </para>

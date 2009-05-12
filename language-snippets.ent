@@ -1,6 +1,9 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.263 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 1.265 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
+
+<!ENTITY changelog.randomseed '<row><entry>4.2.0</entry><entry>Generatorul de
+numere aleatoare este însămânțat automat.</entry></row>'>
 
 <!-- Notes -->
 
@@ -367,6 +370,13 @@ caracterelor pentru această funcţie.</para></note>'>
 <!ENTITY mbstring.encoding.parameter '<para>Parametrul <parameter>encoding
 </parameter> reprezintă codificarea caracterelor. Dacă el este omis, va fi
 utilizată valoarea internă a codificării caracterelor.</para>'>
+
+<!ENTITY mbstring.warning.e-modifier '<warning><para>Niciodată nu utilizați
+modificatorul <literal>e</literal> când lucrați cu date introduse ce nu provin
+din surse de încredere. Nu va avea loc evadarea automată (cum este cazul la
+<function>preg_replace</function>). Ignorarea acestui fapt va crea probabil
+vulnerabilități de executare a codului la distanță în aplicația dumneavoastră.
+</para></warning>'>
 
 <!-- MCVE notes -->
 
