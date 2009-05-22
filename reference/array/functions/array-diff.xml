@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.10 $ -->
-<!-- EN-Revision: 1.18 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.11 $ -->
+<!-- EN-Revision: 1.19 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.array-diff" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -60,35 +60,6 @@
    Întoarce un <type>array</type> ce conţine toate înregistrările din
    <parameter>array1</parameter> care nu sunt prezente nici în unul din
    celelalte tablouri.
-  </para>
- </refsect1>
-
- <refsect1 role="changelog">
-  &reftitle.changelog;
-  <para>
-   <informaltable>
-    <tgroup cols="2">
-     <thead>
-      <row>
-       <entry>&Version;</entry>
-       <entry>&Description;</entry>
-      </row>
-     </thead>
-     <tbody>
-      <row>
-       <entry>4.0.4</entry>
-       <entry>
-        <warning>
-         <simpara>
-          Aceasta nu funcționa în PHP 4.0.4!
-          <!-- TODO: when exactly was this broken?... -->
-         </simpara>
-        </warning>
-       </entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
   </para>
  </refsect1>
 
