@@ -425,6 +425,12 @@
     <english>synopsis</english>
     <romanian>descriere succintă</romanian>
     <english_example>Interface synopsis</english_example>
-    <romanian_example>Descrierea succintă a interfeței</romanian_example>
+    <romanian_example>Descrierea succintă a interfeţei</romanian_example>
+  </term>
+  <term>
+    <english>outline</english>
+    <romanian>schiţă</romanian>
+    <english_example>Library outline</english_example>
+    <romanian_example>Schiţă a bibliotecii</romanian_example>
   </term>
 </dictionary>
