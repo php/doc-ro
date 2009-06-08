@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.7 $ -->
-<!-- EN-Revision: 1.13 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.8 $ -->
+<!-- EN-Revision: 1.14 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.empty" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -30,8 +30,8 @@
       <note>
        <para>
         <function>empty</function> verifică numai variabile, deoarece orice 
-	altceva va duce la o eroare de interpretare. Cu alte cuvinte, 
-	următoarea comandă nu va funcţiona:
+        altceva va duce la o eroare de interpretare. Cu alte cuvinte, 
+        următoarea comandă nu va funcţiona:
         <command>empty(trim($name))</command>.
        </para>
       </note>
@@ -82,7 +82,7 @@
        <entry>
         <para>
          Începând cu PHP 5 obiectele fără proprietăţi nu mai sunt considerate
-	 vide.
+         vide.
         </para>
        </entry>
       </row>
@@ -129,12 +129,21 @@ if (isset($var)) {
  <refsect1 role="notes">
   &reftitle.notes;
   &note.language-construct;
+  <note>
+   <para>
+    La utilizarea <function>empty</function> asupra proprietăţilor inaccesibile
+    ale obiectelor, va fi apelată metoda de supraîncărcare
+    <link linkend="language.oop5.overloading.members">__isset</link>, dacă este
+    declarată.
+   </para>
+  </note>
  </refsect1>
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>
    <simplelist>
     <member><function>isset</function></member>
+    <member><link linkend="language.oop5.overloading.members">__isset</link></member>
     <member><function>unset</function></member>
     <member><function>array_key_exists</function></member>
     <member><function>count</function></member> 

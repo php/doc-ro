@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.6 $ -->
-<!-- EN-Revision: 1.21 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.7 $ -->
+<!-- EN-Revision: 1.22 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.unset" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -272,6 +272,14 @@ var_dump((unset) $name);
     metode a unui obiect începând cu PHP 5.
    </para>
   </note>
+  <note>
+   <para>
+    La utilizarea <function>unset</function> asupra proprietăţilor inaccesibile
+    ale obiectelor, va fi apelată metoda de supraîncărcare
+    <link linkend="language.oop5.overloading.members">__unset</link>, dacă este
+    declarată.
+   </para>
+  </note>
  </refsect1>
  
  <refsect1 role="seealso">
@@ -280,6 +288,7 @@ var_dump((unset) $name);
    <simplelist>
     <member><function>isset</function></member>
     <member><function>empty</function></member>
+    <member><link linkend="language.oop5.overloading.members">__unset</link></member>
     <member><function>array_splice</function></member>
    </simplelist>
   </para>
