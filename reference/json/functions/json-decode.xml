@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.9 $ -->
-<!-- EN-Revision: 1.10 Maintainer: radical Status: ready -->
+<!-- $Revision: 1.10 $ -->
+<!-- EN-Revision: 1.11 Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
 <refentry xml:id="function.json-decode" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -48,7 +48,7 @@
      <term><parameter>depth</parameter></term>
      <listitem>
       <para>
-       
+       Limita adâncimii de imbricare specificată de utilizator.
       </para>
      </listitem>
     </varlistentry>
@@ -172,6 +172,10 @@ json_decode($bad_json); // null
       </row>
      </thead>
      <tbody>
+      <row>
+       <entry>5.3.0</entry>
+       <entry>A fost adăugat parametrul opțional <parameter>depth</parameter></entry>
+      </row>
       <row>
        <entry>5.2.3</entry>
        <entry>Limita de imbricare a fost mărită de la 20 la 128.</entry>
