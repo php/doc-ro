@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.6 $ -->
-<!-- EN-Revision: 1.14 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.7 $ -->
+<!-- EN-Revision: 1.15 Maintainer: simionea Status: ready -->
 <appendix xml:id="types.comparisons" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Tabelele de comparaţii ale tipurilor PHP</title>
  <para>
@@ -59,7 +59,7 @@
       <entry>&false;</entry>
      </row>
      <row>
-      <entry><literal>$x = </literal>&null;</entry>
+      <entry><literal>$x = null</literal></entry>
       <entry><type>NULL</type></entry>
       <entry>&true;</entry>
       <entry>&true;</entry>

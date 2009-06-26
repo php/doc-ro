@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.32 $ -->
-<!-- EN-Revision: 1.84 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.33 $ -->
+<!-- EN-Revision: 1.86 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&php.ini; directives</title>
@@ -3736,13 +3736,14 @@ auto_prepend_file=security.php
        <listitem>
         <para>
          Indică dacă forma prescurtată (<userinput>&lt;? ?&gt;</userinput>)
-         a etichetei de deschidere a PHP este permisă. Dacă doriţi să 
+         a etichetei de deschidere a PHP este permisă. Dacă doriţi să
          utilizaţi PHP în combinaţie cu XML, puteţi dezactiva această opţiune
-         pentru a utiliza <userinput>&lt;?xml ?&gt;</userinput> direct în 
-         text. În caz contrar, puteţi să le tipăriţi cu PHP, de exemplu: 
-         <userinput>&lt;?php echo '&lt;?xml version="1.0"'; ?&gt;</userinput>.
-         De asemenea, dacă este dezactivată, trebuie să utilizaţi forma lungă
-         a etichetei de deschidere PHP (<userinput>&lt;?php ?&gt;</userinput>).
+         pentru a utiliza <userinput>&lt;?xml ?&gt;</userinput> direct în
+         text. În caz contrar, puteţi să le tipăriţi cu PHP, de exemplu:
+         <userinput>&lt;?php echo '&lt;?xml version="1.0"?&gt;'; ?&gt;
+         </userinput>. De asemenea, dacă este dezactivată, trebuie să utilizaţi
+         forma lungă a etichetei de deschidere PHP (<userinput>&lt;?php ?&gt;
+         </userinput>).
         </para>
         <note>
          <para>
@@ -4643,9 +4644,9 @@ auto_prepend_file=security.php
       </tgroup>
      </table>
     </para>
-    
+
     &ini.descriptions.title;
-    
+
     <para>
      <variablelist>
       <varlistentry xml:id="ini.include-path">
@@ -4685,8 +4686,11 @@ include_path=".;c:\php\includes"
          </example>
         </para>
         <para>
-         Utilizarea unui <literal>.</literal> în calea de includere permite 
-         includeri relative, deoarece desemnează directorul curent.
+         Utilizarea unui <literal>.</literal> în calea de includere permite
+         includeri relative, deoarece desemnează directorul curent. Însă este
+         mai eficient de a utiliza în mod explicit
+         <literal>include './file'</literal> decât de a impune PHP să verifice
+         permanent toate fișierele din directorul curent ce vor fi incluse.
         </para>
        </listitem>
       </varlistentry>

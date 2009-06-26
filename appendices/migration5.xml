@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.7 $ -->
-<!-- EN-Revision: 1.60 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.8 $ -->
+<!-- EN-Revision: 1.62 Maintainer: simionea Status: ready -->
  <appendix xml:id="migration5" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Migrarea de la PHP 4 la PHP 5.0.x</title>
   <para>
    &manual.migration.seealso;
-   <link linkend="migration51">5.1.x</link> şi
-   <link linkend="migration52">5.2.x</link>.
+   <link linkend="migration51">5.1.x</link>,
+   <link linkend="migration52">5.2.x</link> și
+   <link linkend="migration53">5.3.x</link>.
   </para>
 
   <section xml:id='migration5.changes'>
