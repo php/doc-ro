@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.7 $ -->
-<!-- EN-Revision: 1.29 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.8 $ -->
+<!-- EN-Revision: 1.31 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/datetime.xml, last change in rev 1.2 -->
 <refentry xml:id="function.mktime" xmlns="http://docbook.org/ns/docbook">
@@ -175,6 +175,25 @@
 
  <refsect1 role="examples">
   &reftitle.examples;
+  <para>
+   <example>
+    <title>Exemplu simplu <function>mktime</function></title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+// Stabilește fusul orar implicit pentru a fi utilizat. Disponibil începând cu PHP 5.1
+date_default_timezone_set('UTC');
+
+// Afișează: July 1, 2000 is on a Saturday
+echo "July 1, 2000 is on a " . date("l", mktime(0, 0, 0, 7, 1, 2000));
+
+// Afișează ceva de felul: 2006-04-05T01:02:03+00:00
+echo date('c', mktime(1, 2, 3, 4, 5, 2006));
+?>
+]]>
+    </programlisting>
+   </example>
+  </para>
   <para>
    <example>
     <title>Exemple <function>mktime</function></title>
