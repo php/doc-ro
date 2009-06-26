@@ -1,11 +1,15 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.265 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 1.267 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row><entry>4.2.0</entry><entry>Generatorul de
 numere aleatoare este însămânțat automat.</entry></row>'>
 
 <!-- Notes -->
+
+ <!ENTITY note.regex.deprecated '<note><para>Începând cu PHP 5.3.0 extensia
+regex se consideră învechită, apelarea acestei funcții va emite o notificare
+<constant>E_DEPRECATED</constant>.</para></note>'>
 
 <!ENTITY note.bin-safe '<note><simpara>Această funcţie acceptă şi
 date binare.</simpara></note>'>
