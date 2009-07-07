@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.33 $ -->
-<!-- EN-Revision: 1.86 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.34 $ -->
+<!-- EN-Revision: 1.89 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&php.ini; directives</title>
@@ -1585,10 +1585,22 @@
        <entry>Eliminat în PHP 6.0.0.</entry>
       </row>
       <row>
+       <entry><link linkend="ini.mail.add-x-header">mail.add_x_header</link></entry>
+       <entry>"0"</entry>
+       <entry>PHP_INI_SYSTEM|PHP_INI_PERDIR</entry>
+       <entry>Disponibil începând cu PHP 5.3.0.</entry>
+      </row>
+      <row>
        <entry>mail.force_extra_parameters</entry>
        <entry>NULL</entry>
-       <entry>numai în &php.ini;</entry>
+       <entry>Doar în &php.ini;</entry>
        <entry>Disponibil începând cu PHP 5.0.0.</entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.mail.log">mail.log</link></entry>
+       <entry>""</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu PHP 5.3.0.</entry>
       </row>
       <row>
        <entry>mailparse.def_charset</entry>
@@ -2425,6 +2437,12 @@
        <entry>Disponibil începând cu PHP 5.0.0.</entry>
       </row>
       <row>
+       <entry><link linkend="ini.request-order">request_order</link></entry>
+       <entry>""</entry>
+       <entry>PHP_INI_SYSTEM|PHP_INI_PERDIR</entry>
+       <entry>Adăugat în PHP 5.3.0</entry>
+      </row>
+      <row>
        <entry>runkit.internal_override</entry>
        <entry>"0"</entry>
        <entry>PHP_INI_SYSTEM</entry>
@@ -3089,12 +3107,6 @@
        <entry>"EGPCS"</entry>
        <entry>PHP_INI_PERDIR</entry>
        <entry>PHP_INI_ALL în PHP &lt;= 5.0.5.</entry>
-      </row>
-      <row>
-       <entry><link linkend="ini.request-order">request_order</link></entry>
-       <entry>""</entry>
-       <entry>PHP_INI_SYSTEM|PHP_INI_PERDIR</entry>
-       <entry>Adăugat în PHP 5.3.0</entry>
       </row>
       <row>
        <entry>velocis.max_links</entry>
@@ -4242,13 +4254,14 @@ auto_prepend_file=security.php
        </term>
        <listitem>
         <para>
-         Această directuvă descrie ordinea în care PHP PHP înregistrează 
-         variabilele GET, POST şi Cookie în tabloul _REQUEST. Înregistrarea 
-         este efectuată de la stânga la dreapta, valorile noi se suprapun 
+         Această directuvă descrie ordinea în care PHP PHP înregistrează
+         variabilele GET, POST şi Cookie în tabloul _REQUEST. Înregistrarea
+         este efectuată de la stânga la dreapta, valorile noi se suprapun
          peste cele vechi.
         </para>
         <para>
-         Dacă această directivă nu este stabilită, variables_order este 
+         Dacă această directivă nu este stabilită,
+         <link linkend="ini.variables-order">variables_order</link> este
          utilizată pentru a umple conţinutul <varname>$_REQUEST</varname>.
         </para>
        </listitem>
