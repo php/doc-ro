@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.7 $ -->
-<!-- EN-Revision: 1.46 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.8 $ -->
+<!-- EN-Revision: 1.47 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.date" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>date</refname>
   <refpurpose>Formatează o oră/dată</refpurpose>
  </refnamediv>
-  
+
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
@@ -294,7 +294,7 @@
        Caracterele nerecunoscute din string-ul de formatare vor fi afişate aşa
        cum sunt. Formatul <literal>Z</literal> întotdeauna va întoarce
        <literal>0</literal> la utilizarea <function>gmdate</function>.
-      </para>       
+      </para>
       <note>
        <para>
         Deoarece această funcţie acceptă doar timestamp-uri
@@ -306,9 +306,9 @@
       </note>
      </listitem>
     </varlistentry>
-    
+
     &date.timestamp.description;
-   
+
    </variablelist>
   </para>
  </refsect1>
@@ -318,15 +318,15 @@
   <para>
    Întoarce un string cu dată formatat. Dacă este utilizată o valoare
    non-numerică pentru <parameter>timestamp</parameter>, este întors &false;
-   şi este emisă o eroare de nivel <literal>E_WARNING</literal>.
+   şi este emisă o eroare de nivel <constant>E_WARNING</constant>.
   </para>
  </refsect1>
 
  <refsect1 role="errors">
   &reftitle.errors;
-   
+
    &date.timezone.errors.description;
- 
+
  </refsect1>
 
  <refsect1 role="changelog">
@@ -351,7 +351,7 @@
         01-01-1970 până la 19-01-2038 pe unele sisteme (de ex. Windows).
        </entry>
       </row>
-      
+
       &date.timezone.errors.changelog;
 
       <row>

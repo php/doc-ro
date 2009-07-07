@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.8 $ -->
-<!-- EN-Revision: 1.26 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.9 $ -->
+<!-- EN-Revision: 1.27 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.unserialize" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -67,7 +67,7 @@
   </para>
   <para>
    În caz că string-ul furnizat nu poate fi deserializat se va întoarce &false;
-   şi se va emite o eroare <literal>E_NOTICE</literal>.
+   şi se va emite o eroare <constant>E_NOTICE</constant>.
   </para>
  </refsect1>
 
@@ -166,7 +166,7 @@ function mycallback($classname)
     unei valori &false; serializate. Este posibil de a intercepta acest caz
     special comparând <parameter>str</parameter> cu
     <literal>serialize(false)</literal> sau interceptând eroarea
-    <literal>E_NOTICE</literal> emisă.
+    <constant>E_NOTICE</constant> emisă.
    </para>
   </warning>
  </refsect1>

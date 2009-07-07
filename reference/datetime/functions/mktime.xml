@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.8 $ -->
-<!-- EN-Revision: 1.31 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.9 $ -->
+<!-- EN-Revision: 1.32 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/datetime.xml, last change in rev 1.2 -->
 <refentry xml:id="function.mktime" xmlns="http://docbook.org/ns/docbook">
@@ -151,7 +151,7 @@
        <entry>5.3.0</entry>
        <entry>
         <function>mktime</function> acum emite o notificare
-        <literal>E_DEPRECATED</literal> dacă este utilizat parametrul
+        <constant>E_DEPRECATED</constant> dacă este utilizat parametrul
         <parameter>is_dst</parameter>.
        </entry>
       </row>
