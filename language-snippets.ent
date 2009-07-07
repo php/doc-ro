@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 1.267 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 1.269 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row><entry>4.2.0</entry><entry>Generatorul de
@@ -213,8 +213,15 @@ documentată în prezent; este disponibilă numai lista sa de argumente.
 
 <!ENTITY example.outputs.64bit '<para>Exemplul de mai sus va afișa pe mașini pe 64 de biți:</para>'>
 
-<!ENTITY example.outputs.similar '<para>Exemplul de mai sus va afişa
-ceva similar cu:</para>'>
+<!ENTITY example.outputs.similar '<para>Exemplul de mai sus va afişa ceva similar cu:</para>'>
+
+<!ENTITY examples.outputs '<para>Exemplele de mai sus vor afișa:</para>'>
+
+<!ENTITY examples.outputs.32bit '<para>Exemplele de mai sus vor afișa pe mașini pe 32 biți:</para>'>
+
+<!ENTITY examples.outputs.64bit '<para>Exemplele de mai sus vor afișa pe mașini pe 64 biți:</para>'>
+
+<!ENTITY examples.outputs.similar '<para>Exemplele de mai sus vor afișa ceva similar cu:</para>'>
 
 <!ENTITY array.resetspointer '<note><simpara>Această funcţie va efectua
 <function>reset</function> asupra indicatorului de tip <type>array</type>
@@ -420,8 +427,8 @@ inversă.</simpara>'>
 <!ENTITY date.timezone.errors.description '<para>
 Fiecare apel al unei funcţii de dată/oră va genera o <constant>E_NOTICE
 </constant> dacă zona orară nu este validă şi/sau un mesaj <constant>E_STRICT
-</constant> dacă se utilizează setările sistemului sau variabila de mediu 
-<varname>TZ</varname>. Vedeţi de asemenea
+</constant> sau <constant>E_WARNING</constant> dacă se utilizează setările
+sistemului sau variabila de mediu <varname>TZ</varname>. Vedeţi de asemenea
 <function>date_default_timezone_set</function></para>'>
 
 <!ENTITY date.timezone.errors.changelog '<row><entry>5.1.0</entry><entry>
