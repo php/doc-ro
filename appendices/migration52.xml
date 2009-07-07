@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.11 $ -->
-<!-- EN-Revision: 1.42 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.12 $ -->
+<!-- EN-Revision: 1.43 Maintainer: simionea Status: ready -->
 <appendix xml:id="migration52" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Migrarea de la PHP 5.1.x la PHP 5.2.x</title>
   <para>
@@ -877,6 +877,16 @@ $obj->getCommentName('');
     <simpara>
      <function>imagegrabwindow</function>
      - Capturează o fereastră. Începând cu PHP 5.2.2.
+    </simpara>
+   </listitem>
+  </itemizedlist>
+
+  <para><link linkend="book.libxml">libXML</link>:</para>
+  <itemizedlist>
+   <listitem>
+    <simpara>
+     <function>libxml_disable_entity_loader</function>
+     - Elimină posibilitatea de a încărca entități externe. Începând cu PHP 5.2.11.
     </simpara>
    </listitem>
   </itemizedlist>

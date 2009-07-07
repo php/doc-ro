@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 1.8 $ -->
-<!-- EN-Revision: 1.14 Maintainer: simionea Status: ready -->
+<!-- $Revision: 1.9 $ -->
+<!-- EN-Revision: 1.15 Maintainer: simionea Status: ready -->
 <appendix xml:id="migration51" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Migrarea de la PHP 5.0.x la PHP 5.1.x</title>
   <para>
@@ -840,7 +840,7 @@ class test {
  </section> <!-- end of migration51.databases -->
 
  <section xml:id="migration51.errorcheck">
-  <title>Verificarea <literal>E_STRICT</literal></title>
+  <title>Verificarea <constant>E_STRICT</constant></title>
   <informalexample>
    <para>
     Dacă aveţi de verificat un singur script, puteţi intercepta erorile
