@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: n/a Maintainer: simionea Status: ready -->
+<!-- EN-Revision: f26bde0fe632da1f77ff0b1ebbe79ca40e462d96 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row><entry>4.2.0</entry><entry>Generatorul de
@@ -7,8 +7,9 @@ numere aleatoare este însămânțat automat.</entry></row>'>
 
 <!-- Notes -->
 
- <!ENTITY note.regex.deprecated '<note><para>Începând cu PHP 5.3.0 extensia
-regex se consideră învechită, apelarea acestei funcții va emite o notificare
+<!ENTITY note.regex.deprecated '<note><para>Începând cu PHP 5.3.0 extensia
+regex este defavorizată în favoarea <link linkend="book.pcre">extensiei PCRE</link>.
+Apelarea acestei funcții va emite o notificare
 <constant>E_DEPRECATED</constant>.</para></note>'>
 
 <!ENTITY note.bin-safe '<note><simpara>Această funcţie acceptă şi
@@ -105,8 +106,10 @@ poate să difere de la un sistem de fişiere la altul.</para></note>'>
 de denumire a fişierului în această funcţie dacă
 <link linkend="ini.allow-url-fopen"> învelişurile fopen</link> au fost
 activate. Accesaţi <function>fopen</function> pentru mai multe detalii despre
-modul de specificare a denumirii fişierului şi <xref linkend="wrappers"/>
-pentru lista protocoalelor URL susţinute.</simpara></tip>'>
+modul de specificare a denumirii fişierului. Accesați <xref linkend="wrappers"/>
+pentru referințe la informații despre posibilitățile pe care le oferă diferite
+învelișuri, note despre utilizarea lor și informații despre variabile
+predefinite pe care le oferă.</simpara></tip>'>
 
 <!ENTITY tip.fopen-wrapper.stat '<tip><simpara>Începând cu PHP 5.0.0 această
 funcţie poate fi utilizată de asemenea cu <emphasis>unele</emphasis> 
@@ -138,6 +141,10 @@ orice alte aspecte documentate în privinţa acestei extensii &#2014; - pot să 
 modificate fără preaviz într-o versiune viitoare a PHP. Utilizaţi această
 extensie la propriul risc.</simpara></warning>'>
 
+<!ENTITY warn.deprecated.feature-5-3-0 '<warning xmlns="http://docbook.org/ns/docbook">
+<simpara>Această funcție este <emphasis>DEZAPROBATĂ</emphasis> începând cu PHP
+5.3.0. Utilizarea acestei facilități este foarte nerecomandată.</simpara></warning>'>
+
 <!ENTITY warn.deprecated.feature-5-3-0.removed-6-0-0 '<warning xmlns="http://docbook.org/ns/docbook">
 <simpara>Această facilitate este <emphasis>DEZAPROBATĂ</emphasis> şi este
 <emphasis>ELIMINATĂ</emphasis> începând cu PHP 6.0.0. Utilizarea acestei
@@ -152,6 +159,11 @@ xmlns="http://docbook.org/ns/docbook"><simpara>Această funcţie a fost
 <!ENTITY warn.deprecated.function.removed-5-3-0 '<warning xmlns="http://docbook.org/ns/docbook">
 <simpara>Această funcţie este <emphasis>DEZAPROBATĂ</emphasis> şi este 
 <emphasis>ELIMINATĂ</emphasis> începând cu PHP 5.3.0.</simpara></warning>'>
+
+<!ENTITY warn.deprecated.alias-5-3-0 '<warning xmlns="http://docbook.org/ns/docbook">
+<simpara>Acest pseudonim este <emphasis>DEZAPROBAT</emphasis> începând cu PHP
+5.3.0. Utilizarea acestui pseudonim este foarte nerecomandată.
+</simpara></warning>'>
 
 <!ENTITY warn.experimental.func '<warning xmlns="http://docbook.org/ns/docbook">
 <simpara>Această funcţie este <emphasis>EXPERIMENTALĂ</emphasis>. 
@@ -455,6 +467,21 @@ obiect <classname>DateTimeZone</classname> întors de funcţia
 
 <!ENTITY date.datetime.retval.changelog '<row><entry>5.3.0</entry><entry>A fost schimbată
 valoarea întoarsă din &null; în <classname>DateTime</classname>.</entry></row>'>
+
+<!ENTITY date.timezone.dbversion 'Această listă este bazată pe baza de date a
+fuselor orare de versiunea'>
+
+<!ENTITY date.timezone.africa 'Africa'>
+<!ENTITY date.timezone.america 'America'>
+<!ENTITY date.timezone.antarctica 'Antarctica'>
+<!ENTITY date.timezone.arctic 'Arctica'>
+<!ENTITY date.timezone.asia 'Asia'>
+<!ENTITY date.timezone.atlantic 'Atlantica'>
+<!ENTITY date.timezone.australia 'Australia'>
+<!ENTITY date.timezone.europe 'Europa'>
+<!ENTITY date.timezone.indian 'India'>
+<!ENTITY date.timezone.pacific 'Pacificul'>
+<!ENTITY date.timezone.others 'Altele'>
 
 <!-- DomXml Notes -->
 <!ENTITY node.inserted 'Acest nod nu va apărea în document dacă nu este
@@ -1097,6 +1124,56 @@ Imagick a fost compilat cu ImageMagick de versiunea 6.3.1 sau ulterior.'>
 <!ENTITY imagick.method.available.0x632 'Această metodă este disponibilă dacă
 Imagick a fost compilat cu ImageMagick de versiunea 6.3.2 sau ulterior.'>
 
+<!ENTITY imagick.method.available.0x636 'Această metodă este disponibilă dacă
+Imagick a fost compilat cu ImageMagick de versiunea 6.3.6 sau ulterior.'>
+
+<!ENTITY imagick.method.available.0x637 'Această metodă este disponibilă dacă
+Imagick a fost compilat cu ImageMagick de versiunea 6.3.7 sau ulterior.'>
+
+<!ENTITY imagick.method.available.0x638 'Această metodă este disponibilă dacă
+Imagick a fost compilat cu ImageMagick de versiunea 6.3.8 sau ulterior.'>
+
+<!ENTITY imagick.method.available.0x639 'Această metodă este disponibilă dacă
+Imagick a fost compilat cu ImageMagick de versiunea 6.3.9 sau ulterior.'>
+
+<!ENTITY imagick.method.available.0x640 'Această metodă este disponibilă dacă
+Imagick a fost compilat cu ImageMagick de versiunea 6.4.0 sau ulterior.'>
+
+<!ENTITY imagick.method.available.0x641 'Această metodă este disponibilă dacă
+Imagick a fost compilat cu ImageMagick de versiunea 6.4.1 sau ulterior.'>
+
+<!ENTITY imagick.method.available.0x642 'Această metodă este disponibilă dacă
+Imagick a fost compilat cu ImageMagick de versiunea 6.4.2 sau ulterior.'>
+
+<!ENTITY imagick.method.available.0x643 'Această metodă este disponibilă dacă
+Imagick a fost compilat cu ImageMagick de versiunea 6.4.3 sau ulterior.'>
+
+<!ENTITY imagick.method.available.0x644 'Această metodă este disponibilă dacă
+Imagick a fost compilat cu ImageMagick de versiunea 6.4.4 sau ulterior.'>
+
+<!ENTITY imagick.constant.available 'Această constantă este disponibilă dacă
+Imagick a fost compilat cu ImageMagick de versiunea'>
+
+<!-- Imagick default channel information -->
+<!ENTITY imagick.default.channel.info 'Valoarea implicită este
+<constant>Imagick::CHANNEL_DEFAULT</constant>. Vă rugăm să vă referiți la această
+listă a <link linkend="imagick.constants.channel">constantelor de canal</link>'>
+
+<!-- Fuzz parameter -->
+<!ENTITY imagick.parameter.fuzz 'Mărimea difuziei. Spre exemplu dacă stabiliți
+difuzia la 10, atunci culoarea roșie de intensitățile 100 și 102 respectiv sunt
+interpretate ca aceeași culoare.'>
+
+<!-- Channel parameter -->
+<!ENTITY imagick.parameter.channel 'Înscrieți orice constantă a canalului care
+este validă pentru modul de canal. Pentru a aplica operația asupra mai multor
+canale, combinați <link linkend="imagick.constants.channel">constante de
+canal</link> utilizând operatori binari. &imagick.default.channel.info;'>
+
+<!-- Alpha parameter -->
+<!ENTITY imagick.parameter.alpha 'Nivelul transparenței: 1.0 este deplin opac
+iar 0.0 este deplin transparent.'>
+
 <!ENTITY imagick.imagickexception.throw 'Aruncă un
 <classname>ImagickException</classname> în caz de eroare.'>
 
@@ -1183,3 +1260,19 @@ disponibilă numai când PHP este compilat cu libxml 20620 sau ulterioară.
 <!ENTITY userstream.updates.context '<note><para>Proprietatea
 <varname linkend="streamwrapper.props.context">streamWrapper->context</varname>
 este reînnoită dacă un context valid este transmis funcției apelante.</para></note>'>
+
+<!-- Gmagick -->
+<!ENTITY gmagick.return.success 'Întoarce &true; în caz de succes.'>
+<!ENTITY gmagick.gmagickexception.throw 'Aruncă un
+<classname>GmagickException</classname> în caz de eroare.'>
+
+<!-- Reflection -->
+<!ENTITY reflection.export.return 'Dacă parametrul <parameter>return</parameter>
+este stabilit în &true;, atunci valoarea exportată este întoarsă ca un
+<type>string</type>, în caz contrar este întors &null;.'>
+
+<!ENTITY reflection.export.param.return 'Stabilirea valorii &true; va duce la
+întoarcerea valorii exportate, și nu la emiterea ei. Stabilirea în &false;
+(valoarea implicită) va efectua operația opusă.'>
+
+<!ENTITY reflection.export.param.name 'Reflecția ce va fi exportată.'>
