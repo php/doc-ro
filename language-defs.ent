@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 40884bbb4001a9b4add321fd34adc59dcad4e4a2 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: d022de3adca805a7ed97790053ea88864aafcdd0 Maintainer: simionea Status: ready -->
 
 <!-- Part titles used mostly in manual.xml itself -->
 <!ENTITY PHPManual         "Manualul PHP">
@@ -32,7 +32,7 @@
 <!ENTITY AuthenticationServices                   "Servicii de autentificare">
 <!ENTITY OtherServices                            "Alte servicii">
 <!ENTITY CompressionExtensions                    "Extensii de compresie şi arhivare">
-<!ENTITY CalendarandEventRelatedExtensions        "Extensii referitoare la claendar şi evenimente">
+<!ENTITY CalendarandEventRelatedExtensions        "Extensii referitoare la dată şi oră">
 <!ENTITY NonTextMIMEOutput                        "Ieşiri MIME non-textuale">
 <!ENTITY ImageProcessingandGeneration             "Generarea şi procesarea imaginilor">
 <!ENTITY AudioFormatsManipulation                 "Manipularea cu formatele audio">
