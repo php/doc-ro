@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: c2608e09d8d148c6728107e921bc78685e552f6c Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 1de813534088d0d7649d445adc6923581fa600ff Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/datetime.xml, last change in rev 1.2 -->
 <refentry xml:id="function.mktime" xmlns="http://docbook.org/ns/docbook">
@@ -31,6 +31,18 @@
    argument omis va fi stabilit la valoarea curentă în corespundere cu data şi
    ora locale.
   </para>
+ </refsect1>
+
+ <refsect1 role="notes">
+  &reftitle.notes;
+  <note>
+   <para>
+    Începând cu PHP 5.1, când este apelat fără argumente,
+    <function>mktime</function> aruncă o notificare
+    <constant>E_STRICT</constant>: utilizați funcția <function>time</function>
+    în loc.
+   </para>
+  </note>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -162,6 +174,14 @@
         Funcţia a fost modificată să întoarcă &false; în caz de eroare, în loc
         de <literal>-1</literal>. Funcţia a fost modificată să accepte anul,
         luna şi ziua cu valorile zero.
+       </entry>
+      </row>
+      <row>
+       <entry>5.1.0</entry>
+       <entry>
+        Când este apelată fără argumente, <function>mktime</function> aruncă o
+        notificare <constant>E_STRICT</constant>. Utilizați funcția
+        <function>time</function> în loc.
        </entry>
       </row>
 
