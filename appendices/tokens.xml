@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 803bd2e9ce69bcdd3f2cd2a9dff61e2945400734 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 0d9579b1a1bf9adff51400d82127294fca996215 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="tokens" xmlns="http://docbook.org/ns/docbook">
  <title>Lista semnelor interpretorului</title>
@@ -91,7 +91,7 @@
     <row>
      <entry><constant>T_CHARACTER</constant></entry>
      <entry></entry>
-     <entry></entry>
+     <entry>nu mai este utilizat</entry>
     </row>
     <row>
      <entry><constant>T_CLASS</constant></entry>
@@ -147,8 +147,8 @@
     </row>
     <row>
      <entry><constant>T_CURLY_OPEN</constant></entry>
-     <entry></entry>
-     <entry></entry>
+     <entry>{$</entry>
+     <entry><link linkend="language.types.string.parsing.complex">sintaxa interpretată complexă a variabilei</link></entry>
     </row>
     <row>
      <entry><constant>T_DEC</constant></entry>
@@ -240,8 +240,8 @@
     </row>
     <row>
      <entry><constant>T_ENCAPSED_AND_WHITESPACE</constant></entry>
-     <entry></entry>
-     <entry></entry>
+     <entry>" $a"</entry>
+     <entry><link linkend="language.types.string.parsing">partea constantă a șirurilor cu variabile</link></entry>
     </row>
     <row>
      <entry><constant>T_ENDDECLARE</constant></entry>
@@ -379,7 +379,7 @@
     <row>
      <entry><constant>T_INLINE_HTML</constant></entry>
      <entry></entry>
-     <entry></entry>
+     <entry><link linkend="language.basic-syntax.phpmode">text în afara PHP</link></entry>
     </row>
     <row>
      <entry><constant>T_INSTANCEOF</constant></entry>
@@ -509,8 +509,8 @@
     </row>
     <row>
      <entry><constant>T_NUM_STRING</constant></entry>
-     <entry></entry>
-     <entry></entry>
+     <entry>"$a[0]"</entry>
+     <entry><link linkend="language.types.string.parsing">indice numeric al tabloului în interiorul unui string</link></entry>
     </row>
     <row>
      <entry><constant>T_OBJECT_CAST</constant></entry>
@@ -629,8 +629,8 @@
     </row>
     <row>
      <entry><constant>T_STRING</constant></entry>
-     <entry></entry>
-     <entry></entry>
+     <entry>"$a[a]"</entry>
+     <entry><link linkend="language.types.string.parsing">indice textual al tabloului în interiorul unui string</link></entry>
     </row>
     <row>
      <entry><constant>T_STRING_CAST</constant></entry>
@@ -639,8 +639,8 @@
     </row>
     <row>
      <entry><constant>T_STRING_VARNAME</constant></entry>
-     <entry></entry>
-     <entry></entry>
+     <entry>"${a</entry>
+     <entry><link linkend="language.types.string.parsing.complex">sintaxa complexă de interpretare a variabilelor</link></entry>
     </row>
     <row>
      <entry><constant>T_SWITCH</constant></entry>
@@ -692,7 +692,7 @@
     </row>
     <row>
      <entry><constant>T_WHITESPACE</constant></entry>
-     <entry></entry>
+     <entry>\t \r\n</entry>
      <entry></entry>
     </row>
     <row>
