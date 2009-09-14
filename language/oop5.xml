@@ -1,27 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 6c18ab3fe2d903f0eeb141b7cb9851fee8ba54f4 Maintainer: radical Status: ready -->
+<!-- EN-Revision: 813758ad4fea24d978930d9115d4c81790faadb3 Maintainer: radical Status: ready -->
 <!-- Credits: simionea -->
  <chapter xml:id="language.oop5" xmlns="http://docbook.org/ns/docbook">
   <title>Clase şi Obiecte (PHP 5)</title>
 
-  <sect1  xml:id="oop5.intro">
+  <sect1 xml:id="oop5.intro">
    <title>Introducere</title>
    <para>
-    În PHP 5 suportul pentru Obiecte este complet nou. Modul în care PHP
-    manipulează obiecte a fost rescris în totalitate, pentru o performanţă mai
-    bună şi mai multe calităţi/caracteristici.
+    Începând cu PHP 5, modelul de obiecte a fost rescris pentru a mări
+    performanța și a introduce facilități noi. Aceasta a fost o schimbare majoră
+    după PHP 4. PHP 5 acum are un model de obiecte deplin.
+   </para>
+   <para>
+    Printre facilitățile noi în PHP 5 sunt clase și metode de tip
+    <link linkend="language.oop5.visibility">visibility</link>,
+    <link linkend="language.oop5.abstract">abstract</link> și
+    <link linkend="language.oop5.final">final</link>,
+    <link linkend="language.oop5.magic">metode magice</link> și
+    <link linkend="language.oop5.interfaces">interfețe</link> adiționale,
+    <link linkend="language.oop5.cloning">clonarea</link> și
+    <link linkend="language.oop5.typehinting">typehinting</link>.
+   </para>
+   <para>
+    PHP tratează obiectele la fel ca pe niște referințe sau handle-uri, ceea ce
+    înseamnă că fiecare variabilă conține o referință la obiect și nu o copie a
+    întregului obiect. Vedeți
+    <link linkend="language.oop5.references">Obiecte și referințe</link>
    </para>
    &tip.userlandnaming;
   </sect1>
 
   &language.oop5.basic;
+  &language.oop5.properties;
+  &language.oop5.constants;
   &language.oop5.autoload;
   &language.oop5.decon;
   &language.oop5.visibility;
   &language.oop5.paamayim-nekudotayim;
   &language.oop5.static;
-  &language.oop5.constants;
   &language.oop5.abstract;
   &language.oop5.interfaces;
   &language.oop5.overloading;
