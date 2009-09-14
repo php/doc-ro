@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 803bd2e9ce69bcdd3f2cd2a9dff61e2945400734 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: f00cae82a36e04d002af69ffddb69d64a68be51b Maintainer: simionea Status: ready -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&php.ini; directives</title>
@@ -1570,7 +1570,7 @@
        <entry><link linkend="ini.magic-quotes-gpc">magic_quotes_gpc</link></entry>
        <entry>"1"</entry>
        <entry>PHP_INI_PERDIR</entry>
-       <entry>PHP_INI_ALL în PHP &lt;= 4.2.3. Eliminat în PHP 6.0.0.</entry>
+       <entry>PHP_INI_ALL în PHP &lt;= 4.2.3. Defavorizat în PHP 5.3.0. Eliminat în PHP 6.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.magic-quotes-runtime">magic_quotes_runtime</link></entry>
@@ -1671,8 +1671,9 @@
       <row>
        <entry><link linkend="ini.mbstring.func-overload">mbstring.func_overload</link></entry>
        <entry>"0"</entry>
-       <entry>PHP_INI_PERDIR</entry>
-       <entry>PHP_INI_SYSTEM în PHP &lt;= 4.2.3. Disponibil începând cu PHP 4.2.0.</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>PHP_INI_SYSTEM în PHP &lt;= 4.2.3. PHP_INI_SYSTEM | PHP_INI_PERDIR
+       de la PHP 4.3 până la PHP 5.2.6. Disponibil începând cu PHP 4.2.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.mbstring.http-input">mbstring.http_input</link></entry>
@@ -2422,7 +2423,7 @@
        <entry><link linkend="ini.register-long-arrays">register_long_arrays</link></entry>
        <entry>"1"</entry>
        <entry>PHP_INI_PERDIR</entry>
-       <entry>Disponibil începând cu PHP 5.0.0. Eliminat în PHP 6.0.0.</entry>
+       <entry>Disponibil începând cu PHP 5.0.0. Defavorizat în PHP 5.3.0. Eliminat în PHP 6.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.report-memleaks">report_memleaks</link></entry>
@@ -2458,7 +2459,7 @@
        <entry><link linkend="ini.safe-mode">safe_mode</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_SYSTEM</entry>
-       <entry>Eliminat în PHP 6.0.0.</entry>
+       <entry>Defavorizat în PHP 5.3.0. Eliminat în PHP 6.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.safe-mode-allowed-env-vars">safe_mode_allowed_env_vars</link></entry>
@@ -3819,28 +3820,28 @@ auto_prepend_file=security.php
        </term>
        <listitem>
         <para>
-         Afişarea avertizării în cazul când argumentele sunt transmise prin 
-         referinţă în timpul apelării funcţiei. Această metodă e descurajată 
-         şi e posibil să nu mai fie susţinută în versiunile viitoare ale 
-         PHP/Zend. Metoda încurajată de specificare a argumentelor ce trebuie
-         transmise prin referinţă este în declaraţia funcţiei.
-         Sunteţi încurajat să încercaţi să dezactivaţi această opţiune şi să 
-         aveţi grijă ca scripturile să lucreze în mod normal cu ea, pentru a 
-         vă asigura că ele vor funcţiona cu versiunile viitoare ale 
-         limbajului (veţi primi o avertizare de fiecare dată când utilizaţi 
+         Afişarea avertizării în cazul când argumentele sunt transmise prin
+         referinţă în timpul apelării funcţiei. Această metodă e descurajată
+         în PHP 5.3.0 şi e posibil să nu mai fie susţinută în versiunile
+         viitoare ale PHP/Zend. Metoda încurajată de specificare a argumentelor
+         ce trebuie transmise prin referinţă este în declaraţia funcţiei.
+         Sunteţi încurajat să încercaţi să dezactivaţi această opţiune şi să
+         aveţi grijă ca scripturile să lucreze în mod normal cu ea, pentru a
+         vă asigura că ele vor funcţiona cu versiunile viitoare ale
+         limbajului (veţi primi o avertizare de fiecare dată când utilizaţi
          această facilitate).
         </para>
         <para>
-         Transmiterea argumentelor prin referinţă la momentul apelării 
-         funcţiei a fost descurajată din motivul curăţeniei codului-sursă. O 
-         funcţie poate să-şi modifice argumentul într-un mod nedocumentat 
-         dacă nu a declarat că argumentul este transmis prin referinţă. 
+         Transmiterea argumentelor prin referinţă la momentul apelării
+         funcţiei a fost descurajată din motivul curăţeniei codului-sursă. O
+         funcţie poate să-şi modifice argumentul într-un mod nedocumentat
+         dacă nu a declarat că argumentul este transmis prin referinţă.
          Pentru a evita efecte secundare este mai bine de a specifica care
-         argumente sunt transmise prin referinţă numai în declaraţia 
+         argumente sunt transmise prin referinţă numai în declaraţia
          funcţiei.
         </para>
         <para>
-         Accesaţi de asemenea <link linkend="language.references">explicaţia 
+         Accesaţi de asemenea <link linkend="language.references">explicaţia
          referinţelor</link>.
         </para>
        </listitem>
@@ -4079,7 +4080,7 @@ auto_prepend_file=security.php
         <entry>register_long_arrays</entry>
         <entry>"1"</entry>
         <entry>PHP_INI_PERDIR</entry>
-        <entry>Disponibil începând cu PHP 5.0.0.</entry>
+        <entry>Disponibil începând cu PHP 5.0.0. Defavorizat în PHP 5.3.0. Eliminat în PHP 6.0.0.</entry>
        </row>
        <row>
         <entry>post_max_size</entry>
@@ -4360,7 +4361,7 @@ auto_prepend_file=security.php
         </simpara>
        </listitem>
       </varlistentry>
-      
+
       <varlistentry xml:id="ini.register-long-arrays">
        <term>
         <parameter>register_long_arrays</parameter>
@@ -4379,9 +4380,9 @@ auto_prepend_file=security.php
          <varname>$_GET</varname>.
         </simpara>
         <simpara>
-         Această directivă a devenit disponibilă în PHP 5.0.0 şi a fost 
-         anulată în PHP 6.0.0.
+         Această directivă a devenit disponibilă în PHP 5.0.0.
         </simpara>
+        &warn.deprecated.feature-5-3-0.removed-6-0-0;
        </listitem>
       </varlistentry>
 
@@ -4677,6 +4678,16 @@ auto_prepend_file=security.php
          vor căuta fişierele. Formatul este ca şi în cazul variabilei de 
          mediu a sistemului <envar>PATH</envar>: o listă de directoare 
          separate prin două puncte în Unix, sau punct şi virgulă în Windows.
+        </para>
+        <para>
+         PHP ia în considerație fiecare înregistrare separată din calea de
+         includere atunci când caută fișierele spre a fi incluse. El va verifica
+         prima cale și dacă nu-l va găsi va căuta în următoarea cale și așa până
+         când fișierul este localizat, sau va întoarce o
+         <link linkend="errorfunc.constants.errorlevels.e-warning">avertizare</link>
+         sau o <link linkend="errorfunc.constants.errorlevels.e-error">eroare</link>. 
+         Puteți să stabiliți sau să modificați calea de includere în timpul
+         rulării utilizând funcția <function>set_include_path</function>.
         </para>
         <para>
          <example>
@@ -5038,7 +5049,7 @@ include_path=".;c:\php\includes"
     </para>
    </section>
 
-  <section xml:id="ini.sql-general">
+  <section xml:id="ini.sect.sql-general">
    <title>SQL general</title>
     <para>
      <table>
