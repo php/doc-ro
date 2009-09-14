@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 50f05a02f3267ca1461b6bc51349b3b6a7542db9 Maintainer: radical Status: ready -->
+<!-- EN-Revision: 1cbf677fff3203e82d42aec580dccffcf1240177 Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
 <refentry xml:id="function.json-decode" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -61,6 +61,9 @@
   <para>
    Întoarce un <type>object</type>, sau dacă parametrul opţional
    <parameter>assoc</parameter> este &true;, un <type>array</type> asociativ.
+   &null; este întors dacă parametrul <parameter>json</parameter> nu poate fi
+   decodificat sau dacă datele pentru codificare sunt mai adânci decât limita
+   de imbricare.
   </para>
  </refsect1>
 
@@ -141,6 +144,72 @@ json_decode($bad_json); // null
 ]]>
     </programlisting>
    </example>
+   <example>
+    <title>Erori ale <parameter>depth</parameter></title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+// Codifică datele.
+$json = json_encode(
+	array(
+		1 => array(
+			'English' => array(
+				'One',
+				'January'
+			),
+			'French' => array(
+				'Une',
+				'Janvier'
+			)
+		)
+	)
+);
+
+// Definește erorile.
+$json_errors = array(
+	JSON_ERROR_NONE => 'No error has occurred',
+	JSON_ERROR_DEPTH => 'The maximum stack depth has been exceeded',
+	JSON_ERROR_CTRL_CHAR => 'Control character error, possibly incorrectly encoded',
+	JSON_ERROR_SYNTAX => 'Syntax error',
+);
+
+// Arată erorile pentru diferite adâncimi.
+foreach(range(4, 3, -1) as $depth) {
+	var_dump(json_decode($json, True, $depth));
+	echo 'Last error : ', $json_errors[json_last_error()], PHP_EOL, PHP_EOL;
+	}
+?>
+]]>
+    </programlisting>
+    &example.outputs;
+    <screen>
+<![CDATA[
+array(1) {
+  [1]=>
+  array(2) {
+    ["English"]=>
+    array(2) {
+      [0]=>
+      string(3) "One"
+      [1]=>
+      string(7) "January"
+    }
+    ["French"]=>
+    array(2) {
+      [0]=>
+      string(3) "Une"
+      [1]=>
+      string(7) "Janvier"
+    }
+  }
+}
+Last error : No error has occurred
+
+NULL
+Last error : The maximum stack depth has been exceeded
+]]>
+    </screen>
+   </example>
   </para>
  </refsect1>
 
@@ -151,13 +220,12 @@ json_decode($bad_json); // null
     Specificaţia JSON nu este JavaScript, ci un subset al JavaScript.
    </para>
   </note>
-  <caution>
+  <note>
    <para>
-    Această funcţie va întoarce &false; dacă datele reprezentate JSON s-ar
-    converti într-un <type>array</type> sau <type>object</type> cu mai mult de
-    127 elemente.
+    În cazul decodificării cu eșec funcția <function>json_last_error</function>
+    poate fi utilizată pentru a determina natura exactă a erorii.
    </para>
-  </caution>
+  </note>
  </refsect1>
 
  <refsect1 role="changelog">
@@ -174,7 +242,8 @@ json_decode($bad_json); // null
      <tbody>
       <row>
        <entry>5.3.0</entry>
-       <entry>A fost adăugat parametrul opțional <parameter>depth</parameter></entry>
+       <entry>A fost adăugat parametrul opțional <parameter>depth</parameter>.
+       Limita de imbricare implicită a fost mărită de la 128 la 512.</entry>
       </row>
       <row>
        <entry>5.2.3</entry>
@@ -191,6 +260,7 @@ json_decode($bad_json); // null
   <para>
    <simplelist>
     <member><function>json_encode</function></member>
+    <member><function>json_last_error</function></member>
    </simplelist>
   </para>
  </refsect1>
