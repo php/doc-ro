@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 04077dd209c5fb9de2b55fcaf57cd4beef8c4273 Maintainer: radical Status: ready -->
+<!-- EN-Revision: 459f5061ab6a48748d0a0cc1ca2e085ca6e2b17f Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
  <sect1 xml:id="language.oop5.visibility" xmlns="http://docbook.org/ns/docbook">
   <title>Vizibilitatea</title>
   <para>
-   Vizibilitatea unei propietăţi sau a unei metode 
-   poate fi definită prefixând declaraţia cu unul din cuvintele 
-   cheie: public, protected sau private. Elementele (fie ele 
-   propietăţi sau metode) declarate public pot fi accesate oriunde.
-   Elementele declarate protected limitează accesul la clasele 
-   care moştenesc proprietăţile sau metodele (precum şi la clasa 
-   care le defineşte). În final, cele declarate private limitează
-   vizibilitatea doar la clasa în care sunt definite.
+   Vizibilitatea unei propietăţi sau a unei metode poate fi definită prefixând
+   declaraţia cu unul din cuvintele cheie: public, protected sau private.
+   Membrele claselor (proprietăți sau metode) declarate public pot fi accesate
+   oriunde. Membrele declarate protected pot fi accesate doar în interiorul
+   clasei, precum și de clasele moștenite și clasele-părinte. Membrele declarate
+   private pot fi accesate doar de clasa care le definește.
   </para>
-  <sect2 xml:id="language.oop5.visiblity-members">
-   <title>Vizibilitatea membrilor</title>
+  <sect2 xml:id="language.oop5.visibility-members">
+   <title>Vizibilitatea proprietăților</title>
    <para>
-   Membri unei clase trebuie definiţi cu: public, private, sau protected.
+   Proprietățile unei clase trebuie definite cu: public, private, sau protected.
    </para>
    <para>
     <example>
-     <title>Declaraţie membri</title>
+     <title>Declarare proprietăților</title>
      <programlisting role="php">
 <![CDATA[
 <?php
@@ -80,7 +78,7 @@ $obj2->afiseazaBunaZiua();    // Afişează Eu sunt: Public, Eu sunt: Protected2
      Metoda PHP 4 de a declara variabile folosind cuvântul cheie
      <emphasis>var</emphasis> este încă susţinută din motive de
      compatibilitate (fiind sinonim cuvântului cheie public).
-     În PHP 5 înainte de 5.1.3, utilizarea sa va emite o avertizare de tip 
+     În PHP 5 înainte de 5.1.3, utilizarea sa va emite o avertizare de tip
      <constant>E_STRICT</constant>.
     </simpara>
    </note>
@@ -88,7 +86,7 @@ $obj2->afiseazaBunaZiua();    // Afişează Eu sunt: Public, Eu sunt: Protected2
   <sect2 xml:id="language.oop5.visiblity-methods">
    <title>Vizibilitatea metodelor</title>
    <para>
-    Metodele claselor trebuie definite cu public, private, sau protected. 
+    Metodele claselor trebuie definite cu public, private, sau protected.
     Metodele fără nici o declaraţie sunt implicit considerate public.
    </para>
    <para>
@@ -148,7 +146,7 @@ $myclass2 = new MyClass2;
 $myclass2->MyPublic(); // Funcţionează
 $myclass2->Foo2(); // Public şi Protected funcţionează, dar nu şi Private
 
-class Bar 
+class Bar
 {
     public function test() {
         $this->testPrivate();
@@ -158,7 +156,7 @@ class Bar
     public function testPublic() {
         echo "Bar::testPublic\n";
     }
-    
+
     private function testPrivate() {
         echo "Bar::testPrivate\n";
     }
@@ -169,14 +167,14 @@ class Foo extends Bar
     public function testPublic() {
         echo "Foo::testPublic\n";
     }
-    
+
     private function testPrivate() {
         echo "Foo::testPrivate\n";
     }
 }
 
 $myFoo = new foo();
-$myFoo->test(); // Bar::testPrivate 
+$myFoo->test(); // Bar::testPrivate
                 // Foo::testPublic
 ?>
 ]]>
