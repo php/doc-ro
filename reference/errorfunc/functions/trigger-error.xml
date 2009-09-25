@@ -19,7 +19,7 @@
    Utilizată pentru a declanşa o condiţie de eroare la nivel de utilizator, ea
    poate fi utilizată în combinaţie cu handler-ul de erori încorporat, sau cu
    o funcţie definită de utilizator care a fost stabilită ca un nou handler al
-   erorii (<function>set_error_handler</function>). 
+   erorii (<function>set_error_handler</function>).
   </para>
   <para>
    Această funcţie este utilă atunci când aveţi nevoie să generaţi un răspuns
