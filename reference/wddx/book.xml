@@ -3,10 +3,10 @@
 <!-- EN-Revision: 51bdd398d7b5056caca17eb7bf8dbfc46897fa5b Maintainer: simionea Status: ready -->
 <!-- Purpose: webservice -->
 <!-- Membership: bundled, external -->
- 
+
 <book xml:id="book.wddx" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>WDDX</title>
- 
+
  <!-- {{{ preface -->
  <preface xml:id="intro.wddx">
   &reftitle.intro;
@@ -16,7 +16,7 @@
   </para>
  </preface>
  <!-- }}} -->
- 
+
  &reference.wddx.setup;
  &reference.wddx.constants;
  &reference.wddx.examples;
