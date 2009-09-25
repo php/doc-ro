@@ -9,7 +9,7 @@
    Creează o valoare PHP dintr-o reprezentare stocată
   </refpurpose>
  </refnamediv>
- 
+
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
@@ -18,7 +18,7 @@
   </methodsynopsis>
   <simpara>
    <function>unserialize</function> preia o singură variabilă serializată şi o
-   converteşte invers într-o valoare PHP.  
+   converteşte invers într-o valoare PHP.
   </simpara>
  </refsect1>
 
@@ -92,7 +92,7 @@
       <row>
        <entry>4.0.0</entry>
        <entry>
-        La serializarea unui obiect metodele nu mai sunt pierdute. 
+        La serializarea unui obiect metodele nu mai sunt pierdute.
         Vă rugăm să accesaţi
         <link linkend="language.oop5.serialization">Serializarea Obiectelor</link>
         pentru informaţii suplimentare.
@@ -146,7 +146,7 @@ $serialized_object='O:1:"a":1:{s:5:"value";s:3:"100";}';
 // directiva unserialize_callback_func este disponibilă începând cu PHP 4.2.0
 ini_set('unserialize_callback_func', 'mycallback'); // stabileşte funcţia de apel invers
 
-function mycallback($classname) 
+function mycallback($classname)
 {
     // doar includeţi un fişier ce conţine definiţia clasei
     // veţi lăsa ca $classname să-şi dea seama care definiţie a clasei este necesară

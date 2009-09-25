@@ -9,7 +9,7 @@
    Afişează informaţie lizibilă de om despre o variabilă
   </refpurpose>
  </refnamediv>
- 
+
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
@@ -19,7 +19,7 @@
   </methodsynopsis>
   <para>
    <function>print_r</function> afişează informaţia despre o variabilă într-un
-   mod care poate fi citit de oameni.  
+   mod care poate fi citit de oameni.
   </para>
   <para>
    <function>print_r</function>, <function>var_dump</function> şi

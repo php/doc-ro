@@ -42,7 +42,7 @@
    <refsect1 role="returnvalues">
     &reftitle.returnvalues;
     <para>
-     Întoarce &true; dacă <parameter>var</parameter> este un <type>float</type>, 
+     Întoarce &true; dacă <parameter>var</parameter> este un <type>float</type>,
      &false; în caz contrar.
     </para>
    </refsect1>

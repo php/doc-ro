@@ -7,7 +7,7 @@
   <refname>strval</refname>
   <refpurpose>Obţine valoarea string a unei variabile</refpurpose>
  </refnamediv>
- 
+
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>

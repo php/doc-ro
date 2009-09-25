@@ -45,7 +45,7 @@
    </variablelist>
   </para>
  </refsect1>
- 
+
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
@@ -115,7 +115,7 @@ bool(true)
     <member><function>var_export</function></member>
     <member><function>print_r</function></member>
    </simplelist>
-  </para>  
+  </para>
  </refsect1>
 </refentry>
 

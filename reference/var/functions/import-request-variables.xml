@@ -38,7 +38,7 @@
        Utilizând parametrul <parameter>types</parameter> puteţi specifica care
        variabile de interpelare vor fi importate. Puteţi utiliza caracterele
        'G', 'P' şi 'C' respectiv pentru GET, POST şi Cookie. Nu importă dacă
-       caracterele sunt majuscule sau minuscule, de aceea puteţi utiliza orice 
+       caracterele sunt majuscule sau minuscule, de aceea puteţi utiliza orice
        combinaţie cu 'g', 'p' şi 'c'. POST include şi informaţia despre
        fişierele încărcate prin metoda POST.
       </para>

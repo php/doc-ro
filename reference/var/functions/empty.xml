@@ -29,15 +29,15 @@
       </para>
       <note>
        <para>
-        <function>empty</function> verifică numai variabile, deoarece orice 
-        altceva va duce la o eroare de interpretare. Cu alte cuvinte, 
+        <function>empty</function> verifică numai variabile, deoarece orice
+        altceva va duce la o eroare de interpretare. Cu alte cuvinte,
         următoarea comandă nu va funcţiona:
         <command>empty(trim($name))</command>.
        </para>
       </note>
       <para>
        <function>empty</function> este opusa <literal>(boolean) var</literal>,
-       cu excepţia că nu se generează o avertizare atunci când variabila nu 
+       cu excepţia că nu se generează o avertizare atunci când variabila nu
        este stabilită (iniţializată).
       </para>
      </listitem>
@@ -97,7 +97,7 @@
    <example>
     <title>
      O comparaţie simplă <function>empty</function> / <function>isset</function>.
-    </title>  
+    </title>
     <programlisting role="php">
 <![CDATA[
 <?php
@@ -138,7 +138,7 @@ if (isset($var)) {
     <member><link linkend="language.oop5.overloading.members">__isset</link></member>
     <member><function>unset</function></member>
     <member><function>array_key_exists</function></member>
-    <member><function>count</function></member> 
+    <member><function>count</function></member>
     <member><function>strlen</function></member>
     <member><link linkend="types.comparisons">Tabelele de comparare a tipurilor</link></member>
    </simplelist>

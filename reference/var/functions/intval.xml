@@ -55,7 +55,7 @@
    nevide întorc 1.
   </para>
   <para>
-   Valoarea maximală depinde de sistem. Sistemele pe 32 biţi au diapazonul 
+   Valoarea maximală depinde de sistem. Sistemele pe 32 biţi au diapazonul
    maxim al numerelor întregi cu semn de la -2147483648 până la 2147483647.
    Deci, de exemplu, pe un aşa sistem <literal>intval('1000000000000')</literal>
    va întoarce 2147483647. Valoarea maximă pentru numerele întregi cu semn pe

@@ -92,7 +92,7 @@
 //  O variabilă simplă ce conţine o funcţie
 //
 
-function someFunction() 
+function someFunction()
 {
 }
 
@@ -108,7 +108,7 @@ echo $callable_name, "\n";  // someFunction
 
 class someClass {
 
-  function someMethod() 
+  function someMethod()
   {
   }
 
@@ -125,8 +125,8 @@ echo $callable_name, "\n";  //  someClass::someMethod
 ?>
 ]]>
     </programlisting>
-   </example>   
-  </para>   
+   </example>
+  </para>
  </refsect1>
 
  <refsect1 role="seealso">

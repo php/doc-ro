@@ -7,7 +7,7 @@
   <refname>serialize</refname>
   <refpurpose>Generează o reprezentare ce poate fi stocată a unei valori</refpurpose>
  </refnamediv>
- 
+
  <refsect1 role="description">
   &reftitle.description;
    <methodsynopsis>
@@ -23,7 +23,7 @@
   </para>
   <para>
    Pentru a transforma invers un string serializat într-o valoare PHP, utilizaţi
-   <function>unserialize</function>.  
+   <function>unserialize</function>.
   </para>
  </refsect1>
 
@@ -123,7 +123,7 @@ if (!odbc_execute($stmt, $sqldata)) {
       <row>
        <entry>4.0.0</entry>
        <entry>
-        La serializarea unui obiect, metodele nu mai sunt pierdute. 
+        La serializarea unui obiect, metodele nu mai sunt pierdute.
         Vă rugăm să accesaţi
         <link linkend="language.oop5.serialization">Serializarea obiectelor</link>
         pentru informaţii suplimentare.

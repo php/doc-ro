@@ -7,7 +7,7 @@
   <refname>unset</refname>
   <refpurpose>Elimină o variabilă dată</refpurpose>
  </refnamediv>
- 
+
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
@@ -17,7 +17,7 @@
    <methodparam choice="opt"><type>mixed</type><parameter>...</parameter></methodparam>
   </methodsynopsis>
   <para>
-   <function>unset</function> distruge variabila specificată. 
+   <function>unset</function> distruge variabila specificată.
   </para>
   <para>
    Comportamentul <function>unset</function> în interiorul unei funcţii poate
@@ -32,7 +32,7 @@
     <programlisting role="php">
 <![CDATA[
 <?php
-function destroy_foo() 
+function destroy_foo()
 {
     global $foo;
     unset($foo);
@@ -64,7 +64,7 @@ bar
     <programlisting role="php">
 <![CDATA[
 <?php
-function foo() 
+function foo()
 {
     unset($GLOBALS['bar']);
 }
@@ -85,7 +85,7 @@ foo();
     <programlisting role="php">
 <![CDATA[
 <?php
-function foo(&$bar) 
+function foo(&$bar)
 {
     unset($bar);
     $bar = "blah";
@@ -152,7 +152,7 @@ foo();
    </informalexample>
   </para>
  </refsect1>
-  
+
  <refsect1 role="parameters">
   &reftitle.parameters;
   <para>
@@ -281,7 +281,7 @@ var_dump((unset) $name);
    </para>
   </note>
  </refsect1>
- 
+
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>

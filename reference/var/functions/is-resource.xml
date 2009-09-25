@@ -74,7 +74,7 @@ if (!is_resource($db_link)) {
     <member><link linkend="language.types.resource">Documentaţia despre tipul resursă</link></member>
     <member><function>get_resource_type</function></member>
    </simplelist>
-  </para>  
+  </para>
  </refsect1>
 </refentry>
 

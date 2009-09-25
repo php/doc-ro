@@ -63,7 +63,7 @@
     </listitem>
     <listitem>
      <simpara>
-      "<type>double</type>" (din motive istorice se întoarce "double" în cazul 
+      "<type>double</type>" (din motive istorice se întoarce "double" în cazul
       unui <type>float</type>, şi nu pur şi simplu "float")
      </simpara>
     </listitem>

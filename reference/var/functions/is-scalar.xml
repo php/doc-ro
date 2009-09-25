@@ -21,9 +21,9 @@
    Determină dacă variabila dată este un scalar.
   </para>
   <para>
-   Variabilele scalare sunt acelea ce conţin un <type>integer</type>, 
-   <type>float</type>, <type>string</type> sau <type>boolean</type>.  
-   Tipurile <type>array</type>, <type>object</type> şi <type>resource</type> 
+   Variabilele scalare sunt acelea ce conţin un <type>integer</type>,
+   <type>float</type>, <type>string</type> sau <type>boolean</type>.
+   Tipurile <type>array</type>, <type>object</type> şi <type>resource</type>
    nu sunt scalare.
   </para>
   <note>
@@ -70,7 +70,7 @@
            programmers.  -->
 <![CDATA[
 <?php
-function show_var($var) 
+function show_var($var)
 {
     if (is_scalar($var)) {
         echo $var;

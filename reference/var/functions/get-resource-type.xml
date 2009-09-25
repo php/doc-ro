@@ -41,13 +41,13 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Dacă <parameter>handle-ul</parameter> furnizat este o resursă, această 
-   funcţie va întoarce un string reprezentând tipul său. Dacă funcţia nu poate 
+   Dacă <parameter>handle-ul</parameter> furnizat este o resursă, această
+   funcţie va întoarce un string reprezentând tipul său. Dacă funcţia nu poate
    identifica tipul, valoarea întoarsă va fi string-ul
    <literal>Unknown</literal>.
   </para>
   <para>
-   Această funcţie va întoarce &false; şi va genera o eroare dacă 
+   Această funcţie va întoarce &false; şi va genera o eroare dacă
    <parameter>handle</parameter> nu este o <type>resource</type>.
   </para>
  </refsect1>

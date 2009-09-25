@@ -25,7 +25,7 @@
      <term><parameter>var</parameter></term>
      <listitem>
       <para>
-       Poate fi orice tip scalar. Nu puteţi utiliza <function>floatval</function> 
+       Poate fi orice tip scalar. Nu puteţi utiliza <function>floatval</function>
        cu tablouri sau obiecte.
       </para>
      </listitem>

@@ -19,7 +19,7 @@
    Această funcţie întoarce un tablou multidimensional ce conţine lista
    tuturor variabilelor definite de mediu, de server sau de utilizator,
    în cadrul circumstanţei în care este apelată funcţia
-   <function>get_defined_vars</function>. 
+   <function>get_defined_vars</function>.
   </para>
  </refsect1>
  <refsect1 role="returnvalues">

@@ -38,7 +38,7 @@
    <refsect1 role="returnvalues">
     &reftitle.returnvalues;
     <para>
-     Întoarce &true; dacă <parameter>var</parameter> este un <type>object</type>, 
+     Întoarce &true; dacă <parameter>var</parameter> este un <type>object</type>,
      &false; în caz contrar.
     </para>
    </refsect1>
@@ -51,7 +51,7 @@
       <programlisting role="php">
 <![CDATA[
 <?php
-// Declară o funcţie simplă ce întoarce un tablou 
+// Declară o funcţie simplă ce întoarce un tablou
 // din obiectul nostru
 function get_students($obj)
 {
@@ -63,7 +63,7 @@ function get_students($obj)
 	return($obj->students);
 }
 
-// Declară o nouă instanţă a clasei şi completează 
+// Declară o nouă instanţă a clasei şi completează
 // unele valori
 $obj = new stdClass;
 $obj->students = Array('Kalle', 'Ross', 'Felipe');

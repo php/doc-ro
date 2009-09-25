@@ -83,7 +83,7 @@
    </informaltable>
   </para>
  </refsect1>
- 
+
  <refsect1 role="examples">
   &reftitle.examples;
   <para>
@@ -103,7 +103,7 @@ var_export($a);
 array (
   0 => 1,
   1 => 2,
-  2 => 
+  2 =>
   array (
     0 => 'a',
     1 => 'b',
@@ -227,7 +227,7 @@ object(A)#2 (2) {
     <member><function>serialize</function></member>
     <member><function>var_dump</function></member>
    </simplelist>
-  </para>  
+  </para>
  </refsect1>
 </refentry>
 

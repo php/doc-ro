@@ -7,7 +7,7 @@
   <refname>isset</refname>
   <refpurpose>Determină dacă o variablă este stabilită și nu este &null;</refpurpose>
  </refnamediv>
- 
+
  <refsect1 role="description">
  &reftitle.description;
   <methodsynopsis>
@@ -125,7 +125,7 @@ var_dump(isset($a['foo']));             // FALSE
 var_dump(isset($a['hello']));           // FALSE
 
 // Cheia 'hello' este egală cu NULL, de aceea este considerată "ne-stabilită"
-// Dacă doriţi să verificaţi valorile NULL ale cheii, încercaţi: 
+// Dacă doriţi să verificaţi valorile NULL ale cheii, încercaţi:
 var_dump(array_key_exists('hello', $a)); // TRUE
 
 ?>
