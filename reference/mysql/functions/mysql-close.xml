@@ -14,7 +14,7 @@
    <type>bool</type><methodname>mysql_close</methodname>
    <methodparam choice="opt"><type>resource</type><parameter>link_identifier</parameter></methodparam>
   </methodsynopsis>
-  <para> 
+  <para>
    <function>mysql_close</function> închide conexiunea non-persistentă către
    serverul MySQL, care este asociată cu identificatorul conexiunii specificat.
    Dacă <parameter>link_identifier</parameter> nu este specificat, este

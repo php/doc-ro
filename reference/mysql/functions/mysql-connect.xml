@@ -63,7 +63,7 @@
        &sqlsafemode; acest parametru e ignorat şi este utilizată o parolă vidă.
       </para>
      </listitem>
-    </varlistentry>   
+    </varlistentry>
     <varlistentry>
      <term><parameter>new_link</parameter></term>
      <listitem>
@@ -87,7 +87,7 @@
        următoarelor constante:
        128 (permite prelucrarea <literal>LOAD DATA LOCAL</literal>),
        <constant>MYSQL_CLIENT_SSL</constant>,
-       <constant>MYSQL_CLIENT_COMPRESS</constant>, 
+       <constant>MYSQL_CLIENT_COMPRESS</constant>,
        <constant>MYSQL_CLIENT_IGNORE_SPACE</constant> sau
        <constant>MYSQL_CLIENT_INTERACTIVE</constant>.
        Citiţi secţiunea despre <xref linkend="mysql.client-flags" /> pentru
@@ -95,7 +95,7 @@
        În &sqlsafemode; acest parametru este ignorat.
       </para>
      </listitem>
-    </varlistentry> 
+    </varlistentry>
    </variablelist>
   </para>
  </refsect1>

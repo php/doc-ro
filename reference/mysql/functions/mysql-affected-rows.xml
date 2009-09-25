@@ -16,7 +16,7 @@
   </methodsynopsis>
   <para>
    Obţine numărul de rânduri afectate de ultima interpelare INSERT, UPDATE,
-   REPLACE sau DELETE asociată cu <parameter>link_identifier</parameter>.  
+   REPLACE sau DELETE asociată cu <parameter>link_identifier</parameter>.
   </para>
  </refsect1>
 
@@ -51,7 +51,7 @@
    Interpelarea REPLACE întâi elimină înregistrarea cu aceeaşi cheie primară,
    apoi inserează noua înregistrare. Această funcţie întoarce numărul
    înregistrărilor eliminate plus numărul înregistrărilor inserate.
-  </para> 
+  </para>
  </refsect1>
 
  <refsect1 role="examples">
