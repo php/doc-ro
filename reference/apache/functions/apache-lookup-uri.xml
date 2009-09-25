@@ -17,8 +17,8 @@
    <methodparam><type>string</type><parameter>filename</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Aceasta efectuează o interpelare parţială pentru un URI. Interpelarea se 
-   derulează doar până la etapa obţinerii tuturor informaţiilor importante 
+   Aceasta efectuează o interpelare parţială pentru un URI. Interpelarea se
+   derulează doar până la etapa obţinerii tuturor informaţiilor importante
    despre resursa dată.
   </para>
   &apache.req.module;
@@ -43,7 +43,7 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Un <type>object</type> cu informaţiile ce se referă la URI. Proprietăţile 
+   Un <type>object</type> cu informaţiile ce se referă la URI. Proprietăţile
    acestui <type>object</type> sunt:
   </para>
   <para>

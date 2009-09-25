@@ -17,7 +17,7 @@
   </methodsynopsis>
   <para>
    Această funcţie este un înveliş pentru <literal>table_get</literal> şi
-   <literal>table_set</literal> ale Apache. Ea redactează tabelul notelor care 
+   <literal>table_set</literal> ale Apache. Ea redactează tabelul notelor care
    există în timpul derulării interpelării. Scopul tabelului este de a permite
    modulelor Apache să comunice între ele.
   </para>
@@ -55,11 +55,11 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Dacă este apelată cu un singur argument, funcţia întoarce valoarea curentă 
+   Dacă este apelată cu un singur argument, funcţia întoarce valoarea curentă
    a notei <literal>note_name</literal>. Dacă este apelată cu doi argumenţi,
    funcţia stabileşte valoarea notei <literal>note_name</literal> în
    <literal>note_value</literal> şi întoarce valoarea precedentă a notei
-   <literal>note_name</literal>. Dacă nota nu poate fi obţinută se întoarce 
+   <literal>note_name</literal>. Dacă nota nu poate fi obţinută se întoarce
    &false;.
   </para>
  </refsect1>

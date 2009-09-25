@@ -17,9 +17,9 @@
   </methodsynopsis>
   <para>
    <function>ebcdic2ascii</function> este o funcţie specifică Apache, care este
-   disponibilă numai pe sisteme de operare bazate pe EBCDIC (OS/390, BS2000). 
+   disponibilă numai pe sisteme de operare bazate pe EBCDIC (OS/390, BS2000).
    Ea translează string-ul codificat EBCDIC <parameter>ebcdic_str</parameter>
-   în echivalentul său în reprezentarea ASCII (sigură din punct de vedere 
+   în echivalentul său în reprezentarea ASCII (sigură din punct de vedere
    binar) şi întoarce rezultatul.
   </para>
  </refsect1>

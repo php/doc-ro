@@ -16,8 +16,8 @@
    <methodparam><type>string</type><parameter>ascii_str</parameter></methodparam>
   </methodsynopsis>
   <para>
-   <function>ascii2ebcdic</function> este o funcţie specifică Apache, care 
-   este disponibilă numai pe sisteme de operare bazate pe EBCDIC (OS/390, 
+   <function>ascii2ebcdic</function> este o funcţie specifică Apache, care
+   este disponibilă numai pe sisteme de operare bazate pe EBCDIC (OS/390,
    BS2000). Ea translează string-ul codificat ASCII
    <parameter>ascii_str</parameter> în echivalentul său în reprezentarea EBCDIC
    (sigură din punct de vedere binar) şi întoarce rezultatul.

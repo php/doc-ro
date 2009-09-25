@@ -21,7 +21,7 @@
   <para>
    Această funcţie este un pseudonim al
    <function>apache_request_headers</function>. Vă rugăm să citiţi documentaţia
-   <function>apache_request_headers</function> pentru informaţii suplimentare 
+   <function>apache_request_headers</function> pentru informaţii suplimentare
    despre cum funcţionează această funcţie.
   </para>
   &apache.req.module;

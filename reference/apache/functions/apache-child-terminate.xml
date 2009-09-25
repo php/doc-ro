@@ -28,7 +28,7 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Întoarce &true; dacă PHP rulează în calitate de modul Apache 1, Apache nu 
+   Întoarce &true; dacă PHP rulează în calitate de modul Apache 1, Apache nu
    rulează pe mai multe fire de execuţie şi directiva PHP
    <link linkend="ini.child-terminate">child_terminate</link> este activată
    (ea este dezactivată implicit). Dacă aceste condiţii nu sunt satisfăcute,
