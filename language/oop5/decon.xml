@@ -14,15 +14,15 @@
    </methodsynopsis>
    <para>
     PHP 5 permite programatorilor să definească constructori pentru clase.
-    Clasele care au definit un constructor vor apela această metodă la fiecare 
-    obiect nou creat, pentru ca acesta (obiectul) să fie utilizabil pentru 
+    Clasele care au definit un constructor vor apela această metodă la fiecare
+    obiect nou creat, pentru ca acesta (obiectul) să fie utilizabil pentru
     iniţializare înante de a fi folosit.
    </para>
    <note>
     <simpara>
-     Constructorul-părinte nu este apelat implicit dacă clasa-fiică defineşte 
-     un constructor. Pentru a apela un constructor-părinte, este necesar de a 
-     apela <function>parent::__construct</function> din cadrul 
+     Constructorul-părinte nu este apelat implicit dacă clasa-fiică defineşte
+     un constructor. Pentru a apela un constructor-părinte, este necesar de a
+     apela <function>parent::__construct</function> din cadrul
      constructorului-fiu.
     </simpara>
    </note>
@@ -46,16 +46,16 @@ class ClasaExtinsa extends ClasaDeBaza {
 
 $obj = new ClasaDeBaza();
 $obj = new ClasaExtinsa();
-?> 
+?>
 ]]>
     </programlisting>
    </example>
    <para>
     Pentru compatibilitate cu versiunile mai vechi, dacă PHP 5 nu găseşte
-    funcţia <function>__construct</function> pentru o clasă, va căuta 
+    funcţia <function>__construct</function> pentru o clasă, va căuta
     în formatul vechi o funcţie care are chiar numele clasei.
     Drept urmare, singura neconcordanţă în compatibilitate va fi atunci când
-    aţi folosit în clase funcţia <function>__construct</function> pentru 
+    aţi folosit în clase funcţia <function>__construct</function> pentru
     alte scopuri decât iniţializarea obiectului.
    </para>
   </sect2>
@@ -67,9 +67,9 @@ $obj = new ClasaExtinsa();
     <void />
    </methodsynopsis>
    <para>
-    PHP 5 introduce un concept de distrugere a unui obiect similar cu cel 
-    regăsit în alte limbaje de programare orientate pe obiecte (C++). 
-    Metoda de distrugere va fi apelată imediat ce toate referinţele către 
+    PHP 5 introduce un concept de distrugere a unui obiect similar cu cel
+    regăsit în alte limbaje de programare orientate pe obiecte (C++).
+    Metoda de distrugere va fi apelată imediat ce toate referinţele către
     un anumit obiect dispar sau atunci când obiectul este distrus explicit.
    </para>
    <example>
@@ -89,26 +89,26 @@ class ClassaCuDestructor {
 }
 
 $obj = new ClassaCuDestructor();
-?> 
+?>
 ]]>
     </programlisting>
    </example>
    <para>
     La fel ca la constructori, destructorii-părinti nu vor fi apelaţi implicit.
-    Pentru a apela destructorul-părinte trebuie să apelaţi explicit 
+    Pentru a apela destructorul-părinte trebuie să apelaţi explicit
     <function>parent::__destruct</function> în destructorul descendent.
    </para>
    <note>
     <para>
-     Destructorii apelaţi la momentul terminării execuţiei scriptului au 
-     antetele HTTP trimise deja. Directorul de lucru în timpul fazei de 
+     Destructorii apelaţi la momentul terminării execuţiei scriptului au
+     antetele HTTP trimise deja. Directorul de lucru în timpul fazei de
      deconectare a scriptului poate să difere în cazul anumitor SAPI-uri
      (de ex. Apache).
     </para>
    </note>
    <note>
     <para>
-     Încercarea de a arunca o excepţie dintr-un destructor (apelat la momentul 
+     Încercarea de a arunca o excepţie dintr-un destructor (apelat la momentul
      terminării execuţiei scriptului) va cauza o eroare fatală.
     </para>
    </note>
