@@ -15,8 +15,8 @@
    <methodparam><type>string</type><parameter>string</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Converteşte un string "8bit" într-un string "quoted-printable" (în 
-   conformitate cu <link xlink:href="&url.rfc;2045">RFC2045</link>, section 
+   Converteşte un string "8bit" într-un string "quoted-printable" (în
+   conformitate cu <link xlink:href="&url.rfc;2045">RFC2045</link>, section
    6.7).
   </para>
  </refsect1>
