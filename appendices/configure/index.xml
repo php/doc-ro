@@ -17,13 +17,13 @@
    în directorul cu sursa dumneavoastră PHP, după ce a fost lansat
    <command>autoconf</command>
    (vedeţi, de asemenea <link linkend="install">capitolul despre instalare</link>).
-   Dumneavoastră puteţi fi cointeresat să citiţi şi documentaţia 
+   Dumneavoastră puteţi fi cointeresat să citiţi şi documentaţia
    <link xlink:href="&url.gnu.configure;">GNU configure</link> pentru informaţii despre
-   opţiunile 
+   opţiunile
    <command>configure</command> suplimentare, cum ar fi
    <literal>--prefix=PREFIX</literal>.
   </para>
-  
+
   <note>
    <para>
     Acestea sunt utilizate doar în timpul compilării. Dacă doriţi să modificaţi

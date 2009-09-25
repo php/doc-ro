@@ -27,7 +27,7 @@
     <listitem>
      <para>
       Asamblează un modul partajat pentru Apache. FILE este calea opţională spre
-      instrumentul apxs; implicit este apxs. Asiguraţi-vă că specificaţi versiunea 
+      instrumentul apxs; implicit este apxs. Asiguraţi-vă că specificaţi versiunea
       apxs care este într-adevăr instalată pe sistemul dumneavoastră, NU aceea ce
       se conţine în pachetul cu sursa apache.
      </para>
