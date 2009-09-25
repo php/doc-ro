@@ -7,7 +7,7 @@
   <refname>wddx_serialize_value</refname>
   <refpurpose>Serializează o singură valoare într-un pachet WDDX</refpurpose>
  </refnamediv>
- 
+
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>

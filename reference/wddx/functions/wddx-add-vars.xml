@@ -7,7 +7,7 @@
   <refname>wddx_add_vars</refname>
   <refpurpose>Adaugă variable la un pachet WDDX cu un ID specificat</refpurpose>
  </refnamediv>
- 
+
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>

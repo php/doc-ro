@@ -7,7 +7,7 @@
   <refname>wddx_packet_start</refname>
   <refpurpose>Iniţiază un pachet nou WDDX cu structura sa internă</refpurpose>
  </refnamediv>
- 
+
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
@@ -16,7 +16,7 @@
   </methodsynopsis>
   <para>
    Iniţiază un nou pachet WDDX pentru adăugări consecutive de variabile.
-   Funcţia creează în mod automat definiţia structurii din interiorul 
+   Funcţia creează în mod automat definiţia structurii din interiorul
    pachetului pentru ca acesta să conţină variabilele.
   </para>
  </refsect1>

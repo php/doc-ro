@@ -7,7 +7,7 @@
   <refname>wddx_unserialize</refname>
   <refpurpose>Deserializează un pachet WDDX</refpurpose>
  </refnamediv>
- 
+
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>

@@ -7,7 +7,7 @@
   <refname>wddx_serialize_vars</refname>
   <refpurpose>Serializează variabile într-un pachet WDDX</refpurpose>
  </refnamediv>
- 
+
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>

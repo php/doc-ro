@@ -7,7 +7,7 @@
   <refname>wddx_packet_end</refname>
   <refpurpose>Sfârşeşte un pachet WDDX cu un ID specificat</refpurpose>
  </refnamediv>
- 
+
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
