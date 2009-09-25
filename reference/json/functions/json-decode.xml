@@ -17,7 +17,7 @@
    <methodparam choice="opt"><type>int</type><parameter>depth</parameter><initializer>512</initializer></methodparam>
   </methodsynopsis>
   <para>
-   Preia un şir de caractere reprezentat JSON şi îl converteşte într-o 
+   Preia un şir de caractere reprezentat JSON şi îl converteşte într-o
    variabilă PHP.
   </para>
  </refsect1>
