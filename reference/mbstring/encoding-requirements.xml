@@ -13,7 +13,7 @@
      <itemizedlist>
       <listitem>
        <simpara>
-        care are mapări compatibile ASCII (compatibile cu standardul ISO646) 
+        care are mapări compatibile ASCII (compatibile cu standardul ISO646)
         pentru caracterele de la <literal>00h</literal> la
         <literal>7fh</literal>.
        </simpara>
@@ -39,11 +39,11 @@
       <listitem>
        <simpara>
         care nu folosesc o valoare de la <literal>00h</literal> la
-        <literal>7fh</literal> în octeţii de compunere care reprezintă un 
+        <literal>7fh</literal> în octeţii de compunere care reprezintă un
         singur caracter.
        </simpara>
       </listitem>
-     </itemizedlist>  
+     </itemizedlist>
     </para>
    </listitem>
   </itemizedlist>
@@ -59,14 +59,14 @@ JIS, SJIS, ISO-2022-JP, BIG-5
   </informalexample>
  </para>
  <para>
-  Deşi s-ar putea ca scripturile PHP scrise în orice codare de mai sus 
+  Deşi s-ar putea ca scripturile PHP scrise în orice codare de mai sus
   să nu meargă, în special în cazul în care stringuri codate apar ca identificatori
   sau literalmente în scripturi, puteţi evita alte probleme cu aceste codări setând
   conversia codării caracterelor venite prin HTTP.
  </para>
  <note>
   <para>
-   Nu folosiţi SJIS, BIG5, CP936, CP949 şi GB18030 pentru codarea internă decât dacă 
+   Nu folosiţi SJIS, BIG5, CP936, CP949 şi GB18030 pentru codarea internă decât dacă
    sunteţi familiarizat(ă) cu parser-ul, scanerul şi codarea de caractere.
   </para>
  </note>
@@ -79,7 +79,7 @@ JIS, SJIS, ISO-2022-JP, BIG-5
   </para>
   <para>
    Dacă folosiţi PostgreSQL, codarea de caractere folosită în baza de date ar putea
-   diferi faţă de cea folosită în PHP deoarece suportă conversia automată a setului 
+   diferi faţă de cea folosită în PHP deoarece suportă conversia automată a setului
    de caractere între backend şi frontend.
   </para>
  </note>

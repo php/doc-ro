@@ -4,12 +4,12 @@
 <section xml:id="mbstring.installation" xmlns="http://docbook.org/ns/docbook">
   &reftitle.install;
   <para>
-   <literal>mbstring</literal> este o extensie care nu este activată în mod implicit. 
-   Trebuie să o activaţi folosind opţiunea corespunzătoare cu comanda <literal>configure</literal>. 
+   <literal>mbstring</literal> este o extensie care nu este activată în mod implicit.
+   Trebuie să o activaţi folosind opţiunea corespunzătoare cu comanda <literal>configure</literal>.
    Vedeţi secţiunea <link linkend="install">Instalare</link> pentru detalii.
   </para>
   <simpara>
-   Următoarele opţiuni de configurare sunt legate de modulul 
+   Următoarele opţiuni de configurare sunt legate de modulul
    <literal>mbstring</literal>.
   </simpara>
   <para>
@@ -23,8 +23,8 @@
      <para>
       <productname>libmbfl</productname> e necesar pentru <literal>mbstring</literal>.
       <productname>libmbfl</productname> e distribuit cu <literal>mbstring</literal>.
-      Dacă <productname>libmbfl</productname> este deja instalat pe sistem 
-      cu opţiunea <option role="configure">--with-libmbfl[=DIR]</option> puteţi specifica 
+      Dacă <productname>libmbfl</productname> este deja instalat pe sistem
+      cu opţiunea <option role="configure">--with-libmbfl[=DIR]</option> puteţi specifica
       că doriţi să utilizaţi librăria instalată.
      </para>
      <para>
@@ -34,17 +34,17 @@
      <para>
       Pentru PHP 4.3.3 sau mai vechi, pentru a activa această îmbunătăţire, trebuie să specificaţi valoarea
       parametrului <literal>LANG</literal> din opţiunea
-      <option role="configure">--enable-mbstring=LANG</option>; 
+      <option role="configure">--enable-mbstring=LANG</option>;
       <option role="configure">--enable-mbstring=cn</option> pentru chineza simplificată,
-      <option role="configure">--enable-mbstring=tw</option> pentru chineza tradiţională, 
-      <option role="configure">--enable-mbstring=kr</option> pentru coreeană, 
+      <option role="configure">--enable-mbstring=tw</option> pentru chineza tradiţională,
+      <option role="configure">--enable-mbstring=kr</option> pentru coreeană,
       <option role="configure">--enable-mbstring=ru</option> pentru rusă şi
       <option role="configure">--enable-mbstring=ja</option> pentru japoneză (implicit).
        Pentru a activa toate codările suportate, folosiţi <option role="configure">--enable-mbstring=all</option>.
      </para>
      <note>
       <para>
-       De la PHP 4.3.4, 
+       De la PHP 4.3.4,
        toate codările suportate de <productname>libmbfl</productname> sunt activate prin opţiunea
        <option role="configure">--enable-mbstring</option>.
       </para>
@@ -54,14 +54,14 @@
      <para>
       <option role="configure">--enable-mbstr-enc-trans</option> :
       Activează conversia de codare a caracterelor introduse prin HTTP
-      folosind motorul de conversie din <literal>mbstring</literal>. 
+      folosind motorul de conversie din <literal>mbstring</literal>.
       Dacă această facilitate este activată, codarea caracterelor introduse prin HTTP
       poate fi convertită la <literal>mbstring.internal_encoding</literal>
       automat.
      </para>
      <note>
       <para>
-       De la PHP 4.3.0, opţiunea 
+       De la PHP 4.3.0, opţiunea
        <option role="configure">--enable-mbstr-enc-trans</option>
        a fost eliminată şi înlocuită cu setarea
        <literal>mbstring.encoding_translation</literal>.

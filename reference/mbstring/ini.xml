@@ -95,9 +95,9 @@
     </term>
     <listitem>
      <para>
-      Setarea implicită a limbii (NLS) folosită de mbstring. Atenţie, această opţiune 
+      Setarea implicită a limbii (NLS) folosită de mbstring. Atenţie, această opţiune
       defineşte automat <literal>mbstring.internal_encoding</literal> şi
-      <literal>mbstring.internal_encoding</literal> aşa că schimbările acestor setări din urmă 
+      <literal>mbstring.internal_encoding</literal> aşa că schimbările acestor setări din urmă
       trebuie plasate după <literal>mbstring.language</literal> în &php.ini;
      </para>
     </listitem>
@@ -110,7 +110,7 @@
     <listitem>
      <para>
       Activează filtrul automat de codare a caracterelor care efectuează detecţia şi conversia
-      codării caracterelor din cea folosită în datele HTTP primite în codarea internă a caracterelor. 
+      codării caracterelor din cea folosită în datele HTTP primite în codarea internă a caracterelor.
      </para>
     </listitem>
    </varlistentry>
@@ -154,8 +154,8 @@
     </term>
     <listitem>
      <para>
-      Defineşte ordinea implicită de detecţie a codării caracterelor. Vedeţi şi 
-      <function>mb_detect_order</function>. 
+      Defineşte ordinea implicită de detecţie a codării caracterelor. Vedeţi şi
+      <function>mb_detect_order</function>.
      </para>
     </listitem>
    </varlistentry>
@@ -178,7 +178,7 @@
     <listitem>
      <para>
       Suprascrie un set de funcţii pentru stringuri pe un singur octet cu echivalentele din mbstring. Vedeţi
-      <link linkend="mbstring.overload">Suprascrierea funcţiilor</link> pentru mai multe 
+      <link linkend="mbstring.overload">Suprascrierea funcţiilor</link> pentru mai multe
       informaţii.
      </para>
     </listitem>
@@ -219,7 +219,7 @@
 <![CDATA[
 ; Stabileşte limba implicită
 mbstring.language        = Neutral; Stabileşte limba implicită la Neutral(UTF-8) (implicit)
-mbstring.language        = English; Stabileşte limba implicită la English 
+mbstring.language        = English; Stabileşte limba implicită la English
 mbstring.language        = Japanese; Stabileşte limba implicită la Japanese
 
 ;; Stabileşte codarea internă implicită
@@ -231,13 +231,13 @@ mbstring.encoding_translation = On
 
 ;; Stabileşte codarea implicită pentru datele primite prin HTTP
 ;; Notă: Scripturile nu pot schimba setarea http_input.
-mbstring.http_input           = pass    ; Fără conversie 
+mbstring.http_input           = pass    ; Fără conversie
 mbstring.http_input           = auto    ; Conversie automată
                                 ; „auto” este extins la „ASCII,JIS,UTF-8,EUC-JP,SJIS”
 mbstring.http_input           = SJIS    ; Conversie la SJIS
 mbstring.http_input           = UTF-8,SJIS,EUC-JP ; Specifică ordinea
 
-;; Stabileşte codarea implicită pentru datele trimise prin HTTP 
+;; Stabileşte codarea implicită pentru datele trimise prin HTTP
 mbstring.http_output          = pass    ; Fără conversie
 mbstring.http_output          = UTF-8   ; Conversia datelor trimise prin HTTP la UTF-8
 
@@ -262,7 +262,7 @@ mbstring.substitute_character = long    ; Exemplu lung: U+3000,JIS+7E7E
 output_buffering      = Off
 
 ;; Stabileşte setul de caractere trimis în antetul HTTP
-default_charset       = EUC-JP    
+default_charset       = EUC-JP
 
 ;; Stabileşte limba implicită la Japanese
 mbstring.language = Japanese
@@ -271,16 +271,16 @@ mbstring.language = Japanese
 mbstring.encoding_translation = On
 
 ;; Stabileşte codarea implicită pentru datele primite prin HTTP la auto
-mbstring.http_input   = auto 
+mbstring.http_input   = auto
 
 ;; Converteşte datele trimise prin HTTP la EUC-JP
-mbstring.http_output  = EUC-JP    
+mbstring.http_output  = EUC-JP
 
 ;; Stabileşte codarea internă la EUC-JP
-mbstring.internal_encoding = EUC-JP    
+mbstring.internal_encoding = EUC-JP
 
 ;; Nu afişa caracterele invalide
-mbstring.substitute_character = none   
+mbstring.substitute_character = none
 ]]>
    </programlisting>
   </example>
@@ -303,16 +303,16 @@ default_charset      = Shift_JIS
 mbstring.language = Japanese
 
 ;; Stabileşte codarea implicită pentru datele primite prin HTTP la auto
-mbstring.http_input  = auto 
+mbstring.http_input  = auto
 
 ;; Converteşte la SJIS
-mbstring.http_output = SJIS    
+mbstring.http_output = SJIS
 
 ;; Stabileşte codarea internă la EUC-JP
-mbstring.internal_encoding = EUC-JP    
+mbstring.internal_encoding = EUC-JP
 
 ;; Nu afişa caracterele invalide
-mbstring.substitute_character = none   
+mbstring.substitute_character = none
 ]]>
    </programlisting>
   </example>

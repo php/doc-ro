@@ -7,67 +7,67 @@
  <variablelist>
   <varlistentry>
    <term>
-    <constant>MB_OVERLOAD_MAIL</constant> 
+    <constant>MB_OVERLOAD_MAIL</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>MB_OVERLOAD_STRING</constant> 
+    <constant>MB_OVERLOAD_STRING</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>MB_OVERLOAD_REGEX</constant> 
+    <constant>MB_OVERLOAD_REGEX</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>MB_CASE_UPPER</constant> 
+    <constant>MB_CASE_UPPER</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>MB_CASE_LOWER</constant> 
+    <constant>MB_CASE_LOWER</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>MB_CASE_TITLE</constant> 
+    <constant>MB_CASE_TITLE</constant>
     (<type>integer</type>)
    </term>
    <listitem>
     <simpara>
-     
+
     </simpara>
    </listitem>
   </varlistentry>
