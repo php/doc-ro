@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 51bdd398d7b5056caca17eb7bf8dbfc46897fa5b Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 3110d69f2fde03ea593f150e6c18707485431ca5 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.serialize" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -125,7 +125,7 @@ if (!odbc_execute($stmt, $sqldata)) {
        <entry>
         La serializarea unui obiect, metodele nu mai sunt pierdute. 
         Vă rugăm să accesaţi
-        <link linkend="language.oop.serialization">Serializarea obiectelor</link>
+        <link linkend="language.oop5.serialization">Serializarea obiectelor</link>
         pentru informaţii suplimentare.
        </entry>
       </row>
@@ -149,7 +149,7 @@ if (!odbc_execute($stmt, $sqldata)) {
   <para>
    <simplelist>
     <member><function>unserialize</function></member>
-    <member><link linkend="language.oop.serialization">Serializarea Obiectelor</link></member>
+    <member><link linkend="language.oop5.serialization">Serializarea Obiectelor</link></member>
    </simplelist>
   </para>
  </refsect1>
