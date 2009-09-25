@@ -5,12 +5,12 @@
   <chapter xml:id="install.general" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
    <title>Aspecte generale privind instalarea</title>
    <para>
-    Înainte de a începe instalarea, trebuie să ştiţi pentru ce doriţi să 
-    utilizaţi PHP. Există trei domenii principale de utilizare a PHP. Ele sunt 
+    Înainte de a începe instalarea, trebuie să ştiţi pentru ce doriţi să
+    utilizaţi PHP. Există trei domenii principale de utilizare a PHP. Ele sunt
     descrise în secţiunea <link linkend="intro-whatcando">Ce poate face
     PHP?</link>
     <itemizedlist>
-     <listitem><simpara>Site-uri web şi aplicaţii web (scripting de partea 
+     <listitem><simpara>Site-uri web şi aplicaţii web (scripting de partea
      server-ului)</simpara></listitem>
      <listitem><simpara>Scripting pentru linia de comandă</simpara></listitem>
      <listitem><simpara>Aplicaţii de birou cu interfaţă grafică (GUI)</simpara></listitem>
@@ -24,17 +24,17 @@
     Windows). Puteţi de asemenea să închiriaţi spaţiu web de la o companie.
     În acest caz nu trebuie personal să configuraţi ceva, numai să scrieţi
     script-urile PHP, să le încărcaţi pe server-ul care îl închiriaţi şi să
-    vedeţi rezultatele în navigator. 
+    vedeţi rezultatele în navigator.
    </para>
    <para>
     În caz că configuraţi personal server-ul şi PHP, aveţi două posibilităţi în
-    alegerea metodei de conectare dintre PHP şi server. Pentru multe servere 
-    PHP are o interfaţă-modul directă (denumită de asemenea SAPI). Aceste 
-    servere includ Apache, Microsoft Internet Information Server, serverele 
-    Netscape şi iPlanet. Multe alte servere susţin ISAPI - interfaţa-modul 
-    Microsoft (OmniHTTPd spre exemplu). Dacă PHP nu este susţinut ca modul 
-    pentru server-ul dumneavoastră web, atunci oricând îl puteţi utiliza ca 
-    procesor CGI sau FastCGI. Aceasta înseamnă să configuraţi serverul 
+    alegerea metodei de conectare dintre PHP şi server. Pentru multe servere
+    PHP are o interfaţă-modul directă (denumită de asemenea SAPI). Aceste
+    servere includ Apache, Microsoft Internet Information Server, serverele
+    Netscape şi iPlanet. Multe alte servere susţin ISAPI - interfaţa-modul
+    Microsoft (OmniHTTPd spre exemplu). Dacă PHP nu este susţinut ca modul
+    pentru server-ul dumneavoastră web, atunci oricând îl puteţi utiliza ca
+    procesor CGI sau FastCGI. Aceasta înseamnă să configuraţi serverul
     dumneavoastră să utilizeze executabilul CGI al PHP pentru a procesa toate
     cererile de fişiere PHP de pe server.
    </para>
@@ -42,32 +42,32 @@
     Dacă de asemenea sunteţi interesat să utilizaţi PHP pentru scripting în
     linia de comandă (de ex. să scrieţi scripturi care să genereze automat
     careva imagini offline, sau să procesaţi fişiere textuale în dependenţă de
-    careva argumente pe care le transmiteţi), întotdeauna veţi avea nevoie de 
-    executabilul pentru linia de comandă. Pentru a afla mai multe informaţii, 
-    citiţi secţiunea despre <link linkend="features.commandline">scrierea 
-    aplicaţiilor PHP pentru linia de comandă</link>. În acest caz nu veţi avea 
+    careva argumente pe care le transmiteţi), întotdeauna veţi avea nevoie de
+    executabilul pentru linia de comandă. Pentru a afla mai multe informaţii,
+    citiţi secţiunea despre <link linkend="features.commandline">scrierea
+    aplicaţiilor PHP pentru linia de comandă</link>. În acest caz nu veţi avea
     nevoie de server sau navigator.
    </para>
    <para>
-    Cu PHP de asemenea puteţi scrie aplicaţii de birou cu interfaţă GUI 
-    utilizând extensia PHP-GTK. Aceasta este o abordare total diferită decât 
-    scrierea paginilor web, deoarece nu afişaţi careva HTML, dar gestionaţi 
+    Cu PHP de asemenea puteţi scrie aplicaţii de birou cu interfaţă GUI
+    utilizând extensia PHP-GTK. Aceasta este o abordare total diferită decât
+    scrierea paginilor web, deoarece nu afişaţi careva HTML, dar gestionaţi
     ferestre şi obiecte din cadrul lor. Pentru mai multe informaţii despre
     PHP-GTK, vă rugăm să <link xlink:href="&url.php.gtk;">vizitaţi site-ul
-    dedicat acestei extensii</link>. PHP-GTK nu este inclusă în distributivul 
+    dedicat acestei extensii</link>. PHP-GTK nu este inclusă în distributivul
     oficial al PHP.
    </para>
    <para>
     De acum înainte, această secţiune va lămuri configurarea PHP pentru servere
-    web pe Unix şi Windows cu interfeţe-modul şi executabile CGI. De asemenea 
-    veţi găsi în următoarele secţiuni informaţii despre executabilul pentru 
+    web pe Unix şi Windows cu interfeţe-modul şi executabile CGI. De asemenea
+    veţi găsi în următoarele secţiuni informaţii despre executabilul pentru
     linia de comandă.
    </para>
    <para>
     Codul-sursă PHP şi distributivele binare pentru Windows pot fi găsite la
     <link xlink:href="&url.php.downloads;">&url.php.downloads;</link>.
     Vă recomandăm să alegeţi o
-    <link xlink:href="&url.mirrors;">oglindă</link> mai apropiată pentru a 
+    <link xlink:href="&url.mirrors;">oglindă</link> mai apropiată pentru a
     descărca distributivele.
    </para>
   </chapter>
