@@ -20,14 +20,14 @@
    structură cu cel întors de funcţia C.
   </para>
  </refsect1>
- 
+
  <refsect1 role="parameters">
   &reftitle.parameters;
   <para>
    <variablelist>
-    
+
     &date.timestamp.description;
-   
+
     <varlistentry>
      <term><parameter>is_associative</parameter></term>
      <listitem>
@@ -100,9 +100,9 @@
 
  <refsect1 role="errors">
   &reftitle.errors;
-   
+
    &date.timezone.errors.description;
- 
+
  </refsect1>
 
  <refsect1 role="changelog">
@@ -117,9 +117,9 @@
       </row>
      </thead>
      <tbody>
-      
+
       &date.timezone.errors.changelog;
-     
+
      </tbody>
     </tgroup>
    </informaltable>

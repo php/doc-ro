@@ -273,7 +273,7 @@ echo strftime("Ultima zi din Februarie 2000 este: %d", $lastday);
   <para>
    <simplelist>
     <member><function>gmmktime</function></member>
-    <member><function>date</function></member> 
+    <member><function>date</function></member>
     <member><function>time</function></member>
    </simplelist>
   </para>
