@@ -368,7 +368,7 @@
    </term>
    <listitem>
     <simpara>
-     Această cutie poştală nu are "descendenţi" (nu sunt cutii poştale mai jos 
+     Această cutie poştală nu are "descendenţi" (nu sunt cutii poştale mai jos
      de aceasta).
     </simpara>
    </listitem>
@@ -734,7 +734,7 @@
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>IMAP_GC_ELT</constant> 
+    <constant>IMAP_GC_ELT</constant>
     (<type>integer</type>)
    </term>
    <listitem>
@@ -745,7 +745,7 @@
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>IMAP_GC_ENV</constant> 
+    <constant>IMAP_GC_ENV</constant>
     (<type>integer</type>)
    </term>
    <listitem>
@@ -756,7 +756,7 @@
   </varlistentry>
   <varlistentry>
    <term>
-    <constant>IMAP_GC_TEXTS</constant> 
+    <constant>IMAP_GC_TEXTS</constant>
     (<type>integer</type>)
    </term>
    <listitem>

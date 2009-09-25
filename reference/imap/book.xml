@@ -3,11 +3,11 @@
 <!-- EN-Revision: f4871bb5ba05d97dccbeb542aed154ec00f4dda5 Maintainer: simionea Status: ready -->
 <!-- Purpose: remote.mail -->
 <!-- Membership: bundled, external -->
- 
+
 <book xml:id="book.imap" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>IMAP, POP3 şi NNTP</title>
  <titleabbrev>IMAP</titleabbrev>
- 
+
  <!-- {{{ preface -->
  <preface xml:id="intro.imap">
   &reftitle.intro;
@@ -17,12 +17,12 @@
    <acronym>NNTP</acronym>, <acronym>POP3</acronym>.
   </para>
   <para>
-   Vă atenţionăm însă că unele funcţii IMAP nu vor funcţiona corect cu 
+   Vă atenţionăm însă că unele funcţii IMAP nu vor funcţiona corect cu
    protocolul POP.
   </para>
  </preface>
  <!-- }}} -->
- 
+
  &reference.imap.setup;
  &reference.imap.constants;
  &reference.imap.reference;

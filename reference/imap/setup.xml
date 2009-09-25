@@ -16,16 +16,16 @@
    şi compilaţi-o.
   </para>
   <para>
-   Este important să nu copiaţi fişierele-sursă IMAP direct în directorul de 
+   Este important să nu copiaţi fişierele-sursă IMAP direct în directorul de
    includeri de sistem, deoarece pot apărea conflicte. În loc, creaţi un nou
    director în interiorul directorului de includeri de sistem, cum ar fi de
    exemplu <filename>/usr/local/imap-2000b/</filename> (amplasarea şi
-   denumirea depind de setările dumneavoastră şi de versiunea IMAP), şi în 
+   denumirea depind de setările dumneavoastră şi de versiunea IMAP), şi în
    interiorul acestui nou director creaţi directoare suplimentare denumite
    <filename>lib/</filename> şi <filename>include/</filename>. Din directorul
-   <filename>c-client</filename> din arborele cu sursele IMAP copiaţi toate 
-   fişierele <filename>*.h</filename> în <filename>include/</filename> şi 
-   toate fişierele <filename>*.c</filename> în <filename>lib/</filename>.  
+   <filename>c-client</filename> din arborele cu sursele IMAP copiaţi toate
+   fişierele <filename>*.h</filename> în <filename>include/</filename> şi
+   toate fişierele <filename>*.c</filename> în <filename>lib/</filename>.
    Suplimentar, când aţi compilat IMAP, a fost creat un fişier cu denumirea
    <filename>c-client.a</filename>. De asemenea puneţi-l în directorul
    <filename>lib/</filename>, dar redenumiţi-l în
@@ -33,7 +33,7 @@
   </para>
   <note>
    <para>
-    Pentru a asambla biblioteca c-client cu susţinerea SSL şi/sau Kerberos 
+    Pentru a asambla biblioteca c-client cu susţinerea SSL şi/sau Kerberos
     citiţi documentaţia furnizată cu pachetul.
    </para>
   </note>
@@ -41,7 +41,7 @@
    <simpara>
     În Mandrake Linux, biblioteca IMAP (<filename>libc-client.a</filename>)
     este compilată fără susţinerea Kerberos. O versiune separată cu SSL
-    (<filename>client-PHP4.a</filename>) este instalată. Biblioteca trebuie 
+    (<filename>client-PHP4.a</filename>) este instalată. Biblioteca trebuie
     să fie recompilată pentru a adăuga susţinerea Kerberos.
    </simpara>
   </note>
