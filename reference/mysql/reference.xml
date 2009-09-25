@@ -14,8 +14,8 @@
       Majoritatea funcţiilor MySQL functions acceptă
       <parameter>link_identifier</parameter> ca ultimul parametru opţional.
       Dacă el nu este specificat, ultima conexiune deschisă este utilizată.
-      Dacă ea nu există, se încearcă stabilirea conexiunii cu parametrii 
-      impliciţi definiţi în &php.ini;. Dacă conexiunea nu se efectuează cu 
+      Dacă ea nu există, se încearcă stabilirea conexiunii cu parametrii
+      impliciţi definiţi în &php.ini;. Dacă conexiunea nu se efectuează cu
       succes, funcţiile întorc &false;.
      </para>
     </note>

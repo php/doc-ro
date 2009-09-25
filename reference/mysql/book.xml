@@ -4,20 +4,20 @@
 <!-- CREDITS: simionea -->
 <!-- Purpose: database.vendors -->
 <!-- Membership: bundled, external -->
- 
+
 <book xml:id="book.mysql" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>MySQL</title>
- 
+
  <!-- {{{ preface -->
  <preface xml:id="intro.mysql">
   &reftitle.intro;
   <para>
    Aceste funcţii vă permit accesarea serverelor de baze de date MySQL.
-   Informaţii suplimentare despre MySQL pot fi găsite la 
+   Informaţii suplimentare despre MySQL pot fi găsite la
    <link xlink:href="&url.mysql;">&url.mysql;</link>.
   </para>
   <para>
-   Documentaţia pentru MySQL poate fi găsită la 
+   Documentaţia pentru MySQL poate fi găsită la
    <link xlink:href="&url.mysql.docs;">&url.mysql.docs;</link>.
   </para>
   <para>
@@ -26,7 +26,7 @@
   </para>
  </preface>
  <!-- }}} -->
- 
+
  &reference.mysql.setup;
  &reference.mysql.constants;
  &reference.mysql.examples;

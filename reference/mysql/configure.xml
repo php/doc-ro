@@ -11,7 +11,7 @@
   unde parametrul opţional <literal>[DIR]</literal> indică directorul unde
   a fost instalat MySQL.
  </para>
- <para> 
+ <para>
   Cu toate că această extensie MySQL este compatibilă cu MySQL 4.1.0 şi
   versiunile ulterioare, ea nu susţine funcţionalitatea suplimentară oferită de
   aceste versiuni. Pentru aceasta utilizaţi extensia
@@ -39,16 +39,16 @@
     furnizată, dar să specifice calea către directorul de instalare al MySQL,
     în felul următor:
     <option role="configure">--with-mysql=/path/to/mysql</option>.
-    Aceasta va forţa PHP să utilizeze bibliotecile-client instalate de MySQL, 
+    Aceasta va forţa PHP să utilizeze bibliotecile-client instalate de MySQL,
     evitând în acest fel orice conflicte.
    </para>
   </section>
   <section>
    <title>PHP 5+</title>
    <para>
-    MySQL nu este activat implicit, şi nici biblioteca MySQL nu este 
+    MySQL nu este activat implicit, şi nici biblioteca MySQL nu este
     furnizată cu PHP. Citiţi acest <link linkend="faq.databases.mysql.php5">
-    FAQ</link> pentru a afla detalii despre cauze. Utilizaţi opţiunea de 
+    FAQ</link> pentru a afla detalii despre cauze. Utilizaţi opţiunea de
     configurare <option role="configure">--with-mysql[=DIR]</option> pentru a
     include susţinerea MySQL. Puteţi descărca <emphasis>antete şi biblioteci
     </emphasis> de pe <link xlink:href="&url.mysql;">MySQL</link>.
@@ -84,10 +84,10 @@
    <para>
     Ca şi în cazul activării oricărei extensii PHP (cum ar fi
     <filename>php_mysql.dll</filename>), directiva PHP
-    <link linkend="ini.extension-dir">extension_dir</link> trebuie să fie 
-    stabilită către directorul unde sunt amplasate extensiile PHP. Accesaţi de 
+    <link linkend="ini.extension-dir">extension_dir</link> trebuie să fie
+    stabilită către directorul unde sunt amplasate extensiile PHP. Accesaţi de
     asemenea <link linkend="install.windows.manual">Instrucţiunile de instalare
-    manuală în Windows</link>. O valoare-exemplu a extension_dir pentru PHP 5 
+    manuală în Windows</link>. O valoare-exemplu a extension_dir pentru PHP 5
     ar putea fi <literal>c:\php\ext</literal>
    </para>
    <note>
@@ -109,15 +109,15 @@
     <para>
      Pot fi întâlnite prăbuşiri şi alte probleme la startarea PHP atunci când
      această extensie este încărcată împreună cu extensia recode.
-     Accesaţi extensia <link linkend="ref.recode">recode</link> pentru 
+     Accesaţi extensia <link linkend="ref.recode">recode</link> pentru
      informaţii suplimentare.
     </para>
    </warning>
    <note>
     <para>
      Dacă aveţi nevoie se seturi de caractere ce diferă de
-     <emphasis>latin</emphasis> (implicit), trebuie să instalaţi biblioteca 
-     externă libmysql compilată pentru a susţine setul de caractere dorit. 
+     <emphasis>latin</emphasis> (implicit), trebuie să instalaţi biblioteca
+     externă libmysql compilată pentru a susţine setul de caractere dorit.
     </para>
    </note>
  </section>

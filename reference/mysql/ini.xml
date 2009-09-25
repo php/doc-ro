@@ -121,7 +121,7 @@
    </term>
    <listitem>
     <para>
-     Numărul maximal de conexiuni MySQL per proces, inclusiv conexiuni 
+     Numărul maximal de conexiuni MySQL per proces, inclusiv conexiuni
      persistente.
     </para>
    </listitem>
@@ -134,7 +134,7 @@
    </term>
    <listitem>
     <para>
-     Modul de trasare. Când <literal>mysql.trace_mode</literal> este activat, 
+     Modul de trasare. Când <literal>mysql.trace_mode</literal> este activat,
      vor fi afişate avertizări pentru scanări ale tabelelor/indicilor, seturi
      de rezultate neeliberate şi erori SQL. (Introdus în PHP 4.3.0)
     </para>
@@ -149,11 +149,11 @@
    <listitem>
     <para>
      Numărul implicit al portului TCP utilizat pentru conectarea la serverul de
-     baze de date, dacă nu este specificat un alt port. Dacă nu este 
-     specificată o valoare implicită, numărul portului va fi obţinut din 
+     baze de date, dacă nu este specificat un alt port. Dacă nu este
+     specificată o valoare implicită, numărul portului va fi obţinut din
      variabila de mediu <envar>MYSQL_TCP_PORT</envar>, înregistrarea
-     <literal>mysql-tcp</literal> din <filename>/etc/services</filename>, sau 
-     din constanta <constant>MYSQL_PORT</constant> de la momentul compilării 
+     <literal>mysql-tcp</literal> din <filename>/etc/services</filename>, sau
+     din constanta <constant>MYSQL_PORT</constant> de la momentul compilării
      în această ordine. Win32 va utiliza numai constanta
      <constant>MYSQL_PORT</constant>.
     </para>
@@ -167,7 +167,7 @@
    </term>
    <listitem>
     <para>
-     Numele implicit al socket-ului utilizat pentru conectarea la un server de 
+     Numele implicit al socket-ului utilizat pentru conectarea la un server de
      baze de date local, dacă nu este specificat numele unui alt socket.
     </para>
    </listitem>
@@ -179,7 +179,7 @@
    </term>
    <listitem>
     <para>
-     Denumirea implicită a serverului de baze de date, în caz că nu se 
+     Denumirea implicită a serverului de baze de date, în caz că nu se
      specifică o altă denumire. Nu se aplică în &sqlsafemode;.
     </para>
    </listitem>
@@ -192,8 +192,8 @@
    </term>
    <listitem>
     <para>
-     Numele implicit al utilizatorului pentru a fi utilizat la conectarea la 
-     serverul de baze de date, dacă nu este specificat un alt nume. Nu se 
+     Numele implicit al utilizatorului pentru a fi utilizat la conectarea la
+     serverul de baze de date, dacă nu este specificat un alt nume. Nu se
      aplică în &sqlsafemode;.
     </para>
    </listitem>
@@ -206,7 +206,7 @@
    </term>
    <listitem>
     <para>
-     Parola implicită pentru a fi utilizată la conectarea la serverul de baze 
+     Parola implicită pentru a fi utilizată la conectarea la serverul de baze
      de date, dacă nu este specificată o altă parolă. Nu se aplică în
      &sqlsafemode;.
     </para>
@@ -219,7 +219,7 @@
    </term>
    <listitem>
     <para>
-     Timeout-ul la conectare în secunde. Pe Linux acest timeout este de 
+     Timeout-ul la conectare în secunde. Pe Linux acest timeout este de
      asemenea utilizat la aşteptarea primului răspuns de la server.
     </para>
    </listitem>
