@@ -7,7 +7,7 @@
   <refname>array_count_values</refname>
   <refpurpose>Numără toate valorile unui tablou</refpurpose>
  </refnamediv>
- 
+
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>

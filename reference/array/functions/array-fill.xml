@@ -7,7 +7,7 @@
   <refname>array_fill</refname>
   <refpurpose>Completează un tablou cu valori</refpurpose>
  </refnamediv>
- 
+
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
@@ -117,11 +117,11 @@ Array
   &reftitle.notes;
   <para>
    Accesaţi de asemenea secţiunea manualului referitoare la
-   <link linkend="language.types.array">Tablouri</link> 
+   <link linkend="language.types.array">Tablouri</link>
    pentru o explicaţie detaliată a cheilor negative.
   </para>
  </refsect1>
- 
+
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>

@@ -7,7 +7,7 @@
   <refname>array_change_key_case</refname>
   <refpurpose>Modifică toate cheile dintr-un tablou</refpurpose>
  </refnamediv>
- 
+
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>

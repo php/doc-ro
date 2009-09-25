@@ -7,7 +7,7 @@
   <refname>array_chunk</refname>
   <refpurpose>Desparte un tablou în porţiuni</refpurpose>
  </refnamediv>
- 
+
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>

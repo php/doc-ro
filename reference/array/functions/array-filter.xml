@@ -7,7 +7,7 @@
   <refname>array_filter</refname>
   <refpurpose>Filtrează elementele unui tablou utilizând o funcţie de apel invers</refpurpose>
  </refnamediv>
- 
+
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
@@ -163,7 +163,7 @@ Array
    </para>
   </caution>
  </refsect1>
- 
+
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>
