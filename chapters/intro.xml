@@ -9,8 +9,8 @@
    <info><title>Ce este PHP?</title></info>
    <para>
     <acronym>PHP</acronym> (acronim recursiv pentru <literal>PHP: Hypertext
-    Preprocessor</literal>) este un limbaj de scripting de uz general, cu cod-sursă 
-    deschis (open source), utilizat pe scară largă, şi care este potrivit în 
+    Preprocessor</literal>) este un limbaj de scripting de uz general, cu cod-sursă
+    deschis (open source), utilizat pe scară largă, şi care este potrivit în
     special pentru dezvoltarea aplicaţiilor web şi poate fi integrat în HTML.
    </para>
    <para>
@@ -28,8 +28,8 @@
     </head>
     <body>
 
-        <?php 
-        echo "Salut, sunt un script PHP!"; 
+        <?php
+        echo "Salut, sunt un script PHP!";
         ?>
 
     </body>
@@ -39,20 +39,20 @@
     </example>
    </para>
    <para>
-    În locul unei mulţimi de comenzi pentru a afişa HTML (cum este cazul în C 
-    sau Perl), paginile PHP conţin HTML cu cod-sursă încorporat, care 
-    realizează "ceva" (în acest caz, afişează "Salut, sunt un script PHP!"). 
+    În locul unei mulţimi de comenzi pentru a afişa HTML (cum este cazul în C
+    sau Perl), paginile PHP conţin HTML cu cod-sursă încorporat, care
+    realizează "ceva" (în acest caz, afişează "Salut, sunt un script PHP!").
     Codul-sursă PHP este încorporat între nişte
-    <link linkend="language.basic-syntax.phpmode">instrucţiuni de procesare de 
+    <link linkend="language.basic-syntax.phpmode">instrucţiuni de procesare de
     început şi de sfârşit</link> speciale <code>&lt;?php</code> şi
     <code>?&gt;</code>, care vă permit să intraţi şi să ieşiţi din "modul PHP".
    </para>
    <para>
     Ceea ce face PHP să difere de un JavaScript de partea clientului
-    este că codul său este executat pe server, generând HTML care este apoi 
-    trimis către client. Clientul va primi rezultatele rulării acelui script, 
-    fără a putea cunoaşte codul-sursă ce stă la bază. Dumneavoastră chiar 
-    puteţi să configuraţi web server-ul să proceseze toate fişierele HTML cu 
+    este că codul său este executat pe server, generând HTML care este apoi
+    trimis către client. Clientul va primi rezultatele rulării acelui script,
+    fără a putea cunoaşte codul-sursă ce stă la bază. Dumneavoastră chiar
+    puteţi să configuraţi web server-ul să proceseze toate fişierele HTML cu
     PHP, şi atunci într-adevăr nu va fi nici o modalitate ca utilizatorii să
     afle ce aveţi ascuns în mânecă.
    </para>
@@ -108,7 +108,7 @@
        utilizare este ideal pentru script-uri executate în mod regulat
        cu cron (pe *nix sau Linux) sau cu Task Scheduler (pe Windows).
        Aceste script-uri pot fi utilizate de asemenea pentru lucrări simple
-       de procesare a textelor. Citiţi secţiunea despre 
+       de procesare a textelor. Citiţi secţiunea despre
        <link linkend="features.commandline">Utilizarea PHP în linia de comandă</link>
        pentru informaţii suplimentare.
       </simpara>
