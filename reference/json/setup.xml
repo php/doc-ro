@@ -12,7 +12,7 @@
    în PHP în mod implicit.
   </para>
   <para>
-   &pecl.info; 
+   &pecl.info;
    <link xlink:href="&url.pecl.package;json">&url.pecl.package;json</link>
   </para>
  </section>
@@ -33,7 +33,7 @@
  </section>
 
 </chapter>
- 
+
 <!-- Keep this comment at the end of the file
 Local variables:
 mode: sgml
