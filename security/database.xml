@@ -154,7 +154,7 @@ if (pg_num_rows($result) > 0) {
     <simpara>
      Mulţi developeri web nu ştiu cum pot fi manipulate interpelările SQL, şi
      acordă toata încrederea unei asemenea comenzi. Interpelările SQL pot ocoli
-     controalele de acces, în consecinţă să treacă peste metodele de 
+     controalele de acces, în consecinţă să treacă peste metodele de
      autentificare şi verificările de autorizaţie, iar câteodată pot chiar
      să faciliteze accesul la comenzile de sistem.
     </simpara>
@@ -390,7 +390,7 @@ $result = mssql_query($query);
         găsite în <link linkend="ref.var">Funcţii asupra variabilelor</link> şi
         în <link linkend="ref.ctype">Funcţii ale tipurilor de caractere</link>
         (de ex. <function>is_numeric</function>,
-        <function>ctype_digit</function> respectiv) şi până la 
+        <function>ctype_digit</function> respectiv) şi până la
         <link linkend="ref.pcre">Expresii regulate compatibile Perl</link>.
        </simpara>
       </listitem>

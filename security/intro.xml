@@ -18,9 +18,9 @@
    oferi combinaţia perfectă de libertate şi securitate de care aveţi nevoie.
   </simpara>
   <simpara>
-   Deoarece există multe modalităţi diferite de a utiliza PHP, există şi multe 
-   opţiuni de configurare care îi controlează comportamentul. O gamă largă de 
-   opţiuni de configurare garantează posibilitatea utilizării PHP pentru o 
+   Deoarece există multe modalităţi diferite de a utiliza PHP, există şi multe
+   opţiuni de configurare care îi controlează comportamentul. O gamă largă de
+   opţiuni de configurare garantează posibilitatea utilizării PHP pentru o
    întreagă suită de întrebuinţări, dar aceasta totodată înseamnă că pot exista
    combinaţii ale acestor opţiuni şi ale configuraţiilor de servere, care vor
    duce la crearea unui mediu de execuţie nesecurizat.
@@ -30,13 +30,13 @@
    cu flexibilitatea codului-sursă. PHP poate fi utilizat pentru a construi
    aplicaţii complete pentru servere, cu toate avantajele unui utilizator
    shell, sau poate fi utilizat ca o simplă incluziune de partea serverului
-   cu grad de risc redus, într-un mediu bine controlat. Modul de construire a 
-   acestui mediu şi cât de securizat este el depinde în mare măsură de 
+   cu grad de risc redus, într-un mediu bine controlat. Modul de construire a
+   acestui mediu şi cât de securizat este el depinde în mare măsură de
    programatorul PHP.
   </simpara>
   <simpara>
    Acest capitol începe cu câteva sfaturi generale în privinţa securităţii,
-   explică diferite combinaţii ale opţiunilor de configurare, precum şi 
+   explică diferite combinaţii ale opţiunilor de configurare, precum şi
    situaţiile în care pot fi folosite cu siguranţă; descrie de asemenea,
    diferite consideraţii legate de programare la diferite nivele de securitate.
   </simpara>

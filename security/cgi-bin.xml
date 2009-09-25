@@ -108,7 +108,7 @@
     <title>Cazul 2: utilizarea <literal>--enable-force-cgi-redirect</literal></title>
     <simpara>
      Această opţiune disponibilă în timpul compilării este folosită pentru a
-     preveni rularea unui script PHP direct printr-un URL gen 
+     preveni rularea unui script PHP direct printr-un URL gen
      <filename role="php">http://my.host/cgi-bin/php/secretdir/script.php</filename>.
      PHP va acţiona în acest mod numai dacă a trecut printr-o regulă de
      redirecţionare a serverului web.
@@ -155,7 +155,7 @@ AddHandler php-script .php
     <simpara>
      Puteţi stabili directorul-rădăcină al scripturilor PHP prin directiva
      <link linkend="ini.doc-root">doc_root</link> din
-     <link linkend="configuration.file">fişierul de configuraţie</link>, 
+     <link linkend="configuration.file">fişierul de configuraţie</link>,
      sau puteţi configura variabila de mediu <envar>PHP_DOCUMENT_ROOT</envar>.
      Dacă este setată, versiunea <acronym>CGI</acronym> a PHP întotdeauna va construi denumirea
      fişierului astfel ca să fie deschis cu acest

@@ -17,9 +17,9 @@
     de informaţii trimisă de server.
    </para>
    <para>
-    O altă tactică este configurarea serverelor web, cum ar fi Apache să 
-    prelucreze şi să interpreteze diferite tipuri de fişiere cu PHP, fie 
-    printr-o directivă &htaccess;, fie direct în configuraţia Apache. Apoi 
+    O altă tactică este configurarea serverelor web, cum ar fi Apache să
+    prelucreze şi să interpreteze diferite tipuri de fişiere cu PHP, fie
+    printr-o directivă &htaccess;, fie direct în configuraţia Apache. Apoi
     puteţi utiliza extensii de fişiere, care să inducă în eroare:
     <example>
      <title>Ascunderea PHP ca alt limbaj de scripting</title>
@@ -40,7 +40,7 @@ AddType application/x-httpd-php .bop .foo .133t
 ]]>
      </programlisting>
     </example>
-    Sau deghizarea drept cod HTML, dar acest lucru are un impact minor asupra 
+    Sau deghizarea drept cod HTML, dar acest lucru are un impact minor asupra
     performanţei, deoarece tot codul HTML va fi procesat de motorul PHP:
     <example>
      <title>Folosirea tipurilor HTML pentru extensiile PHP</title>
@@ -53,7 +53,7 @@ AddType application/x-httpd-php .htm .html
     </example>
     Pentru ca această modificare să funcţioneze eficient, trebuie să redenumiţi
     toate fişierele PHP cu extensiile de mai sus. În timp ce aceasta reprezintă
-    o formă a securităţii prin obscuritate, este o măsură de prevenire minoră, 
+    o formă a securităţii prin obscuritate, este o măsură de prevenire minoră,
     cu mici neajunsuri.
    </para>
   </chapter>
