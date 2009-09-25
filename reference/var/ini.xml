@@ -28,9 +28,9 @@
   </table>
   &ini.php.constants;
  </para>
- 
+
  &ini.descriptions.title;
- 
+
  <para>
   <variablelist>
    <varlistentry xml:id="unserialize-callback-func">
@@ -40,12 +40,12 @@
     </term>
     <listitem>
      <para>
-      Funcţia de apel invers <function>unserialize</function> poate fi apelată 
-      (cu denumirea clasei nedefinite în calitate de parametru), dacă 
-      deserializatorul găseşte o clasă nedefinită care ar trebui să fie 
+      Funcţia de apel invers <function>unserialize</function> poate fi apelată
+      (cu denumirea clasei nedefinite în calitate de parametru), dacă
+      deserializatorul găseşte o clasă nedefinită care ar trebui să fie
       instanţiată. Va apărea o avertizare dacă funcţia specificată nu este
       definită, sau dacă funcţia nu include/implementează clasa ce lipseşte.
-      Deci stabiliţi această înregistrare dacă doriţi într-adevăr să 
+      Deci stabiliţi această înregistrare dacă doriţi într-adevăr să
       implementaţi o astfel de funcţie de apel invers.
      </para>
      <para>
