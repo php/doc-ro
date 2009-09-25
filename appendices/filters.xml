@@ -13,14 +13,14 @@
  <para>
   Merită de a fi remarcată mica asimetrie dintre
   <function>stream_filter_append</function>
-  şi <function>stream_filter_prepend</function>.  
+  şi <function>stream_filter_prepend</function>.
   Fiecare flux PHP conţine o mică <emphasis>zonă-tampon de citire</emphasis>
   unde el stochează blocuri de date recepţionate de la sistemul de fişiere
   sau alte resurse pentru a procesa datele în modul cel mai eficient.
   Imediat ce datele sunt extrase din resursă în zona-tampon internă a fluxului,
   ele sunt procesate prin orice filtru ataşat, indiferent dacă aplicaţia PHP
   este pregătită de a primi datele, sau nu.
-  Dacă datele se află în zona-tampon de citire în timp ce sunt 
+  Dacă datele se află în zona-tampon de citire în timp ce sunt
   <emphasis>anexate</emphasis> la filtru, aceste date vor fi imediat procesate
   prin acel filtru, astfel încât faptul aflării lor în zona-tampon trece
   neobservat.
@@ -135,7 +135,7 @@ fclose($fp);
 ]]>
    </programlisting>
   </example>
-   
+
  </section>
 
  <section xml:id="filters.convert">
@@ -495,7 +495,7 @@ $passphrase = 'My secret';
  * într-o pereche iv/key reproductibilă
  */
 $iv = substr(md5('iv'.$passphrase, true), 0, 8);
-$key = substr(md5('pass1'.$passphrase, true) . 
+$key = substr(md5('pass1'.$passphrase, true) .
                md5('pass2'.$passphrase, true), 0, 24);
 $opts = array('iv'=>$iv, 'key'=>$key);
 
@@ -519,7 +519,7 @@ $passphrase = 'My secret';
  * într-o pereche iv/key reproductibilă
  */
 $iv = substr(md5('iv'.$passphrase, true), 0, 8);
-$key = substr(md5('pass1'.$passphrase, true) . 
+$key = substr(md5('pass1'.$passphrase, true) .
                md5('pass2'.$passphrase, true), 0, 24);
 $opts = array('iv'=>$iv, 'key'=>$key);
 

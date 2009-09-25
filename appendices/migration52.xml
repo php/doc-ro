@@ -214,7 +214,7 @@ abstract class foo {
      aceasta, utilizaţi protocolul 'file:' pentru a-l accesa.
     </simpara>
     <simpara>
-     Accesaţi de asemenea <link xlink:href="&url.rfc;2397">RFC 2397</link> 
+     Accesaţi de asemenea <link xlink:href="&url.rfc;2397">RFC 2397</link>
     </simpara>
     <informalexample>
      <programlisting role="php">
@@ -237,7 +237,7 @@ include "data:;base64,PD9waHAgcGhwaW5mbygpOz8+";
      În versiunea 5.2.4 o corectare a unei probleme de securitate cauza un
      regres al şabloanelor de forma "/foo/*/bar/*". Începând cu versiunea
      5.2.5 în loc de a emite o preîntâmpinare, funcţia
-     <literal>glob()</literal> va întoarce &false; când restricţiile 
+     <literal>glob()</literal> va întoarce &false; când restricţiile
      <literal>openbase_dir</literal> sunt încălcate.
     </simpara>
    </listitem>
@@ -543,19 +543,19 @@ $obj->getCommentName('');
    </listitem>
    <listitem>
     <simpara>
-     din script utilizând funcţia 
+     din script utilizând funcţia
      <link linkend="function.date-default-timezone-get">
      <function>date_default_timezone_set</function></link>
     </simpara>
    </listitem>
   </itemizedlist>
   <para>
-   Toate <link linkend="timezones">fusele orare</link> susţinute sunt 
+   Toate <link linkend="timezones">fusele orare</link> susţinute sunt
    enumerate în manualul PHP.
   </para>
   <para>
    Odată cu apariţia PHP 5.2.x, au apărut reprezentări-<type>obiect</type> ale
-   datei şi fuselor orare, denumite <literal>DateTime</literal> şi 
+   datei şi fuselor orare, denumite <literal>DateTime</literal> şi
    <literal>DateTimeZone</literal> respectiv.
    Metodele apelează funcţiile procedurale de date existente.
   </para>
@@ -817,7 +817,7 @@ $obj->getCommentName('');
    <listitem>
     <simpara>
      <function>image_type_to_extension</function>
-     - Întoarce extensia fişierului pentru tipul-imagine întors de 
+     - Întoarce extensia fişierului pentru tipul-imagine întors de
      <function>getimagesize</function>, <function>exif_read_data</function>,
      <function>exif_thumbnail</function>, <function>exif_imagetype</function>
     </simpara>
@@ -1259,7 +1259,7 @@ $obj->getCommentName('');
    <listitem>
     <simpara>
      void <methodname>SplFileObject::setCsvControl</methodname>([string delimiter = ',' [, string enclosure = '"']])
-     - Stabileşte caracterele de delimitare şi încapsulare utilizate în 
+     - Stabileşte caracterele de delimitare şi încapsulare utilizate în
      <function>fgetcsv</function>
     </simpara>
    </listitem>
@@ -1522,7 +1522,7 @@ $obj->getCommentName('');
      <listitem>
       <simpara>
        RecursiveRegexIterator::__construct(RecursiveIterator it, string regex [, int mode [, int flags [, int preg_flags]]])
-       - Creează un <literal>RecursiveRegexIterator</literal> dintr-un alt 
+       - Creează un <literal>RecursiveRegexIterator</literal> dintr-un alt
        iterator recursiv şi o expresie regulară
       </simpara>
      </listitem>
@@ -1982,10 +1982,10 @@ $obj->getCommentName('');
   <para>
    Această schimbare înseamnă că valoarea <constant>E_ALL</constant> a
    constantei <link linkend="ini.error-reporting">error_reporting</link> este
-   acum 6143, în timp ce valoarea precedentă era 2047. Deoarece constantele 
+   acum 6143, în timp ce valoarea precedentă era 2047. Deoarece constantele
    PHP nu au nici o însemnătate în afara PHP, în unele cazuri este utilizată
    valoarea întreagă, de aceea ea va trebui ajustată. Deci, spre exemplu,
-   stabilind modul <literal>error_reporting</literal> în fişierele 
+   stabilind modul <literal>error_reporting</literal> în fişierele
    <link linkend="apache.configuration">httpd.conf</link> sau
    <filename>.htaccess</filename>, valoarea trebuie schimbată corespunzător.
    Acelaşi lucru este valabil atunci când valorile numerice sunt utilizate în
@@ -2038,7 +2038,7 @@ $obj->getCommentName('');
      implementa această interfaţă TREBUIE să includă un constructor cu o
      semnătură identică cu acea a constructorului din interfaţa de bază. Prin
      'semnătură' se înţeleg definiţiile tipurilor parametrilor şi a valorii
-     întoarse, inclusiv orice fel de indicatori expliciţi ai tipurilor şi 
+     întoarse, inclusiv orice fel de indicatori expliciţi ai tipurilor şi
      faptul dacă datele sunt transmise prin referinţă, sau prin valoare.
     </simpara>
    </listitem>

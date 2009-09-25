@@ -5,7 +5,7 @@
  <title>Lista pseudonimelor funcţiilor</title>
  <para>
   Există câteva funcţii în PHP, pe care puteţi să le apelaţi cu mai multe
-  nume. În unele cazuri nu este vre-un nume preferat dintre aceste câteva, 
+  nume. În unele cazuri nu este vre-un nume preferat dintre aceste câteva,
   <function>is_int</function> şi <function>is_integer</function> sunt la fel
   de potrivite, de exemplu.
   Însă sunt şi funcţii care şi-au schimbat numele din cauza curăţirii

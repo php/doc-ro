@@ -47,7 +47,7 @@
     <listitem>
      <simpara>
       Utilizarea nelegală a deplasamentelor în string-uri cauzează <constant>E_ERROR</constant>
-      în loc de <constant>E_WARNING</constant>. Un exemplu de utilizare nelegală ar fi: 
+      în loc de <constant>E_WARNING</constant>. Un exemplu de utilizare nelegală ar fi:
       <literal>$str = 'abc'; unset($str[0]);</literal>.
      </simpara>
     </listitem>
@@ -83,7 +83,7 @@
       a fost definită în PHP 4. În ambele PHP 4 şi PHP 5 // şi /* */ sunt soluţionate
       ca constante <constant>T_COMMENT</constant>. Însă comentariile în stil PHPDoc
       /** */, care începând cu PHP 5 sunt înţelese de PHP, sunt recunoscute ca
-      <constant>T_DOC_COMMENT</constant>. 
+      <constant>T_DOC_COMMENT</constant>.
      </simpara>
     </listitem>
     <listitem>
@@ -221,7 +221,7 @@ $a = new b();
 interface c{
 }
 class b implements c {
-} 
+}
 
 ?>
 ]]>
@@ -272,7 +272,7 @@ class b implements c {
      <title>Migrarea fişierelor de configurare Apache pentru PHP 5</title>
      <programlisting role="apache-conf">
 <![CDATA[
-# change this line:    
+# change this line:
 LoadModule php4_module /php/sapi/php4apache2.dll
 
 # with this one:
@@ -290,11 +290,11 @@ LoadModule php5_module /php/php5apache2.dll
      <title>Migrarea fişierelor de configurare Apache pentru PHP 5, modul CGI</title>
      <programlisting role="apache-conf">
 <![CDATA[
-# change this line:    
-Action application/x-httpd-php "/php/php.exe" 
+# change this line:
+Action application/x-httpd-php "/php/php.exe"
 
 # with this one:
-Action application/x-httpd-php "/php/php-cgi.exe" 
+Action application/x-httpd-php "/php/php-cgi.exe"
 ]]>
      </programlisting>
     </example>
@@ -842,8 +842,8 @@ Action application/x-httpd-php "/php/php-cgi.exe"
     </listitem>
     <listitem>
      <simpara>
-      <link linkend="ini.zend.ze1-compatibility-mode">zend.ze1_compatibility_mode</link> 
-      - Activează modul de compatibilitate cu Zend Engine 1 (PHP 4) 
+      <link linkend="ini.zend.ze1-compatibility-mode">zend.ze1_compatibility_mode</link>
+      - Activează modul de compatibilitate cu Zend Engine 1 (PHP 4)
      </simpara>
     </listitem>
    </itemizedlist>
@@ -902,7 +902,7 @@ Action application/x-httpd-php "/php/php-cgi.exe"
    <para>
     Vedeţi de asemenea directiva <link linkend="ini.zend.ze1-compatibility-mode">
     zend.ze1_compatibility_mode</link> pentru informaţii despre compatibilitatea
-    cu PHP 4. 
+    cu PHP 4.
    </para>
   </section>
 

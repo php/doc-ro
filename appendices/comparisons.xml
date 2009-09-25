@@ -4,11 +4,11 @@
 <appendix xml:id="types.comparisons" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Tabelele de comparaţii ale tipurilor PHP</title>
  <para>
-  Tabelele următoare demonstrează comportamentul 
-  <link linkend="language.types">tipurilor</link> şi 
+  Tabelele următoare demonstrează comportamentul
+  <link linkend="language.types">tipurilor</link> şi
   <link linkend="language.operators.comparison">operatorilor de comparare</link>
-  din PHP, pentru ambele tipuri de comparaţii &mdash; libere şi stricte. Acest 
-  supliment de asemenea are legătură şi cu secţiunea din manual despre 
+  din PHP, pentru ambele tipuri de comparaţii &mdash; libere şi stricte. Acest
+  supliment de asemenea are legătură şi cu secţiunea din manual despre
   <link linkend="language.types.type-juggling">jonglarea cu tipurile</link>.
   Inspiraţia a fost adusă de diverse comentarii ale utilizatorilor şi de lucrările
   de la <link xlink:href="&url.blueshoes.comparisons;">BlueShoes</link>.

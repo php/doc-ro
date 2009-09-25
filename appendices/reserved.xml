@@ -204,7 +204,7 @@
        <entry>
         <link linkend="language.constants.predefined">__CLASS__</link>
        </entry>
-       <entry> 
+       <entry>
         <link linkend="language.constants.predefined">__DIR__</link> (începând cu PHP 5.3)
        </entry>
        <entry>

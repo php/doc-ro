@@ -340,7 +340,7 @@
     </varlistentry>
     <varlistentry>
      <term>
-      <constant>PHP_WINDOWS_VERSION_MAJOR</constant> 
+      <constant>PHP_WINDOWS_VERSION_MAJOR</constant>
       (<type>integer</type>)
      </term>
      <listitem>
@@ -351,7 +351,7 @@
     </varlistentry>
     <varlistentry>
      <term>
-      <constant>PHP_WINDOWS_VERSION_MINOR</constant> 
+      <constant>PHP_WINDOWS_VERSION_MINOR</constant>
       (<type>integer</type>)
      </term>
      <listitem>
@@ -362,7 +362,7 @@
     </varlistentry>
     <varlistentry>
      <term>
-      <constant>PHP_WINDOWS_VERSION_BUILD</constant> 
+      <constant>PHP_WINDOWS_VERSION_BUILD</constant>
       (<type>integer</type>)
      </term>
      <listitem>
@@ -373,7 +373,7 @@
     </varlistentry>
     <varlistentry>
      <term>
-      <constant>PHP_WINDOWS_VERSION_PLATFORM</constant> 
+      <constant>PHP_WINDOWS_VERSION_PLATFORM</constant>
       (<type>integer</type>)
      </term>
      <listitem>
@@ -384,7 +384,7 @@
     </varlistentry>
     <varlistentry>
      <term>
-      <constant>PHP_WINDOWS_VERSION_SP_MAJOR</constant> 
+      <constant>PHP_WINDOWS_VERSION_SP_MAJOR</constant>
       (<type>integer</type>)
      </term>
      <listitem>
@@ -395,7 +395,7 @@
     </varlistentry>
     <varlistentry>
      <term>
-      <constant>PHP_WINDOWS_VERSION_SP_MINOR</constant> 
+      <constant>PHP_WINDOWS_VERSION_SP_MINOR</constant>
       (<type>integer</type>)
      </term>
      <listitem>
@@ -406,7 +406,7 @@
     </varlistentry>
     <varlistentry>
      <term>
-      <constant>PHP_WINDOWS_VERSION_SUITEMASK</constant> 
+      <constant>PHP_WINDOWS_VERSION_SUITEMASK</constant>
       (<type>integer</type>)
      </term>
      <listitem>
@@ -417,7 +417,7 @@
     </varlistentry>
     <varlistentry>
      <term>
-      <constant>PHP_WINDOWS_VERSION_PRODUCTTYPE</constant> 
+      <constant>PHP_WINDOWS_VERSION_PRODUCTTYPE</constant>
       (<type>integer</type>)
      </term>
      <listitem>
@@ -428,7 +428,7 @@
     </varlistentry>
     <varlistentry>
      <term>
-      <constant>PHP_WINDOWS_NT_DOMAIN_CONTROLLER</constant> 
+      <constant>PHP_WINDOWS_NT_DOMAIN_CONTROLLER</constant>
       (<type>integer</type>)
      </term>
      <listitem>
@@ -439,7 +439,7 @@
     </varlistentry>
     <varlistentry>
      <term>
-      <constant>PHP_WINDOWS_NT_SERVER</constant> 
+      <constant>PHP_WINDOWS_NT_SERVER</constant>
       (<type>integer</type>)
      </term>
      <listitem>
@@ -450,7 +450,7 @@
     </varlistentry>
     <varlistentry>
      <term>
-      <constant>PHP_WINDOWS_NT_WORKSTATION</constant> 
+      <constant>PHP_WINDOWS_NT_WORKSTATION</constant>
       (<type>integer</type>)
      </term>
      <listitem>

@@ -13,10 +13,10 @@
   Versiunile vechi ale PHP pot fi găsite la
   <link xlink:href="&url.php.museum;">muzeul PHP</link>.
  </para>
- 
+
  <sect1 xml:id="history.php">
   <title>Istoria PHP</title>
-  
+
   <sect2 xml:id="history.phpfi">
    <title>PHP/FI</title>
    <para>
@@ -100,7 +100,7 @@
     stopată.
    </para>
    <para>
-    Unul din cele mai mari avantaje ale PHP 3.0 erau facilităţile 
+    Unul din cele mai mari avantaje ale PHP 3.0 erau facilităţile
     sale largi de extindere. În afară de faptul că oferea utilizatorilor
     finali o infrastructură solidă pentru o multitudine de baze de date,
     protocoale şi interfeţe API, facilităţile de extindere ale PHP 3.0
@@ -278,7 +278,7 @@
     </para>
     <para>
      Simţind că PHP-GTK poate fi costisitor, am pregătit o listă poştală
-     de distribuţie şi CVS separate pentru el, precum şi web site-ul 
+     de distribuţie şi CVS separate pentru el, precum şi web site-ul
      gtk.php.net cu ajutorul lui Colin Viebrock. Trebuia creată şi
      documentaţia şi James Moore a venit în ajutor în această privinţă.
     </para>
@@ -322,7 +322,7 @@
    sunt o mărturie incontestabilă a succesului PHP la scară mondială.
   </para>
  </sect1>
- 
+
  <sect1 xml:id="history.php.publications">
   <title>Publicaţii despre PHP</title>
   <para>
