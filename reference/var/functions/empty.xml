@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 51bdd398d7b5056caca17eb7bf8dbfc46897fa5b Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 0efda2548a2d06199c59f302cedadfa2796477be Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.empty" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -83,14 +83,6 @@
         <para>
          Începând cu PHP 5 obiectele fără proprietăţi nu mai sunt considerate
          vide.
-        </para>
-       </entry>
-      </row>
-      <row>
-       <entry>PHP 4</entry>
-       <entry>
-        <para>
-         Începând cu PHP 4 valoarea string "0" este considerată vidă.
         </para>
        </entry>
       </row>
