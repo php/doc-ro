@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 459f5061ab6a48748d0a0cc1ca2e085ca6e2b17f Maintainer: radical Status: ready -->
+<!-- EN-Revision: e0a9a1084e4b0e76e31bc408227bf840587c709b Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
  <sect1 xml:id="language.oop5.visibility" xmlns="http://docbook.org/ns/docbook">
   <title>Vizibilitatea</title>
   <para>
    Vizibilitatea unei propietăţi sau a unei metode poate fi definită prefixând
-   declaraţia cu unul din cuvintele cheie: public, protected sau private.
-   Membrele claselor (proprietăți sau metode) declarate public pot fi accesate
-   oriunde. Membrele declarate protected pot fi accesate doar în interiorul
-   clasei, precum și de clasele moștenite și clasele-părinte. Membrele declarate
-   private pot fi accesate doar de clasa care le definește.
+   declaraţia cu unul din cuvintele cheie: <emphasis>public</emphasis>,
+   <emphasis>protected</emphasis> sau <emphasis>private</emphasis>. Membrele
+   claselor (proprietăți sau metode) declarate public pot fi accesate oriunde.
+   Membrele declarate protected pot fi accesate doar în interiorul clasei,
+   precum și de clasele moștenite și clasele-părinte. Membrele declarate private
+   pot fi accesate doar de clasa care le definește.
   </para>
   <sect2 xml:id="language.oop5.visibility-members">
    <title>Vizibilitatea proprietăților</title>
    <para>
-   Proprietățile unei clase trebuie definite cu: public, private, sau protected.
+   Proprietățile unei clase trebuie definite ca public, private, sau protected.
+   Dacă sunt declarate utilizând <emphasis>var</emphasis> fără indicarea în mod
+   explicit a unui cuvânt-cheie de vizibilitate, atunci proprietatea va fi
+   definită ca publică.
    </para>
    <para>
     <example>
@@ -86,8 +90,9 @@ $obj2->afiseazaBunaZiua();    // Afişează Eu sunt: Public, Eu sunt: Protected2
   <sect2 xml:id="language.oop5.visiblity-methods">
    <title>Vizibilitatea metodelor</title>
    <para>
-    Metodele claselor trebuie definite cu public, private, sau protected.
-    Metodele fără nici o declaraţie sunt implicit considerate public.
+    Metodele claselor pot fi definite ca public, private, sau protected.
+    Metodele declarate fără un cuvânt-cheie de vizibilitate sunt definite ca
+    publice.
    </para>
    <para>
     <example>
