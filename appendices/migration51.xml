@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: simionea Status: ready -->
+<!-- EN-Revision: bd5287ce34fc17eccc38b45c9056d94259e6ad08 Maintainer: simionea Status: ready -->
 <appendix xml:id="migration51" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Migrarea de la PHP 5.0.x la PHP 5.1.x</title>
   <para>
@@ -654,8 +654,8 @@ class test {
    <para>
     Modulele din PECL care nu sunt menţinute activ (de ex. nu au fost susţinute
     de un timp, nu au un menţinător activ ce lucrează în prezent asupra lor şi
-    nu au careva lansări de pachete PECL) sunt încă disponibile în CVS la
-    <link xlink:href="&url.php.cvs;pecl">&url.php.cvs;pecl</link>.
+    nu au careva lansări de pachete PECL) sunt încă disponibile în SVN la
+    <link xlink:href="&url.php.svn;pecl">&url.php.svn;pecl</link>.
     Însă modulele PHP nelansate sunt după natura lor nesusţinute şi puteţi eşua
     la încercarea de a le instala sau utiliza.
    </para>

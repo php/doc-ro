@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 9aff12cf574c8ce7552caa334676c328678525f6 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="about" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Despre manual</title>
@@ -303,8 +303,8 @@ int strlen ( string $string )
   </para>
   <para>
    Deseori manualul PHP oferă "Valori Implicite" pentru directivele PHP. Aceste
-   valori se bazează pe <filename>php.ini-dist</filename> şi nu pe
-   <filename>php.ini-recommended</filename>. Ele de asemenea se referă la
+   valori se bazează pe <filename>php.ini-development</filename> şi nu pe
+   <filename>php.ini-production</filename>. Ele de asemenea se referă la
    ultima versiune PHP. Vezi <link linkend="ini.list">anexa directivelor PHP
    </link> pentru detalii despre aceste valori şi schimbările survenite.
   </para>
