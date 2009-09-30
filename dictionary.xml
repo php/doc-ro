@@ -433,4 +433,16 @@
     <english_example>Library outline</english_example>
     <romanian_example>Schiţă a bibliotecii</romanian_example>
   </term>
+  <term>
+    <english>bug report</english>
+    <romanian>raport de problemă</romanian>
+    <english_example>Please fill-in a bug report at http://bugs.php.net .</english_example>
+    <romanian_example>Vă rugăm să completați un raport de problemă pe adresa http://bugs.php.net .</romanian_example>
+  </term>
+  <term>
+    <english>bug-tracking system</english>
+    <romanian>sistem de urmărire a problemelor</romanian>
+    <english_example>Our bug-tracking system works 24 hours a day.</english_example>
+    <romanian_example>Sistemul nostru de urmărire a problemelor funcționează 24 de ore pe zi.</romanian_example>
+  </term>
 </dictionary>
