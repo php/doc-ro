@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 49ca3b982b6978a973fdc5e56f18663aae7ed120 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 0c997f8b702221e07609ad49a152e69cadd0bb4c Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row><entry>4.2.0</entry><entry>Generatorul de
@@ -421,6 +421,22 @@ conn</parameter></term><listitem><para>O resursă MCVE_CONN întoarsă de
 <!ENTITY memcached.parameter.value 'Valoarea pentru a fi stocată.'>
 
 <!ENTITY memcached.result.getresultcode 'Utilizaţi <methodname>Memcached::getResultCode</methodname> dacă e necesar.'>
+
+<!-- geaman notes -->
+
+<!ENTITY gearman.parameter.host 'Denumirea gazdei serverului executor. Implicit este &apos;<literal>localhost</literal>&apos;.'>
+
+<!ENTITY gearman.parameter.port 'Portul serverului executor. Implicit este <literal>4730</literal>.'>
+
+<!ENTITY gearman.parameter.functionname 'O funcție înregistrată pe care trebuie să o execute serverul executor'>
+
+<!ENTITY gearman.parameter.workload 'Datele serializate pentru a fi procesate'>
+
+<!ENTITY gearman.parameter.data 'Date adiționale care pot fi necesare pentru a încheia lucrarea'>
+
+<!ENTITY gearman.parameter.unique 'Un ID unical utilizat pentru a identifica o anumită sarcină'>
+
+<!ENTITY gearman.parameter.jobhandle 'Handle-ul sarcinii atribuit de către serverul Gearman'>
 
 <!-- Date and time entities -->
 <!ENTITY date.timezone.intro.title '<title>Lista zonelor orare susţinute</title>'>
