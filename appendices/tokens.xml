@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 37cf763bbc20e8fbb94fb941a0d1e6760526855c Maintainer: simionea Status: ready -->
 
 <appendix xml:id="tokens" xmlns="http://docbook.org/ns/docbook">
  <title>Lista semnelor interpretorului</title>
@@ -116,8 +116,8 @@
     </row>
     <row>
      <entry><constant>T_CLOSE_TAG</constant></entry>
-     <entry>?> sau %></entry>
-     <entry></entry>
+     <entry>?&gt; sau %&gt;</entry>
+     <entry><link linkend="language.basic-syntax.phpmode">evadarea din HTML</link></entry>
     </row>
     <row>
      <entry><constant>T_COMMENT</constant></entry>
@@ -133,7 +133,7 @@
     <row>
      <entry><constant>T_CONST</constant></entry>
      <entry>const</entry>
-     <entry></entry>
+     <entry><link linkend="language.constants">constante ale claselor</link></entry>
     </row>
     <row>
      <entry><constant>T_CONSTANT_ENCAPSED_STRING</constant></entry>
@@ -143,7 +143,7 @@
     <row>
      <entry><constant>T_CONTINUE</constant></entry>
      <entry>continue</entry>
-     <entry></entry>
+     <entry><link linkend="control-structures.continue">continue</link></entry>
     </row>
     <row>
      <entry><constant>T_CURLY_OPEN</constant></entry>
@@ -342,7 +342,7 @@
     <row>
      <entry><constant>T_GOTO</constant></entry>
      <entry>goto</entry>
-     <entry>nedocumentat (disponibil începând cu PHP 5.3.0)</entry>
+     <entry><link linkend="control-structures.goto"> (disponibil începând cu PHP 5.3.0)</link></entry>
     </row>
     <row>
      <entry><constant>T_HALT_COMPILER</constant></entry>
@@ -519,7 +519,7 @@
     </row>
     <row>
      <entry><constant>T_OBJECT_OPERATOR</constant></entry>
-     <entry>-></entry>
+     <entry>-&gt;</entry>
      <entry><link linkend="language.oop5">clase şi obiecte</link></entry>
     </row>
     <row>
