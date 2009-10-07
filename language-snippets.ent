@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 92881175ff4eddf66373c81b2a8f492342605a63 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: a0be193fd9c655091fdd3156a47b9e46ce005619 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row><entry>4.2.0</entry><entry>Generatorul de
@@ -780,7 +780,7 @@ stmt</parameter></term><listitem><para>Numai stilul procedural: Un
 identificator al declaraţiei întors de <function>mysqli_stmt_init</function>.
 </para></listitem></varlistentry>'>
 <!ENTITY mysqli.available.mysqlnd 'Disponibil numai cu <link
-linkend="mysqli.overview.mysqlnd">mysqlnd</link>.'>
+linkend="book.mysqlnd">mysqlnd</link>.'>
 
 <!-- Notes for SAPI/Apache -->
 <!ENTITY note.apache.nsapi-module '<note><para>Începând cu PHP 4.3.3 puteţi 

@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: d022de3adca805a7ed97790053ea88864aafcdd0 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 6436dcaa2bf3245b94a2b758d42d3a228bcf3401 Maintainer: simionea Status: ready -->
 
 <!-- Part titles used mostly in manual.xml itself -->
 <!ENTITY PHPManual         "Manualul PHP">
@@ -83,6 +83,7 @@ supplemental files to mark section titles -->
 <!ENTITY reftitle.indices      '<title>Indici</title>'>
 <!ENTITY reftitle.interfacesynopsis '<title>Descrierea succintă a interfeței</title>'>
 <!ENTITY reftitle.methods      '<title>Metode</title>'>
+<!ENTITY reftitle.mysqlnd      '<title>Doar driver-ul original al MySQL</title>'>
 <!ENTITY reftitle.notes        '<title>Note</title>'>
 <!ENTITY reftitle.parameters   '<title>Parametri</title>'>
 <!ENTITY reftitle.options      '<title>Opţiuni</title>'>
