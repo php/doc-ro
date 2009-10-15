@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: a0be193fd9c655091fdd3156a47b9e46ce005619 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 19030cba0c91adf119b64e0f70639abe81039849 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row><entry>4.2.0</entry><entry>Generatorul de
@@ -434,6 +434,8 @@ conn</parameter></term><listitem><para>O resursă MCVE_CONN întoarsă de
 
 <!ENTITY gearman.parameter.data 'Date adiționale care pot fi necesare pentru a încheia lucrarea'>
 
+<!ENTITY gearman.parameter.context 'Contextul aplicaţiei pentru a fi asociat cu o sarcină'>
+
 <!ENTITY gearman.parameter.unique 'Un ID unical utilizat pentru a identifica o anumită sarcină'>
 
 <!ENTITY gearman.parameter.jobhandle 'Handle-ul sarcinii atribuit de către serverul Gearman'>
@@ -551,6 +553,25 @@ transformărilor tipurilor de date efectuate de driver-ul oci8, accesaţi
 <link linkend="oci8.datatypes">tipurile de date susţinute de driver</link>
 </para>'>
 
+<!ENTITY oci.parameter.connection '<para>Un identificator al conexiunii Oracle,
+întors de <function>oci_connect</function>, <function>oci_pconnect</function>
+sau <function>oci_new_connect</function>.</para>'>
+
+<!ENTITY oci.availability.note.10g '<note><title>Versiune Oracle necesară</title>
+<para>Această funcţie este disponibilă atunci când PHP este compilat cu
+bibliotecile Oracle Database de versiunea 10g sau ulterioare.</para></note>'>
+
+<!ENTITY oci.clientinfo.tip '<tip><title>Performanţă</title><para>Cu versiuni
+mai vechi ale OCI8 sau ale Oracle Database, informaţia clientului poate fi
+transmisă utilizând pachetul Oracle <literal>DBMS_APPLICATION_INFO</literal>.
+Aceasta este mai puţin eficient decât utilizarea
+<function>oci_set_client_info</function>.</para></tip>'>
+
+<!ENTITY oci.roundtrip.caution '<caution><title>Capcane dus-întors</title>
+<para>Unele funcţii OCI8, dar nu toate, cauzează căi dus-întors. Căile
+dus-întors către baza de date pot să nu aibă loc în cazul interpelărilor,
+atunci când buferizarea rezultatelor este activată.</para></caution>'>
+
 <!-- PCNTL Notes -->
 <!ENTITY pcntl.parameter.status '<para>Parametrul <parameter>status
 </parameter> reprezintă parametrul de stare furnizat către un apel cu succes 
@@ -666,7 +687,7 @@ Constantele de mai jos sunt definite de acest driver şi vor fi disponibile
 doar când această extensie a fost compilată în interiorul PHP, sau a fost
 încărcată dinamic în timpul rulării. În plus, aceste constante specifice
 driver-ului trebuie utilizate numai dacă utilizaţi acest driver.
-Utilizarea atributelor specifice mysql cu driver-ul postgres poate rezulta
+Utilizarea atributelor specifice unui driver cu un alt driver poate rezulta
 într-un comportament imprevizibil. <function>PDO::getAttribute</function>
 poate fi utilizată pentru a obţine atributul <constant>PDO_ATTR_DRIVER_NAME
 </constant>, pentru a verifica driver-ul în caz că codul-sursă al 
@@ -1295,3 +1316,27 @@ este stabilit în &true;, atunci valoarea exportată este întoarsă ca un
 (valoarea implicită) va efectua operația opusă.'>
 
 <!ENTITY reflection.export.param.name 'Reflecția ce va fi exportată.'>
+
+<!-- SPL -->
+<!ENTITY spl.datastructures.intro.title '<title>Structuri de date</title>'>
+
+<!ENTITY spl.exceptions.intro.title '<title>Excepţii</title>'>
+<!ENTITY spl.exceptions.intro '<partintro><para>SPL oferă un set de Excepţii
+standard.</para><para>Vedeţi de asemenea
+<xref linkend="reserved.exceptions" /></para></partintro>'>
+
+<!ENTITY spl.files.intro.title '<title>Manipularea fişierelor</title>'>
+<!ENTITY spl.files.intro '<partintro><para>SPL oferă câteva clase pentru a
+lucra cu fişiere.</para></partintro>'>
+
+<!ENTITY spl.interfaces.intro.title '<title>Interfeţe</title>'>
+<!ENTITY spl.interfaces.intro '<para>SPL oferă un set de interfeţe.</para>
+<para>Vedeţi de asemenea <xref linkend="reserved.interfaces" /></para>'>
+<!ENTITY spl.interfaces.list '<title>Lista interfeţelor</title>'>
+
+<!ENTITY spl.iterators.intro.title '<title>Iteratori</title>'>
+<!ENTITY spl.iterators.intro '<para>SPL oferă un set de iteratori pentru a
+traversa prin obiecte.</para>'>
+
+<!ENTITY spl.misc.intro.title '<title>Clase diverse</title>'>
+<!ENTITY spl.misc.intro '<partintro><para>Clase ce nu se încadrează în alte categorii SPL.</para></partintro>'>
