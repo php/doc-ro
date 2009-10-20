@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 288721 $ -->
+<!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: simionea Status: ready -->
+<section xml:id="apache.configuration" xmlns="http://docbook.org/ns/docbook">
+ &reftitle.runtime;
+ <para>
+  Comportamentul modulului PHP pentru Apache este afectat de parametrii din
+  &php.ini;. Parametrii de configurare din &php.ini; pot fi modificaţi de cei
+  stabiliţi cu ajutorul
+  <link linkend="configuration.changes.apache">php_flag</link> în fişierul de
+  configurare al serverului sau din fişierele locale &htaccess;.
+ </para>
+ <example>
+  <title>Deconectarea prelucrării PHP pentru un director utilizând &htaccess;</title>
+  <programlisting>php_flag engine off</programlisting>
+ </example>
+ <para>
+  <table>
+   <title>Opţiunile de configurare Apache</title>
+   <tgroup cols="4">
+    <thead>
+     <row>
+      <entry>Denumire</entry>
+      <entry>Valoare implicită</entry>
+      <entry>Se poate schimba</entry>
+      <entry>Istoric schimbări</entry>
+     </row>
+    </thead>
+    <tbody>
+     <row>
+      <entry><link linkend="ini.engine">engine</link></entry>
+      <entry>"1"</entry>
+      <entry>PHP_INI_ALL</entry>
+      <entry>Disponibilă începând cu PHP 4.0.5.</entry>
+     </row>
+     <row>
+      <entry><link linkend="ini.child-terminate">child_terminate</link></entry>
+      <entry>"0"</entry>
+      <entry>PHP_INI_ALL</entry>
+      <entry>Disponibilă începând cu PHP 4.0.5.</entry>
+     </row>
+     <row>
+      <entry><link linkend="ini.last-modified">last_modified</link></entry>
+      <entry>"0"</entry>
+      <entry>PHP_INI_ALL</entry>
+      <entry>Disponibilă începând cu PHP 4.0.5.</entry>
+     </row>
+     <row>
+      <entry><link linkend="ini.xbithack">xbithack</link></entry>
+      <entry>"0"</entry>
+      <entry>PHP_INI_ALL</entry>
+      <entry>Disponibilă începând cu PHP 4.0.5.</entry>
+     </row>
+    </tbody>
+   </tgroup>
+  </table>
+  &ini.php.constants;
+ </para>
+ 
+ &ini.descriptions.title;
+ 
+ <para>
+  <variablelist>
+   <varlistentry xml:id="ini.engine">
+    <term>
+     <parameter>engine</parameter>
+     <type>boolean</type>
+    </term>
+    <listitem>
+     <para>
+      Conectează sau deconectează prelucrarea PHP. Această directivă este utilă
+      doar pentru versiunea PHP ca modul al Apache. Este utilizată de site-uri
+      care doresc să conecteze sau să deconecteze prelucrarea PHP pentru unele
+      directoare sau servere virtuale. Stabilind
+      <userinput>engine off</userinput> în locurile corespunzătoare din
+      fişierul &httpd.conf; PHP poate fi conectat sau deconectat.
+     </para>
+    </listitem>
+   </varlistentry>
+   <varlistentry xml:id="ini.child-terminate">
+    <term>
+     <parameter>child_terminate</parameter>
+     <type>boolean</type>
+    </term>
+    <listitem>
+     <para>
+      Specifică dacă scripturile PHP pot cere terminarea procesului-fiu la
+      sfârşitul interpelării, vedeţi de asemenea 
+      <function>apache_child_terminate</function>.
+     </para>
+    </listitem>
+   </varlistentry>
+   <varlistentry xml:id="ini.last-modified">
+    <term>
+     <parameter>last_modified</parameter>
+     <type>boolean</type>
+    </term>
+    <listitem>
+     <para>
+      Transmite data modificării sripturilor PHP ca antet Last-Modified: pentru
+      această interpelare.
+     </para>
+    </listitem>
+   </varlistentry>
+   <varlistentry xml:id="ini.xbithack">
+    <term>
+     <parameter>xbithack</parameter>
+     <type>boolean</type>
+    </term>
+    <listitem>
+     <para>
+      Prelucrează fişiere cu bitul de execuţie stabilit ca fişiere PHP
+      indiferent de terminaţia denumirii fişierului.
+     </para>
+    </listitem>
+   </varlistentry>
+  </variablelist>
+ </para>
+
+</section>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:1
+sgml-indent-data:t
+indent-tabs-mode:nil
+sgml-parent-document:nil
+sgml-default-dtd-file:"~/.phpdoc/manual.ced"
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+vim600: syn=xml fen fdm=syntax fdl=2 si
+vim: et tw=78 syn=sgml
+vi: ts=1 sw=1
+-->
