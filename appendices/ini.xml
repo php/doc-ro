@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 01483866fea8298add7fcb8fcdf0c246d2f63b02 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&php.ini; directives</title>
@@ -3643,7 +3643,7 @@ auto_prepend_file=security.php
    stabili pentru a configura PHP. Directivele ce se referă la extensii sunt
    listate şi detaliate pe paginile de documentare ale extensiilor
    respective. Informaţii despre directivele de sesiune, spre exemplu, pot fi
-   găsite pe <link linkend="ref.session">pagina de sesiuni</link>.
+   găsite pe <link linkend="session.configuration">pagina de sesiuni</link>.
   </para>
 
   <section xml:id="ini.sect.httpd-options">
