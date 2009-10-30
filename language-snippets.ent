@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 19030cba0c91adf119b64e0f70639abe81039849 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: ad5149caa0c74aa615d30363f1a8d296677044ee Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row><entry>4.2.0</entry><entry>Generatorul de
@@ -424,9 +424,9 @@ conn</parameter></term><listitem><para>O resursă MCVE_CONN întoarsă de
 
 <!-- geaman notes -->
 
-<!ENTITY gearman.parameter.host 'Denumirea gazdei serverului executor. Implicit este &apos;<literal>localhost</literal>&apos;.'>
+<!ENTITY gearman.parameter.host 'Denumirea gazdei serverului executor.'>
 
-<!ENTITY gearman.parameter.port 'Portul serverului executor. Implicit este <literal>4730</literal>.'>
+<!ENTITY gearman.parameter.port 'Portul serverului executor.'>
 
 <!ENTITY gearman.parameter.functionname 'O funcție înregistrată pe care trebuie să o execute serverul executor'>
 
