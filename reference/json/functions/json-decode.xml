@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: radical Status: ready -->
+<!-- EN-Revision: 4a0548937b4d25734de2296a39aab716ea0b477f Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
 <refentry xml:id="function.json-decode" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -59,11 +59,12 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Întoarce un <type>object</type>, sau dacă parametrul opţional
-   <parameter>assoc</parameter> este &true;, un <type>array</type> asociativ.
-   &null; este întors dacă parametrul <parameter>json</parameter> nu poate fi
-   decodificat sau dacă datele pentru codificare sunt mai adânci decât limita
-   de imbricare.
+   Întoarce valoarea codificată în <parameter>json</parameter> cu tipul PHP
+   corespunzător. Valorile <literal>true</literal>, <literal>false</literal> şi
+   <literal>null</literal> (indiferent de tipul caracterelor - minuscule sau
+   majuscule) sunt întoarse ca &true;, &false; şi &null; respectiv. &null; este
+   întors dacă parametrul <parameter>json</parameter> nu poate fi decodificat
+   sau dacă datele pentru codificare sunt mai adânci decât limita de imbricare.
   </para>
  </refsect1>
 

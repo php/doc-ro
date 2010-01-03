@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 9a3206a676222906d97d587f7f8379146d4bb27e Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.trigger-error" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -82,6 +82,17 @@ if (assert($divisor == 0)) {
     </programlisting>
    </example>
   </para>
+ </refsect1>
+
+ <refsect1 role="notes">
+  &reftitle.notes;
+  <warning>
+   <para>
+     Entităţile HTML din <parameter>error_msg</parameter> nu sunt "evadate".
+     Utilizaţi <function>htmlentities</function> asupra mesajului dacă eroarea
+     trebuie afişată într-un navigator.
+   </para>
+  </warning>
  </refsect1>
 
  <refsect1 role="seealso">

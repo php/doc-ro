@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 968a1753bf5236f78665d08da89c7c7a9a636c3b Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.intval" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -19,7 +19,9 @@
    Întoarce valoarea de tip <type>integer</type> a parametrului
    <parameter>var</parameter>, utilizând baza
    <parameter>base</parameter> specificată pentru a efectua conversia (baza
-   implicită este 10).
+   implicită este 10). <function>intval</function> nu trebuie utilizat asupra
+   obiectelor, deoarece aceasta va provoca o eroare de nivel
+   <constant>E_NOTICE</constant> şi va întoarce 1.
   </para>
  </refsect1>
 
@@ -39,7 +41,7 @@
      <term><parameter>base</parameter></term>
      <listitem>
       <para>
-       Baza pentru efectuarea conversiei (baza implicită este 10)
+       Baza pentru efectuarea conversiei
       </para>
      </listitem>
     </varlistentry>
@@ -95,6 +97,8 @@ echo intval(420000000000000000000);   // 0
 echo intval('420000000000000000000'); // 2147483647
 echo intval(42, 8);                   // 42
 echo intval('42', 8);                 // 34
+echo intval(array());                 // 0
+echo intval(array('foo', 'bar'));     // 1
 ?>
 ]]>
     </programlisting>
