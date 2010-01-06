@@ -1,8 +1,8 @@
-ATENŢIE !!! Informaţia din acest fişier este învechită.
+ATENȚIE !!! Informația din acest fișier este învechită.
 
 Files					Translators
 ==============================================================================
-security/apache.xml			Serban Gh. Ghita
+security/apache.xml			Serban Gh. Ghiță
 bookinfo.xml				Adrian Jurjica
 preface.xml				Adrian Jurjica
 language-defs.ent           		Paul Dorneanu; Daniel Toma
@@ -120,7 +120,7 @@ functions/mssql.xml			***
 functions/muscat.xml			***
 functions/mysql.xml			Gabriel PREDA
 functions/ncurses.xml			***
-functions/network.xml			Cristian C�mpean
+functions/network.xml			Cristian Câmpean
 functions/nis.xml			***
 functions/oci8.xml			Adrian Ciutureanu
 functions/openssl.xml			***
@@ -159,9 +159,9 @@ functions/yaz.xml			***
 functions/zip.xml			***
 functions/zlib.xml			***
 -------- language ----------------------------------------------------------
-language/basic-syntax.xml		Cristi R�dulescu
-language/constants.xml			Cristi R�dulescu
-language/control-structures.xml		Cristi R�dulescu
+language/basic-syntax.xml		Cristi Rădulescu
+language/constants.xml			Cristi Rădulescu
+language/control-structures.xml		Cristi Rădulescu
 language/expressions.xml		***
 language/functions.xml			***
 language/oop.xml			***
@@ -170,7 +170,7 @@ language/references.xml			***
 language/types.xml			***
 language/variables.xml			***
 -------- ZendApi (repository/ZendAPI/ro) -----------------------------------
-manual.xml				N�stas� Dorel
-Extending_Zend.xml			N�stas� Dorel
-Extending_Zend_Introduction.xml		N�stas� Dorel
-Extending_Zend_Overview.xml		N�stas� Dorel
+manual.xml				Năstasă Dorel
+Extending_Zend.xml			Năstasă Dorel
+Extending_Zend_Introduction.xml		Năstasă Dorel
+Extending_Zend_Overview.xml		Năstasă Dorel
