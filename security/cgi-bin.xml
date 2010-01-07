@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: zamolxe Status: ready -->
+<!-- EN-Revision: c28080053047ab4c34c6759e2234065259a76486 Maintainer: zamolxe Status: ready -->
 <!-- CREDITS: simionea -->
 <!-- splitted from ./index.xml, last change in rev 1.66 -->
   <chapter xml:id="security.cgi-bin" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -67,9 +67,8 @@
        document protejat de pe serverul web.
       </simpara>
       <simpara>
-       În PHP, opţiunea din timpul compilării
-       <link linkend="configure.enable-force-cgi-redirect">--enable-force-cgi-redirect</link>
-       şi directivele de configuraţie la rulare
+       În PHP, directivele de configurare în timpul rulării
+       <link linkend="ini.cgi.force-redirect">cgi.force_redirect</link>,
        <link linkend="ini.doc-root">doc_root</link> şi
        <link linkend="ini.user-dir">user_dir</link> pot fi utilizate pentru a
        preveni acest atac, dacă arborele de documente de pe server conţine
@@ -105,13 +104,15 @@
    </sect1>
 
    <sect1 xml:id="security.cgi-bin.force-redirect">
-    <title>Cazul 2: utilizarea <literal>--enable-force-cgi-redirect</literal></title>
+    <title>Cazul 2: utilizarea <literal>cgi.force_redirect</literal></title>
     <simpara>
-     Această opţiune disponibilă în timpul compilării este folosită pentru a
-     preveni rularea unui script PHP direct printr-un URL gen
+     Opţiunea de configurare <link linkend="ini.cgi.force-redirect">cgi.force_redirect</link>
+	 previne rularea unui script PHP direct printr-un URL gen
      <filename role="php">http://my.host/cgi-bin/php/secretdir/script.php</filename>.
      PHP va acţiona în acest mod numai dacă a trecut printr-o regulă de
-     redirecţionare a serverului web.
+     redirecţionare a serverului web. PHP de versiune anterioară 4.2.0 utiliza
+     pentru aceasta opţiunea la compilare
+     <literal>--enable-force-cgi-redirect</literal>.
     </simpara>
     <simpara>
      De obicei redirecţionarea în configuraţia Apache se efectuează cu ajutorul

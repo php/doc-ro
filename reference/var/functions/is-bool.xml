@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 97dd6830ae491e93efc78c68ff7bede1f9432fe7 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.is-bool" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -52,14 +52,14 @@
 $a = false;
 $b = 0;
 
-// Deoarece $a este un boolean, aceasta este adevărat
-if (is_bool($a)) {
-    echo "Da, aceasta este un boolean";
+// Deoarece $a este un boolean, funcţia va întoarce true
+if (is_bool($a) === true) {
+    echo "Da, acesta este un boolean";
 }
 
-// Deoarece $b nu este un boolean, aceasta nu este adevărat
-if (is_bool($b)) {
-    echo "Da, aceasta este un boolean";
+// Deoarece $b nu este un boolean, funcţia va întoarce false
+if (is_bool($b) === false) {
+    echo "Nu, acesta nu este un boolean";
 }
 ?>
 ]]>
