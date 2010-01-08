@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: alexxed Status: ready -->
+<!-- EN-Revision: 8869a46dc2afab90bd8ff4d206cca99c816d4c7d Maintainer: alexxed Status: ready -->
 <!-- CREDITS: simionea -->
 <section xml:id="mbstring.configuration" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.runtime;
@@ -22,61 +22,64 @@
       <entry><link linkend="ini.mbstring.language">mbstring.language</link></entry>
       <entry>"neutral"</entry>
       <entry>PHP_INI_PERDIR</entry>
-      <entry>Disponibil de la PHP 4.3.0.</entry>
+      <entry>Disponibilă începând cu PHP 4.3.0.</entry>
      </row>
      <row>
       <entry><link linkend="ini.mbstring.detect-order">mbstring.detect_order</link></entry>
       <entry>NULL</entry>
       <entry>PHP_INI_ALL</entry>
-      <entry>Disponibil de la PHP 4.0.6.</entry>
+      <entry>Disponibilă începând cu PHP 4.0.6.</entry>
      </row>
      <row>
       <entry><link linkend="ini.mbstring.http-input">mbstring.http_input</link></entry>
       <entry>"pass"</entry>
       <entry>PHP_INI_ALL</entry>
-      <entry>Disponibil de la PHP 4.0.6.</entry>
+      <entry>Disponibilă începând cu PHP 4.0.6.</entry>
      </row>
      <row>
       <entry><link linkend="ini.mbstring.http-output">mbstring.http_output</link></entry>
       <entry>"pass"</entry>
       <entry>PHP_INI_ALL</entry>
-      <entry>Disponibil de la PHP 4.0.6.</entry>
+      <entry>Disponibilă începând cu PHP 4.0.6.</entry>
      </row>
      <row>
       <entry><link linkend="ini.mbstring.internal-encoding">mbstring.internal_encoding</link></entry>
       <entry>NULL</entry>
       <entry>PHP_INI_ALL</entry>
-      <entry>Disponibil de la PHP 4.0.6.</entry>
+      <entry>Disponibilă începând cu PHP 4.0.6.</entry>
      </row>
      <row>
       <entry>mbstring.script_encoding</entry>
       <entry>NULL</entry>
       <entry>PHP_INI_ALL</entry>
-      <entry>Disponibil de la PHP 4.3.0.</entry>
+      <entry>Disponibilă începând cu PHP 4.3.0.</entry>
      </row>
      <row>
       <entry><link linkend="ini.mbstring.substitute-character">mbstring.substitute_character</link></entry>
       <entry>NULL</entry>
       <entry>PHP_INI_ALL</entry>
-      <entry>Disponibil de la PHP 4.0.6.</entry>
+      <entry>Disponibilă începând cu PHP 4.0.6.</entry>
      </row>
      <row>
       <entry><link linkend="ini.mbstring.func-overload">mbstring.func_overload</link></entry>
       <entry>"0"</entry>
-      <entry>PHP_INI_PERDIR</entry>
-      <entry>PHP_INI_SYSTEM in PHP &lt;= 4.2.3. Disponibil de la PHP 4.2.0.</entry>
+      <entry>PHP_INI_SYSTEM</entry>
+      <entry>
+       PHP_INI_SYSTEM în PHP &lt;= 4.2.3; PHP_INI_SYSTEM | PHP_INI_PERDIR de la
+       PHP 4.3 până la 5.2.6. Disponibilă începând cu PHP 4.2.0.
+      </entry>
      </row>
      <row>
       <entry><link linkend="ini.mbstring.encoding-translation">mbstring.encoding_translation</link></entry>
       <entry>"0"</entry>
       <entry>PHP_INI_PERDIR</entry>
-      <entry>Disponibil de la PHP 4.3.0.</entry>
+      <entry>Disponibilă începând cu PHP 4.3.0.</entry>
      </row>
      <row>
       <entry><link linkend="ini.mbstring.strict-detection">mbstring.strict_detection</link></entry>
       <entry>"0"</entry>
       <entry>PHP_INI_ALL</entry>
-      <entry>Disponibil de la PHP 5.1.2.</entry>
+      <entry>Disponibilă începând cu PHP 5.1.2.</entry>
      </row>
     </tbody>
    </tgroup>
