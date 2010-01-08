@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 01483866fea8298add7fcb8fcdf0c246d2f63b02 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 1f6ba6f4085a044ff37dfa49f8d4174882e0073e Maintainer: simionea Status: ready -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&php.ini; directives</title>
@@ -613,7 +613,7 @@
        <entry>Eliminat în PHP 6.0.0.</entry>
       </row>
       <row>
-       <entry>detect_unicode</entry>
+       <entry><link linkend="ini.detect-unicode">detect_unicode</link></entry>
        <entry>"1"</entry>
        <entry>PHP_INI_ALL</entry>
        <entry>Disponibil începând cu PHP 5.1.0. Eliminat în PHP 6.0.0.</entry>
@@ -3056,6 +3056,12 @@
        <entry>PHP_INI_ALL în PHP &lt;= 4.2.3.</entry>
       </row>
       <row>
+       <entry><link linkend="ini.max-file-uploads">max_file_uploads</link></entry>
+       <entry>20</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu PHP 5.2.12.</entry>
+      </row>
+      <row>
        <entry><link linkend="ini.upload-tmp-dir">upload_tmp_dir</link></entry>
        <entry>NULL</entry>
        <entry>PHP_INI_SYSTEM</entry>
@@ -3488,6 +3494,12 @@
        <entry>Disponibil începând cu PHP 4.3.0. Eliminat în PHP 5.0.0.</entry>
       </row>
       <row>
+       <entry><link linkend="ini.zend.enable-gc">zend.enable_gc</link></entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibil începând cu PHP 5.3.0.</entry>
+      </row>
+      <row>
        <entry><link linkend="ini.zend.ze1-compatibility-mode">zend.ze1_compatibility_mode</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_ALL</entry>
@@ -3552,6 +3564,11 @@
    Aceste secţiuni nu afectează în mod direct PHP. Ele sunt utilizate pentru a
    grupa directivele &php.ini; şi pentru a stabili ca ele să acţioneze asupra
    unui host sau asupra unei căi anumite.
+  </para>
+  <para>
+   Aceste secţiuni sunt utilizate doar în modul CGI/FastCGI şi nu pot stabili
+   directivele <link linkend="ini.extension">extension</link> şi
+   <link linkend="ini.zend-extension">zend_extension</link>.
   </para>
   <para>
    <table>
@@ -3721,6 +3738,18 @@ auto_prepend_file=security.php
       <entry>PHP_INI_ALL în PHP &lt;= 4.0.0.</entry>
      </row>
      <row>
+      <entry>disable_functions</entry>
+      <entry>""</entry>
+      <entry>numai în &php.ini;</entry>
+      <entry>Disponibil începând cu PHP 4.0.1.</entry>
+     </row>
+     <row>
+      <entry>disable_classes</entry>
+      <entry>""</entry>
+      <entry>numai în &php.ini;</entry>
+      <entry>Disponibil începând cu PHP 4.3.2.</entry>
+     </row>
+     <row>
       <entry>expose_php</entry>
       <entry>"1"</entry>
       <entry>numai în &php.ini;</entry>
@@ -3732,7 +3761,13 @@ auto_prepend_file=security.php
       <entry>PHP_INI_ALL</entry>
       <entry>Disponibil începând cu PHP 5.0.0. Eliminat în PHP 5.3.0.</entry>
      </row>
-    </tbody>
+     <row>
+      <entry>detect_unicode</entry>
+      <entry>"1"</entry>
+      <entry>PHP_INI_ALL</entry>
+      <entry>Disponibil începând cu PHP 5.1.0. Eliminat în PHP 6.0.0.</entry>
+     </row>
+     </tbody>
     </tgroup>
    </table>
    </para>
@@ -3821,15 +3856,13 @@ auto_prepend_file=security.php
        <listitem>
         <para>
          Afişarea avertizării în cazul când argumentele sunt transmise prin
-         referinţă în timpul apelării funcţiei. Această metodă e descurajată
-         în PHP 5.3.0 şi e posibil să nu mai fie susţinută în versiunile
-         viitoare ale PHP/Zend. Metoda încurajată de specificare a argumentelor
-         ce trebuie transmise prin referinţă este în declaraţia funcţiei.
-         Sunteţi încurajat să încercaţi să dezactivaţi această opţiune şi să
-         aveţi grijă ca scripturile să lucreze în mod normal cu ea, pentru a
-         vă asigura că ele vor funcţiona cu versiunile viitoare ale
-         limbajului (veţi primi o avertizare de fiecare dată când utilizaţi
-         această facilitate).
+         referinţă în timpul apelării funcţiei. Metoda încurajată de
+         specificare a argumentelor ce trebuie transmise prin referinţă este în
+         declaraţia funcţiei. Sunteţi încurajat să încercaţi să dezactivaţi
+         această opţiune şi să aveţi grijă ca scripturile să lucreze în mod
+         normal cu ea, pentru a vă asigura că ele vor funcţiona cu versiunile
+         viitoare ale limbajului (veţi primi o avertizare de fiecare dată când
+         utilizaţi această facilitate).
         </para>
         <para>
          Transmiterea argumentelor prin referinţă la momentul apelării
@@ -3839,6 +3872,14 @@ auto_prepend_file=security.php
          Pentru a evita efecte secundare este mai bine de a specifica care
          argumente sunt transmise prin referinţă numai în declaraţia
          funcţiei.
+        </para>
+        <para>
+         În PHP5 <literal>allow_call_time_pass_reference</literal> este
+         descurajată, în versiuni anterioare PHP 5.3.0 utilizarea acestei
+         facilităţi va emite o avertizate <constant>E_COMPILE_WARNING</constant>,
+         iar în PHP 5.3.0+ avertizarea a devenit o notificare
+         <constant>E_DEPRECATED</constant>. Această directivă este eliminată
+         începând cu PHP 6.
         </para>
         <para>
          Accesaţi de asemenea <link linkend="language.references">explicaţia
@@ -3862,26 +3903,86 @@ auto_prepend_file=security.php
        </listitem>
       </varlistentry>
 
-      <varlistentry xml:id="ini.zend.ze1-compatibility-mode">
-       <term>
-        <parameter>zend.ze1_compatibility_mode</parameter>
-        <type>boolean</type>
-       </term>
-       <listitem>
-        <para>
-         Activează modul de compatibilitate cu Zend Engine 1 (PHP 4).
-         Aceasta afectează clonarea, transformarea (obiectele fără
-         proprietăţi se transformă în &false; sau 0), şi
-         <link linkend="language.oop5.object-comparison">comparaţia
-         obiectelor</link>. În acest mod, obiectele sunt transmise prin
-         valoare, dar nu prin referinţă, cum e stabilit implicit.
-        </para>
-        <para>
-         Accesaţi de asemenea secţiunea întitulată
-         <link linkend="migration5">Migrarea de la PHP 4 la PHP 5</link>.
-        </para>
-       </listitem>
-      </varlistentry>
+     <varlistentry xml:id="ini.disable-functions">
+      <term>
+       <parameter>disable_functions</parameter>
+       <type>string</type>
+      </term>
+      <listitem>
+       <simpara>
+        Această directivă vă permite să dezactivaţi anumite funcţii din motive
+        de <link linkend="security">securitate</link>. Ea conţine o listă a
+        denumirilor funcţiilor, separate prin virgulă. disable_functions
+        nu este afectată de <link linkend="ini.safe-mode">Modul securizat</link>.
+       </simpara>
+       <simpara>
+        Această directivă trebuie să fie stabilită în &php.ini; De exemplu nu
+        puteţi stabili aceasta în &httpd.conf;.
+       </simpara>
+      </listitem>
+     </varlistentry>
+     
+     <varlistentry xml:id="ini.disable-classes">
+      <term>
+       <parameter>disable_classes</parameter>
+       <type>string</type>
+      </term>
+      <listitem>
+       <simpara>
+        Această directivă vă permite să dezactivaţi anumite clase din motive
+        de <link linkend="security">securitate</link>. Ea conţine o listă a
+        denumirilor claselor, separate prin virgulă. disable_classes
+        nu este afectată de <link linkend="ini.safe-mode">Modul securizat</link>.
+       </simpara>
+       <simpara>
+        Această directivă trebuie să fie stabilită în &php.ini; De exemplu nu
+        puteţi stabili aceasta în &httpd.conf;.
+       </simpara>
+       <note>
+        <title>Notă despre disponibilitate</title>
+        <simpara>
+         Această directivă a devenit disponibilă în PHP 4.3.2
+        </simpara>
+       </note>
+      </listitem>
+     </varlistentry>
+     
+     <varlistentry xml:id="ini.zend.ze1-compatibility-mode">
+      <term>
+       <parameter>zend.ze1_compatibility_mode</parameter>
+       <type>boolean</type>
+      </term>
+      <listitem>
+       <para>
+        Activează modul de compatibilitate cu Zend Engine 1 (PHP 4).
+        Aceasta afectează clonarea, transformarea (obiectele fără
+        proprietăţi se transformă în &false; sau 0), şi
+        <link linkend="language.oop5.object-comparison">comparaţia
+        obiectelor</link>. În acest mod, obiectele sunt transmise prin
+        valoare, dar nu prin referinţă, cum e stabilit implicit.
+       </para>
+       <para>
+        Accesaţi de asemenea secţiunea întitulată
+        <link linkend="migration5">Migrarea de la PHP 4 la PHP 5</link>.
+       </para>
+      </listitem>
+     </varlistentry>
+
+     <varlistentry xml:id="ini.detect-unicode">
+      <term>
+       <parameter>detect_unicode</parameter>
+       <type>boolean</type>
+      </term>
+      <listitem>
+       <para>
+        Verifică prezenţa BOM (Byte Order Mark) şi dacă fişierul conţine
+        caractere multioctet valide. Această detectare este efectuată înaintea
+        procesării <function>__halt_compiler</function>. Este disponibilă doar
+        în modul Zend Multibyte.
+       </para>
+      </listitem>
+     </varlistentry>
+
      </variablelist>
     </para>
    </section>
@@ -4567,8 +4668,7 @@ auto_prepend_file=security.php
     <para>
      Accesaţi de asemenea:
      <link linkend="ini.magic-quotes-gpc">magic_quotes_gpc</link>,
-     <link linkend="ini.magic-quotes-runtime">magic_quotes_runtime</link>,
-     şi
+     <link linkend="ini.magic-quotes-runtime">magic_quotes_runtime</link> şi
      <link linkend="ini.magic-quotes-sybase">magic_quotes_sybase</link>.
     </para>
    </section>
@@ -4595,6 +4695,12 @@ auto_prepend_file=security.php
          <entry></entry>
         </row>
         <row>
+         <entry>open_basedir</entry>
+         <entry>NULL</entry>
+         <entry>PHP_INI_ALL</entry>
+         <entry>PHP_INI_SYSTEM în PHP &lt; 5.3.0</entry>
+        </row>
+        <row>
          <entry>doc_root</entry>
          <entry>NULL</entry>
          <entry>PHP_INI_SYSTEM</entry>
@@ -4614,6 +4720,30 @@ auto_prepend_file=security.php
         </row>
         <row>
          <entry>extension</entry>
+         <entry>NULL</entry>
+         <entry>numai în &php.ini;</entry>
+         <entry></entry>
+        </row>
+        <row>
+         <entry>zend_extension</entry>
+         <entry>NULL</entry>
+         <entry>numai în &php.ini;</entry>
+         <entry></entry>
+        </row>
+        <row>
+         <entry>zend_extension_debug</entry>
+         <entry>NULL</entry>
+         <entry>numai în &php.ini;</entry>
+         <entry></entry>
+        </row>
+        <row>
+         <entry>zend_extension_debug_ts</entry>
+         <entry>NULL</entry>
+         <entry>numai în &php.ini;</entry>
+         <entry></entry>
+        </row>
+        <row>
+         <entry>zend_extension_ts</entry>
          <entry>NULL</entry>
          <entry>numai în &php.ini;</entry>
          <entry></entry>
@@ -4719,6 +4849,74 @@ include_path=".;c:\php\includes"
        </listitem>
       </varlistentry>
 
+     <varlistentry xml:id="ini.open-basedir">
+      <term>
+       <parameter>open_basedir</parameter>
+       <type>string</type>
+      </term>
+      <listitem>
+       <para>
+        Limitează fişierele ce pot fi deschise de PHP în arborele directoarelor
+        specificat, inclusiv şi însuşi fişierul. Această directivă
+        <emphasis>NU</emphasis> este afectată de activarea sau dezactivarea 
+        Modului securizat.
+       </para>
+       <para>
+        Când un script încearcă să deschidă un fişier, de exemplu cu
+        <function>fopen</function> sau <function>gzopen</function>,
+        se verifică amplasarea fişierului. Dacă fişierul este în afara
+        arborelui de directoare specificat, PHP va refuza să-l deschidă. Toate
+        legăturile simbolice sunt rezolvate, de aceea nu este posibil de a
+        evita această restricţie cu un symlink. Dacă fişierul nu există atunci
+        symlink-ul nu poate fi rezolvat şi denumireas fişierului este comparată
+        cu <option>open_basedir</option> (rezolvată).
+       </para>
+       <para>
+        Valoarea specială <systemitem class="filesystem">.</systemitem> indică
+        că directorul de lucru al script-ului va fi utilizat în calitate de
+        director de bază. Aceasta însă este un pic periculos, deoarece
+        directorul de lucru al script-ului poate fi uşor schimbat cu
+        <function>chdir</function>.
+       </para>
+       <para>
+        În <filename>httpd.conf</filename>, <option>open_basedir</option> poate
+        fi deconectată (de ex. pentru unele gazde virtuale)
+        <link linkend="configuration.changes.apache">în acelaşi mod</link> ca
+        şi orice altă directivă de configurare astfel:
+        "<literal>php_admin_value open_basedir none</literal>".
+       </para>
+       <para>
+        În Windows, denumirile directoarelor trebuie separate cu punct şi
+        virgulă. În celelalte sisteme denumirile directoarelor trebuie separate
+        cu două puncte. În calitate de modul Apache, căile pentru
+        <option>open_basedir</option> din directoarele-părinte sunt acum
+        moştenite automat.
+       </para>
+       <para>
+         Restricţia specificată cu <option>open_basedir</option> este de fapt
+         un prefix, şi nu o denumire a directorului. Aceasta înseamnă că
+         "<literal>open_basedir = /dir/incl</literal>" de asemenea permite
+         accesul la "<literal>/dir/include</literal>" şi
+         "<literal>/dir/incls</literal>", dacă acestea există. Atunci când
+         doriţi să restricţionaţi accesul doar la un anumit director, adăugaţi
+         un slash la sfârşit. De exemplu:
+         <literal>open_basedir = /dir/incl/</literal>
+       </para>
+       <para>
+        Modul implicit este de a permite deschiderea tuturor fişierelor.
+       </para>
+       <note>
+        <para>
+         Începând cu PHP 5.3.0 open_basedir poate fi restrânsă în timpul
+         rulării. Aceasta înseamnă că dacă open_basedir este stabilită la
+         <literal>/www/</literal> în &php.ini;, un script poate restrânge
+         configuraţia la <literal>/www/tmp/</literal> în timpul rulării cu
+         <function>ini_set</function>
+        </para>
+       </note>
+      </listitem>
+     </varlistentry>
+     
       <varlistentry xml:id="ini.doc-root">
        <term>
         <parameter>doc_root</parameter>
@@ -4988,6 +5186,12 @@ include_path=".;c:\php\includes"
          <entry>PHP_INI_PERDIR</entry>
          <entry>PHP_INI_ALL în PHP &lt;= 4.2.3.</entry>
         </row>
+        <row>
+         <entry>max_file_uploads</entry>
+         <entry>20</entry>
+         <entry>PHP_INI_ALL</entry>
+         <entry>Disponibilă începând cu PHP 5.2.12.</entry>
+        </row>
        </tbody>
       </tgroup>
      </table>
@@ -5045,7 +5249,20 @@ include_path=".;c:\php\includes"
 
        </listitem>
       </varlistentry>
-     </variablelist>
+      <varlistentry xml:id="ini.max-file-uploads">
+       <term>
+        <parameter>max_file_uploads</parameter>
+        <type>integer</type>
+       </term>
+       <listitem>
+        <para>
+         Numărul maxim de fişiere permise de a fi încărcate simultan.
+        </para>
+
+        &ini.shorthandbytes;
+
+       </listitem>
+      </variablelist>
     </para>
    </section>
 
