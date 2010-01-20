@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 30cbafce81e7158f28eeb4e8faec717303c53cad Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 7f98d8474ef7e195535bb1fbdc609f5766d2dcca Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -34,6 +34,12 @@ suspenda până când execuţia programului se va încheia.</para></note>'>
 <!ENTITY note.func-callback '<note xmlns="http://docbook.org/ns/docbook">
 <simpara>În locul denumirii funcţiei poate fi indicat un tablou conţinând o
 referinţă la obiect şi o denumire a metodei.</simpara></note>'>
+
+<!ENTITY note.func-callback-exceptions '<note xmlns="http://docbook.org/ns/docbook">
+<para>Funcțiile de apel invers înregistrate cu astfel de funcții ca
+<function>call_user_func</function> și <function>call_user_func_array</function>
+nu vor fi apelate dacă există o excepție neinterceptată emisă într-un apel
+precedent.</para></note>'>
 
 <!ENTITY note.funcnoparam '<note xmlns="http://docbook.org/ns/docbook"><para>
 Deoarece această funcţie îşi determină detaliile parametrilor în dependenţă de
