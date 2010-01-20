@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 1f9807245a7e6aa840fc4f2f88eb2c2b6c78b22f Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.print-r" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -51,9 +51,9 @@
      <listitem>
       <para>
        Dacă doriţi să captaţi ceea ce afişează <function>print_r</function>,
-       utilizaţi parametrul <parameter>return</parameter>. Dacă acest parametru
+       utilizaţi parametrul <parameter>return</parameter>. Când acest parametru
        este stabilit în &true;, <function>print_r</function> va întoarce
-       ceea ce generează, în loc să afişeze (ceea ce este implicit).
+       informația, în loc să o afişeze.
       </para>
      </listitem>
     </varlistentry>
@@ -69,6 +69,11 @@
    <type>array</type>, valorile vor fi prezentate într-un format care arată
    cheile şi elementele. O notare similară este utilizată pentru tipuri
    <type>object</type>.
+  </para>
+  <para>
+   Când parametrul <parameter>return</parameter> este stabilit în &true;,
+   această funcție va întoarce un <type>string</type>. În caz contrar, valoarea
+   întoarsă este &true;.
   </para>
  </refsect1>
 
