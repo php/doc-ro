@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 1f6ba6f4085a044ff37dfa49f8d4174882e0073e Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 4bc27d87661bbabcb4aeb886a264a42efc80278a Maintainer: simionea Status: ready -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&php.ini; directives</title>
@@ -28,7 +28,7 @@
        <entry><link linkend="ini.allow-call-time-pass-reference">allow_call_time_pass_reference</link></entry>
        <entry>"1"</entry>
        <entry>PHP_INI_PERDIR</entry>
-       <entry>PHP_INI_ALL în PHP &lt;= 4.0.0. Eliminat în PHP 6.0.0.</entry>
+       <entry>PHP_INI_ALL în PHP 4.0.0. Eliminat în PHP 6.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.allow-url-fopen">allow_url_fopen</link></entry>
@@ -250,7 +250,7 @@
        <entry><link linkend="ini.asp-tags">asp_tags</link></entry>
        <entry>"0"</entry>
        <entry>PHP_INI_PERDIR</entry>
-       <entry>PHP_INI_ALL în PHP &lt;= 4.0.0.</entry>
+       <entry>PHP_INI_ALL în PHP 4.0.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.assert.active">assert.active</link></entry>
@@ -2735,7 +2735,7 @@
        <entry><link linkend="ini.short-open-tag">short_open_tag</link></entry>
        <entry>"1"</entry>
        <entry>PHP_INI_ALL</entry>
-       <entry>PHP_INI_ALL în PHP &lt;= 4.0.0. PHP_INI_PERDIR în PHP &lt;= 5.3.0.</entry>
+       <entry>PHP_INI_ALL în PHP 4.0.0. PHP_INI_PERDIR în PHP &lt; 5.3.0.</entry>
       </row>
       <row>
        <entry>simple_cvs.authMethod</entry>
@@ -3711,13 +3711,13 @@ auto_prepend_file=security.php
       <entry>short_open_tag</entry>
       <entry>"1"</entry>
       <entry>PHP_INI_ALL</entry>
-      <entry>PHP_INI_ALL în PHP &lt;= 4.0.0. PHP_INI_PERDIR în PHP &lt;= 5.3.0.</entry>
+      <entry>PHP_INI_ALL în PHP 4.0.0. PHP_INI_PERDIR în PHP &lt; 5.3.0.</entry>
      </row>
      <row>
       <entry>asp_tags</entry>
       <entry>"0"</entry>
       <entry>PHP_INI_PERDIR</entry>
-      <entry>PHP_INI_ALL în PHP &lt;= 4.0.0.</entry>
+      <entry>PHP_INI_ALL în PHP 4.0.0.</entry>
      </row>
      <row>
       <entry>precision</entry>
@@ -3735,7 +3735,7 @@ auto_prepend_file=security.php
       <entry>allow_call_time_pass_reference</entry>
       <entry>"1"</entry>
       <entry>PHP_INI_PERDIR</entry>
-      <entry>PHP_INI_ALL în PHP &lt;= 4.0.0.</entry>
+      <entry>PHP_INI_ALL în PHP 4.0.0.</entry>
      </row>
      <row>
       <entry>disable_functions</entry>
@@ -4621,10 +4621,9 @@ auto_prepend_file=security.php
        </term>
        <listitem>
         <para>
-         Începând cu 4.0.0, PHP întotdeauna transmite implicit codificarea
-         caracterelor în antetul Content-type: . Pentru a dezactiva
-         trimiterea setului de caractere, pur şi simplu eliminaţi valoarea
-         acestui parametru.
+         PHP întotdeauna transmite implicit codificarea caracterelor în antetul
+         Content-type: . Pentru a dezactiva trimiterea setului de caractere, pur
+         şi simplu eliminaţi valoarea acestui parametru.
         </para>
        </listitem>
       </varlistentry>
