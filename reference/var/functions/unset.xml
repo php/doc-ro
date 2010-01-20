@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 4bc27d87661bbabcb4aeb886a264a42efc80278a Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.unset" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -207,13 +207,6 @@ foo();
        <entry>4.0.1</entry>
        <entry>
         A fost adăugată susținerea argumentelor multiple.
-       </entry>
-      </row>
-      <row>
-       <entry>4.0.0</entry>
-       <entry>
-        <function>unset</function> a devenit o expresie. (În PHP 3,
-        <function>unset</function> întotdeauna întorcea 1).
        </entry>
       </row>
      </tbody>
