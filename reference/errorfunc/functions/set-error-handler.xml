@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: simionea Status: ready -->
+<!-- EN-Revision: fb3676153f24067052976ccc377b7da3a6a9d380 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.set-error-handler" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -28,9 +28,11 @@
   </para>
   <para>
    Este important de a ţine minte că funcţia standardă de prelucrare a erorii a
-   PHP este ocolită complet. Setările <function>error_reporting</function> nu
-   vor avea nici un efect şi funcţia dumneavoastră de prelucrare a erorii va fi
-   apelată în orice caz - însă puteţi totuşi citi valoarea curentă a
+   PHP este ocolită complet pentru tipurile de erori specificate în
+   <parameter>error_types</parameter> dacă funcția de apel invers nu întoarce
+   &false;. Setările <function>error_reporting</function> nu vor avea nici un
+   efect şi funcţia dumneavoastră de prelucrare a erorii va fi apelată în orice
+   caz - însă puteţi totuşi citi valoarea curentă a
    <link linkend="ini.error-reporting">error_reporting</link> şi să acţionaţi
    corespunzător. Merită de menţionat că această valoare va fi 0 dacă
    instrucţiunea care a cauzat eroarea a fost prefixată cu
