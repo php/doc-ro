@@ -5,68 +5,68 @@
   <chapter xml:id="install.general" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
    <title>Aspecte generale privind instalarea</title>
    <para>
-    Înainte de a începe instalarea, trebuie să ştiţi pentru ce doriţi să
-    utilizaţi PHP. Există trei domenii principale de utilizare a PHP. Ele sunt
-    descrise în secţiunea <link linkend="intro-whatcando">Ce poate face
+    Înainte de a începe instalarea, trebuie să știți pentru ce doriți să
+    utilizați PHP. Există trei domenii principale de utilizare a PHP. Ele sunt
+    descrise în secțiunea <link linkend="intro-whatcando">Ce poate face
     PHP?</link>
     <itemizedlist>
-     <listitem><simpara>Site-uri web şi aplicaţii web (scripting de partea
+     <listitem><simpara>Site-uri web și aplicații web (scripting de partea
      server-ului)</simpara></listitem>
      <listitem><simpara>Scripting pentru linia de comandă</simpara></listitem>
-     <listitem><simpara>Aplicaţii de birou cu interfaţă grafică (GUI)</simpara></listitem>
+     <listitem><simpara>Aplicații de birou cu interfață grafică (GUI)</simpara></listitem>
     </itemizedlist>
    </para>
    <para>
-    Pentru prima, şi cea mai des întâlnită formă, veţi avea nevoie de trei
-    lucruri: însuşi PHP, un server web şi un navigator web. Probabil deja aveţi
-    un navigator web şi, în dependenţă de sistemul dumneavoastră de operare,
-    puteţi să aveţi şi un server web (de ex. Apache pe Linux şi MacOS X; IIS pe
-    Windows). Puteţi de asemenea să închiriaţi spaţiu web de la o companie.
-    În acest caz nu trebuie personal să configuraţi ceva, numai să scrieţi
-    script-urile PHP, să le încărcaţi pe server-ul care îl închiriaţi şi să
-    vedeţi rezultatele în navigator.
+    Pentru prima, și cea mai des întâlnită formă, veți avea nevoie de trei
+    lucruri: însuși PHP, un server web și un navigator web. Probabil deja aveți
+    un navigator web și, în dependență de sistemul dumneavoastră de operare,
+    puteți să aveți și un server web (de ex. Apache pe Linux și MacOS X; IIS pe
+    Windows). Puteți de asemenea să închiriați spațiu web de la o companie.
+    În acest caz nu trebuie personal să configurați ceva, numai să scrieți
+    script-urile PHP, să le încărcați pe server-ul care îl închiriați și să
+    vedeți rezultatele în navigator.
    </para>
    <para>
-    În caz că configuraţi personal server-ul şi PHP, aveţi două posibilităţi în
-    alegerea metodei de conectare dintre PHP şi server. Pentru multe servere
-    PHP are o interfaţă-modul directă (denumită de asemenea SAPI). Aceste
+    În caz că configurați personal server-ul și PHP, aveți două posibilități în
+    alegerea metodei de conectare dintre PHP și server. Pentru multe servere
+    PHP are o interfață-modul directă (denumită de asemenea SAPI). Aceste
     servere includ Apache, Microsoft Internet Information Server, serverele
-    Netscape şi iPlanet. Multe alte servere susţin ISAPI - interfaţa-modul
-    Microsoft (OmniHTTPd spre exemplu). Dacă PHP nu este susţinut ca modul
-    pentru server-ul dumneavoastră web, atunci oricând îl puteţi utiliza ca
-    procesor CGI sau FastCGI. Aceasta înseamnă să configuraţi serverul
+    Netscape și iPlanet. Multe alte servere susțin ISAPI - interfața-modul
+    Microsoft (OmniHTTPd spre exemplu). Dacă PHP nu este susținut ca modul
+    pentru server-ul dumneavoastră web, atunci oricând îl puteți utiliza ca
+    procesor CGI sau FastCGI. Aceasta înseamnă să configurați serverul
     dumneavoastră să utilizeze executabilul CGI al PHP pentru a procesa toate
-    cererile de fişiere PHP de pe server.
+    cererile de fișiere PHP de pe server.
    </para>
    <para>
-    Dacă de asemenea sunteţi interesat să utilizaţi PHP pentru scripting în
-    linia de comandă (de ex. să scrieţi scripturi care să genereze automat
-    careva imagini offline, sau să procesaţi fişiere textuale în dependenţă de
-    careva argumente pe care le transmiteţi), întotdeauna veţi avea nevoie de
-    executabilul pentru linia de comandă. Pentru a afla mai multe informaţii,
-    citiţi secţiunea despre <link linkend="features.commandline">scrierea
-    aplicaţiilor PHP pentru linia de comandă</link>. În acest caz nu veţi avea
+    Dacă de asemenea sunteți interesat să utilizați PHP pentru scripting în
+    linia de comandă (de ex. să scrieți scripturi care să genereze automat
+    careva imagini offline, sau să procesați fișiere textuale în dependență de
+    careva argumente pe care le transmiteți), întotdeauna veți avea nevoie de
+    executabilul pentru linia de comandă. Pentru a afla mai multe informații,
+    citiți secțiunea despre <link linkend="features.commandline">scrierea
+    aplicațiilor PHP pentru linia de comandă</link>. În acest caz nu veți avea
     nevoie de server sau navigator.
    </para>
    <para>
-    Cu PHP de asemenea puteţi scrie aplicaţii de birou cu interfaţă GUI
+    Cu PHP de asemenea puteți scrie aplicații de birou cu interfață GUI
     utilizând extensia PHP-GTK. Aceasta este o abordare total diferită decât
-    scrierea paginilor web, deoarece nu afişaţi careva HTML, dar gestionaţi
-    ferestre şi obiecte din cadrul lor. Pentru mai multe informaţii despre
-    PHP-GTK, vă rugăm să <link xlink:href="&url.php.gtk;">vizitaţi site-ul
+    scrierea paginilor web, deoarece nu afișați careva HTML, dar gestionați
+    ferestre și obiecte din cadrul lor. Pentru mai multe informații despre
+    PHP-GTK, vă rugăm să <link xlink:href="&url.php.gtk;">vizitați site-ul
     dedicat acestei extensii</link>. PHP-GTK nu este inclusă în distributivul
     oficial al PHP.
    </para>
    <para>
-    De acum înainte, această secţiune va lămuri configurarea PHP pentru servere
-    web pe Unix şi Windows cu interfeţe-modul şi executabile CGI. De asemenea
-    veţi găsi în următoarele secţiuni informaţii despre executabilul pentru
+    De acum înainte, această secțiune va lămuri configurarea PHP pentru servere
+    web pe Unix și Windows cu interfețe-modul și executabile CGI. De asemenea
+    veți găsi în următoarele secțiuni informații despre executabilul pentru
     linia de comandă.
    </para>
    <para>
-    Codul-sursă PHP şi distributivele binare pentru Windows pot fi găsite la
+    Codul-sursă PHP și distributivele binare pentru Windows pot fi găsite la
     <link xlink:href="&url.php.downloads;">&url.php.downloads;</link>.
-    Vă recomandăm să alegeţi o
+    Vă recomandăm să alegeți o
     <link xlink:href="&url.mirrors;">oglindă</link> mai apropiată pentru a
     descărca distributivele.
    </para>

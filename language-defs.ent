@@ -3,16 +3,16 @@
 
 <!-- Part titles used mostly in manual.xml itself -->
 <!ENTITY PHPManual                                "Manualul PHP">
-<!ENTITY Seealso                                  "Accesaţi de asemenea">
+<!ENTITY Seealso                                  "Accesați de asemenea">
 <!ENTITY Date                                     "Data:">
 <!ENTITY GettingStarted                           "Pentru început">
-<!ENTITY InstallAndConfigure                      "Installarea şi configurarea">
+<!ENTITY InstallAndConfigure                      "Installarea și configurarea">
 <!ENTITY Installation                             "Instalarea">
-<!ENTITY LanguageReference                        "Informaţii de referinţă despre limbaj">
-<!ENTITY Features                                 "Facilităţi">
+<!ENTITY LanguageReference                        "Informații de referință despre limbaj">
+<!ENTITY Features                                 "Facilități">
 <!ENTITY Security                                 "Securitatea">
-<!ENTITY FunctionReference                        "Informaţii de referinţă despre funcţii">
-<!ENTITY VariableandTypeRelatedExtensions         "Extensii referitoare la variabile şi tipuri">
+<!ENTITY FunctionReference                        "Informații de referință despre funcții">
+<!ENTITY VariableandTypeRelatedExtensions         "Extensii referitoare la variabile și tipuri">
 <!ENTITY TextProcessing                           "Procesarea textului">
 <!ENTITY AffectingPHPsBehaviour                   "Afectează comportamentul PHP">
 <!ENTITY SessionExtensions                        "Extensiile sesiunilor">
@@ -25,16 +25,16 @@
 <!ENTITY CreditCardProcessing                     "Procesarea cardurilor de credit">
 <!ENTITY MathematicalExtensions                   "Extensii matematice">
 <!ENTITY CryptographyExtensions                   "Extensii criptografice">
-<!ENTITY HumanLanguageandCharacterEncodingSupport "Susţinerea limbajului uman şi a codificării caracterelor">
-<!ENTITY FileSystemRelatedExtensions              "Extensii referitoare la sistemul de fişiere">
+<!ENTITY HumanLanguageandCharacterEncodingSupport "Susținerea limbajului uman și a codificării caracterelor">
+<!ENTITY FileSystemRelatedExtensions              "Extensii referitoare la sistemul de fișiere">
 <!ENTITY ProcessControlExtensions                 "Extensii de control al proceselor">
-<!ENTITY MailRelatedExtensions                    "Extensii teferitoare la poştă">
+<!ENTITY MailRelatedExtensions                    "Extensii teferitoare la poștă">
 <!ENTITY AuthenticationServices                   "Servicii de autentificare">
 <!ENTITY OtherServices                            "Alte servicii">
-<!ENTITY CompressionExtensions                    "Extensii de compresie şi arhivare">
-<!ENTITY CalendarandEventRelatedExtensions        "Extensii referitoare la dată şi oră">
-<!ENTITY NonTextMIMEOutput                        "Ieşiri MIME non-textuale">
-<!ENTITY ImageProcessingandGeneration             "Generarea şi procesarea imaginilor">
+<!ENTITY CompressionExtensions                    "Extensii de compresie și arhivare">
+<!ENTITY CalendarandEventRelatedExtensions        "Extensii referitoare la dată și oră">
+<!ENTITY NonTextMIMEOutput                        "Ieșiri MIME non-textuale">
+<!ENTITY ImageProcessingandGeneration             "Generarea și procesarea imaginilor">
 <!ENTITY AudioFormatsManipulation                 "Manipularea cu formatele audio">
 <!ENTITY CommandLineSpecificExtensions            "Extensii specifice liniei de comandă">
 <!ENTITY WindowsOnlyExtensions                    "Extensii doar pentru Windows">
@@ -42,31 +42,31 @@
 <!ENTITY SearchEngineExtensions                   "Extensii ale motorului de căutare">
 <!ENTITY MiscExtensions                           "Extensii diverse">
 <!ENTITY Appendices                               "Anexe">
-<!ENTITY PEAR                                     "PEAR: colecţia de extensii şi aplicaţii PHP">
+<!ENTITY PEAR                                     "PEAR: colecția de extensii și aplicații PHP">
 <!ENTITY FAQ                                      "FAQ: Întrebări frecvente">
 <!ENTITY FAQabbrev                                "FAQ">
-<!ENTITY Internals                                "Interiorul PHP şi a motorului Zend">
+<!ENTITY Internals                                "Interiorul PHP și a motorului Zend">
 <!ENTITY Internals2                               "Nucleul PHP: Ghidul unui hacker spre motorul Zend">
 <!ENTITY ZendAPI                                  "API al Zend: Aprofundarea în nucleul PHP">
-<!ENTITY FunctionIndex                            "Indicele funcţiilor">
-<!ENTITY CHMEdition                               "Ediţia în formatul HTML Help">
+<!ENTITY FunctionIndex                            "Indicele funcțiilor">
+<!ENTITY CHMEdition                               "Ediția în formatul HTML Help">
 <!ENTITY ReservedConstants                        "Constante predefinite">
 <!ENTITY MissingStuff                             "Lucruri care lipsesc">
-<!ENTITY AndSeveralOthers                         "Şi alţii">
+<!ENTITY AndSeveralOthers                         "Și alții">
 <!ENTITY Version                                  "Versiunea">
 <!ENTITY Description                              "Descriere">
 <!ENTITY Changeable                               "Poate fi modificată">
-<!ENTITY ConfigureOptions                         "Opţiuni de configurare pentru">
+<!ENTITY ConfigureOptions                         "Opțiuni de configurare pentru">
 <!ENTITY Default                                  "Valoarea implicită">
-<!ENTITY Definition                               "Definiţia">
-<!ENTITY Functions                                "Funcţii">
+<!ENTITY Definition                               "Definiția">
+<!ENTITY Functions                                "Funcții">
 <!ENTITY Name                                     "Denumirea">
 <!ENTITY Alias                                    "Pseudonim pentru">
 <!ENTITY Type                                     "Tipul">
 <!ENTITY Changelog                                "Jurnalul modificărilor">
 <!ENTITY Methods                                  "Metode">
-<!ENTITY InheritedMethods                         "Metode moştenite">
-<!ENTITY Properties                               "Proprietăţi">
+<!ENTITY InheritedMethods                         "Metode moștenite">
+<!ENTITY Properties                               "Proprietăți">
 <!ENTITY Constants                                "Constante">
 
 <!-- These are used in reference/$extname/reference.xml and other
@@ -79,8 +79,8 @@ supplemental files to mark section titles -->
 <!ENTITY reftitle.description       '<title xmlns="http://docbook.org/ns/docbook">Descrierea</title>'>
 <!ENTITY reftitle.encoding          '<title xmlns="http://docbook.org/ns/docbook">Codificarea</title>'>
 <!ENTITY reftitle.examples          '<title xmlns="http://docbook.org/ns/docbook">Exemple</title>'>
-<!ENTITY reftitle.exceptions        '<title xmlns="http://docbook.org/ns/docbook">Excepţii</title>'>
-<!ENTITY reftitle.errors            '<title xmlns="http://docbook.org/ns/docbook">Erori/Excepţii</title>'>
+<!ENTITY reftitle.exceptions        '<title xmlns="http://docbook.org/ns/docbook">Excepții</title>'>
+<!ENTITY reftitle.errors            '<title xmlns="http://docbook.org/ns/docbook">Erori/Excepții</title>'>
 <!ENTITY reftitle.faq               '<title xmlns="http://docbook.org/ns/docbook">&FAQ;</title>'>
 <!ENTITY reftitle.install           '<title xmlns="http://docbook.org/ns/docbook">Instalarea</title>'>
 <!ENTITY reftitle.intro             '<title xmlns="http://docbook.org/ns/docbook">Introducere</title>'>
@@ -90,13 +90,13 @@ supplemental files to mark section titles -->
 <!ENTITY reftitle.mysqlnd           '<title xmlns="http://docbook.org/ns/docbook">Doar driver-ul original al MySQL</title>'>
 <!ENTITY reftitle.notes             '<title xmlns="http://docbook.org/ns/docbook">Note</title>'>
 <!ENTITY reftitle.parameters        '<title xmlns="http://docbook.org/ns/docbook">Parametri</title>'>
-<!ENTITY reftitle.options           '<title xmlns="http://docbook.org/ns/docbook">Opţiuni</title>'>
-<!ENTITY reftitle.properties        '<title xmlns="http://docbook.org/ns/docbook">Proprietăţi</title>'>
-<!ENTITY reftitle.required          '<title xmlns="http://docbook.org/ns/docbook">Necesităţi</title>'>
+<!ENTITY reftitle.options           '<title xmlns="http://docbook.org/ns/docbook">Opțiuni</title>'>
+<!ENTITY reftitle.properties        '<title xmlns="http://docbook.org/ns/docbook">Proprietăți</title>'>
+<!ENTITY reftitle.required          '<title xmlns="http://docbook.org/ns/docbook">Necesități</title>'>
 <!ENTITY reftitle.resources         '<title xmlns="http://docbook.org/ns/docbook">Tipurile resurselor</title>'>
-<!ENTITY reftitle.runtime           '<title xmlns="http://docbook.org/ns/docbook">Configuraţia la rulare</title>'>
+<!ENTITY reftitle.runtime           '<title xmlns="http://docbook.org/ns/docbook">Configurația la rulare</title>'>
 <!ENTITY reftitle.returnvalues      '<title xmlns="http://docbook.org/ns/docbook">Valorile întroarse</title>'>
-<!ENTITY reftitle.seealso           '<title xmlns="http://docbook.org/ns/docbook">Vedeţi de asemenea</title>'>
+<!ENTITY reftitle.seealso           '<title xmlns="http://docbook.org/ns/docbook">Vedeți de asemenea</title>'>
 <!ENTITY reftitle.setup             '<title xmlns="http://docbook.org/ns/docbook">Instalarea / configurarea</title>'>
 <!ENTITY reftitle.unicode           '<title xmlns="http://docbook.org/ns/docbook">Unicode</title>'>
 

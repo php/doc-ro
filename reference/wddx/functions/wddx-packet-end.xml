@@ -5,7 +5,7 @@
 <refentry xml:id="function.wddx-packet-end" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>wddx_packet_end</refname>
-  <refpurpose>Sfârşeşte un pachet WDDX cu un ID specificat</refpurpose>
+  <refpurpose>Sfârșește un pachet WDDX cu un ID specificat</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -15,7 +15,7 @@
    <methodparam><type>resource</type><parameter>packet_id</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Sfârşeşte şi întoarce pachetul WDDX dat.
+   Sfârșește și întoarce pachetul WDDX dat.
   </para>
  </refsect1>
 
@@ -38,7 +38,7 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Întoarce string-ul conţinând pachetul WDDX.
+   Întoarce string-ul conținând pachetul WDDX.
   </para>
  </refsect1>
 </refentry>

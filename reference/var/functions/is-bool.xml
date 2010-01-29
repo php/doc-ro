@@ -52,12 +52,12 @@
 $a = false;
 $b = 0;
 
-// Deoarece $a este un boolean, funcţia va întoarce true
+// Deoarece $a este un boolean, funcția va întoarce true
 if (is_bool($a) === true) {
     echo "Da, acesta este un boolean";
 }
 
-// Deoarece $b nu este un boolean, funcţia va întoarce false
+// Deoarece $b nu este un boolean, funcția va întoarce false
 if (is_bool($b) === false) {
     echo "Nu, acesta nu este un boolean";
 }

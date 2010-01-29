@@ -5,7 +5,7 @@
 <refentry xml:id="function.gettype" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>gettype</refname>
-  <refpurpose>Obţine tipul unei variabile</refpurpose>
+  <refpurpose>Obține tipul unei variabile</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -20,12 +20,12 @@
   </para>
   <warning>
    <simpara>
-    Niciodată nu utilizaţi <function>gettype</function> pentru a verifica tipul
+    Niciodată nu utilizați <function>gettype</function> pentru a verifica tipul
     deoarece string-ul întors poate să se schimbe într-o versiune viitoare.
-    În plus, aceasts este lent, deoarece implică comparaţii ale string-urilor.
+    În plus, aceasts este lent, deoarece implică comparații ale string-urilor.
    </simpara>
    <simpara>
-    În loc, utilizaţi funcţiile <literal>is_*</literal>.
+    În loc, utilizați funcțiile <literal>is_*</literal>.
    </simpara>
   </warning>
  </refsect1>
@@ -64,7 +64,7 @@
     <listitem>
      <simpara>
       "<type>double</type>" (din motive istorice se întoarce "double" în cazul
-      unui <type>float</type>, şi nu pur şi simplu "float")
+      unui <type>float</type>, și nu pur și simplu "float")
      </simpara>
     </listitem>
     <listitem>

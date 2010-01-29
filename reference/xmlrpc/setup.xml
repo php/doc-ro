@@ -27,7 +27,7 @@
  <section xml:id="xmlrpc.resources">
   &reftitle.resources;
   <para>
-   Această extensie defineşte o resursă server XML-RPC întoarsă
+   Această extensie definește o resursă server XML-RPC întoarsă
    de <function>xmlrpc_server_create</function>.
   </para>
  </section>

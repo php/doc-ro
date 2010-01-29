@@ -5,7 +5,7 @@
 <refentry xmlns="http://docbook.org/ns/docbook" xml:id="function.error-reporting">
  <refnamediv>
   <refname>error_reporting</refname>
-  <refpurpose>Stabileşte ce erori PHP vor fi raportate</refpurpose>
+  <refpurpose>Stabilește ce erori PHP vor fi raportate</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -15,11 +15,11 @@
    <methodparam choice="opt"><type>int</type><parameter>level</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Funcţia <function>error_reporting</function> stabileşte directiva
+   Funcția <function>error_reporting</function> stabilește directiva
    <link linkend="ini.error-reporting">error_reporting</link> în timpul
-   rulării. PHP posedă multe nivele de erori, iar utilizarea acestei funcţii vă
-   permite să stabiliţi nivelul ce va fi activ pe durata execuţiei script-ului
-   dumneavoastră. Dacă parametrul opţional <parameter>level</parameter> nu este
+   rulării. PHP posedă multe nivele de erori, iar utilizarea acestei funcții vă
+   permite să stabiliți nivelul ce va fi activ pe durata execuției script-ului
+   dumneavoastră. Dacă parametrul opțional <parameter>level</parameter> nu este
    stabilit, <function>error_reporting</function> va întoarce doar nivelul
    curent de raportare a erorilor.
   </para>
@@ -34,16 +34,16 @@
      <listitem>
       <para>
        Noul nivel <link linkend="ini.error-reporting">error_reporting</link>.
-       Poate fi indicat fie printr-o mască de biţi, sau prin constante
+       Poate fi indicat fie printr-o mască de biți, sau prin constante
        denumite. Utilizarea constantelor denumite este încurajată pentru a se
        asigura compatibilitatea cu versiunile viitoare. Odată cu adăugarea
-       noilor nivele de erori, domeniul constantelor întregi creşte, de aceea
+       noilor nivele de erori, domeniul constantelor întregi crește, de aceea
        nivelele de erori vechi bazate pe constante întregi nu se vor comporta
-       întotdeauna conform aşteptărilor.
+       întotdeauna conform așteptărilor.
       </para>
       <para>
        Constantele disponibile ale nivelelor de erori sunt enumărate mai jos.
-       Semnificaţiile acestor nivele de erori sunt descrise în
+       Semnificațiile acestor nivele de erori sunt descrise în
        <link linkend="errorfunc.constants">constante predefinite</link>.
       </para>
      </listitem>
@@ -83,7 +83,7 @@
       </row>
       <row>
        <entry>5.3.0</entry>
-       <entry>Au fost introduse <constant>E_DEPRECATED</constant> şi <constant>E_USER_DEPRECATED</constant>.</entry>
+       <entry>Au fost introduse <constant>E_DEPRECATED</constant> și <constant>E_USER_DEPRECATED</constant>.</entry>
       </row>
       <row>
        <entry>6.0.0</entry>
@@ -111,11 +111,11 @@ error_reporting(0);
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
 // Raportarea E_NOTICE de asemenea poate fi utilă (pentru a afla variabile
-// neiniţializate sau pentru a intercepta greşeli de tipar în denumirile
+// neinițializate sau pentru a intercepta greșeli de tipar în denumirile
 // variablelor ...)
 error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
 
-// Raportează toate erorile cu excepţia E_NOTICE
+// Raportează toate erorile cu excepția E_NOTICE
 // Aceasta este valoarea implicită stabilită în php.ini
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -125,7 +125,7 @@ error_reporting(E_ALL);
 // Raportează toate erorile PHP
 error_reporting(-1);
 
-// La fel ca şi error_reporting(E_ALL);
+// La fel ca și error_reporting(E_ALL);
 ini_set('error_reporting', E_ALL);
 
 ?>
@@ -140,9 +140,9 @@ ini_set('error_reporting', E_ALL);
   <warning>
    <simpara>
     Majoritatea erorilor <constant>E_STRICT</constant> sunt evaluate la
-    momentul compilării, de aceea astfel de erori nu sunt raportate în fişier
+    momentul compilării, de aceea astfel de erori nu sunt raportate în fișier
     când în <link linkend="ini.error-reporting">error_reporting</link> sunt
-    incluse şi erorile <constant>E_STRICT</constant> (şi vice versa).
+    incluse și erorile <constant>E_STRICT</constant> (și vice versa).
    </simpara>
   </warning>
   <tip>

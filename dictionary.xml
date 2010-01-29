@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet href="dictionary.xsl" type="text/xsl"?>
-<dictionary title="Dicţionar al termenilor utilizaţi în manualul PHP" author="Simion Onea">
+<dictionary title="Dicționar al termenilor utilizați în manualul PHP" author="Simion Onea">
   <term>
     <english>use /verb/</english>
     <romanian>a utiliza</romanian>
     <english_example>Please use the following syntax.</english_example>
-    <romanian_example>Vă rugăm să utilizaţi următoarea sintaxă.</romanian_example>
+    <romanian_example>Vă rugăm să utilizați următoarea sintaxă.</romanian_example>
   </term>
   <term>
     <english>submit /verb/</english>
     <romanian>a înainta</romanian>
     <english_example>Feel free to submit your own examples.</english_example>
-    <romanian_example>Puteţi înainta propriile dumneavoastră exemple. || Vă rugăm să înaintaţi propriile dumneavoastră exemple.</romanian_example>
+    <romanian_example>Puteți înainta propriile dumneavoastră exemple. || Vă rugăm să înaintați propriile dumneavoastră exemple.</romanian_example>
   </term>
   <term>
     <english>website</english>
     <romanian>site-ul web</romanian>
     <english_example>Please visit the website.</english_example>
-    <romanian_example>Vă rugăm să vizitaţi site-ul web.</romanian_example>
+    <romanian_example>Vă rugăm să vizitați site-ul web.</romanian_example>
   </term>
   <term>
     <english>stylesheet</english>
@@ -29,19 +29,19 @@
     <english>user note</english>
     <romanian>adnotarea utilizatorului</romanian>
     <english_example>There are no user notes for this function.</english_example>
-    <romanian_example>Nu sunt adnotări ale utilizatorilor pentru această funcţie.</romanian_example>
+    <romanian_example>Nu sunt adnotări ale utilizatorilor pentru această funcție.</romanian_example>
   </term>
   <term>
     <english>shortcut</english>
     <romanian>scurtătură</romanian>
     <english_example>You can use the shortcut instead.</english_example>
-    <romanian_example>Puteţi utiliza scurtătura în loc.</romanian_example>
+    <romanian_example>Puteți utiliza scurtătura în loc.</romanian_example>
   </term>
   <term>
     <english>utility</english>
     <romanian>utilită</romanian>
     <english_example>A decompression utility is required to extract the files.</english_example>
-    <romanian_example>Este necesară o utilită de decomprimare pentru a extrage fişierele.</romanian_example>
+    <romanian_example>Este necesară o utilită de decomprimare pentru a extrage fișierele.</romanian_example>
   </term>
   <term>
     <english>viewer</english>
@@ -53,7 +53,7 @@
     <english>feature</english>
     <romanian>facilitate</romanian>
     <english_example>PHP 5.x.x has many new features.</english_example>
-    <romanian_example>PHP 5.x.x posedă multe facilităţi noi.</romanian_example>
+    <romanian_example>PHP 5.x.x posedă multe facilități noi.</romanian_example>
   </term>
   <term>
     <english>bookmark</english>
@@ -69,21 +69,21 @@
   </term>
   <term>
     <english>mailing list</english>
-    <romanian>listă de distribuţie poştală</romanian>
+    <romanian>listă de distribuție poștală</romanian>
     <english_example>You can subscribe to our mailing list to receive the latest news.</english_example>
-    <romanian_example>Puteţi să vă abonaţi la lista noastră de distribuţie poştală pentru a primi ultimele noutăţi.</romanian_example>
+    <romanian_example>Puteți să vă abonați la lista noastră de distribuție poștală pentru a primi ultimele noutăți.</romanian_example>
   </term>
   <term>
     <english>link</english>
-    <romanian>referinţă</romanian>
+    <romanian>referință</romanian>
     <english_example>Follow this link to obtain additional information.</english_example>
-    <romanian_example>Urmaţi această referinţă pentru a obţine informaţii suplimentare.</romanian_example>
+    <romanian_example>Urmați această referință pentru a obține informații suplimentare.</romanian_example>
   </term>
   <term>
     <english>caveat</english>
-    <romanian>obiecţie</romanian>
+    <romanian>obiecție</romanian>
     <english_example>Users may provide additional examples, caveats, and clarifications for other readers.</english_example>
-    <romanian_example>Utilizatorii pot să ofere exemple suplimentare, obiecţii şi clarificări altor cititori.</romanian_example>
+    <romanian_example>Utilizatorii pot să ofere exemple suplimentare, obiecții și clarificări altor cititori.</romanian_example>
   </term>
   <term>
     <english>return value</english>
@@ -105,21 +105,21 @@
   </term>
   <term>
     <english>prerequisite</english>
-    <romanian>condiţie esenţială</romanian>
+    <romanian>condiție esențială</romanian>
     <english_example>There are some prerequisites before installing PHP.</english_example>
-    <romanian_example>Există unele condiţii esenţiale înainte de instalarea PHP.</romanian_example>
+    <romanian_example>Există unele condiții esențiale înainte de instalarea PHP.</romanian_example>
   </term>
   <term>
     <english>runtime configuration</english>
-    <romanian>configuraţie la rulare</romanian>
+    <romanian>configurație la rulare</romanian>
     <english_example>It is possible to alter PHP's runtime configuration.</english_example>
-    <romanian_example>Este posibilă alterarea configuraţiei la rulare a PHP.</romanian_example>
+    <romanian_example>Este posibilă alterarea configurației la rulare a PHP.</romanian_example>
   </term>
   <term>
     <english>miscellaneous</english>
     <romanian>diverse</romanian>
     <english_example>Miscellaneous functions</english_example>
-    <romanian_example>Funcţii diverse</romanian_example>
+    <romanian_example>Funcții diverse</romanian_example>
   </term>
   <term>
     <english>enables</english>
@@ -143,7 +143,7 @@
     <english>tag</english>
     <romanian>etichetă</romanian>
     <english_example>You should use the long form of the PHP open tag.</english_example>
-    <romanian_example>Dumneavoastră ar trebui să utilizaţi forma lungă a etichetei de deschidere a PHP.</romanian_example>
+    <romanian_example>Dumneavoastră ar trebui să utilizați forma lungă a etichetei de deschidere a PHP.</romanian_example>
   </term>
   <term>
     <english>code (source code)</english>
@@ -161,7 +161,7 @@
     <english>alias</english>
     <romanian>pseudonim</romanian>
     <english_example>This function has two aliases.</english_example>
-    <romanian_example>Această funcţie are două pseudonime.</romanian_example>
+    <romanian_example>Această funcție are două pseudonime.</romanian_example>
   </term>
   <term>
     <english>stream</english>
@@ -173,19 +173,19 @@
     <english>buffer</english>
     <romanian>zonă-tampon</romanian>
     <english_example>When the output buffer is full, it is automatically flushed.</english_example>
-    <romanian_example>Când zona-tampon de ieşire este plină, ea este automat golită.</romanian_example>
+    <romanian_example>Când zona-tampon de ieșire este plină, ea este automat golită.</romanian_example>
   </term>
   <term>
     <english>wrapper</english>
-    <romanian>înveliş</romanian>
+    <romanian>înveliș</romanian>
     <english_example>You can get around this limitation by writing a wrapper function.</english_example>
-    <romanian_example>Puteţi depăşi această limitare scriind o funcţie-înveliş.</romanian_example>
+    <romanian_example>Puteți depăși această limitare scriind o funcție-înveliș.</romanian_example>
   </term>
   <term>
     <english>related</english>
     <romanian>asociat</romanian>
     <english_example>Please read the security chapter for information related to this function.</english_example>
-    <romanian_example>Vă rugăm să citiţi capitolul despre securitate pentru informaţii asociate acestei funcţii.</romanian_example>
+    <romanian_example>Vă rugăm să citiți capitolul despre securitate pentru informații asociate acestei funcții.</romanian_example>
   </term>
   <term>
     <english>foundation class</english>
@@ -197,7 +197,7 @@
     <english>inline</english>
     <romanian>direct în text</romanian>
     <english_example>Changes are documented in notes and inline text in the manual.</english_example>
-    <romanian_example>Schimbările sunt documentate în adnotări şi direct în text în manual.</romanian_example>
+    <romanian_example>Schimbările sunt documentate în adnotări și direct în text în manual.</romanian_example>
   </term>
   <term>
     <english>escaping</english>
@@ -209,7 +209,7 @@
     <english>browser</english>
     <romanian>navigator</romanian>
     <english_example>Viewing this page requires a compatible browser.</english_example>
-    <romanian_example>Afişarea acestei pagini necesită un navigator compatibil.</romanian_example>
+    <romanian_example>Afișarea acestei pagini necesită un navigator compatibil.</romanian_example>
   </term>
   <term>
     <english>deprecated /adverb/</english>
@@ -221,7 +221,7 @@
     <english>deprecated /adjectiv/</english>
     <romanian>învechit</romanian>
     <english_example>This is a deprecated function.</english_example>
-    <romanian_example>Aceasta este o funcţie învechită.</romanian_example>
+    <romanian_example>Aceasta este o funcție învechită.</romanian_example>
   </term>
   <term>
     <english>script</english>
@@ -261,21 +261,21 @@
   </term>
   <term>
     <english>scope</english>
-    <romanian>circumstanţă</romanian>
+    <romanian>circumstanță</romanian>
     <english_example>This means availability in all scopes throughout the script.</english_example>
-    <romanian_example>Aceasta înseamnă disponibilitatea în toate circumstanţele pe parcursul script-ului.</romanian_example>
+    <romanian_example>Aceasta înseamnă disponibilitatea în toate circumstanțele pe parcursul script-ului.</romanian_example>
   </term>
   <term>
     <english>line ending</english>
-    <romanian>terminaţia liniei</romanian>
+    <romanian>terminația liniei</romanian>
     <english_example>Try to avoid CR/LF line endings.</english_example>
-    <romanian_example>Încercaţi să evitaţi terminaţiile liniilor CR/LF.</romanian_example>
+    <romanian_example>Încercați să evitați terminațiile liniilor CR/LF.</romanian_example>
   </term>
   <term>
     <english>callback</english>
     <romanian>apel invers</romanian>
     <english_example>The check is performed by a user supplied callback function.</english_example>
-    <romanian_example>Verificarea este efectuată de o funcţie de apel invers furnizată de utilizator.</romanian_example>
+    <romanian_example>Verificarea este efectuată de o funcție de apel invers furnizată de utilizator.</romanian_example>
   </term>
   <term>
     <english>font</english>
@@ -287,13 +287,13 @@
     <english>handle</english>
     <romanian>handle</romanian>
     <english_example>After this operation the handle becomes invalid.</english_example>
-    <romanian_example>După această operaţie handle-ul devine invalid.</romanian_example>
+    <romanian_example>După această operație handle-ul devine invalid.</romanian_example>
   </term>
   <term>
     <english>handler</english>
     <romanian>handler</romanian>
     <english_example>You must write a user-defined handler.</english_example>
-    <romanian_example>Trebuie să scrieţi un handler definit de utilizator.</romanian_example>
+    <romanian_example>Trebuie să scrieți un handler definit de utilizator.</romanian_example>
   </term>
   <term>
     <english>driver</english>
@@ -305,7 +305,7 @@
     <english>language reference</english>
     <romanian>prezentarea limbajului</romanian>
     <english_example>For additional information please see the language reference.</english_example>
-    <romanian_example>Pentru informaţii suplimentare vă rugăm să vedeţi prezentarea limbajului.</romanian_example>
+    <romanian_example>Pentru informații suplimentare vă rugăm să vedeți prezentarea limbajului.</romanian_example>
   </term>
   <term>
     <english>tutorial</english>
@@ -317,19 +317,19 @@
     <english>array</english>
     <romanian>tablou</romanian>
     <english_example>Defines an array of 5 elements.</english_example>
-    <romanian_example>Defineşte un tablou de 5 elemente.</romanian_example>
+    <romanian_example>Definește un tablou de 5 elemente.</romanian_example>
   </term>
   <term>
     <english>string</english>
-    <romanian>string || şir</romanian>
+    <romanian>string || șir</romanian>
     <english_example>The parameter represents a string of characters.</english_example>
-    <romanian_example>Parametrul reprezintă un şir de caractere.</romanian_example>
+    <romanian_example>Parametrul reprezintă un șir de caractere.</romanian_example>
   </term>
   <term>
     <english>statement</english>
-    <romanian>declaraţie</romanian>
+    <romanian>declarație</romanian>
     <english_example>This statement will cause an error.</english_example>
-    <romanian_example>Această declaraţie va cauza o eroare.</romanian_example>
+    <romanian_example>Această declarație va cauza o eroare.</romanian_example>
   </term>
   <term>
     <english>markup</english>
@@ -353,13 +353,13 @@
     <english>socket</english>
     <romanian>socket</romanian>
     <english_example>Options supported by wrappers that work over sockets.</english_example>
-    <romanian_example>Opţiuni susţinute de învelişurile care funcţionează prin socket-uri.</romanian_example>
+    <romanian_example>Opțiuni susținute de învelișurile care funcționează prin socket-uri.</romanian_example>
   </term>
   <term>
     <english>see also</english>
-    <romanian>accesaţi de asemenea</romanian>
+    <romanian>accesați de asemenea</romanian>
     <english_example>See also the section named "Extensions".</english_example>
-    <romanian_example>Accesaţi de asemenea secţiunea întitulată "Extensii".</romanian_example>
+    <romanian_example>Accesați de asemenea secțiunea întitulată "Extensii".</romanian_example>
   </term>
   <term>
     <english>developer</english>
@@ -377,7 +377,7 @@
     <english>timezone</english>
     <romanian>fus orar</romanian>
     <english_example>You have to specify the timezone in php.ini.</english_example>
-    <romanian_example>Trebuie să specificaţi fusul orar în php.ini.</romanian_example>
+    <romanian_example>Trebuie să specificați fusul orar în php.ini.</romanian_example>
   </term>
   <term>
     <english>native</english>
@@ -387,15 +387,15 @@
   </term>
   <term>
     <english>upgrade</english>
-    <romanian>îmbunătăţire || reînnoire</romanian>
+    <romanian>îmbunătățire || reînnoire</romanian>
     <english_example>You must upgrade your system to the latest PHP version.</english_example>
-    <romanian_example>Trebuie să reînnoiţi sistemul până la ultima versiune PHP.</romanian_example>
+    <romanian_example>Trebuie să reînnoiți sistemul până la ultima versiune PHP.</romanian_example>
   </term>
   <term>
     <english>pattern</english>
-    <romanian>şablon</romanian>
+    <romanian>șablon</romanian>
     <english_example>This function uses a pattern to find the files.</english_example>
-    <romanian_example>Această funcţie utilizează un şablon pentru a găsi fişierele.</romanian_example>
+    <romanian_example>Această funcție utilizează un șablon pentru a găsi fișierele.</romanian_example>
   </term>
   <term>
     <english>security fix</english>
@@ -407,19 +407,19 @@
     <english>type hint</english>
     <romanian>indicator explicit al tipului</romanian>
     <english_example>You can use type hints in function definitions.</english_example>
-    <romanian_example>Puteţi utiliza indicatori expliciţi ai tipului în definiţiile funcţiilor.</romanian_example>
+    <romanian_example>Puteți utiliza indicatori expliciți ai tipului în definițiile funcțiilor.</romanian_example>
   </term>
   <term>
     <english>synopsis</english>
     <romanian>descriere succintă</romanian>
     <english_example>Interface synopsis</english_example>
-    <romanian_example>Descrierea succintă a interfeţei</romanian_example>
+    <romanian_example>Descrierea succintă a interfeței</romanian_example>
   </term>
   <term>
     <english>outline</english>
-    <romanian>schiţă</romanian>
+    <romanian>schiță</romanian>
     <english_example>Library outline</english_example>
-    <romanian_example>Schiţă a bibliotecii</romanian_example>
+    <romanian_example>Schiță a bibliotecii</romanian_example>
   </term>
   <term>
     <english>bug report</english>

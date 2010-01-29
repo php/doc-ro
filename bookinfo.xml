@@ -21,12 +21,12 @@
   <author><personname>Daniel Toma</personname></author>
   <author><personname>Dorel Năstasă</personname></author>
   <author><personname>Dan Matornei</personname></author>
-  <author><personname>Rareş Benea</personname></author>
+  <author><personname>Rareș Benea</personname></author>
   <author><personname>Valentin Agachi</personname></author>
   <author><personname>Cristi Armeana</personname></author>
   <author><personname>Adrian Spinei</personname></author>
   <author><personname>Cristian Câmpean</personname></author>
-  <author><personname>Şerban Gheorghe Ghiţă</personname></author>
+  <author><personname>Șerban Gheorghe Ghiță</personname></author>
   <author><personname>Gabriel Preda</personname></author>
   <author><personname>Simion Onea</personname></author>
   <author><personname>Alexandru Szasz</personname></author>
@@ -41,21 +41,21 @@
   <title>Copyright</title>
   <simpara>
    Copyright © 1997 - &php.copyright-year; de către Grupul de Documentare PHP.
-   Acest material poate fi distribuit numai în baza termenelor şi condiţiilor
+   Acest material poate fi distribuit numai în baza termenelor și condițiilor
    stabilite în documentul "Creative Commons Attribution 3.0 License"
-   sau ulterioară. O copie a licenţei
+   sau ulterioară. O copie a licenței
    <link linkend="cc.license">Creative Commons Attribution 3.0</link>
    este distribuită cu acest manual. Cea mai recentă versiune
    disponibilă la moment la adresa
    <link xlink:href="&url.cc.by.ro;">&url.cc.by.ro;</link>.
   </simpara>
   <simpara>
-   În caz că sunteţi cointeresat în redistribuirea sau republicarea acestui document
-   integral sau parţial, modificat sau nemodificat, şi dacă aveti întrebări,
-   vă rugăm să contactaţi deţinătorii dreptului de reproducere la adresa
+   În caz că sunteți cointeresat în redistribuirea sau republicarea acestui document
+   integral sau parțial, modificat sau nemodificat, și dacă aveti întrebări,
+   vă rugăm să contactați deținătorii dreptului de reproducere la adresa
    <link xlink:href="mailto:&email.php.doc.license;">&email.php.doc.license;</link>.
-   Vă rugăm să ţineţi cont că această adresă este mapată (redirecţionată) către
-   arhiva listei publice de distribuţie poştală.
+   Vă rugăm să țineți cont că această adresă este mapată (redirecționată) către
+   arhiva listei publice de distribuție poștală.
   </simpara>
  </legalnotice>
 

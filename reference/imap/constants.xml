@@ -34,7 +34,7 @@
    </term>
    <listitem>
     <simpara>
-     Deschide cutia poştală numai pentru citire
+     Deschide cutia poștală numai pentru citire
     </simpara>
    </listitem>
   </varlistentry>
@@ -45,7 +45,7 @@
    </term>
    <listitem>
     <simpara>
-     Nu utiliza sau reînnoi <filename>.newsrc</filename>pentru noutăţi
+     Nu utiliza sau reînnoi <filename>.newsrc</filename>pentru noutăți
      (numai NNTP)
     </simpara>
    </listitem>
@@ -90,8 +90,8 @@
    </term>
    <listitem>
     <simpara>
-     Pentru nume <acronym>IMAP</acronym> şi <acronym>NNTP</acronym> deschide o
-     conexiune, dar nu deschide o cutie poştală.
+     Pentru nume <acronym>IMAP</acronym> și <acronym>NNTP</acronym> deschide o
+     conexiune, dar nu deschide o cutie poștală.
     </simpara>
    </listitem>
   </varlistentry>
@@ -124,7 +124,7 @@
    </term>
    <listitem>
     <simpara>
-     şterge silenţios cutia poştală înainte de a o închide la apelul
+     șterge silențios cutia poștală înainte de a o închide la apelul
      <function>imap_close</function>
     </simpara>
    </listitem>
@@ -169,7 +169,7 @@
    </term>
    <listitem>
     <simpara>
-     Şirul întors este în format intern, nu va fi transformat canonic în CRLF.
+     Șirul întors este în format intern, nu va fi transformat canonic în CRLF.
     </simpara>
    </listitem>
   </varlistentry>
@@ -191,7 +191,7 @@
    </term>
    <listitem>
     <simpara>
-     Argumentul secvenţei conţine UID-uri în loc de numere de secvenţă
+     Argumentul secvenței conține UID-uri în loc de numere de secvență
     </simpara>
    </listitem>
   </varlistentry>
@@ -224,7 +224,7 @@
    </term>
    <listitem>
     <simpara>
-     numerele de secvenţă conţin UID-uri
+     numerele de secvență conțin UID-uri
     </simpara>
    </listitem>
   </varlistentry>
@@ -235,7 +235,7 @@
    </term>
    <listitem>
     <simpara>
-     Elimină mesajul din cutia poştală curentă după copierea cu
+     Elimină mesajul din cutia poștală curentă după copierea cu
      <function>imap_mail_copy</function>
     </simpara>
    </listitem>
@@ -247,7 +247,7 @@
    </term>
    <listitem>
     <simpara>
-     Întoarce UID-uri în loc de numere de secvenţă
+     Întoarce UID-uri în loc de numere de secvență
     </simpara>
    </listitem>
   </varlistentry>
@@ -368,7 +368,7 @@
    </term>
    <listitem>
     <simpara>
-     Această cutie poştală nu are "descendenţi" (nu sunt cutii poştale mai jos
+     Această cutie poștală nu are "descendenți" (nu sunt cutii poștale mai jos
      de aceasta).
     </simpara>
    </listitem>
@@ -380,7 +380,7 @@
    </term>
    <listitem>
     <simpara>
-     Acesta este doar un container, nu o cutie poştală - nu îl puteţi deschide.
+     Acesta este doar un container, nu o cutie poștală - nu îl puteți deschide.
     </simpara>
    </listitem>
   </varlistentry>
@@ -391,7 +391,7 @@
    </term>
    <listitem>
     <simpara>
-     Aceasstă cutie poştală este marcată. Utilizat numai de UW-IMAPD.
+     Aceasstă cutie poștală este marcată. Utilizat numai de UW-IMAPD.
     </simpara>
    </listitem>
   </varlistentry>
@@ -402,7 +402,7 @@
    </term>
    <listitem>
     <simpara>
-     Aceasstă cutie poştală nu este marcată. Utilizat numai de UW-IMAPD.
+     Aceasstă cutie poștală nu este marcată. Utilizat numai de UW-IMAPD.
     </simpara>
    </listitem>
   </varlistentry>
@@ -438,7 +438,7 @@
    <listitem>
     <simpara>
      Criteriul de sortare pentru <function>imap_sort</function>:
-     cutia poştală din prima adresă a expeditorului
+     cutia poștală din prima adresă a expeditorului
     </simpara>
    </listitem>
   </varlistentry>
@@ -462,7 +462,7 @@
    <listitem>
     <simpara>
      Criteriul de sortare pentru <function>imap_sort</function>:
-     cutia poştală în prima adresă a destinatarului
+     cutia poștală în prima adresă a destinatarului
     </simpara>
    </listitem>
   </varlistentry>
@@ -474,7 +474,7 @@
    <listitem>
     <simpara>
      Criteriul de sortare pentru <function>imap_sort</function>:
-     cutia poştală din prima adresă cc
+     cutia poștală din prima adresă cc
     </simpara>
    </listitem>
   </varlistentry>
@@ -486,7 +486,7 @@
    <listitem>
     <simpara>
      Criteriul de sortare pentru <function>imap_sort</function>:
-     dimensiunea mesajului în octeţi
+     dimensiunea mesajului în octeți
     </simpara>
    </listitem>
   </varlistentry>

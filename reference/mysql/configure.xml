@@ -6,20 +6,20 @@
  &reftitle.install;
 
  <para xml:id="mysql.configure">
-  Pentru compilare, pur şi simplu utilizaţi opţiunea de configurare
+  Pentru compilare, pur și simplu utilizați opțiunea de configurare
   <option role="configure">--with-mysql[=DIR]</option>,
-  unde parametrul opţional <literal>[DIR]</literal> indică directorul unde
+  unde parametrul opțional <literal>[DIR]</literal> indică directorul unde
   a fost instalat MySQL.
  </para>
  <para>
-  Cu toate că această extensie MySQL este compatibilă cu MySQL 4.1.0 şi
-  versiunile ulterioare, ea nu susţine funcţionalitatea suplimentară oferită de
-  aceste versiuni. Pentru aceasta utilizaţi extensia
+  Cu toate că această extensie MySQL este compatibilă cu MySQL 4.1.0 și
+  versiunile ulterioare, ea nu susține funcționalitatea suplimentară oferită de
+  aceste versiuni. Pentru aceasta utilizați extensia
   <link linkend="ref.mysqli">MySQLi</link>.
  </para>
  <para>
-  Dacă doriţi să instalaţi extensia mysql împreună cu extensia mysqli, trebuie
-  să utilizaţi aceeaşi bibliotecă-client pentru a evita conflicte.
+  Dacă doriți să instalați extensia mysql împreună cu extensia mysqli, trebuie
+  să utilizați aceeași bibliotecă-client pentru a evita conflicte.
  </para>
 
  <section xml:id="mysql.installation.linux">
@@ -27,30 +27,30 @@
   <section>
    <title>PHP 4</title>
    <para>
-    Opţiunea <option role="configure">--with-mysql</option> este activată
-    implicit. Acest comportament implicit poate fi dezactivat cu opţiunea de
+    Opțiunea <option role="configure">--with-mysql</option> este activată
+    implicit. Acest comportament implicit poate fi dezactivat cu opțiunea de
     configurare <option role="configure">--without-mysql</option>.
     Dacă MySQL este activat fără specificarea căii către directorul DIR de
     instalare al MySQL, PHP va utiliza bibliotecile-client MySQL încorporate.
    </para>
    <para>
-    Utilizatorii care rulează alte aplicaţii care utilizează MySQL (spre
+    Utilizatorii care rulează alte aplicații care utilizează MySQL (spre
     exemplu, <literal>auth-mysql</literal>) nu ar trebui să utilizeze biblioteca
     furnizată, dar să specifice calea către directorul de instalare al MySQL,
     în felul următor:
     <option role="configure">--with-mysql=/path/to/mysql</option>.
-    Aceasta va forţa PHP să utilizeze bibliotecile-client instalate de MySQL,
+    Aceasta va forța PHP să utilizeze bibliotecile-client instalate de MySQL,
     evitând în acest fel orice conflicte.
    </para>
   </section>
   <section>
    <title>PHP 5+</title>
    <para>
-    MySQL nu este activat implicit, şi nici biblioteca MySQL nu este
-    furnizată cu PHP. Citiţi acest <link linkend="faq.databases.mysql.php5">
-    FAQ</link> pentru a afla detalii despre cauze. Utilizaţi opţiunea de
+    MySQL nu este activat implicit, și nici biblioteca MySQL nu este
+    furnizată cu PHP. Citiți acest <link linkend="faq.databases.mysql.php5">
+    FAQ</link> pentru a afla detalii despre cauze. Utilizați opțiunea de
     configurare <option role="configure">--with-mysql[=DIR]</option> pentru a
-    include susţinerea MySQL. Puteţi descărca <emphasis>antete şi biblioteci
+    include susținerea MySQL. Puteți descărca <emphasis>antete și biblioteci
     </emphasis> de pe <link xlink:href="&url.mysql;">MySQL</link>.
    </para>
   </section>
@@ -69,24 +69,24 @@
    <para>
     MySQL nu mai este activat implicit, deci biblioteca DLL
     <filename>php_mysql.dll</filename> trebuie activată în &php.ini;. De
-    asemenea PHP are nevoie de access la biblioteca-client MySQL. Un fişier
+    asemenea PHP are nevoie de access la biblioteca-client MySQL. Un fișier
     numit <filename>libmysql.dll</filename> este inclus în distributivul PHP
-    pentru Windows şi pentru ca PHP să poată comunica cu MySQL, acest fişier
+    pentru Windows și pentru ca PHP să poată comunica cu MySQL, acest fișier
     trebuie să fie disponibil în căile din variabila <envar>PATH</envar> a
-    sistemului Windows. Accesaţi şi FAQ întitulat
+    sistemului Windows. Accesați și FAQ întitulat
     "<link linkend="faq.installation.addtopath">Cum să adaug directorul PHP
-    în variabila PATH din Windows</link>" pentru informaţii despre cum să
-    realizaţi acest lucru. Cu toate că copierea <filename>libmysql.dll
-    </filename> în directorul de sistem al Windows de asemenea funcţionează
+    în variabila PATH din Windows</link>" pentru informații despre cum să
+    realizați acest lucru. Cu toate că copierea <filename>libmysql.dll
+    </filename> în directorul de sistem al Windows de asemenea funcționează
     (deoarece directorul de sistem se află implicit înscris în variabila
     <envar>PATH</envar> a sistemului), aceasta nu e recomandabil.
    </para>
    <para>
-    Ca şi în cazul activării oricărei extensii PHP (cum ar fi
+    Ca și în cazul activării oricărei extensii PHP (cum ar fi
     <filename>php_mysql.dll</filename>), directiva PHP
     <link linkend="ini.extension-dir">extension_dir</link> trebuie să fie
-    stabilită către directorul unde sunt amplasate extensiile PHP. Accesaţi de
-    asemenea <link linkend="install.windows.manual">Instrucţiunile de instalare
+    stabilită către directorul unde sunt amplasate extensiile PHP. Accesați de
+    asemenea <link linkend="install.windows.manual">Instrucțiunile de instalare
     manuală în Windows</link>. O valoare-exemplu a extension_dir pentru PHP 5
     ar putea fi <literal>c:\php\ext</literal>
    </para>
@@ -94,9 +94,9 @@
     <para>
      Dacă la startarea server-ului web apare o eroare similară cu aceasta:
      <literal>"Unable to load dynamic library './php_mysql.dll'"</literal>
-     (<literal>"Nu s-a reuşit încărcarea bibliotecii dinamice
+     (<literal>"Nu s-a reușit încărcarea bibliotecii dinamice
      './php_mysql.dll'"</literal>), aceasta este din cauza că
-     <filename>php_mysql.dll</filename> şi/sau
+     <filename>php_mysql.dll</filename> și/sau
      <filename>libmysql.dll</filename> nu pot fi găsite de către sistem.
     </para>
    </note>
@@ -107,17 +107,17 @@
   <title>Note la instalarea MySQL</title>
    <warning>
     <para>
-     Pot fi întâlnite prăbuşiri şi alte probleme la startarea PHP atunci când
+     Pot fi întâlnite prăbușiri și alte probleme la startarea PHP atunci când
      această extensie este încărcată împreună cu extensia recode.
-     Accesaţi extensia <link linkend="ref.recode">recode</link> pentru
-     informaţii suplimentare.
+     Accesați extensia <link linkend="ref.recode">recode</link> pentru
+     informații suplimentare.
     </para>
    </warning>
    <note>
     <para>
-     Dacă aveţi nevoie se seturi de caractere ce diferă de
-     <emphasis>latin</emphasis> (implicit), trebuie să instalaţi biblioteca
-     externă libmysql compilată pentru a susţine setul de caractere dorit.
+     Dacă aveți nevoie se seturi de caractere ce diferă de
+     <emphasis>latin</emphasis> (implicit), trebuie să instalați biblioteca
+     externă libmysql compilată pentru a susține setul de caractere dorit.
     </para>
    </note>
  </section>

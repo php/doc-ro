@@ -5,7 +5,7 @@
 <refentry xml:id="function.xmlrpc-server-register-method" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>xmlrpc_server_register_method</refname>
-  <refpurpose>Înregistrează o funcţie PHP unei metode de resursă ce corespunde method_name</refpurpose>
+  <refpurpose>Înregistrează o funcție PHP unei metode de resursă ce corespunde method_name</refpurpose>
  </refnamediv>
  <refsect1 role="description">
   &reftitle.description;

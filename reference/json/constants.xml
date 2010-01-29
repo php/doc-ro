@@ -6,7 +6,7 @@
  &reftitle.constants;
  &extension.constants;
  <para>
-  Următoarele constante indică tipul erorii întoarse de funcţia
+  Următoarele constante indică tipul erorii întoarse de funcția
   <function>json_last_error</function>. Acestea toate sunt disponibile începând
   cu PHP 5.3.0.
  </para>
@@ -29,7 +29,7 @@
    </term>
    <listitem>
     <simpara>
-     A fost depăşită adâncimea maximă a stivei.
+     A fost depășită adâncimea maximă a stivei.
     </simpara>
    </listitem>
   </varlistentry>
@@ -40,7 +40,7 @@
    </term>
    <listitem>
     <simpara>
-     Eroare în caracterul de control, posibil a fost codificat greşit.
+     Eroare în caracterul de control, posibil a fost codificat greșit.
     </simpara>
    </listitem>
   </varlistentry>

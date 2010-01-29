@@ -6,45 +6,45 @@
   <chapter xml:id="security.apache" xmlns="http://docbook.org/ns/docbook">
    <title>Instalat ca modul Apache</title>
    <simpara>
-    Când PHP este utilizat ca modul în Apache, el moşteneşte permisiunile
+    Când PHP este utilizat ca modul în Apache, el moștenește permisiunile
     implicite ale Apache (de obicei acelea ale utilizatorului "nobody"). Acest
-    fapt are mai multe impacte asupra securităţii şi autorizării. De exemplu,
-    dacă utilizaţi PHP pentru a accesa o bază de date, şi dacă aceasta nu are
+    fapt are mai multe impacte asupra securității și autorizării. De exemplu,
+    dacă utilizați PHP pentru a accesa o bază de date, și dacă aceasta nu are
     control de acces inclus, va trebui să faceti această bază de date să fie
     accesibilă utilizatorului "nobody". Aceasta înseamnă că un script malefic
-    va putea accesa şi modifica baza de date chiar fără a introduce numele
-    utilizatorului şi parola. Este posibil ca un robot de indexare web să
-    acceseze accidental panoul de administrare al bazei de date şi să modifice
-    sau să şteargă toate datele. Vă puteţi proteja cu ajutorul sistemului de
+    va putea accesa și modifica baza de date chiar fără a introduce numele
+    utilizatorului și parola. Este posibil ca un robot de indexare web să
+    acceseze accidental panoul de administrare al bazei de date și să modifice
+    sau să șteargă toate datele. Vă puteți proteja cu ajutorul sistemului de
     autorizare al Apache, sau printr-un model de acces personalizat folosind
-    LDAP, fişiere tip &htaccess;, etc. pe care să le introduceţi în scripturile
+    LDAP, fișiere tip &htaccess;, etc. pe care să le introduceți în scripturile
     PHP create.
    </simpara>
    <simpara>
     Adesea, după ce politica de securitate a fost stabilită, iar utilizatorul
-    PHP (în acest caz, utilizatorul Apache) prezintă risc redus faţă de sistem,
-    iese la iveală faptul că PHP este restricţionat în a scrie în fişierele şi
-    directoarele utilizatorilor, sau nu poate accesa şi schimba anumite baze de
-    date. El a fost securizat atât în a scrie fişiere bune, cât şi rele, sau
-    inserarea de tranzacţii atât benefice, cât şi dăunătoare bazelor de date.
+    PHP (în acest caz, utilizatorul Apache) prezintă risc redus față de sistem,
+    iese la iveală faptul că PHP este restricționat în a scrie în fișierele și
+    directoarele utilizatorilor, sau nu poate accesa și schimba anumite baze de
+    date. El a fost securizat atât în a scrie fișiere bune, cât și rele, sau
+    inserarea de tranzacții atât benefice, cât și dăunătoare bazelor de date.
    </simpara>
    <simpara>
-    O greşeală de securitate frecventă este că atunci când se ajunge în acest
+    O greșeală de securitate frecventă este că atunci când se ajunge în acest
     moment, să se dea permisiuni de root serverului Apache, sau să se extindă
     permisiunile într-un careva alt mod.
    </simpara>
    <simpara>
     Extinderea privilegiilor utilizatorului Apache către root este deosebit de
-    periculoasă şi poate duce la compromiterea întregului sistem, aşa că
-    operaţiunile 'sudo', 'chroot', sau alte modalităţi de a rula root nu ar
-    trebui luate în considerare în caz că nu sunteţi expert în securitare.
+    periculoasă și poate duce la compromiterea întregului sistem, așa că
+    operațiunile 'sudo', 'chroot', sau alte modalități de a rula root nu ar
+    trebui luate în considerare în caz că nu sunteți expert în securitare.
    </simpara>
    <simpara>
-    Există şi soluţii mai simple. Utilizând
-    <link linkend="ini.open-basedir">open_basedir</link> puteţi controla şi
-    restricţiona ce directorii doriţi, în care poate avea acces PHP. În plus
-    puteţi stabili zone numai pentru Apache, pentru a preveni toate acţiunile
-    din web asupra fişierelor utilizatorilor şi de sistem.
+    Există și soluții mai simple. Utilizând
+    <link linkend="ini.open-basedir">open_basedir</link> puteți controla și
+    restricționa ce directorii doriți, în care poate avea acces PHP. În plus
+    puteți stabili zone numai pentru Apache, pentru a preveni toate acțiunile
+    din web asupra fișierelor utilizatorilor și de sistem.
    </simpara>
   </chapter>
 

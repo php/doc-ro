@@ -22,7 +22,7 @@
    pierde tipul sau structura lor.
   </para>
   <para>
-   Pentru a transforma invers un string serializat într-o valoare PHP, utilizaţi
+   Pentru a transforma invers un string serializat într-o valoare PHP, utilizați
    <function>unserialize</function>.
   </para>
  </refsect1>
@@ -36,26 +36,26 @@
      <listitem>
       <para>
        Valoarea ce trebuie serializată. <function>serialize</function>
-       prelucrează toate tipurile, cu excepţia <type>resource</type>.
-       Puteţi chiar aplica <function>serialize</function> asupra tablourilor ce
-       conţin referinţe la sine însele. Referinţele circulare din interiorul
-       tabloului/obiectului pe care îl serializaţi de asemenea vor fi stocate.
-       Orice altă referinţă va fi pierdută.
+       prelucrează toate tipurile, cu excepția <type>resource</type>.
+       Puteți chiar aplica <function>serialize</function> asupra tablourilor ce
+       conțin referințe la sine însele. Referințele circulare din interiorul
+       tabloului/obiectului pe care îl serializați de asemenea vor fi stocate.
+       Orice altă referință va fi pierdută.
       </para>
       <para>
-       La serializarea obiectelor, PHP va încerca să apeleze funcţia-membru
+       La serializarea obiectelor, PHP va încerca să apeleze funcția-membru
        <link linkend="language.oop5.magic">__sleep</link> înainte de
        serializare. Aceasta se efectuează pentru a-i permite obiectului să
-       efectueze orice curăţiri, etc. înainte de a fi serializat. La fel, când
+       efectueze orice curățiri, etc. înainte de a fi serializat. La fel, când
        obiectul este restabilit cu ajutorul <function>unserialize</function>
-       funcţia-membru <link linkend="language.oop5.magic">__wakeup</link>
+       funcția-membru <link linkend="language.oop5.magic">__wakeup</link>
        este apelată.
       </para>
       <note>
        <para>
-       Membrii privaţi ai obiectului au denumirea clasei prefixată la denumirea
-       membrului; membrii privaţi au un '*' prefixat la denumirea membrului.
-       Aceste valori prefixate au câte un octet nul din ambele părţi.
+       Membrii privați ai obiectului au denumirea clasei prefixată la denumirea
+       membrului; membrii privați au un '*' prefixat la denumirea membrului.
+       Aceste valori prefixate au câte un octet nul din ambele părți.
        </para>
       </note>
      </listitem>
@@ -67,7 +67,7 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Întoarce un string conţinând reprezentarea <parameter>value</parameter> sub
+   Întoarce un string conținând reprezentarea <parameter>value</parameter> sub
    formă de byte-stream care poate fi stocată oriunde.
   </para>
  </refsect1>
@@ -80,9 +80,9 @@
     <programlisting role="php">
 <![CDATA[
 <?php
-// $session_data conţine un tablou multi-dimensional cu informaţie despre
+// $session_data conține un tablou multi-dimensional cu informație despre
 // sesiune pentru utilizatorul curent. Vom utiliza serialize() pentru a
-// stoca această informaţie într-o bază de date după încheierea interpelării.
+// stoca această informație într-o bază de date după încheierea interpelării.
 
 $conn = odbc_connect("webdb", "php", "chicken");
 $stmt = odbc_prepare($conn,

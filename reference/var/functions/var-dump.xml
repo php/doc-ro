@@ -6,7 +6,7 @@
 <refentry xml:id="function.var-dump" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>var_dump</refname>
-  <refpurpose>Afişează informaţia despre o variabilă</refpurpose>
+  <refpurpose>Afișează informația despre o variabilă</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -18,14 +18,14 @@
    <methodparam choice="opt"><parameter>...</parameter></methodparam>
   </methodsynopsis>
   <simpara>
-   Această funcţie afişează informaţia structurată despre una sau mai multe
-   expresii, ce include tipul şi valoarea sa. Tablourile şi obiectele sunt
-   traversate recursiv şi valorile sunt amplasate vizual astfel încât să
+   Această funcție afișează informația structurată despre una sau mai multe
+   expresii, ce include tipul și valoarea sa. Tablourile și obiectele sunt
+   traversate recursiv și valorile sunt amplasate vizual astfel încât să
    reflecte structura.
   </simpara>
   <simpara>
-   În PHP 5 toate proprietăţile publice, private şi protejate ale obiectelor
-   vor fi afişate.
+   În PHP 5 toate proprietățile publice, private și protejate ale obiectelor
+   vor fi afișate.
   </simpara>
   &tip.ob-capture;
  </refsect1>
@@ -38,7 +38,7 @@
      <term><parameter>expression</parameter></term>
      <listitem>
       <para>
-       Variabila, pe care doriţi să o exportaţi.
+       Variabila, pe care doriți să o exportați.
       </para>
      </listitem>
     </varlistentry>

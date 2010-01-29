@@ -31,14 +31,14 @@
        <para>
         <function>empty</function> verifică numai variabile, deoarece orice
         altceva va duce la o eroare de interpretare. Cu alte cuvinte,
-        următoarea comandă nu va funcţiona:
+        următoarea comandă nu va funcționa:
         <command>empty(trim($name))</command>.
        </para>
       </note>
       <para>
        <function>empty</function> este opusa <literal>(boolean) var</literal>,
-       cu excepţia că nu se generează o avertizare atunci când variabila nu
-       este stabilită (iniţializată).
+       cu excepția că nu se generează o avertizare atunci când variabila nu
+       este stabilită (inițializată).
       </para>
      </listitem>
     </varlistentry>
@@ -48,11 +48,11 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Întoarce &false; dacă <parameter>var</parameter> are o valoare nevidă şi
+   Întoarce &false; dacă <parameter>var</parameter> are o valoare nevidă și
    neegală cu zero.
   </para>
   <para>
-   Următoarele entităţi sunt considerate a fi vide:
+   Următoarele entități sunt considerate a fi vide:
    <simplelist>
     <member><literal>"" (un string vid)</literal></member>
     <member><literal>0 (0 în calitate de integer)</literal></member>
@@ -81,7 +81,7 @@
        <entry>PHP 5</entry>
        <entry>
         <para>
-         Începând cu PHP 5 obiectele fără proprietăţi nu mai sunt considerate
+         Începând cu PHP 5 obiectele fără proprietăți nu mai sunt considerate
          vide.
         </para>
        </entry>
@@ -96,7 +96,7 @@
   <para>
    <example>
     <title>
-     O comparaţie simplă <function>empty</function> / <function>isset</function>.
+     O comparație simplă <function>empty</function> / <function>isset</function>.
     </title>
     <programlisting role="php">
 <![CDATA[
@@ -108,7 +108,7 @@ if (empty($var)) {
     echo '$var is either 0, empty, or not set at all';
 }
 
-// Evaluează în true deoarece $var este iniţializat
+// Evaluează în true deoarece $var este inițializat
 if (isset($var)) {
     echo '$var is set even though it is empty';
 }
@@ -123,7 +123,7 @@ if (isset($var)) {
   &note.language-construct;
   <note>
    <para>
-    La utilizarea <function>empty</function> asupra proprietăţilor inaccesibile
+    La utilizarea <function>empty</function> asupra proprietăților inaccesibile
     ale obiectelor, va fi apelată metoda de supraîncărcare
     <link linkend="language.oop5.overloading.members">__isset</link>, dacă este
     declarată.

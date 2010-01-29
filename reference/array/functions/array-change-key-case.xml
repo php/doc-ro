@@ -98,8 +98,8 @@ Array
   <note>
    <para>
     Dacă un tablou are indici care vor deveni la fel odată ce se va rula această
-    funcţie (de ex. "<literal>keY</literal>" şi "<literal>kEY</literal>"),
-    valoarea cea mai de pe urmă din tablou se va suprapune peste ceilalţi
+    funcție (de ex. "<literal>keY</literal>" și "<literal>kEY</literal>"),
+    valoarea cea mai de pe urmă din tablou se va suprapune peste ceilalți
     indici.
    </para>
   </note>

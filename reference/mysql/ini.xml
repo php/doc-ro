@@ -7,7 +7,7 @@
  &extension.runtime;
  <para>
   <table>
-   <title>Opţiuni de configurare MySQL</title>
+   <title>Opțiuni de configurare MySQL</title>
    <tgroup cols="4">
     <thead>
      <row>
@@ -135,8 +135,8 @@
    <listitem>
     <para>
      Modul de trasare. Când <literal>mysql.trace_mode</literal> este activat,
-     vor fi afişate avertizări pentru scanări ale tabelelor/indicilor, seturi
-     de rezultate neeliberate şi erori SQL. (Introdus în PHP 4.3.0)
+     vor fi afișate avertizări pentru scanări ale tabelelor/indicilor, seturi
+     de rezultate neeliberate și erori SQL. (Introdus în PHP 4.3.0)
     </para>
    </listitem>
   </varlistentry>
@@ -150,7 +150,7 @@
     <para>
      Numărul implicit al portului TCP utilizat pentru conectarea la serverul de
      baze de date, dacă nu este specificat un alt port. Dacă nu este
-     specificată o valoare implicită, numărul portului va fi obţinut din
+     specificată o valoare implicită, numărul portului va fi obținut din
      variabila de mediu <envar>MYSQL_TCP_PORT</envar>, înregistrarea
      <literal>mysql-tcp</literal> din <filename>/etc/services</filename>, sau
      din constanta <constant>MYSQL_PORT</constant> de la momentul compilării
@@ -220,7 +220,7 @@
    <listitem>
     <para>
      Timeout-ul la conectare în secunde. Pe Linux acest timeout este de
-     asemenea utilizat la aşteptarea primului răspuns de la server.
+     asemenea utilizat la așteptarea primului răspuns de la server.
     </para>
    </listitem>
   </varlistentry>

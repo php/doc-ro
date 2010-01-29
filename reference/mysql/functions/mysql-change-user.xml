@@ -20,13 +20,13 @@
   <para>
    <function>mysql_change_user</function> schimbă utilizatorul logat al
    conexiunii active curente, sau a conexiunii furnizate în parametrul
-   opţional <parameter>link_identifier</parameter>. Dacă este specificată
+   opțional <parameter>link_identifier</parameter>. Dacă este specificată
    o bază de date, aceasta va fi baza de date curentă după ce utilizatorul va
-   fi schimbat. Dacă autorizarea noului utilizator prin nume şi parolă eşuează,
+   fi schimbat. Dacă autorizarea noului utilizator prin nume și parolă eșuează,
    utilizatorul curent conectat rămâne activ.
   </para>
   <para>
-   Această funcţie este învechită şi nu mai există în PHP.
+   Această funcție este învechită și nu mai există în PHP.
   </para>
  </refsect1>
 
@@ -75,9 +75,9 @@
  <refsect1 role="notes">
   &reftitle.notes;
   <note>
-   <title>Necesităţi</title>
+   <title>Necesități</title>
    <para>
-    Această funcţie necesită MySQL 3.23.3 sau ulterior.
+    Această funcție necesită MySQL 3.23.3 sau ulterior.
    </para>
   </note>
  </refsect1>

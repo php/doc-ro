@@ -6,7 +6,7 @@
  &extension.runtime;
  <para>
  <table>
-  <title>Opţiuni de configurare a poştei</title>
+  <title>Opțiuni de configurare a poștei</title>
   <tgroup cols="4">
    <thead>
     <row>
@@ -71,7 +71,7 @@
    <listitem>
     <para>
      Adaugă <literal>X-PHP-Originating-Script</literal> ce va include UID al
-     scriptului, urmat de denumirea fişierului.
+     scriptului, urmat de denumirea fișierului.
     </para>
    </listitem>
   </varlistentry>
@@ -84,7 +84,7 @@
    <listitem>
     <para>
      Loghează toate apelurile <function>mail</function>, incluzând calea deplină
-     a script-ului, numărul liniei, adresele <literal>To</literal> şi antetele.
+     a script-ului, numărul liniei, adresele <literal>To</literal> și antetele.
     </para>
    </listitem>
   </varlistentry>
@@ -97,7 +97,7 @@
    <listitem>
     <para>
      Se utilizează numai în Windows: denumirea sau adresa IP a serverului SMTP
-     pe care PHP trebuie să-l utilizeze pentru trimiterea poştei cu funcţia
+     pe care PHP trebuie să-l utilizeze pentru trimiterea poștei cu funcția
      <function>mail</function>.
     </para>
    </listitem>
@@ -111,8 +111,8 @@
    <listitem>
     <para>
      Se utilizează numai în Windows: numărul portului pentru conectare la
-     serverul specificat în opţiunea <literal>SMTP</literal> la trimiterea
-     poştei cu funcţia <function>mail</function>; implicit este 25. Disponibil
+     serverul specificat în opțiunea <literal>SMTP</literal> la trimiterea
+     poștei cu funcția <function>mail</function>; implicit este 25. Disponibil
      numai începând cu PHP 4.3.0.
     </para>
    </listitem>
@@ -126,8 +126,8 @@
    <listitem>
     <para>
      Indică adresa ce trebuie înscrisă în câmpul <literal>"From:"</literal> în
-     poşta trimisă din PHP sub Windows. Această directivă de asemenea
-     stabileşte antetul <literal>"Return-Path:"</literal>.
+     poșta trimisă din PHP sub Windows. Această directivă de asemenea
+     stabilește antetul <literal>"Return-Path:"</literal>.
     </para>
    </listitem>
   </varlistentry>
@@ -142,13 +142,13 @@
      Indică locul unde programul <command>sendmail</command> poate fi găsit,
      de obicei <filename>/usr/sbin/sendmail</filename> sau
      <filename>/usr/lib/sendmail</filename>.
-     <command>configure</command> încearcă să găsescă independent programul şi
-     să stabilească implicit această locaţie, dar dacă eşuează, puteţi să o
-     stabiliţi aici.
+     <command>configure</command> încearcă să găsescă independent programul și
+     să stabilească implicit această locație, dar dacă eșuează, puteți să o
+     stabiliți aici.
     </para>
     <para>
      Sistemele ce nu utilizează <command>sendmail</command> ar trebui să
-     stabilească această directivă către învelişul/înlocuitorul sendmail
+     stabilească această directivă către învelișul/înlocuitorul sendmail
      pe care îl oferă sistemul lor, dacă există.
      Spre exemplu, utilizatorii <link xlink:href="&url.qmail;">Qmail</link>
      în mod mormal pot să stabilească valoarea în
@@ -156,13 +156,13 @@
      /var/qmail/bin/qmail-inject</filename>.
     </para>
     <para>
-     <command>qmail-inject</command> nu necesită nici o opţiune pentru a prelucra
-     corect poşta.
+     <command>qmail-inject</command> nu necesită nici o opțiune pentru a prelucra
+     corect poșta.
     </para>
     <para>
-     Această directivă funcţionează de asemenea şi în Windows. Dacă ea este
+     Această directivă funcționează de asemenea și în Windows. Dacă ea este
      stabilită, atunci <varname>smtp</varname>, <varname>smtp_port</varname>
-     şi <varname>sendmail_from</varname> sunt ignorate şi comanda specificată este
+     și <varname>sendmail_from</varname> sunt ignorate și comanda specificată este
      executată.
     </para>
    </listitem>

@@ -6,8 +6,8 @@
 <refentry xml:id="function.apache-lookup-uri" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>apache_lookup_uri</refname>
-  <refpurpose>Efectuează o interpelare parţială pentru URI specificat şi
-  întoarce toate informaţiile despre el</refpurpose>
+  <refpurpose>Efectuează o interpelare parțială pentru URI specificat și
+  întoarce toate informațiile despre el</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -17,8 +17,8 @@
    <methodparam><type>string</type><parameter>filename</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Aceasta efectuează o interpelare parţială pentru un URI. Interpelarea se
-   derulează doar până la etapa obţinerii tuturor informaţiilor importante
+   Aceasta efectuează o interpelare parțială pentru un URI. Interpelarea se
+   derulează doar până la etapa obținerii tuturor informațiilor importante
    despre resursa dată.
   </para>
   &apache.req.module;
@@ -32,7 +32,7 @@
      <term><parameter>filename</parameter></term>
      <listitem>
       <para>
-       Denumirea fişierului (URI) care este interpelat.
+       Denumirea fișierului (URI) care este interpelat.
       </para>
      </listitem>
     </varlistentry>
@@ -43,7 +43,7 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Un <type>object</type> cu informaţiile ce se referă la URI. Proprietăţile
+   Un <type>object</type> cu informațiile ce se referă la URI. Proprietățile
    acestui <type>object</type> sunt:
   </para>
   <para>

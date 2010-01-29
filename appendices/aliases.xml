@@ -2,18 +2,18 @@
 <!-- $Revision$ -->
 <!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: simionea Status: ready -->
 <appendix xml:id="aliases" xmlns="http://docbook.org/ns/docbook">
- <title>Lista pseudonimelor funcţiilor</title>
+ <title>Lista pseudonimelor funcțiilor</title>
  <para>
-  Există câteva funcţii în PHP, pe care puteţi să le apelaţi cu mai multe
+  Există câteva funcții în PHP, pe care puteți să le apelați cu mai multe
   nume. În unele cazuri nu este vre-un nume preferat dintre aceste câteva,
-  <function>is_int</function> şi <function>is_integer</function> sunt la fel
+  <function>is_int</function> și <function>is_integer</function> sunt la fel
   de potrivite, de exemplu.
-  Însă sunt şi funcţii care şi-au schimbat numele din cauza curăţirii
-  interfeţelor API, sau din alte motive şi numele vechi sunt păstrate doar
-  pentru a menţine compatibilitatea inversă. De obicei nu este o idee bună
+  Însă sunt și funcții care și-au schimbat numele din cauza curățirii
+  interfețelor API, sau din alte motive și numele vechi sunt păstrate doar
+  pentru a menține compatibilitatea inversă. De obicei nu este o idee bună
   de a utiliza astfel de pseudonime, deoarece ele pot fi scoase din uz sau
   redenumite, ceea ce va duce la un script neportabil. Această listă e oferită
-  celor ce doresc să-şi modernizeze scripturile vechi folosind sintaxa nouă.
+  celor ce doresc să-și modernizeze scripturile vechi folosind sintaxa nouă.
  </para>
  <para>
   Această listă e consistentă pentru PHP 4.0.6.
@@ -25,7 +25,7 @@
     <thead>
      <row>
       <entry>Pseudonimul</entry>
-      <entry>Funcţia de baza</entry>
+      <entry>Funcția de baza</entry>
       <entry>Extensia utilizată</entry>
      </row>
     </thead>
@@ -128,7 +128,7 @@
      <row>
       <entry>die</entry>
       <entry><function>exit</function></entry>
-      <entry><link linkend="ref.misc">Funcţii diverse</link></entry>
+      <entry><link linkend="ref.misc">Funcții diverse</link></entry>
      </row>
      <row>
       <entry>dir</entry>
@@ -138,7 +138,7 @@
      <row>
       <entry>diskfreespace</entry>
       <entry><function>disk_free_space</function></entry>
-      <entry><link linkend="ref.filesystem">Sistemul de fişiere</link></entry>
+      <entry><link linkend="ref.filesystem">Sistemul de fișiere</link></entry>
      </row>
      <row>
       <entry>domxml_getattr</entry>
@@ -298,42 +298,42 @@
      <row>
       <entry>i18n_convert</entry>
       <entry><function>mb_convert_encoding</function></entry>
-      <entry><link linkend="ref.mbstring">String-uri de mai mulţi baiţi</link></entry>
+      <entry><link linkend="ref.mbstring">String-uri de mai mulți baiți</link></entry>
      </row>
      <row>
       <entry>i18n_discover_encoding</entry>
       <entry><function>mb_detect_encoding</function></entry>
-      <entry><link linkend="ref.mbstring">String-uri de mai mulţi baiţi</link></entry>
+      <entry><link linkend="ref.mbstring">String-uri de mai mulți baiți</link></entry>
      </row>
      <row>
       <entry>i18n_http_input</entry>
       <entry><function>mb_http_input</function></entry>
-      <entry><link linkend="ref.mbstring">String-uri de mai mulţi baiţi</link></entry>
+      <entry><link linkend="ref.mbstring">String-uri de mai mulți baiți</link></entry>
      </row>
      <row>
       <entry>i18n_http_output</entry>
       <entry><function>mb_http_output</function></entry>
-      <entry><link linkend="ref.mbstring">String-uri de mai mulţi baiţi</link></entry>
+      <entry><link linkend="ref.mbstring">String-uri de mai mulți baiți</link></entry>
      </row>
      <row>
       <entry>i18n_internal_encoding</entry>
       <entry><function>mb_internal_encoding</function></entry>
-      <entry><link linkend="ref.mbstring">String-uri de mai mulţi baiţi</link></entry>
+      <entry><link linkend="ref.mbstring">String-uri de mai mulți baiți</link></entry>
      </row>
      <row>
       <entry>i18n_ja_jp_hantozen</entry>
       <entry><function>mb_convert_kana</function></entry>
-      <entry><link linkend="ref.mbstring">String-uri de mai mulţi baiţi</link></entry>
+      <entry><link linkend="ref.mbstring">String-uri de mai mulți baiți</link></entry>
      </row>
      <row>
       <entry>i18n_mime_header_decode</entry>
       <entry><function>mb_decode_mimeheader</function></entry>
-      <entry><link linkend="ref.mbstring">String-uri de mai mulţi baiţi</link></entry>
+      <entry><link linkend="ref.mbstring">String-uri de mai mulți baiți</link></entry>
      </row>
      <row>
       <entry>i18n_mime_header_encode</entry>
       <entry><function>mb_encode_mimeheader</function></entry>
-      <entry><link linkend="ref.mbstring">String-uri de mai mulţi baiţi</link></entry>
+      <entry><link linkend="ref.mbstring">String-uri de mai mulți baiți</link></entry>
      </row>
      <row>
       <entry>imap_create</entry>
@@ -453,27 +453,27 @@
      <row>
       <entry>mbstrcut</entry>
       <entry><function>mb_strcut</function></entry>
-      <entry><link linkend="ref.mbstring">String-uri de mai mulţi baiţi</link></entry>
+      <entry><link linkend="ref.mbstring">String-uri de mai mulți baiți</link></entry>
      </row>
      <row>
       <entry>mbstrlen</entry>
       <entry><function>mb_strlen</function></entry>
-      <entry><link linkend="ref.mbstring">String-uri de mai mulţi baiţi</link></entry>
+      <entry><link linkend="ref.mbstring">String-uri de mai mulți baiți</link></entry>
      </row>
      <row>
       <entry>mbstrpos</entry>
       <entry><function>mb_strpos</function></entry>
-      <entry><link linkend="ref.mbstring">String-uri de mai mulţi baiţi</link></entry>
+      <entry><link linkend="ref.mbstring">String-uri de mai mulți baiți</link></entry>
      </row>
      <row>
       <entry>mbstrrpos</entry>
       <entry><function>mb_strrpos</function></entry>
-      <entry><link linkend="ref.mbstring">String-uri de mai mulţi baiţi</link></entry>
+      <entry><link linkend="ref.mbstring">String-uri de mai mulți baiți</link></entry>
      </row>
      <row>
       <entry>mbsubstr</entry>
       <entry><function>mb_substr</function></entry>
-      <entry><link linkend="ref.mbstring">String-uri de mai mulţi baiţi</link></entry>
+      <entry><link linkend="ref.mbstring">String-uri de mai mulți baiți</link></entry>
      </row>
      <row>
       <entry>ming_setcubicthreshold</entry>

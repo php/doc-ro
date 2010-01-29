@@ -17,20 +17,20 @@
   </methodsynopsis>
   <para>
    Formatează ora și/sau data în conformitate cu setările locale. Denumirile
-   lunilor şi a zilelor săptămânii şi alte string-uri dependente de limbă sunt
-   în conformitate cu setările locale stabilite prin fincţia
+   lunilor și a zilelor săptămânii și alte string-uri dependente de limbă sunt
+   în conformitate cu setările locale stabilite prin fincția
    <function>setlocale</function>.
   </para>
   <para>
-   Nu toate specificările de convertire pot fi susţinute de biblioteca
-   dumneavoastră C, în care caz ele nu vor fi susţinute de funcţia PHP
-   <function>strftime</function>. În plus, nu toate platformele susţin
+   Nu toate specificările de convertire pot fi susținute de biblioteca
+   dumneavoastră C, în care caz ele nu vor fi susținute de funcția PHP
+   <function>strftime</function>. În plus, nu toate platformele susțin
    timestamp-uri negative, de aceea domeniul de date poate fi limitat la valori
-   nu mai mici de Epoca Unix. Aceasta înseamnă că %e, %T, %R şi %D (pot
+   nu mai mici de Epoca Unix. Aceasta înseamnă că %e, %T, %R și %D (pot
    fi mai multe), precum și date anterioare la <literal>Jan 1, 1970</literal> nu
-   vor funcţiona în Windows, unele distibuţii Linux, şi alte câteva sisteme de
+   vor funcționa în Windows, unele distibuții Linux, și alte câteva sisteme de
    operare. Pentru sisteme Windows o privire de ansamblu a specificatorilor de
-   conversie susţinuţi poate fi găsită pe acest
+   conversie susținuți poate fi găsită pe acest
    <link xlink:href="&url.strftime.win32;">website <acronym>MSDN</acronym></link>.
   </para>
  </refsect1>
@@ -329,8 +329,8 @@
   <para>
    Întoarce un string formatat în corespundere cu parametrul
    <parameter>format</parameter>, utilizând <parameter>timestamp</parameter>-ul
-   dat sau data şi ora locală, dacă nu este furnizat un timestamp. Denumirile
-   lunilor şi a zilelor săptămânii şi alte string-uri dependente de limbă sunt
+   dat sau data și ora locală, dacă nu este furnizat un timestamp. Denumirile
+   lunilor și a zilelor săptămânii și alte string-uri dependente de limbă sunt
    în corespundere cu setările locale stabilite cu
    <function>setlocale</function>.
   </para>
@@ -341,11 +341,11 @@
   &date.timezone.errors.description;
   <para>
    Deoarece valoarea întoarsă depinde de biblioteca C ce stă la bază, unii
-   specificatori de conversie nu sunt susţinuţi. În Windows, furnizarea
-   specificatorilor de conversie necunoscuţi va rezulta în 5 mesaje
-   <constant>E_WARNING</constant> şi va întoarce &false;. În alte sisteme de
-   operare puteţi să nu obţineţi mesaje <constant>E_WARNING</constant> iar
-   rezultatul poate să conţină specificatorii de conversie neconvertiţi.
+   specificatori de conversie nu sunt susținuți. În Windows, furnizarea
+   specificatorilor de conversie necunoscuți va rezulta în 5 mesaje
+   <constant>E_WARNING</constant> și va întoarce &false;. În alte sisteme de
+   operare puteți să nu obțineți mesaje <constant>E_WARNING</constant> iar
+   rezultatul poate să conțină specificatorii de conversie neconvertiți.
   </para>
  </refsect1>
 
@@ -373,7 +373,7 @@
  <refsect1 role="examples">
   &reftitle.examples;
   <para>
-   Acest exemplu va funcţiona dacă aveţi setările locale respective instalate
+   Acest exemplu va funcționa dacă aveți setările locale respective instalate
    în sistem.
    <example>
     <title>Exemple <function>strftime</function></title>
@@ -406,16 +406,16 @@ ISOWk  M   Tu  W   Thu F   Sa  Su
 2       6   7   8   9  10  11  12
 3      13  14  15  16  17  18  19   */
 
-// Afişează: 12/28/2002 - %V,%G,%Y = 52,2002,2002
+// Afișează: 12/28/2002 - %V,%G,%Y = 52,2002,2002
 echo "12/28/2002 - %V,%G,%Y = " . strftime("%V,%G,%Y", strtotime("12/28/2002")) . "\n";
 
-// Afişează: 12/30/2002 - %V,%G,%Y = 1,2003,2002
+// Afișează: 12/30/2002 - %V,%G,%Y = 1,2003,2002
 echo "12/30/2002 - %V,%G,%Y = " . strftime("%V,%G,%Y", strtotime("12/30/2002")) . "\n";
 
-// Afişează: 1/3/2003 - %V,%G,%Y = 1,2003,2003
+// Afișează: 1/3/2003 - %V,%G,%Y = 1,2003,2003
 echo "1/3/2003 - %V,%G,%Y = " . strftime("%V,%G,%Y",strtotime("1/3/2003")) . "\n";
 
-// Afişează: 1/10/2003 - %V,%G,%Y = 2,2003,2003
+// Afișează: 1/10/2003 - %V,%G,%Y = 2,2003,2003
 echo "1/10/2003 - %V,%G,%Y = " . strftime("%V,%G,%Y",strtotime("1/10/2003")) . "\n";
 
 
@@ -428,16 +428,16 @@ ISOWk  M   Tu  W   Thu F   Sa  Su
 1       3   4   5   6   7   8   9
 2      10  11  12  13  14  15  16   */
 
-// Afişează: 12/23/2004 - %V,%G,%Y = 52,2004,2004
+// Afișează: 12/23/2004 - %V,%G,%Y = 52,2004,2004
 echo "12/23/2004 - %V,%G,%Y = " . strftime("%V,%G,%Y",strtotime("12/23/2004")) . "\n";
 
-// Afişează: 12/31/2004 - %V,%G,%Y = 53,2004,2004
+// Afișează: 12/31/2004 - %V,%G,%Y = 53,2004,2004
 echo "12/31/2004 - %V,%G,%Y = " . strftime("%V,%G,%Y",strtotime("12/31/2004")) . "\n";
 
-// Afişează: 1/2/2005 - %V,%G,%Y = 53,2004,2005
+// Afișează: 1/2/2005 - %V,%G,%Y = 53,2004,2005
 echo "1/2/2005 - %V,%G,%Y = " . strftime("%V,%G,%Y",strtotime("1/2/2005")) . "\n";
 
-// Afişează: 1/3/2005 - %V,%G,%Y = 1,2005,2005
+// Afișează: 1/3/2005 - %V,%G,%Y = 1,2005,2005
 echo "1/3/2005 - %V,%G,%Y = " . strftime("%V,%G,%Y",strtotime("1/3/2005")) . "\n";
 
 ?>
@@ -451,9 +451,9 @@ echo "1/3/2005 - %V,%G,%Y = " . strftime("%V,%G,%Y",strtotime("1/3/2005")) . "\n
   &reftitle.notes;
   <note>
    <simpara>
-    %G şi %V, care se bazează pe numerele săptămânilor conform standardului
-    ISO 8601:1988 pot oferi rezultate neaşteptate (dar corecte) dacă sistemul
-    de numerotare nu este înţeles în detaliu. Vedeţi exemplele %V în această
+    %G și %V, care se bazează pe numerele săptămânilor conform standardului
+    ISO 8601:1988 pot oferi rezultate neașteptate (dar corecte) dacă sistemul
+    de numerotare nu este înțeles în detaliu. Vedeți exemplele %V în această
     pagină a manualului.
    </simpara>
   </note>
@@ -467,7 +467,7 @@ echo "1/3/2005 - %V,%G,%Y = " . strftime("%V,%G,%Y",strtotime("1/3/2005")) . "\n
     <member><function>mktime</function></member>
     <member><function>strptime</function></member>
     <member><function>gmstrftime</function></member>
-    <member><link xlink:href="&spec.strftime;">Specificaţia Open Group a <function>strftime</function></link></member>
+    <member><link xlink:href="&spec.strftime;">Specificația Open Group a <function>strftime</function></link></member>
    </simplelist>
   </para>
  </refsect1>

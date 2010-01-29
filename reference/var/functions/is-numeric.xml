@@ -18,11 +18,11 @@
   </methodsynopsis>
   <para>
    Determină dacă variabila dată este numerică. String-urile numerice constau
-   din semnul opţional, orice număr de cifre, partea decimală opţională şi
-   partea exponenţială opţională. Astfel <literal>+0123.45e6</literal> este
+   din semnul opțional, orice număr de cifre, partea decimală opțională și
+   partea exponențială opțională. Astfel <literal>+0123.45e6</literal> este
    o valoare numerică validă. Notarea hexadecimală (<literal>0xFF</literal>)
-   este de asemenea permisă, dar numai fără semn, parte decimală şi parte
-   exponenţială.
+   este de asemenea permisă, dar numai fără semn, parte decimală și parte
+   exponențială.
   </para>
  </refsect1>
 

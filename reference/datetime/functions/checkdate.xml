@@ -17,7 +17,7 @@
    <methodparam><type>int</type><parameter>year</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Verifică validitatea datei formate din argumenţi. O dată este considerată
+   Verifică validitatea datei formate din argumenți. O dată este considerată
    validă dacă fiecare parametru este definit corespunzător.
   </para>
  </refsect1>
@@ -30,7 +30,7 @@
      <term><parameter>month</parameter></term>
      <listitem>
       <para>
-       Luna este între 1 şi 12 inclusiv.
+       Luna este între 1 și 12 inclusiv.
       </para>
      </listitem>
     </varlistentry>
@@ -39,7 +39,7 @@
      <listitem>
       <para>
        Ziua este cuprinsă în domeniul zilelor permise pentru luna respectivă.
-       Anii bisecţi sunt luaţi în considerare.
+       Anii bisecți sunt luați în considerare.
       </para>
      </listitem>
     </varlistentry>
@@ -47,7 +47,7 @@
      <term><parameter>year</parameter></term>
      <listitem>
       <para>
-       Anul este între 1 şi 32767 inclusiv.
+       Anul este între 1 și 32767 inclusiv.
       </para>
      </listitem>
     </varlistentry>

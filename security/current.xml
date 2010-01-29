@@ -6,17 +6,17 @@
   <chapter xml:id="security.current" xmlns="http://docbook.org/ns/docbook">
    <title>Cea mai nouă versiune</title>
    <simpara>
-    PHP, ca şi orice alt sistem major, este într-un proces constant de
-    examinare minuţioasă şi îmbunătăţire. Fiecare versiune nouă deseori va
-    include atât schimbări minore cât şi majore pentru a îmbunătăţi securitatea
-    şi pentru a repara orice neajunsuri, problemele de configurare, precum şi
-    alte schimbări care au impact asupra securităţii şi stabilităţii sistemului
+    PHP, ca și orice alt sistem major, este într-un proces constant de
+    examinare minuțioasă și îmbunătățire. Fiecare versiune nouă deseori va
+    include atât schimbări minore cât și majore pentru a îmbunătăți securitatea
+    și pentru a repara orice neajunsuri, problemele de configurare, precum și
+    alte schimbări care au impact asupra securității și stabilității sistemului
     dumneavoastră.
    </simpara>
    <simpara>
-    Ca şi cu alte limbaje de script şi programe care rulează la nivel de
-    sistem, cea mai bună soluţie este reînnoirea regulată şi evidenţa ultimelor
-    versiuni şi a schimbărilor survenite în acestea.
+    Ca și cu alte limbaje de script și programe care rulează la nivel de
+    sistem, cea mai bună soluție este reînnoirea regulată și evidența ultimelor
+    versiuni și a schimbărilor survenite în acestea.
    </simpara>
   </chapter>
 

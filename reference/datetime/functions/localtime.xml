@@ -5,7 +5,7 @@
 <refentry xml:id="function.localtime" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>localtime</refname>
-  <refpurpose>Obţine timpul local</refpurpose>
+  <refpurpose>Obține timpul local</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -16,8 +16,8 @@
    <methodparam choice="opt"><type>bool</type><parameter>is_associative</parameter><initializer>false</initializer></methodparam>
   </methodsynopsis>
   <para>
-   Funcţia <function>localtime</function> întoarce un tablou identic ca
-   structură cu cel întors de funcţia C.
+   Funcția <function>localtime</function> întoarce un tablou identic ca
+   structură cu cel întors de funcția C.
   </para>
  </refsect1>
 
@@ -33,10 +33,10 @@
      <listitem>
       <para>
        Dacă este stabilit în &false; sau nu este furnizat, atunci tabloul întors
-       este unul obişnuit, indexat numeric. Dacă argumentul este stabilit în
+       este unul obișnuit, indexat numeric. Dacă argumentul este stabilit în
        &true;, atunci <function>localtime</function> întoarce un tablou
-       asociativ conţinând diferitele elemente ale structurii întoarse în
-       rezultatul apelării funcţiei C localtime. Denumirile cheilor tabloului
+       asociativ conținând diferitele elemente ale structurii întoarse în
+       rezultatul apelării funcției C localtime. Denumirile cheilor tabloului
        asociativ sunt următoarele:
       </para>
       <para>
@@ -61,7 +61,7 @@
           "tm_mday" - ziua lunii
          </simpara>
          <simpara>
-          Lunile sunt de la 0 (Ian) până la 11 (Dec) şi zilele săptămânii sunt
+          Lunile sunt de la 0 (Ian) până la 11 (Dec) și zilele săptămânii sunt
           de la 0 (Duminică) până la 6 (Sâmbătă).
          </simpara>
         </listitem>

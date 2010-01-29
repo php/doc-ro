@@ -17,7 +17,7 @@
   </methodsynopsis>
   <simpara>
    <function>ezmlm_hash</function> calculează valoarea hash necesară
-   pentru menţinerea listelor poştale EZMLM într-o bază de date MySQL.
+   pentru menținerea listelor poștale EZMLM într-o bază de date MySQL.
   </simpara>
  </refsect1>
 
@@ -29,7 +29,7 @@
      <term><parameter>addr</parameter></term>
      <listitem>
       <para>
-       Adresa email asupra căreia se aplică funcţia hash.
+       Adresa email asupra căreia se aplică funcția hash.
       </para>
      </listitem>
     </varlistentry>
@@ -48,7 +48,7 @@
   &reftitle.examples;
   <para>
    <example>
-    <title>Calcularea hash-ului şi înscrierea în listă a unui utilizator</title>
+    <title>Calcularea hash-ului și înscrierea în listă a unui utilizator</title>
     <programlisting role="php">
 <![CDATA[
 <?php

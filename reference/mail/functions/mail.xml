@@ -53,7 +53,7 @@
       </para>
       <caution>
        <para>
-        Subiectul trebuie să satisfacă cerinţelor
+        Subiectul trebuie să satisfacă cerințelor
         <link xlink:href="&url.rfc;2047">RFC 2047</link>.
        </para>
       </caution>
@@ -67,13 +67,13 @@
       </para>
       <para>
        Fiecare rând trebuie să fie încheiat cu LF (\n). Lungimea rândurilor nu
-       trebuie să depăşească 70 de caractere.
+       trebuie să depășească 70 de caractere.
       </para>
       <caution>
        <para>
         (Numai pentru Windows) Când PHP conlucrează direct cu un server SMTP,
         dacă este întâlnit un punct la începutul unui rând, el este eliminat.
-        Pentru a depăşi aceste situaţii, dublaţi punctul de la începutul
+        Pentru a depăși aceste situații, dublați punctul de la începutul
         rândului.
         <programlisting role="php">
 <![CDATA[
@@ -87,39 +87,39 @@ $text = str_replace("\n.", "\n..", $text);
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><parameter>additional_headers</parameter> (opţional)</term>
+     <term><parameter>additional_headers</parameter> (opțional)</term>
      <listitem>
       <para>
-       Un string spre a fi inserat la sfârşitul antetelor mesajului.
+       Un string spre a fi inserat la sfârșitul antetelor mesajului.
       </para>
       <para>
        Acesta este utilizat de obicei pentru a adăuga antete suplimentare
-       (From, Cc, şi Bcc). Antetele suplimentare multiple trebuie separate cu
+       (From, Cc, și Bcc). Antetele suplimentare multiple trebuie separate cu
        CRLF (\r\n).
       </para>
       <note>
        <para>
-        La trimiterea mesajului, acesta <emphasis>trebuie</emphasis> să conţină
+        La trimiterea mesajului, acesta <emphasis>trebuie</emphasis> să conțină
         antetul <literal>From</literal>. Acesta poate fi stabilit cu ajutorul
         parametrului <parameter>additional_headers</parameter>, sau poate fi
         stabilită o valoare implicită în &php.ini;.
        </para>
        <para>
-        În caz că nu se respectă această condiţie, se va produce un mesaj de
+        În caz că nu se respectă această condiție, se va produce un mesaj de
         eroare similar cu acesta: <literal>Warning: mail(): "sendmail_from" not
         set in php.ini or custom "From:" header missing</literal>
         (<literal>Avertizare: mail(): "sendmail_from" nu este stabilit în
-        php.ini sau antetul "From:" lipseşte</literal>).
-        Antetul <literal>From</literal> stabileşte de asemenea <literal>
+        php.ini sau antetul "From:" lipsește</literal>).
+        Antetul <literal>From</literal> stabilește de asemenea <literal>
         Return-Path</literal> în Windows.
        </para>
       </note>
       <note>
        <para>
-        Dacă mesajele nu sunt primite, încercaţi să utilizaţi numai LF (\n).
-        Unii agenţi de transfer a mesajelor de calitate proastă în Unix
+        Dacă mesajele nu sunt primite, încercați să utilizați numai LF (\n).
+        Unii agenți de transfer a mesajelor de calitate proastă în Unix
         înlocuiesc LF cu CRLF în mod automat (ceea ce duce la dublarea CR dacă
-        este utilizat CRLF). Utilizaţi acest procedeu numai în caz excepţional,
+        este utilizat CRLF). Utilizați acest procedeu numai în caz excepțional,
         deoarece acesta nu se conformaeză cu <link xlink:href="&url.rfc;2822">
         RFC 2822</link>.
        </para>
@@ -127,22 +127,22 @@ $text = str_replace("\n.", "\n..", $text);
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><parameter>additional_parameters</parameter> (opţional)</term>
+     <term><parameter>additional_parameters</parameter> (opțional)</term>
      <listitem>
       <para>
        Parametrul <parameter>additional_parameters</parameter> poate fi
        utilizat pentru a transmite fanioane suplimentare programului
-       configurat pentru a transmite poşta, definit de opţiunea de configurare
+       configurat pentru a transmite poșta, definit de opțiunea de configurare
        <literal>sendmail_path</literal>. Spre exemplu, acesta poate fi utilizat
        pentru a stabili adresa expeditorului de pe plic când se utilizează
-       sendmail cu opţiunea <literal>-f</literal>.
+       sendmail cu opțiunea <literal>-f</literal>.
       </para>
       <para>
        Utilizatorul cu care rulează serveul web trebuie adăugat în calitate de
-       utilizator de încredere în configuraţia sendmail pentru a preveni
+       utilizator de încredere în configurația sendmail pentru a preveni
        adăugarea unui antet 'X-Warning' la mesaj atunci când expeditorul de pe
        plic (-f) este stabilit prin această metodă.
-       Pentru utilizatorii sendmail acest fişier este
+       Pentru utilizatorii sendmail acest fișier este
        <filename>/etc/mail/trusted-users</filename>.
       </para>
      </listitem>
@@ -158,9 +158,9 @@ $text = str_replace("\n.", "\n..", $text);
    &false; în caz contrar.
   </para>
   <para>
-   Este important să ştiţi că cu toate că mesajul a fost acceptat spre
+   Este important să știți că cu toate că mesajul a fost acceptat spre
    trimitere, aceasta NU înseamnă că mesajul într-adevăr va ajunge la
-   destinaţie.
+   destinație.
   </para>
  </refsect1>
 
@@ -179,11 +179,11 @@ $text = str_replace("\n.", "\n..", $text);
       <row>
        <entry>4.3.0 (numai pentru Windows)</entry>
        <entry>
-        Toate antetele personalizate (cum ar fi From, Cc, Bcc şi Date) sunt
-        susţinute şi nu fac diferenţiere între caracterele minuscule /
+        Toate antetele personalizate (cum ar fi From, Cc, Bcc și Date) sunt
+        susținute și nu fac diferențiere între caracterele minuscule /
         majuscule. (Deoarece antetele personalizate nu sunt interpretate de
-        MTA, dar sunt procesate de PHP, PHP &lt; 4.3 susţinea numai elementul
-        de antet Cc, care făcea diferenţiere între caracterele minuscule /
+        MTA, dar sunt procesate de PHP, PHP &lt; 4.3 susținea numai elementul
+        de antet Cc, care făcea diferențiere între caracterele minuscule /
         majuscule).
        </entry>
       </row>
@@ -191,8 +191,8 @@ $text = str_replace("\n.", "\n..", $text);
        <entry>4.2.3</entry>
        <entry>
         Parametrul <parameter>additional_parameters</parameter> este dezactivat
-        în <link linkend="ini.safe-mode">safe_mode</link> şi funcţia
-        <function>mail</function> va emite un mesaj de avertizare şi va
+        în <link linkend="ini.safe-mode">safe_mode</link> și funcția
+        <function>mail</function> va emite un mesaj de avertizare și va
         întoarce &false; atunci când este utilizat.
        </entry>
       </row>
@@ -222,7 +222,7 @@ $text = str_replace("\n.", "\n..", $text);
 // Mesajul
 $message = "Line 1\nLine 2\nLine 3";
 
-// În caz că vre-un rând depăşeşte 70 de caractere, trebuie să utilizăm
+// În caz că vre-un rând depășește 70 de caractere, trebuie să utilizăm
 // wordwrap()
 $message = wordwrap($message, 70);
 
@@ -235,7 +235,7 @@ mail('caffeinated@example.com', 'My Subject', $message);
    <example>
     <title>Trimiterea unui mesaj cu antete suplimentare.</title>
     <para>
-     Adăugarea antetelor de bază, transmiţându-i MUA adresele From şi Reply-To:
+     Adăugarea antetelor de bază, transmițându-i MUA adresele From și Reply-To:
     </para>
     <programlisting role="php">
 <![CDATA[
@@ -258,7 +258,7 @@ mail($to, $subject, $message, $headers);
     <para>
      Parametrul <parameter>additional_parameters</parameter> poate fi utilizat
      pentru a transmite un parametru suplimentar programului configurat pentru
-     a fi utilizat la trimiterea poştei cu ajutorul
+     a fi utilizat la trimiterea poștei cu ajutorul
      <literal>sendmail_path</literal>.
     </para>
     <programlisting role="php">
@@ -279,7 +279,7 @@ mail('nobody@example.com', 'the subject', 'the message', null,
 <![CDATA[
 <?php
 // Destinatari multipli
-$to  = 'aidan@example.com' . ', '; // observaţi virgula
+$to  = 'aidan@example.com' . ', '; // observați virgula
 $to .= 'wez@example.com';
 
 // Subiectul
@@ -328,7 +328,7 @@ mail($to, $subject, $message, $headers);
   <para>
    <note>
     <para>
-     Dacă se intenţionează trimiterea mesajelor HTML, sau a altor mesaje
+     Dacă se intenționează trimiterea mesajelor HTML, sau a altor mesaje
      complexe, este recomandată utilizarea pachetului PEAR
      <link xlink:href="&url.pear.package;Mail_Mime">PEAR::Mail_Mime</link>.
     </para>
@@ -340,17 +340,17 @@ mail($to, $subject, $message, $headers);
   &reftitle.notes;
   <note>
    <para>
-    Implementarea funcţiei <function>mail</function> în Windows diferă în multe
+    Implementarea funcției <function>mail</function> în Windows diferă în multe
     aspecte de cea din Unix. În primul rând ea nu utilizează un binar local
     pentru a compune mesajele, dar operează direct asupra socket-urilor, ceea
     ce înseamnă că este necesar ca un <literal>MTA</literal> să asculte pe un
-    socket de reţea (care poate fi pe serverul local sau pe unul îndepărtat).
+    socket de rețea (care poate fi pe serverul local sau pe unul îndepărtat).
    </para>
    <para>
     În al doilea rând, antetele personalizate, cum ar fi
     <literal>From:</literal>,
     <literal>Cc:</literal>,
-    <literal>Bcc:</literal> şi
+    <literal>Bcc:</literal> și
     <literal>Date:</literal>
     <emphasis role="strong">nu</emphasis> sunt interpretate de către
     <literal>MTA</literal> în primul rând, dar sunt procesate de PHP.
@@ -364,14 +364,14 @@ mail($to, $subject, $message, $headers);
 
   <note>
    <para>
-    Face de menţionat că funcţia <function>mail</function> nu este potrivită
-    pentru volume mari de masaje trimise consecutiv. Această funcţie deschide
-    şi închide socket-ul SMTP pentru fiecare mesaj, ceea ce nu este foarte
+    Face de menționat că funcția <function>mail</function> nu este potrivită
+    pentru volume mari de masaje trimise consecutiv. Această funcție deschide
+    și închide socket-ul SMTP pentru fiecare mesaj, ceea ce nu este foarte
     eficient.
    </para>
    <para>
-    Pentru transmiterea volumelor mari de mesaje consideraţi pachetele
-    <link xlink:href="&url.pear.package;Mail">PEAR::Mail</link> şi
+    Pentru transmiterea volumelor mari de mesaje considerați pachetele
+    <link xlink:href="&url.pear.package;Mail">PEAR::Mail</link> și
     <link xlink:href="&url.pear.package;Mail_Queue">PEAR::Mail_Queue</link>.
    </para>
   </note>
@@ -384,7 +384,7 @@ mail($to, $subject, $message, $headers);
     <link xlink:href="&url.rfc;2046">RFC 2046</link>,
     <link xlink:href="&url.rfc;2047">RFC 2047</link>,
     <link xlink:href="&url.rfc;2048">RFC 2048</link>,
-    <link xlink:href="&url.rfc;2049">RFC 2049</link> şi
+    <link xlink:href="&url.rfc;2049">RFC 2049</link> și
     <link xlink:href="&url.rfc;2822">RFC 2822</link>.
    </para>
   </note>

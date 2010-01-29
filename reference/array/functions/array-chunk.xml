@@ -5,7 +5,7 @@
 <refentry xml:id="function.array-chunk" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>array_chunk</refname>
-  <refpurpose>Desparte un tablou în porţiuni</refpurpose>
+  <refpurpose>Desparte un tablou în porțiuni</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -17,8 +17,8 @@
    <methodparam choice="opt"><type>bool</type><parameter>preserve_keys</parameter><initializer>false</initializer></methodparam>
   </methodsynopsis>
   <para>
-   Desparte un tablou în porţiuni de dimensiunea <parameter>size</parameter>.
-   Ultima porţiune poate să conţină mai puţine elemente decât
+   Desparte un tablou în porțiuni de dimensiunea <parameter>size</parameter>.
+   Ultima porțiune poate să conțină mai puține elemente decât
    <parameter>size</parameter>.
   </para>
  </refsect1>
@@ -41,7 +41,7 @@
      <term><parameter>size</parameter></term>
      <listitem>
       <para>
-       Dimensiunea fiecărei porţiuni
+       Dimensiunea fiecărei porțiuni
       </para>
      </listitem>
     </varlistentry>
@@ -51,7 +51,7 @@
      <listitem>
       <para>
        Când este stabilit în &true; cheile vor fi păstrate.
-       Implicit sete &false;, ceea ce va reindexa numeric porţiunea
+       Implicit sete &false;, ceea ce va reindexa numeric porțiunea
       </para>
      </listitem>
     </varlistentry>
@@ -64,7 +64,7 @@
   &reftitle.returnvalues;
   <para>
    Întoarce un tablou multidimensional indexat numeric, începând cu zero,
-   fiecare dimensiune conţinând <parameter>size</parameter> elemente.
+   fiecare dimensiune conținând <parameter>size</parameter> elemente.
   </para>
  </refsect1>
 
@@ -72,7 +72,7 @@
   &reftitle.errors;
   <para>
    Dacă <parameter>size</parameter> este mai mic decât 1 va fi emisă o eroare
-   <constant>E_WARNING</constant> şi se va întoarce &null;.
+   <constant>E_WARNING</constant> și se va întoarce &null;.
   </para>
  </refsect1>
 

@@ -7,7 +7,7 @@
  &extension.runtime;
  <para>
   <table>
-   <title>Opţiuni de configurare pentru mbstring</title>
+   <title>Opțiuni de configurare pentru mbstring</title>
    <tgroup cols="4">
     <thead>
      <row>
@@ -98,9 +98,9 @@
     </term>
     <listitem>
      <para>
-      Setarea implicită a limbii (NLS) folosită de mbstring. Atenţie, această opţiune
-      defineşte automat <literal>mbstring.internal_encoding</literal> şi
-      <literal>mbstring.internal_encoding</literal> aşa că schimbările acestor setări din urmă
+      Setarea implicită a limbii (NLS) folosită de mbstring. Atenție, această opțiune
+      definește automat <literal>mbstring.internal_encoding</literal> și
+      <literal>mbstring.internal_encoding</literal> așa că schimbările acestor setări din urmă
       trebuie plasate după <literal>mbstring.language</literal> în &php.ini;
      </para>
     </listitem>
@@ -112,7 +112,7 @@
     </term>
     <listitem>
      <para>
-      Activează filtrul automat de codare a caracterelor care efectuează detecţia şi conversia
+      Activează filtrul automat de codare a caracterelor care efectuează detecția și conversia
       codării caracterelor din cea folosită în datele HTTP primite în codarea internă a caracterelor.
      </para>
     </listitem>
@@ -124,7 +124,7 @@
     </term>
     <listitem>
      <para>
-      Defineşte codarea internă a caracterelor.
+      Definește codarea internă a caracterelor.
      </para>
     </listitem>
    </varlistentry>
@@ -135,7 +135,7 @@
     </term>
     <listitem>
      <para>
-      Defineşte codarea implicită a caracterelor introduse prin HTTP.
+      Definește codarea implicită a caracterelor introduse prin HTTP.
      </para>
     </listitem>
    </varlistentry>
@@ -146,7 +146,7 @@
     </term>
     <listitem>
      <para>
-      Defineşte codarea implicită a caracterelor trimise prin HTTP către client.
+      Definește codarea implicită a caracterelor trimise prin HTTP către client.
      </para>
     </listitem>
    </varlistentry>
@@ -157,7 +157,7 @@
     </term>
     <listitem>
      <para>
-      Defineşte ordinea implicită de detecţie a codării caracterelor. Vedeţi şi
+      Definește ordinea implicită de detecție a codării caracterelor. Vedeți și
       <function>mb_detect_order</function>.
      </para>
     </listitem>
@@ -169,7 +169,7 @@
     </term>
     <listitem>
      <para>
-      Defineşte caracterul de înlocuire pentru caracterele care sunt găsite într-o codare necorespunzătoare.
+      Definește caracterul de înlocuire pentru caracterele care sunt găsite într-o codare necorespunzătoare.
      </para>
     </listitem>
    </varlistentry>
@@ -180,9 +180,9 @@
     </term>
     <listitem>
      <para>
-      Suprascrie un set de funcţii pentru stringuri pe un singur octet cu echivalentele din mbstring. Vedeţi
-      <link linkend="mbstring.overload">Suprascrierea funcţiilor</link> pentru mai multe
-      informaţii.
+      Suprascrie un set de funcții pentru stringuri pe un singur octet cu echivalentele din mbstring. Vedeți
+      <link linkend="mbstring.overload">Suprascrierea funcțiilor</link> pentru mai multe
+      informații.
      </para>
     </listitem>
    </varlistentry>
@@ -193,7 +193,7 @@
     </term>
     <listitem>
      <para>
-      Activează detecţia strictă a codării.
+      Activează detecția strictă a codării.
      </para>
     </listitem>
    </varlistentry>
@@ -201,17 +201,17 @@
  </para>
 
  <para>
-  Conform <link xlink:href="&url.spec.html401.accept-charset;">specificaţiilor
+  Conform <link xlink:href="&url.spec.html401.accept-charset;">specificațiilor
   HTML 4.01</link>, navigatoarelor web le este permis să codeze un formular
-  completat cu o codare de caractere diferită de cea utilizată de pagină. Vedeţi
-  funcţia <function>mb_http_input</function> pentru a detecta codările de
+  completat cu o codare de caractere diferită de cea utilizată de pagină. Vedeți
+  funcția <function>mb_http_input</function> pentru a detecta codările de
   caractere utilizate de navigatoare.
  </para>
  <para>
-  Deşi navigatoarele cele mai utilizate sunt capabile să intuiască destul de
-  precis codarea caracterelor dintr-un document HTML, ar fi mai bine să setaţi
+  Deși navigatoarele cele mai utilizate sunt capabile să intuiască destul de
+  precis codarea caracterelor dintr-un document HTML, ar fi mai bine să setați
   parametrul <literal>charset</literal> din antetul HTTP
-  <literal>Content-Type</literal> la o valoare corespunzătoare folosind funcţia
+  <literal>Content-Type</literal> la o valoare corespunzătoare folosind funcția
   <function>header</function> sau setarea ini
   <link linkend="ini.sect.data-handling">default_charset</link>.
  </para>
@@ -220,19 +220,19 @@
   <title>exemple de setări în &php.ini;</title>
    <programlisting>
 <![CDATA[
-; Stabileşte limba implicită
-mbstring.language        = Neutral; Stabileşte limba implicită la Neutral(UTF-8) (implicit)
-mbstring.language        = English; Stabileşte limba implicită la English
-mbstring.language        = Japanese; Stabileşte limba implicită la Japanese
+; Stabilește limba implicită
+mbstring.language        = Neutral; Stabilește limba implicită la Neutral(UTF-8) (implicit)
+mbstring.language        = English; Stabilește limba implicită la English
+mbstring.language        = Japanese; Stabilește limba implicită la Japanese
 
-;; Stabileşte codarea internă implicită
-;; Notă: Asiguraţi-vă că folosiţi o codare de caractere care funcţionează cu PHP
-mbstring.internal_encoding    = UTF-8  ; Stabileşte codarea internă la UTF-8
+;; Stabilește codarea internă implicită
+;; Notă: Asigurați-vă că folosiți o codare de caractere care funcționează cu PHP
+mbstring.internal_encoding    = UTF-8  ; Stabilește codarea internă la UTF-8
 
 ;; Conversia codării datelor HTTP este activată.
 mbstring.encoding_translation = On
 
-;; Stabileşte codarea implicită pentru datele primite prin HTTP
+;; Stabilește codarea implicită pentru datele primite prin HTTP
 ;; Notă: Scripturile nu pot schimba setarea http_input.
 mbstring.http_input           = pass    ; Fără conversie
 mbstring.http_input           = auto    ; Conversie automată
@@ -240,17 +240,17 @@ mbstring.http_input           = auto    ; Conversie automată
 mbstring.http_input           = SJIS    ; Conversie la SJIS
 mbstring.http_input           = UTF-8,SJIS,EUC-JP ; Specifică ordinea
 
-;; Stabileşte codarea implicită pentru datele trimise prin HTTP
+;; Stabilește codarea implicită pentru datele trimise prin HTTP
 mbstring.http_output          = pass    ; Fără conversie
 mbstring.http_output          = UTF-8   ; Conversia datelor trimise prin HTTP la UTF-8
 
-;; Stabileşte ordinea implicită a detecţiei codării caracterelor
+;; Stabilește ordinea implicită a detecției codării caracterelor
 mbstring.detect_order         = auto    ; Automat
 mbstring.detect_order         = ASCII,JIS,UTF-8,SJIS,EUC-JP ; Specifică ordinea
 
-;; Stabileşte caracterul implicit de înlocuire
+;; Stabilește caracterul implicit de înlocuire
 mbstring.substitute_character = 12307   ; Specifică valoarea Unicode
-mbstring.substitute_character = none    ; Nu afişa caracterul
+mbstring.substitute_character = none    ; Nu afișa caracterul
 mbstring.substitute_character = long    ; Exemplu lung: U+3000,JIS+7E7E
 ]]>
    </programlisting>
@@ -261,28 +261,28 @@ mbstring.substitute_character = long    ; Exemplu lung: U+3000,JIS+7E7E
    <title>setări în &php.ini; pentru utilizatorii <literal>EUC-JP</literal></title>
    <programlisting>
 <![CDATA[
-;; Dezactivează tamponul de ieşire
+;; Dezactivează tamponul de ieșire
 output_buffering      = Off
 
-;; Stabileşte setul de caractere trimis în antetul HTTP
+;; Stabilește setul de caractere trimis în antetul HTTP
 default_charset       = EUC-JP
 
-;; Stabileşte limba implicită la Japanese
+;; Stabilește limba implicită la Japanese
 mbstring.language = Japanese
 
 ;; Conversia codării datelor HTTP este activată.
 mbstring.encoding_translation = On
 
-;; Stabileşte codarea implicită pentru datele primite prin HTTP la auto
+;; Stabilește codarea implicită pentru datele primite prin HTTP la auto
 mbstring.http_input   = auto
 
-;; Converteşte datele trimise prin HTTP la EUC-JP
+;; Convertește datele trimise prin HTTP la EUC-JP
 mbstring.http_output  = EUC-JP
 
-;; Stabileşte codarea internă la EUC-JP
+;; Stabilește codarea internă la EUC-JP
 mbstring.internal_encoding = EUC-JP
 
-;; Nu afişa caracterele invalide
+;; Nu afișa caracterele invalide
 mbstring.substitute_character = none
 ]]>
    </programlisting>
@@ -293,28 +293,28 @@ mbstring.substitute_character = none
    <title>setări în &php.ini; pentru utilizatorii <literal>SJIS</literal></title>
    <programlisting>
 <![CDATA[
-;; Activează tamponul de ieşire
+;; Activează tamponul de ieșire
 output_buffering     = On
 
-;; Stabileşte gestionarul de ieşire la mb_output_handler pentru a activa conversia datelor ieşite
+;; Stabilește gestionarul de ieșire la mb_output_handler pentru a activa conversia datelor ieșite
 output_handler       = mb_output_handler
 
-;; Stabileşte setul de caractere folosit în antetele HTTP
+;; Stabilește setul de caractere folosit în antetele HTTP
 default_charset      = Shift_JIS
 
-;; Stabileşte limba implicită la Japanese
+;; Stabilește limba implicită la Japanese
 mbstring.language = Japanese
 
-;; Stabileşte codarea implicită pentru datele primite prin HTTP la auto
+;; Stabilește codarea implicită pentru datele primite prin HTTP la auto
 mbstring.http_input  = auto
 
-;; Converteşte la SJIS
+;; Convertește la SJIS
 mbstring.http_output = SJIS
 
-;; Stabileşte codarea internă la EUC-JP
+;; Stabilește codarea internă la EUC-JP
 mbstring.internal_encoding = EUC-JP
 
-;; Nu afişa caracterele invalide
+;; Nu afișa caracterele invalide
 mbstring.substitute_character = none
 ]]>
    </programlisting>

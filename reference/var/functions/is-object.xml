@@ -51,7 +51,7 @@
       <programlisting role="php">
 <![CDATA[
 <?php
-// Declară o funcţie simplă ce întoarce un tablou
+// Declară o funcție simplă ce întoarce un tablou
 // din obiectul nostru
 function get_students($obj)
 {
@@ -63,7 +63,7 @@ function get_students($obj)
 	return($obj->students);
 }
 
-// Declară o nouă instanţă a clasei şi completează
+// Declară o nouă instanță a clasei și completează
 // unele valori
 $obj = new stdClass;
 $obj->students = Array('Kalle', 'Ross', 'Felipe');
@@ -81,8 +81,8 @@ var_dump(get_students($obj));
     &reftitle.notes;
     <note>
      <para>
-      Această funcţie va întoarce &false; dacă este utilizată cu un obiect
-      neserializat, unde definiţia clasei nu este prezentă (cu toate că
+      Această funcție va întoarce &false; dacă este utilizată cu un obiect
+      neserializat, unde definiția clasei nu este prezentă (cu toate că
       <function>gettype</function> întoarce <type>object</type>).
      </para>
     </note>

@@ -12,10 +12,10 @@
  <preface xml:id="intro.xmlrpc">
   &reftitle.intro;
   <para>
-  Aceste funcţii pot fi utilizate pentru a scrie servere şi clienţi XML-RPC.
-  Puteţi găsi mai multe informaţii despre XML-RPC la
-  <link xlink:href="&url.xmlrpc;">&url.xmlrpc;</link>, şi mai multă
-  documentaţie despre această extensie şi funcţiile sale la
+  Aceste funcții pot fi utilizate pentru a scrie servere și clienți XML-RPC.
+  Puteți găsi mai multe informații despre XML-RPC la
+  <link xlink:href="&url.xmlrpc;">&url.xmlrpc;</link>, și mai multă
+  documentație despre această extensie și funcțiile sale la
   <link xlink:href="&url.xmlrpc-epi;">&url.xmlrpc-epi;</link>.
  </para>
  &warn.experimental;

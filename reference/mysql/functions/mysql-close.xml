@@ -23,7 +23,7 @@
   <para>
    Utilizarea <function>mysql_close</function> de obicei nu este necesară
    deoarece conexiunile non-persistente deschise sunt închise în mod automat
-   la sfârşitul execuţiei script-ului. Vedeţi de asemenea
+   la sfârșitul execuției script-ului. Vedeți de asemenea
    <link linkend="language.types.resource.self-destruct">eliberarea
    resurselor</link>.
   </para>
@@ -55,7 +55,7 @@
 <?php
 $link = mysql_connect('localhost', 'mysql_user', 'mysql_password');
 if (!$link) {
-    die('Conexiunea a eşuat: ' . mysql_error());
+    die('Conexiunea a eșuat: ' . mysql_error());
 }
 echo 'Conexiunea a fost realizată cu succes';
 mysql_close($link);

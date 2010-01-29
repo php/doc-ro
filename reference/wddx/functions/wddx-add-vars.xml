@@ -17,14 +17,14 @@
    <methodparam choice="opt"><type>mixed</type><parameter>...</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Serializează variabilele transmise şi adaugă rezultatul la pachetul dat.
+   Serializează variabilele transmise și adaugă rezultatul la pachetul dat.
   </para>
  </refsect1>
 
  <refsect1 role="parameters">
   &reftitle.parameters;
   <para>
-   Această funcţie preia un număr variabil de parametri.
+   Această funcție preia un număr variabil de parametri.
    <variablelist>
     <varlistentry>
      <term><parameter>packet_id</parameter></term>
@@ -38,7 +38,7 @@
      <term><parameter>var_name</parameter></term>
      <listitem>
       <para>
-       Poate fi sau un string cu denumirea variabilei, sau un array conţinând
+       Poate fi sau un string cu denumirea variabilei, sau un array conținând
        string-uri cu denumirile variabilelor, sau un alt array, etc.
       </para>
      </listitem>

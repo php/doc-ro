@@ -5,7 +5,7 @@
 <refentry xml:id="function.apache-note" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>apache_note</refname>
-  <refpurpose>Obţine şi stabileşte note ale interpelărilor apache</refpurpose>
+  <refpurpose>Obține și stabilește note ale interpelărilor apache</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -16,14 +16,14 @@
    <methodparam choice="opt"><type>string</type><parameter>note_value</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Această funcţie este un înveliş pentru <literal>table_get</literal> şi
+   Această funcție este un înveliș pentru <literal>table_get</literal> și
    <literal>table_set</literal> ale Apache. Ea redactează tabelul notelor care
    există în timpul derulării interpelării. Scopul tabelului este de a permite
    modulelor Apache să comunice între ele.
   </para>
   <para>
    Utilizarea de bază a <function>apache_note</function> este pentru a
-   transmite informaţii dintr-un modul în altul în cadrul aceleiaşi
+   transmite informații dintr-un modul în altul în cadrul aceleiași
    interpelări.
   </para>
  </refsect1>
@@ -55,11 +55,11 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Dacă este apelată cu un singur argument, funcţia întoarce valoarea curentă
-   a notei <literal>note_name</literal>. Dacă este apelată cu doi argumenţi,
-   funcţia stabileşte valoarea notei <literal>note_name</literal> în
-   <literal>note_value</literal> şi întoarce valoarea precedentă a notei
-   <literal>note_name</literal>. Dacă nota nu poate fi obţinută se întoarce
+   Dacă este apelată cu un singur argument, funcția întoarce valoarea curentă
+   a notei <literal>note_name</literal>. Dacă este apelată cu doi argumenți,
+   funcția stabilește valoarea notei <literal>note_name</literal> în
+   <literal>note_value</literal> și întoarce valoarea precedentă a notei
+   <literal>note_name</literal>. Dacă nota nu poate fi obținută se întoarce
    &false;.
   </para>
  </refsect1>
@@ -68,7 +68,7 @@
   &reftitle.examples;
   <para>
    <example>
-    <title>Transmiterea informaţiei între PHP şi Perl</title>
+    <title>Transmiterea informației între PHP și Perl</title>
     <programlisting role="php">
 <![CDATA[
 <?php

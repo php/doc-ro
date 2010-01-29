@@ -6,7 +6,7 @@
 <refentry xml:id="function.apache-setenv" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>apache_setenv</refname>
-  <refpurpose>Stabileşte o variabilă de mediu a unui subprocess Apache</refpurpose>
+  <refpurpose>Stabilește o variabilă de mediu a unui subprocess Apache</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -18,7 +18,7 @@
    <methodparam choice="opt"><type>bool</type><parameter>walk_to_top</parameter><initializer>false</initializer></methodparam>
   </methodsynopsis>
   <para>
-   <function>apache_setenv</function> stabileşte valoarea unei variabile de
+   <function>apache_setenv</function> stabilește valoarea unei variabile de
    mediu Apache specificată prin <parameter>variable</parameter>.
   </para>
   <note>
@@ -37,7 +37,7 @@
      <term><parameter>variable</parameter></term>
      <listitem>
       <para>
-       Variabila de mediu ce se stabileşte.
+       Variabila de mediu ce se stabilește.
       </para>
      </listitem>
     </varlistentry>

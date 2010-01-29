@@ -17,9 +17,9 @@
   </methodsynopsis>
   <para>
    Întoarce un string formatat în conformitate cu string-ul de formatare dat,
-   utilizând <parameter>timestamp</parameter>-ul întreg dat, sau data şi ora
+   utilizând <parameter>timestamp</parameter>-ul întreg dat, sau data și ora
    curentă dacă nu este furnizat nici un timestamp. Cu alte cuvinte,
-   <parameter>timestamp</parameter> este opţional şi implicit are valoarea
+   <parameter>timestamp</parameter> este opțional și implicit are valoarea
    întoarsă de <function>time</function>.
   </para>
  </refsect1>
@@ -32,8 +32,8 @@
      <term><parameter>format</parameter></term>
      <listitem>
       <para>
-       Reprezintă formatul <type>string</type>-ului din care se obţine data la
-       ieşire. Vedeţi opţiunile de formatare de mai jos. Există de asemenea și
+       Reprezintă formatul <type>string</type>-ului din care se obține data la
+       ieșire. Vedeți opțiunile de formatare de mai jos. Există de asemenea și
        câteva <link linkend="datetime.constants.types">constante predefinite
        ale datelor</link> ce pot fi utilizate în loc, deci spre exemplu
        <constant>DATE_RSS</constant> conține șirul de formatare
@@ -89,7 +89,7 @@
            <entry>Sufixul ordinal al zilei din lună în limba engleză, 2 caractere</entry>
            <entry>
             <literal>st</literal>, <literal>nd</literal>, <literal>rd</literal> sau
-            <literal>th</literal>. Funcţionează bine cu <literal>j</literal>
+            <literal>th</literal>. Funcționează bine cu <literal>j</literal>
            </entry>
           </row>
           <row>
@@ -156,9 +156,9 @@
           <row>
            <entry><literal>o</literal></entry>
            <entry>Reprezentarea numerică a anului conform standardului
-            ISO-8601. Aceasta are aceeaşi valoare ca şi <literal>Y</literal>,
-            cu excepţia că dacă numărul săptămânii după ISO
-            (<literal>W</literal>) aparţine anului precedent sau următor, acel
+            ISO-8601. Aceasta are aceeași valoare ca și <literal>Y</literal>,
+            cu excepția că dacă numărul săptămânii după ISO
+            (<literal>W</literal>) aparține anului precedent sau următor, acel
             an este considerat în loc. (adăugat în PHP 5.1.0)</entry>
            <entry>Exemple: <literal>1999</literal> sau <literal>2003</literal></entry>
           </row>
@@ -245,13 +245,13 @@
           </row>
           <row>
            <entry><literal>O</literal></entry>
-           <entry>Diferenţa faţă de ora Greenwich (GMT) în ore</entry>
+           <entry>Diferența față de ora Greenwich (GMT) în ore</entry>
            <entry>Exemplu: <literal>+0200</literal></entry>
           </row>
           <row>
            <entry><literal>P</literal></entry>
-           <entry>Diferenţa faţă de ora Greenwich (GMT) cu două puncte între
-            ore şi minute (adăugat în PHP 5.1.3)</entry>
+           <entry>Diferența față de ora Greenwich (GMT) cu două puncte între
+            ore și minute (adăugat în PHP 5.1.3)</entry>
            <entry>Exemplu: <literal>+02:00</literal></entry>
           </row>
           <row>
@@ -291,15 +291,15 @@
        </table>
       </para>
       <para>
-       Caracterele nerecunoscute din string-ul de formatare vor fi afişate aşa
+       Caracterele nerecunoscute din string-ul de formatare vor fi afișate așa
        cum sunt. Formatul <literal>Z</literal> întotdeauna va întoarce
        <literal>0</literal> la utilizarea <function>gmdate</function>.
       </para>
       <note>
        <para>
-        Deoarece această funcţie acceptă doar timestamp-uri
+        Deoarece această funcție acceptă doar timestamp-uri
         <type>integer</type>, caracterul de formatare <literal>u</literal> este
-        util doar când se utilizează funcţia <function>date_format</function>
+        util doar când se utilizează funcția <function>date_format</function>
         cu timestamp-uri ale utilizatorului create cu
         <function>date_create</function>.
        </para>
@@ -318,7 +318,7 @@
   <para>
    Întoarce un string cu dată formatat. Dacă este utilizată o valoare
    non-numerică pentru <parameter>timestamp</parameter>, este întors &false;
-   şi este emisă o eroare de nivel <constant>E_WARNING</constant>.
+   și este emisă o eroare de nivel <constant>E_WARNING</constant>.
   </para>
  </refsect1>
 
@@ -346,8 +346,8 @@
        <entry>
         Domeniul valid al unui timestamp este de obicei de la Fri, 13 Dec 1901
         20:45:54 GMT până la Tue, 19 Jan 2038 03:14:07 GMT. (Acestea sunt
-        datele ce corespund valorilor minimă şi maximă pentru un întreg cu semn
-        pe 32 de biţi). Însă înainte de PHP 5.1.0 acest domeniu era limitat de la
+        datele ce corespund valorilor minimă și maximă pentru un întreg cu semn
+        pe 32 de biți). Însă înainte de PHP 5.1.0 acest domeniu era limitat de la
         01-01-1970 până la 19-01-2038 pe unele sisteme (de ex. Windows).
        </entry>
       </row>
@@ -376,23 +376,23 @@
     <programlisting role="php">
 <![CDATA[
 <?php
-// Stabileşte fusul orar implicit. Disponibil începând cu PHP 5.1
+// Stabilește fusul orar implicit. Disponibil începând cu PHP 5.1
 date_default_timezone_set('UTC');
 
-// Afişează ceva de felul: Monday
+// Afișează ceva de felul: Monday
 echo date("l");
 
-// Afişează ceva de felul: Monday 8th of August 2005 03:12:46 PM
+// Afișează ceva de felul: Monday 8th of August 2005 03:12:46 PM
 echo date('l jS \of F Y h:i:s A');
 
-// Afişează: July 1, 2000 is on a Saturday
+// Afișează: July 1, 2000 is on a Saturday
 echo "July 1, 2000 is on a " . date("l", mktime(0, 0, 0, 7, 1, 2000));
 
 /* utilizarea constantelor în parametrul format */
-// Afişează ceva de felul: Mon, 15 Aug 2005 15:12:46 UTC
+// Afișează ceva de felul: Mon, 15 Aug 2005 15:12:46 UTC
 echo date(DATE_RFC822);
 
-// Afişează ceva de felul: 2000-07-01T00:00:00+00:00
+// Afișează ceva de felul: 2000-07-01T00:00:00+00:00
 echo date(DATE_ATOM, mktime(0, 0, 0, 7, 1, 2000));
 ?>
 ]]>
@@ -400,16 +400,16 @@ echo date(DATE_ATOM, mktime(0, 0, 0, 7, 1, 2000));
    </example>
   </para>
   <para>
-   Puteţi preveni ca un caracter recunoscut în string-ul de formatare să fie
+   Puteți preveni ca un caracter recunoscut în string-ul de formatare să fie
    expandat prin prefixarea lui cu un backslash. Dacă caracterul cu backslash
-   de acum este o secvenţă specială, va trebui de asemenea să prefixaţi
+   de acum este o secvență specială, va trebui de asemenea să prefixați
    backslash-ul.
    <example>
     <title>Evadarea caracterelor în <function>date</function></title>
     <programlisting role="php">
 <![CDATA[
 <?php
-// Afişează ceva de felul: Wednesday the 15th
+// Afișează ceva de felul: Wednesday the 15th
 echo date("l \\t\h\e jS");
 ?>
 ]]>
@@ -417,11 +417,11 @@ echo date("l \\t\h\e jS");
    </example>
   </para>
   <para>
-   Este posibil de utilizat <function>date</function> şi
+   Este posibil de utilizat <function>date</function> și
    <function>mktime</function> împreună pentru a afla date din trecut sau
    viitor.
    <example>
-    <title>Exemplu <function>date</function> şi <function>mktime</function></title>
+    <title>Exemplu <function>date</function> și <function>mktime</function></title>
     <programlisting role="php">
 <![CDATA[
 <?php
@@ -440,11 +440,11 @@ $nextyear  = mktime(0, 0, 0, date("m"),   date("d"),   date("Y")+1);
    </note>
   </para>
   <para>
-   Unele exemple de formatare <function>date</function>. Observaţi că trebuie
-   să evadaţi caracterele suplimentare, deoarece cele ce au o însemnătate
+   Unele exemple de formatare <function>date</function>. Observați că trebuie
+   să evadați caracterele suplimentare, deoarece cele ce au o însemnătate
    specială vor produce rezultate nedorite, iar celelalte caractere pot căpăta
-   o însemnătate specială în versiunile viitoare ale PHP. Când evadaţi, aveţi
-   grijă să utilizaţi ghilimele singulare pentru a preveni caractere ca \n să
+   o însemnătate specială în versiunile viitoare ale PHP. Când evadați, aveți
+   grijă să utilizați ghilimele singulare pentru a preveni caractere ca \n să
    devină newline.
    <example>
     <title>Formatarea <function>date</function></title>
@@ -452,7 +452,7 @@ $nextyear  = mktime(0, 0, 0, date("m"),   date("d"),   date("Y")+1);
 <![CDATA[
 <?php
 // Presupunem că astăzi este: March 10th, 2001, 5:16:18 pm
-// şi ne aflăm în fusul orar Mountain Standard Time (MST)
+// și ne aflăm în fusul orar Mountain Standard Time (MST)
 
 $today = date("F j, Y, g:i a");                 // March 10, 2001, 5:16 pm
 $today = date("m.d.y");                         // 03.10.01
@@ -469,8 +469,8 @@ $today = date("H:i:s");                         // 17:16:18
    </example>
   </para>
   <para>
-   Pentru a formata date în alte limbi, trebuie să utilizaţi funcţiile
-   <function>setlocale</function> şi <function>strftime</function> în loc de
+   Pentru a formata date în alte limbi, trebuie să utilizați funcțiile
+   <function>setlocale</function> și <function>strftime</function> în loc de
    <function>date</function>.
   </para>
  </refsect1>
@@ -479,10 +479,10 @@ $today = date("H:i:s");                         // 17:16:18
   &reftitle.notes;
   <note>
    <para>
-    Pentru a genera un timestamp dintr-o reprezentare string a datei, puteţi
+    Pentru a genera un timestamp dintr-o reprezentare string a datei, puteți
     utiliza <function>strtotime</function>. În plus, unele baze de date au
-    funcţii pentru a converti formatele lor de date în timestamp-uri
-    (cum ar fi funcţia
+    funcții pentru a converti formatele lor de date în timestamp-uri
+    (cum ar fi funcția
     <link xlink:href="&url.mysql.docs.date;">UNIX_TIMESTAMP</link> la MySQL).
    </para>
   </note>

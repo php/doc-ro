@@ -3,7 +3,7 @@
 <!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: simionea Status: ready -->
 
  <reference xml:id="ref.mail" xmlns="http://docbook.org/ns/docbook">
-  <title>&Functions; de poştă</title>
+  <title>&Functions; de poștă</title>
 
 &reference.mail.entities.functions;
 

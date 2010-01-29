@@ -9,9 +9,9 @@
    &reftitle.seealso;
     <para>
      Acest document nu poate cuprinde toate amănuntele subiectelor atinse de
-     funcţiile date. Informaţii suplimentare sunt oferite de documentaţia
+     funcțiile date. Informații suplimentare sunt oferite de documentația
      codului-sursă al bibliotecii c-client
-     (<filename>docs/internal.txt</filename>) şi de utmătoarele documente RFC:
+     (<filename>docs/internal.txt</filename>) și de utmătoarele documente RFC:
      <itemizedlist>
       <listitem>
        <simpara>
@@ -60,9 +60,9 @@
        </simpara>
       </listitem>
      </itemizedlist>
-     O privire generală de detaliu este disponibilă în cărţile
+     O privire generală de detaliu este disponibilă în cărțile
      <link xlink:href="&url.email.book;"><literal>Programming Internet
-     Email</literal></link> de David Wood şi
+     Email</literal></link> de David Wood și
      <link xlink:href="&url.imap.book;">Managing IMAP</link> de Dianna Mullet
      &amp; Kevin Mullet.
     </para>

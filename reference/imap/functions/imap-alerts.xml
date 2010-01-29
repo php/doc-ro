@@ -16,12 +16,12 @@
   </methodsynopsis>
   <para>
    Întoarce toate mesajele de alertă <acronym>IMAP</acronym> generate după
-   ultimul apel al funcţiei <function>imap_alerts</function>, sau începutul
+   ultimul apel al funcției <function>imap_alerts</function>, sau începutul
    paginii.
   </para>
   <para>
    Când <function>imap_alerts</function> este apelată, stiva alertelor este
-   mai apoi curăţită. Specificaţia <acronym>IMAP</acronym> stabileşte ca
+   mai apoi curățită. Specificația <acronym>IMAP</acronym> stabilește ca
    aceste mesaje să fie transmise utilizatorului.
   </para>
  </refsect1>

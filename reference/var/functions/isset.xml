@@ -22,15 +22,15 @@
   <para>
    Dacă o variabilă a fost eliminată cu <function>unset</function>, ea nu va
    mai fi stabilită. <function>isset</function> va întoarce &false; la testarea
-   unei variabile care a fost stabilită în &null;. De asemenea observaţi că un
+   unei variabile care a fost stabilită în &null;. De asemenea observați că un
    byte &null; (<literal>"\0"</literal>) nu este echivalent cu constanta PHP
    &null;.
   </para>
   <para>
-   Dacă se furnizează mai mulţi parametri, atunci <function>isset</function>
-   va întoarce &true; numai dacă toţi parametrii sunt stabiliţi. Evaluarea
-   se petrece de la stânga spre dreapta şi se încheie de îndată ce se
-   întâlneşte o variabilă "ne-stabilită".
+   Dacă se furnizează mai mulți parametri, atunci <function>isset</function>
+   va întoarce &true; numai dacă toți parametrii sunt stabiliți. Evaluarea
+   se petrece de la stânga spre dreapta și se încheie de îndată ce se
+   întâlnește o variabilă "ne-stabilită".
   </para>
  </refsect1>
 
@@ -68,7 +68,7 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Întoarce &true; dacă <parameter>var</parameter> există şi are o valoare
+   Întoarce &true; dacă <parameter>var</parameter> există și are o valoare
    diferită de &null;, &false; în caz contrar.
   </para>
  </refsect1>
@@ -84,12 +84,12 @@
 
 $var = '';
 
-// Aceasta va evalua în TRUE, deci textul va fi afişat.
+// Aceasta va evalua în TRUE, deci textul va fi afișat.
 if (isset($var)) {
-    echo "Această variabilă este stabilită, deci eu mă voi afişa.";
+    echo "Această variabilă este stabilită, deci eu mă voi afișa.";
 }
 
-// În următorul exemplu vom utiliza var_dump pentru a afişa valoarea întoarsă
+// În următorul exemplu vom utiliza var_dump pentru a afișa valoarea întoarsă
 // de isset().
 
 $a = "test";
@@ -112,7 +112,7 @@ var_dump(isset($foo));   // FALSE
    </example>
   </para>
   <para>
-   Aceasta de asemenea funcţionează şi pentru elementele din tablouri:
+   Aceasta de asemenea funcționează și pentru elementele din tablouri:
    <informalexample>
     <programlisting role="php">
 <![CDATA[
@@ -125,7 +125,7 @@ var_dump(isset($a['foo']));             // FALSE
 var_dump(isset($a['hello']));           // FALSE
 
 // Cheia 'hello' este egală cu NULL, de aceea este considerată "ne-stabilită"
-// Dacă doriţi să verificaţi valorile NULL ale cheii, încercaţi:
+// Dacă doriți să verificați valorile NULL ale cheii, încercați:
 var_dump(array_key_exists('hello', $a)); // TRUE
 
 ?>
@@ -139,16 +139,16 @@ var_dump(array_key_exists('hello', $a)); // TRUE
   &reftitle.notes;
   <warning>
    <para>
-    <function>isset</function> funcţionează numai cu variabile, deoarece la
+    <function>isset</function> funcționează numai cu variabile, deoarece la
     furnizarea a orice altceva se va genera o eroare de interpretare. Pentru a
     verifica dacă <link linkend="language.constants">constantele</link> sunt
-    stabilite utilizaţi funcţia <function>defined</function>.
+    stabilite utilizați funcția <function>defined</function>.
    </para>
   </warning>
   &note.language-construct;
   <note>
    <para>
-    La utilizarea <function>isset</function> asupra proprietăţilor inaccesibile
+    La utilizarea <function>isset</function> asupra proprietăților inaccesibile
     ale obiectelor, va fi apelată metoda de supraîncărcare
     <link linkend="language.oop5.overloading.members">__isset</link>, dacă este
     declarată.

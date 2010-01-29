@@ -18,7 +18,7 @@
    <methodparam><type>resource</type><parameter>handle</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Această funcţie obţine tipul unei resurse date.
+   Această funcție obține tipul unei resurse date.
   </para>
  </refsect1>
 
@@ -42,12 +42,12 @@
   &reftitle.returnvalues;
   <para>
    Dacă <parameter>handle-ul</parameter> furnizat este o resursă, această
-   funcţie va întoarce un string reprezentând tipul său. Dacă funcţia nu poate
+   funcție va întoarce un string reprezentând tipul său. Dacă funcția nu poate
    identifica tipul, valoarea întoarsă va fi string-ul
    <literal>Unknown</literal>.
   </para>
   <para>
-   Această funcţie va întoarce &false; şi va genera o eroare dacă
+   Această funcție va întoarce &false; și va genera o eroare dacă
    <parameter>handle</parameter> nu este o <type>resource</type>.
   </para>
  </refsect1>
@@ -60,15 +60,15 @@
     <programlisting role="php">
 <![CDATA[
 <?php
-// Afişează: mysql link
+// Afișează: mysql link
 $c = mysql_connect();
 echo get_resource_type($c) . "\n";
 
-// Afişează: file
+// Afișează: file
 $fp = fopen("foo", "w");
 echo get_resource_type($fp) . "\n";
 
-// Afişează: domxml document
+// Afișează: domxml document
 $doc = new_xmldoc("1.0");
 echo get_resource_type($doc->doc) . "\n";
 ?>

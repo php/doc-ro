@@ -5,7 +5,7 @@
 <refentry xml:id="function.array-diff" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>array_diff</refname>
-  <refpurpose>Calculează diferenţa dintre tablouri</refpurpose>
+  <refpurpose>Calculează diferența dintre tablouri</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -17,8 +17,8 @@
    <methodparam choice="opt"><type>array</type><parameter> ...</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Compară <parameter>array1</parameter> cu <parameter>array2</parameter> şi
-   întoarce diferenţa.
+   Compară <parameter>array1</parameter> cu <parameter>array2</parameter> și
+   întoarce diferența.
   </para>
  </refsect1>
 
@@ -30,7 +30,7 @@
      <term><parameter>array1</parameter></term>
      <listitem>
       <para>
-       Tabloul de referinţă
+       Tabloul de referință
       </para>
      </listitem>
     </varlistentry>
@@ -57,7 +57,7 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Întoarce un <type>array</type> ce conţine toate înregistrările din
+   Întoarce un <type>array</type> ce conține toate înregistrările din
    <parameter>array1</parameter> care nu sunt prezente nici în unul din
    celelalte tablouri.
   </para>
@@ -80,8 +80,8 @@ print_r($result);
 ]]>
     </programlisting>
     <para>
-     Apariţiile multiple în <varname>$array1</varname> sunt toate tratate în acelaşi mod.
-     Aceasta va afişa :
+     Aparițiile multiple în <varname>$array1</varname> sunt toate tratate în același mod.
+     Aceasta va afișa :
     </para>
     <screen>
 <![CDATA[
@@ -99,16 +99,16 @@ Array
   &reftitle.notes;
   <note>
    <para>
-    Două elemente sunt considerate egale dacă şi numai dacă <literal>(string)
+    Două elemente sunt considerate egale dacă și numai dacă <literal>(string)
     $elem1 === (string) $elem2</literal>. În cuvinte: dacă reprezentarea lor
-    ca şiruri de caractere este aceeaşi.
+    ca șiruri de caractere este aceeași.
     <!-- TODO: example of it... -->
    </para>
   </note>
   <note>
    <para>
-    Această funcţie verifică numai o dimensiune a unui tablou n-dimensional.
-    Desigur că puteţi să verificaţi dimensiunile mai adânci utilizând
+    Această funcție verifică numai o dimensiune a unui tablou n-dimensional.
+    Desigur că puteți să verificați dimensiunile mai adânci utilizând
     <literal>array_diff($array1[0], $array2[0]);</literal>.
    </para>
   </note>

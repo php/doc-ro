@@ -17,8 +17,8 @@
    <methodparam><type>string</type><parameter>str</parameter></methodparam>
   </methodsynopsis>
   <simpara>
-   <function>unserialize</function> preia o singură variabilă serializată şi o
-   converteşte invers într-o valoare PHP.
+   <function>unserialize</function> preia o singură variabilă serializată și o
+   convertește invers într-o valoare PHP.
   </simpara>
  </refsect1>
 
@@ -34,21 +34,21 @@
       </para>
       <para>
        Dacă variabila ce se deserializează este un obiect, după ce se
-       reconstituie cu succes, PHP automat va încerca să apeleze funcţia-membru
+       reconstituie cu succes, PHP automat va încerca să apeleze funcția-membru
        <function>__wakeup</function> (dacă aceasta există).
       </para>
       <para>
        <note>
         <title>directiva unserialize_callback_func</title>
         <para>
-         Este posibil de a stabili o funcţie de apel invers ce se va apela când
-         o clasă nedefinită trebuie instanţiată în timpul deserializării.
-         (pentru a preveni obţinerea unui <type>object</type> incomplet
-         "__PHP_Incomplete_Class".) Utilizaţi &php.ini;,
+         Este posibil de a stabili o funcție de apel invers ce se va apela când
+         o clasă nedefinită trebuie instanțiată în timpul deserializării.
+         (pentru a preveni obținerea unui <type>object</type> incomplet
+         "__PHP_Incomplete_Class".) Utilizați &php.ini;,
          <function>ini_set</function> sau &htaccess; pentru a defini
          '<literal>unserialize_callback_func</literal>'. De fiecare dată când o clasă nedefinită
-         va trebui instanţiată, această funcţie va fi apelată. Pentru a
-         dezactiva această facilitate lăsaţi această opţiune vidă.
+         va trebui instanțiată, această funcție va fi apelată. Pentru a
+         dezactiva această facilitate lăsați această opțiune vidă.
         </para>
        </note>
       </para>
@@ -61,13 +61,13 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Valoarea convertită este întoarsă, şi poate fi de tip <type>boolean</type>,
+   Valoarea convertită este întoarsă, și poate fi de tip <type>boolean</type>,
    <type>integer</type>, <type>float</type>, <type>string</type>,
    <type>array</type> sau <type>object</type>.
   </para>
   <para>
    În caz că string-ul furnizat nu poate fi deserializat se va întoarce &false;
-   şi se va emite o eroare <constant>E_NOTICE</constant>.
+   și se va emite o eroare <constant>E_NOTICE</constant>.
   </para>
  </refsect1>
 
@@ -105,19 +105,19 @@
 <?php
 // Aici vom utiliza unserialize() pentru a încărca datele sesiunii în tabloul
 // $session_data din string-ul selectat dintr-o bază de date.
-// Acest exemplu îl complementează pe cel descris în funcţia serialize().
+// Acest exemplu îl complementează pe cel descris în funcția serialize().
 
 $conn = odbc_connect("webdb", "php", "chicken");
 $stmt = odbc_prepare($conn, "SELECT data FROM sessions WHERE id = ?");
 $sqldata = array($_SERVER['PHP_AUTH_USER']);
 if (!odbc_execute($stmt, $sqldata) || !odbc_fetch_into($stmt, $tmp)) {
-    // dacă execute sau fetch eşuează, se iniţializează un tablou vid
+    // dacă execute sau fetch eșuează, se inițializează un tablou vid
     $session_data = array();
 } else {
     // acum trebuie să avem datele serializate în $tmp[0].
     $session_data = unserialize($tmp[0]);
     if (!is_array($session_data)) {
-        // ceva nu este în regulă, iniţializează într-un tablou vid
+        // ceva nu este în regulă, inițializează într-un tablou vid
         $session_data = array();
     }
 }
@@ -135,12 +135,12 @@ if (!odbc_execute($stmt, $sqldata) || !odbc_fetch_into($stmt, $tmp)) {
 $serialized_object='O:1:"a":1:{s:5:"value";s:3:"100";}';
 
 // directiva unserialize_callback_func este disponibilă începând cu PHP 4.2.0
-ini_set('unserialize_callback_func', 'mycallback'); // stabileşte funcţia de apel invers
+ini_set('unserialize_callback_func', 'mycallback'); // stabilește funcția de apel invers
 
 function mycallback($classname)
 {
-    // doar includeţi un fişier ce conţine definiţia clasei
-    // veţi lăsa ca $classname să-şi dea seama care definiţie a clasei este necesară
+    // doar includeți un fișier ce conține definiția clasei
+    // veți lăsa ca $classname să-și dea seama care definiție a clasei este necesară
 }
 ?>
 ]]>
@@ -153,7 +153,7 @@ function mycallback($classname)
   &reftitle.notes;
   <warning>
    <para>
-    &false; este întors atât în cazul unei erori, cât şi în cazul deserializării
+    &false; este întors atât în cazul unei erori, cât și în cazul deserializării
     unei valori &false; serializate. Este posibil de a intercepta acest caz
     special comparând <parameter>str</parameter> cu
     <literal>serialize(false)</literal> sau interceptând eroarea

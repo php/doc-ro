@@ -11,20 +11,20 @@
   </para>
 
  <section xml:id="migration51.changes">
-  <title>Principalele facilităţi ale PHP 5.1.x</title>
+  <title>Principalele facilități ale PHP 5.1.x</title>
   <para>
-   Unele din principalele facilităţi ale PHP 5.1.x includ:
+   Unele din principalele facilități ale PHP 5.1.x includ:
   </para>
   <itemizedlist>
    <listitem>
     <para>
-     O rescriere completă a codului de prelucrare a datelor, cu o susţinere
-     îmbunătăţită a zonelor orare.
+     O rescriere completă a codului de prelucrare a datelor, cu o susținere
+     îmbunătățită a zonelor orare.
     </para>
    </listitem>
    <listitem>
     <para>
-     Îmbunătăţiri semnificative ale performanţei în comparaţie cu PHP 5.0.X.
+     Îmbunătățiri semnificative ale performanței în comparație cu PHP 5.0.X.
     </para>
    </listitem>
    <listitem>
@@ -34,7 +34,7 @@
    </listitem>
    <listitem>
     <para>
-     Peste 30 funcţii noi în diferite extensii şi funcţionalităţi încorporate.
+     Peste 30 funcții noi în diferite extensii și funcționalități încorporate.
     </para>
    </listitem>
    <listitem>
@@ -46,7 +46,7 @@
  </section>
 
  <section xml:id="migration51.references">
-  <title>Modificări în manipularea referinţelor</title>
+  <title>Modificări în manipularea referințelor</title>
   <itemizedlist>
    <listitem>
     <para>
@@ -56,7 +56,7 @@
    <listitem>
     <para>
      <link linkend="migration51.references-fails">Codul-sursă care lucra în PHP
-      4.3.x, dar acum eşuează</link>
+      4.3.x, dar acum eșuează</link>
     </para>
    </listitem>
    <listitem>
@@ -67,7 +67,7 @@
    </listitem>
    <listitem>
     <para>
-     <link linkend="migration51.references-works">Codul-sursă care eşua în PHP
+     <link linkend="migration51.references-works">Codul-sursă care eșua în PHP
       4.3.x, dar acum lucrează</link>
     </para>
    </listitem>
@@ -80,7 +80,7 @@
    <listitem>
     <para>
      <link linkend="migration51.references-warnings">Preîntâmpinări care au
-     apărut şi au dispărut</link>
+     apărut și au dispărut</link>
     </para>
    </listitem>
   </itemizedlist>
@@ -90,13 +90,13 @@
    <para>
     Din punctul de vedere al programatorului script-urilor PHP, schimbarea care
     cel mai probabil va afecta codul-sursă vechi este modul în care sunt
-    manipulate referinţele în toate versiunile PHP ce au urmat după PHP 4.4.0.
+    manipulate referințele în toate versiunile PHP ce au urmat după PHP 4.4.0.
    </para>
    <para>
-    Până la, şi inclusiv în PHP 4.3 era posibil de a transmite, atribui sau
-    întoarce variabile prin referinţă, care ar fi trebuit în mod real să fie
+    Până la, și inclusiv în PHP 4.3 era posibil de a transmite, atribui sau
+    întoarce variabile prin referință, care ar fi trebuit în mod real să fie
     întoarse prin valoare, cum ar fi o constantă, o valoare temporară (de ex.
-    rezultatul unei expresii) sau rezultatul unei funcţii care însăşi a fost
+    rezultatul unei expresii) sau rezultatul unei funcții care însăși a fost
     întoarsă prin valoare, ca în acest exemplu:
    </para>
    <informalexample>
@@ -116,36 +116,36 @@ $bar = &return_value();
     </programlisting>
    </informalexample>
    <para>
-    Cu toate că acest cod-sursă de obicei lucrează conform aşteptărilor în PHP
+    Cu toate că acest cod-sursă de obicei lucrează conform așteptărilor în PHP
     4.3, în caz general rezultatul este nedefinit. Motorul Zend nu poate
-    funcţiona corect cu aceste valori în calitate de referinţe. Această eroare
-    putea, şi într-adevăr a dus la diverse probleme de alterare a conţinutului
+    funcționa corect cu aceste valori în calitate de referințe. Această eroare
+    putea, și într-adevăr a dus la diverse probleme de alterare a conținutului
     memoriei dificile de reprodus, în special acolo unde baza de cod-sursă era
     foarte mare.
    </para>
    <para>
-    În PHP 4.4.0, PHP 5.0.4 şi toate versiunile ulterioare ale PHP Motorul a
-    fost corectat pentru a 'şti' când operaţia de referinţă este utilizată
+    În PHP 4.4.0, PHP 5.0.4 și toate versiunile ulterioare ale PHP Motorul a
+    fost corectat pentru a 'ști' când operația de referință este utilizată
     asupra unei valori care nu ar trebui să fie referită. Acum în aceste cazuri
-    este utilizată valoarea propriu-zisă şi este emisă o preîntâmpinare.
-    Preîntâmpinarea ia forma unui <constant>E_NOTICE</constant> în PHP 4.4.0 şi
-    ulterior, şi <constant>E_STRICT</constant> în PHP 5.0.4 şi ulterior.
+    este utilizată valoarea propriu-zisă și este emisă o preîntâmpinare.
+    Preîntâmpinarea ia forma unui <constant>E_NOTICE</constant> în PHP 4.4.0 și
+    ulterior, și <constant>E_STRICT</constant> în PHP 5.0.4 și ulterior.
    </para>
    <para>
-    Codul-sursă care poteţial putea să producă alterarea memoriei acum nu mai
+    Codul-sursă care potețial putea să producă alterarea memoriei acum nu mai
     poate face aceasta. Însă unele coduri-sursă vechi pot ca rezultat să
-    funcţioneze în mod diferit.
+    funcționeze în mod diferit.
    </para>
   </section>
 
   <section xml:id="migration51.references-fails">
-   <title>Codul-sursă care lucra în PHP 4.3, dar acum eşuează</title>
+   <title>Codul-sursă care lucra în PHP 4.3, dar acum eșuează</title>
    <informalexample>
     <programlisting role="php">
 <![CDATA[
 <?php
 function func(&$arraykey) {
-    return $arraykey; // funcţia întoarce rezultatul prin valoare!
+    return $arraykey; // funcția întoarce rezultatul prin valoare!
 }
 
 $array = array('a', 'b', 'c');
@@ -159,8 +159,8 @@ var_dump($z);
 <]]>
     </programlisting>
     <para>
-     Lansând în execuţie script-ul de mai sus în orice versiune a PHP mai
-     înainte de corectarea referinţelor va produce următoarea ieşire:
+     Lansând în execuție script-ul de mai sus în orice versiune a PHP mai
+     înainte de corectarea referințelor va produce următoarea ieșire:
     </para>
     <screen>
 <![CDATA[
@@ -175,7 +175,7 @@ array(3) {
 ]]>
     </screen>
     <para>
-     După corectarea referinţelor acelaşi cod-sursă va produce următoarele:
+     După corectarea referințelor același cod-sursă va produce următoarele:
     </para>
     <screen>
 <![CDATA[
@@ -193,17 +193,17 @@ array(3) {
    <para>
     Aceasta se întâmplă din cauza că, după corectare, <literal>func()</literal>
     atribuie prin valoare. Valoarea variabilei <varname>$y</varname> este
-    re-atribuită şi legătura prin referinţă este păstrată prin
+    re-atribuită și legătura prin referință este păstrată prin
     <varname>$z</varname>. Înainte de corectare valoarea era atribuită prin
-    referinţă, ce ducea la faptul că <varname>$y</varname> era realipit la
-    fiecare atribuire. Încercarea de a alipi ceva prin referinţă la o valoare
+    referință, ce ducea la faptul că <varname>$y</varname> era realipit la
+    fiecare atribuire. Încercarea de a alipi ceva prin referință la o valoare
     temporară cauza alterarea memoriei.
    </para>
    <para>
-    Un astfel de cod-sursă poate fi făcut să funcţioneze identic în ambele
-    versiuni PHP: înainte de corectare şi după. Semnătura
+    Un astfel de cod-sursă poate fi făcut să funcționeze identic în ambele
+    versiuni PHP: înainte de corectare și după. Semnătura
     <literal>func()</literal> poate fi alterată ca să întoarcă valoarea prin
-    referinţă, sau atribuirea prin referinţă poate fi eliminată din rezultatul
+    referință, sau atribuirea prin referință poate fi eliminată din rezultatul
     <literal>func()</literal>.
    </para>
    <informalexample>
@@ -224,12 +224,12 @@ echo $x;
    </informalexample>
    <para>
     În PHP 4.3 <varname>$x</varname> ar fi fost 'valoarea originară', în timp
-    ce după corectări aceasta va fi 'ceea ce întoarce funcţia' - amintiţi-vă că
-    atunci când funcţia nu întoarce valoarea prin referinţă, atribuirea prin
-    referinţă este convertită într-o atribuire obişnuită. Iarăşi, aceasta
-    poate fi adus la un numitor comun prin forţarea <literal>func()</literal>
-    să întoarcă valoarea prin referinţă, sau prin eliminarea atribuirii prin
-    referinţă.
+    ce după corectări aceasta va fi 'ceea ce întoarce funcția' - amintiți-vă că
+    atunci când funcția nu întoarce valoarea prin referință, atribuirea prin
+    referință este convertită într-o atribuire obișnuită. Iarăși, aceasta
+    poate fi adus la un numitor comun prin forțarea <literal>func()</literal>
+    să întoarcă valoarea prin referință, sau prin eliminarea atribuirii prin
+    referință.
    </para>
   </section>
 
@@ -261,15 +261,15 @@ var_dump($bar);
     În PHP 5.0.3, <varname>$bar</varname> evalua în <constant>NULL</constant>
     în loc să întoarcă un obiect. Aceasta s-a întâmplat din cauza că
     <literal>getThis()</literal> întoarce prin valoare, dar aici valoarea e
-    atribuită prin referinţă. Cu toate că acum script-ul funcţionează conform
-    aşteptărilor, acesta este de fapt un cod invalid, care va arunca un
+    atribuită prin referință. Cu toate că acum script-ul funcționează conform
+    așteptărilor, acesta este de fapt un cod invalid, care va arunca un
     <constant>E_NOTICE</constant> sub PHP 4.4, sau un
-    <constant>E_STRICT</constant> sub PHP 5.0.4 şi ulterior.
+    <constant>E_STRICT</constant> sub PHP 5.0.4 și ulterior.
    </para>
   </section>
 
   <section xml:id="migration51.references-works">
-   <title>Codul-sursă care eşua în PHP 4.3.x, dar acum lucrează</title>
+   <title>Codul-sursă care eșua în PHP 4.3.x, dar acum lucrează</title>
    <informalexample>
     <programlisting role="php">
 <![CDATA[
@@ -290,8 +290,8 @@ for ($i = 0; $i < 3; $i++) {
     <para>
      În PHP 4.3 al treilea apel la <function>var_dump</function> produce
      <constant>NULL</constant>, din cauza alterării memoriei cauzate de
-     întoarcerea unei valori neiniţializate prin referinţă. Acest cod-sursă
-     este valid în PHP 5.0.4 şi ulterior, dar aruncă erori în versiunile
+     întoarcerea unei valori neinițializate prin referință. Acest cod-sursă
+     este valid în PHP 5.0.4 și ulterior, dar aruncă erori în versiunile
      anterioare ale PHP.
     </para>
    </informalexample>
@@ -307,7 +307,7 @@ echo '-'.$arr['alfa']."-\n";
     </programlisting>
     <para>
      Până la PHP 5.0.5, nu era posibil de a atribui valoarea unui element al
-     tabloului prin referinţă, în acest mod. Acum este posibil.
+     tabloului prin referință, în acest mod. Acum este posibil.
     </para>
    </informalexample>
   </section>
@@ -317,22 +317,22 @@ echo '-'.$arr['alfa']."-\n";
     5.0.x</title>
    <para>
     Există vre-o două erori raportate în PHP 5.0 înainte de corectarea
-    referinţelor, care acum 'lucrează'. Însă în ambele cazuri erorile sunt
+    referințelor, care acum 'lucrează'. Însă în ambele cazuri erorile sunt
     aruncate de PHP 5.1.x, deoarece în primul rând codul-sursă era invalid.
-    Întoarcerea valorilor prin referinţă utilizând <literal>self::</literal>
+    Întoarcerea valorilor prin referință utilizând <literal>self::</literal>
     acum lucrează la general, dar aruncă o preîntâmpinare
-    <constant>E_STRICT</constant>, şi cu toate că rezultatele variază de la caz
-    la caz la atribuirea prin referinţă la un obiect supraîncărcat, oricum veţi
-    vedea un <constant>E_ERROR</constant> atunci când încercaţi aceasta, chiar
-    şi acolo unde însăşi atribuirea pare să funcţioneze.
+    <constant>E_STRICT</constant>, și cu toate că rezultatele variază de la caz
+    la caz la atribuirea prin referință la un obiect supraîncărcat, oricum veți
+    vedea un <constant>E_ERROR</constant> atunci când încercați aceasta, chiar
+    și acolo unde însăși atribuirea pare să funcționeze.
    </para>
   </section>
 
   <section xml:id="migration51.references-warnings">
-   <title>Preîntâmpinări care au apărut şi au dispărut</title>
+   <title>Preîntâmpinări care au apărut și au dispărut</title>
    <para>
-    Apeluri incluse unul în altul către funcţii care întorc valoarea prin
-    referinţă sunt exemple de cod-sursă valid în ambele PHP 4.3.x şi PHP 5.1.x,
+    Apeluri incluse unul în altul către funcții care întorc valoarea prin
+    referință sunt exemple de cod-sursă valid în ambele PHP 4.3.x și PHP 5.1.x,
     dar aruncau erori nejustificate <constant>E_NOTICE</constant> sau
     <constant>E_STRICT</constant> în versiunile intermediare ale PHP.
    </para>
@@ -388,34 +388,34 @@ $o->run();
   <para>
    Aceasta întotdeauna ar fi trebuit să arunce o eroare fatală
    <constant>E_ERROR</constant>, din cauza că [] nu pot fi utilizate pentru
-   citire în PHP. Acesta este cod-sursă invalid în PHP 4.4.2 şi PHP 5.0.5 şi
+   citire în PHP. Acesta este cod-sursă invalid în PHP 4.4.2 și PHP 5.0.5 și
    ulterior.
   </para>
  </section>
 
  <section xml:id="migration51.integer-parameters">
-  <title>Valorile întregi în parametrii funcţiilor</title>
+  <title>Valorile întregi în parametrii funcțiilor</title>
   <para>
-   Odată cu apariţia PHP 5.0.x a fost introdus un nou API de prelucrare a
-   parametrilor, care este utilizat de un mare număr de funcţii PHP. În toate
-   versiunile PHP între 5.0.x şi 5.1.x, manipularea valorilor întregi era
-   foarte strictă şi erau respinse toate valorile numerice formate incorect
-   atunci când o funcţie PHP eştepta un întreg. Aceste verificări acum sunt mai
-   legere pentru a susţine string-uri numerice formate nu chiar bine, cum ar fi
-   " 123" şi "123 " şi acestea nu vor mai eşua, cum era cazul în PHP 5.0.x.
-   Însă pentru a promova siguranţa în cod şi validarea intrărilor, funcţiile
+   Odată cu apariția PHP 5.0.x a fost introdus un nou API de prelucrare a
+   parametrilor, care este utilizat de un mare număr de funcții PHP. În toate
+   versiunile PHP între 5.0.x și 5.1.x, manipularea valorilor întregi era
+   foarte strictă și erau respinse toate valorile numerice formate incorect
+   atunci când o funcție PHP eștepta un întreg. Aceste verificări acum sunt mai
+   legere pentru a susține string-uri numerice formate nu chiar bine, cum ar fi
+   " 123" și "123 " și acestea nu vor mai eșua, cum era cazul în PHP 5.0.x.
+   Însă pentru a promova siguranța în cod și validarea intrărilor, funcțiile
    PHP acum emit un <constant>E_NOTICE</constant> atunci când astfel de
    string-uri sunt transmise în calitate de întregi.
   </para>
  </section>
 
  <section xml:id="migration51.oop">
-  <title>Schimbări în clase şi obiecte</title>
+  <title>Schimbări în clase și obiecte</title>
   <itemizedlist>
    <listitem>
     <para>
      <link linkend="migration51.oop-functions"><literal>instanceof</literal>,
-      <literal>is_a()</literal>, <literal>is_subclass_of()</literal> şi
+      <literal>is_a()</literal>, <literal>is_subclass_of()</literal> și
       <literal>catch</literal></link>
     </para>
    </listitem>
@@ -427,13 +427,13 @@ $o->run();
    <listitem>
     <para>
      <link linkend="migration51.oop-modifiers">Modificatorii de acces în
-      interfeţe</link>
+      interfețe</link>
     </para>
    </listitem>
    <listitem>
     <para>
      <link linkend="migration51.oop-inheritance">Schimbări în regulile de
-      moştenire</link>
+      moștenire</link>
     </para>
    </listitem>
    <listitem>
@@ -445,20 +445,20 @@ $o->run();
 
   <section xml:id="migration51.oop-functions">
    <title><literal>instanceof</literal>, <literal>is_a()</literal>, <literal>
-    is_subclass_of()</literal> şi <literal>catch</literal></title>
+    is_subclass_of()</literal> și <literal>catch</literal></title>
    <para>
-    În PHP 5.0, <literal>is_a()</literal> a devenit învechit şi a fost înlocuit
+    În PHP 5.0, <literal>is_a()</literal> a devenit învechit și a fost înlocuit
     cu operatorul <literal>instanceof</literal>. Au existat unele probleme cu
-    implementarea iniţială a <literal>instanceof</literal>, care se baza pe
+    implementarea inițială a <literal>instanceof</literal>, care se baza pe
     <literal>__autoload()</literal> pentru a căuta clasele ce lipsesc. Dacă
     clasa nu era prezentă, <literal>instanceof</literal> arunca un
-    <constant>E_ERROR</constant> fatal din cauza eşecului
-    <literal>__autoload()</literal> de a descoperi acea clasă. Acelaşi
-    comportament îl avea şi operatorul <literal>catch</literal> şi funcţia
-    <literal>is_subclass_of()</literal>, ambele din acelaşi motiv.
+    <constant>E_ERROR</constant> fatal din cauza eșecului
+    <literal>__autoload()</literal> de a descoperi acea clasă. Același
+    comportament îl avea și operatorul <literal>catch</literal> și funcția
+    <literal>is_subclass_of()</literal>, ambele din același motiv.
    </para>
    <para>
-    Nici una din aceste funcţii sau operatori nu apelează
+    Nici una din aceste funcții sau operatori nu apelează
     <literal>__autoload()</literal> în PHP 5.1.x, iar utilizarea
     <literal>class_exists()</literal> în codul-sursă scris pentru PHP 5.0.x, cu
     toate că nu este problematică în nici un fel, nu mai este necesară.
@@ -468,36 +468,36 @@ $o->run();
   <section xml:id="migration51.oop-methods">
    <title>Metodele private abstracte</title>
    <para>
-    Metodele private abstracte au fost susţinute între PHP 5.0.0 şi PHP 5.0.4,
+    Metodele private abstracte au fost susținute între PHP 5.0.0 și PHP 5.0.4,
     însă apoi au fost interzise în baza faptului că comportamentele
-    <literal>private</literal> şi <literal>abstract</literal> se excludeau
+    <literal>private</literal> și <literal>abstract</literal> se excludeau
     reciproc.
    </para>
   </section>
 
   <section xml:id="migration51.oop-modifiers">
-   <title>Modificatorii de acces în interfeţe</title>
+   <title>Modificatorii de acces în interfețe</title>
    <para>
-    În PHP 5.0, declaraţiile funcţiilor în interfeţe erau tratate exact la fel
-    ca şi declaraţiile funcţiilor în clase. Aceasta nu mai era adevărat
+    În PHP 5.0, declarațiile funcțiilor în interfețe erau tratate exact la fel
+    ca și declarațiile funcțiilor în clase. Aceasta nu mai era adevărat
     începând cu octombrie 2004, când numai modificatorul de acces
-    <literal>public</literal> a fost permis în declaraţiile funcţiilor din
-    interfeţe. Începând cu aprilie 2005 - înainte de apariţia lansării PHP
+    <literal>public</literal> a fost permis în declarațiile funcțiilor din
+    interfețe. Începând cu aprilie 2005 - înainte de apariția lansării PHP
     5.0b1 - modificatorul <literal>static</literal> de asemenea a fost permis.
-    Oricum, modificatorii <literal>protected</literal> şi
+    Oricum, modificatorii <literal>protected</literal> și
     <literal>private</literal> acum vor arunca un <constant>E_ERROR</constant>,
-    la fel ca şi <literal>abstract</literal>. Observaţi însă că această
+    la fel ca și <literal>abstract</literal>. Observați însă că această
     schimbare nu ar trebui să afecteze codul dumneavoastră sursă existent,
-    deoarece nici unul din aceşti modificatori nu are sens în contextul
-    interfeţelor.
+    deoarece nici unul din acești modificatori nu are sens în contextul
+    interfețelor.
    </para>
   </section>
 
   <section xml:id="migration51.oop-inheritance">
-   <title>Schimbări în regulile de moştenire</title>
+   <title>Schimbări în regulile de moștenire</title>
    <para>
-    În PHP 5.0 era posibil de a avea o declaraţie a funcţiei într-o clasă
-    derivată, care nu era corespunzătoare cu declaraţia aceleiaşi funcţii în
+    În PHP 5.0 era posibil de a avea o declarație a funcției într-o clasă
+    derivată, care nu era corespunzătoare cu declarația aceleiași funcții în
     clasa de bază, de ex.
    </para>
    <informalexample>
@@ -571,10 +571,10 @@ class test {
   <section xml:id="migration51.extensions-gone">
    <title>Extensiile care au dispărut din nucleul PHP</title>
    <para>
-    Probabil primul lucru pe care îl veţi observa când veţi descărca PHP 5.1.x
+    Probabil primul lucru pe care îl veți observa când veți descărca PHP 5.1.x
     este că câteva extensii mai vechi au dispărut. Acele extensii care
-    deocamdată sunt menţinute activ sunt disponibile în PHP Extension
-    Community Library (PECL) &mdash; Biblioteca Comunităţii de Extensii PHP, la
+    deocamdată sunt menținute activ sunt disponibile în PHP Extension
+    Community Library (PECL) &mdash; Biblioteca Comunității de Extensii PHP, la
     adresa <link xlink:href="&url.pecl;">&url.pecl;</link>.
    </para>
    <table>
@@ -601,7 +601,7 @@ class test {
       </row>
       <row>
        <entry><link linkend="ref.fam">ext/fam</link></entry>
-       <entry>Nu este menţinută activ</entry>
+       <entry>Nu este menținută activ</entry>
       </row>
       <row>
        <entry><link linkend="ref.ingres">ext/ingres_ii</link></entry>
@@ -609,7 +609,7 @@ class test {
       </row>
       <row>
        <entry>ext/ircg</entry>
-       <entry>Nu este menţinută activ</entry>
+       <entry>Nu este menținută activ</entry>
       </row>
       <row>
        <entry><link linkend="ref.mcve">ext/mcve</link></entry>
@@ -617,7 +617,7 @@ class test {
       </row>
       <row>
        <entry><link linkend="ref.mnogosearch">ext/mnogosearch</link></entry>
-       <entry>Nu este menţinută activ</entry>
+       <entry>Nu este menținută activ</entry>
       </row>
       <row>
        <entry>ext/oracle</entry>
@@ -628,11 +628,11 @@ class test {
       </row>
       <row>
        <entry><link linkend="ref.ovrimos">ext/ovrimos</link></entry>
-       <entry>Nu este menţinută activ</entry>
+       <entry>Nu este menținută activ</entry>
       </row>
       <row>
        <entry>ext/pfpro</entry>
-       <entry>Nu este menţinută activ</entry>
+       <entry>Nu este menținută activ</entry>
       </row>
       <row>
        <entry><link linkend="ref.w32api">ext/w32api</link></entry>
@@ -640,7 +640,7 @@ class test {
       </row>
       <row>
        <entry><link linkend="ref.nis">ext/yp</link></entry>
-       <entry>Nu este menţinută activ</entry>
+       <entry>Nu este menținută activ</entry>
       </row>
       <row>
        <entry>ext/activescript</entry>
@@ -652,11 +652,11 @@ class test {
     </tgroup>
    </table>
    <para>
-    Modulele din PECL care nu sunt menţinute activ (de ex. nu au fost susţinute
-    de un timp, nu au un menţinător activ ce lucrează în prezent asupra lor şi
+    Modulele din PECL care nu sunt menținute activ (de ex. nu au fost susținute
+    de un timp, nu au un menținător activ ce lucrează în prezent asupra lor și
     nu au careva lansări de pachete PECL) sunt încă disponibile în SVN la
     <link xlink:href="&url.php.svn;pecl">&url.php.svn;pecl</link>.
-    Însă modulele PHP nelansate sunt după natura lor nesusţinute şi puteţi eşua
+    Însă modulele PHP nelansate sunt după natura lor nesusținute și puteți eșua
     la încercarea de a le instala sau utiliza.
    </para>
   </section>
@@ -668,27 +668,27 @@ class test {
     constante de clasă în extensii obiect-orientate. Extensiile noi scrise
     pentru PHP 5.1.x, inclusiv <link linkend="ref.spl">SPL</link>,
     <link linkend="intro.pdo">PDO</link>,
-    <link linkend="book.xmlreader">XMLReader</link> şi
-    <link linkend="ref.datetime">date</link>, îşi au constantele în formatul
-    <constant>PDO::CLASS_CONSTANT</constant> şi nu în formatul C
+    <link linkend="book.xmlreader">XMLReader</link> și
+    <link linkend="ref.datetime">date</link>, își au constantele în formatul
+    <constant>PDO::CLASS_CONSTANT</constant> și nu în formatul C
     <constant>PDO_CLASS_CONSTANT</constant> pentru a minimiza poluarea
-    spaţiului global de nume în PHP.
+    spațiului global de nume în PHP.
    </para>
   </section>
  </section>
 
  <section xml:id="migration51.datetime">
-  <title>Susţinerea Datei/orei</title>
+  <title>Susținerea Datei/orei</title>
   <para>
-   Susţinerea Datei/orei a fost rescrisă complet în PHP 5.1.x, şi mai mult nu
-   utilizează setările sistemului pentru a 'şti' zona orară în care se
+   Susținerea Datei/orei a fost rescrisă complet în PHP 5.1.x, și mai mult nu
+   utilizează setările sistemului pentru a 'ști' zona orară în care se
    operează. Aceasta va fi aflată după următoarele regunli, în următoarea
    ordine:
   </para>
   <itemizedlist>
    <listitem>
     <para>
-     Zona orară stabilită cu funcţia
+     Zona orară stabilită cu funcția
      <function>date_default_timezone_set</function> (dacă a fost stabilită)
     </para>
    </listitem>
@@ -699,19 +699,19 @@ class test {
    </listitem>
    <listitem>
     <para>
-     Ghicirea "magică" (dacă sistemul de operare o susţine)
+     Ghicirea "magică" (dacă sistemul de operare o susține)
     </para>
    </listitem>
    <listitem>
     <para>
-     Dacă toate opţiunile precedente eşuează, se stabileşte UTC
+     Dacă toate opțiunile precedente eșuează, se stabilește UTC
     </para>
    </listitem>
   </itemizedlist>
   <informalexample>
    <para>
-    Pentru a asigura acurateţea (şi a evita o avertizare
-    <constant>E_STRICT</constant>), va trebui să definiţi zona dumneavoastră
+    Pentru a asigura acuratețea (și a evita o avertizare
+    <constant>E_STRICT</constant>), va trebui să definiți zona dumneavoastră
     orară în <filename>php.ini</filename> utilizând următorul format:
    </para>
    <para>
@@ -719,17 +719,17 @@ class test {
    </para>
   </informalexample>
   <para>
-   Zonele orare susţinute sunt enumerate, în acest format, în
+   Zonele orare susținute sunt enumerate, în acest format, în
    <link linkend="timezones">anexa cu zonele orare</link>.
   </para>
   <para>
-   De asemenea observaţi că <function>strtotime</function> acum întoarce
-   &false; la eşec, în loc de -1.
+   De asemenea observați că <function>strtotime</function> acum întoarce
+   &false; la eșec, în loc de -1.
   </para>
  </section>
 
  <section xml:id="migration51.databases">
-  <title>Modificări în susţinerea bazelor de date</title>
+  <title>Modificări în susținerea bazelor de date</title>
   <itemizedlist>
    <listitem>
     <para>
@@ -738,13 +738,13 @@ class test {
    </listitem>
    <listitem>
     <para>
-     <link linkend="migration51.databases-mysql">Modificări în susţinerea
+     <link linkend="migration51.databases-mysql">Modificări în susținerea
      MySQL</link>
     </para>
    </listitem>
    <listitem>
     <para>
-     <link linkend="migration51.databases-sqlite">Modificări în susţinerea
+     <link linkend="migration51.databases-sqlite">Modificări în susținerea
      SQLite</link>
     </para>
    </listitem>
@@ -754,87 +754,87 @@ class test {
    <title>Prezentarea generală a PDO</title>
    <para>
     <link linkend="intro.pdo">PHP Data Objects (PDO) &mdash; Obiectele de Date
-    PHP</link> au fost introduse ca extensii PECL în PHP 5.0 şi au devenit
+    PHP</link> au fost introduse ca extensii PECL în PHP 5.0 și au devenit
     parte componentă a distributivului PHP în versiunea PHP 5.1.x. Extensia PDO
-    furnizează o interfaţă consistentă pentru acces la baze de date şi este
+    furnizează o interfață consistentă pentru acces la baze de date și este
     utilizată împreună cu driver-e specifice PDO pentru fiecare bază de date.
-    Fiecare driver de asemenea poate avea funcţiile sale specifice pentru baza
-    de date, dar funcţionalitatea de bază de acces la date, cum ar fi
-    efectuarea interpelărilor şi primirea datelor, este asigurată de funcţiile
+    Fiecare driver de asemenea poate avea funcțiile sale specifice pentru baza
+    de date, dar funcționalitatea de bază de acces la date, cum ar fi
+    efectuarea interpelărilor și primirea datelor, este asigurată de funcțiile
     PDO utilizând driver-ul indicat în
     <function>PDO::__construct</function>.
    </para>
    <para>
-    Observaţi că extensia PDO şi driver-ele sale se intenţionează a fi
-    asamblate ca extensii partajate. Aceasta vă va permite să reînnoiţi în mod
-    clar şi simplu driver-ele din PECL, fără a vă forţa să reasamblaţi întregul
+    Observați că extensia PDO și driver-ele sale se intenționează a fi
+    asamblate ca extensii partajate. Aceasta vă va permite să reînnoiți în mod
+    clar și simplu driver-ele din PECL, fără a vă forța să reasamblați întregul
     PHP.
    </para>
    <para>
     La momentul lansării PHP 5.1.x, PDO este mai mult decât gata pentru testări
-    extensive şi poate fi adoptat în majoritatea situaţiilor. Oricum însă este
-    important de a înţelege că PDO şi driver-ele sale sunt relativ tinere şi în
-    ele pot să lipsească anumite facilităţi specifice anumitor baze de date;
-    evaluaţi atent PDO înainte de a-l utiliza în proiecte noi.
+    extensive și poate fi adoptat în majoritatea situațiilor. Oricum însă este
+    important de a înțelege că PDO și driver-ele sale sunt relativ tinere și în
+    ele pot să lipsească anumite facilități specifice anumitor baze de date;
+    evaluați atent PDO înainte de a-l utiliza în proiecte noi.
    </para>
    <para>
     Codul-sursă vechi la general se va baza pe extensiile de baze de date
-    existente, care deocamdată sunt încă menţinute.
+    existente, care deocamdată sunt încă menținute.
    </para>
   </section>
 
   <section xml:id="migration51.databases-mysql">
-   <title>Modificări în susţinerea MySQL</title>
+   <title>Modificări în susținerea MySQL</title>
    <para>
-    În PHP 4, susţinerea MySQL 3 era încorporată. Odată cu lansarea PHP 5.0
-    au apărut două extensii MySQL numite 'mysql' şi 'mysqli', care au fost
-    proiectate să susţină MySQL &lt; 4.1 şi MySQL 4.1 şi ulterior respectiv.
-    Odată cu introducerea PDO, care oferă o interfaţă foarte rapidă către toate
-    API-urile de baze de date susţinute de PHP, driver-ul PDO_MYSQL poate
-    susţine orice versiune curentă (MySQL 3, 4 or 5) în codul-sursă PHP scris
-    pentru PDO, în dependenţă de versiunea bibliotecii MySQL utilizată în
+    În PHP 4, susținerea MySQL 3 era încorporată. Odată cu lansarea PHP 5.0
+    au apărut două extensii MySQL numite 'mysql' și 'mysqli', care au fost
+    proiectate să susțină MySQL &lt; 4.1 și MySQL 4.1 și ulterior respectiv.
+    Odată cu introducerea PDO, care oferă o interfață foarte rapidă către toate
+    API-urile de baze de date susținute de PHP, driver-ul PDO_MYSQL poate
+    susține orice versiune curentă (MySQL 3, 4 or 5) în codul-sursă PHP scris
+    pentru PDO, în dependență de versiunea bibliotecii MySQL utilizată în
     timpul compilării. Extensiile vechi MySQL rămân prezente din motivul
-    compatibilităţii inverse, dar nu sunt activate implicit.
+    compatibilității inverse, dar nu sunt activate implicit.
    </para>
   </section>
 
   <section xml:id="migration51.databases-sqlite">
-   <title>Modificări în susţinerea SQLite</title>
+   <title>Modificări în susținerea SQLite</title>
    <para>
-    În PHP 5.0.x susţinerea SQLite 2 era asigurată de extensia sqlite
+    În PHP 5.0.x susținerea SQLite 2 era asigurată de extensia sqlite
     incorporată, care de asemenea era disponibilă ca extensie PECL în PHP 4.3
-    şi PHP 4.4. Odată cu introducerea PDO, extensia sqlite acţionează şi ca
+    și PHP 4.4. Odată cu introducerea PDO, extensia sqlite acționează și ca
     driver 'sqlite2' pentru PDO; datorită acestui fapt extensia sqlite în PHP
-    5.1.x are o dependenţă faţă de extensia PDO.
+    5.1.x are o dependență față de extensia PDO.
    </para>
    <para>
-    PHP 5.1.x este furnizat cu câteva interfeţe alternative pentru sqlite:
+    PHP 5.1.x este furnizat cu câteva interfețe alternative pentru sqlite:
    </para>
    <para>
     Extensia sqlite oferă un API procedural/obiect-orientat "clasic", pe care
-    posibil l-aţi utilizat în versiunile anterioare ale PHP. Ea de asemenea
-    oferă driver-ul PDO 'sqlite2', care vă permite să accesaţi baze de date
+    posibil l-ați utilizat în versiunile anterioare ale PHP. Ea de asemenea
+    oferă driver-ul PDO 'sqlite2', care vă permite să accesați baze de date
     vechi SQLite 2 utilizând API al PDO.
    </para>
    <para>
     PDO_SQLITE oferă driver-ul 'sqlite' de versiunea 3. SQLite de versiunea 3
-    este net superior SQLite de versiunea 2, însă formatele fişierelor acestor
+    este net superior SQLite de versiunea 2, însă formatele fișierelor acestor
     două versiuni nu sunt compatibile.
    </para>
    <para>
-    Dacă proiectul dumneavoastră bazat pe PHP este de acum scris şi
-    funcţionează cu versiunile anterioare ale PHP atunci puteţi să utilizaţi
-    mai departe ext/sqlite fără probleme, dar va trebui să activaţi în mod
-    explicit ambele extensii PDO şi sqlite. Noile proiecte ar trebui să
-    utilizeze drive-ele PDO şi 'sqlite' (versiunea 3), deoarece acesta e mai
-    rapid decât SQLite 2, posedă o concurenţă de blocare îmbunătăţită şi
-    susţine nativ atât declaraţii pregătite anterior cât şi coloane binare.
+    Dacă proiectul dumneavoastră bazat pe PHP este de acum scris și
+    funcționează cu versiunile anterioare ale PHP atunci puteți să utilizați
+    mai departe ext/sqlite fără probleme, dar va trebui să activați în mod
+    explicit ambele extensii PDO și sqlite. Noile proiecte ar trebui să
+    utilizeze drive-ele PDO și 'sqlite' (versiunea 3), deoarece acesta e mai
+    rapid decât SQLite 2, posedă o concurență de blocare îmbunătățită și
+    susține nativ atât declarații pregătite anterior cât și coloane binare.
    </para>
    <para>
-    Trebuie să activaţi PDO pentru a utiliza extensia SQLite. Dacă doriţi să
-    asamblaţi extensia PDO în calitate de extensie partajată, atunci şi
+    Trebuie să activați PDO pentru a utiliza extensia SQLite. Dacă doriți să
+    asamblați extensia PDO în calitate de extensie partajată, atunci și
     extensia SQLite trebuie asamblată ca extensie partajată. Aceasta rămâne în
-    vigoare şi pentru orice altă extensie care oferă un driver PDO.
+    vigoare și pentru orice altă extensie care oferă un driver PDO.
    </para>
   </section>
  </section> <!-- end of migration51.databases -->
@@ -843,7 +843,7 @@ class test {
   <title>Verificarea <constant>E_STRICT</constant></title>
   <informalexample>
    <para>
-    Dacă aveţi de verificat un singur script, puteţi intercepta erorile
+    Dacă aveți de verificat un singur script, puteți intercepta erorile
     <constant>E_STRICT</constant> utilizând facilitatea <literal>lint</literal>
     din linia de comandă a PHP:
    </para>
@@ -851,7 +851,7 @@ class test {
     php -d error_reporting=4095 -l script_to_check.php
    </programlisting>
    <para>
-    Pentru proiecte mai mari, script-ul shell ce urmează va executa aceeaşi
+    Pentru proiecte mai mari, script-ul shell ce urmează va executa aceeași
     sarcină:
    </para>
    <programlisting role="shell">

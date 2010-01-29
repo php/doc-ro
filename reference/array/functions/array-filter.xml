@@ -5,7 +5,7 @@
 <refentry xml:id="function.array-filter" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>array_filter</refname>
-  <refpurpose>Filtrează elementele unui tablou utilizând o funcţie de apel invers</refpurpose>
+  <refpurpose>Filtrează elementele unui tablou utilizând o funcție de apel invers</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -17,7 +17,7 @@
   </methodsynopsis>
   <para>
    Iterează prin fiecare valoare în tabloul <parameter>input</parameter>
-   transmiţând-o funcţiei <parameter>callback</parameter>. Dacă funcţia
+   transmițând-o funcției <parameter>callback</parameter>. Dacă funcția
    <parameter>callback</parameter> întoarce true, valoarea curentă din
    <parameter>input</parameter> este întoarsă în tabloul rezultant.
    Cheile tabloului sunt păstrate.
@@ -42,12 +42,12 @@
      <term><parameter>callback</parameter></term>
      <listitem>
       <para>
-       Funcţia de apel invers utilizată
+       Funcția de apel invers utilizată
       </para>
       <para>
-       Dacă nu este furnizată nici o funcţie <parameter>callback</parameter>,
+       Dacă nu este furnizată nici o funcție <parameter>callback</parameter>,
        toate înregistrările din <parameter>input</parameter> egale cu &false;
-       (vedeţi <link linkend="language.types.boolean.casting">convertarea în
+       (vedeți <link linkend="language.types.boolean.casting">convertarea în
         boolean</link>) vor fi eliminate.
       </para>
      </listitem>
@@ -157,8 +157,8 @@ Array
   &reftitle.notes;
   <caution>
    <para>
-    Dacă tabloul este modificat în funcţia de apel invers (de ex. un element
-    este adăugat, eliminat sau desetat) comportamentul acestei funcţii este
+    Dacă tabloul este modificat în funcția de apel invers (de ex. un element
+    este adăugat, eliminat sau desetat) comportamentul acestei funcții este
     nedefinit.
    </para>
   </caution>

@@ -6,7 +6,7 @@
 <refentry xml:id="function.getallheaders" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>getallheaders</refname>
-  <refpurpose>Obţine toate antetele interpelării HTTP</refpurpose>
+  <refpurpose>Obține toate antetele interpelării HTTP</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -16,13 +16,13 @@
    <void/>
   </methodsynopsis>
   <para>
-   Obţine toate antetele HTTP ale interpelării curente.
+   Obține toate antetele HTTP ale interpelării curente.
   </para>
   <para>
-   Această funcţie este un pseudonim al
-   <function>apache_request_headers</function>. Vă rugăm să citiţi documentaţia
-   <function>apache_request_headers</function> pentru informaţii suplimentare
-   despre cum funcţionează această funcţie.
+   Această funcție este un pseudonim al
+   <function>apache_request_headers</function>. Vă rugăm să citiți documentația
+   <function>apache_request_headers</function> pentru informații suplimentare
+   despre cum funcționează această funcție.
   </para>
   &apache.req.module;
  </refsect1>
@@ -31,7 +31,7 @@
   &reftitle.returnvalues;
   <para>
    Un tablou asociativ cu toate antetele HTTP din interpelarea curentă, sau
-   &false; în caz de eşec.
+   &false; în caz de eșec.
   </para>
  </refsect1>
 
@@ -51,7 +51,7 @@
        <entry>4.3.0</entry>
        <entry>
         A devenit un pseudonim al <function>apache_request_headers</function>.
-        Funcţia, de fapt, a fost redenumită din cauza că funcţionează numai cu
+        Funcția, de fapt, a fost redenumită din cauza că funcționează numai cu
 	Apache.
        </entry>
       </row>

@@ -5,7 +5,7 @@
 <refentry xml:id="function.json-decode" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>json_decode</refname>
-  <refpurpose>Converteşte într-o variabilă un şir reprezentat JSON</refpurpose>
+  <refpurpose>Convertește într-o variabilă un șir reprezentat JSON</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -17,7 +17,7 @@
    <methodparam choice="opt"><type>int</type><parameter>depth</parameter><initializer>512</initializer></methodparam>
   </methodsynopsis>
   <para>
-   Preia un şir de caractere reprezentat JSON şi îl converteşte într-o
+   Preia un șir de caractere reprezentat JSON și îl convertește într-o
    variabilă PHP.
   </para>
  </refsect1>
@@ -30,7 +30,7 @@
      <term><parameter>json</parameter></term>
      <listitem>
       <para>
-       Şirul (<type>string</type>) reprezentat <parameter>json</parameter> care
+       Șirul (<type>string</type>) reprezentat <parameter>json</parameter> care
        trebuie convertit.
       </para>
      </listitem>
@@ -39,7 +39,7 @@
      <term><parameter>assoc</parameter></term>
      <listitem>
       <para>
-       Dacă specificaţi &true;, obiectul va fi convertit într-un
+       Dacă specificați &true;, obiectul va fi convertit într-un
        <type>array</type> asociativ.
       </para>
      </listitem>
@@ -60,9 +60,9 @@
   &reftitle.returnvalues;
   <para>
    Întoarce valoarea codificată în <parameter>json</parameter> cu tipul PHP
-   corespunzător. Valorile <literal>true</literal>, <literal>false</literal> şi
+   corespunzător. Valorile <literal>true</literal>, <literal>false</literal> și
    <literal>null</literal> (indiferent de tipul caracterelor - minuscule sau
-   majuscule) sunt întoarse ca &true;, &false; şi &null; respectiv. &null; este
+   majuscule) sunt întoarse ca &true;, &false; și &null; respectiv. &null; este
    întors dacă parametrul <parameter>json</parameter> nu poate fi decodificat
    sau dacă datele pentru codificare sunt mai adânci decât limita de imbricare.
   </para>
@@ -121,15 +121,15 @@ print $obj->{'foo-bar'}; // 12345
     </programlisting>
    </example>
    <example>
-    <title>greşeli comune la utilizarea <function>json_decode</function></title>
+    <title>greșeli comune la utilizarea <function>json_decode</function></title>
     <programlisting role="php">
 <![CDATA[
 <?php
 
-// următoarele stringuri sunt JavaScript valid, dar nu şi JSON valid
+// următoarele stringuri sunt JavaScript valid, dar nu și JSON valid
 
-// denumirea şi valoarea trebuie incluse între ghilimele duble
-// ghilimelele obişnuite nu sunt valide
+// denumirea și valoarea trebuie incluse între ghilimele duble
+// ghilimelele obișnuite nu sunt valide
 $bad_json = "{ 'bar': 'baz' }";
 json_decode($bad_json); // null
 
@@ -137,7 +137,7 @@ json_decode($bad_json); // null
 $bad_json = '{ bar: "baz" }';
 json_decode($bad_json); // null
 
-// virgula la sfârşit nu este permisă
+// virgula la sfârșit nu este permisă
 $bad_json = '{ bar: "baz", }';
 json_decode($bad_json); // null
 
@@ -218,7 +218,7 @@ Last error : The maximum stack depth has been exceeded
   &reftitle.notes;
   <note>
    <para>
-    Specificaţia JSON nu este JavaScript, ci un subset al JavaScript.
+    Specificația JSON nu este JavaScript, ci un subset al JavaScript.
    </para>
   </note>
   <note>

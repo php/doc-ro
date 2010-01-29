@@ -4,24 +4,24 @@
 <section xml:id="imap.installation" xmlns="http://docbook.org/ns/docbook">
  &reftitle.install;
  <para>
-  Pentru ca aceste funcţii să lucreze, trebuie să compilaţi PHP cu opţiunea
+  Pentru ca aceste funcții să lucreze, trebuie să compilați PHP cu opțiunea
   <option role="configure">--with-imap[=DIR]</option>, unde DIR este prefixul
-  căii unde a fost instalat c-client. Cu exemplul de mai sus, veţi folosi
+  căii unde a fost instalat c-client. Cu exemplul de mai sus, veți folosi
   <option role="configure">--with-imap=/usr/local/imap-2000b</option>.
-  Această locaţie depinde de locul unde aţi creat acest director, conform
+  Această locație depinde de locul unde ați creat acest director, conform
   descrierii anterioare. Utilizatorii <productname>Windows</productname> pot
   include biblioteca DLL <filename>php_imap.dll</filename> în &php.ini;.
  </para>
  <para>
-  IMAP nu este susţinut pe sisteme mai vechi de Windows 2000. Aceasta se
-  datorează faptului că el utilizează funcţii de criptare pentru a permite
-  conexiuni SSL la serverele de poştă.
+  IMAP nu este susținut pe sisteme mai vechi de Windows 2000. Aceasta se
+  datorează faptului că el utilizează funcții de criptare pentru a permite
+  conexiuni SSL la serverele de poștă.
  </para>
  <note>
   <simpara>
-   În dependenţă de configurarea c-client, posibil va trebui să adăugaţi
+   În dependență de configurarea c-client, posibil va trebui să adăugați
    <option role="configure">--with-imap-ssl=/path/to/openssl/</option>
-   şi/sau <option role="configure">--with-kerberos=/path/to/kerberos</option>
+   și/sau <option role="configure">--with-kerberos=/path/to/kerberos</option>
    la linia de configurare PHP.
   </simpara>
  </note>

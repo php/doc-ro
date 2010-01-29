@@ -5,7 +5,7 @@
 <refentry xml:id="function.xmlrpc-is-fault" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>xmlrpc_is_fault</refname>
-  <refpurpose>Determină dacă o valoare din array reprezintă o greşeală XMLRPC</refpurpose>
+  <refpurpose>Determină dacă o valoare din array reprezintă o greșeală XMLRPC</refpurpose>
  </refnamediv>
  <refsect1 role="description">
   &reftitle.description;
@@ -35,8 +35,8 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Întoarce &true; dacă argumentul exprimă o greşeală, &false; în caz contrar. Descrierea
-   erorii este disponibilă în <literal>$arg["faultString"]</literal>, codul greşelii
+   Întoarce &true; dacă argumentul exprimă o greșeală, &false; în caz contrar. Descrierea
+   erorii este disponibilă în <literal>$arg["faultString"]</literal>, codul greșelii
    este în <literal>$arg["faultCode"]</literal>.
   </para>
  </refsect1>
@@ -44,7 +44,7 @@
  <refsect1 role="examples">
   &reftitle.examples;
   <para>
-   Accesaţi exemplul din <function>xmlrpc_encode_request</function>.
+   Accesați exemplul din <function>xmlrpc_encode_request</function>.
   </para>
  </refsect1>
 

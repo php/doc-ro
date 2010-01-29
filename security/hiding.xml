@@ -7,20 +7,20 @@
    <title>Ascunderea PHP</title>
    <para>
     În general, securitatea prin obscuritate este una dintre cele mai slabe
-    forme de securitate. Dar în unele cazuri se doreşte orice sporire, cât de
-    mică a securităţii.
+    forme de securitate. Dar în unele cazuri se dorește orice sporire, cât de
+    mică a securității.
    </para>
    <para>
     Câteva tehnici simple pot ajuta la ascunderea PHP, posibil încetinind un
     atacator care încearcă să descopere puncte slabe în sistemul dumneavoastră.
-    Stabilind expose_php = <literal>off</literal> în fişierul &php.ini;, puteţi reduce cantitatea
-    de informaţii trimisă de server.
+    Stabilind expose_php = <literal>off</literal> în fișierul &php.ini;, puteți reduce cantitatea
+    de informații trimisă de server.
    </para>
    <para>
     O altă tactică este configurarea serverelor web, cum ar fi Apache să
-    prelucreze şi să interpreteze diferite tipuri de fişiere cu PHP, fie
-    printr-o directivă &htaccess;, fie direct în configuraţia Apache. Apoi
-    puteţi utiliza extensii de fişiere, care să inducă în eroare:
+    prelucreze și să interpreteze diferite tipuri de fișiere cu PHP, fie
+    printr-o directivă &htaccess;, fie direct în configurația Apache. Apoi
+    puteți utiliza extensii de fișiere, care să inducă în eroare:
     <example>
      <title>Ascunderea PHP ca alt limbaj de scripting</title>
      <programlisting role="apache-conf">
@@ -41,7 +41,7 @@ AddType application/x-httpd-php .bop .foo .133t
      </programlisting>
     </example>
     Sau deghizarea drept cod HTML, dar acest lucru are un impact minor asupra
-    performanţei, deoarece tot codul HTML va fi procesat de motorul PHP:
+    performanței, deoarece tot codul HTML va fi procesat de motorul PHP:
     <example>
      <title>Folosirea tipurilor HTML pentru extensiile PHP</title>
      <programlisting role="apache-conf">
@@ -51,9 +51,9 @@ AddType application/x-httpd-php .htm .html
 ]]>
      </programlisting>
     </example>
-    Pentru ca această modificare să funcţioneze eficient, trebuie să redenumiţi
-    toate fişierele PHP cu extensiile de mai sus. În timp ce aceasta reprezintă
-    o formă a securităţii prin obscuritate, este o măsură de prevenire minoră,
+    Pentru ca această modificare să funcționeze eficient, trebuie să redenumiți
+    toate fișierele PHP cu extensiile de mai sus. În timp ce aceasta reprezintă
+    o formă a securității prin obscuritate, este o măsură de prevenire minoră,
     cu mici neajunsuri.
    </para>
   </chapter>

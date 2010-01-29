@@ -16,7 +16,7 @@
   </methodsynopsis>
   <para>
    <function>microtime</function> întoarce timpul curent Unix cu microsecunde.
-   Această funcţie este disponibilă numai pe sistemele de operare ce susţin
+   Această funcție este disponibilă numai pe sistemele de operare ce susțin
    apelul de sistem gettimeofday().
   </para>
  </refsect1>
@@ -29,14 +29,14 @@
      <term><parameter>get_as_float</parameter></term>
      <listitem>
       <para>
-       Când este apelată fără parametrul opţional, această funcţie întoarce
+       Când este apelată fără parametrul opțional, această funcție întoarce
        string-ul "msec sec", unde sec este timpul curent măsurat în numărul
-       de secunde de la Epoca Unix (0:00:00 January 1, 1970 GMT) şi msec este
-       partea cu microsecunde. Ambele porţiuni ale string-ului sunt întoarse
-       în unităţi de secunde.
+       de secunde de la Epoca Unix (0:00:00 January 1, 1970 GMT) și msec este
+       partea cu microsecunde. Ambele porțiuni ale string-ului sunt întoarse
+       în unități de secunde.
       </para>
       <para>
-       Dacă parametrul opţional <parameter>get_as_float</parameter> este
+       Dacă parametrul opțional <parameter>get_as_float</parameter> este
        stabilit în &true;, atunci este întors un <type>float</type> (în secunde).
       </para>
      </listitem>
@@ -73,12 +73,12 @@
   &reftitle.examples;
   <para>
    <example>
-    <title>Măsurarea timpului de execuţie a script-ului cu ajutorul <function>microtime</function></title>
+    <title>Măsurarea timpului de execuție a script-ului cu ajutorul <function>microtime</function></title>
     <programlisting role="php">
 <![CDATA[
 <?php
 /**
- * O funcţie simplă pentru a copia comportamentul PHP 5
+ * O funcție simplă pentru a copia comportamentul PHP 5
  */
 function microtime_float()
 {
@@ -88,7 +88,7 @@ function microtime_float()
 
 $time_start = microtime_float();
 
-// Opreşte execuţia un pic
+// Oprește execuția un pic
 usleep(100);
 
 $time_end = microtime_float();
@@ -100,13 +100,13 @@ echo "Nu am făcut nimic timp de $time secunde\n";
     </programlisting>
    </example>
    <example>
-    <title>Măsurarea timpului de execuţie a script-ului în PHP 5</title>
+    <title>Măsurarea timpului de execuție a script-ului în PHP 5</title>
     <programlisting role="php">
 <![CDATA[
 <?php
 $time_start = microtime(true);
 
-// Opreşte execuţia un pic
+// Oprește execuția un pic
 usleep(100);
 
 $time_end = microtime(true);

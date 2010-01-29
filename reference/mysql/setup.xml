@@ -10,8 +10,8 @@
  <section xml:id="mysql.requirements">
   &reftitle.required;
   <para>
-   Pentru ca aceste funcţii să devină disponibile trebuie să compilaţi PHP cu
-   susţinerea MySQL.
+   Pentru ca aceste funcții să devină disponibile trebuie să compilați PHP cu
+   susținerea MySQL.
   </para>
  </section>
  <!-- }}} -->
@@ -30,7 +30,7 @@
   <para>
    Există două tipuri de resurse utilizate în modulul MySQL. Primul este
    identificatorul legăturii pentru o conexiune la baza de date, al doilea
-   este o resursă care menţine rezultatul unei interpelări.
+   este o resursă care menține rezultatul unei interpelări.
   </para>
  </section>
  <!-- }}} -->

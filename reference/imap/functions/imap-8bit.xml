@@ -5,7 +5,7 @@
 <refentry xml:id="function.imap-8bit" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>imap_8bit</refname>
-  <refpurpose>Converteşte un string "8bit" într-un string "quoted-printable"
+  <refpurpose>Convertește un string "8bit" într-un string "quoted-printable"
   </refpurpose>
  </refnamediv>
  <refsect1 role="description">
@@ -15,7 +15,7 @@
    <methodparam><type>string</type><parameter>string</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Converteşte un string "8bit" într-un string "quoted-printable" (în
+   Convertește un string "8bit" într-un string "quoted-printable" (în
    conformitate cu <link xlink:href="&url.rfc;2045">RFC2045</link>, section
    6.7).
   </para>

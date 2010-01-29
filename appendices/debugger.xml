@@ -11,9 +11,9 @@
    </simpara>
    <simpara>
     PHP 4 nu posedă o facilitate internă de debugging.
-    Însă puteţi folosi unul dintre debugger-ele externe.
+    Însă puteți folosi unul dintre debugger-ele externe.
     <link xlink:href="&url.zend.ide;">Mediul Zend IDE</link> include
-    un debugger, şi mai sunt şi alte extensii gretuite de debugging, cum ar fi
+    un debugger, și mai sunt și alte extensii gretuite de debugging, cum ar fi
     DBG la <link xlink:href="&url.dbg;">&url.dbg;</link>,
     <link xlink:href="&url.apd;">Advanced PHP Debugger</link> (APD) sau
     <link xlink:href="&url.xdebug;">Xdebug</link>.

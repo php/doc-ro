@@ -5,20 +5,20 @@
  <appendix xml:id="reserved" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Lista cuvintelor rezervate</title>
   <para>
-   În continuare urmează lista identificatorilor predefiniţi în PHP. Nici un
-   identificator din această listă nu trebuie să-l utilizaţi ca identificator
-   în script-urile dumneavoastră. Aceste liste includ cuvinte-cheie şi variabile
-   predefinite, denumiri de constante şi clase. Aceste liste nu sunt exhaustive
+   În continuare urmează lista identificatorilor predefiniți în PHP. Nici un
+   identificator din această listă nu trebuie să-l utilizați ca identificator
+   în script-urile dumneavoastră. Aceste liste includ cuvinte-cheie și variabile
+   predefinite, denumiri de constante și clase. Aceste liste nu sunt exhaustive
    sau depline.
   </para>
 
   <sect1 xml:id="reserved.keywords">
   <title>Lista cuvintelor-cheie</title>
    <simpara>
-    Aceste cuvinte au o semnificaţie specială în PHP. Unele din ele se aseamănă
-    cu funcţii, altele cu constante ş.a.m.d., însă aceasta nu este aşa: ele sunt
-    construcţii ale limbajului. Nu puteţi utiliza cuvintele ce urmează ca
-    constante, denumiri ale claselor, funcţiilor sau metodelor. Utilizarea lor
+    Aceste cuvinte au o semnificație specială în PHP. Unele din ele se aseamănă
+    cu funcții, altele cu constante ș.a.m.d., însă aceasta nu este așa: ele sunt
+    construcții ale limbajului. Nu puteți utiliza cuvintele ce urmează ca
+    constante, denumiri ale claselor, funcțiilor sau metodelor. Utilizarea lor
     ca denumiri ale variabilelor este în general OK, dar poate duce la confuzie.
    </simpara>
 
@@ -234,7 +234,7 @@
     </tgroup>
    </table>
    <table>
-    <title>Construcţii ale limbajului</title>
+    <title>Construcții ale limbajului</title>
     <tgroup cols="5">
      <tbody>
       <row>
@@ -295,16 +295,16 @@
   <sect1 xml:id="reserved.classes">
    <title>Clase predefinite</title>
    <para>
-    Această secţiune prezintă clasele standarde predefinite. Diferite extensii
-    definesc alte clase care sunt descrise în referinţele lor.
+    Această secțiune prezintă clasele standarde predefinite. Diferite extensii
+    definesc alte clase care sunt descrise în referințele lor.
    </para>
 
    <sect2 xml:id="reserved.classes.standard">
     <title>Clase standarde definite</title>
 
     <simpara>
-     Aceste clase sunt definite în setul standard de funcţii inclus în
-     distribuţia PHP.
+     Aceste clase sunt definite în setul standard de funcții inclus în
+     distribuția PHP.
     </simpara>
 
     <variablelist>
@@ -312,7 +312,7 @@
       <term><classname>Directory</classname></term>
       <listitem>
        <simpara>
-        Clasa de la care se instanţiază <link linkend="class.dir">dir</link>.
+        Clasa de la care se instanțiază <link linkend="class.dir">dir</link>.
        </simpara>
       </listitem>
      </varlistentry>
@@ -364,11 +364,11 @@
     <simpara>
      Clasa predefinită finală <classname>Closure</classname> a fost introdusă în
      PHP 5.3.0. Ea este utilizată pentru implementarea internă a <link
-     linkend="functions.anonymous">funcţiilor anonime</link>.
+     linkend="functions.anonymous">funcțiilor anonime</link>.
     </simpara>
     <simpara>
      Clasa are un constructor ce interzice crearea manuală a obiectului
-     (emite o eroare <constant>E_RECOVERABLE_ERROR</constant>) şi apelarea
+     (emite o eroare <constant>E_RECOVERABLE_ERROR</constant>) și apelarea
      metodei <literal>__invoke</literal> cu ajutorul <link
      linkend="language.oop5.magic.invoke">magiei de apelare</link>.
     </simpara>
@@ -380,8 +380,8 @@
     <title>Clase speciale</title>
 
     <simpara>
-     Următorii identificatori nu pot fi utilizaţi ca denumiri de clase, deoarece
-     au destinaţii speciale.
+     Următorii identificatori nu pot fi utilizați ca denumiri de clase, deoarece
+     au destinații speciale.
     </simpara>
 
     <variablelist>

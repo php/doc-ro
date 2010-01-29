@@ -14,8 +14,8 @@
    <methodparam choice="opt"><type>mixed</type><parameter>...</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Creează un tablou. Citiţi secţiunea despre
-   <link linkend="language.types.array">tipul array</link> pentru informaţii
+   Creează un tablou. Citiți secțiunea despre
+   <link linkend="language.types.array">tipul array</link> pentru informații
    suplimentare despre ce este un tablou.
   </para>
  </refsect1>
@@ -28,15 +28,15 @@
      <listitem>
       <para>
        Sintaxa "indice =&gt; valori", separate prin virgule, definesc indicii
-       şi valorile. Indicele poate fi de tip string sau integer. Când indicele
+       și valorile. Indicele poate fi de tip string sau integer. Când indicele
        este omis, este generat automat un indice de tip integer, începând cu 0.
        Dacă indicele este de tip integer, următorul indice generat va fi cel
-       mai mare indice întreg + 1. Observaţi că atunci când sunt definiţi doi
-       indici identici, ultima definiţie se suprapune peste prima.
+       mai mare indice întreg + 1. Observați că atunci când sunt definiți doi
+       indici identici, ultima definiție se suprapune peste prima.
       </para>
       <para>
        Plasarea unei virgule după ultima înregistrare definită în tablou este
-       o sintaxă validă, cu toate că este neobişniută.
+       o sintaxă validă, cu toate că este neobișniută.
       </para>
      </listitem>
     </varlistentry>
@@ -47,17 +47,17 @@
   &reftitle.returnvalues;
   <para>
    Întoarce un tablou al parametrilor. Parametrilor le poate fi asociat un
-   indice cu ajutorul operatorului <literal>=&gt;</literal>. Citiţi
-   secţiunea despre <link linkend="language.types.array">tipul array</link>
-   pentru informaţii suplimentare despre ce este un tablou.
+   indice cu ajutorul operatorului <literal>=&gt;</literal>. Citiți
+   secțiunea despre <link linkend="language.types.array">tipul array</link>
+   pentru informații suplimentare despre ce este un tablou.
   </para>
  </refsect1>
  <refsect1 role="examples">
   &reftitle.examples;
   <para>
    Următorul exemplu demonstrează cum se creează un tablou bidimensional, cum
-   se specifică cheile pentru tablourile asociative şi cum se sare peste
-   indicii numerici în tablouri obişnuite.
+   se specifică cheile pentru tablourile asociative și cum se sare peste
+   indicii numerici în tablouri obișnuite.
    <example>
     <title>Exemplu <function>array</function></title>
     <programlisting role="php">
@@ -102,8 +102,8 @@ Array
    </example>
   </para>
   <para>
-   Observaţi că indicele '3' este definit de două ori şi îşi păstrează valoarea
-   finală 13. Indicele '4' este definit după indicele '8' şi următorul indice
+   Observați că indicele '3' este definit de două ori și își păstrează valoarea
+   finală 13. Indicele '4' este definit după indicele '8' și următorul indice
    generat (valoarea 19) este '9', deoarece cel mai mare indice a fost '8'.
   </para>
   <para>
@@ -132,8 +132,8 @@ Array
    </example>
   </para>
   <para>
-   Ca şi în Perl, puteţi accesa o valoare din tablou între ghilimele duble.
-   Însă cu PHP va trebui să introduceţi tabloul între paranteze figurate.
+   Ca și în Perl, puteți accesa o valoare din tablou între ghilimele duble.
+   Însă cu PHP va trebui să introduceți tabloul între paranteze figurate.
    <example>
     <title>Accesarea unui tablou între ghilimele duble</title>
     <programlisting role="php">
@@ -154,8 +154,8 @@ echo "Salut, {$foo['bar']}!"; // Salut, baz!
   <para>
    <note>
     <para>
-     <function>array</function> este o construcţie a limbajului utilizată
-     pentru a reprezenta tablouri literale, şi nu o funcţie obişnuită.
+     <function>array</function> este o construcție a limbajului utilizată
+     pentru a reprezenta tablouri literale, și nu o funcție obișnuită.
     </para>
    </note>
   </para>

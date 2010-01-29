@@ -4,9 +4,9 @@
 <appendix xml:id="resource" xmlns="http://docbook.org/ns/docbook">
  <title>Lisa tipurilor de resurse</title>
  <para>
-  Urmează lista funcţiilor ce creează, utilizează sau sidtrug resurse PHP.
-  Funcţia <function>is_resource</function> poate fi utilizată pentru a
-  determina dacă o variabilă este o resursă, iar funcţia
+  Urmează lista funcțiilor ce creează, utilizează sau sidtrug resurse PHP.
+  Funcția <function>is_resource</function> poate fi utilizată pentru a
+  determina dacă o variabilă este o resursă, iar funcția
   <function>get_resource_type</function> va întoarce tipul acestei resurse.
   <table>
    <title>Tipuri de Resurse</title>
@@ -22,7 +22,7 @@
        <entry>Creată de</entry>
        <entry>Utilizată de</entry>
        <entry>Distrusă de</entry>
-       <entry>Definiţie</entry>
+       <entry>Definiție</entry>
       </row>
      </thead>
      <tbody>
@@ -39,7 +39,7 @@
     <entry>
      Nu este
     </entry>
-    <entry>Dicţionar Aspell</entry>
+    <entry>Dicționar Aspell</entry>
    </row>
    <row>
    <entry>bzip2</entry>
@@ -57,7 +57,7 @@
     <entry>
      <function>bzclose</function>
     </entry>
-    <entry>Fişier Bzip2</entry>
+    <entry>Fișier Bzip2</entry>
    </row>
    <row>
     <entry>COM</entry>
@@ -75,7 +75,7 @@
     <entry>
      Nu este
     </entry>
-    <entry>Referinţă la un obiect COM</entry>
+    <entry>Referință la un obiect COM</entry>
    </row>
    <row>
      <entry>VARIANT</entry>
@@ -447,7 +447,7 @@
     <entry>
      <function>fdf_close</function>
     </entry>
-    <entry>Fişier FDF</entry>
+    <entry>Fișier FDF</entry>
    </row>
    <row>
     <entry>ftp</entry>
@@ -1022,7 +1022,7 @@
     <entry>
      <function>ibase_rollback</function>
     </entry>
-    <entry>Tranzacţie Interbase</entry>
+    <entry>Tranzacție Interbase</entry>
    </row>
    <row>
      <entry>java</entry>
@@ -1861,7 +1861,7 @@
     <entry>
      <function>pdf_close_image</function>
     </entry>
-    <entry>Imagine într-un fişier PDF</entry>
+    <entry>Imagine într-un fișier PDF</entry>
    </row>
    <row>
      <entry>pdf object</entry>
@@ -2077,7 +2077,7 @@
     <entry>
      Nu este
     </entry>
-    <entry>Dicţionar pspell</entry>
+    <entry>Dicționar pspell</entry>
    </row>
    <row>
     <entry>pspell config</entry>
@@ -2090,7 +2090,7 @@
     <entry>
      Nu este
     </entry>
-    <entry>Configuraţie pspell</entry>
+    <entry>Configurație pspell</entry>
    </row>
    <row>
     <entry>Sablotron XSLT</entry>
@@ -2435,7 +2435,7 @@
     <entry>
      <function>gzclose</function>
     </entry>
-    <entry>Fişier comprimat gz</entry>
+    <entry>Fișier comprimat gz</entry>
    </row>
        </tbody>
    </tgroup>

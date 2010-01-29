@@ -6,7 +6,7 @@
  <refnamediv>
   <refname>print_r</refname>
   <refpurpose>
-   Afişează informaţie lizibilă de om despre o variabilă
+   Afișează informație lizibilă de om despre o variabilă
   </refpurpose>
  </refnamediv>
 
@@ -18,18 +18,18 @@
    <methodparam choice="opt"><type>bool</type><parameter>return</parameter><initializer>false</initializer></methodparam>
   </methodsynopsis>
   <para>
-   <function>print_r</function> afişează informaţia despre o variabilă într-un
+   <function>print_r</function> afișează informația despre o variabilă într-un
    mod care poate fi citit de oameni.
   </para>
   <para>
-   <function>print_r</function>, <function>var_dump</function> şi
-   <function>var_export</function> de asemenea vor afişa proprietăţile
-   protejate şi private ale obiectelor în PHP 5. Membrii statici ai
-   claselor nu vor fi afişaţi.
+   <function>print_r</function>, <function>var_dump</function> și
+   <function>var_export</function> de asemenea vor afișa proprietățile
+   protejate și private ale obiectelor în PHP 5. Membrii statici ai
+   claselor nu vor fi afișați.
   </para>
   <para>
-   Ţineţi minte că <function>print_r</function> va deplasa indicatorul
-   tabloului spre sfârşit. Utilizaţi <function>reset</function> pentru a-l
+   Țineți minte că <function>print_r</function> va deplasa indicatorul
+   tabloului spre sfârșit. Utilizați <function>reset</function> pentru a-l
    readuce la început.
   </para>
  </refsect1>
@@ -42,7 +42,7 @@
      <term><parameter>expression</parameter></term>
      <listitem>
       <para>
-       Expresia pentru a fi afişată.
+       Expresia pentru a fi afișată.
       </para>
      </listitem>
     </varlistentry>
@@ -50,10 +50,10 @@
      <term><parameter>return</parameter></term>
      <listitem>
       <para>
-       Dacă doriţi să captaţi ceea ce afişează <function>print_r</function>,
-       utilizaţi parametrul <parameter>return</parameter>. Când acest parametru
+       Dacă doriți să captați ceea ce afișează <function>print_r</function>,
+       utilizați parametrul <parameter>return</parameter>. Când acest parametru
        este stabilit în &true;, <function>print_r</function> va întoarce
-       informația, în loc să o afişeze.
+       informația, în loc să o afișeze.
       </para>
      </listitem>
     </varlistentry>
@@ -65,9 +65,9 @@
   &reftitle.returnvalues;
   <para>
    Dacă se furnizează un <type>string</type>, <type>integer</type> sau
-   <type>float</type>, însăşi valoarea va fi afişată. Dacă este furnizat un
+   <type>float</type>, însăși valoarea va fi afișată. Dacă este furnizat un
    <type>array</type>, valorile vor fi prezentate într-un format care arată
-   cheile şi elementele. O notare similară este utilizată pentru tipuri
+   cheile și elementele. O notare similară este utilizată pentru tipuri
    <type>object</type>.
   </para>
   <para>
@@ -97,10 +97,10 @@
       <row>
        <entry>4.3.0</entry>
        <entry>
-        Parametrul <parameter>return</parameter> a fost adăugat. Dacă aveţi
-        nevoie să captaţi ceea ce afişează <function>print_r</function> cu o
-        versiune anterioară a PHP, utilizaţi
-        <link linkend="ref.outcontrol">funcţiile de control al ieşirilor</link>.
+        Parametrul <parameter>return</parameter> a fost adăugat. Dacă aveți
+        nevoie să captați ceea ce afișează <function>print_r</function> cu o
+        versiune anterioară a PHP, utilizați
+        <link linkend="ref.outcontrol">funcțiile de control al ieșirilor</link>.
        </entry>
       </row>
       <row>
@@ -108,10 +108,10 @@
        <entry>
         Înainte de PHP 4.0.4, <function>print_r</function> va rula neîncetat
         dacă i se furnizează un <type>array</type> sau <type>object</type> care
-        conţine o referinţă directă sau indirectă la sine însuşi. Un exemplu
+        conține o referință directă sau indirectă la sine însuși. Un exemplu
         este <literal>print_r($GLOBALS)</literal> deoarece
-        <literal>$GLOBALS</literal> este înăşi o variabilă globală ce conţine
-        o referinţă la sine însăşi.
+        <literal>$GLOBALS</literal> este înăși o variabilă globală ce conține
+        o referință la sine însăși.
        </entry>
       </row>
      </tbody>
@@ -162,7 +162,7 @@ Array
 <![CDATA[
 <?php
 $b = array ('m' => 'monkey', 'foo' => 'bar', 'x' => array ('x', 'y', 'z'));
-$results = print_r($b, true); // $results acum conţine ceea ce afişează print_r
+$results = print_r($b, true); // $results acum conține ceea ce afișează print_r
 ?>
 ]]>
     </programlisting>

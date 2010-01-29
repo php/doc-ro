@@ -16,11 +16,11 @@
    <methodparam><type>string</type><parameter>ebcdic_str</parameter></methodparam>
   </methodsynopsis>
   <para>
-   <function>ebcdic2ascii</function> este o funcţie specifică Apache, care este
+   <function>ebcdic2ascii</function> este o funcție specifică Apache, care este
    disponibilă numai pe sisteme de operare bazate pe EBCDIC (OS/390, BS2000).
    Ea translează string-ul codificat EBCDIC <parameter>ebcdic_str</parameter>
    în echivalentul său în reprezentarea ASCII (sigură din punct de vedere
-   binar) şi întoarce rezultatul.
+   binar) și întoarce rezultatul.
   </para>
  </refsect1>
 

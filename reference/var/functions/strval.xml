@@ -5,7 +5,7 @@
 <refentry xml:id="function.strval" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>strval</refname>
-  <refpurpose>Obţine valoarea string a unei variabile</refpurpose>
+  <refpurpose>Obține valoarea string a unei variabile</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -15,9 +15,9 @@
    <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
   </methodsynopsis>
   <simpara>
-   Obţine valoarea string a unei variabile.
-   Accesaţi documentaţia tipului <type>string</type> pentru a obţine mai multe
-   informaţii despre convertirea în string.
+   Obține valoarea string a unei variabile.
+   Accesați documentația tipului <type>string</type> pentru a obține mai multe
+   informații despre convertirea în string.
   </simpara>
   <simpara>
    Această funcție nu formatează în vre-un careva mod valoarea întoarsă. Dacă
@@ -37,7 +37,7 @@
        Variabila ce este convertită în <type>string</type>.
       </para>
       <para>
-       <parameter>var</parameter> poate fi de orice tip scalar. Nu puteţi
+       <parameter>var</parameter> poate fi de orice tip scalar. Nu puteți
        utiliza <function>strval</function> cu tablouri sau obiecte.
       </para>
      </listitem>
@@ -69,7 +69,7 @@ class StrValTest
 	}
 }
 
-// Afişează 'StrValTest'
+// Afișează 'StrValTest'
 echo strval(new StrValTest);
 ?>
 ]]>

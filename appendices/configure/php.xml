@@ -2,7 +2,7 @@
 <!-- $Revision$ -->
 <!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: simionea Status: ready -->
  <sect3 xml:id="configure.options.php" xmlns="http://docbook.org/ns/docbook">
-  <title>Opţiunile PHP</title>
+  <title>Opțiunile PHP</title>
   <variablelist>
    <varlistentry xml:id="configure.enable-maintainer-mode">
     <term>
@@ -10,8 +10,8 @@
     </term>
     <listitem>
      <para>
-      Activează regulile şi dependenţele make nefolositoare (şi uneori neclare)
-      pentru un instalator obişnuit.
+      Activează regulile și dependențele make nefolositoare (și uneori neclare)
+      pentru un instalator obișnuit.
      </para>
     </listitem>
    </varlistentry>
@@ -41,7 +41,7 @@
     </term>
     <listitem>
      <para>
-      Permite executarea fişierelor numai din directorul DIR, atunci când
+      Permite executarea fișierelor numai din directorul DIR, atunci când
       este activat modul sigur. Implicit este <literal>/usr/local/php/bin</literal>.
      </para>
     </listitem>

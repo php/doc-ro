@@ -5,7 +5,7 @@
 <refentry xml:id="function.mysql-affected-rows" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>mysql_affected_rows</refname>
-  <refpurpose>Obţine numărul de rânduri afectate de precedenta operaţiune MySQL</refpurpose>
+  <refpurpose>Obține numărul de rânduri afectate de precedenta operațiune MySQL</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -15,7 +15,7 @@
    <methodparam choice="opt"><type>resource</type><parameter>link_identifier</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Obţine numărul de rânduri afectate de ultima interpelare INSERT, UPDATE,
+   Obține numărul de rânduri afectate de ultima interpelare INSERT, UPDATE,
    REPLACE sau DELETE asociată cu <parameter>link_identifier</parameter>.
   </para>
  </refsect1>
@@ -32,24 +32,24 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Întoarce numărul de rânduri afectate în caz de succes şi -1 dacă ultima
-   interpelare a eşuat.
+   Întoarce numărul de rânduri afectate în caz de succes și -1 dacă ultima
+   interpelare a eșuat.
   </para>
   <para>
    Dacă ultima interpelare a fost o interpelare DELETE fără o clauză WHERE,
-   atunci toate rândurile din tabel au fost eliminate, dar această funcţie
+   atunci toate rândurile din tabel au fost eliminate, dar această funcție
    va întoarce zero în cazul versiunilor MySQL înainte de 4.1.2.
   </para>
   <para>
    La utilizarea UPDATE, MySQL nu va reînnoi coloanele unde valoarea nouă
    coincide cu cea veche. Aceasta crează posibilitatea că
    <function>mysql_affected_rows</function> nu va coincide cu numărul de rânduri
-   ce se potrivesc condiţiei de selectare, dar va fi doar numărul de rânduri ce
+   ce se potrivesc condiției de selectare, dar va fi doar numărul de rânduri ce
    au fost direct afectate de interpelare.
   </para>
   <para>
-   Interpelarea REPLACE întâi elimină înregistrarea cu aceeaşi cheie primară,
-   apoi inserează noua înregistrare. Această funcţie întoarce numărul
+   Interpelarea REPLACE întâi elimină înregistrarea cu aceeași cheie primară,
+   apoi inserează noua înregistrare. Această funcție întoarce numărul
    înregistrărilor eliminate plus numărul înregistrărilor inserate.
   </para>
  </refsect1>
@@ -64,7 +64,7 @@
 <?php
 $link = mysql_connect('localhost', 'mysql_user', 'mysql_password');
 if (!$link) {
-    die('A eşuat conectarea: ' . mysql_error());
+    die('A eșuat conectarea: ' . mysql_error());
 }
 mysql_select_db('mydb');
 
@@ -89,17 +89,17 @@ printf("Înregistrări eliminate: %d\n", mysql_affected_rows());
   </para>
   <para>
    <example>
-    <title>Exemplu <function>mysql_affected_rows</function> utilizând tranzacţii</title>
+    <title>Exemplu <function>mysql_affected_rows</function> utilizând tranzacții</title>
     <programlisting role="php">
 <![CDATA[
 <?php
 $link = mysql_connect('localhost', 'mysql_user', 'mysql_password');
 if (!$link) {
-    die('A eşuat conectarea: ' . mysql_error());
+    die('A eșuat conectarea: ' . mysql_error());
 }
 mysql_select_db('mydb');
 
-/* Reînnoieşte înregistrările */
+/* Reînnoiește înregistrările */
 mysql_query("UPDATE mytable SET used=1 WHERE id < 10");
 printf ("Înregistrări reînnoite: %d\n", mysql_affected_rows());
 mysql_query("COMMIT");
@@ -119,17 +119,17 @@ mysql_query("COMMIT");
  <refsect1 role="notes">
   &reftitle.notes;
   <note>
-   <title>Tranzacţii</title>
+   <title>Tranzacții</title>
    <para>
-    Dacă utilizaţi tranzacţii trebuie să apelaţi
+    Dacă utilizați tranzacții trebuie să apelați
     <function>mysql_affected_rows</function> după interpelarea INSERT, UPDATE
-    sau DELETE, şi nu după COMMIT.
+    sau DELETE, și nu după COMMIT.
    </para>
   </note>
   <note>
    <title>Interpelări SELECT</title>
    <para>
-    Pentru a căpăta numărul de rânduri întoarse de un SELECT, utilizaţi
+    Pentru a căpăta numărul de rânduri întoarse de un SELECT, utilizați
     <function>mysql_num_rows</function>.
    </para>
   </note>

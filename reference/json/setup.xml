@@ -8,7 +8,7 @@
  <section xml:id="json.requirements">
   &reftitle.required;
   <para>
-   Începând cu PHP 5.2.0 extensia JSON este încorporată şi compilată
+   Începând cu PHP 5.2.0 extensia JSON este încorporată și compilată
    în PHP în mod implicit.
   </para>
   <para>

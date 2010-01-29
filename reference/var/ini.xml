@@ -6,7 +6,7 @@
  &extension.runtime;
  <para>
   <table>
-   <title>Opţiuni de configurare a variabilelor</title>
+   <title>Opțiuni de configurare a variabilelor</title>
    <tgroup cols="4">
     <thead>
      <row>
@@ -40,16 +40,16 @@
     </term>
     <listitem>
      <para>
-      Funcţia de apel invers <function>unserialize</function> poate fi apelată
+      Funcția de apel invers <function>unserialize</function> poate fi apelată
       (cu denumirea clasei nedefinite în calitate de parametru), dacă
-      deserializatorul găseşte o clasă nedefinită care ar trebui să fie
-      instanţiată. Va apărea o avertizare dacă funcţia specificată nu este
-      definită, sau dacă funcţia nu include/implementează clasa ce lipseşte.
-      Deci stabiliţi această înregistrare dacă doriţi într-adevăr să
-      implementaţi o astfel de funcţie de apel invers.
+      deserializatorul găsește o clasă nedefinită care ar trebui să fie
+      instanțiată. Va apărea o avertizare dacă funcția specificată nu este
+      definită, sau dacă funcția nu include/implementează clasa ce lipsește.
+      Deci stabiliți această înregistrare dacă doriți într-adevăr să
+      implementați o astfel de funcție de apel invers.
      </para>
      <para>
-      Accesaţi de asemenea <function>unserialize</function> și
+      Accesați de asemenea <function>unserialize</function> și
       <link linkend="language.oop5.autoload">Autoîncărcarea obiectelor</link>.
      </para>
     </listitem>

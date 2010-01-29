@@ -5,7 +5,7 @@
 <refentry xml:id="function.intval" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>intval</refname>
-  <refpurpose>Obţine valoarea întreagă a unei variabile</refpurpose>
+  <refpurpose>Obține valoarea întreagă a unei variabile</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -21,7 +21,7 @@
    <parameter>base</parameter> specificată pentru a efectua conversia (baza
    implicită este 10). <function>intval</function> nu trebuie utilizat asupra
    obiectelor, deoarece aceasta va provoca o eroare de nivel
-   <constant>E_NOTICE</constant> şi va întoarce 1.
+   <constant>E_NOTICE</constant> și va întoarce 1.
   </para>
  </refsect1>
 
@@ -53,19 +53,19 @@
   &reftitle.returnvalues;
   <para>
    Valoarea întreagă a <parameter>var</parameter> în cazul succesului sau 0 în
-   caz de eşec. Tablourile şi obiectele vide întorc 0, tablourile şi obiectele
+   caz de eșec. Tablourile și obiectele vide întorc 0, tablourile și obiectele
    nevide întorc 1.
   </para>
   <para>
-   Valoarea maximală depinde de sistem. Sistemele pe 32 biţi au diapazonul
+   Valoarea maximală depinde de sistem. Sistemele pe 32 biți au diapazonul
    maxim al numerelor întregi cu semn de la -2147483648 până la 2147483647.
-   Deci, de exemplu, pe un aşa sistem <literal>intval('1000000000000')</literal>
+   Deci, de exemplu, pe un așa sistem <literal>intval('1000000000000')</literal>
    va întoarce 2147483647. Valoarea maximă pentru numerele întregi cu semn pe
-   sistemele pe 64 biţi este 9223372036854775807.
+   sistemele pe 64 biți este 9223372036854775807.
   </para>
   <para>
    String-urile cel mai probabil vor întoarce 0, cu toate că aceasta depinde de
-   caracterul cel mai din stânga din string. Regulile obişnuite pentru
+   caracterul cel mai din stânga din string. Regulile obișnuite pentru
    <link linkend="language.types.integer.casting">transformările integer</link>
    se aplică în acest caz.
   </para>
@@ -77,7 +77,7 @@
    <example>
     <title>Exemple <function>intval</function></title>
     <para>
-     Următoarele exemple se bazează pe un sistem de 32 de biţi.
+     Următoarele exemple se bazează pe un sistem de 32 de biți.
     </para>
     <programlisting role="php">
 <![CDATA[
@@ -125,7 +125,7 @@ echo intval(array('foo', 'bar'));     // 1
     <member><function>settype</function></member>
     <member><function>is_numeric</function></member>
     <member><link linkend="language.types.type-juggling">Manipularea tipurilor</link></member>
-    <member><link linkend="ref.bc">Funcţiile matematice de precizie arbitrară BCMath</link></member>
+    <member><link linkend="ref.bc">Funcțiile matematice de precizie arbitrară BCMath</link></member>
    </simplelist>
   </para>
  </refsect1>

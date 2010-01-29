@@ -20,7 +20,7 @@
      <para>
       Pentru a verifica dacă o variabilă este un număr sau un string numeric
       (ca în cazul datelor introduse, care întotdeauna este un string), trebuie
-      să utilizaţi <function>is_numeric</function>.
+      să utilizați <function>is_numeric</function>.
      </para>
     </note>
    </refsect1>

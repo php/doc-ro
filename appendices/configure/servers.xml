@@ -2,11 +2,11 @@
 <!-- $Revision$ -->
 <!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: simionea Status: ready -->
  <sect3 xml:id="configure.options.servers" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <title>Opţiunile SAPI</title>
+  <title>Opțiunile SAPI</title>
   <para>
-   Lista ce urmează conţine interfeţele SAPI (<literal>Server
-   Application Programming Interface &mdash; Interfaţa de
-   Programare a Aplicaţiilor pentru Server</literal>) disponibile
+   Lista ce urmează conține interfețele SAPI (<literal>Server
+   Application Programming Interface &mdash; Interfața de
+   Programare a Aplicațiilor pentru Server</literal>) disponibile
    pentru PHP.
   </para>
   <variablelist>
@@ -26,10 +26,10 @@
     </term>
     <listitem>
      <para>
-      Asamblează un modul partajat pentru Apache. FILE este calea opţională spre
-      instrumentul apxs; implicit este apxs. Asiguraţi-vă că specificaţi versiunea
+      Asamblează un modul partajat pentru Apache. FILE este calea opțională spre
+      instrumentul apxs; implicit este apxs. Asigurați-vă că specificați versiunea
       apxs care este într-adevăr instalată pe sistemul dumneavoastră, NU aceea ce
-      se conţine în pachetul cu sursa apache.
+      se conține în pachetul cu sursa apache.
      </para>
     </listitem>
    </varlistentry>
@@ -60,7 +60,7 @@
     </term>
     <listitem>
      <para>
-      Asamblează un modul partajat pentru Apache 2.0. FILE este calea opţională spre
+      Asamblează un modul partajat pentru Apache 2.0. FILE este calea opțională spre
       instrumentul apxs; implicit este apxs.
      </para>
     </listitem>
@@ -86,8 +86,8 @@
     <listitem>
      <para>
       Disponibil odată cu PHP 4.3.0. Dezactivează asamblarea versiunii CLI a PHP (aceasta impune
-      şi <link linkend="configure.without-pear">--without-pear</link>).
-      Mai multe informaţii sunt disponibile în secţiunea desspre
+      și <link linkend="configure.without-pear">--without-pear</link>).
+      Mai multe informații sunt disponibile în secțiunea desspre
       <link linkend="features.commandline">Utilizarea PHP din linia de comandă</link>.
      </para>
     </listitem>
@@ -100,7 +100,7 @@
     <listitem>
      <para>
       Activează asamblarea unei biblioteci SAPI încorporate. TYPE poate fi sau
-      <literal>shared</literal>, sau <literal>static</literal> şi implicit este
+      <literal>shared</literal>, sau <literal>static</literal> și implicit este
       <literal>shared</literal>. Disponibil odată cu PHP 4.3.0.
      </para>
     </listitem>
@@ -144,7 +144,7 @@
     </term>
     <listitem>
      <para>
-      Deocamdată nu există informaţii.
+      Deocamdată nu există informații.
      </para>
     </listitem>
    </varlistentry>
@@ -185,7 +185,7 @@
     </term>
     <listitem>
      <para>
-      Include susţinerea servlet-urilor. DIR este directorul de bază,
+      Include susținerea servlet-urilor. DIR este directorul de bază,
       unde este instalat JSDK. Acest SAPI necesită ca extensia java să
       fie asamblată ca un 'dl' partajat.
      </para>
@@ -241,8 +241,8 @@
     </term>
     <listitem>
      <para>
-      Activează controlul de securitate pentru redirecţionările interne ale serverului.
-      Ar trebui să utilizaţi această opţiune dacă rulaţi versiunea CGI cu Apache.
+      Activează controlul de securitate pentru redirecționările interne ale serverului.
+      Ar trebui să utilizați această opțiune dacă rulați versiunea CGI cu Apache.
      </para>
     </listitem>
    </varlistentry>
@@ -253,8 +253,8 @@
     </term>
     <listitem>
      <para>
-      Dacă această opţiune e activată, fişierul binar CGI al PHP poate fi plasat în mod
-      sigur în afara arborelui web şi nimeni nu va putea sparge securitatea &htaccess;.
+      Dacă această opțiune e activată, fișierul binar CGI al PHP poate fi plasat în mod
+      sigur în afara arborelui web și nimeni nu va putea sparge securitatea &htaccess;.
      </para>
     </listitem>
    </varlistentry>
@@ -265,8 +265,8 @@
     </term>
     <listitem>
      <para>
-      Asamblează PHP în calitate de aplicaţie FastCGI. Aceasta nu mai este disponibilă
-      începând cu  PHP 4.3.0. În loc, ar trebui să folosiţi
+      Asamblează PHP în calitate de aplicație FastCGI. Aceasta nu mai este disponibilă
+      începând cu  PHP 4.3.0. În loc, ar trebui să folosiți
       <option role="configure">--enable-fastcgi</option>.
      </para>
     </listitem>
@@ -278,7 +278,7 @@
     </term>
     <listitem>
      <para>
-      Dacă această opţiune e activată, modulul CGI va fi asamblat de asemenea cu susţinerea
+      Dacă această opțiune e activată, modulul CGI va fi asamblat de asemenea cu susținerea
       FastCGI. Disponibil începând cu PHP 4.3.0
      </para>
     </listitem>
@@ -290,10 +290,10 @@
     </term>
     <listitem>
      <para>
-      Dacă această opţiune e dezactivată, căile ca
+      Dacă această opțiune e dezactivată, căile ca
       <filename>/info.php/test?a=b</filename>
-      nu vor funcţiona. Disponibil începând cu PHP 4.3.0.
-      Pentru informaţii suplimentare, accesaţi
+      nu vor funcționa. Disponibil începând cu PHP 4.3.0.
+      Pentru informații suplimentare, accesați
       <link xlink:href="&url.apache.core;#acceptpathinfo">Manualul Apache</link>.
      </para>
     </listitem>

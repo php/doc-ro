@@ -9,7 +9,7 @@
  <section xml:id="wddx.requirements">
   &reftitle.required;
   <para>
-   Pentru a utiliza WDDX va trebui să instalaţi biblioteca expat
+   Pentru a utiliza WDDX va trebui să instalați biblioteca expat
    (care vine cu Apache 1.3.7 sau ulterior).
   </para>
  </section>
@@ -30,7 +30,7 @@
  <section xml:id="wddx.resources">
   &reftitle.resources;
   <para>
-   Această extensie defineşte un identificator de pachet WDDX
+   Această extensie definește un identificator de pachet WDDX
    întors de <function>wddx_packet_start</function>.
   </para>
  </section>

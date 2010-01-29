@@ -16,7 +16,7 @@
    <methodparam choice="opt"><type>int</type><parameter>timestamp</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Identică cu funcţia <function>date</function> cu excepţia că ora întoarsă
+   Identică cu funcția <function>date</function> cu excepția că ora întoarsă
    este după Greenwich Mean Time (GMT) - Ora Medie Greenwich.
   </para>
  </refsect1>
@@ -29,8 +29,8 @@
      <term><parameter>format</parameter></term>
      <listitem>
       <para>
-       Formatul în care va fi afişat <type>string</type>-ul datei. Vedeţi
-       opţiunile de formatare pentru funcţia <function>date</function>.
+       Formatul în care va fi afișat <type>string</type>-ul datei. Vedeți
+       opțiunile de formatare pentru funcția <function>date</function>.
       </para>
      </listitem>
     </varlistentry>
@@ -46,7 +46,7 @@
   <para>
    Întoarce un string cu data formatată. Dacă este utilizată o valoare
    non-numerică pentru <parameter>timestamp</parameter>, este întors
-   &false; şi o eroare de nivel <constant>E_WARNING</constant> este emisă.
+   &false; și o eroare de nivel <constant>E_WARNING</constant> este emisă.
   </para>
  </refsect1>
 
@@ -67,7 +67,7 @@
        <entry>
         Domeniul valid al unui timestamp este de obicei de la Fri, 13 Dec 1901
         20:45:54 GMT până la Tue, 19 Jan 2038 03:14:07 GMT. (Acestea sunt datele
-        ce corespund valorilor minimă şi maximă a unui integer pe 32 de biţi).
+        ce corespund valorilor minimă și maximă a unui integer pe 32 de biți).
         Însă până la PHP 5.1.0 acest domeniu era limitat de la 01-01-1970 până
         la 19-01-2038 pe unele sisteme (de ex. Windows).
        </entry>
@@ -93,7 +93,7 @@
     <title>Exemple <function>gmdate</function></title>
     <para>
      Când exemplul este rulat în Finlanda (GMT +0200), prima linie de mai jos
-     afişează "Jan 01 1998 00:00:00", în timp ce a doua afişează
+     afișează "Jan 01 1998 00:00:00", în timp ce a doua afișează
      "Dec 31 1997 22:00:00".
     </para>
     <programlisting role="php">

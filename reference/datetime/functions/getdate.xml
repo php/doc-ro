@@ -5,7 +5,7 @@
 <refentry xml:id="function.getdate" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>getdate</refname>
-  <refpurpose>Obţine informaţia despre dată/oră</refpurpose>
+  <refpurpose>Obține informația despre dată/oră</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -15,7 +15,7 @@
    <methodparam choice="opt"><type>int</type><parameter>timestamp</parameter><initializer>time()</initializer></methodparam>
   </methodsynopsis>
   <para>
-   Întoarce un <type>array</type> asociativ conţinând informaţia despre dată şi
+   Întoarce un <type>array</type> asociativ conținând informația despre dată și
    oră a parametrului <parameter>timestamp</parameter>, sau a datei/orei locale
    în caz că parametrul <parameter>timestamp</parameter> nu este furnizat.
   </para>
@@ -35,7 +35,7 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Întoarce un <type>array</type> asociativ cu informaţii ce ţin de parametrul
+   Întoarce un <type>array</type> asociativ cu informații ce țin de parametrul
    <parameter>timestamp</parameter>. Elementele tabloului asociativ întors sunt
    următoarele:
   </para>
@@ -105,7 +105,7 @@
        <entry><literal>0</literal></entry>
        <entry>
         Secunde de la Epoca Unix, similare cu valorile întoarse de
-        <function>time</function> şi utilizate de <function>date</function>.
+        <function>time</function> și utilizate de <function>date</function>.
        </entry>
        <entry>
         Depinde de sistem, de obicei de la <literal>-2147483648</literal> până la

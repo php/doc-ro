@@ -42,7 +42,7 @@
      <term><parameter>output_options</parameter></term>
      <listitem>
       <para>
-       Tabloul ce specifică opţiunile de ieşire posibile (valorile implicite
+       Tabloul ce specifică opțiunile de ieșire posibile (valorile implicite
        sunt accentuate):
        <itemizedlist>
         <listitem><para>output_type: php, <emphasis>xml</emphasis></para></listitem>
@@ -50,7 +50,7 @@
         <listitem><para>escaping: cdata, <emphasis>non-ascii, non-print, markup</emphasis>
           (poate fi un string cu o valoare sau un array cu valori multiple)</para></listitem>
         <listitem><para>version: simple, <emphasis>xmlrpc</emphasis>, soap 1.1, auto</para></listitem>
-        <listitem><para>encoding: <emphasis>iso-8859-1</emphasis>, alte seturi de caractere susţinute de iconv</para></listitem>
+        <listitem><para>encoding: <emphasis>iso-8859-1</emphasis>, alte seturi de caractere susținute de iconv</para></listitem>
        </itemizedlist>
       </para>
      </listitem>
@@ -62,7 +62,7 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Întoarce un string conţinând reprezentarea XML a cererii.
+   Întoarce un string conținând reprezentarea XML a cererii.
   </para>
  </refsect1>
 
@@ -70,7 +70,7 @@
   &reftitle.examples;
   <para>
    <example>
-    <title>Exemplu al funcţiilor client XMLRPC</title>
+    <title>Exemplu al funcțiilor client XMLRPC</title>
     <programlisting role="php">
 <![CDATA[
 <?php

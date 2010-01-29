@@ -11,17 +11,17 @@
  <preface xml:id="intro.apache">
   &reftitle.intro;
   <para>
-   Aceste funcţii sunt disponibile doar atunci când PHP rulează ca modul
+   Aceste funcții sunt disponibile doar atunci când PHP rulează ca modul
    Apache.
   </para>
   <note>
    <simpara>
     Începând cu PHP 4.3.2, <envar>PATH_TRANSLATED</envar> nu mai este stabilită
     implicit de către <acronym>SAPI</acronym> al Apache 2, spre deosebire de
-    situaţia din Apache 1, unde ea este stabilită la aceeaşi valoare ca şi
+    situația din Apache 1, unde ea este stabilită la aceeași valoare ca și
     variabila de server <envar>SCRIPT_FILENAME</envar>, atunci când nu este
     populată de Apache. Această schimbare a fost făcută pentru conformarea cu
-    specificaţia <acronym>CGI</acronym> că <envar>PATH_TRANSLATED</envar>
+    specificația <acronym>CGI</acronym> că <envar>PATH_TRANSLATED</envar>
     trebuie să existe numai dacă <envar>PATH_INFO</envar> este definită.
    </simpara>
    <simpara>

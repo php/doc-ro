@@ -20,13 +20,13 @@
    <function>unset</function> distruge variabila specificată.
   </para>
   <para>
-   Comportamentul <function>unset</function> în interiorul unei funcţii poate
-   varia în dependenţă de tipul variabilei pe care încercaţi să o distrugeţi.
+   Comportamentul <function>unset</function> în interiorul unei funcții poate
+   varia în dependență de tipul variabilei pe care încercați să o distrugeți.
   </para>
   <para>
    Dacă este aplicat <function>unset</function> asupra unei variabile globale
-   în interiorul unei funcţii, numai variabila locală va fi distrusă. Variabila
-   din mediul apelant îşi va păstra aceeaşi valoare ca şi până la apelul
+   în interiorul unei funcții, numai variabila locală va fi distrusă. Variabila
+   din mediul apelant își va păstra aceeași valoare ca și până la apelul
    <function>unset</function>.
    <informalexample>
     <programlisting role="php">
@@ -57,8 +57,8 @@ bar
    </informalexample>
   </para>
   <para>
-   Dacă doriţi să aplicaţi <function>unset</function> asupra unei variabile
-   globale din interiorul unei funcţii, puteţi utiliza tabloul
+   Dacă doriți să aplicați <function>unset</function> asupra unei variabile
+   globale din interiorul unei funcții, puteți utiliza tabloul
    <varname>$GLOBALS</varname> pentru aceasta:
    <informalexample>
     <programlisting role="php">
@@ -77,10 +77,10 @@ foo();
    </informalexample>
   </para>
   <para>
-   Dacă se aplică <function>unset</function> în interiorul unei funcţii asupra
-   unei variabile care este transmisă PRIN REFERINŢĂ, numai variabila locală va
-   fi distrusă. Variabila din mediul apelant îşi va păstra aceeaşi valoare ca
-   şi până la apelul <function>unset</function>.
+   Dacă se aplică <function>unset</function> în interiorul unei funcții asupra
+   unei variabile care este transmisă PRIN REFERINȚĂ, numai variabila locală va
+   fi distrusă. Variabila din mediul apelant își va păstra aceeași valoare ca
+   și până la apelul <function>unset</function>.
    <informalexample>
     <programlisting role="php">
 <![CDATA[
@@ -114,8 +114,8 @@ ceva
   </para>
   <para>
    Dacă se aplică <function>unset</function> asupra unei variabile statice în
-   interiorul unei funcţii, <function>unset</function> distruge variabila numai
-   în contextul restului funcţiei. Apelurile următoare vor restabili valoarea
+   interiorul unei funcții, <function>unset</function> distruge variabila numai
+   în contextul restului funcției. Apelurile următoare vor restabili valoarea
    precedentă a variabilei.
    <informalexample>
     <programlisting role="php">
@@ -255,7 +255,7 @@ var_dump((unset) $name);
   &note.language-construct;
   <note>
    <para>
-    Este posibil de a elimina chiar şi proprietăţi ale obiectelor vizibile în
+    Este posibil de a elimina chiar și proprietăți ale obiectelor vizibile în
     contextul curent.
    </para>
   </note>
@@ -267,7 +267,7 @@ var_dump((unset) $name);
   </note>
   <note>
    <para>
-    La utilizarea <function>unset</function> asupra proprietăţilor inaccesibile
+    La utilizarea <function>unset</function> asupra proprietăților inaccesibile
     ale obiectelor, va fi apelată metoda de supraîncărcare
     <link linkend="language.oop5.overloading.members">__unset</link>, dacă este
     declarată.

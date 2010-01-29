@@ -5,7 +5,7 @@
 <refentry xml:id="function.settype" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>settype</refname>
-  <refpurpose>Stabileşte tipul unei variabile</refpurpose>
+  <refpurpose>Stabilește tipul unei variabile</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -16,7 +16,7 @@
    <methodparam><type>string</type><parameter>type</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Stabileşte tipul variabilei <parameter>var</parameter> în
+   Stabilește tipul variabilei <parameter>var</parameter> în
    <parameter>type</parameter>.
   </para>
  </refsect1>
@@ -52,7 +52,7 @@
         <listitem>
          <simpara>
           "float" (posibil numai începând cu PHP 4.2.0, pentru versiunile
-          anterioare utilizaţi varianta învechită "double")
+          anterioare utilizați varianta învechită "double")
          </simpara>
         </listitem>
         <listitem>

@@ -22,7 +22,7 @@ Scopul</title>'>
 <!ENTITY extcat.purpose.basic '<title xmlns="http://docbook.org/ns/docbook">
 Extensiile de bază ale PHP</title>'>
 <!ENTITY extcat.purpose.basic.vartype '<title xmlns="http://docbook.org/ns/docbook">
-Extensiile ce se referă la variable şi tipuri</title>'>
+Extensiile ce se referă la variable și tipuri</title>'>
 <!ENTITY extcat.purpose.basic.text '<title xmlns="http://docbook.org/ns/docbook">
 Procesarea textelor</title>'>
 <!ENTITY extcat.purpose.basic.php '<title xmlns="http://docbook.org/ns/docbook">
@@ -35,7 +35,7 @@ Alte extensii de bază</title>'>
 <!ENTITY extcat.purpose.database '<title xmlns="http://docbook.org/ns/docbook">
 Extensii de lucru cu baze de date</title>'>
 <!ENTITY extcat.purpose.database.abstract '<title xmlns="http://docbook.org/ns/docbook">
-Nivelele de abstracţie</title>'>
+Nivelele de abstracție</title>'>
 <!ENTITY extcat.purpose.database.vendors '<title xmlns="http://docbook.org/ns/docbook">
 Extensii de lucru cu baze de date specifice ale unor producători</title>'>
 
@@ -49,26 +49,26 @@ Servicii Web</title>'>
 Procesarea cartelelor de credit</title>'>
    
 <!ENTITY extcat.purpose.mathcrypto '<title xmlns="http://docbook.org/ns/docbook">
-Matematică şi criptografie</title>'>
+Matematică și criptografie</title>'>
 <!ENTITY extcat.purpose.mathcrypto.math '<title xmlns="http://docbook.org/ns/docbook">
 Extensii matematice</title>'>
 <!ENTITY extcat.purpose.mathcrypto.crypto '<title xmlns="http://docbook.org/ns/docbook">
 Extensii criptografice</title>'>
 
 <!ENTITY extcat.purpose.international '<title xmlns="http://docbook.org/ns/docbook">
-Susţinerea codificării caracterelor şi a limbajului uman</title>'>
+Susținerea codificării caracterelor și a limbajului uman</title>'>
    
 <!ENTITY extcat.purpose.fileprocess '<title xmlns="http://docbook.org/ns/docbook">
-Controlul sistemului de fişiere şi al proceselor</title>'>
+Controlul sistemului de fișiere și al proceselor</title>'>
 <!ENTITY extcat.purpose.fileprocess.file '<title xmlns="http://docbook.org/ns/docbook">
-Extensii ce se referă la sistemul de fişiere</title>'>
+Extensii ce se referă la sistemul de fișiere</title>'>
 <!ENTITY extcat.purpose.fileprocess.process '<title xmlns="http://docbook.org/ns/docbook">
 Extensii de control al proceselor</title>'>
 
 <!ENTITY extcat.purpose.remote '<title xmlns="http://docbook.org/ns/docbook">
 Accessarea serviciilor</title>'>
 <!ENTITY extcat.purpose.remote.mail '<title xmlns="http://docbook.org/ns/docbook">
-Extensii ce se referă la poştă</title>'>
+Extensii ce se referă la poștă</title>'>
 <!ENTITY extcat.purpose.remote.auth '<title xmlns="http://docbook.org/ns/docbook">
 Servicii de autentificare</title>'>
 <!ENTITY extcat.purpose.remote.other '<title xmlns="http://docbook.org/ns/docbook">
@@ -78,14 +78,14 @@ Alte servicii</title>'>
 Extensii de comprimare</title>'>
 
 <!ENTITY extcat.purpose.calendar '<title xmlns="http://docbook.org/ns/docbook">
-Extensii ce se referă la dată şi oră</title>'>
+Extensii ce se referă la dată și oră</title>'>
 
 <!ENTITY extcat.purpose.utilspec '<title xmlns="http://docbook.org/ns/docbook">
 Extensii specifice ariei de utilizare</title>'>
 <!ENTITY extcat.purpose.utilspec.nontext '<title xmlns="http://docbook.org/ns/docbook">
-Obţinerea ieşirilor MIME non-textuale</title>'>
+Obținerea ieșirilor MIME non-textuale</title>'>
 <!ENTITY extcat.purpose.utilspec.image '<title xmlns="http://docbook.org/ns/docbook">
-Procesarea şi generarea imaginilor</title>'>
+Procesarea și generarea imaginilor</title>'>
 <!ENTITY extcat.purpose.utilspec.audio '<title xmlns="http://docbook.org/ns/docbook">
 Manipularea cu formatele audio</title>'>
 <!ENTITY extcat.purpose.utilspec.cmdline '<title xmlns="http://docbook.org/ns/docbook">
@@ -98,16 +98,16 @@ Extensii specifice serverelor</title>'>
 <!-- ======================================================================= -->
 
 <!ENTITY extcat.membership '<title xmlns="http://docbook.org/ns/docbook">
-Apartenenţa</title>'>
+Apartenența</title>'>
 
 <!ENTITY extcat.membership.core '<title xmlns="http://docbook.org/ns/docbook">
 Extensiile de bază</title>
 <para xmlns="http://docbook.org/ns/docbook">Acestea de fapt nu sunt extensii.
-Ele fac parte din nucleul PHP şi nu pot fi separate de binarul PHP folosind
-opţiuni de compilare.</para>'>
+Ele fac parte din nucleul PHP și nu pot fi separate de binarul PHP folosind
+opțiuni de compilare.</para>'>
 
 <!ENTITY extcat.membership.bundled '<title xmlns="http://docbook.org/ns/docbook">
-Extensii adiţionale</title>
+Extensii adiționale</title>
 <para xmlns="http://docbook.org/ns/docbook">Aceste extensii sunt livrate
 împreună cu PHP.</para>'>
 
@@ -139,6 +139,6 @@ uz în favoarea unor alte extensii, de regulă.</para>'>
 <!ENTITY extcat.state.experimental '<title xmlns="http://docbook.org/ns/docbook">
 Extensii experimentale</title>
 <para xmlns="http://docbook.org/ns/docbook">Comportamentul acestor extensii -
-inclusiv numele funcţiilor lor şi orice alte aspecte documentate despre aceste
+inclusiv numele funcțiilor lor și orice alte aspecte documentate despre aceste
 extensii - pot fi schimbate fără preaviz într-o versiune viitoare a PHP.
-Utilizaţi aceste extensii la propriul risc.</para>'>
+Utilizați aceste extensii la propriul risc.</para>'>

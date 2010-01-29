@@ -5,7 +5,7 @@
 <refentry xml:id="function.wddx-packet-start" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>wddx_packet_start</refname>
-  <refpurpose>Iniţiază un pachet nou WDDX cu structura sa internă</refpurpose>
+  <refpurpose>Inițiază un pachet nou WDDX cu structura sa internă</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -15,9 +15,9 @@
    <methodparam choice="opt"><type>string</type><parameter>comment</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Iniţiază un nou pachet WDDX pentru adăugări consecutive de variabile.
-   Funcţia creează în mod automat definiţia structurii din interiorul
-   pachetului pentru ca acesta să conţină variabilele.
+   Inițiază un nou pachet WDDX pentru adăugări consecutive de variabile.
+   Funcția creează în mod automat definiția structurii din interiorul
+   pachetului pentru ca acesta să conțină variabilele.
   </para>
  </refsect1>
 
@@ -29,7 +29,7 @@
      <term><parameter>comment</parameter></term>
      <listitem>
       <para>
-       Un string cu comentariu opţional.
+       Un string cu comentariu opțional.
       </para>
      </listitem>
     </varlistentry>
@@ -40,7 +40,7 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Întoarce un ID al pachetului, pentru a fi utilizat ulterior în funcţii, sau
+   Întoarce un ID al pachetului, pentru a fi utilizat ulterior în funcții, sau
    &false; în caz de eroare.
   </para>
  </refsect1>

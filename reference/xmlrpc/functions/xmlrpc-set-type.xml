@@ -5,7 +5,7 @@
 <refentry xml:id="function.xmlrpc-set-type" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>xmlrpc_set_type</refname>
-  <refpurpose>Stabileşte tipul xmlrpc, base64 sau datetime, pentru o valoare string PHP</refpurpose>
+  <refpurpose>Stabilește tipul xmlrpc, base64 sau datetime, pentru o valoare string PHP</refpurpose>
  </refnamediv>
  <refsect1 role="description">
   &reftitle.description;
@@ -28,7 +28,7 @@
      <term><parameter>value</parameter></term>
      <listitem>
       <para>
-       Valoarea în care se stabileşte tipul
+       Valoarea în care se stabilește tipul
       </para>
      </listitem>
     </varlistentry>
@@ -90,7 +90,7 @@ echo xmlrpc_encode($params);
  <refsect1 role="errors">
   &reftitle.errors;
   <para>
-   Emite un E_WARNING cu tipul nesusţinut de XMLRPC.
+   Emite un E_WARNING cu tipul nesusținut de XMLRPC.
   </para>
  </refsect1>
 

@@ -6,7 +6,7 @@
 <refentry xml:id="function.mktime" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>mktime</refname>
-  <refpurpose>Obţine timestamp-ul Unix pentru o dată şi oră</refpurpose>
+  <refpurpose>Obține timestamp-ul Unix pentru o dată și oră</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -23,12 +23,12 @@
   </methodsynopsis>
   <para>
    Întoarce timestamp-ul Unix ce corespunde argumentelor furnizate. Acest
-   timestamp este un integer lung conţinând numărul de secunde între Epoca Unix
-   (1 Ianuarie 1970 00:00:00 GMT) şi timpul specificat.
+   timestamp este un integer lung conținând numărul de secunde între Epoca Unix
+   (1 Ianuarie 1970 00:00:00 GMT) și timpul specificat.
   </para>
   <para>
    Argumentele pot fi omise unul după altul de la dreapta spre atânga; orice
-   argument omis va fi stabilit la valoarea curentă în corespundere cu data şi
+   argument omis va fi stabilit la valoarea curentă în corespundere cu data și
    ora locale.
   </para>
  </refsect1>
@@ -95,10 +95,10 @@
       <para>
        Numărul anului. Poate fi format din două sau din patru cifre. Valorile
        0-69 corespund anilor 2000-2069, iar 70-100 corespund 1970-2000. Pe
-       sistemele unde time_t este un întreg pe 32 biţi cu semn, cum este pe
+       sistemele unde time_t este un întreg pe 32 biți cu semn, cum este pe
        majoritatea sistemelor contemporane, domeniul valid pentru
-       <parameter>year</parameter> este între 1901 şi 2038. Însă înainte de PHP
-       5.1.0 acest domeniu era limitat între 1970 şi 2038 pe unele sisteme
+       <parameter>year</parameter> este între 1901 și 2038. Însă înainte de PHP
+       5.1.0 acest domeniu era limitat între 1970 și 2038 pe unele sisteme
        (de ex. Windows).
       </para>
      </listitem>
@@ -109,21 +109,21 @@
       <para>
        Acest parametru poate fi stabilit în 1 dacă este în efect timpul de vară
        (daylight savings time (DST)), 0 dacă nu, sau -1 (valoarea implicită)
-       dacă nu se cunoaşte dacă este în efect timpul de vară. Dacă nu se
-       cunoaşte, PHP încearcă singur să determine acest lucru. Aceasta poate
-       cauza rezultate neaşteptate (dar nu neapărat incorecte).
+       dacă nu se cunoaște dacă este în efect timpul de vară. Dacă nu se
+       cunoaște, PHP încearcă singur să determine acest lucru. Aceasta poate
+       cauza rezultate neașteptate (dar nu neapărat incorecte).
        Unele ore nu sunt valide dacă DST este activat pe sistemul unde rulează
        PHP, sau dacă parametrul <parameter>is_dst</parameter> este stabilit în
-       1. Dacă DST este activat de ex. la 2:00, toate orele între 2:00 şi 3:00
-       sunt invalide şi <function>mktime</function> întoarce o valoare
+       1. Dacă DST este activat de ex. la 2:00, toate orele între 2:00 și 3:00
+       sunt invalide și <function>mktime</function> întoarce o valoare
        nedefinită (de obicei negativă). Unele sisteme (de ex. Solaris 8)
-       activează DST la miezul nopţii, de aceea ora 0:30 în ziua când DST este
+       activează DST la miezul nopții, de aceea ora 0:30 în ziua când DST este
        activat este evaluată ca 23:30 a zilei precedente.
       </para>
       <note>
        <para>
         Începând cu PHP 5.1.0, acest parametru a devenit dezaprobat. În
-        rezultat noile facilităţi de gestiune a fusului orar trebuie utilizate
+        rezultat noile facilități de gestiune a fusului orar trebuie utilizate
         în loc.
        </para>
       </note>
@@ -137,7 +137,7 @@
   &reftitle.returnvalues;
   <para>
    <function>mktime</function> întoarce timestamp-ul Unix al argumentelor
-   furnizate. Dacă argumentele nu sunt valide, funcţia întoarce &false; (înainte
+   furnizate. Dacă argumentele nu sunt valide, funcția întoarce &false; (înainte
    de PHP 5.1 întorcea <literal>-1</literal>).
   </para>
  </refsect1>
@@ -171,9 +171,9 @@
        <entry>5.1.0</entry>
        <entry>
         Parametrul <parameter>is_dst</parameter> a devenit dezapreciat.
-        Funcţia a fost modificată să întoarcă &false; în caz de eroare, în loc
-        de <literal>-1</literal>. Funcţia a fost modificată să accepte anul,
-        luna şi ziua cu valorile zero.
+        Funcția a fost modificată să întoarcă &false; în caz de eroare, în loc
+        de <literal>-1</literal>. Funcția a fost modificată să accepte anul,
+        luna și ziua cu valorile zero.
        </entry>
       </row>
       <row>
@@ -218,7 +218,7 @@ echo date('c', mktime(1, 2, 3, 4, 5, 2006));
    <example>
     <title>Exemple <function>mktime</function></title>
     <para>
-     <function>mktime</function> este utilă pentru a face operaţii aritmetice şi
+     <function>mktime</function> este utilă pentru a face operații aritmetice și
      de validare a datelor, deoarece ea va calcula automat valoarea corectă
      pentru vlorile introduse din afara domeniului. De exemplu, fiecare rând ce
      urmează produce string-ul "Jan-01-1998".
@@ -261,9 +261,9 @@ echo strftime("Ultima zi din Februarie 2000 este: %d", $lastday);
   &reftitle.notes;
   <caution>
    <para>
-    Înainte de PHP 5.1.0, timestamp-urile negative nu erau susţinute în unele
+    Înainte de PHP 5.1.0, timestamp-urile negative nu erau susținute în unele
     sisteme, inclusiv nici într-o versiune cunoscută Windows. De aceea domeniul
-    valid al anilor era limitat între 1970 şi 2038.
+    valid al anilor era limitat între 1970 și 2038.
    </para>
   </caution>
  </refsect1>

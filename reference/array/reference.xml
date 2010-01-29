@@ -8,9 +8,9 @@
  <partintro xml:id="array.seealso">
    &reftitle.seealso;
    <para>
-    Accesaţi de asemenea <function>is_array</function>,
+    Accesați de asemenea <function>is_array</function>,
     <function>explode</function>, <function>implode</function>,
-    <function>split</function>, <function>preg_split</function> şi
+    <function>split</function>, <function>preg_split</function> și
     <function>unset</function>.
    </para>
  </partintro>

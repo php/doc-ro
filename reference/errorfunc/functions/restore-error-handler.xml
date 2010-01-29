@@ -5,7 +5,7 @@
 <refentry xml:id="function.restore-error-handler" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>restore_error_handler</refname>
-  <refpurpose>Restabileşte funcţia precedentă de gestionare a erorilor</refpurpose>
+  <refpurpose>Restabilește funcția precedentă de gestionare a erorilor</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -15,9 +15,9 @@
    <void/>
   </methodsynopsis>
   <para>
-   Se utilizează după modificarea funcţiei de gestionare a erorilor cu ajutorul
+   Se utilizează după modificarea funcției de gestionare a erorilor cu ajutorul
    <function>set_error_handler</function>, pentru a reveni la gestionarul
-   erorilor precedent (care poate fi cel încorporat, sau o funcţie definită de
+   erorilor precedent (care poate fi cel încorporat, sau o funcție definită de
    utilizator).
   </para>
  </refsect1>
@@ -25,7 +25,7 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Această funcţie întotdeuna întoarce &true;.
+   Această funcție întotdeuna întoarce &true;.
   </para>
  </refsect1>
 
@@ -36,7 +36,7 @@
     <title>Exemplu <function>restore_error_handler</function></title>
     <para>
      Decide dacă <function>unserialize</function> a cauzat o eroare, apoi
-     restabileşte gestionarul de erori original.
+     restabilește gestionarul de erori original.
     </para>
     <programlisting role="php">
 <![CDATA[
@@ -67,7 +67,7 @@ Invalid serialized value.
   &reftitle.notes;
   <note>
    <para>
-    Apelarea <function>restore_error_handler</function> din interiorul funcţiei
+    Apelarea <function>restore_error_handler</function> din interiorul funcției
     <literal>error_handler</literal> este ignorată.
    </para>
   </note>

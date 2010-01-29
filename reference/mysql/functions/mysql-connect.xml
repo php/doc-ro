@@ -31,7 +31,7 @@
      <term><parameter>server</parameter></term>
      <listitem>
       <para>
-       Serverul MySQL. De asemenea se poate include şi numărul portului. De ex.
+       Serverul MySQL. De asemenea se poate include și numărul portului. De ex.
        "hostname:port" sau o cale către un socket local de ex. ":/calea/spre/socket"
        pentru localhost.
       </para>
@@ -39,7 +39,7 @@
        Dacă directiva PHP <link linkend="ini.mysql.default-host">
        mysql.default_host</link> nu este definită (implicit), atunci valoarea
        implicită este 'localhost:3306'. În &sqlsafemode; acest parametru e
-       ignorat şi este utilizată întotdeauna valoarea 'localhost:3306'.
+       ignorat și este utilizată întotdeauna valoarea 'localhost:3306'.
       </para>
      </listitem>
     </varlistentry>
@@ -49,7 +49,7 @@
       <para>
        Numele de utilizator. Valoarea implicită este definită de <link
        linkend="ini.mysql.default-user">mysql.default_user</link>. În
-       &sqlsafemode; acest parametru e ignorat şi este utilizat numele
+       &sqlsafemode; acest parametru e ignorat și este utilizat numele
        utilizatorului sub care rulează serverul.
       </para>
      </listitem>
@@ -60,7 +60,7 @@
       <para>
        Parola. Valoarea implicită este definită de <link
        linkend="ini.mysql.default-password">mysql.default_password</link>. În
-       &sqlsafemode; acest parametru e ignorat şi este utilizată o parolă vidă.
+       &sqlsafemode; acest parametru e ignorat și este utilizată o parolă vidă.
       </para>
      </listitem>
     </varlistentry>
@@ -69,12 +69,12 @@
      <listitem>
       <para>
        Dacă se efectuează un apel repetat al <function>mysql_connect</function>
-       cu aceleaşi argumente, nu se crează o legătură nouă, dar va fi întors
+       cu aceleași argumente, nu se crează o legătură nouă, dar va fi întors
        identificatorul legăturii deja deschise. Parametrul
-       <parameter>new_link</parameter> modifică acest comportament şi indică
+       <parameter>new_link</parameter> modifică acest comportament și indică
        <function>mysql_connect</function> întotdeauna să deschidă o legătură
        nouă, chiar dacă <function>mysql_connect</function> a fost apelat
-       anterior cu aceiaşi parametri.
+       anterior cu aceiași parametri.
        În &sqlsafemode; acest parametru este ignorat.
       </para>
      </listitem>
@@ -83,15 +83,15 @@
      <term><parameter>client_flags</parameter></term>
      <listitem>
       <para>
-       Parametrul <parameter>client_flags</parameter> poate fi o combinaţie a
+       Parametrul <parameter>client_flags</parameter> poate fi o combinație a
        următoarelor constante:
        128 (permite prelucrarea <literal>LOAD DATA LOCAL</literal>),
        <constant>MYSQL_CLIENT_SSL</constant>,
        <constant>MYSQL_CLIENT_COMPRESS</constant>,
        <constant>MYSQL_CLIENT_IGNORE_SPACE</constant> sau
        <constant>MYSQL_CLIENT_INTERACTIVE</constant>.
-       Citiţi secţiunea despre <xref linkend="mysql.client-flags" /> pentru
-       informaţii suplimentare.
+       Citiți secțiunea despre <xref linkend="mysql.client-flags" /> pentru
+       informații suplimentare.
        În &sqlsafemode; acest parametru este ignorat.
       </para>
      </listitem>
@@ -148,7 +148,7 @@
 <?php
 $link = mysql_connect('localhost', 'mysql_user', 'mysql_password');
 if (!$link) {
-    die('Eşec la conectare: ' . mysql_error());
+    die('Eșec la conectare: ' . mysql_error());
 }
 echo 'Conectat cu succes';
 mysql_close($link);
@@ -163,10 +163,10 @@ mysql_close($link);
     <programlisting role="php">
 <![CDATA[
 <?php
-// ne conectăm la example.com şi portul 3307
+// ne conectăm la example.com și portul 3307
 $link = mysql_connect('example.com:3307', 'mysql_user', 'mysql_password');
 if (!$link) {
-    die('Eşec la conectare: ' . mysql_error());
+    die('Eșec la conectare: ' . mysql_error());
 }
 echo 'Conectat cu succes';
 mysql_close($link);
@@ -174,7 +174,7 @@ mysql_close($link);
 // ne conectăm la localhost la portul 3307
 $link = mysql_connect('127.0.0.1:3307', 'mysql_user', 'mysql_password');
 if (!$link) {
-    die('Eşec la conectare: ' . mysql_error());
+    die('Eșec la conectare: ' . mysql_error());
 }
 echo 'Conectat cu succes';
 mysql_close($link);
@@ -194,7 +194,7 @@ mysql_close($link);
 // varianta 1: omitem localhost
 $link = mysql_connect(':/tmp/mysql', 'mysql_user', 'mysql_password');
 if (!$link) {
-    die('Eşec la conectare: ' . mysql_error());
+    die('Eșec la conectare: ' . mysql_error());
 }
 echo 'Conectat cu succes';
 mysql_close($link);
@@ -202,7 +202,7 @@ mysql_close($link);
 // varianta 2: cu localhost
 $link = mysql_connect('localhost:/tmp/mysql.sock', 'mysql_user', 'mysql_password');
 if (!$link) {
-    die('Eşec la conectare: ' . mysql_error());
+    die('Eșec la conectare: ' . mysql_error());
 }
 echo 'Conectat cu succes';
 mysql_close($link);
@@ -217,36 +217,36 @@ mysql_close($link);
   &reftitle.notes;
   <note>
    <para>
-    Atunci când specificaţi &quot;localhost&quot; sau
+    Atunci când specificați &quot;localhost&quot; sau
     &quot;localhost:port&quot; în calitate de server, biblioteca-client MySQL
-    va anula aceasta şi va încerca să se conecteze la un socket local (ţeavă cu
-    nume (named pipe) în Windows). Dacă doriţi să utilizaţi TCP/IP, utilizaţi
+    va anula aceasta și va încerca să se conecteze la un socket local (țeavă cu
+    nume (named pipe) în Windows). Dacă doriți să utilizați TCP/IP, utilizați
     &quot;127.0.0.1&quot; în loc de &quot;localhost&quot;. Dacă biblioteca-client
-    MySQL încearcă să se conecteze la un socket local greşit, trebuie să
-    stabiliţi calea corectă în <xref linkend="ini.mysql.default-host" /> în
-    configuraţia PHP şi să lăsaţi câmpul server vid.
+    MySQL încearcă să se conecteze la un socket local greșit, trebuie să
+    stabiliți calea corectă în <xref linkend="ini.mysql.default-host" /> în
+    configurația PHP și să lăsați câmpul server vid.
    </para>
   </note>
   <note>
    <para>
-    Legătura către server va fi închisă îndată ce se va încheia execuţia
+    Legătura către server va fi închisă îndată ce se va încheia execuția
     script-ului, dacă nu a fost închisă anterior prin apelarea explicită a
-    funcţiei <function>mysql_close</function>.
+    funcției <function>mysql_close</function>.
    </para>
   </note>
   <note>
    <para>
-    Puteţi suprima mesajul de eroare în cazul eşecului adăugând un
+    Puteți suprima mesajul de eroare în cazul eșecului adăugând un
     <link linkend="language.operators.errorcontrol">@</link> înainte de
-    denumirea funcţiei.
+    denumirea funcției.
    </para>
   </note>
   <note>
    <para>
     Eroarea "Can't create TCP/IP socket (10106)" de obicei înseamnă că directiva
     de configurare <link linkend="ini.variables-order">variables_order</link>
-    nu conţine caracterul <literal>E</literal>. În Windows, dacă variabilele de
-    mediu nu sunt încărcate, va lipsi variabila <literal>SYSTEMROOT</literal> şi
+    nu conține caracterul <literal>E</literal>. În Windows, dacă variabilele de
+    mediu nu sunt încărcate, va lipsi variabila <literal>SYSTEMROOT</literal> și
     PHP va avea probleme la încărcarea Winsock.
    </para>
   </note>

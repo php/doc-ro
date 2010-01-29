@@ -18,9 +18,9 @@
   <para>
    <function>apache_child_terminate</function> va înregistra procesul Apache,
    ce execută interpelarea dată PHP, pentru a fi terminat (lichidat) odată cu
-   finalizarea executării codului PHP. Această funcţie poate fi utilizată
+   finalizarea executării codului PHP. Această funcție poate fi utilizată
    pentru a termina un proces după rularea unui script cu un consum de memorie
-   substanţial, deoarece memoria de obicei este eliberată intern şi nu este
+   substanțial, deoarece memoria de obicei este eliberată intern și nu este
    întoarsă sistemului de operare.
   </para>
  </refsect1>
@@ -29,10 +29,10 @@
   &reftitle.returnvalues;
   <para>
    Întoarce &true; dacă PHP rulează în calitate de modul Apache 1, Apache nu
-   rulează pe mai multe fire de execuţie şi directiva PHP
+   rulează pe mai multe fire de execuție și directiva PHP
    <link linkend="ini.child-terminate">child_terminate</link> este activată
-   (ea este dezactivată implicit). Dacă aceste condiţii nu sunt satisfăcute,
-   este întors &false; şi este generată o eroare de nivel <constant>E_WARNING</constant>.
+   (ea este dezactivată implicit). Dacă aceste condiții nu sunt satisfăcute,
+   este întors &false; și este generată o eroare de nivel <constant>E_WARNING</constant>.
   </para>
  </refsect1>
 

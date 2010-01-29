@@ -9,16 +9,16 @@
  <section xml:id="mail.requirements">
   &reftitle.required;
   <para>
-   Pentru ca funcţiile poştale să fie disponibile, PHP trebuie să aibă
+   Pentru ca funcțiile poștale să fie disponibile, PHP trebuie să aibă
    acces la binarul <literal>sendmail</literal> din sistem la momentul
    compilării.
-   Dacă utilizaţi un alt program poştal, cum ar fi
+   Dacă utilizați un alt program poștal, cum ar fi
    <productname>qmail</productname> sau <productname>postfix</productname>,
-   asiguraţi-vă că utilizaţi învelişul sendmail corespunzător cu care
+   asigurați-vă că utilizați învelișul sendmail corespunzător cu care
    sunt furnizate. PHP mai întâi va căuta sendmail în căile din
-   <literal>PATH</literal>, şi după aceasta în următoarele locuri:
+   <literal>PATH</literal>, și după aceasta în următoarele locuri:
    <literal>/usr/bin:/usr/sbin:/usr/etc:/etc:/usr/ucblib:/usr/lib</literal>.
-   Este foarte recomandabil să aveţi sendmail disponibil în una din căile
+   Este foarte recomandabil să aveți sendmail disponibil în una din căile
    din <literal>PATH</literal>. De asemenea, utilizatorul ce a compilat
    PHP trebuie să aibă permisiunea de a accesa binarul sendmail.
   </para>

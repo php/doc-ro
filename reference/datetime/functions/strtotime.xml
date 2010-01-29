@@ -6,7 +6,7 @@
 <refentry xml:id="function.strtotime" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>strtotime</refname>
-  <refpurpose>Translează aproape orice descriere textuală în limba engleză a datei şi orei într-un timestamp Unix</refpurpose>
+  <refpurpose>Translează aproape orice descriere textuală în limba engleză a datei și orei într-un timestamp Unix</refpurpose>
  </refnamediv>
  <refsect1 role="description">
   &reftitle.description;
@@ -16,18 +16,18 @@
    <methodparam choice="opt"><type>int</type><parameter>now</parameter></methodparam>
   </methodsynopsis>
   <simpara>
-   Funcţia aşteaptă să i se furnizeze un şir de caractere conţinând un format al
-   datei US English şi încearcă să transforme acest format într-un timestamp
+   Funcția așteaptă să i se furnizeze un șir de caractere conținând un format al
+   datei US English și încearcă să transforme acest format într-un timestamp
    Unix (numărul de secunde de la 1 Ianuarie 1970 00:00:00 UTC), relativ la
    timestamp-ul parametrului <parameter>now</parameter>, sau ora curentă în
    cazul dacă <parameter>now</parameter> nu este furnizat.
   </simpara>
   <para>
-   Această funcţie va utiliza variabila de mediu <envar>TZ</envar> (dacă este
+   Această funcție va utiliza variabila de mediu <envar>TZ</envar> (dacă este
    disponibilă) pentru a calcula timestamp-ul. Începând cu PHP 5.1.0 există
    metode mai facile de a defini fusul orar, care este utilizat de toate
-   funcţiile de dată/oră. Acest proces este explicat în pagina cu descrierea
-   funcţiei <function>date_default_timezone_get</function>.
+   funcțiile de dată/oră. Acest proces este explicat în pagina cu descrierea
+   funcției <function>date_default_timezone_get</function>.
   </para>
  </refsect1>
 
@@ -61,7 +61,7 @@
   &reftitle.returnvalues;
   <para>
    Întoarce un timestamp în caz de succes, &false; în caz contrar. Înainte de
-   PHP 5.1.0, această funcţie întorcea <literal>-1</literal> în caz de eşec.
+   PHP 5.1.0, această funcție întorcea <literal>-1</literal> în caz de eșec.
   </para>
  </refsect1>
 
@@ -95,7 +95,7 @@
       <row>
        <entry>5.1.0</entry>
        <entry>
-        Acum întoarce &false; în caz de eşec, în loc de <literal>-1</literal>.
+        Acum întoarce &false; în caz de eșec, în loc de <literal>-1</literal>.
        </entry>
       </row>
 
@@ -146,7 +146,7 @@ echo strtotime("last Monday"), "\n";
   </para>
   <para>
    <example>
-    <title>Verificarea eşecului</title>
+    <title>Verificarea eșecului</title>
     <programlisting role="php">
 <![CDATA[
 <?php
@@ -179,13 +179,13 @@ if (($timestamp = strtotime($str)) === false) {
    <para>
     Domeniul valid al unui timestamp este de obicei de la Fri, 13 Dec 1901
     20:45:54 UTC până la Tue, 19 Jan 2038 03:14:07 UTC. (Acestea sunt datele
-    ce corespund valorilor minimă şi maximă pentru un întreg pe 32 biţi cu
+    ce corespund valorilor minimă și maximă pentru un întreg pe 32 biți cu
     semn.)
-    În plus, nu toate platformele susţin timestamp-uri negative, de aceea
+    În plus, nu toate platformele susțin timestamp-uri negative, de aceea
     domeniul datelor poate fi limitat la valorile de după Epoca Unix. Aceasta
     înseamnă că de ex. datele de până la 1 Ianuarie 1970 nu vor fi valide în
-    Windows, unele distributive Linux, şi alte câteva sisteme de operare. Însă
-    PHP 5.1.0 şi versiunile ulterioare depăşesc această limitare.
+    Windows, unele distributive Linux, și alte câteva sisteme de operare. Însă
+    PHP 5.1.0 și versiunile ulterioare depășesc această limitare.
    </para>
   </note>
  </refsect1>

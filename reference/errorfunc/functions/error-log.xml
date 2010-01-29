@@ -19,7 +19,7 @@
   </methodsynopsis>
   <para>
    Trimite un mesaj de eroare în log-ul de erori al server-ului web, spre un
-   port <acronym>TCP</acronym>, sau într-un fişier.
+   port <acronym>TCP</acronym>, sau într-un fișier.
   </para>
  </refsect1>
 
@@ -52,9 +52,9 @@
            <entry>
             <parameter>message</parameter> este transmis log-ului de sistem al
             PHP utilizând mecanismul de logare al Sistemului de Operare, sau un
-            fişier, în dependenţă de setările directivei de configurare
+            fișier, în dependență de setările directivei de configurare
             <link linkend="ini.error-log">error_log</link>. Aceasta este
-            opţiunea implicită.
+            opțiunea implicită.
            </entry>
           </row>
           <row>
@@ -69,21 +69,21 @@
           <row>
            <entry>2</entry>
            <entry>
-            Această opţiune nu mai există deja.
+            Această opțiune nu mai există deja.
            </entry>
           </row>
           <row>
            <entry>3</entry>
            <entry>
-            <parameter>message</parameter> este adăugat la sfârşitul fişierului
-            <parameter>destination</parameter>. Sfârşitul de linie nu este
+            <parameter>message</parameter> este adăugat la sfârșitul fișierului
+            <parameter>destination</parameter>. Sfârșitul de linie nu este
             adăugat automat la string-ul <parameter>message</parameter>.
            </entry>
           </row>
           <row>
            <entry>4</entry>
            <entry>
-           <parameter>message</parameter> este transmis direct spre funcţia de
+           <parameter>message</parameter> este transmis direct spre funcția de
            logare SAPI.
            </entry>
           </row>
@@ -97,7 +97,7 @@
      <term><parameter>destination</parameter></term>
      <listitem>
       <para>
-       Destinaţia. Semnificaţia acesteia depinde de valoarea parametrului
+       Destinația. Semnificația acesteia depinde de valoarea parametrului
        <parameter>message_type</parameter> descris mai sus.
       </para>
      </listitem>
@@ -108,7 +108,7 @@
       <para>
        Antete suplimentare. Acestea sunt utilizate în caz că parametrul
        <parameter>message_type</parameter> are valoarea <literal>1</literal>.
-       Acest tip de mesaj utilizează aceeaşi funcţie internă ca şi
+       Acest tip de mesaj utilizează aceeași funcție internă ca și
        <function>mail</function>.
       </para>
      </listitem>
@@ -156,13 +156,13 @@
     <programlisting role="php">
 <![CDATA[
 <?php
-// Trimite o înştiinţare prin intermediul log-ului server-ului în caz că nu este
+// Trimite o înștiințare prin intermediul log-ului server-ului în caz că nu este
 // posibilă conectarea la baza de date.
 if (!Ora_Logon($username, $password)) {
     error_log("Baza de date Oracle nu este disponibilă!", 0);
 }
 
-// Înştiinţează administratorul prin email dacă rămânem fără FOO
+// Înștiințează administratorul prin email dacă rămânem fără FOO
 if (!($foo = allocate_new_foo())) {
     error_log("Nevoie mare, nu mai avem FOO!", 1,
                "operator@example.com");

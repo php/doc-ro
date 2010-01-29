@@ -5,41 +5,41 @@
  <sect1 xml:id="language.oop5.autoload" xmlns="http://docbook.org/ns/docbook">
   <title>Autoîncărcarea claselor</title>
   <para>
-   Mulţi programatori care scriu aplicaţii orientate pe obiecte
-   crează câte un fişier PHP pentru fiecare clasă pe care o definesc.
-   O problemă delicată era lista mare de fişiere ce trebuiau
+   Mulți programatori care scriu aplicații orientate pe obiecte
+   crează câte un fișier PHP pentru fiecare clasă pe care o definesc.
+   O problemă delicată era lista mare de fișiere ce trebuiau
    incluse la începutul fiecărui script.
   </para>
   <para>
-   În PHP 5, acest lucru nu mai este necasar. Se poate defini funcţia
-   __autoload care este apelată automat în cazul în care doriţi să folosiţi
-   o clasă care nu a fost încă definită. Apelul la această funcţie
-   oferă script-ului o ultimă şansă de a defini clasa pentru a nu
+   În PHP 5, acest lucru nu mai este necasar. Se poate defini funcția
+   __autoload care este apelată automat în cazul în care doriți să folosiți
+   o clasă care nu a fost încă definită. Apelul la această funcție
+   oferă script-ului o ultimă șansă de a defini clasa pentru a nu
    termina cu eroare.
   </para>
   <note>
    <para>
-    Excepţiile aruncate în __autoload nu pot fi captate într-un bloc
+    Excepțiile aruncate în __autoload nu pot fi captate într-un bloc
     <link linkend="language.exceptions">catch</link> rezultând
-    astfel o eroare fatală. Din 5.3.0+ excepţiile aruncate in funcţia
+    astfel o eroare fatală. Din 5.3.0+ excepțiile aruncate in funcția
     __autoload pot fi captate într-un bloc <link linkend="language.exceptions">
-    catch</link>, cu o mică excepţie. Dacă folosiţi o excepţie personalizată, atunci
-    clasa respectiva trebuie să fie deja încărcată. Funcţia __autoload poate
-    fi folosită pentru a încărca recursiv excepţia personalizată.
+    catch</link>, cu o mică excepție. Dacă folosiți o excepție personalizată, atunci
+    clasa respectiva trebuie să fie deja încărcată. Funcția __autoload poate
+    fi folosită pentru a încărca recursiv excepția personalizată.
    </para>
   </note>
   <note>
    <para>
-    Această funcţie specială nu este disponibilă dacă folosiţi PHP în
+    Această funcție specială nu este disponibilă dacă folosiți PHP în
     <link linkend="features.commandline">mod CLI interactiv</link>.
    </para>
   </note>
   <note>
    <para>
     Dacă denumirea clasei este utilizată de ex. în <function>call_user_func</function>,
-    atunci ea poate conţine caractere periculoase, cum ar fi <literal>../</literal>.
-    Nu este recomandabil să utilizaţi datele introduse de utilizator în asemenea funcţii,
-    sau, cel puţin, să verificaţi ce s-a introdus în <function>__autoload</function>.
+    atunci ea poate conține caractere periculoase, cum ar fi <literal>../</literal>.
+    Nu este recomandabil să utilizați datele introduse de utilizator în asemenea funcții,
+    sau, cel puțin, să verificați ce s-a introdus în <function>__autoload</function>.
    </para>
   </note>
   <para>
@@ -47,8 +47,8 @@
     <title>Exemplu cu autoîncărcare</title>
     <para>
      Acest exemplu încearcă să încarce clasele <literal>MyClass1</literal>
-     şi <literal>MyClass2</literal> din fişierele <filename>MyClass1.php</filename>
-     şi <filename>MyClass2.php</filename>.
+     și <literal>MyClass2</literal> din fișierele <filename>MyClass1.php</filename>
+     și <filename>MyClass2.php</filename>.
     </para>
     <programlisting role="php">
 <![CDATA[
@@ -66,7 +66,7 @@ $obj2 = new MyClass2();
    <example>
     <title>Un alt exemplu Autoload</title>
     <para>
-     Acest exemplu încearcă să încarce interfaţa <literal>ITest</literal>.
+     Acest exemplu încearcă să încarce interfața <literal>ITest</literal>.
     </para>
     <programlisting role="php">
 <![CDATA[
@@ -89,9 +89,9 @@ Fatal error: Interface 'ITest' not found in ...
     </programlisting>
    </example>
    <example>
-    <title>Autoîncărcarea cu tratarea excepţiilor pentru 5.3.0+</title>
+    <title>Autoîncărcarea cu tratarea excepțiilor pentru 5.3.0+</title>
     <para>
-     Acest exemplu aruncă o excepţie şi demonstrează cum se captează cu try/catch.
+     Acest exemplu aruncă o excepție și demonstrează cum se captează cu try/catch.
     </para>
     <programlisting role="php">
 <![CDATA[
@@ -118,9 +118,9 @@ Nu pot încărca NonLoadableClass.
     </screen>
    </example>
    <example>
-    <title>Autoîncărcarea cu tratarea excepţiilor pentru 5.3.0+ - Fără excepţie personalizată</title>
+    <title>Autoîncărcarea cu tratarea excepțiilor pentru 5.3.0+ - Fără excepție personalizată</title>
     <para>
-     Acest exemplu atuncă o excepţie personalizată care nu a fost încărcată încă.
+     Acest exemplu atuncă o excepție personalizată care nu a fost încărcată încă.
     </para>
     <programlisting role="php">
 <![CDATA[

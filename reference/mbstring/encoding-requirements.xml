@@ -3,9 +3,9 @@
 <!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: alexxed Status: ready -->
 
 <chapter xml:id="mbstring.php4.req" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
- <title>Cerinţe pentru codarea caracterelor în PHP</title>
+ <title>Cerințe pentru codarea caracterelor în PHP</title>
  <para>
-  Următoarele codări pot fi folosite în siguranţă cu PHP.
+  Următoarele codări pot fi folosite în siguranță cu PHP.
   <itemizedlist>
    <listitem>
     <para>
@@ -23,7 +23,7 @@
    </listitem>
    <listitem>
     <para>
-     Orice codare de caractere pe mai mulţi octeţi,
+     Orice codare de caractere pe mai mulți octeți,
      <itemizedlist>
       <listitem>
        <simpara>
@@ -33,13 +33,13 @@
       </listitem>
       <listitem>
        <simpara>
-        care nu utilizează secvenţe de de evadare ISO2022.
+        care nu utilizează secvențe de de evadare ISO2022.
        </simpara>
       </listitem>
       <listitem>
        <simpara>
         care nu folosesc o valoare de la <literal>00h</literal> la
-        <literal>7fh</literal> în octeţii de compunere care reprezintă un
+        <literal>7fh</literal> în octeții de compunere care reprezintă un
         singur caracter.
        </simpara>
       </listitem>
@@ -59,28 +59,28 @@ JIS, SJIS, ISO-2022-JP, BIG-5
   </informalexample>
  </para>
  <para>
-  Deşi s-ar putea ca scripturile PHP scrise în orice codare de mai sus
+  Deși s-ar putea ca scripturile PHP scrise în orice codare de mai sus
   să nu meargă, în special în cazul în care stringuri codate apar ca identificatori
-  sau literalmente în scripturi, puteţi evita alte probleme cu aceste codări setând
+  sau literalmente în scripturi, puteți evita alte probleme cu aceste codări setând
   conversia codării caracterelor venite prin HTTP.
  </para>
  <note>
   <para>
-   Nu folosiţi SJIS, BIG5, CP936, CP949 şi GB18030 pentru codarea internă decât dacă
-   sunteţi familiarizat(ă) cu parser-ul, scanerul şi codarea de caractere.
+   Nu folosiți SJIS, BIG5, CP936, CP949 și GB18030 pentru codarea internă decât dacă
+   sunteți familiarizat(ă) cu parser-ul, scanerul și codarea de caractere.
   </para>
  </note>
  <note>
   <para>
-   Dacă vă conectaţi la o bază de date cu PHP, este recomandat să folosiţi aceaşi
-   codare de caractere atât pentru baza de date cât şi pentru
-   <literal>codarea internă</literal> pentru uşurinţă în utilizare şi o performanţă
+   Dacă vă conectați la o bază de date cu PHP, este recomandat să folosiți aceași
+   codare de caractere atât pentru baza de date cât și pentru
+   <literal>codarea internă</literal> pentru ușurință în utilizare și o performanță
    mai bună.
   </para>
   <para>
-   Dacă folosiţi PostgreSQL, codarea de caractere folosită în baza de date ar putea
-   diferi faţă de cea folosită în PHP deoarece suportă conversia automată a setului
-   de caractere între backend şi frontend.
+   Dacă folosiți PostgreSQL, codarea de caractere folosită în baza de date ar putea
+   diferi față de cea folosită în PHP deoarece suportă conversia automată a setului
+   de caractere între backend și frontend.
   </para>
  </note>
 </chapter>

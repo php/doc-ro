@@ -11,30 +11,30 @@
  <preface xml:id="intro.mbstring">
   &reftitle.intro;
   <para>
-   Deşi sunt multe limbi în care orice caracter poate fi reprezentat prin
-   asocierea lui cu o valoare pe 8 biţi, există multe alte limbi care au
+   Deși sunt multe limbi în care orice caracter poate fi reprezentat prin
+   asocierea lui cu o valoare pe 8 biți, există multe alte limbi care au
    atât de multe caractere pentru comunicarea în scris încât ele nu încap în
-   ceea ce oferă un simplu octet (Un octet este format din 8 biţi. Fiecare bit
-   poate conţine valoarea 1 sau 0. Din această cauză, un octet poate reprezenta
+   ceea ce oferă un simplu octet (Un octet este format din 8 biți. Fiecare bit
+   poate conține valoarea 1 sau 0. Din această cauză, un octet poate reprezenta
    doar 256 de valori (doi la puterea a opta)). Din această cauză, s-au dezvoltat
-   scheme de codare a caracterelor pe mai mulţi octeţi pentru a lucra cu mai mult de
+   scheme de codare a caracterelor pe mai mulți octeți pentru a lucra cu mai mult de
    256 de caractere.
   </para>
   <para>
-   Când manipulaţi (trim, split, splice, etc.) stringuri care conţin caractere multioctet,
-   trebuie să folosiţi funcţii speciale deoarece doi sau mai mulţi octeţi consecutivi
+   Când manipulați (trim, split, splice, etc.) stringuri care conțin caractere multioctet,
+   trebuie să folosiți funcții speciale deoarece doi sau mai mulți octeți consecutivi
    pot reprezenta un singur caracter în astfel de scheme de codare. Altfel, dacă
-   folosiţi o funcţie care nu ţine cont de caractere multioctet pe stringuri care conţin
-   astfel de caractere, probabil că funcţia va eşua să detecteze unde începe şi unde se termină
-   caracterul multioctet şi veţi rămâne cu un string care conţine caractere indescifrabile
-   şi care şi-a pierdut înţelesul iniţial.
+   folosiți o funcție care nu ține cont de caractere multioctet pe stringuri care conțin
+   astfel de caractere, probabil că funcția va eșua să detecteze unde începe și unde se termină
+   caracterul multioctet și veți rămâne cu un string care conține caractere indescifrabile
+   și care și-a pierdut înțelesul inițial.
   </para>
   <para>
-   <literal>mbstring</literal> oferă funcţii specifice lucrului cu stringuri care conţin caractere
-   multioctet, funcţii care vă ajută să lucraţi în PHP cu codările acestor caractere. În plus,
+   <literal>mbstring</literal> oferă funcții specifice lucrului cu stringuri care conțin caractere
+   multioctet, funcții care vă ajută să lucrați în PHP cu codările acestor caractere. În plus,
    <literal>mbstring</literal> se ocupă de conversia de caractere între perechi de codări suportate.
    <literal>mbstring</literal> este gândit să se ocupe de codări bazate pe Unicode, cum ar fi UTF-8
-   şi UCS-2 dar poate fi folosită şi cu alte codări de caractere pe un singur octet (enumerate mai jos).
+   și UCS-2 dar poate fi folosită și cu alte codări de caractere pe un singur octet (enumerate mai jos).
   </para>
  </preface>
  <!-- }}} -->

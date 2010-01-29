@@ -13,21 +13,21 @@
  <section xml:id="migration52.changes">
   <title>Ce s-a schimbat în PHP 5.2.x</title>
   <para>
-   Majoritatea îmbunătăţirilor din PHP 5.2.x nu au nici un impact asupra
+   Majoritatea îmbunătățirilor din PHP 5.2.x nu au nici un impact asupra
    codului-sursă existent. Sunt însă unele
-   <link linkend="migration52.incompatible">mici incompatibilităţi</link>
-   şi <link linkend="migration52.error-messages">noi mesaje de eroare</link>
+   <link linkend="migration52.incompatible">mici incompatibilități</link>
+   și <link linkend="migration52.error-messages">noi mesaje de eroare</link>
    care trebuie luate în considerare, iar codul-sursă trebuie testat înainte
-   de a schimba versiunile PHP în mediile de producţie.
+   de a schimba versiunile PHP în mediile de producție.
   </para>
   <para>
-   Dacă sistemul este schimbat de la PHP 5.0.x, este necesar de citit şi
-   secţiunea manualului întitulată
+   Dacă sistemul este schimbat de la PHP 5.0.x, este necesar de citit și
+   secțiunea manualului întitulată
    <link linkend="migration51">Note la reînnoirea până la PHP 5.1.x</link>.
   </para>
   <para>
-   Similar, dacă sistemul este schimbat de la PHP 4, trebuie citită şi
-   secţiunea manualului întitulată <link linkend="migration5">Migrarea de la
+   Similar, dacă sistemul este schimbat de la PHP 4, trebuie citită și
+   secțiunea manualului întitulată <link linkend="migration5">Migrarea de la
    PHP 4 la PHP 5</link>.
   </para>
  </section>
@@ -35,8 +35,8 @@
  <section xml:id="migration52.incompatible">
   <title>Schimbări incompatibile în sens invers</title>
   <para>
-   Cu toate că codul-sursă existent în PHP 5 trebuie să funcţioneze fără
-   schimbări, ar trebui să atrageţi atenţia la următoarele schimbări
+   Cu toate că codul-sursă existent în PHP 5 trebuie să funcționeze fără
+   schimbări, ar trebui să atrageți atenția la următoarele schimbări
    incompatibile în sens invers:
   </para>
   <itemizedlist>
@@ -61,7 +61,7 @@
    <listitem>
     <simpara>
      <function>SplFileObject::getFilename</function> întoarce denumirea
-     fişierului, şi nu calea/relativă/spre/fişier, începând cu PHP 5.2.1.
+     fișierului, și nu calea/relativă/spre/fișier, începând cu PHP 5.2.1.
     </simpara>
    </listitem>
    <listitem>
@@ -70,36 +70,36 @@
      pe sistemele Win32.
     </simpara>
     <simpara>
-     Variabila de mediu <varname>PHPRC</varname> acum are prioritate faţă de
+     Variabila de mediu <varname>PHPRC</varname> acum are prioritate față de
      calea stocată în registrul Windows.
     </simpara>
    </listitem>
    <listitem>
     <simpara>
-     CLI SAPI nu mai caută fişierele &php.ini; sau
+     CLI SAPI nu mai caută fișierele &php.ini; sau
      <filename>php-cli.ini</filename> în directorul curent.
     </simpara>
     <simpara>
      În PHP 5.1.x a fost introdusă o facilitate nedocumentată care făcea ca
-     binarul CLI să caute în Directorul de Lucru Curent (DLC) un fişier de
-     configurare PHP, ducând potenţial la un comportament imprevizibil atunci
-     când era citit un fişier de configurare neaşteptat. Această
-     funcţionalitate a fost eliminată în versiunea 5.2.0, şi PHP nu mai caută
-     în DLC fişierele &php.ini; sau <filename>php-cli.ini</filename>. Accesaţi
-     de asemenea secţiunea manualului referitoare la
+     binarul CLI să caute în Directorul de Lucru Curent (DLC) un fișier de
+     configurare PHP, ducând potențial la un comportament imprevizibil atunci
+     când era citit un fișier de configurare neașteptat. Această
+     funcționalitate a fost eliminată în versiunea 5.2.0, și PHP nu mai caută
+     în DLC fișierele &php.ini; sau <filename>php-cli.ini</filename>. Accesați
+     de asemenea secțiunea manualului referitoare la
      <link linkend="features.commandline">linia de comandă</link>.
     </simpara>
    </listitem>
    <listitem>
     <simpara>
-     A fost adăugată o preîntâmpinare la efectuarea operaţiei modulus 0.
+     A fost adăugată o preîntâmpinare la efectuarea operației modulus 0.
     </simpara>
     <simpara>
-     În versiunile anterioare ale PHP, efectuarea operaţiei "integer % 0" nu
+     În versiunile anterioare ale PHP, efectuarea operației "integer % 0" nu
      emitea nici un mesaj de preîntâmpinare, întorcând, în loc, o valoare
-     neaşteptată &false;. Începând cu PHP 5.2.0 această operaţie va emite un
-     <constant>E_WARNING</constant>, după cum e cazul şi în orice altă
-     situaţie când se efectuează împărţirea la zero.
+     neașteptată &false;. Începând cu PHP 5.2.0 această operație va emite un
+     <constant>E_WARNING</constant>, după cum e cazul și în orice altă
+     situație când se efectuează împărțirea la zero.
     </simpara>
     <informalexample>
      <programlisting role="php">
@@ -122,11 +122,11 @@ print 10 % 0;
      contextul unui string, adică oriunde un obiect este utilizat ca string.
     </simpara>
     <simpara>
-     Situaţia când se întoarce un string care conţine identificatorul
+     Situația când se întoarce un string care conține identificatorul
      obiectului a fost abandonată în PHP 5.2.0. Aceasta devenise problematică
      deoarece identificatorul obiectului nu poate fi considerat unic. Această
-     schimbare va însemna că aplicaţia dumneavoastră este defectuoasă dacă
-     v-aţi bazat pe identificatorul obiectului în calitate de valoare întoarsă.
+     schimbare va însemna că aplicația dumneavoastră este defectuoasă dacă
+     v-ați bazat pe identificatorul obiectului în calitate de valoare întoarsă.
      Acum încercarea de a utiliza această valoare în calitate de string va
      rezulta în emiterea unei erori fatale interceptabile.
     </simpara>
@@ -144,14 +144,14 @@ print $foo;
      </programlisting>
     </informalexample>
     <simpara>
-     Chiar şi cu <function>__toString</function> obiectele nu pot fi utilizate
-     ca indici ai tabloului sau chei. S-ar putea să adăugăm ulterior susţinerea
+     Chiar și cu <function>__toString</function> obiectele nu pot fi utilizate
+     ca indici ai tabloului sau chei. S-ar putea să adăugăm ulterior susținerea
      încorporată a hash-urilor pentru aceasta, însă în PHP 5.2.x va trebui sau
-     să creaţi propria funcţie hash, sau să utilizaţi noua funcţie SPL
+     să creați propria funcție hash, sau să utilizați noua funcție SPL
      <function>spl_object_hash</function>.
     </simpara>
     <simpara>
-     Din metodele <function>__toString</function> nu pot fi atuncate excepţii.
+     Din metodele <function>__toString</function> nu pot fi atuncate excepții.
     </simpara>
     <informalexample>
      <programlisting role="php">
@@ -175,11 +175,11 @@ try {
    </listitem>
    <listitem>
     <simpara>
-     Au fost abandonate funcţiile de clasă statice abstracte.
+     Au fost abandonate funcțiile de clasă statice abstracte.
     </simpara>
     <simpara>
-     Din cauza unei scăpări, PHP 5.0.x şi 5.1.x permiteau funcţii abstracte
-     statice în clase. Începând cu PHP 5.2.x, numai interfeţele le pot avea.
+     Din cauza unei scăpări, PHP 5.0.x și 5.1.x permiteau funcții abstracte
+     statice în clase. Începând cu PHP 5.2.x, numai interfețele le pot avea.
     </simpara>
     <informalexample>
      <programlisting role="php">
@@ -197,24 +197,24 @@ abstract class foo {
    </listitem>
    <listitem>
     <simpara>
-     <link linkend="ref.oci8">Extensia Oracle</link> necesită prezenţa a cel
-     puţin Oracle 10 pe Windows.
+     <link linkend="ref.oci8">Extensia Oracle</link> necesită prezența a cel
+     puțin Oracle 10 pe Windows.
     </simpara>
    </listitem>
    <listitem>
     <simpara>
-     A fost adăugată susţinerea RFC2397 (fluxurile <literal>data:</literal>).
+     A fost adăugată susținerea RFC2397 (fluxurile <literal>data:</literal>).
     </simpara>
     <simpara>
      Introducerea schemei URL 'data' poate duce la o schimbare în comportament
-     sub Windows. Dacă lucraţi cu un sistem de fişiere <acronym>NTFS</acronym>
-     şi utilizaţi meta-fluxurile în aplicaţia dumneavoastră, şi dacă se
-     întâmplă să utlizaţi un fişier cu denumirea 'data:', accesat fără
-     informaţia despre cale - aceasta nu va mai funcţiona. Pentru a corecta
-     aceasta, utilizaţi protocolul 'file:' pentru a-l accesa.
+     sub Windows. Dacă lucrați cu un sistem de fișiere <acronym>NTFS</acronym>
+     și utilizați meta-fluxurile în aplicația dumneavoastră, și dacă se
+     întâmplă să utlizați un fișier cu denumirea 'data:', accesat fără
+     informația despre cale - aceasta nu va mai funcționa. Pentru a corecta
+     aceasta, utilizați protocolul 'file:' pentru a-l accesa.
     </simpara>
     <simpara>
-     Accesaţi de asemenea <link xlink:href="&url.rfc;2397">RFC 2397</link>
+     Accesați de asemenea <link xlink:href="&url.rfc;2397">RFC 2397</link>
     </simpara>
     <informalexample>
      <programlisting role="php">
@@ -231,13 +231,13 @@ include "data:;base64,PD9waHAgcGhwaW5mbygpOz8+";
    </listitem>
    <listitem>
     <simpara>
-     Regresul în şabloanele <literal>glob()</literal>
+     Regresul în șabloanele <literal>glob()</literal>
     </simpara>
     <simpara>
      În versiunea 5.2.4 o corectare a unei probleme de securitate cauza un
-     regres al şabloanelor de forma "/foo/*/bar/*". Începând cu versiunea
-     5.2.5 în loc de a emite o preîntâmpinare, funcţia
-     <literal>glob()</literal> va întoarce &false; când restricţiile
+     regres al șabloanelor de forma "/foo/*/bar/*". Începând cu versiunea
+     5.2.5 în loc de a emite o preîntâmpinare, funcția
+     <literal>glob()</literal> va întoarce &false; când restricțiile
      <literal>openbase_dir</literal> sunt încălcate.
     </simpara>
    </listitem>
@@ -248,7 +248,7 @@ include "data:;base64,PD9waHAgcGhwaW5mbygpOz8+";
   <title>Noile mesaje de eroare</title>
   <para>
    Mai jos sunt enumerate noile mesaje de eroare, care nu au fost discutate
-   în alte secţiuni din acest document.
+   în alte secțiuni din acest document.
   </para>
   <para>
    <example>
@@ -519,20 +519,20 @@ $obj->getCommentName('');
  </section>
 
  <section xml:id="migration52.datetime">
-  <title>Schimbările PHP în susţinerea funcţiilor
+  <title>Schimbările PHP în susținerea funcțiilor
   <link linkend="ref.datetime">datetime</link></title>
 
   <para>
    Începând cu PHP 5.1.0, exista o extensie denumită <literal>date</literal>
-   în nucleul PHP. Aceasta este noua implementare a susţinerii în PHP a
-   funcţiilor datetime. Cu toate că PHP va încerca să ghicească setările
-   fusului orar ale sistemului, ar trebui să stabiliţi în mod manual fusul
-   orar. Puteţi realiza acest lucru prin oricare dintre următoarele trei metode:
+   în nucleul PHP. Aceasta este noua implementare a susținerii în PHP a
+   funcțiilor datetime. Cu toate că PHP va încerca să ghicească setările
+   fusului orar ale sistemului, ar trebui să stabiliți în mod manual fusul
+   orar. Puteți realiza acest lucru prin oricare dintre următoarele trei metode:
   </para>
   <itemizedlist>
    <listitem>
     <simpara>
-     în fişierul &php.ini; utilizând directiva INI
+     în fișierul &php.ini; utilizând directiva INI
      <link linkend="ini.date.timezone">date.timezone</link>
     </simpara>
    </listitem>
@@ -543,28 +543,28 @@ $obj->getCommentName('');
    </listitem>
    <listitem>
     <simpara>
-     din script utilizând funcţia
+     din script utilizând funcția
      <link linkend="function.date-default-timezone-get">
      <function>date_default_timezone_set</function></link>
     </simpara>
    </listitem>
   </itemizedlist>
   <para>
-   Toate <link linkend="timezones">fusele orare</link> susţinute sunt
+   Toate <link linkend="timezones">fusele orare</link> susținute sunt
    enumerate în manualul PHP.
   </para>
   <para>
-   Odată cu apariţia PHP 5.2.x, au apărut reprezentări-<type>obiect</type> ale
-   datei şi fuselor orare, denumite <literal>DateTime</literal> şi
+   Odată cu apariția PHP 5.2.x, au apărut reprezentări-<type>obiect</type> ale
+   datei și fuselor orare, denumite <literal>DateTime</literal> și
    <literal>DateTimeZone</literal> respectiv.
-   Metodele apelează funcţiile procedurale de date existente.
+   Metodele apelează funcțiile procedurale de date existente.
   </para>
  </section>
 
  <section xml:id="migration52.parameters">
   <title>Parametri noi</title>
   <para>
-   Unor funcţii li s-au dat parametri noi, opţionali, în PHP 5.2.x:
+   Unor funcții li s-au dat parametri noi, opționali, în PHP 5.2.x:
   </para>
 
   <para>Nucleul PHP:</para>
@@ -664,9 +664,9 @@ $obj->getCommentName('');
     </simpara>
     <warning>
      <simpara>
-      Parametrul <parameter>offset</parameter> a fost pus în poziţia unde se
+      Parametrul <parameter>offset</parameter> a fost pus în poziția unde se
       afla parametrul <parameter>encoding</parameter>. Compatibilitatea în
-      sens invers a fost realizată permiţând ca <parameter>encoding</parameter>
+      sens invers a fost realizată permițând ca <parameter>encoding</parameter>
       să fie specificat ca al treilea parametru. Utilizarea acestui mod de
       compatibilitate inversă nu e recomandat deoarece va fi eliminat într-o
       versiune ulterioară a PHP.
@@ -760,14 +760,14 @@ $obj->getCommentName('');
    <listitem>
     <simpara>
      <function>XMLReader::open</function>
-     - s-au adăugat <parameter>encoding</parameter> şi
+     - s-au adăugat <parameter>encoding</parameter> și
      <parameter>options</parameter>
     </simpara>
    </listitem>
    <listitem>
     <simpara>
      <function>XMLReader::XML</function>
-     - s-au adăugat <parameter>encoding</parameter> şi
+     - s-au adăugat <parameter>encoding</parameter> și
      <parameter>options</parameter>
     </simpara>
    </listitem>
@@ -779,23 +779,23 @@ $obj->getCommentName('');
     <simpara>
      <link linkend="function.xmlwriter-write-element">
      <function>XMLWriter::WriteElement</function></link>
-     - parametrul <parameter>content</parameter> a devenit opţional în PHP 5.2.3
+     - parametrul <parameter>content</parameter> a devenit opțional în PHP 5.2.3
     </simpara>
    </listitem>
    <listitem>
     <simpara>
      <link linkend="function.xmlwriter-write-element-ns">
      <function>XMLWriter::WriteElementNs</function></link>
-     - parametrul <parameter>content</parameter> a devenit opţional în PHP 5.2.3
+     - parametrul <parameter>content</parameter> a devenit opțional în PHP 5.2.3
     </simpara>
    </listitem>
   </itemizedlist>
  </section>
 
  <section xml:id="migration52.functions">
-  <title>Funcţii noi</title>
+  <title>Funcții noi</title>
   <para>
-   În PHP 5.2.x au fost introduse unele noi funcţii:
+   În PHP 5.2.x au fost introduse unele noi funcții:
   </para>
 
   <para>Nucleul PHP:</para>
@@ -804,7 +804,7 @@ $obj->getCommentName('');
     <simpara>
      <function>array_fill_keys</function>
      - Creează un tablou utilizând elementele primului parametru în calitate de
-     chei, fiecare iniţializată cu <literal>val</literal>
+     chei, fiecare inițializată cu <literal>val</literal>
     </simpara>
    </listitem>
    <listitem>
@@ -817,7 +817,7 @@ $obj->getCommentName('');
    <listitem>
     <simpara>
      <function>image_type_to_extension</function>
-     - Întoarce extensia fişierului pentru tipul-imagine întors de
+     - Întoarce extensia fișierului pentru tipul-imagine întors de
      <function>getimagesize</function>, <function>exif_read_data</function>,
      <function>exif_thumbnail</function>, <function>exif_imagetype</function>
     </simpara>
@@ -831,14 +831,14 @@ $obj->getCommentName('');
    <listitem>
     <simpara>
      <function>sys_get_temp_dir</function>
-     - Întoarce calea directorului utilizat pentru fişiere temporare.
+     - Întoarce calea directorului utilizat pentru fișiere temporare.
      (Adăugat în 5.2.1)
     </simpara>
    </listitem>
    <listitem>
     <simpara>
      <function>timezone_abbreviations_list</function>
-     - Întoarce un tablou asociativ conţinând DST, deplasamentul şi denumirea
+     - Întoarce un tablou asociativ conținând DST, deplasamentul și denumirea
      fusului orar
     </simpara>
    </listitem>
@@ -858,7 +858,7 @@ $obj->getCommentName('');
    <listitem>
     <simpara>
      <function>stream_socket_shutdown</function>
-     - Cauzează deconectarea totală sau parţială a unei conexiuni full-duplex
+     - Cauzează deconectarea totală sau parțială a unei conexiuni full-duplex
      realizată prin intermediul unui socket asociat cu un flux. Începând cu
      PHP 5.2.1.
     </simpara>
@@ -912,42 +912,42 @@ $obj->getCommentName('');
    <listitem>
     <simpara>
      <function>mb_stripos</function>
-     - Găseşte poziţia primei apariţii a unui string în cadrul altuia, fără a
-     lua în consideraţie caracterele minuscule/majuscule
+     - Găsește poziția primei apariții a unui string în cadrul altuia, fără a
+     lua în considerație caracterele minuscule/majuscule
     </simpara>
    </listitem>
    <listitem>
     <simpara>
      <function>mb_stristr</function>
-     - Găseşte prima apariţie a unui string în cadrul altuia, luând în
-     consideraţie caracterele minuscule/majuscule
+     - Găsește prima apariție a unui string în cadrul altuia, luând în
+     considerație caracterele minuscule/majuscule
     </simpara>
    </listitem>
    <listitem>
     <simpara>
      <function>mb_strrchr</function>
-     - Găseşte ultima apariţie a unui caracter dintr-un string în cadrul altui
+     - Găsește ultima apariție a unui caracter dintr-un string în cadrul altui
      string
     </simpara>
    </listitem>
    <listitem>
     <simpara>
      <function>mb_strrichr</function>
-     - Găseşte ultima apariţie a unui caracter dintr-un string în cadrul altui
-     string, luând în consideraţie caracterele minuscule/majuscule
+     - Găsește ultima apariție a unui caracter dintr-un string în cadrul altui
+     string, luând în considerație caracterele minuscule/majuscule
     </simpara>
    </listitem>
    <listitem>
     <simpara>
      <function>mb_strripos</function>
-     - Găseşte ultima apariţie a unui caracter dintr-un string în cadrul altui
-     string, fără a lua în consideraţie caracterele minuscule/majuscule
+     - Găsește ultima apariție a unui caracter dintr-un string în cadrul altui
+     string, fără a lua în considerație caracterele minuscule/majuscule
     </simpara>
    </listitem>
    <listitem>
     <simpara>
      <function>mb_strstr</function>
-     - Găseşte prima apariţie a unui string în cadrul altuia
+     - Găsește prima apariție a unui string în cadrul altuia
     </simpara>
    </listitem>
   </itemizedlist>
@@ -957,7 +957,7 @@ $obj->getCommentName('');
    <listitem>
     <simpara>
      void ming_setSWFCompression(int num)
-     - Stabileşte compresia ieşirii
+     - Stabilește compresia ieșirii
     </simpara>
    </listitem>
    <listitem>
@@ -979,7 +979,7 @@ $obj->getCommentName('');
    <listitem>
     <simpara>
      <function>openssl_csr_get_public_key</function>
-     - Extrage cheia publică dintr-un CERT şi o pregăteşte pentru utilizare
+     - Extrage cheia publică dintr-un CERT și o pregătește pentru utilizare
     </simpara>
    </listitem>
    <listitem>
@@ -991,7 +991,7 @@ $obj->getCommentName('');
    <listitem>
     <simpara>
      <function>openssl_pkey_get_details</function>
-     - Întoarce un tablou cu detaliile cheii (biţii, pkey, tipul)
+     - Întoarce un tablou cu detaliile cheii (biții, pkey, tipul)
     </simpara>
    </listitem>
   </itemizedlist>
@@ -1007,7 +1007,7 @@ $obj->getCommentName('');
    <listitem>
     <simpara>
      int iterator_apply(Traversable it, mixed function [, mixed params])
-     - Apelează o funcţie pentru fiecare element într-un iterator
+     - Apelează o funcție pentru fiecare element într-un iterator
     </simpara>
    </listitem>
   </itemizedlist>
@@ -1017,7 +1017,7 @@ $obj->getCommentName('');
    <listitem>
     <simpara>
      <function>preg_last_error</function>
-     - Întoarce codul erorii a ultimei execuţii regex
+     - Întoarce codul erorii a ultimei execuții regex
     </simpara>
    </listitem>
   </itemizedlist>
@@ -1027,7 +1027,7 @@ $obj->getCommentName('');
    <listitem>
     <simpara>
      <function>pg_field_table</function>
-     - Întoarce denumirea tabelei căreia îi aparţine câmpul, sau oid-ul
+     - Întoarce denumirea tabelei căreia îi aparține câmpul, sau oid-ul
      tabelei dacă <literal>oid_only</literal> este &true;
     </simpara>
    </listitem>
@@ -1083,7 +1083,7 @@ $obj->getCommentName('');
    <listitem>
     <simpara>
      <function>xmlwriter_write_dtd_entity</function>
-     - Înscrie eticheta entităţii DTD depline - întoarce &false; la eroare
+     - Înscrie eticheta entității DTD depline - întoarce &false; la eroare
     </simpara>
    </listitem>
   </itemizedlist>
@@ -1119,7 +1119,7 @@ $obj->getCommentName('');
    <listitem>
     <simpara>
      <function>DOMElement::setIDAttributeNS</function>
-     - Declară atributul specificat după numele local şi spaţiul de nume URI
+     - Declară atributul specificat după numele local și spațiul de nume URI
      pentru a fi de tip ID
     </simpara>
    </listitem>
@@ -1132,13 +1132,13 @@ $obj->getCommentName('');
    <listitem>
     <simpara>
      <methodname>DOMNode::C14NFile</methodname>(string uri [, bool exclusive [, bool with_comments [, array xpath [, array ns_prefixes]]]])
-     - Efectuează transformarea canonică a nodurilor într-un fişier
+     - Efectuează transformarea canonică a nodurilor într-un fișier
     </simpara>
    </listitem>
    <listitem>
     <simpara>
      <methodname>DOMNode::getNodePath</methodname>()
-     - Obţine un <literal>xpath</literal> pentru un nod
+     - Obține un <literal>xpath</literal> pentru un nod
     </simpara>
    </listitem>
   </itemizedlist>
@@ -1148,7 +1148,7 @@ $obj->getCommentName('');
    <listitem>
     <simpara>
      <methodname>SoapServer::setObject</methodname>(object obj)
-     - Stabileşte obiectul care va gestiona interpelările SOAP
+     - Stabilește obiectul care va gestiona interpelările SOAP
     </simpara>
    </listitem>
   </itemizedlist>
@@ -1171,7 +1171,7 @@ $obj->getCommentName('');
     <simpara>
      int <methodname>ArrayObject::natcasesort</methodname>(void)
      - Sortează înregistrările după cheie utilizând algoritmul "ordinii
-     naturale", ce nu diferenţiază caracterele minuscule / majuscule.
+     naturale", ce nu diferențiază caracterele minuscule / majuscule.
     </simpara>
    </listitem>
    <listitem>
@@ -1184,27 +1184,27 @@ $obj->getCommentName('');
    <listitem>
     <simpara>
      int <methodname>ArrayObject::uasort</methodname>(callback cmp_function)
-     - Sortează înregistrările după valori utilizând o funcţie definită de
+     - Sortează înregistrările după valori utilizând o funcție definită de
      utilizator
     </simpara>
    </listitem>
    <listitem>
     <simpara>
      int <methodname>ArrayObject::uksort</methodname>(callback cmp_function)
-     - Sortează înregistrările după cheie utilizând o funcţie definită de
+     - Sortează înregistrările după cheie utilizând o funcție definită de
      utilizator
     </simpara>
    </listitem>
    <listitem>
     <simpara>
      ArrayIterator <methodname>AppendIterator::getArrayIterator</methodname>()
-     - Obţine acces la <literal>ArrayIterator</literal> intern
+     - Obține acces la <literal>ArrayIterator</literal> intern
     </simpara>
    </listitem>
    <listitem>
     <simpara>
      int <methodname>AppendIterator::getIteratorIndex</methodname>()
-     - Obţine indicele iteratorului
+     - Obține indicele iteratorului
     </simpara>
    </listitem>
    <listitem>
@@ -1234,7 +1234,7 @@ $obj->getCommentName('');
    <listitem>
     <simpara>
      void <methodname>CachingIterator::offsetSet</methodname>(mixed index, mixed newval)
-     - Stabileşte indicele dat în cache
+     - Stabilește indicele dat în cache
     </simpara>
    </listitem>
    <listitem>
@@ -1246,20 +1246,20 @@ $obj->getCommentName('');
    <listitem>
     <simpara>
      void <methodname>CachingIterator::setFlags</methodname>()
-     - Stabileşte fanioanele interne
+     - Stabilește fanioanele interne
     </simpara>
    </listitem>
    <listitem>
     <simpara>
      array("delimiter" =>, "enclosure" =>) <methodname>SplFileObject::getCsvControl</methodname>(void)
-     - Obţine caracterele de delimitare şi încapsulare utilizate în
+     - Obține caracterele de delimitare și încapsulare utilizate în
      <function>fgetcsv</function>
     </simpara>
    </listitem>
    <listitem>
     <simpara>
      void <methodname>SplFileObject::setCsvControl</methodname>([string delimiter = ',' [, string enclosure = '"']])
-     - Stabileşte caracterele de delimitare şi încapsulare utilizate în
+     - Stabilește caracterele de delimitare și încapsulare utilizate în
      <function>fgetcsv</function>
     </simpara>
    </listitem>
@@ -1301,9 +1301,9 @@ $obj->getCommentName('');
  <section xml:id="migration52.removed-extensions">
   <title>Extensiile eliminate</title>
   <para>
-   Aceste extensii au fost transferate în PECL şi nu mai fac parte din
+   Aceste extensii au fost transferate în PECL și nu mai fac parte din
    distributivul PHP. Versiunile-pachete PECL ale acestor extensii vor fi
-   create conform cerinţelor utilizatorilor.
+   create conform cerințelor utilizatorilor.
   </para>
   <itemizedlist>
    <listitem>
@@ -1328,7 +1328,7 @@ $obj->getCommentName('');
    <listitem>
     <simpara>
      <link linkend="ref.filter">Filtru</link>
-     - validează şi filtrează datele şi este proiectat pentru a fi utilizat cu
+     - validează și filtrează datele și este proiectat pentru a fi utilizat cu
      date nesecurizate, cum ar fi cele introduse de utilizator. Această
      extensie este activată implicit; modul implicit RAW nu ar vre-un impact
      asupra datelor introduse.
@@ -1345,8 +1345,8 @@ $obj->getCommentName('');
    <listitem>
     <simpara>
      <link linkend="ref.zip">Zip</link>
-     - vă permite să înscrieţi şi să citiţi în mod transparent arhive
-     comprimate ZIP şi fişierele din interiorul lor.
+     - vă permite să înscrieți și să citiți în mod transparent arhive
+     comprimate ZIP și fișierele din interiorul lor.
     </simpara>
    </listitem>
   </itemizedlist>
@@ -1411,7 +1411,7 @@ $obj->getCommentName('');
      </listitem>
     </itemizedlist>
     <simpara>
-     Proprietăţi:
+     Proprietăți:
     </simpara>
     <itemizedlist>
      <listitem>
@@ -1427,26 +1427,26 @@ $obj->getCommentName('');
      <listitem>
       <simpara>
        RegexIterator::__construct(Iterator it, string regex [, int mode [, int flags [, int preg_flags]]])
-       - Creează un <literal>RegexIterator</literal> dintr-un alt iterator şi
+       - Creează un <literal>RegexIterator</literal> dintr-un alt iterator și
        o expresie regulară
       </simpara>
      </listitem>
      <listitem>
       <simpara>
        bool RegexIterator::accept()
-       - Potriveşte (string)current() conform expresiei regulare
+       - Potrivește (string)current() conform expresiei regulare
       </simpara>
      </listitem>
      <listitem>
       <simpara>
        bool RegexIterator::getFlags()
-       - Întoarce fanioanele operaţionale curente
+       - Întoarce fanioanele operaționale curente
       </simpara>
      </listitem>
      <listitem>
       <simpara>
        bool RegexIterator::getMode()
-       - Întoarce modul operaţional curent
+       - Întoarce modul operațional curent
       </simpara>
      </listitem>
      <listitem>
@@ -1458,19 +1458,19 @@ $obj->getCommentName('');
      <listitem>
       <simpara>
        bool RegexIterator::setFlags(int new_flags)
-       - Stabileşte fanioanele operaţionale
+       - Stabilește fanioanele operaționale
       </simpara>
      </listitem>
      <listitem>
       <simpara>
        bool RegexIterator::setMode(int new_mode)
-       - Stabileşte noul mod operaţional
+       - Stabilește noul mod operațional
       </simpara>
      </listitem>
      <listitem>
       <simpara>
        bool RegexIterator::setPregFlags(int new_flags)
-       - Stabileşte fanioanele PREG
+       - Stabilește fanioanele PREG
       </simpara>
      </listitem>
     </itemizedlist>
@@ -1523,13 +1523,13 @@ $obj->getCommentName('');
       <simpara>
        RecursiveRegexIterator::__construct(RecursiveIterator it, string regex [, int mode [, int flags [, int preg_flags]]])
        - Creează un <literal>RecursiveRegexIterator</literal> dintr-un alt
-       iterator recursiv şi o expresie regulară
+       iterator recursiv și o expresie regulară
       </simpara>
      </listitem>
      <listitem>
       <simpara>
        RecursiveRegexIterator RecursiveRegexIterator::getChildren()
-       - Întoarce fiii iteratorului intern, ce se conţin într-un
+       - Întoarce fiii iteratorului intern, ce se conțin într-un
        <literal>RecursiveRegexIterator</literal>
       </simpara>
      </listitem>
@@ -1910,13 +1910,13 @@ $obj->getCommentName('');
      <link linkend="ini.allow-url-include">allow_url_include</link>
     </simpara>
     <simpara>
-     Această opţiune utilă face posibilă diferenţierea dintre operaţiunile
-     standarde asupra fişierelor la distanţă şi includerea
-     fişierelor la distanţă. În timp ce prima este de obicei dezirabilă,
+     Această opțiune utilă face posibilă diferențierea dintre operațiunile
+     standarde asupra fișierelor la distanță și includerea
+     fișierelor la distanță. În timp ce prima este de obicei dezirabilă,
      ultima poate fi un risc de securitate dacă este utilizată naiv. Începând
-     cu PHP 5.2.0 puteţi permite efectuarea operaţiunilor asupra fişierelor la
-     distanţă, interzicând totodată includerea fişierelor la distanţă în
-     script-urile locale. De fapt, aceasta este configuraţia implicită.
+     cu PHP 5.2.0 puteți permite efectuarea operațiunilor asupra fișierelor la
+     distanță, interzicând totodată includerea fișierelor la distanță în
+     script-urile locale. De fapt, aceasta este configurația implicită.
     </simpara>
    </listitem>
    <listitem>
@@ -1932,9 +1932,9 @@ $obj->getCommentName('');
      <link linkend="ini.pcre.recursion-limit">pcre.recursion_limit</link>
     </simpara>
     <simpara>
-     Limita de recursie a PCRE. Observaţi că dacă stabiliţi această valoare prea
-     mare, puteţi să consumaţi toată stiva disponibilă a procesului şi eventual
-     să suspendaţi PHP (din cauza atingerii limitei dimensiunii stivei, impusă
+     Limita de recursie a PCRE. Observați că dacă stabiliți această valoare prea
+     mare, puteți să consumați toată stiva disponibilă a procesului și eventual
+     să suspendați PHP (din cauza atingerii limitei dimensiunii stivei, impusă
      de sistemul de operare).
     </simpara>
    </listitem>
@@ -1945,9 +1945,9 @@ $obj->getCommentName('');
     <simpara>
      Marchează prăjiturile ca fiind accesibile numai prin intermediul
      protocolului HTTP. Aceasta înseamnă că prăjitura nu va fi accesibilă prin
-     intermediul limbajelor de scriptare, cum ar fi JavaScript. Această opţiune
+     intermediul limbajelor de scriptare, cum ar fi JavaScript. Această opțiune
      poate efectiv ajuta la reducerea furtului de identitate prin atacuri XSS
-     (cu toate că aceasta nu este susţinut de toate navigatoarele).
+     (cu toate că aceasta nu este susținut de toate navigatoarele).
     </simpara>
    </listitem>
   </itemizedlist>
@@ -1971,11 +1971,11 @@ $obj->getCommentName('');
  <section xml:id="migration52.errorrep">
   <title>Raportarea erorilor</title>
   <para>
-   Unele din condiţiile <constant>E_ERROR</constant> existente au fost
+   Unele din condițiile <constant>E_ERROR</constant> existente au fost
    convertite în ceva ce poate fi interceptat cu ajutorul unui handler de erori
    definit de utilizator. Dacă o
    <link linkend="errorfunc.constants"><constant>E_RECOVERABLE_ERROR</constant></link>
-   nu este interceptată, ea se va comporta la fel ca şi
+   nu este interceptată, ea se va comporta la fel ca și
    <constant>E_ERROR</constant> în toate versiunile PHP. Erorile de acest tip
    sunt înscrise în jurnal ca <literal>Eroare fatală interceptabilă</literal>.
   </para>
@@ -1985,10 +1985,10 @@ $obj->getCommentName('');
    acum 6143, în timp ce valoarea precedentă era 2047. Deoarece constantele
    PHP nu au nici o însemnătate în afara PHP, în unele cazuri este utilizată
    valoarea întreagă, de aceea ea va trebui ajustată. Deci, spre exemplu,
-   stabilind modul <literal>error_reporting</literal> în fişierele
+   stabilind modul <literal>error_reporting</literal> în fișierele
    <link linkend="apache.configuration">httpd.conf</link> sau
    <filename>.htaccess</filename>, valoarea trebuie schimbată corespunzător.
-   Acelaşi lucru este valabil atunci când valorile numerice sunt utilizate în
+   Același lucru este valabil atunci când valorile numerice sunt utilizate în
    locul constantelor în script-urile PHP.
   </para>
   <para>
@@ -2003,16 +2003,16 @@ $obj->getCommentName('');
  </section>
 
  <section xml:id="migration52.other">
-  <title>Alte îmbunătăţiri</title>
+  <title>Alte îmbunătățiri</title>
   <itemizedlist>
    <listitem>
     <simpara>
-     Managerul îmbunătăţit al memoriei şi limita implicită mărită a memoriei.
+     Managerul îmbunătățit al memoriei și limita implicită mărită a memoriei.
     </simpara>
     <simpara>
-     Noul manager al memoriei alocă mai puţină memorie şi lucrează mai rapid
+     Noul manager al memoriei alocă mai puțină memorie și lucrează mai rapid
      decât încarnarea precedentă. El alocă memorie din sistem în blocuri largi
-     şi apoi gestionează grămada (heap) independent. Valoarea
+     și apoi gestionează grămada (heap) independent. Valoarea
      <literal>memory_limit</literal> din &php.ini; este verificată nu la
      fiecare apel <literal>emalloc()</literal> (ca înainte), dar pentru
      blocurile de facto cerute de la sistem. Aceasta înseamnă că
@@ -2021,25 +2021,25 @@ $obj->getCommentName('');
      de biblioteca <literal>malloc</literal>.
     </simpara>
     <simpara>
-     Datorită acestei precizii obţinute utilizarea memoriei poate părea să se
-     fi mărit, cu toate că, de fapt, nu este aşa. Pentru a acomoda această
+     Datorită acestei precizii obținute utilizarea memoriei poate părea să se
+     fi mărit, cu toate că, de fapt, nu este așa. Pentru a acomoda această
      mărire aparentă, valoarea implicită a <literal>memory_limit</literal> de
-     asemenea a fost mărită - de la 8 la 16 megaocteţi.
+     asemenea a fost mărită - de la 8 la 16 megaocteți.
     </simpara>
    </listitem>
    <listitem>
     <simpara>
-     S-a adăugat susţinerea constructorilor în interfeţe pentru a forţa
+     S-a adăugat susținerea constructorilor în interfețe pentru a forța
      verificarea semnăturilor constructorilor în implementări.
     </simpara>
     <simpara>
-     Începând cu PHP 5.2.0, interfeţele pot avea constructori. Însă dacă
-     alegeţi să declaraţi un constructor într-o interfaţă, fiecare clasă ce va
-     implementa această interfaţă TREBUIE să includă un constructor cu o
-     semnătură identică cu acea a constructorului din interfaţa de bază. Prin
-     'semnătură' se înţeleg definiţiile tipurilor parametrilor şi a valorii
-     întoarse, inclusiv orice fel de indicatori expliciţi ai tipurilor şi
-     faptul dacă datele sunt transmise prin referinţă, sau prin valoare.
+     Începând cu PHP 5.2.0, interfețele pot avea constructori. Însă dacă
+     alegeți să declarați un constructor într-o interfață, fiecare clasă ce va
+     implementa această interfață TREBUIE să includă un constructor cu o
+     semnătură identică cu acea a constructorului din interfața de bază. Prin
+     'semnătură' se înțeleg definițiile tipurilor parametrilor și a valorii
+     întoarse, inclusiv orice fel de indicatori expliciți ai tipurilor și
+     faptul dacă datele sunt transmise prin referință, sau prin valoare.
     </simpara>
    </listitem>
   </itemizedlist>

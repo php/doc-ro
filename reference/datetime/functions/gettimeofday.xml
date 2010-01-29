@@ -5,7 +5,7 @@
 <refentry xml:id="function.gettimeofday" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>gettimeofday</refname>
-  <refpurpose>Obţine timpul curent</refpurpose>
+  <refpurpose>Obține timpul curent</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -15,8 +15,8 @@
    <methodparam choice="opt"><type>bool</type><parameter>return_float</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Aceasta este o interfaţă pentru gettimeofday(2). Ea întoarce un tablou
-   asociativ ce conţine datele întoarse în rezultatul apelului funcţiei
+   Aceasta este o interfață pentru gettimeofday(2). Ea întoarce un tablou
+   asociativ ce conține datele întoarse în rezultatul apelului funcției
    de sistem.
   </para>
  </refsect1>

@@ -16,7 +16,7 @@
    <methodparam choice="opt"><type>mixed</type><parameter>...</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Creează un pachet WDDX cu o structură ce conţine reprezentarea serializată a
+   Creează un pachet WDDX cu o structură ce conține reprezentarea serializată a
    variabilelor transmise.
   </para>
  </refsect1>
@@ -24,13 +24,13 @@
  <refsect1 role="parameters">
   &reftitle.parameters;
   <para>
-   Această funcţie preia un număr variabil de parametri.
+   Această funcție preia un număr variabil de parametri.
    <variablelist>
     <varlistentry>
      <term><parameter>var_name</parameter></term>
      <listitem>
       <para>
-       Poate fi sau un string cu denumirea variabilei, sau un array conţinând
+       Poate fi sau un string cu denumirea variabilei, sau un array conținând
        string-uri cu denumirile variabilelor, sau un alt array, etc.
       </para>
      </listitem>

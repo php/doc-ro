@@ -16,14 +16,14 @@
    <methodparam choice="opt"><type>int</type><parameter>error_type</parameter><initializer>E_USER_NOTICE</initializer></methodparam>
   </methodsynopsis>
   <para>
-   Utilizată pentru a declanşa o condiţie de eroare la nivel de utilizator, ea
-   poate fi utilizată în combinaţie cu handler-ul de erori încorporat, sau cu
-   o funcţie definită de utilizator care a fost stabilită ca un nou handler al
+   Utilizată pentru a declanșa o condiție de eroare la nivel de utilizator, ea
+   poate fi utilizată în combinație cu handler-ul de erori încorporat, sau cu
+   o funcție definită de utilizator care a fost stabilită ca un nou handler al
    erorii (<function>set_error_handler</function>).
   </para>
   <para>
-   Această funcţie este utilă atunci când aveţi nevoie să generaţi un răspuns
-   anumit la apariţia unei excepţii în timpul rulării.
+   Această funcție este utilă atunci când aveți nevoie să generați un răspuns
+   anumit la apariția unei excepții în timpul rulării.
   </para>
  </refsect1>
 
@@ -44,8 +44,8 @@
      <term><parameter>error_type</parameter></term>
      <listitem>
       <para>
-       Tipul erorii desemnat pentru această eroare. Aceasta funcţionează numai
-       cu familia de constante E_USER, şi va avea valoarea implicită
+       Tipul erorii desemnat pentru această eroare. Aceasta funcționează numai
+       cu familia de constante E_USER, și va avea valoarea implicită
        <constant>E_USER_NOTICE</constant>.
       </para>
      </listitem>
@@ -57,7 +57,7 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Această funcţie întoarce &false; dacă <parameter>error_type</parameter> este
+   Această funcție întoarce &false; dacă <parameter>error_type</parameter> este
    specificat, &true; în caz contrar.
   </para>
  </refsect1>
@@ -68,7 +68,7 @@
    <example>
     <title>Exemplu <function>trigger_error</function></title>
     <para>
-     Accesaţi <function>set_error_handler</function> pentru un exemplu mai
+     Accesați <function>set_error_handler</function> pentru un exemplu mai
      detaliat.
     </para>
     <programlisting role="php">
@@ -88,9 +88,9 @@ if (assert($divisor == 0)) {
   &reftitle.notes;
   <warning>
    <para>
-     Entităţile HTML din <parameter>error_msg</parameter> nu sunt "evadate".
-     Utilizaţi <function>htmlentities</function> asupra mesajului dacă eroarea
-     trebuie afişată într-un navigator.
+     Entitățile HTML din <parameter>error_msg</parameter> nu sunt "evadate".
+     Utilizați <function>htmlentities</function> asupra mesajului dacă eroarea
+     trebuie afișată într-un navigator.
    </para>
   </warning>
  </refsect1>

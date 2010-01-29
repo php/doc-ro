@@ -16,7 +16,7 @@
    <methodparam choice="opt"><type>int</type><parameter>options</parameter><initializer>0</initializer></methodparam>
   </methodsynopsis>
   <para>
-   Întoarce un şir care conţine o reprezentare JSON pentru valoarea
+   Întoarce un șir care conține o reprezentare JSON pentru valoarea
    (<parameter>value</parameter>) dată.
   </para>
  </refsect1>
@@ -30,10 +30,10 @@
      <listitem>
       <para>
        Valoarea (<parameter>value</parameter>) care trebuie reprezentată JSON.
-       Poate fi de orice tip cu excepţia <type>resource</type>.
+       Poate fi de orice tip cu excepția <type>resource</type>.
       </para>
       <para>
-       Această funcţie acceptă numai date codate în UTF-8.
+       Această funcție acceptă numai date codate în UTF-8.
       </para>
      </listitem>
     </varlistentry>
@@ -41,7 +41,7 @@
      <term><parameter>options</parameter></term>
      <listitem>
       <para>
-       O mască de biţi, ce constă din <constant>JSON_HEX_QUOT</constant>,
+       O mască de biți, ce constă din <constant>JSON_HEX_QUOT</constant>,
        <constant>JSON_HEX_TAG</constant>,
        <constant>JSON_HEX_AMP</constant>,
        <constant>JSON_HEX_APOS</constant>,
@@ -56,7 +56,7 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Întoarce un şir (<type>string</type>) reprezentat JSON dacă reuşeşte.
+   Întoarce un șir (<type>string</type>) reprezentat JSON dacă reușește.
   </para>
  </refsect1>
 

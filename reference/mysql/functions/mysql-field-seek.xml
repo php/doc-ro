@@ -5,7 +5,7 @@
 <refentry xml:id="function.mysql-field-seek" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>mysql_field_seek</refname>
-  <refpurpose>Stabileşte indicatorul rezultatului la deplasamentul câmpului specificat</refpurpose>
+  <refpurpose>Stabilește indicatorul rezultatului la deplasamentul câmpului specificat</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">

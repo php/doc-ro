@@ -8,37 +8,37 @@
   <simpara>
    PHP este un limbaj de programare web puternic, iar interpretorul său,
    fie că este inclus în serverul web ca un modul, sau executat separat
-   ca binar <acronym>CGI</acronym>, este capabil să acceseze fişiere,
-   să execute comenzi sau să deschidă conexiuni în reţea pe server.
-   Aceste proprietăţi fac ca totul ce este rulat pe server să fie implicit
+   ca binar <acronym>CGI</acronym>, este capabil să acceseze fișiere,
+   să execute comenzi sau să deschidă conexiuni în rețea pe server.
+   Aceste proprietăți fac ca totul ce este rulat pe server să fie implicit
    nesecurizat. PHP a fost proiectat în mod specific pentru ca să fie un limbaj
    mai securizat pentru scrierea programelor <acronym>CGI</acronym> decât Perl
-   sau C, şi cu o selectare corectă a opţiunilor de configurare la compilare şi
+   sau C, și cu o selectare corectă a opțiunilor de configurare la compilare și
    la rulare, dublate de o tehnică de programare corespunzătoare, PHP vă poate
-   oferi combinaţia perfectă de libertate şi securitate de care aveţi nevoie.
+   oferi combinația perfectă de libertate și securitate de care aveți nevoie.
   </simpara>
   <simpara>
-   Deoarece există multe modalităţi diferite de a utiliza PHP, există şi multe
-   opţiuni de configurare care îi controlează comportamentul. O gamă largă de
-   opţiuni de configurare garantează posibilitatea utilizării PHP pentru o
-   întreagă suită de întrebuinţări, dar aceasta totodată înseamnă că pot exista
-   combinaţii ale acestor opţiuni şi ale configuraţiilor de servere, care vor
-   duce la crearea unui mediu de execuţie nesecurizat.
+   Deoarece există multe modalități diferite de a utiliza PHP, există și multe
+   opțiuni de configurare care îi controlează comportamentul. O gamă largă de
+   opțiuni de configurare garantează posibilitatea utilizării PHP pentru o
+   întreagă suită de întrebuințări, dar aceasta totodată înseamnă că pot exista
+   combinații ale acestor opțiuni și ale configurațiilor de servere, care vor
+   duce la crearea unui mediu de execuție nesecurizat.
   </simpara>
   <simpara>
-   Flexibilitatea configuraţiilor în PHP este egală şi rivalizează
+   Flexibilitatea configurațiilor în PHP este egală și rivalizează
    cu flexibilitatea codului-sursă. PHP poate fi utilizat pentru a construi
-   aplicaţii complete pentru servere, cu toate avantajele unui utilizator
+   aplicații complete pentru servere, cu toate avantajele unui utilizator
    shell, sau poate fi utilizat ca o simplă incluziune de partea serverului
    cu grad de risc redus, într-un mediu bine controlat. Modul de construire a
-   acestui mediu şi cât de securizat este el depinde în mare măsură de
+   acestui mediu și cât de securizat este el depinde în mare măsură de
    programatorul PHP.
   </simpara>
   <simpara>
-   Acest capitol începe cu câteva sfaturi generale în privinţa securităţii,
-   explică diferite combinaţii ale opţiunilor de configurare, precum şi
-   situaţiile în care pot fi folosite cu siguranţă; descrie de asemenea,
-   diferite consideraţii legate de programare la diferite nivele de securitate.
+   Acest capitol începe cu câteva sfaturi generale în privința securității,
+   explică diferite combinații ale opțiunilor de configurare, precum și
+   situațiile în care pot fi folosite cu siguranță; descrie de asemenea,
+   diferite considerații legate de programare la diferite nivele de securitate.
   </simpara>
  </chapter>
 

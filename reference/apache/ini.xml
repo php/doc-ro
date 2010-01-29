@@ -5,10 +5,10 @@
  &reftitle.runtime;
  <para>
   Comportamentul modulului PHP pentru Apache este afectat de parametrii din
-  &php.ini;. Parametrii de configurare din &php.ini; pot fi modificaţi de cei
-  stabiliţi cu ajutorul
-  <link linkend="configuration.changes.apache">php_flag</link> în fişierul de
-  configurare al serverului sau din fişierele locale &htaccess;.
+  &php.ini;. Parametrii de configurare din &php.ini; pot fi modificați de cei
+  stabiliți cu ajutorul
+  <link linkend="configuration.changes.apache">php_flag</link> în fișierul de
+  configurare al serverului sau din fișierele locale &htaccess;.
  </para>
  <example>
   <title>Deconectarea prelucrării PHP pentru un director utilizând &htaccess;</title>
@@ -16,7 +16,7 @@
  </example>
  <para>
   <table>
-   <title>Opţiunile de configurare Apache</title>
+   <title>Opțiunile de configurare Apache</title>
    <tgroup cols="4">
     <thead>
      <row>
@@ -73,7 +73,7 @@
       care doresc să conecteze sau să deconecteze prelucrarea PHP pentru unele
       directoare sau servere virtuale. Stabilind
       <userinput>engine off</userinput> în locurile corespunzătoare din
-      fişierul &httpd.conf; PHP poate fi conectat sau deconectat.
+      fișierul &httpd.conf; PHP poate fi conectat sau deconectat.
      </para>
     </listitem>
    </varlistentry>
@@ -85,7 +85,7 @@
     <listitem>
      <para>
       Specifică dacă scripturile PHP pot cere terminarea procesului-fiu la
-      sfârşitul interpelării, vedeţi de asemenea 
+      sfârșitul interpelării, vedeți de asemenea 
       <function>apache_child_terminate</function>.
      </para>
     </listitem>
@@ -109,8 +109,8 @@
     </term>
     <listitem>
      <para>
-      Prelucrează fişiere cu bitul de execuţie stabilit ca fişiere PHP
-      indiferent de terminaţia denumirii fişierului.
+      Prelucrează fișiere cu bitul de execuție stabilit ca fișiere PHP
+      indiferent de terminația denumirii fișierului.
      </para>
     </listitem>
    </varlistentry>

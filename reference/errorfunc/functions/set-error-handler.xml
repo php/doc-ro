@@ -5,7 +5,7 @@
 <refentry xml:id="function.set-error-handler" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>set_error_handler</refname>
-  <refpurpose>Stabileşte o funcţie definită de utilizator pentru prelucrarea erorilor</refpurpose>
+  <refpurpose>Stabilește o funcție definită de utilizator pentru prelucrarea erorilor</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -16,46 +16,46 @@
    <methodparam choice="opt"><type>int</type><parameter>error_types</parameter><initializer>E_ALL | E_STRICT</initializer></methodparam>
   </methodsynopsis>
   <para>
-   Stabileşte o funcţie a utilizatorului (<parameter>error_handler</parameter>)
+   Stabilește o funcție a utilizatorului (<parameter>error_handler</parameter>)
    pentru a prelucra erorile într-un script.
   </para>
   <para>
-   Această funcţie poate fi utilizată pentru definirea propriului dumneavoastră
-   mod de a prelucra erorile în timpul rulării, spre exemplu în aplicaţii în
-   care este nevoie de a efectua curăţirea datelor / fişierelor atunci când
-   survine o eroare critică, sau când aveţi nevoie să declanşaţi o eroare în
-   anumite circumstanţe (utilizând <function>trigger_error</function>).
+   Această funcție poate fi utilizată pentru definirea propriului dumneavoastră
+   mod de a prelucra erorile în timpul rulării, spre exemplu în aplicații în
+   care este nevoie de a efectua curățirea datelor / fișierelor atunci când
+   survine o eroare critică, sau când aveți nevoie să declanșați o eroare în
+   anumite circumstanțe (utilizând <function>trigger_error</function>).
   </para>
   <para>
-   Este important de a ţine minte că funcţia standardă de prelucrare a erorii a
+   Este important de a ține minte că funcția standardă de prelucrare a erorii a
    PHP este ocolită complet pentru tipurile de erori specificate în
    <parameter>error_types</parameter> dacă funcția de apel invers nu întoarce
    &false;. Setările <function>error_reporting</function> nu vor avea nici un
-   efect şi funcţia dumneavoastră de prelucrare a erorii va fi apelată în orice
-   caz - însă puteţi totuşi citi valoarea curentă a
-   <link linkend="ini.error-reporting">error_reporting</link> şi să acţionaţi
-   corespunzător. Merită de menţionat că această valoare va fi 0 dacă
-   instrucţiunea care a cauzat eroarea a fost prefixată cu
+   efect și funcția dumneavoastră de prelucrare a erorii va fi apelată în orice
+   caz - însă puteți totuși citi valoarea curentă a
+   <link linkend="ini.error-reporting">error_reporting</link> și să acționați
+   corespunzător. Merită de menționat că această valoare va fi 0 dacă
+   instrucțiunea care a cauzat eroarea a fost prefixată cu
    <link linkend="language.operators.errorcontrol">operatorul de
    control al erorii @</link>.
   </para>
   <para>
-   De asemenea observaţi ca este responsabilitatea dumneavoastră să efectuaţi
-   <function>die</function> dacă este necesar. Dacă funcţia de prelucrare a
-   erorii întoarce controlul execuţiei, execuţia scriptului continuă cu
-   următoarea instrucţiune după acea care a cauzat eroarea.
+   De asemenea observați ca este responsabilitatea dumneavoastră să efectuați
+   <function>die</function> dacă este necesar. Dacă funcția de prelucrare a
+   erorii întoarce controlul execuției, execuția scriptului continuă cu
+   următoarea instrucțiune după acea care a cauzat eroarea.
   </para>
   <para>
-   Următoarele tipuri de erori nu pot fi prelucrate de o funcţie definită de
+   Următoarele tipuri de erori nu pot fi prelucrate de o funcție definită de
    utilizator: <constant>E_ERROR</constant>, <constant>E_PARSE</constant>,
    <constant>E_CORE_ERROR</constant>, <constant>E_CORE_WARNING</constant>,
    <constant>E_COMPILE_ERROR</constant>, <constant>E_COMPILE_WARNING</constant>
-   şi majoritatea <constant>E_STRICT</constant> ce survin în fişier, unde
+   și majoritatea <constant>E_STRICT</constant> ce survin în fișier, unde
    <function>set_error_handler</function> este apelat.
   </para>
   <para>
-   Dacă erorile survin înainte de execuţia script-ului (de ex. la încărcarea
-   fişierelor), funcţiile proprii de prelucrare a erorilor nu pot fi apelate,
+   Dacă erorile survin înainte de execuția script-ului (de ex. la încărcarea
+   fișierelor), funcțiile proprii de prelucrare a erorilor nu pot fi apelate,
    deoarece încă nu sunt înregistrate la acel moment.
   </para>
  </refsect1>
@@ -68,12 +68,12 @@
      <term><parameter>error_handler</parameter></term>
      <listitem>
       <para>
-       Funcţia utilizatorului trebuie să accepte doi parametri: codul erorii
-       şi un string ce descrie eroarea. Apoi sunt trei parametri opţionali ce
-       pot fi furnizaţi: denumirea fişierului în care a survenit eroarea,
-       numărul liniei în care a survenit eroarea şi contextul în care a
+       Funcția utilizatorului trebuie să accepte doi parametri: codul erorii
+       și un string ce descrie eroarea. Apoi sunt trei parametri opționali ce
+       pot fi furnizați: denumirea fișierului în care a survenit eroarea,
+       numărul liniei în care a survenit eroarea și contextul în care a
        survenit eroarea (un tablou ce indică spre tabelul de simboluri activ
-       la momentul apariţiei erorii). Funcţia poate fi definită ca:
+       la momentul apariției erorii). Funcția poate fi definită ca:
       </para>
       <para>
        <methodsynopsis>
@@ -89,7 +89,7 @@
          <term><parameter>errno</parameter></term>
          <listitem>
           <simpara>
-           Primul parametru, <parameter>errno</parameter>, conţine nivelul
+           Primul parametru, <parameter>errno</parameter>, conține nivelul
            erorii (tip integer).
           </simpara>
          </listitem>
@@ -98,7 +98,7 @@
          <term><parameter>errstr</parameter></term>
          <listitem>
           <simpara>
-           Al doilea parametru, <parameter>errstr</parameter>, conţine mesajul
+           Al doilea parametru, <parameter>errstr</parameter>, conține mesajul
            de eroare (tip string).
           </simpara>
          </listitem>
@@ -107,8 +107,8 @@
          <term><parameter>errfile</parameter></term>
          <listitem>
           <simpara>
-           Al treilea parametru opţional, <parameter>errfile</parameter>,
-           conţine denumirea fişierului în care a avut loc eroarea (tip string).
+           Al treilea parametru opțional, <parameter>errfile</parameter>,
+           conține denumirea fișierului în care a avut loc eroarea (tip string).
           </simpara>
          </listitem>
         </varlistentry>
@@ -116,8 +116,8 @@
          <term><parameter>errline</parameter></term>
          <listitem>
           <simpara>
-           Al patrulea parametru opţional, <parameter>errline</parameter>,
-           conţine numărul liniei unde a avut loc eroarea (tip integer).
+           Al patrulea parametru opțional, <parameter>errline</parameter>,
+           conține numărul liniei unde a avut loc eroarea (tip integer).
           </simpara>
          </listitem>
         </varlistentry>
@@ -125,12 +125,12 @@
          <term><parameter>errcontext</parameter></term>
          <listitem>
           <simpara>
-           Al cincilea parametru opţional, <parameter>errcontext</parameter>,
+           Al cincilea parametru opțional, <parameter>errcontext</parameter>,
            este un tablou ce indică spre tabelul de simboluri activ la momentul
            când a avut loc eroarea. Cu alte cuvinte,
-           <parameter>errcontext</parameter> va conţine un tablou cu toate
+           <parameter>errcontext</parameter> va conține un tablou cu toate
            variabilele ce au existat în contextul în care s-a produs eroarea.
-           Funcţia de prelucrare a erorii definită de utilizator nu trebuie să
+           Funcția de prelucrare a erorii definită de utilizator nu trebuie să
            modifice contextul erorii.
           </simpara>
          </listitem>
@@ -138,7 +138,7 @@
        </variablelist>
       </para>
       <para>
-       Dacă funcţia întoarce &false;, atunci funcţia normală de gestiune a
+       Dacă funcția întoarce &false;, atunci funcția normală de gestiune a
        erorii continuă.
       </para>
      </listitem>
@@ -147,10 +147,10 @@
      <term><parameter>error_types</parameter></term>
      <listitem>
       <para>
-       Poate fi utilizat pentru a masca declanşarea funcţiei
+       Poate fi utilizat pentru a masca declanșarea funcției
        <parameter>error_handler</parameter> în mod asemănător cum setarea ini
        <link linkend="ini.error-reporting">error_reporting</link> controlează
-       care erori sunt afişate. Fără această mască stabilită
+       care erori sunt afișate. Fără această mască stabilită
        <parameter>error_handler</parameter> va fi apelată la orice eroare,
        indiferent de setările
        <link linkend="ini.error-reporting">error_reporting</link>.
@@ -164,12 +164,12 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Întoarce un string conţinând funcţia de prelucrare a erorii definită
-   anterior (dacă există). Dacă se utilizează funcţia implicită de prelucrare
-   a erorii, va fi întors &null;. &null; este întors de asemenea şi în cazul
-   unei erori, cum ar fi o funcţie de prelucrare a erorii invalidă. Dacă
-   funcţia precedentă de prelucrare a erorii era o metodă a unei clase, această
-   funcţie va întoarce un tablou indexat, incluzând clasa şi denumirea metodei.
+   Întoarce un string conținând funcția de prelucrare a erorii definită
+   anterior (dacă există). Dacă se utilizează funcția implicită de prelucrare
+   a erorii, va fi întors &null;. &null; este întors de asemenea și în cazul
+   unei erori, cum ar fi o funcție de prelucrare a erorii invalidă. Dacă
+   funcția precedentă de prelucrare a erorii era o metodă a unei clase, această
+   funcție va întoarce un tablou indexat, incluzând clasa și denumirea metodei.
   </para>
  </refsect1>
 
@@ -188,7 +188,7 @@
       <row>
        <entry>5.2.0</entry>
        <entry>
-        Funcţia de prelucrare a erorii trebuie să întoarcă &false; pentru a
+        Funcția de prelucrare a erorii trebuie să întoarcă &false; pentru a
         popula <varname>$php_errormsg</varname>.
        </entry>
       </row>
@@ -201,17 +201,17 @@
       <row>
        <entry>4.3.0</entry>
        <entry>
-        În locul denumirii funcţiei, poate fi furnizat de asemenea şi un tablou
-        conţinând o referinţă la un obiect şi denumirea unei metode în
+        În locul denumirii funcției, poate fi furnizat de asemenea și un tablou
+        conținând o referință la un obiect și denumirea unei metode în
         parametrul <parameter>error_handler</parameter>.
        </entry>
       </row>
       <row>
        <entry>4.0.2</entry>
        <entry>
-        Au fost introduşi trei parametri opţionali pentru funcţia
-        utilizatorului <parameter>error_handler</parameter>. Aceştia sunt
-        denumirea fişierului, numărul liniei şi contextul.
+        Au fost introduși trei parametri opționali pentru funcția
+        utilizatorului <parameter>error_handler</parameter>. Aceștia sunt
+        denumirea fișierului, numărul liniei și contextul.
        </entry>
       </row>
      </tbody>
@@ -224,16 +224,16 @@
   &reftitle.examples;
   <para>
    <example>
-    <title>Controlul erorilor cu <function>set_error_handler</function> şi <function>trigger_error</function></title>
+    <title>Controlul erorilor cu <function>set_error_handler</function> și <function>trigger_error</function></title>
     <para>
-     Exemplul ce urmează demonstrează prelucrarea excepţiilor interne prin
-     generarea erorilor şi prelucrarea lor cu ajutorul unei funcţii definite de
+     Exemplul ce urmează demonstrează prelucrarea excepțiilor interne prin
+     generarea erorilor și prelucrarea lor cu ajutorul unei funcții definite de
      utilizator:
     </para>
     <programlisting role="php">
 <![CDATA[
 <?php
-// Funcţia de prelucrare a erorilor
+// Funcția de prelucrare a erorilor
 function myErrorHandler($errno, $errstr, $errfile, $errline)
 {
     switch ($errno) {
@@ -258,11 +258,11 @@ function myErrorHandler($errno, $errstr, $errfile, $errline)
         break;
     }
 
-    /* Nu executa funcţia internă a PHP de prelucrare a erorii */
+    /* Nu executa funcția internă a PHP de prelucrare a erorii */
     return true;
 }
 
-// Funcţie pentru a verifica prelucrarea erorilor
+// Funcție pentru a verifica prelucrarea erorilor
 function scale_by_log($vect, $scale)
 {
     if (!is_numeric($scale) || $scale <= 0) {
@@ -286,29 +286,29 @@ function scale_by_log($vect, $scale)
     return $temp;
 }
 
-// Se stabileşte funcţia de prelucrare a erorilor definită de utilizator
+// Se stabilește funcția de prelucrare a erorilor definită de utilizator
 $old_error_handler = set_error_handler("myErrorHandler");
 
-// declanşăm unele erori, în primul rând definim un tablou mixt cu un element non-numeric
+// declanșăm unele erori, în primul rând definim un tablou mixt cu un element non-numeric
 echo "vector a\n";
 $a = array(2, 3, "foo", 5.5, 43.3, 21.11);
 print_r($a);
 
 // acum generăm următorul tablou
 echo "----\nvector b - a notice (b = log(PI) * a)\n";
-/* Valoarea din poziţia $pos nu este un număr, se va utiliza 0 (zero) */
+/* Valoarea din poziția $pos nu este un număr, se va utiliza 0 (zero) */
 $b = scale_by_log($a, M_PI);
 print_r($b);
 
 // aici este o problemă: se transmite un string în loc de un array
 echo "----\nvector c - a warning\n";
-/* Vector de intrare incorect, se aşteaptă un tablou de valori */
+/* Vector de intrare incorect, se așteaptă un tablou de valori */
 $c = scale_by_log("not array", 2.3);
 var_dump($c); // NULL
 
 // aceasta este o eroare critică, logaritmul lui zero, sau a unui număr negativ este nedefinit
 echo "----\nvector d - fatal error\n";
-/* log(x) pentru x <= 0 nu este definit, aţi utilizat: scale = $scale" */
+/* log(x) pentru x <= 0 nu este definit, ați utilizat: scale = $scale" */
 $d = scale_by_log($a, -2.5);
 var_dump($d); // Niciodată nu se ajunge aici
 ?>

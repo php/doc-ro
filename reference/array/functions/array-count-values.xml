@@ -16,8 +16,8 @@
   </methodsynopsis>
   <para>
    <function>array_count_values</function> întoarce un tablou utilizând valorile
-   tabloului <parameter>input</parameter> în calitate de chei şi frecvenţa
-   apariţiei lor în <parameter>input</parameter> în calitate de valori.
+   tabloului <parameter>input</parameter> în calitate de chei și frecvența
+   apariției lor în <parameter>input</parameter> în calitate de valori.
   </para>
  </refsect1>
 
@@ -43,7 +43,7 @@
   &reftitle.returnvalues;
   <para>
    Întoarce un tablou asociativ de valori din <parameter>input</parameter> în
-   calitate de chei şi numărul lor în calitate de valori.
+   calitate de chei și numărul lor în calitate de valori.
   </para>
  </refsect1>
 

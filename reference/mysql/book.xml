@@ -12,17 +12,17 @@
  <preface xml:id="intro.mysql">
   &reftitle.intro;
   <para>
-   Aceste funcţii vă permit accesarea serverelor de baze de date MySQL.
-   Informaţii suplimentare despre MySQL pot fi găsite la
+   Aceste funcții vă permit accesarea serverelor de baze de date MySQL.
+   Informații suplimentare despre MySQL pot fi găsite la
    <link xlink:href="&url.mysql;">&url.mysql;</link>.
   </para>
   <para>
-   Documentaţia pentru MySQL poate fi găsită la
+   Documentația pentru MySQL poate fi găsită la
    <link xlink:href="&url.mysql.docs;">&url.mysql.docs;</link>.
   </para>
   <para>
    Pentru o privire de ansamblu asupra termenelor de conectare la baze de date
-   şi a produselor accesaţi <xref linkend="mysqli.overview"/>.
+   și a produselor accesați <xref linkend="mysqli.overview"/>.
   </para>
  </preface>
  <!-- }}} -->

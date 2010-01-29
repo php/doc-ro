@@ -6,7 +6,7 @@
 <refentry xml:id="function.var-export" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>var_export</refname>
-  <refpurpose>Afişează sau întoarce o reprezentare string, ce poate fi prelucrată, a unei variabile</refpurpose>
+  <refpurpose>Afișează sau întoarce o reprezentare string, ce poate fi prelucrată, a unei variabile</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -17,9 +17,9 @@
    <methodparam choice="opt"><type>bool</type><parameter>return</parameter><initializer>false</initializer></methodparam>
   </methodsynopsis>
   <simpara>
-   <function>var_export</function> poate obţine informaţia structurată despre
+   <function>var_export</function> poate obține informația structurată despre
    variabila dată. Este similară cu <function>var_dump</function> cu o singură
-   excepţie: reprezentarea întoarsă este cod PHP valid.
+   excepție: reprezentarea întoarsă este cod PHP valid.
   </simpara>
  </refsect1>
 
@@ -31,7 +31,7 @@
      <term><parameter>expression</parameter></term>
      <listitem>
       <para>
-       Variabila pe care doriţi să o exportaţi.
+       Variabila pe care doriți să o exportați.
       </para>
      </listitem>
     </varlistentry>
@@ -39,8 +39,8 @@
      <term><parameter>return</parameter></term>
      <listitem>
       <para>
-       Dacă este utilizat şi stabilit în &true;, <function>var_export</function>
-       va întoarce reprezentarea variabilei în loc să o afişeze.
+       Dacă este utilizat și stabilit în &true;, <function>var_export</function>
+       va întoarce reprezentarea variabilei în loc să o afișeze.
       </para>
       &note.uses-ob;
      </listitem>
@@ -53,7 +53,7 @@
   &reftitle.returnvalues;
   <para>
    Întoarce reprezentarea variabilei când parametrul <parameter>return</parameter>
-   este utilizat şi evaluează în &true;. În caz contrar, această funcţie va
+   este utilizat și evaluează în &true;. În caz contrar, această funcție va
    întoarce &null;.
   </para>
  </refsect1>
@@ -73,7 +73,7 @@
       <row>
        <entry>5.1.0</entry>
        <entry>
-        Posibilitatea de a exporta clase şi tablouri conţinând clase utilizând
+        Posibilitatea de a exporta clase și tablouri conținând clase utilizând
         metoda magică
         <link linkend="language.oop5.magic.set-state">__set_state</link>.
        </entry>
@@ -206,15 +206,15 @@ object(A)#2 (2) {
   <note>
    <para>
     Variabile de tip <type>resource</type> nu pot fi exportate cu această
-    funcţie.
+    funcție.
    </para>
   </note>
   <note>
    <para>
-    <function>var_export</function> nu prelucrează referinţe circulare, deoarece
+    <function>var_export</function> nu prelucrează referințe circulare, deoarece
     ar fi aproape imposibil de a genera cod PHP prelucrabil în acest caz. Dacă
-    doriţi să faceţi ceva cu reprezentarea deplină a unui tablou sau obiect,
-    utilizaţi <function>serialize</function>.
+    doriți să faceți ceva cu reprezentarea deplină a unui tablou sau obiect,
+    utilizați <function>serialize</function>.
    </para>
   </note>
  </refsect1>

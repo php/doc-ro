@@ -5,7 +5,7 @@
 <refentry xml:id="function.import-request-variables" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>import_request_variables</refname>
-  <refpurpose>Importă variabilele GET/POST/Cookie în circumstanţa globală</refpurpose>
+  <refpurpose>Importă variabilele GET/POST/Cookie în circumstanța globală</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -16,13 +16,13 @@
    <methodparam choice="opt"><type>string</type><parameter>prefix</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Importă variabilele GET/POST/Cookie în circumstanţa globală. Această funcţie
-   este utilă dacă aţi dezactivat <link linkend="ini.register-globals">register_globals</link>,
-   însă doriţi să aveţi acces la unele variabile din circumstanţa globală.
+   Importă variabilele GET/POST/Cookie în circumstanța globală. Această funcție
+   este utilă dacă ați dezactivat <link linkend="ini.register-globals">register_globals</link>,
+   însă doriți să aveți acces la unele variabile din circumstanța globală.
   </para>
   <para>
-   Dacă vă interesează importul altor variabile în circumstanţa globală, cum ar
-   fi <varname>$_SERVER</varname>, consideraţi utilizarea
+   Dacă vă interesează importul altor variabile în circumstanța globală, cum ar
+   fi <varname>$_SERVER</varname>, considerați utilizarea
    <function>extract</function>.
   </para>
  </refsect1>
@@ -35,18 +35,18 @@
      <term><parameter>types</parameter></term>
      <listitem>
       <para>
-       Utilizând parametrul <parameter>types</parameter> puteţi specifica care
-       variabile de interpelare vor fi importate. Puteţi utiliza caracterele
-       'G', 'P' şi 'C' respectiv pentru GET, POST şi Cookie. Nu importă dacă
-       caracterele sunt majuscule sau minuscule, de aceea puteţi utiliza orice
-       combinaţie cu 'g', 'p' şi 'c'. POST include şi informaţia despre
-       fişierele încărcate prin metoda POST.
+       Utilizând parametrul <parameter>types</parameter> puteți specifica care
+       variabile de interpelare vor fi importate. Puteți utiliza caracterele
+       'G', 'P' și 'C' respectiv pentru GET, POST și Cookie. Nu importă dacă
+       caracterele sunt majuscule sau minuscule, de aceea puteți utiliza orice
+       combinație cu 'g', 'p' și 'c'. POST include și informația despre
+       fișierele încărcate prin metoda POST.
       </para>
       <note>
        <para>
-        Observaţi că ordinea literelor contează, de aceea la utilizarea
+        Observați că ordinea literelor contează, de aceea la utilizarea
         "<literal>GP</literal>" variabilele POST vor acoperi variabilele GET cu
-        acelaşi nume. Orice alte litere decât GPC sunt ignorate.
+        același nume. Orice alte litere decât GPC sunt ignorate.
        </para>
       </note>
      </listitem>
@@ -56,19 +56,19 @@
      <listitem>
       <para>
        Prefixul denumirilor variabilelor, plasat înaintea denumirilor tuturor
-       variabilelor importate în circumstanţa globală. Deci dacă aveţi o valoare
-       GET denumită "<literal>userid</literal>" şi indicaţi prefixul
-       "<literal>pref_</literal>", atunci veţi obţine o variabilă globală
+       variabilelor importate în circumstanța globală. Deci dacă aveți o valoare
+       GET denumită "<literal>userid</literal>" și indicați prefixul
+       "<literal>pref_</literal>", atunci veți obține o variabilă globală
        denumită <varname>$pref_userid</varname>.
       </para>
       <note>
        <para>
-        Cu toate că parametrul <parameter>prefix</parameter> este opţional, veţi
-        obţine o eroare de nivel
+        Cu toate că parametrul <parameter>prefix</parameter> este opțional, veți
+        obține o eroare de nivel
         <link linkend="errorfunc.constants.errorlevels.e-notice"><constant>E_NOTICE
-        </constant></link> dacă nu specificaţi un prefix, sau specificaţi un
+        </constant></link> dacă nu specificați un prefix, sau specificați un
         string vid în calitate de prefix. Acesta probabil că nu este un pericol
-        de securitate. Erorile de nivel notice nu sunt afişate la nivelul de
+        de securitate. Erorile de nivel notice nu sunt afișate la nivelul de
         <link linkend="ini.error-reporting">raportare al erorilor</link>
         implicit.
        </para>
@@ -94,8 +94,8 @@
     <programlisting role="php">
 <![CDATA[
 <?php
-// Aceasta va importa variabilele GET şi POST
-// şi le va prefixa cu "rvar_"
+// Aceasta va importa variabilele GET și POST
+// și le va prefixa cu "rvar_"
 import_request_variables("gp", "rvar_");
 
 echo $rvar_foo;

@@ -2,19 +2,19 @@
 <!-- $Revision$ -->
 <!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: simionea Status: ready -->
 <appendix xml:id="types.comparisons" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
- <title>Tabelele de comparaţii ale tipurilor PHP</title>
+ <title>Tabelele de comparații ale tipurilor PHP</title>
  <para>
   Tabelele următoare demonstrează comportamentul
-  <link linkend="language.types">tipurilor</link> şi
+  <link linkend="language.types">tipurilor</link> și
   <link linkend="language.operators.comparison">operatorilor de comparare</link>
-  din PHP, pentru ambele tipuri de comparaţii &mdash; libere şi stricte. Acest
-  supliment de asemenea are legătură şi cu secţiunea din manual despre
+  din PHP, pentru ambele tipuri de comparații &mdash; libere și stricte. Acest
+  supliment de asemenea are legătură și cu secțiunea din manual despre
   <link linkend="language.types.type-juggling">jonglarea cu tipurile</link>.
-  Inspiraţia a fost adusă de diverse comentarii ale utilizatorilor şi de lucrările
+  Inspirația a fost adusă de diverse comentarii ale utilizatorilor și de lucrările
   de la <link xlink:href="&url.blueshoes.comparisons;">BlueShoes</link>.
  </para>
  <para>
-  Înainte de a utiliza aceste tabele, este important de a întelege tipurile şi
+  Înainte de a utiliza aceste tabele, este important de a întelege tipurile și
   însemnătatea lor. Spre exemplu <literal>"42"</literal> este un <type>string</type>,
   în timp ce <literal>42</literal> este un <type>integer</type>.  &false; este un
   <type>boolean</type>, în timp ce <literal>"false"</literal> este un
@@ -23,21 +23,21 @@
  <note>
   <para>
    Formularele HTML nu transmit tipuri integer, float, sau boolean; ele transmit string-uri.
-   Pentru a afla dacă un string este numeric, puteţi folosi
+   Pentru a afla dacă un string este numeric, puteți folosi
    <function>is_numeric</function>.
   </para>
  </note>
  <note>
   <para>
-   Facând, pur şi simplu, <literal>if ($x)</literal>, în timp ce <varname>$x</varname> nu
+   Facând, pur și simplu, <literal>if ($x)</literal>, în timp ce <varname>$x</varname> nu
    este definit va genera o eroare de nivelul <constant>E_NOTICE</constant>.
-   În loc, consideraţi utilizarea <function>empty</function> sau
-   <function>isset</function> şi/sau iniţializaţi variabilele.
+   În loc, considerați utilizarea <function>empty</function> sau
+   <function>isset</function> și/sau inițializați variabilele.
   </para>
  </note>
  <para>
   <table>
-   <title>Comparaţiile <varname>$x</varname> cu funcţiile PHP</title>
+   <title>Comparațiile <varname>$x</varname> cu funcțiile PHP</title>
    <tgroup cols="6">
     <thead>
      <row>
@@ -193,7 +193,7 @@
 
  <para>
   <table xml:id="types.comparisions-loose">
-   <title>Comparaţiile libere cu <literal>==</literal></title>
+   <title>Comparațiile libere cu <literal>==</literal></title>
    <tgroup cols="12">
     <thead>
      <row>
@@ -400,7 +400,7 @@
 
  <para>
   <table xml:id="type.comparisons-strict">
-   <title>Comparaţiile stricte cu <literal>===</literal></title>
+   <title>Comparațiile stricte cu <literal>===</literal></title>
    <tgroup cols="12">
     <thead>
      <row>

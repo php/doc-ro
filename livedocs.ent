@@ -5,5 +5,5 @@
 <!ENTITY livedocs.editors 'Redactat de:<br />'>
 <!ENTITY livedocs.copyright 'Copyright &copy; %s %s'>
 <!ENTITY livedocs.published 'Publicat la: %s'>
-<!ENTITY livedocs.noversion 'nu există informaţie despre versiune, poate fi numai în CVS'>
+<!ENTITY livedocs.noversion 'nu există informație despre versiune, poate fi numai în CVS'>
 <!ENTITY livedocs.new-in-vers-5 'Nou în PHP 5'>

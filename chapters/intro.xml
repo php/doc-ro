@@ -10,11 +10,11 @@
    <para>
     <acronym>PHP</acronym> (acronim recursiv pentru <literal>PHP: Hypertext
     Preprocessor</literal>) este un limbaj de scripting de uz general, cu cod-sursă
-    deschis (open source), utilizat pe scară largă, şi care este potrivit în
-    special pentru dezvoltarea aplicaţiilor web şi poate fi integrat în HTML.
+    deschis (open source), utilizat pe scară largă, și care este potrivit în
+    special pentru dezvoltarea aplicațiilor web și poate fi integrat în HTML.
    </para>
    <para>
-    Frumos, dar totuşi ce înseamnă aceasta? Un exemplu:
+    Frumos, dar totuși ce înseamnă aceasta? Un exemplu:
    </para>
    <para>
     <example>
@@ -39,37 +39,37 @@
     </example>
    </para>
    <para>
-    În locul unei mulţimi de comenzi pentru a afişa HTML (cum este cazul în C
-    sau Perl), paginile PHP conţin HTML cu cod-sursă încorporat, care
-    realizează "ceva" (în acest caz, afişează "Salut, sunt un script PHP!").
-    Codul-sursă PHP este încorporat între nişte
-    <link linkend="language.basic-syntax.phpmode">instrucţiuni de procesare de
-    început şi de sfârşit</link> speciale <code>&lt;?php</code> şi
-    <code>?&gt;</code>, care vă permit să intraţi şi să ieşiţi din "modul PHP".
+    În locul unei mulțimi de comenzi pentru a afișa HTML (cum este cazul în C
+    sau Perl), paginile PHP conțin HTML cu cod-sursă încorporat, care
+    realizează "ceva" (în acest caz, afișează "Salut, sunt un script PHP!").
+    Codul-sursă PHP este încorporat între niște
+    <link linkend="language.basic-syntax.phpmode">instrucțiuni de procesare de
+    început și de sfârșit</link> speciale <code>&lt;?php</code> și
+    <code>?&gt;</code>, care vă permit să intrați și să ieșiți din "modul PHP".
    </para>
    <para>
     Ceea ce face PHP să difere de un JavaScript de partea clientului
     este că codul său este executat pe server, generând HTML care este apoi
     trimis către client. Clientul va primi rezultatele rulării acelui script,
-    fără a putea cunoaşte codul-sursă ce stă la bază. Dumneavoastră chiar
-    puteţi să configuraţi web server-ul să proceseze toate fişierele HTML cu
-    PHP, şi atunci într-adevăr nu va fi nici o modalitate ca utilizatorii să
-    afle ce aveţi ascuns în mânecă.
+    fără a putea cunoaște codul-sursă ce stă la bază. Dumneavoastră chiar
+    puteți să configurați web server-ul să proceseze toate fișierele HTML cu
+    PHP, și atunci într-adevăr nu va fi nici o modalitate ca utilizatorii să
+    afle ce aveți ascuns în mânecă.
    </para>
    <para>
     Cel mai bun lucru la PHP este simplitatea extremă pentru un începător,
-    dar totodată existenţa multor facilităţi avansate pentru un
-    programator profesionist. Să nu vă fie teamă să citiţi lista lungă
-    a facilităţilor PHP. Puteţi să vă implicaţi în scurt timp şi să
-    începeţi a scrie scripturi simple peste câteva ore.
+    dar totodată existența multor facilități avansate pentru un
+    programator profesionist. Să nu vă fie teamă să citiți lista lungă
+    a facilităților PHP. Puteți să vă implicați în scurt timp și să
+    începeți a scrie scripturi simple peste câteva ore.
    </para>
    <para>
     Cu toate că dezvoltarea PHP e axată pe scripting de partea server-ului,
-    puteţi să realizaţi mult mai multe cu el. Citiţi în continuare şi aflaţi
-    mai multe detalii în secţiunea întitulată
+    puteți să realizați mult mai multe cu el. Citiți în continuare și aflați
+    mai multe detalii în secțiunea întitulată
     <link linkend="intro-whatcando">Ce poate face PHP?</link>, sau
-    treceţi direct la <link linkend="tutorial">ghidul de utilizare introductiv
-    </link> dacă sunteţi interesat doar de programarea web.
+    treceți direct la <link linkend="tutorial">ghidul de utilizare introductiv
+    </link> dacă sunteți interesat doar de programarea web.
    </para>
   </section>
 
@@ -77,9 +77,9 @@
    <info><title>Ce poate face PHP?</title></info>
    <para>
     Orice. PHP este axat în principal pe scripting de partea server-ului,
-    deci puteţi realiza cu el orice poate realiza un alt program CGI, cum ar
-    fi colectarea datelor din forme, generarea conţinutului dinamic al
-    paginilor sau trimiterea şi primirea cookies. Dar PHP poate face mult
+    deci puteți realiza cu el orice poate realiza un alt program CGI, cum ar
+    fi colectarea datelor din forme, generarea conținutului dinamic al
+    paginilor sau trimiterea și primirea cookies. Dar PHP poate face mult
     mai multe.
    </para>
    <para>
@@ -87,83 +87,83 @@
     <itemizedlist>
      <listitem>
       <simpara>
-       Scripting de partea serverului. Acesta este cel mai tradiţional
-       şi de bază domeniu al PHP. Aveţi nevoie de trei lucruri pentru
-       ca aceasta să funcţioneze. Analizatorul PHP (în calitate de CGI,
-       sau modul pentru server), un server web şi un navigator web.
-       Trebuie să rulaţi serverul web cu o instalare PHP conectată la
-       el. Puteţi accesa ieşirile programului PHP cu navigatorul web,
+       Scripting de partea serverului. Acesta este cel mai tradițional
+       și de bază domeniu al PHP. Aveți nevoie de trei lucruri pentru
+       ca aceasta să funcționeze. Analizatorul PHP (în calitate de CGI,
+       sau modul pentru server), un server web și un navigator web.
+       Trebuie să rulați serverul web cu o instalare PHP conectată la
+       el. Puteți accesa ieșirile programului PHP cu navigatorul web,
        vizualizând pagina PHP prin server. Toate acestea pot rula pe
-       computerul dumneavoastră de acasă, dacă doar experimentaţi cu
-       programarea în PHP. Citiţi secţiunea cu
-       <link linkend="install">instrucţiuni de instalare</link> pentru
-       informaţii suplimentare.
+       computerul dumneavoastră de acasă, dacă doar experimentați cu
+       programarea în PHP. Citiți secțiunea cu
+       <link linkend="install">instrucțiuni de instalare</link> pentru
+       informații suplimentare.
       </simpara>
      </listitem>
      <listitem>
       <simpara>
-       Scripting în linia de comandă. Puteţi să faceţi un script PHP să
-       ruleze fără un server şi navigator web. Aveţi nevoie doar de
+       Scripting în linia de comandă. Puteți să faceți un script PHP să
+       ruleze fără un server și navigator web. Aveți nevoie doar de
        analizatorul PHP pentru a-l utiliza în acest mod. Acest mod de
        utilizare este ideal pentru script-uri executate în mod regulat
        cu cron (pe *nix sau Linux) sau cu Task Scheduler (pe Windows).
        Aceste script-uri pot fi utilizate de asemenea pentru lucrări simple
-       de procesare a textelor. Citiţi secţiunea despre
+       de procesare a textelor. Citiți secțiunea despre
        <link linkend="features.commandline">Utilizarea PHP în linia de comandă</link>
-       pentru informaţii suplimentare.
+       pentru informații suplimentare.
       </simpara>
      </listitem>
      <listitem>
       <simpara>
-       Scrierea aplicaţiilor de birou. PHP probabil că nu este cel
-       mai potrivit limbaj pentru a crea o aplicaţie de birou cu o
-       interfaţă grafică a utilizatorului, dar dacă cunoaşteţi PHP
-       foarte bine şi doriţi să utilizaţi unele facilităţi avansate
-       ale PHP în aplicaţii de partea clientului, puteţi să utilizaţi
-       PHP-GTK pentru a scrie asemenea aplicaţii. De asemenea aveţi
-       posibilitatea să scrieţi în acest mod aplicaţii ce vor rula pe
+       Scrierea aplicațiilor de birou. PHP probabil că nu este cel
+       mai potrivit limbaj pentru a crea o aplicație de birou cu o
+       interfață grafică a utilizatorului, dar dacă cunoașteți PHP
+       foarte bine și doriți să utilizați unele facilități avansate
+       ale PHP în aplicații de partea clientului, puteți să utilizați
+       PHP-GTK pentru a scrie asemenea aplicații. De asemenea aveți
+       posibilitatea să scrieți în acest mod aplicații ce vor rula pe
        mai multe platforme. PHP-GTK este o extensie a PHP, care nu este
        disponibilă în distributivul de bază. Dacă v-a interesat PHP-GTK,
-       vizitaţi <link xlink:href="&url.php.gtk;">propriul său website</link>.
+       vizitați <link xlink:href="&url.php.gtk;">propriul său website</link>.
       </simpara>
      </listitem>
     </itemizedlist>
    </para>
    <para>
     PHP poate fi utilizat pe toate sistemele de operare majore, inclusiv
-    Linux, multe variante Unix (inclusiv HP-UX, Solaris şi OpenBSD),
-    Microsoft Windows, Mac OS X, RISC OS şi probabil altele.
-    PHP de asemenea susţine majoritatea server-elor web existente în
+    Linux, multe variante Unix (inclusiv HP-UX, Solaris și OpenBSD),
+    Microsoft Windows, Mac OS X, RISC OS și probabil altele.
+    PHP de asemenea susține majoritatea server-elor web existente în
     prezent. Acestea includ Apache, Microsoft Internet Information Server,
-    Personal Web Server, server-ele Netscape şi iPlanet, server-ul Oreilly
-    Website Pro, Caudium, Xitami, OmniHTTPd şi multe altele. Pentru
-    majoritatea server-elor PHP are modulul său, pentru altele susţine
+    Personal Web Server, server-ele Netscape și iPlanet, server-ul Oreilly
+    Website Pro, Caudium, Xitami, OmniHTTPd și multe altele. Pentru
+    majoritatea server-elor PHP are modulul său, pentru altele susține
     standardul CGI, PHP poate lucra în calitate de procesor CGI.
    </para>
    <para>
-    Deci cu PHP aveţi libertatea alegerii sistemului de operare şi a
-    serverului web. Ba chiar mai mult, aveţi posibilitatea să utilizaţi
+    Deci cu PHP aveți libertatea alegerii sistemului de operare și a
+    serverului web. Ba chiar mai mult, aveți posibilitatea să utilizați
     programarea procedurală sau programarea orientată pe obiecte (POO),
-    sau o combinaţie a acestora. Cu toate că în PHP 4 nu sunt implementate
-    toate facilităţile POO, multe biblioteci de cod şi aplicaţii mari
+    sau o combinație a acestora. Cu toate că în PHP 4 nu sunt implementate
+    toate facilitățile POO, multe biblioteci de cod și aplicații mari
     (inclusiv biblioteca PEAR) sunt scrise doar utilizând POO. PHP 5
-    repară toate deficienţele PHP 4, ce se referă la POO şi prezintă un
+    repară toate deficiențele PHP 4, ce se referă la POO și prezintă un
     model obiect-orientat deplin.
    </para>
    <para>
-    Cu PHP nu sunteţi limitat doar la afişarea HTML. Posibilităţile PHP
-    permit de a afişa imagini, fişiere PDF şi chiar filme Flash (utilizând
-    libswf şi Ming) generate "din zbor". Puteţi de asemenea cu uşurinţă să
-    afişaţi orice text, cum ar fi XHTML sau alt fişier XML. PHP poate
-    genera automat aceste fişiere şi le poate salva în sistemul de fişiere,
-    în loc să le afişeze, formând astfel un sistem de cache al conţinutului
+    Cu PHP nu sunteți limitat doar la afișarea HTML. Posibilitățile PHP
+    permit de a afișa imagini, fișiere PDF și chiar filme Flash (utilizând
+    libswf și Ming) generate "din zbor". Puteți de asemenea cu ușurință să
+    afișați orice text, cum ar fi XHTML sau alt fișier XML. PHP poate
+    genera automat aceste fișiere și le poate salva în sistemul de fișiere,
+    în loc să le afișeze, formând astfel un sistem de cache al conținutului
     dinamic de partea server-ului.
    </para>
    <para>
-    Una dintre cele mai puternice şi semnificative facilităţi ale PHP este
-    susţinerea unui larg domeniu de baze de date. Scrierea unei pagini web
-    cu susţinerea bazelor de date este incredibil de simplă. Următoarele
-    baze de date sunt susţinute în prezent:
+    Una dintre cele mai puternice și semnificative facilități ale PHP este
+    susținerea unui larg domeniu de baze de date. Scrierea unei pagini web
+    cu susținerea bazelor de date este incredibil de simplă. Următoarele
+    baze de date sunt susținute în prezent:
     <blockquote>
      <simplelist columns="3">
       <member>Adabas D</member>
@@ -180,7 +180,7 @@
       <member>Direct MS-SQL</member>
       <member>MySQL</member>
       <member>ODBC</member>
-      <member>Oracle (OCI7 şi OCI8)</member>
+      <member>Oracle (OCI7 și OCI8)</member>
       <member>Ovrimos</member>
       <member>PostgreSQL</member>
       <member>SQLite</member>
@@ -191,43 +191,43 @@
      </simplelist>
     </blockquote>
     De asemenea avem o extensie de abstractizare a bazelor de date
-    (numită PDO) care vă permite să utilizaţi în mod transparent orice
-    bază de date susţinută de această extensie. În plus, PHP susţine ODBC,
+    (numită PDO) care vă permite să utilizați în mod transparent orice
+    bază de date susținută de această extensie. În plus, PHP susține ODBC,
     Open Database Connection standard -- Standardul Deschis de Conectare la
-    Baze de Date, deci vă puteţi conecta la orice altă bază de date ce
-    susţine acest standard mondial.
+    Baze de Date, deci vă puteți conecta la orice altă bază de date ce
+    susține acest standard mondial.
    </para>
    <para>
     PHP de asemenea poate să "converseze" cu alte servicii utilizând protocoale
-    cum ar fi LDAP, IMAP, SNMP, NNTP, POP3, HTTP, COM (pe Windows) şi multe
-    altele. Puteţi de asemenea să deschideţi socket-uri de reţea "crude" şi
-    să interacţionaţi utilizând orice alt protocol. PHP susţine WDDX - schimbul
+    cum ar fi LDAP, IMAP, SNMP, NNTP, POP3, HTTP, COM (pe Windows) și multe
+    altele. Puteți de asemenea să deschideți socket-uri de rețea "crude" și
+    să interacționați utilizând orice alt protocol. PHP susține WDDX - schimbul
     de date complexe între aproape toate limbajele de programare web.
-    Vorbind despre interconectare, PHP susţine instanţierea obiectelor Java
-    şi utilizarea lor transparentă ca obiecte PHP. Puteţi de asemenea să
-    utilizaţi extensia CORBA pentru a accesa obiecte la distanţă.
+    Vorbind despre interconectare, PHP susține instanțierea obiectelor Java
+    și utilizarea lor transparentă ca obiecte PHP. Puteți de asemenea să
+    utilizați extensia CORBA pentru a accesa obiecte la distanță.
    </para>
    <para>
-    PHP posedă facilităţi foarte utile de procesare a textelor, de la expresii
+    PHP posedă facilități foarte utile de procesare a textelor, de la expresii
     regulare POSIX Extended sau Perl până la analiza documentelor XML.
-    Pentru analiza şi accesarea documentelor XML, PHP 4 susţine standardele
-    SAX şi DOM, şi pentru transformarea documentelor XML puteţi utiliza
+    Pentru analiza și accesarea documentelor XML, PHP 4 susține standardele
+    SAX și DOM, și pentru transformarea documentelor XML puteți utiliza
     extensia XSLT. PHP 5 standardizează toate extensiile XML pe baza solidă a
-    libxml2 şi extinde setul de facilităţi prin adăugarea susţinerii SimpleXML
-    şi XMLReader.
+    libxml2 și extinde setul de facilități prin adăugarea susținerii SimpleXML
+    și XMLReader.
    </para>
    <para>
-    Şi, în sfârşit, avem multe alte extensii interesante:
-    funcţii ale motoarelor de căutare mnoGoSearch, funcţii
+    Și, în sfârșit, avem multe alte extensii interesante:
+    funcții ale motoarelor de căutare mnoGoSearch, funcții
     IRC Gateway, multe utilitare de compresie (gzip, bz2, zip),
     conversii calendaristice, traduceri...
    </para>
    <para>
-    După cum puteţi vedea, această pagină nu este suficientă pentru a evidenţia
-    toate facilităţile şi beneficiile oferite de PHP. Citiţi în continuare
-    secţiunile despre <link linkend="install">instalarea PHP</link> şi accesaţi
-    <link linkend="funcref">referinţele funcţiilor</link> pentru a găsi explicaţiile
-    extensiilor menţionate anterior.
+    După cum puteți vedea, această pagină nu este suficientă pentru a evidenția
+    toate facilitățile și beneficiile oferite de PHP. Citiți în continuare
+    secțiunile despre <link linkend="install">instalarea PHP</link> și accesați
+    <link linkend="funcref">referințele funcțiilor</link> pentru a găsi explicațiile
+    extensiilor menționate anterior.
    </para>
   </section>
 

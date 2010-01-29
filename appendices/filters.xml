@@ -6,19 +6,19 @@
  <para>
   Urmează o listă a câtorva filtre de flux pentru a fi utilizate cu
   <function>stream_filter_append</function>.
-  Versiunea dumneavoastră a PHP poate avea mai multre filtre (sau mai puţine)
+  Versiunea dumneavoastră a PHP poate avea mai multre filtre (sau mai puține)
   decât cele listate aici.
  </para>
 
  <para>
   Merită de a fi remarcată mica asimetrie dintre
   <function>stream_filter_append</function>
-  şi <function>stream_filter_prepend</function>.
-  Fiecare flux PHP conţine o mică <emphasis>zonă-tampon de citire</emphasis>
-  unde el stochează blocuri de date recepţionate de la sistemul de fişiere
+  și <function>stream_filter_prepend</function>.
+  Fiecare flux PHP conține o mică <emphasis>zonă-tampon de citire</emphasis>
+  unde el stochează blocuri de date recepționate de la sistemul de fișiere
   sau alte resurse pentru a procesa datele în modul cel mai eficient.
   Imediat ce datele sunt extrase din resursă în zona-tampon internă a fluxului,
-  ele sunt procesate prin orice filtru ataşat, indiferent dacă aplicaţia PHP
+  ele sunt procesate prin orice filtru atașat, indiferent dacă aplicația PHP
   este pregătită de a primi datele, sau nu.
   Dacă datele se află în zona-tampon de citire în timp ce sunt
   <emphasis>anexate</emphasis> la filtru, aceste date vor fi imediat procesate
@@ -26,13 +26,13 @@
   neobservat.
   Însă dacă datele se află în zona-tampon de citire în timp ce sunt
   <emphasis>prefixate</emphasis> la filtru, ele <emphasis>NU</emphasis>
-  vor fi procesate prin acel filtru. În schimb se va aştepta momentul când următorul
+  vor fi procesate prin acel filtru. În schimb se va aștepta momentul când următorul
   bloc de date va fi extras din resursă.
  </para>
 
  <para>
   Pentru a vedea lista filtrelor instalate în versiunea dumneavoastră a PHP,
-  folosiţi <function>stream_get_filters</function>.
+  folosiți <function>stream_get_filters</function>.
  </para>
 
  <section xml:id="filters.string">
@@ -40,16 +40,16 @@
 
   <simpara>
    Fiecare dintre aceste filtre efectuează exact ceea ce indică denumirea lor
-   şi corespund cu comportamentul unei funcţii de manipulare a stringurilor
-   incorporate în PHP. Pentru mai multe informaţii despre un anumit filtru,
-   referiţi-vă la pagina din manual pentru funcţia corespunzătoare.
+   și corespund cu comportamentul unei funcții de manipulare a stringurilor
+   incorporate în PHP. Pentru mai multe informații despre un anumit filtru,
+   referiți-vă la pagina din manual pentru funcția corespunzătoare.
   </simpara>
 
   <simpara>
    <literal>string.rot13</literal>
    (începând cu PHP 4.3.0)
    Folosirea acestui filtru este echivalentă cu procesarea tuturor datelor
-   din flux prin funcţia <function>str_rot13</function>.
+   din flux prin funcția <function>str_rot13</function>.
   </simpara>
   <example>
    <title>string.rot13</title>
@@ -59,7 +59,7 @@
 $fp = fopen('php://output', 'w');
 stream_filter_append($fp, 'string.rot13');
 fwrite($fp, "This is a test.\n");
-/* Afişează:  Guvf vf n grfg.   */
+/* Afișează:  Guvf vf n grfg.   */
 ?>
 ]]>
    </programlisting>
@@ -69,7 +69,7 @@ fwrite($fp, "This is a test.\n");
    <literal>string.toupper</literal>
    (începând cu PHP 5.0.0)
    Folosirea acestui filtru este echivalentă cu procesarea tuturor datelor
-   din flux prin funcţia <function>strtoupper</function>.
+   din flux prin funcția <function>strtoupper</function>.
   </simpara>
   <example>
    <title>string.toupper</title>
@@ -79,7 +79,7 @@ fwrite($fp, "This is a test.\n");
 $fp = fopen('php://output', 'w');
 stream_filter_append($fp, 'string.toupper');
 fwrite($fp, "This is a test.\n");
-/* Afişează:  THIS IS A TEST.   */
+/* Afișează:  THIS IS A TEST.   */
 ?>
 ]]>
    </programlisting>
@@ -89,7 +89,7 @@ fwrite($fp, "This is a test.\n");
    <literal>string.tolower</literal>
    (începând cu PHP 5.0.0)
    Folosirea acestui filtru este echivalentă cu procesarea tuturor datelor
-   din flux prin funcţia <function>strtolower</function>.
+   din flux prin funcția <function>strtolower</function>.
   </simpara>
   <example>
    <title>string.tolower</title>
@@ -99,7 +99,7 @@ fwrite($fp, "This is a test.\n");
 $fp = fopen('php://output', 'w');
 stream_filter_append($fp, 'string.tolower');
 fwrite($fp, "This is a test.\n");
-/* Afişează:  this is a test.   */
+/* Afișează:  this is a test.   */
 ?>
 ]]>
    </programlisting>
@@ -109,10 +109,10 @@ fwrite($fp, "This is a test.\n");
    <literal>string.strip_tags</literal>
    (începând cu PHP 5.0.0)
    Folosirea acestui filtru este echivalentă cu procesarea tuturor datelor
-   din flux prin funcţia <function>strip_tags</function>.
+   din flux prin funcția <function>strip_tags</function>.
    El acceptă parametrii în unul din aceste două moduri:
-   un string conţinând o listă de tag-uri, similar celui de-al doilea
-   parametru al funcţiei <function>strip_tags</function>,
+   un string conținând o listă de tag-uri, similar celui de-al doilea
+   parametru al funcției <function>strip_tags</function>,
    sau ca un tablou cu denumirile tag-urilor.
   </simpara>
   <example>
@@ -124,13 +124,13 @@ $fp = fopen('php://output', 'w');
 stream_filter_append($fp, 'string.strip_tags', STREAM_FILTER_WRITE, "<b><i><u>");
 fwrite($fp, "<b>bolded text</b> enlarged to a <h1>level 1 heading</h1>\n");
 fclose($fp);
-/* Afişează:  <b>bolded text</b> enlarged to a level 1 heading   */
+/* Afișează:  <b>bolded text</b> enlarged to a level 1 heading   */
 
 $fp = fopen('php://output', 'w');
 stream_filter_append($fp, 'string.strip_tags', STREAM_FILTER_WRITE, array('b','i','u'));
 fwrite($fp, "<b>bolded text</b> enlarged to a <h1>level 1 heading</h1>\n");
 fclose($fp);
-/* Afişează:  <b>bolded text</b> enlarged to a level 1 heading   */
+/* Afișează:  <b>bolded text</b> enlarged to a level 1 heading   */
 ?>
 ]]>
    </programlisting>
@@ -142,24 +142,24 @@ fclose($fp);
   <title>Filtre de conversie</title>
 
   <simpara>
-   Ca şi filtrele string.*, filtrele convert.* efectuează acţiuni similare numelor
+   Ca și filtrele string.*, filtrele convert.* efectuează acțiuni similare numelor
    lor. Filtrele de conversie au fost introduse odată cu PHP 5.0.0.
-   Pentru mai multe informaţii despre un anumit filtru, referiţi-vă la pagina din
-   manual pentru funcţia corespunzătoare.
+   Pentru mai multe informații despre un anumit filtru, referiți-vă la pagina din
+   manual pentru funcția corespunzătoare.
   </simpara>
 
   <simpara>
-   <literal>convert.base64-encode</literal> şi
+   <literal>convert.base64-encode</literal> și
    <literal>convert.base64-decode</literal>
    Utilizarea acestor filtre este echivalentă cu procesarea tuturor datelor din
-   flux prin funcţiile <function>base64_encode</function> şi
+   flux prin funcțiile <function>base64_encode</function> și
    <function>base64_decode</function> respectiv.
-   <literal>convert.base64-encode</literal> susţine parametri sub forma unui tablou
+   <literal>convert.base64-encode</literal> susține parametri sub forma unui tablou
    asociativ. Dacă parametrul <parameter>line-length</parameter> este specificat,
-   ieşirile sub forma base64 for fi separate în porţiuni de câte <parameter>line-length</parameter>
+   ieșirile sub forma base64 for fi separate în porțiuni de câte <parameter>line-length</parameter>
    caractere fiecare. Dacă parametrul <parameter>line-break-chars</parameter> este specificat, fiecare
-   porţiune va fi delimitată cu caracterele specificaate în parametru. Aceşti parametri produc
-   acelaşi efect ca şi utilizarea <function>base64_encode</function> cu
+   porțiune va fi delimitată cu caracterele specificaate în parametru. Acești parametri produc
+   același efect ca și utilizarea <function>base64_encode</function> cu
    <function>chunk_split</function>.
   </simpara>
   <example>
@@ -174,14 +174,14 @@ $fp = fopen('php://output', 'w');
 stream_filter_append($fp, 'convert.base64-encode');
 fwrite($fp, "This is a test.\n");
 fclose($fp);
-/* Afişează:  VGhpcyBpcyBhIHRlc3QuCg==  */
+/* Afișează:  VGhpcyBpcyBhIHRlc3QuCg==  */
 
 $param = array('line-length' => 8, 'line-break-chars' => "\r\n");
 $fp = fopen('php://output', 'w');
 stream_filter_append($fp, 'convert.base64-encode', STREAM_FILTER_WRITE, $param);
 fwrite($fp, "This is a test.\n");
 fclose($fp);
-/* Afişează:  VGhpcyBp
+/* Afișează:  VGhpcyBp
            :  cyBhIHRl
            :  c3QuCg==  */
 
@@ -189,23 +189,23 @@ $fp = fopen('php://output', 'w');
 stream_filter_append($fp, 'convert.base64-decode');
 fwrite($fp, "VGhpcyBpcyBhIHRlc3QuCg==");
 fclose($fp);
-/* Afişează:  This is a test.  */
+/* Afișează:  This is a test.  */
 ?>
 ]]>
    </programlisting>
   </example>
 
   <simpara>
-   <literal>convert.quoted-printable-encode</literal> şi
+   <literal>convert.quoted-printable-encode</literal> și
    <literal>convert.quoted-printable-decode</literal>
    Utilizarea versiunii decode a acestui filtru este echivalentă cu procesarea tuturor
-   datelor din flux prin funcţia <function>quoted_printable_decode</function>.
-   Nu există o funcţie echivalentă pentru <literal>convert.quoted-printable-encode</literal>.
-   <literal>convert.quoted-printable-encode</literal> susţine parametrii sub forma unui tablou
-   asociativ. Adăugător la parametrii susţinuţi de <literal>convert.base64-encode</literal>,
-   <literal>convert.quoted-printable-encode</literal> de asemenea susţine argumente boolean
-   <parameter>binary</parameter> şi <parameter>force-encode-first</parameter>.
-   <literal>convert.base64-decode</literal> susţine numai parametrul
+   datelor din flux prin funcția <function>quoted_printable_decode</function>.
+   Nu există o funcție echivalentă pentru <literal>convert.quoted-printable-encode</literal>.
+   <literal>convert.quoted-printable-encode</literal> susține parametrii sub forma unui tablou
+   asociativ. Adăugător la parametrii susținuți de <literal>convert.base64-encode</literal>,
+   <literal>convert.quoted-printable-encode</literal> de asemenea susține argumente boolean
+   <parameter>binary</parameter> și <parameter>force-encode-first</parameter>.
+   <literal>convert.base64-decode</literal> susține numai parametrul
    <parameter>line-break-chars</parameter> în calitate de indiciu al caracterelor ce trebiue
    eliminate din încărcătura utilă codificată.
   </simpara>
@@ -220,7 +220,7 @@ fclose($fp);
 $fp = fopen('php://output', 'w');
 stream_filter_append($fp, 'convert.quoted-printable-encode');
 fwrite($fp, "This is a test.\n");
-/* Afişează:  =This is a test.=0A  */
+/* Afișează:  =This is a test.=0A  */
 ?>
 ]]>
    </programlisting>
@@ -231,59 +231,59 @@ fwrite($fp, "This is a test.\n");
   <title>Filtrele de compresie</title>
 
   <simpara>
-   În timp ce <link linkend="wrappers.compression">învelişurile de compresie</link>
-   oferă o modalitate de a crea fişiere compatibile cu gzip and bz2 pe sistemul de
-   fişiere local, ele nu oferă o modalitate de compresie generalizată prin fluxuri
-   în reţea, nici nu oferă o modalitate de a începe cu un flux necomprimat şi a
+   În timp ce <link linkend="wrappers.compression">învelișurile de compresie</link>
+   oferă o modalitate de a crea fișiere compatibile cu gzip and bz2 pe sistemul de
+   fișiere local, ele nu oferă o modalitate de compresie generalizată prin fluxuri
+   în rețea, nici nu oferă o modalitate de a începe cu un flux necomprimat și a
    trece la unul comprimat. Pentru acestea, un filtru de compresie poate fi aplicat
    oricând asupra oricărei resurse-flux.
   </simpara>
 
   <note>
    <simpara>
-    Filtrele de compresie <emphasis>nu</emphasis> generează antete sau sfârşituri
+    Filtrele de compresie <emphasis>nu</emphasis> generează antete sau sfârșituri
     utilizate de utilitele din linie de comandă, cum ar fi <literal>gzip</literal>.
-    Ele numai comprimă şi decomprimă porţiunile cu încărcătură utilă a fluxurilor
+    Ele numai comprimă și decomprimă porțiunile cu încărcătură utilă a fluxurilor
     de date.
    </simpara>
   </note>
 
   <simpara>
-   <literal>zlib.deflate</literal> (compresie) şi
+   <literal>zlib.deflate</literal> (compresie) și
    <literal>zlib.inflate</literal> (decompresie) sunt implementări ale metodelor de
    compresie descrise în <link xlink:href="&url.rfc;1951">RFC 1951</link>.
-   Filtrul <literal>deflate</literal> preia până la trei parametri transmişi sub
+   Filtrul <literal>deflate</literal> preia până la trei parametri transmiși sub
    forma unui tablou asociativ.
 
    <parameter>level</parameter> descrie nivelul de compresie utilizat (1-9).
    Numere mai mari vor produce în general încărcături utile mai mici fără a necesita
-   timp de procesare suplimentar. De asemenea există şi două nivele speciale de
-   compresie: 0 (fără compresie), şi -1 (valoarea internă implicită a zlib -- în prezent 6).
+   timp de procesare suplimentar. De asemenea există și două nivele speciale de
+   compresie: 0 (fără compresie), și -1 (valoarea internă implicită a zlib -- în prezent 6).
 
    <parameter>window</parameter> este logaritmul în baza 2 a mărimii ferestrei de compresie
-   în buclă inversă. Valorile mai mari (până la 15 -- 32768 baiţi) produc o compresie mai
-   bună, costul fiind mai multă memorie, în timp ce valorile mai mici (până la 9 -- 512 baiţi)
+   în buclă inversă. Valorile mai mari (până la 15 -- 32768 baiți) produc o compresie mai
+   bună, costul fiind mai multă memorie, în timp ce valorile mai mici (până la 9 -- 512 baiți)
    produc o compresie mai rea într-un volum de memorie mai mic.
    Valoarea implicită a mărimii <parameter>window</parameter> este în prezent
    <constant>15</constant>.
 
    <parameter>memory</parameter> este o scară care indică ce volum de memorie de lucru trebiue
    allocated. Valori permise sunt în intervalul de la 1 (alocare minimă) până la 9 (alocare maximă).
-   Aceată alocare de memorie influenţează doar viteza şi nu are impact asupra mărimii
+   Aceată alocare de memorie influențează doar viteza și nu are impact asupra mărimii
    încărcăturii de lucru generate.
   </simpara>
 
   <note>
    <simpara>
     Deoarece nivelul compresiei este cel mai des utilizat parametru, el poate fi transmis, îm mod
-    alternativ, sub forma unei simple valori întregi (şi nu sub forma unui tablou dintr-un element).
+    alternativ, sub forma unei simple valori întregi (și nu sub forma unui tablou dintr-un element).
    </simpara>
   </note>
 
   <simpara>
     Filtrele de compresie zlib.* sunt disponibile în PHP începând cu versiunea <literal>5.1.0</literal>,
-    dacă susţinerea <link linkend="ref.zlib">zlib</link> a fost activată. Ele de asemenea sunt disponibile
-    în calitate de cod portabil şi pentru versiunea <literal>5.0.x</literal> instalând pachetul
+    dacă susținerea <link linkend="ref.zlib">zlib</link> a fost activată. Ele de asemenea sunt disponibile
+    în calitate de cod portabil și pentru versiunea <literal>5.0.x</literal> instalând pachetul
     <link xlink:href="&url.pecl.package;zlib_filter">zlib_filter</link> din
     <link xlink:href="&url.pecl;">PECL</link>. Aceste filtre <emphasis>nu</emphasis> sunt disponibile pentru
     PHP 4.
@@ -291,7 +291,7 @@ fwrite($fp, "This is a test.\n");
 
   <example>
    <title>
-    <literal>zlib.deflate</literal> şi
+    <literal>zlib.deflate</literal> și
     <literal>zlib.inflate</literal>
    </title>
    <programlisting role="php">
@@ -309,7 +309,7 @@ fclose($fp);
 
 echo "The compressed file is " . filesize('test.deflated') . " bytes long.\n";
 echo "The original text was:\n";
-/* Folosim readfile şi zlib.inflate pentru a decomprima datele 'din zbor' */
+/* Folosim readfile și zlib.inflate pentru a decomprima datele 'din zbor' */
 readfile('php://filter/zlib.inflate/resource=test.deflated');
 
 /* Generează utmătoarele:
@@ -357,43 +357,43 @@ The compressed file is 56 bytes long.
   </example>
 
   <simpara>
-   <literal>bzip2.compress</literal> şi
+   <literal>bzip2.compress</literal> și
    <literal>bzip2.decompress</literal>
-   funcţionează în acelaşi mod ca şi filtrele zlib descrise anterior.
+   funcționează în același mod ca și filtrele zlib descrise anterior.
 
-   Filtrul <literal>bzip2.compress</literal> acceptă până la doi parametri transmişi sub
+   Filtrul <literal>bzip2.compress</literal> acceptă până la doi parametri transmiși sub
    formă de elemente ale unui tablou asociativ:
 
    <parameter>blocks</parameter> este o valoare de tip întreg de la 1 până la 9, specificând
-   numărul de blocuri de memorie de 100 kbaiţi pentru a fi alocaţi în spaţiul de lucru.
+   numărul de blocuri de memorie de 100 kbaiți pentru a fi alocați în spațiul de lucru.
 
    <parameter>work</parameter> este de asemenea o valoare de tip întreg din intervalul de la
    0 până la 250 indicând ce volum de efort trebuie cheltuit folosind metoda normală de
    compresie, înainte de a trece înapoi la o metodă mai lentă, dar mai sigură.
    Reglarea acestui parametru afectează doar viteza de compresie. Nici mărimea datelor finale,
    nici utilizarea memoriei nu sunt afectate de modificarea acestui parametru.
-   Valoarea 0 instruieşte biblioteca bzip să utilizeze valoarea internă implicită.
+   Valoarea 0 instruiește biblioteca bzip să utilizeze valoarea internă implicită.
 
    Filtrul <literal>bzip2.decompress</literal> acceptă doar un parametru, care poate fi
-   transmis sub forma unei valori boolean obişnuite sau sub forma elementului
+   transmis sub forma unei valori boolean obișnuite sau sub forma elementului
    <parameter>small</parameter> al unui tablou asociativ.
 
-   <parameter>small</parameter>, când este stabilit la valoarea &true;, instruieşte biblioteca
+   <parameter>small</parameter>, când este stabilit la valoarea &true;, instruiește biblioteca
    bzip să efectueze decomprimarea cu utilizarea unui volum minimal al memoriei la costul
    vitezei de procesare.
   </simpara>
 
   <simpara>
     Filtrele de copresie bzip2.* sunt disponibile în PHP începând cu versiunea <literal>5.1.0</literal>
-    dacă susţinerea <link linkend="ref.bzip2">bz2</link> a fost activată. Ele de asemenea sunt disponibile
-    în calitate de cod portabil şi pentru versiunea <literal>5.0.x</literal> instalând pachetul
+    dacă susținerea <link linkend="ref.bzip2">bz2</link> a fost activată. Ele de asemenea sunt disponibile
+    în calitate de cod portabil și pentru versiunea <literal>5.0.x</literal> instalând pachetul
     <link xlink:href="&url.pecl.package;bz2_filter">bz2_filter</link> din
     <link xlink:href="&url.pecl;">PECL</link>. Aceste filtre <emphasis>nu</emphasis> sunt disponibile în PHP 4.
   </simpara>
 
   <example>
    <title>
-    <literal>bzip2.compress</literal> şi
+    <literal>bzip2.compress</literal> și
     <literal>bzip2.decompress</literal>
    </title>
    <programlisting role="php">
@@ -426,14 +426,14 @@ The compressed file is 1488 bytes long.
   <title>Filtrele de criptare</title>
 
   <simpara>
-   <literal>mcrypt.*</literal> şi <literal>mdecrypt.*</literal>
-   oferă criptare şi decriptare simetrică, utilizând libmcrypt.
-   Ambele seturi de filtre susţin aceiaşi algoritmi disponibili
+   <literal>mcrypt.*</literal> și <literal>mdecrypt.*</literal>
+   oferă criptare și decriptare simetrică, utilizând libmcrypt.
+   Ambele seturi de filtre susțin aceiași algoritmi disponibili
    <link linkend="ref.mcrypt">extensiei mcrypt</link> sub forma
    <literal>mcrypt.ciphername</literal>, unde <parameter>ciphername</parameter>
-   este denumirea algoritmului de criptare, care ar fi putut fi transmis funcţiei
+   este denumirea algoritmului de criptare, care ar fi putut fi transmis funcției
    <function>mcrypt_module_open</function>.
-   De asemenea sunt disponibili şi următorii cinci parametri:
+   De asemenea sunt disponibili și următorii cinci parametri:
   </simpara>
 
   <para>
@@ -451,19 +451,19 @@ The compressed file is 1488 bytes long.
      <tbody>
       <row>
        <entry>mode</entry>
-       <entry>Opţional</entry>
+       <entry>Opțional</entry>
        <entry>cbc</entry>
        <entry>cbc, cfb, ecb, nofb, ofb, stream</entry>
       </row>
       <row>
        <entry>algorithms_dir</entry>
-       <entry>Opţional</entry>
+       <entry>Opțional</entry>
        <entry>ini_get('mcrypt.algorithms_dir')</entry>
        <entry>Localizarea modulelor algoritmilor</entry>
       </row>
       <row>
        <entry>modes_dir</entry>
-       <entry>Opţional</entry>
+       <entry>Opțional</entry>
        <entry>ini_get('mcrypt.modes_dir')</entry>
        <entry>Localizarea modulelor modurilor</entry>
       </row>
@@ -471,13 +471,13 @@ The compressed file is 1488 bytes long.
        <entry>iv</entry>
        <entry>Necesar</entry>
        <entry>nu este</entry>
-       <entry>De obicei 8, 16, sau 32 baiţi de date binare. Depinde de cifru</entry>
+       <entry>De obicei 8, 16, sau 32 baiți de date binare. Depinde de cifru</entry>
       </row>
       <row>
        <entry>key</entry>
        <entry>Necesar</entry>
        <entry>nu este</entry>
-       <entry>De obicei 8, 16, sau 32 baiţi de date binare. Depinde de cifru</entry>
+       <entry>De obicei 8, 16, sau 32 baiți de date binare. Depinde de cifru</entry>
       </row>
      </tbody>
     </tgroup>
@@ -485,7 +485,7 @@ The compressed file is 1488 bytes long.
   </para>
 
   <example>
-   <title>Criptarea conţinutului unui fişier utilizând 3DES</title>
+   <title>Criptarea conținutului unui fișier utilizând 3DES</title>
    <programlisting role="php">
 <![CDATA[
 <?php
@@ -509,7 +509,7 @@ fclose($fp);
   </example>
 
   <example>
-   <title>Citirea unui fişier criptat</title>
+   <title>Citirea unui fișier criptat</title>
    <programlisting role="php">
 <![CDATA[
 <?php

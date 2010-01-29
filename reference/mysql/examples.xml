@@ -8,7 +8,7 @@
  <section xml:id="mysql.examples-basic">
   <para>
    Acest exemplu simplu demonstrează connectarea, executarea unei interpelări,
-   afişarea rândurilor rezultante şi deconectarea de la o bază de date MySQL.
+   afișarea rândurilor rezultante și deconectarea de la o bază de date MySQL.
    <example>
     <title>Exemplu general de utilizare a extensiei MySQL</title>
     <programlisting role="php">
@@ -24,7 +24,7 @@ mysql_select_db('my_database') or die('Could not select database');
 $query = 'SELECT * FROM my_table';
 $result = mysql_query($query) or die('Query failed: ' . mysql_error());
 
-// Afişarea rezultatelor în HTML
+// Afișarea rezultatelor în HTML
 echo "<table>\n";
 while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
     echo "\t<tr>\n";

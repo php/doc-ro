@@ -5,7 +5,7 @@
 <refentry xml:id="function.xmlrpc-get-type" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>xmlrpc_get_type</refname>
-  <refpurpose>Obţine tipul xmlrpc pentru o valoare PHP</refpurpose>
+  <refpurpose>Obține tipul xmlrpc pentru o valoare PHP</refpurpose>
  </refnamediv>
  <refsect1 role="description">
   &reftitle.description;
@@ -15,7 +15,7 @@
   </methodsynopsis>
   &warn.experimental.func;
   <para>
-   Această funcţie este utilă în special pentru string-uri base64 şi datetime.
+   Această funcție este utilă în special pentru string-uri base64 și datetime.
   </para>
   &warn.undocumented.func;
  </refsect1>

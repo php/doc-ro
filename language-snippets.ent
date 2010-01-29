@@ -14,26 +14,26 @@ automat.</entry></row>'>
 emite o notificare <constant>E_DEPRECATED</constant>.</para></note>'>
 
 <!ENTITY note.bin-safe '<note xmlns="http://docbook.org/ns/docbook"><simpara>
-Această funcţie acceptă şi date binare.</simpara></note>'>
+Această funcție acceptă și date binare.</simpara></note>'>
 
 <!ENTITY note.clearstatcache '<note xmlns="http://docbook.org/ns/docbook">
-<simpara>Rezultatele acestei funcţii sunt stocate în cache. Accesaţi
+<simpara>Rezultatele acestei funcții sunt stocate în cache. Accesați
 <function>clearstatcache</function> pentru mai multe detalii.</simpara></note>'>
 
 <!ENTITY note.context-support '<note xmlns="http://docbook.org/ns/docbook">
-<simpara>Susţinrea contextelor a fost adăugată începând cu PHP 5.0.0. Pentru o
-descriere a <literal>contextelor</literal>, referiţi-vă la
+<simpara>Susținrea contextelor a fost adăugată începând cu PHP 5.0.0. Pentru o
+descriere a <literal>contextelor</literal>, referiți-vă la
 <xref linkend="ref.stream"/>.</simpara></note>'>
 
 <!ENTITY note.exec-bg '<note xmlns="http://docbook.org/ns/docbook"><para>Dacă
-un program este lansat în execuţie cu ajutorul acestei funcţii, pentru ca el să
-continue să ruleze în fundal, ieşirile acelui program trebuie redirecţionate
-spre un fişier sau spre un alt flux de ieşire. În caz contrar, PHP se va
-suspenda până când execuţia programului se va încheia.</para></note>'>
+un program este lansat în execuție cu ajutorul acestei funcții, pentru ca el să
+continue să ruleze în fundal, ieșirile acelui program trebuie redirecționate
+spre un fișier sau spre un alt flux de ieșire. În caz contrar, PHP se va
+suspenda până când execuția programului se va încheia.</para></note>'>
 
 <!ENTITY note.func-callback '<note xmlns="http://docbook.org/ns/docbook">
-<simpara>În locul denumirii funcţiei poate fi indicat un tablou conţinând o
-referinţă la obiect şi o denumire a metodei.</simpara></note>'>
+<simpara>În locul denumirii funcției poate fi indicat un tablou conținând o
+referință la obiect și o denumire a metodei.</simpara></note>'>
 
 <!ENTITY note.func-callback-exceptions '<note xmlns="http://docbook.org/ns/docbook">
 <para>Funcțiile de apel invers înregistrate cu astfel de funcții ca
@@ -42,40 +42,40 @@ nu vor fi apelate dacă există o excepție neinterceptată emisă într-un apel
 precedent.</para></note>'>
 
 <!ENTITY note.funcnoparam '<note xmlns="http://docbook.org/ns/docbook"><para>
-Deoarece această funcţie îşi determină detaliile parametrilor în dependenţă de
-circumstanţă, ea nu poate fi utilizată în calitate de parametru-funcţie. Dacă
+Deoarece această funcție își determină detaliile parametrilor în dependență de
+circumstanță, ea nu poate fi utilizată în calitate de parametru-funcție. Dacă
 trebuie transmisă această valoare, atunci rezultatele trebuie atribuite unei
-variabile, şi această variabilă trebuie transmisă.</para></note>'>
+variabile, și această variabilă trebuie transmisă.</para></note>'>
 
 <!ENTITY note.line-endings '<note xmlns="http://docbook.org/ns/docbook">
-<simpara>Dacă PHP nu recunoaşte corect terminaţiile liniilor atunci când
-citeşte fişiere pe, sau create pe un computer Macintosh, atunci activarea
-opţiunii de configurare la rulare
+<simpara>Dacă PHP nu recunoaște corect terminațiile liniilor atunci când
+citește fișiere pe, sau create pe un computer Macintosh, atunci activarea
+opțiunii de configurare la rulare
 <link linkend="ini.auto-detect-line-endings">auto_detect_line_endings</link>
-ar trebui să ajute la soluţionarea problemei.</simpara></note>'>
+ar trebui să ajute la soluționarea problemei.</simpara></note>'>
 
 <!ENTITY note.no-remote '<note xmlns="http://docbook.org/ns/docbook"><simpara>
-Această funcţie nu va lucra cu <link linkend="features.remote-files">fişiere la
-distanţă</link>, deoarece fişierul care trebuie să fie examinat trebuie să fie
-accesibil prin intermediul sistemului de fişiere al serverului.</simpara></note>'>
+Această funcție nu va lucra cu <link linkend="features.remote-files">fișiere la
+distanță</link>, deoarece fișierul care trebuie să fie examinat trebuie să fie
+accesibil prin intermediul sistemului de fișiere al serverului.</simpara></note>'>
 
 <!ENTITY note.not-bin-safe '<warning xmlns="http://docbook.org/ns/docbook">
-<simpara>Această funcţie nu funcţionează stabil (deocamdată) cu date binare!
+<simpara>Această funcție nu funcționează stabil (deocamdată) cu date binare!
 </simpara></warning>'>
 
 <!ENTITY note.no-key-association '<note xmlns="http://docbook.org/ns/docbook">
-<simpara>Această funcţie atribuie chei noi elementelor din
+<simpara>Această funcție atribuie chei noi elementelor din
 <parameter>array</parameter>. Ea va elimina cheile existente, care posibil au
 fost atribuite, în loc doar să rearanjeze cheile.</simpara></note>'>
 
 <!ENTITY note.no-windows '<note xmlns="http://docbook.org/ns/docbook"><simpara>
-Această funcţie nu este implementată pe platformele Windows.</simpara></note>'>
+Această funcție nu este implementată pe platformele Windows.</simpara></note>'>
 
 <!ENTITY note.no-windows.extension '<note xmlns="http://docbook.org/ns/docbook">
 <simpara>Această extensie nu este disponibilă pe platformele Windows.</simpara></note>'>
 
 <!ENTITY note.randomseed '<note xmlns="http://docbook.org/ns/docbook"><simpara>
-Începând cu PHP 4.2.0 nu este nevoie de a însămânţa generatorul de numere
+Începând cu PHP 4.2.0 nu este nevoie de a însămânța generatorul de numere
 aleatoare prin intermediul <function>srand</function> sau
 <function>mt_srand</function>, deoarece aceasta se efectuează în mod automat.
 </simpara></note>'>
@@ -84,78 +84,78 @@ aleatoare prin intermediul <function>srand</function> sau
 <title>register_globals: notă importantă</title><para>Începând cu PHP 4.2.0,
 valoarea implicită pentru directiva PHP
 <link linkend="ini.register-globals">register_globals</link> este <emphasis>
-off</emphasis>, şi este eliminată complet începând cu PHP 6.0.0. Comunitatea
-PHP îi încurajează pe toţi programatorii să nu se bazeze pe această directivă,
+off</emphasis>, și este eliminată complet începând cu PHP 6.0.0. Comunitatea
+PHP îi încurajează pe toți programatorii să nu se bazeze pe această directivă,
 dar să utilizeze alte mijloace, cum ar fi &link.superglobals;.</para></note>'>
 
 <!ENTITY note.is-superglobal "<note xmlns="http://docbook.org/ns/docbook">
 <para>Aceasta este o variabilă 'superglobală', sau globală automată. Aceasta
-pur şi simplu înseamnă că ea este disponibilă în toate circumstanţele pe
+pur și simplu înseamnă că ea este disponibilă în toate circumstanțele pe
 parcursul script-ului. Nu este nevoie de a scrie
-<command>global $variable;</command> pentru a o accesa din funcţii sau metode.
+<command>global $variable;</command> pentru a o accesa din funcții sau metode.
 </para></note>">
 
 <!ENTITY note.superglobals '<note xmlns="http://docbook.org/ns/docbook"><title>
 Superglobalele: notă despre disponibilitate</title><para>Tablourile
-superglobale, cum ar fi <varname>$_GET</varname>, <varname>$_POST</varname> şi
+superglobale, cum ar fi <varname>$_GET</varname>, <varname>$_POST</varname> și
 <varname>$_SERVER</varname>, etc. sunt disponibile începând cu PHP 4.1.0.
-Pentru mai multe informaţii, citiţi secţiunea manualului despre
+Pentru mai multe informații, citiți secțiunea manualului despre
 &link.superglobals;</para></note>'>
 
 <!ENTITY note.uses-ob '<note xmlns="http://docbook.org/ns/docbook"><para>
-Această funcţie utilizează buferizarea internă a ieşirilor cu acest parametru,
-de aceea ea nu poate fi utilizată în interiorul funcţiei de apel invers
+Această funcție utilizează buferizarea internă a ieșirilor cu acest parametru,
+de aceea ea nu poate fi utilizată în interiorul funcției de apel invers
 (callback) <function>ob_start</function>.</para></note>'>
 
 <!ENTITY note.filesystem-time-res '<note xmlns="http://docbook.org/ns/docbook">
-<para>Observaţi că rezoluţia timpului poate să difere de la un sistem de
-fişiere la altul.</para></note>'>
+<para>Observați că rezoluția timpului poate să difere de la un sistem de
+fișiere la altul.</para></note>'>
 
 <!ENTITY note.uses-autoload '<note xmlns="http://docbook.org/ns/docbook"><para>
-Utilizarea acestei funcţii va duce la utilizarea oricărui
+Utilizarea acestei funcții va duce la utilizarea oricărui
 <link linkend="language.oop5.autoload">autoîncărcător</link> înregistrat dacă
 clasa nu este cunoscută deja.</para></note>'>
 
 <!-- Tips -->
 
 <!ENTITY tip.fopen-wrapper '<tip xmlns="http://docbook.org/ns/docbook">
-<simpara>Un URL poate fi utilizat în calitate de denumire a fişierului în
-această funcţie dacă<link linkend="ini.allow-url-fopen"> învelişurile
-fopen</link> au fost activate. Accesaţi <function>fopen</function> pentru mai
-multe detalii despre modul de specificare a denumirii fişierului. Accesați
+<simpara>Un URL poate fi utilizat în calitate de denumire a fișierului în
+această funcție dacă<link linkend="ini.allow-url-fopen"> învelișurile
+fopen</link> au fost activate. Accesați <function>fopen</function> pentru mai
+multe detalii despre modul de specificare a denumirii fișierului. Accesați
 <xref linkend="wrappers"/> pentru referințe la informații despre posibilitățile
 pe care le oferă diferite învelișuri, note despre utilizarea lor și informații
 despre variabile predefinite pe care le oferă.</simpara></tip>'>
 
 <!ENTITY tip.fopen-wrapper.stat '<tip xmlns="http://docbook.org/ns/docbook">
-<simpara>Începând cu PHP 5.0.0 această funcţie poate fi utilizată de asemenea
-cu <emphasis>unele</emphasis> învelişuri URL. Referiţi-vă la
-<xref linkend="wrappers"/> pentru lista învelişurilor care susţin familia de
-funcţionalitate <function>stat</function>.</simpara></tip>'>
+<simpara>Începând cu PHP 5.0.0 această funcție poate fi utilizată de asemenea
+cu <emphasis>unele</emphasis> învelișuri URL. Referiți-vă la
+<xref linkend="wrappers"/> pentru lista învelișurilor care susțin familia de
+funcționalitate <function>stat</function>.</simpara></tip>'>
 
 <!ENTITY tip.ob-capture '<tip xmlns="http://docbook.org/ns/docbook"><simpara>
-La fel ca şi orice program/script ce afişează rezultatele direct în browser,
-<link linkend="ref.outcontrol">funcţiile de control al ieşirilor</link> pot fi
-utilizate pentru a capta ieşirea acestei funcţii şi de a o salva într-un
+La fel ca și orice program/script ce afișează rezultatele direct în browser,
+<link linkend="ref.outcontrol">funcțiile de control al ieșirilor</link> pot fi
+utilizate pentru a capta ieșirea acestei funcții și de a o salva într-un
 <type>string</type> (spre exemplu).</simpara></tip>'>
 
 <!ENTITY tip.userlandnaming '<tip xmlns="http://docbook.org/ns/docbook">
-<simpara>Accesaţi de asemenea <xref linkend="userlandnaming" />.</simpara></tip>'>
+<simpara>Accesați de asemenea <xref linkend="userlandnaming" />.</simpara></tip>'>
 
 
 <!-- Warnings -->
 
 <!ENTITY warn.escapeshell '<warning xmlns="http://docbook.org/ns/docbook">
 <para>Când se permite ca datele introduse de utilizatori să fie transmise
-acestei funcţii, utilizaţi <function>escapeshellarg</function> sau
+acestei funcții, utilizați <function>escapeshellarg</function> sau
 <function>escapeshellcmd</function> pentru a vă asigura că utilizatorii nu vor
 păcăli sistemul să execute comenzi arbitrare.</para></warning>'>
 
 <!ENTITY warn.experimental '<warning xmlns="http://docbook.org/ns/docbook">
 <simpara>Această extensie este <emphasis>EXPERIMENTALĂ</emphasis>.
-Comportamentul acestei extensii &#2014; - inclusiv denumirile funcţiilor sale şi
-orice alte aspecte documentate în privinţa acestei extensii &#2014; - pot să fie
-modificate fără preaviz într-o versiune viitoare a PHP. Utilizaţi această
+Comportamentul acestei extensii &#2014; - inclusiv denumirile funcțiilor sale și
+orice alte aspecte documentate în privința acestei extensii &#2014; - pot să fie
+modificate fără preaviz într-o versiune viitoare a PHP. Utilizați această
 extensie la propriul risc.</simpara></warning>'>
 
 <!ENTITY warn.deprecated.feature-5-3-0 '<warning xmlns="http://docbook.org/ns/docbook">
@@ -163,18 +163,18 @@ extensie la propriul risc.</simpara></warning>'>
 5.3.0. Utilizarea acestei facilități este foarte nerecomandată.</simpara></warning>'>
 
 <!ENTITY warn.deprecated.feature-5-3-0.removed-6-0-0 '<warning xmlns="http://docbook.org/ns/docbook">
-<simpara>Această facilitate este <emphasis>DEZAPROBATĂ</emphasis> şi este
+<simpara>Această facilitate este <emphasis>DEZAPROBATĂ</emphasis> și este
 <emphasis>ELIMINATĂ</emphasis> începând cu PHP 6.0.0. Utilizarea acestei
-facilităţi este foarte nerecomandată.</simpara></warning>'>
+facilități este foarte nerecomandată.</simpara></warning>'>
 
 <!ENTITY warn.deprecated.function-5-3-0.removed-6-0-0 '<warning
-xmlns="http://docbook.org/ns/docbook"><simpara>Această funcţie a fost
-<emphasis>DEZAPROBATĂ</emphasis> începând cu PHP 5.3.0 şi <emphasis>ELIMINATĂ</emphasis>
-începând cu PHP 6.0.0. Utilizarea acestei facilităţi este foarte nerecomandată.
+xmlns="http://docbook.org/ns/docbook"><simpara>Această funcție a fost
+<emphasis>DEZAPROBATĂ</emphasis> începând cu PHP 5.3.0 și <emphasis>ELIMINATĂ</emphasis>
+începând cu PHP 6.0.0. Utilizarea acestei facilități este foarte nerecomandată.
 </simpara></warning>'>
 
 <!ENTITY warn.deprecated.function.removed-5-3-0 '<warning xmlns="http://docbook.org/ns/docbook">
-<simpara>Această funcţie este <emphasis>DEZAPROBATĂ</emphasis> şi este
+<simpara>Această funcție este <emphasis>DEZAPROBATĂ</emphasis> și este
 <emphasis>ELIMINATĂ</emphasis> începând cu PHP 5.3.0.</simpara></warning>'>
 
 <!ENTITY warn.deprecated.alias-5-3-0 '<warning xmlns="http://docbook.org/ns/docbook">
@@ -183,35 +183,35 @@ xmlns="http://docbook.org/ns/docbook"><simpara>Această funcţie a fost
 </simpara></warning>'>
 
 <!ENTITY warn.experimental.func '<warning xmlns="http://docbook.org/ns/docbook">
-<simpara>Această funcţie este <emphasis>EXPERIMENTALĂ</emphasis>.
-Comportamentul acestei funcţii, denumirea sa şi orice alte aspecte documentate
-în privinţa acestei funcţii pot să fie modificate fără preaviz într-o versiune
-viitoare a PHP. Utilizaţi această funcţie la propriul risc.</simpara>
+<simpara>Această funcție este <emphasis>EXPERIMENTALĂ</emphasis>.
+Comportamentul acestei funcții, denumirea sa și orice alte aspecte documentate
+în privința acestei funcții pot să fie modificate fără preaviz într-o versiune
+viitoare a PHP. Utilizați această funcție la propriul risc.</simpara>
 </warning>'>
 
 <!ENTITY warn.imaprecodeyaz '<warning xmlns="http://docbook.org/ns/docbook">
 <simpara>Extensiile <link linkend="ref.imap">IMAP</link>,
 <link linkend="ref.recode">recode</link>, <link linkend="ref.yaz">YAZ</link>
-şi <link linkend="ref.cyrus">Cyrus</link> nu pot fi utilizate împreună,
-deoarece ele utilizează aceleaşi simboluri interne.</simpara></warning>'>
+și <link linkend="ref.cyrus">Cyrus</link> nu pot fi utilizate împreună,
+deoarece ele utilizează aceleași simboluri interne.</simpara></warning>'>
 
 <!ENTITY warn.install.cgi '<warning xmlns="http://docbook.org/ns/docbook">
 <para>Un server configurat în regim CGI este susceptibil câtorva atacuri
-posibile. Vă rugăm să citiţi <link linkend="security.cgi-bin">secţiunea despre
-securitatea CGI</link> pentru a afla cum să vă apăraţi de astfel de atacuri.
+posibile. Vă rugăm să citiți <link linkend="security.cgi-bin">secțiunea despre
+securitatea CGI</link> pentru a afla cum să vă apărați de astfel de atacuri.
 </para></warning>'>
 
 <!ENTITY note.magicquotes.gpc '<note xmlns="http://docbook.org/ns/docbook">
 <title>Notă asupra directivei: magic_quotes_gpc</title><para>Directiva
 <link linkend="ini.magic-quotes-gpc">magic_quotes_gpc</link> are valoarea
-implicită <literal>on</literal>. În esenţă ea execută
-<function>addslashes</function> asupra tuturor datelor GET, POST şi COOKIE.
+implicită <literal>on</literal>. În esență ea execută
+<function>addslashes</function> asupra tuturor datelor GET, POST și COOKIE.
 <function>stripslashes</function> poate fi utilizată pentru a elimina
 slash-urile suplimentare.</para></note>'>
 
 <!ENTITY warn.no-win32-fopen-wrapper '<warning xmlns="http://docbook.org/ns/docbook">
-<para>Versiunile PHP pentru Windows până la PHP 4.3.0 nu susţin accesarea
-fişierelor la distanţă prin intermediul acestei funcţii, chiar dacă
+<para>Versiunile PHP pentru Windows până la PHP 4.3.0 nu susțin accesarea
+fișierelor la distanță prin intermediul acestei funcții, chiar dacă
 <link linkend="ini.allow-url-fopen">allow_url_fopen</link> este activată.
 </para></warning>'>
 
@@ -219,27 +219,27 @@ fişierelor la distanţă prin intermediul acestei funcţii, chiar dacă
 <para>La utilizarea SSL, Microsoft IIS va viola protocolul prin închiderea
 conexiunii fără a trimite un indicator <literal>close_notify</literal>. PHP va
 raporta aceasta ca "SSL: Fatal Protocol Error" (eroare fatală de protocol) când
-se ajunge la sfârşitul datelor. Pentru a evita aceasta coborât nivelul
+se ajunge la sfârșitul datelor. Pentru a evita aceasta coborât nivelul
 <link linkend="ini.error-reporting">error_reporting</link> pentru a nu include
-avertizări. PHP 4.3.7 şi versiunile ulterioare pot detecta soft-ul de server
-IIS care produce astfel de greşeli când deschideţi fluxul utilizând învelişul
-<literal>https://</literal> şi va suprima automat avertizările. La utilizarea
+avertizări. PHP 4.3.7 și versiunile ulterioare pot detecta soft-ul de server
+IIS care produce astfel de greșeli când deschideți fluxul utilizând învelișul
+<literal>https://</literal> și va suprima automat avertizările. La utilizarea
 <function>fsockopen</function> pentru a crea un socket
-<literal>ssl://</literal> programatorul este responsabil să detecteze şi să
+<literal>ssl://</literal> programatorul este responsabil să detecteze și să
 suprime această avertizare.</para></warning>'>
 
 <!ENTITY warn.undocumented.func '<warning xmlns="http://docbook.org/ns/docbook">
-<simpara>Această funcţie nu este documentată în prezent; este disponibilă numai
+<simpara>Această funcție nu este documentată în prezent; este disponibilă numai
 lista sa de argumente.</simpara></warning>'>
 
 
 <!-- Misc -->
 
 <!ENTITY no.function.parameters '<para xmlns="http://docbook.org/ns/docbook">
-Această funcţie nu are parametri.</para>'>
+Această funcție nu are parametri.</para>'>
 
 <!ENTITY example.outputs '<para xmlns="http://docbook.org/ns/docbook">
-Exemplul de mai sus va afişa:</para>'>
+Exemplul de mai sus va afișa:</para>'>
 
 <!ENTITY example.outputs.32bit '<para xmlns="http://docbook.org/ns/docbook">
 Exemplul de mai sus va afișa pe mașini pe 32 de biți:</para>'>
@@ -248,7 +248,7 @@ Exemplul de mai sus va afișa pe mașini pe 32 de biți:</para>'>
 Exemplul de mai sus va afișa pe mașini pe 64 de biți:</para>'>
 
 <!ENTITY example.outputs.similar '<para xmlns="http://docbook.org/ns/docbook">
-Exemplul de mai sus va afişa ceva similar cu:</para>'>
+Exemplul de mai sus va afișa ceva similar cu:</para>'>
 
 <!ENTITY examples.outputs '<para xmlns="http://docbook.org/ns/docbook">
 Exemplele de mai sus vor afișa:</para>'>
@@ -263,13 +263,13 @@ Exemplele de mai sus vor afișa pe mașini pe 64 biți:</para>'>
 Exemplele de mai sus vor afișa ceva similar cu:</para>'>
 
 <!ENTITY array.resetspointer '<note xmlns="http://docbook.org/ns/docbook">
-<simpara>Această funcţie va efectua <function>reset</function> asupra
+<simpara>Această funcție va efectua <function>reset</function> asupra
 indicatorului de tip <type>array</type> după utilizare.</simpara></note>'>
 
 <!ENTITY seealso.array.sorting '<link xmlns="http://docbook.org/ns/docbook"
 linkend="array.sorting">Comparația funcțiilor de sortare a tablourilor</link>'>
 
-<!ENTITY seealso.callback 'informaţie despre tipul
+<!ENTITY seealso.callback 'informație despre tipul
 <link xmlns="http://docbook.org/ns/docbook" linkend="language.types.callback">
 callback</link>'>
 
@@ -280,36 +280,36 @@ ajutorul directivei <link linkend="ini.register-long-arrays">register_long_array
 
 <!ENTITY ini.shorthandbytes '<simpara xmlns="http://docbook.org/ns/docbook">
 În cazul utilizării unui <type>integer</type>, valoarea este măsurată în
-octeţi. De asemenea poate fi utilizată notaţia prescurtată, după cum este
+octeți. De asemenea poate fi utilizată notația prescurtată, după cum este
 descris în <link linkend="faq.using.shorthandbytes">acest FAQ</link>.</simpara>'>
 
 <!ENTITY info.deprecated.alias 'Pentru compatibilitatea cu versiunile
 anterioare, următorul pseudonim dezaprobat poate fi utilizat: '>
 
-<!ENTITY info.function.alias 'Această funcţie este pseudonim pentru: '>
+<!ENTITY info.function.alias 'Această funcție este pseudonim pentru: '>
 
 <!ENTITY info.function.alias.deprecated '<simpara xmlns="http://docbook.org/ns/docbook">
-Acest pseudonim al funcţiei este dezaprobat şi există numai din motivul
-păstrării compatibilităţii cu versiunile anterioare. Utilizarea acestei funcţii
+Acest pseudonim al funcției este dezaprobat și există numai din motivul
+păstrării compatibilității cu versiunile anterioare. Utilizarea acestei funcții
 nu este recomandată, deoarece ea poate fi eliminată din PHP în viitor.</simpara>'>
 
-<!ENTITY ext.windows.path.dll 'Pentru ca această extensie să funcţioneze,
-anumite fişiere <acronym xmlns="http://docbook.org/ns/docbook">DLL</acronym>
+<!ENTITY ext.windows.path.dll 'Pentru ca această extensie să funcționeze,
+anumite fișiere <acronym xmlns="http://docbook.org/ns/docbook">DLL</acronym>
 trebuie să fie accesibile în calea de sistem a Windows din
 <literal xmlns="http://docbook.org/ns/docbook">variabila PATH</literal>. Pentru
-informaţii despre cum poate fi realizat acest lucru, accesaţi
+informații despre cum poate fi realizat acest lucru, accesați
 <acronym xmlns="http://docbook.org/ns/docbook">FAQ</acronym> întitulat
 "<link xmlns="http://docbook.org/ns/docbook" linkend="faq.installation.addtopath">
 Cum să adaug directorul meu PHP la variabila PATH din Windows</link>" pentru
-informaţii despre cum să realizaţi aceasta. Cu toate că copierea fişierelor DLL
-din directorul PHP în directorul de sistem al Windows de asemenea funcţionează
+informații despre cum să realizați aceasta. Cu toate că copierea fișierelor DLL
+din directorul PHP în directorul de sistem al Windows de asemenea funcționează
 (deoarece directorul de sistem este în mod implicit inclus în variabila
 <literal xmlns="http://docbook.org/ns/docbook">PATH</literal>), acest lucru nu
 este recomandabil. <emphasis xmlns="http://docbook.org/ns/docbook">Această
-extensie necesită ca următoarele fişiere să existe în calea <literal>PATH
+extensie necesită ca următoarele fișiere să existe în calea <literal>PATH
 </literal>:</emphasis> '>
 
-<!ENTITY manual.migration.seealso 'Accesaţi de asemenea ghidurile de migrare
+<!ENTITY manual.migration.seealso 'Accesați de asemenea ghidurile de migrare
 pentru versiunile PHP'>
 
 <!ENTITY style.oop 'Stil obiect-orientat'>
@@ -321,18 +321,18 @@ linkend="language.types.resource">resource</link>'>
 <!ENTITY foreach '<link xmlns="http://docbook.org/ns/docbook"
 linkend="control-structures.foreach">foreach</link>'>
 
-<!ENTITY parameter.context 'Accesaţi secţiunea
+<!ENTITY parameter.context 'Accesați secțiunea
 <link xmlns="http://docbook.org/ns/docbook" linkend="context">context</link>
 a manualului pentru descrierea
 <literal xmlns="http://docbook.org/ns/docbook">contextelor</literal>.'>
 
-<!ENTITY parameter.use_include_path 'Când este stabilit în &true;, fişierul
-este căutat şi în căile specificate în <link xmlns="http://docbook.org/ns/docbook"
+<!ENTITY parameter.use_include_path 'Când este stabilit în &true;, fișierul
+este căutat și în căile specificate în <link xmlns="http://docbook.org/ns/docbook"
 linkend="ini.include-path">include_path</link>'>
 
 <!-- Returns -->
 
-<!ENTITY return.falseforfailure ' sau &false; în cazul eşecului'>
+<!ENTITY return.falseforfailure ' sau &false; în cazul eșecului'>
 
 <!ENTITY return.success 'Întoarce valoarea &true; în cazul
 succesului&return.falseforfailure;.'>
@@ -340,39 +340,39 @@ succesului&return.falseforfailure;.'>
 <!ENTITY return.void 'Nu este întoarsă nici o valoare.'>
 
 <!ENTITY return.falseproblem '<warning xmlns="http://docbook.org/ns/docbook">
-<simpara>Această funcţie poate întoarce valoarea Boolean &false;, dar poate de
+<simpara>Această funcție poate întoarce valoarea Boolean &false;, dar poate de
 asemenea întoarce o valoare non-Boolean care evaluează în &false;, cum ar fi
-<literal>0</literal> sau &quot;&quot;. Vă rugăm să citiţi secţiunea despre
+<literal>0</literal> sau &quot;&quot;. Vă rugăm să citiți secțiunea despre
 tipul <link linkend="language.types.boolean">Boolean</link> pentru mai multe
-informaţii. Utilizaţi
+informații. Utilizați
 <link linkend="language.operators.comparison">operatorul ===</link> pentru a
-verifica valoarea întoarsă de această funcţie.</simpara></warning>'>
+verifica valoarea întoarsă de această funcție.</simpara></warning>'>
 
 
 <!-- Image (GD) Notes -->
 <!ENTITY note.config.t1lib '<note xmlns="http://docbook.org/ns/docbook">
-<simpara>Această funcţie e disponibilă numai dacă PHP este compilat utilizând
+<simpara>Această funcție e disponibilă numai dacă PHP este compilat utilizând
 <option role="configure">--with-t1lib[=DIR]</option>.</simpara></note>'>
 
 <!ENTITY note.config.jpeg '<note xmlns="http://docbook.org/ns/docbook">
-<simpara>Susţinerea JPEG este disponibilă numai dacă PHP a fost compilat cu
+<simpara>Susținerea JPEG este disponibilă numai dacă PHP a fost compilat cu
 GD-1.8 sau ulterior.</simpara></note>'>
 
 <!ENTITY note.config.wbmp '<note xmlns="http://docbook.org/ns/docbook">
-<simpara>Susţinerea WBMP este disponibilă numai dacă PHP a fost compilat cu
+<simpara>Susținerea WBMP este disponibilă numai dacă PHP a fost compilat cu
 GD-1.8 sau ulterior.</simpara></note>'>
 
 <!ENTITY note.bundled.gd '<note xmlns="http://docbook.org/ns/docbook"><simpara>
-Această funcţie este disponibilă numai dacă PHP este compilat cu versiunea
+Această funcție este disponibilă numai dacă PHP este compilat cu versiunea
 bibliotecii GD furnizată împreună cu PHP.</simpara></note>'>
 
 <!ENTITY note.freetype '<note xmlns="http://docbook.org/ns/docbook"><simpara>
-Această funcţie este disponibilă numai dacă PHP este compilat cu susţinerea
+Această funcție este disponibilă numai dacă PHP este compilat cu susținerea
 freetype (<option role="configure">--with-freetype-dir=DIR</option>)</simpara>
 </note>'>
 
 <!ENTITY note.gd.2 '<note xmlns="http://docbook.org/ns/docbook"><simpara>
-Această funcţie necesită GD 2.0.1 sau ulterioară (2.0.28 sau ulterioară este
+Această funcție necesită GD 2.0.1 sau ulterioară (2.0.28 sau ulterioară este
 recomandată).</simpara></note>'>
 
 <!ENTITY note.gd.notrequired '<note xmlns="http://docbook.org/ns/docbook">
@@ -381,7 +381,7 @@ recomandată).</simpara></note>'>
 
 <!ENTITY gd.image.description '<varlistentry xmlns="http://docbook.org/ns/docbook">
 <term><parameter>image</parameter></term><listitem><para>O resursă - imagine,
-întoarsă de una din funcţiile de creare a imaginilor, cum ar fi
+întoarsă de una din funcțiile de creare a imaginilor, cum ar fi
 <function>imagecreatetruecolor</function>.</para></listitem></varlistentry>'>
 
 <!ENTITY gd.font.description '<varlistentry xmlns="http://docbook.org/ns/docbook">
@@ -434,8 +434,8 @@ dar nici una din submapele acstui director.</para>'>
 
 <!ENTITY note.mbstring.encoding.internal '<note xmlns="http://docbook.org/ns/docbook">
 <para>Codificarea internă a caracterelor sau codificarea caracterelor
-specificată de funcţia <function>mb_regex_encoding</function> va fi utilizată
-în calitate de codificare a caracterelor pentru această funcţie.</para></note>'>
+specificată de funcția <function>mb_regex_encoding</function> va fi utilizată
+în calitate de codificare a caracterelor pentru această funcție.</para></note>'>
 
 <!ENTITY mbstring.encoding.parameter '<para xmlns="http://docbook.org/ns/docbook">
 Parametrul <parameter>encoding</parameter> reprezintă codificarea caracterelor.
@@ -458,8 +458,8 @@ distanță în aplicația dumneavoastră.</para></warning>'>
 <!-- memcached notes -->
 
 <!ENTITY memcached.parameter.expiration 'Timpul expirării, implicit este 0.
-Accesaţi <link linkend="memcached.expiration" xmlns="http://docbook.org/ns/docbook">
-Timpurile de expirare</link> pentru informaţii suplimentare.'>
+Accesați <link linkend="memcached.expiration" xmlns="http://docbook.org/ns/docbook">
+Timpurile de expirare</link> pentru informații suplimentare.'>
 
 <!ENTITY memcached.parameter.server_key 'Cheia ce identifică server-ul pe care
 se stochează valoarea.'>
@@ -471,7 +471,7 @@ a fi stocate pe server.'>
 
 <!ENTITY memcached.parameter.value 'Valoarea pentru a fi stocată.'>
 
-<!ENTITY memcached.result.getresultcode 'Utilizaţi
+<!ENTITY memcached.result.getresultcode 'Utilizați
 <methodname xmlns="http://docbook.org/ns/docbook">Memcached::getResultCode</methodname>
 dacă e necesar.'>
 
@@ -487,7 +487,7 @@ dacă e necesar.'>
 
 <!ENTITY gearman.parameter.data 'Date adiționale care pot fi necesare pentru a încheia lucrarea'>
 
-<!ENTITY gearman.parameter.context 'Contextul aplicaţiei pentru a fi asociat cu o sarcină'>
+<!ENTITY gearman.parameter.context 'Contextul aplicației pentru a fi asociat cu o sarcină'>
 
 <!ENTITY gearman.parameter.unique 'Un ID unical utilizat pentru a identifica o anumită sarcină'>
 
@@ -495,10 +495,10 @@ dacă e necesar.'>
 
 <!-- Date and time entities -->
 <!ENTITY date.timezone.intro.title '<title xmlns="http://docbook.org/ns/docbook">
-Lista zonelor orare susţinute</title>'>
+Lista zonelor orare susținute</title>'>
 
 <!ENTITY date.timezone.intro "<para xmlns="http://docbook.org/ns/docbook">
-Aici puteţi găsi lista deplină a zonelor orare susţinute de PHP, care pot fi
+Aici puteți găsi lista deplină a zonelor orare susținute de PHP, care pot fi
 utilizate cu de ex. <function>date_default_timezone_set</function>.</para>
 <note xmlns="http://docbook.org/ns/docbook"><simpara>Ultima versiune a bazei de
 date cu zonele orare poate fi instalată prin
@@ -507,39 +507,39 @@ xmlns:xlink='http://www.w3.org/1999/xlink'>timezonedb</link> al PECL.</simpara>
 </note>">
 
 <!ENTITY date.timezone.bc '<simpara xmlns="http://docbook.org/ns/docbook">Nu
-utilizaţi zonele orare enumerate aici (afară de UTC), ele există numai din
+utilizați zonele orare enumerate aici (afară de UTC), ele există numai din
 motive de compatibilitate inversă.</simpara>'>
 
 <!ENTITY date.timezone.errors.description '<para xmlns="http://docbook.org/ns/docbook">
-Fiecare apel al unei funcţii de dată/oră va genera o <constant>E_NOTICE
-</constant> dacă zona orară nu este validă şi/sau un mesaj <constant>E_STRICT
+Fiecare apel al unei funcții de dată/oră va genera o <constant>E_NOTICE
+</constant> dacă zona orară nu este validă și/sau un mesaj <constant>E_STRICT
 </constant> sau <constant>E_WARNING</constant> dacă se utilizează setările
-sistemului sau variabila de mediu <varname>TZ</varname>. Vedeţi de asemenea
+sistemului sau variabila de mediu <varname>TZ</varname>. Vedeți de asemenea
 <function>date_default_timezone_set</function></para>'>
 
 <!ENTITY date.timezone.errors.changelog '<row xmlns="http://docbook.org/ns/docbook">
 <entry>5.1.0</entry><entry><para>Acum generează erori ale zonei orare de tip
-<constant>E_STRICT</constant> şi <constant>E_NOTICE</constant>.</para></entry>
+<constant>E_STRICT</constant> și <constant>E_NOTICE</constant>.</para></entry>
 </row>'>
 
 <!ENTITY date.timestamp.description '<varlistentry
 xmlns="http://docbook.org/ns/docbook"><term><parameter>timestamp</parameter>
-</term><listitem><para>Parametrul opţional <parameter>timestamp</parameter>
-este un <type>integer</type> şi este un moment de timp Unix şi are valoarea
+</term><listitem><para>Parametrul opțional <parameter>timestamp</parameter>
+este un <type>integer</type> și este un moment de timp Unix și are valoarea
 implicită a orei locale, dacă parametrul <parameter>timestamp</parameter> nu
-este indicat. Cu alte cuvinte, valoarea implicită este cea a funcţiei
+este indicat. Cu alte cuvinte, valoarea implicită este cea a funcției
 <function>time</function>.</para></listitem></varlistentry>'>
 
 <!ENTITY date.datetime.description '<varlistentry
 xmlns="http://docbook.org/ns/docbook"><term><parameter>object</parameter>
 </term><listitem><para>Doar pentru stilul procedural: Un obiect
-<classname>DateTime</classname> întors de funcţia
+<classname>DateTime</classname> întors de funcția
 <function>date_create</function></para></listitem></varlistentry>'>
 
 <!ENTITY date.datetimezone.description '<varlistentry
 xmlns="http://docbook.org/ns/docbook"><term><parameter>object</parameter>
 </term><listitem><para>Doar pentru stilul procedural: Un obiect
-<classname>DateTimeZone</classname> întors de funcţia
+<classname>DateTimeZone</classname> întors de funcția
 <function>timezone_open</function></para></listitem></varlistentry>'>
 
 <!ENTITY date.datetime.retval.changelog '<row xmlns="http://docbook.org/ns/docbook">
@@ -575,18 +575,18 @@ DOMNode->appendChild</function> de exemplu.'>
 
 <!-- FileSystem entities -->
 <!ENTITY fs.validfp.all '<para xmlns="http://docbook.org/ns/docbook">
-Indicatorul fişierului trebuie să fie valid şi trebuie să indice la un fişier
+Indicatorul fișierului trebuie să fie valid și trebuie să indice la un fișier
 deschis cu succes cu ajutorul <function>fopen</function> sau
-<function>fsockopen</function> (şi să nu fie închis cu
+<function>fsockopen</function> (și să nu fie închis cu
 <function>fclose</function>).</para>'>
 
 <!ENTITY fs.file.pointer '<para xmlns="http://docbook.org/ns/docbook">O <type>
-resursă</type> de tip indicator în sistemul de fişiere care este în mod tipic
+resursă</type> de tip indicator în sistemul de fișiere care este în mod tipic
 creată utilizând <function>fopen</function>.</para>'>
 
 <!-- GNUPG -->
 <!ENTITY gnupg.identifier '<para xmlns="http://docbook.org/ns/docbook">
-Identificatorul gnupg, obţinut în rezultatul apelării
+Identificatorul gnupg, obținut în rezultatul apelării
 <function>gnupg_init</function> sau <classname>gnupg</classname>.</para>'>
 
 <!ENTITY gnupg.fingerprint '<para xmlns="http://docbook.org/ns/docbook">Cheia
@@ -598,47 +598,47 @@ amprentei.</para>'>
 
 <!-- ODBC -->
 <!ENTITY odbc.connection.id '<para xmlns="http://docbook.org/ns/docbook">
-Identificatorul conexiunii ODBC, accesaţi <function>odbc_connect</function>
+Identificatorul conexiunii ODBC, accesați <function>odbc_connect</function>
 pentru detalii.</para>'>
 
-<!ENTITY odbc.parameter.search 'Acest parametru acceptă următoarele şabloane
-de căutare: "&#x25;" pentru a se potrivi cu zero sau mai multe caractere şi
+<!ENTITY odbc.parameter.search 'Acest parametru acceptă următoarele șabloane
+de căutare: "&#x25;" pentru a se potrivi cu zero sau mai multe caractere și
 "_" pentru a se potrivi cu un singur caracter.'>
 
 <!-- Oracle -->
 <!ENTITY oci.db "<para xmlns='http://docbook.org/ns/docbook'
-xmlns:xlink='http://www.w3.org/1999/xlink'>Conţine
-<literal>instanţa Oracle</literal> la care se efectuează conectarea. Poate fi
-un <link xlink:href='&url.oracle.oic.connect;'>şir Easy Connect</link>, sau
-o Denumire de conexiune din fişierul <filename>tnsnames.ora</filename>, sau
-denumirea unei instanţe locale Oracle.</para>
+xmlns:xlink='http://www.w3.org/1999/xlink'>Conține
+<literal>instanța Oracle</literal> la care se efectuează conectarea. Poate fi
+un <link xlink:href='&url.oracle.oic.connect;'>șir Easy Connect</link>, sau
+o Denumire de conexiune din fișierul <filename>tnsnames.ora</filename>, sau
+denumirea unei instanțe locale Oracle.</para>
 <para xmlns='http://docbook.org/ns/docbook'>Dacă nu este specificat, PHP
 utilizează variabile de mediu, cum ar fi <constant>TWO_TASK</constant> (în
-Linux) sau <constant>LOCAL</constant> (în Windows) şi <constant>ORACLE_SID
-</constant> pentru a determina <literal>instanţa Oracle</literal> la care
+Linux) sau <constant>LOCAL</constant> (în Windows) și <constant>ORACLE_SID
+</constant> pentru a determina <literal>instanța Oracle</literal> la care
 trebuie efectuată conexiunea.</para>
 <para xmlns='http://docbook.org/ns/docbook'>Pentru a utiliza metoda Easy
 Connect, PHP trebuie să fie legat cu bibliotecile-client Oracle 10g sau
-ulterioare. Şirul Easy Connect pentru Oracle 10g este de forma:
+ulterioare. Șirul Easy Connect pentru Oracle 10g este de forma:
 <emphasis>[//]host_name[:port][/service_name]</emphasis>. Pentru Oracle 11g
 sintaxa este:
 <emphasis>[//]host_name[:port][/service_name][:server_type][/instance_name]</emphasis>.
 Denumirile serviciilor pot fi găsite rulând utilitara Oracle
-<literal>lsnrctl status</literal> pe maşina unde rulează serverul de baze de
+<literal>lsnrctl status</literal> pe mașina unde rulează serverul de baze de
 date.</para>
 <para xmlns='http://docbook.org/ns/docbook'>
-Fişierul <filename>tnsnames.ora</filename> poate fi în calea de căutare Oracle
-Net, care include <filename>$ORACLE_HOME/network/admin</filename> şi
+Fișierul <filename>tnsnames.ora</filename> poate fi în calea de căutare Oracle
+Net, care include <filename>$ORACLE_HOME/network/admin</filename> și
 <filename>/etc</filename>. Ca alternativă, poate fi stabilit
 <literal>TNS_ADMIN</literal> astfel încât
-<filename>$TNS_ADMIN/tnsnames.ora</filename> este citit. Asiguraţi-vă că
-serviciul web posedă dreptul de citire a acestui fişier.</para>">
+<filename>$TNS_ADMIN/tnsnames.ora</filename> este citit. Asigurați-vă că
+serviciul web posedă dreptul de citire a acestui fișier.</para>">
 
 <!ENTITY oci.charset "<para xmlns='http://docbook.org/ns/docbook'>Determină
 setul de caractere utilizat de bibliotecile-client Oracle. Setul de caractere
 nu trebuie în mod obligatoriu să se potrivească cu setul de caractere al bazei
-de date. Dacă nu se potriveşte, Oracle va face tot posibilul să convertească
-datele din şi în setul de caractere al bazei de date. În dependenţă de seturile
+de date. Dacă nu se potrivește, Oracle va face tot posibilul să convertească
+datele din și în setul de caractere al bazei de date. În dependență de seturile
 de caractere aceasta poate să ducă la rezultate incorecte. Convertirea de
 asemenea impune un timp mărit de prelucrare.</para>
 <para xmlns='http://docbook.org/ns/docbook'>Dacă nu este specificat,
@@ -648,75 +648,75 @@ bibliotecile-client Oracle determină setul de caractere din variabila de mediu
 poate reduce timpul de conectare.</para>">
 
 <!ENTITY oci.sessionmode '<para xmlns="http://docbook.org/ns/docbook">Acest
-parametru este disponibil începând cu versiunea PHP 5 (PECL OCI8 1.1) şi
+parametru este disponibil începând cu versiunea PHP 5 (PECL OCI8 1.1) și
 acceptă următoarele valori: <constant>OCI_DEFAULT</constant>,
-<constant>OCI_SYSOPER</constant> şi <constant>OCI_SYSDBA</constant>.
+<constant>OCI_SYSOPER</constant> și <constant>OCI_SYSDBA</constant>.
 Dacă sunt specificate <constant>OCI_SYSOPER</constant> sau
-<constant>OCI_SYSDBA</constant>, această funcţie va încerca să stabilească o
-conexiune privilegiată utilizând credenţiale externe. Conexiunile privilegiate
-sunt dezactivate implicit. Pentru a le activa trebuie să stabiliţi
+<constant>OCI_SYSDBA</constant>, această funcție va încerca să stabilească o
+conexiune privilegiată utilizând credențiale externe. Conexiunile privilegiate
+sunt dezactivate implicit. Pentru a le activa trebuie să stabiliți
 <link linkend="ini.oci8.privileged-connect">oci8.privileged_connect</link>
 în <literal>On</literal>.</para>
 <para xmlns="http://docbook.org/ns/docbook">PHP 5.3 (PECL OCI8 1.3.4) a
 introdus valoarea modului <constant>OCI_CRED_EXT</constant>. Aceasta indică
 Oracle să utilizeze autentificare Externă sau la nivel de S.O., ceea ce trebuie
 configurat în baza de date. Fanionul <constant>OCI_CRED_EXT</constant> poate fi
-utilizat doar cu numele utilizatorului &quot;/&quot; şi o parolă vidă.
+utilizat doar cu numele utilizatorului &quot;/&quot; și o parolă vidă.
 <link linkend="ini.oci8.privileged-connect">oci8.privileged_connect</link>
 poate fi <literal>On</literal> sau <literal>Off</literal>.</para>
 <para xmlns="http://docbook.org/ns/docbook">
 <constant>OCI_CRED_EXT</constant> poate fi combinat cu modul
 <constant>OCI_SYSOPER</constant> sau <constant>OCI_SYSDBA</constant>.</para>
 <para xmlns="http://docbook.org/ns/docbook">
-<constant>OCI_CRED_EXT</constant> nu este susţinut pe Windows din motive de
+<constant>OCI_CRED_EXT</constant> nu este susținut pe Windows din motive de
 securitate.</para>'>
 
 <!ENTITY oci.datatypes '<para xmlns="http://docbook.org/ns/docbook">Pentru
-detalii despre corespondenţele transformărilor tipurilor de date efectuate de
-extensia OCI8, accesaţi <link linkend="oci8.datatypes">tipurile de date
-susţinute de driver</link></para>'>
+detalii despre corespondențele transformărilor tipurilor de date efectuate de
+extensia OCI8, accesați <link linkend="oci8.datatypes">tipurile de date
+susținute de driver</link></para>'>
 
 <!ENTITY oci.parameter.connection '<para xmlns="http://docbook.org/ns/docbook">
 Un identificator al conexiunii Oracle, întors de
 <function>oci_connect</function>, <function>oci_pconnect</function> sau
 <function>oci_new_connect</function>.</para>'>
 
-<!ENTITY oci.name.compat.note 'Denumirea veche a funcţiei poate fi încă
-utilizată în versiunile curente, însă ea este învechită şi nu este recomandată.'>
+<!ENTITY oci.name.compat.note 'Denumirea veche a funcției poate fi încă
+utilizată în versiunile curente, însă ea este învechită și nu este recomandată.'>
 
 <!ENTITY oci.availability.note.10g '<note xmlns="http://docbook.org/ns/docbook">
 <title>Versiune Oracle necesară</title>
-<para>Această funcţie este disponibilă atunci când PHP este compilat cu
+<para>Această funcție este disponibilă atunci când PHP este compilat cu
 bibliotecile Oracle Database de versiunea 10g sau ulterioare.</para></note>'>
 
 <!ENTITY oci.clientinfo.tip '<tip xmlns="http://docbook.org/ns/docbook">
-<title>Performanţă</title><para>Cu versiuni mai vechi ale OCI8 sau ale Oracle
-Database, informaţia clientului poate fi transmisă utilizând pachetul Oracle
-<literal>DBMS_APPLICATION_INFO</literal>. Aceasta este mai puţin eficient decât
+<title>Performanță</title><para>Cu versiuni mai vechi ale OCI8 sau ale Oracle
+Database, informația clientului poate fi transmisă utilizând pachetul Oracle
+<literal>DBMS_APPLICATION_INFO</literal>. Aceasta este mai puțin eficient decât
 utilizarea <function>oci_set_client_info</function>.</para></tip>'>
 
 <!ENTITY oci.roundtrip.caution '<caution xmlns="http://docbook.org/ns/docbook">
-<title>Capcane dus-întors</title><para>Unele funcţii OCI8, dar nu toate,
+<title>Capcane dus-întors</title><para>Unele funcții OCI8, dar nu toate,
 cauzează căi dus-întors. Căile dus-întors către baza de date pot să nu aibă loc
 în cazul interpelărilor, atunci când buferizarea rezultatelor este activată.
 </para></caution>'>
 
 <!ENTITY oci.use.setprefetch '<para xmlns="http://docbook.org/ns/docbook">În
-cazul interpelărilor ce întorc un număr mare de înregistrări, performanţa poate
-fi îmbunătăţită substanţial mărind valoarea
+cazul interpelărilor ce întorc un număr mare de înregistrări, performanța poate
+fi îmbunătățită substanțial mărind valoarea
 <link linkend="ini.oci8.default-prefetch">oci8.default_prefetch</link>
 sau utilizând <function>oci_set_prefetch</function>.</para>'>
 
 <!ENTITY oci.arg.statement.id "<para xmlns='http://docbook.org/ns/docbook'>
-Un identificator valid de instrucţiune OCI8 creat cu
-<function>oci_parse</function> şi executat de <function>oci_execute</function>,
-sau un identificator de instrucţiune <literal>REF CURSOR</literal>.</para>">
+Un identificator valid de instrucțiune OCI8 creat cu
+<function>oci_parse</function> și executat de <function>oci_execute</function>,
+sau un identificator de instrucțiune <literal>REF CURSOR</literal>.</para>">
 
 
 <!-- PCNTL Notes -->
 <!ENTITY pcntl.parameter.status '<para xmlns="http://docbook.org/ns/docbook">
 Parametrul <parameter>status</parameter> reprezintă parametrul de stare
-furnizat către un apel cu succes al funcţiei
+furnizat către un apel cu succes al funcției
 <function>pcntl_waitpid</function>.</para>'>
 
 <!-- PS Notes -->
@@ -727,8 +727,8 @@ documentul este convertit în pdf fie de Acrobat Distiller™ sau de Ghostview.
 
 <!-- XSLT Notes -->
 <!ENTITY note.xslt.windows '<note xmlns="http://docbook.org/ns/docbook"><para>
-Vă atragem atenţia că este necesar de indicat <literal>file://</literal> în
-faţa căii, în cazul când utilizaţi Windows.</para></note>'>
+Vă atragem atenția că este necesar de indicat <literal>file://</literal> în
+fața căii, în cazul când utilizați Windows.</para></note>'>
 
 <!-- Notes for safe-mode limited functions: -->
 <!ENTITY note.sm.disabled '<note xmlns="http://docbook.org/ns/docbook">
@@ -736,31 +736,31 @@ faţa căii, în cazul când utilizaţi Windows.</para></note>'>
 
 <!ENTITY note.sm.uidcheck '<note xmlns="http://docbook.org/ns/docbook">
 <simpara>Când este activat <link linkend="features.safe-mode">modul
-securizat</link>, PHP verifică dacă fişierele şi directoarele cu care se va
-opera au acelaşi UID (proprietar) ca şi script-ul care se execută.</simpara>
+securizat</link>, PHP verifică dacă fișierele și directoarele cu care se va
+opera au același UID (proprietar) ca și script-ul care se execută.</simpara>
 </note>'>
 
 <!ENTITY note.sm.uidcheck.dir '<note xmlns="http://docbook.org/ns/docbook">
 <simpara>Când este activat <link linkend="features.safe-mode">modul securizat
-</link>, PHP verifică dacă directorul în care doriţi să operaţi are acelaşi UID
-(proprietar) ca şi script-ul care se execută.</simpara></note>'>
+</link>, PHP verifică dacă directorul în care doriți să operați are același UID
+(proprietar) ca și script-ul care se execută.</simpara></note>'>
 
 <!ENTITY note.open-basedir.func '<note xmlns="http://docbook.org/ns/docbook">
-<para>Această funcţie este afectată de
+<para>Această funcție este afectată de
 <link linkend="ini.open-basedir">open_basedir</link>.</para></note>'>
 
 <!ENTITY note.language-construct '<note xmlns="http://docbook.org/ns/docbook">
-<simpara>Deoarece aceasta este o construcţie a limbajului şi nu o funcţie, ea
+<simpara>Deoarece aceasta este o construcție a limbajului și nu o funcție, ea
 nu poate fi apelată utilizând
-<link linkend="functions.variable-functions">funcţii de operare cu variabile
+<link linkend="functions.variable-functions">funcții de operare cu variabile
 </link></simpara></note>'>
 
 <!-- Common pieces in features/safe-mode.xml
 Jade doesn't allow in-line entities, so I put them here... Though they
 should have been inline in safe-mode.xml -->
 
-<!ENTITY sm.uidcheck 'Verifică dacă fişierele şi directoarele cu care se
-operează au acelaşi UID (proprietar) ca şi script-ul care se execută.'>
+<!ENTITY sm.uidcheck 'Verifică dacă fișierele și directoarele cu care se
+operează au același UID (proprietar) ca și script-ul care se execută.'>
 
 <!ENTITY warn.sm.exec '<warning xmlns="http://docbook.org/ns/docbook"><simpara>
 Când este activat <link linkend="features.safe-mode">modul securizat</link>,
@@ -770,15 +770,15 @@ aceea, <literal>echo y | echo x</literal> devine <literal>echo y \| echo x
 
 <!ENTITY note.exec-path '<note xmlns="http://docbook.org/ns/docbook"><simpara>
 Când este activat <link linkend="features.safe-mode">modul securizat</link>,
-puteţi executa fişierele aflate în <link linkend="ini.safe-mode-exec-dir">
+puteți executa fișierele aflate în <link linkend="ini.safe-mode-exec-dir">
 safe_mode_exec_dir</link>. Din motive practice, în prezent nu se permite de a
 avea componente <literal>..</literal> în calea către executabil.</simpara>
 </note>'>
 
 <!ENTITY sm.uidcheck.dir 'Verifică dacă directorul în care se operează are
-acelaşi UID (proprietar) ca şi script-ul ce se execută.'>
+același UID (proprietar) ca și script-ul ce se execută.'>
 
-<!ENTITY sm.disabled 'Această funcţie este dezactivată atunci când PHP rulează
+<!ENTITY sm.disabled 'Această funcție este dezactivată atunci când PHP rulează
 în <link xmlns="http://docbook.org/ns/docbook" linkend="features.safe-mode">
 modul securizat</link>.'>
 
@@ -792,27 +792,27 @@ extensie nu are constante definite.</para>'>
 <!ENTITY no.requirement '<para xmlns="http://docbook.org/ns/docbook">Nu sunt
 necesare biblioteci externe pentru a asambla această extensie.</para>'>
 <!ENTITY no.install '<para xmlns="http://docbook.org/ns/docbook">Nu este
-necesar de a instala ceva suplimentar pentru a utiliza aceste funcţii; ele fac
+necesar de a instala ceva suplimentar pentru a utiliza aceste funcții; ele fac
 parte din nucleul PHP.</para>'>
 
 <!-- Used in every chapter that has directive descriptions -->
 <!ENTITY ini.descriptions.title '<para xmlns="http://docbook.org/ns/docbook">
-Iată o explicaţie pe scurt a directivelor de configurare.</para>'>
+Iată o explicație pe scurt a directivelor de configurare.</para>'>
 
 <!-- Common pieces for reference part BEGIN-->
 
 <!-- Used in reference/$extname/ini.xml -->
 <!ENTITY extension.runtime '<simpara xmlns="http://docbook.org/ns/docbook">
-Comportamentul acestor funcţii este afectat de parametrii stabiliţi în
+Comportamentul acestor funcții este afectat de parametrii stabiliți în
 &php.ini;.</simpara>'>
 
-<!ENTITY ini.php.constants 'Pentru mai multe detalii şi definiţii ale
-modurilor PHP_INI_* accesaţi <xref xmlns="http://docbook.org/ns/docbook"
+<!ENTITY ini.php.constants 'Pentru mai multe detalii și definiții ale
+modurilor PHP_INI_* accesați <xref xmlns="http://docbook.org/ns/docbook"
 linkend="configuration.changes.modes"/>.'>
 
 <!-- Used in reference/$extname/constants.xml -->
 <!ENTITY extension.constants '<simpara xmlns="http://docbook.org/ns/docbook">
-Constantele de mai jos sunt definite de această extensie şi vor fi disponibile
+Constantele de mai jos sunt definite de această extensie și vor fi disponibile
 doar dacă această extensie a fost compilată în interiorul PHP, sau a fost
 încărcată dinamic în timpul rulării.</simpara>'>
 
@@ -823,7 +823,7 @@ nucleului PHP.</simpara>'>
 
 <!-- Used in reference/$extname/classes.xml -->
 <!ENTITY extension.classes '<simpara xmlns="http://docbook.org/ns/docbook">
-Clasele de mai jos sunt definite de această extensie şi vor fi disponibile doar
+Clasele de mai jos sunt definite de această extensie și vor fi disponibile doar
 dacă această extensie a fost compilată în interiorul PHP, sau a fost încărcată
 dinamic în timpul rulării.</simpara>'>
 
@@ -832,13 +832,13 @@ dinamic în timpul rulării.</simpara>'>
 
 <!-- PDO entities -->
 <!ENTITY pdo.driver-constants '<simpara xmlns="http://docbook.org/ns/docbook">
-Constantele de mai jos sunt definite de acest driver şi vor fi disponibile
+Constantele de mai jos sunt definite de acest driver și vor fi disponibile
 doar când această extensie a fost compilată în interiorul PHP, sau a fost
 încărcată dinamic în timpul rulării. În plus, aceste constante specifice
-driver-ului trebuie utilizate numai dacă utilizaţi acest driver.
+driver-ului trebuie utilizate numai dacă utilizați acest driver.
 Utilizarea atributelor specifice unui driver cu un alt driver poate rezulta
 într-un comportament imprevizibil. <function>PDO::getAttribute</function>
-poate fi utilizată pentru a obţine atributul <constant>PDO_ATTR_DRIVER_NAME
+poate fi utilizată pentru a obține atributul <constant>PDO_ATTR_DRIVER_NAME
 </constant>, pentru a verifica driver-ul în caz că codul-sursă al
 dumneavoastră poate rula cu mai multe driver-e.</simpara>'>
 
@@ -853,17 +853,17 @@ nu este încorporată în PHP.'>
 xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.pecl;">PECL</link>
 este încorporată în PHP.'>
 
-<!ENTITY pecl.info 'Informaţie despre instalarea acestei extensii PECL poate
+<!ENTITY pecl.info 'Informație despre instalarea acestei extensii PECL poate
 fi găsită în capitolul manualului, întitulat
 <link xmlns="http://docbook.org/ns/docbook" linkend="install.pecl">
-Instalarea extensiilor PECL</link>. Informaţii adiţionale, cum ar fi
-lansări noi, descărcări, fişiere-sursă, informaţii despre persoana care
-întreţine extensia şi istoria schimbărilor poate fi localizată aici: '>
+Instalarea extensiilor PECL</link>. Informații adiționale, cum ar fi
+lansări noi, descărcări, fișiere-sursă, informații despre persoana care
+întreține extensia și istoria schimbărilor poate fi localizată aici: '>
 
 <!ENTITY pecl.source.4 'În PHP 4 sursa acestei extensii
 <acronym xmlns="http://docbook.org/ns/docbook">PECL</acronym> poate fi găsită
 în directorul <filename xmlns="http://docbook.org/ns/docbook">ext/</filename>
-din sursa PHP, sau la referinţa <acronym xmlns="http://docbook.org/ns/docbook">
+din sursa PHP, sau la referința <acronym xmlns="http://docbook.org/ns/docbook">
 PECL</acronym> de mai sus.'>
 
 <!ENTITY pecl.windows.4 'În PHP 4 acest
@@ -883,11 +883,11 @@ compilarea în Windows</link>.'>
 <!ENTITY pecl.moved-ver 'Această extensie a fost transferată în repozitoriul
 <link xmlns="http://docbook.org/ns/docbook"
 xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.pecl;">PECL</link>
-şi nu mai este furnizată împreună cu PHP începând cu versiunea '>
+și nu mai este furnizată împreună cu PHP începând cu versiunea '>
 
 <!-- kept for BC -->
 <!ENTITY note.pecl-php5 '<note xmlns="http://docbook.org/ns/docbook"><simpara>
-Această extensie a fost eliminată începând cu PHP 5 şi transferată în
+Această extensie a fost eliminată începând cu PHP 5 și transferată în
 repozitoriul
 <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.pecl;">PECL
 </link>.
@@ -897,8 +897,8 @@ repozitoriul
 
 
 <!ENTITY windows.builtin '<simpara xmlns="http://docbook.org/ns/docbook">
-Versiunea PHP pentru Windows susţine implicit această extensie. Nu este nevoie
-să încărcaţi extensii suplimentare pentru a putea utiliza aceste funcţii.
+Versiunea PHP pentru Windows susține implicit această extensie. Nu este nevoie
+să încărcați extensii suplimentare pentru a putea utiliza aceste funcții.
 </simpara>'>
 
 <!-- These are here as helpers for manual consistency and brievety -->
@@ -912,19 +912,19 @@ linkend="ini.sql.safe-mode">modul SQL securizat</link>'>
 <!ENTITY apd.debug-level.description '<varlistentry
 xmlns="http://docbook.org/ns/docbook"><term><parameter>debug_level</parameter>
 </term><listitem><para>Un integer care se formează sumând împreună constante
-<literal>XXX_TRACE</literal>.</para><para>Nu este recomandabil să utilizaţi
-<constant>MEMORY_TRACE</constant>. Este foarte înceată şi se pare că este
+<literal>XXX_TRACE</literal>.</para><para>Nu este recomandabil să utilizați
+<constant>MEMORY_TRACE</constant>. Este foarte înceată și se pare că este
 imprecisă. <constant>ASSIGNMENT_TRACE</constant> nu este implementată
-deocamdată.</para><para>Pentru a activa toate trasările funcţionale (TIMING,
-FUNCTIONS, ARGS SUMMARY (ca în cazul strace -c)) utilizaţi valoarea 99</para>
+deocamdată.</para><para>Pentru a activa toate trasările funcționale (TIMING,
+FUNCTIONS, ARGS SUMMARY (ca în cazul strace -c)) utilizați valoarea 99</para>
 </listitem></varlistentry>'>
 
 <!-- BCMath Notes -->
 <!ENTITY bc.scale.description '<varlistentry xmlns="http://docbook.org/ns/docbook">
 <term><parameter>scale</parameter></term><listitem><para>Acest parametru
-opţional este utilizat pentru a stabili numărul cifrelor după virgulă din
-rezultat. De asemenea puteţi să stabiliţi parametrul global scale pentru toate
-funcţiile utilizând <function>bcscale</function>.</para></listitem>
+opțional este utilizat pentru a stabili numărul cifrelor după virgulă din
+rezultat. De asemenea puteți să stabiliți parametrul global scale pentru toate
+funcțiile utilizând <function>bcscale</function>.</para></listitem>
 </varlistentry>'>
 
 <!-- FBSQL Notes -->
@@ -932,9 +932,9 @@ funcţiile utilizând <function>bcscale</function>.</para></listitem>
 xmlns="http://docbook.org/ns/docbook"><term><parameter>link_identifier
 </parameter></term><listitem><para>Un identificator de legătură FrontBase
 întors de <function>fbsql_connect</function> sau <function>fbsql_pconnect
-</function>.</para><para>Dacă nu este specificat, funcţia va încerca să
-găsească o legătură deschisă către serverul FrontBase şi dacă nu este găsită
-nici o astfel de legătură, se va încerca crearea uneia, ca şi la apelarea
+</function>.</para><para>Dacă nu este specificat, funcția va încerca să
+găsească o legătură deschisă către serverul FrontBase și dacă nu este găsită
+nici o astfel de legătură, se va încerca crearea uneia, ca și la apelarea
 <function>fbsql_connect</function> fără argumente.</para></listitem>
 </varlistentry>'>
 
@@ -948,7 +948,7 @@ xmlns="http://docbook.org/ns/docbook"><term><parameter>result</parameter>
 <!ENTITY gmp.return 'O <type xmlns="http://docbook.org/ns/docbook">resursă
 </type> număr GMP.'>
 <!ENTITY gmp.parameter '<para xmlns="http://docbook.org/ns/docbook">Aceasta
-poate fi sau o <type>resursă</type> număr GMP, sau un şir de caractere numeric,
+poate fi sau o <type>resursă</type> număr GMP, sau un șir de caractere numeric,
 dacă este posibilă convertirea acestuia într-un număr.</para>'>
 
 <!-- MySQLi Notes -->
@@ -965,69 +965,69 @@ de <function>mysqli_connect</function> sau <function>mysqli_init</function>
 </para></listitem></varlistentry>'>
 <!ENTITY mysqli.stmt.description '<varlistentry
 xmlns="http://docbook.org/ns/docbook"><term><parameter>stmt</parameter></term>
-<listitem><para>Numai stilul procedural: Un identificator al declaraţiei întors
+<listitem><para>Numai stilul procedural: Un identificator al declarației întors
 de <function>mysqli_stmt_init</function>.</para></listitem></varlistentry>'>
 <!ENTITY mysqli.available.mysqlnd 'Disponibil numai cu <link
 xmlns="http://docbook.org/ns/docbook" linkend="book.mysqlnd">mysqlnd</link>.'>
 
 <!-- Notes for SAPI/Apache -->
 <!ENTITY note.apache.nsapi-module '<note xmlns="http://docbook.org/ns/docbook">
-<para>Începând cu PHP 4.3.3 puteţi utiliza această funcţie cu
-<link linkend="ref.nsapi">modulul de server NSAPI</link> şi în webserver-ele
+<para>Începând cu PHP 4.3.3 puteți utiliza această funcție cu
+<link linkend="ref.nsapi">modulul de server NSAPI</link> și în webserver-ele
 Netscape/iPlanet/SunONE.</para></note>'>
 
 <!ENTITY apache.req.module '<simpara xmlns="http://docbook.org/ns/docbook">
-Această funcţie e susţinută numai dacă PHP este instalat ca modul Apache.
+Această funcție e susținută numai dacă PHP este instalat ca modul Apache.
 </simpara>'>
 
 <!-- SimpleXML Notes -->
 <!ENTITY simplexml.iteration '<note xmlns="http://docbook.org/ns/docbook">
-<simpara>SimpleXML a creat o regulă de a adăuga proprietăţi iterative la
+<simpara>SimpleXML a creat o regulă de a adăuga proprietăți iterative la
 majoritatea metodelor. Ele nu pot fi vizualizate cu ajutorul <function>
 var_dump</function> sau orice altceva ce poate examina obiecte.</simpara>
 </note>'>
 
 <!-- SQLite Notes -->
 <!ENTITY sqlite.case-fold '<para xmlns="http://docbook.org/ns/docbook">În
-denumirile coloanelor întoarse de <constant>SQLITE_ASSOC</constant> şi
+denumirile coloanelor întoarse de <constant>SQLITE_ASSOC</constant> și
 <constant>SQLITE_BOTH</constant> vor fi utilizate litere majuscule/minuscule
-în corespundere cu valoarea opţiunii de configurare
+în corespundere cu valoarea opțiunii de configurare
 <link linkend="ini.sqlite.assoc-case">sqlite.assoc_case</link>.</para>'>
 
 <!ENTITY sqlite.decode-bin '<para xmlns="http://docbook.org/ns/docbook">
 Când parametrul <parameter>decode_binary</parameter> este stabilit în &true;
 (implicit), PHP va decodifica codificarea binară pe care a aplicat-o asupra
 datelor, dacă acestea au fost codificate cu <function>sqlite_escape_string
-</function>. În mod normal ar trebui să lăsaţi valoarea implicită, dacă nu
-interoperaţi cu baze de date create de alte aplicaţii capabile să lucreze cu
+</function>. În mod normal ar trebui să lăsați valoarea implicită, dacă nu
+interoperați cu baze de date create de alte aplicații capabile să lucreze cu
 sqlite.</para>'>
 
 <!ENTITY sqlite.no-unbuffered '<note xmlns="http://docbook.org/ns/docbook">
-<para>Această funcţie nu poate fi utilizată cu indicatori de rezultate
-nebuferizaţi.</para></note>'>
+<para>Această funcție nu poate fi utilizată cu indicatori de rezultate
+nebuferizați.</para></note>'>
 
 <!ENTITY sqlite.param-compat '<note xmlns="http://docbook.org/ns/docbook">
-<simpara>Două sintaxe alternative sunt susţinute pentru compatibilitate cu alte
+<simpara>Două sintaxe alternative sunt susținute pentru compatibilitate cu alte
 extensii de baze de date (cum ar fi MySQL). Forma preferată este cea dintâi,
 unde parametrul <parameter>dbhandle</parameter> este primul parametru pentru
-funcţie.</simpara></note>'>
+funcție.</simpara></note>'>
 
 <!ENTITY sqlite.result-type '<para xmlns="http://docbook.org/ns/docbook">
-Parametrul opţional <parameter>result_type</parameter> acceptă o constantă şi
+Parametrul opțional <parameter>result_type</parameter> acceptă o constantă și
 determină cum tablouul întors va fi indexat. Utilizând <constant>SQLITE_ASSOC
-</constant> vor fi întorşi numai indici asociativi (câmpuri denumite) în timp
-ce cu <constant>SQLITE_NUM</constant> vor fi întorşi numai indici numerici
+</constant> vor fi întorși numai indici asociativi (câmpuri denumite) în timp
+ce cu <constant>SQLITE_NUM</constant> vor fi întorși numai indici numerici
 (numerele de ordine ale câmpurilor). Cu <constant>SQLITE_BOTH</constant> vor fi
-întorşi atât indici associativi, cât şi numerici. <constant>SQLITE_BOTH
-</constant> este valoarea implicită pentru această funcţie.</para>'>
+întorși atât indici associativi, cât și numerici. <constant>SQLITE_BOTH
+</constant> este valoarea implicită pentru această funcție.</para>'>
 
 <!-- Database Notes -->
 <!ENTITY database.field-case '<note xmlns="http://docbook.org/ns/docbook">
-<simpara>Numele câmpurilor întoarse de această funcţie sunt <emphasis>sensibile
+<simpara>Numele câmpurilor întoarse de această funcție sunt <emphasis>sensibile
 la literele majuscule/minuscule</emphasis>.</simpara></note>'>
 
 <!ENTITY database.fetch-null '<note xmlns="http://docbook.org/ns/docbook">
-<simpara>Această funcţie stabileşte câmpurile NULL la valoarea PHP &null;.
+<simpara>Această funcție stabilește câmpurile NULL la valoarea PHP &null;.
 </simpara></note>'>
 
 <!-- MSQL Notes -->
@@ -1036,8 +1036,8 @@ la literele majuscule/minuscule</emphasis>.</simpara></note>'>
 xmlns="http://docbook.org/ns/docbook"><term><parameter>link_identifier
 </parameter></term><listitem><para>Conexiunea mSQL. Dacă nu este specificată,
 se presupune că este ultima legătură deschisă cu <function>msql_connect
-</function>. Dacă nu se găseşte vre-o legătură de acest fel, funcţia va încerca
-să stabilească o legătură prin apelarea <function>msql_connect</function> şi să
+</function>. Dacă nu se găsește vre-o legătură de acest fel, funcția va încerca
+să stabilească o legătură prin apelarea <function>msql_connect</function> și să
 o utilizeze pe aceasta.</para></listitem></varlistentry>'>
 
 <!ENTITY msql.result.description '<varlistentry
@@ -1068,7 +1068,7 @@ stabilită, se va genera o eroare de nivelul <constant>E_WARNING</constant>.
 <!ENTITY mysql.result.description '<varlistentry
 xmlns="http://docbook.org/ns/docbook"><term><parameter>result</parameter>
 </term><listitem><para>Rezultatul de tip <type>resource</type>, care este
-evaluat. Acest rezultat provine de la apelul funcţiei <function>mysql_query
+evaluat. Acest rezultat provine de la apelul funcției <function>mysql_query
 </function>.</para></listitem></varlistentry>'>
 
 <!ENTITY mysql.field-offset.req.description '<varlistentry
@@ -1080,12 +1080,12 @@ field_offset</parameter> nu există, se generează de asemenea o eroare de nivel
 
 <!-- Sybase Notes -->
 <!ENTITY sybase.ct.only '<note xmlns="http://docbook.org/ns/docbook"><simpara>
-Această funcţie este disponibilă numai în cazul utilizării bibliotecii de
-interfaţă CT către Sybase, şi nu a bibliotecii DB.</simpara></note>'>
+Această funcție este disponibilă numai în cazul utilizării bibliotecii de
+interfață CT către Sybase, și nu a bibliotecii DB.</simpara></note>'>
 
 <!ENTITY sybase.db.only '<note xmlns="http://docbook.org/ns/docbook"><simpara>
-Această funcţie este disponibilă numai în cazul utilizării bibliotecii de
-interfaţă DB către Sybase, şi nu a bibliotecii CT.</simpara></note>'>
+Această funcție este disponibilă numai în cazul utilizării bibliotecii de
+interfață DB către Sybase, și nu a bibliotecii CT.</simpara></note>'>
 
 <!ENTITY sybase.linkid.description '<varlistentry
 xmlns="http://docbook.org/ns/docbook"><term><parameter>link_identifier
@@ -1099,19 +1099,19 @@ nici o conexiune, se generează o eroare de nivel <constant>E_WARNING</constant>
 
 <!-- CPDF Notes -->
 <!ENTITY cpdf.ul '<para xmlns="http://docbook.org/ns/docbook">Parametrul
-opţional <parameter>mode</parameter> determină lungimea unităţii. Dacă are
+opțional <parameter>mode</parameter> determină lungimea unității. Dacă are
 valoarea <literal>0</literal> sau este omis, va fi utilizată valoarea implicită
-a unităţii după cum e specificată pentru pagină. În alte cazuri coordonatele
-sunt măsurate în puncte postscript, neluându-se în consideraţie unitatea
+a unității după cum e specificată pentru pagină. În alte cazuri coordonatele
+sunt măsurate în puncte postscript, neluându-se în considerație unitatea
 curentă.</para>'>
 
 <!ENTITY cpdf.mode.description '<varlistentry
 xmlns="http://docbook.org/ns/docbook"><term><parameter>mode</parameter></term>
-<listitem><para>Parametrul opţional <parameter>mode</parameter> determină
-lungimea unităţii. Dacă are valoarea <literal>0</literal> sau este omis, va fi
-utilizată valoarea implicită a unităţii după cum e specificată pentru pagină.
+<listitem><para>Parametrul opțional <parameter>mode</parameter> determină
+lungimea unității. Dacă are valoarea <literal>0</literal> sau este omis, va fi
+utilizată valoarea implicită a unității după cum e specificată pentru pagină.
 În alte cazuri coordonatele sunt măsurate în puncte postscript, neluându-se în
-consideraţie unitatea curentă.</para></listitem></varlistentry>'>
+considerație unitatea curentă.</para></listitem></varlistentry>'>
 
 <!ENTITY cpdf.pdf-document.description '<varlistentry
 xmlns="http://docbook.org/ns/docbook"><term><parameter>pdf_document</parameter>
@@ -1119,11 +1119,11 @@ xmlns="http://docbook.org/ns/docbook"><term><parameter>pdf_document</parameter>
 cpdf_open</function>.</para></listitem></varlistentry>'>
 
 <!-- Xattr entities -->
-<!ENTITY xattr.namespace '<para>Atributele extinse au două spaţii de nume
-diferite: spaţiul de nume al utilizatorilor şi spaţiul de nume root. Spaţiul
-de nume al utilizatorilor e disponibil tuturor, în timp ce spaţiul de nume
+<!ENTITY xattr.namespace '<para>Atributele extinse au două spații de nume
+diferite: spațiul de nume al utilizatorilor și spațiul de nume root. Spațiul
+de nume al utilizatorilor e disponibil tuturor, în timp ce spațiul de nume
 root este disponibil numai utilizatorilor cu privilegii de root. xattr
-operează implicit în spaţiul utilizatorilor, dar aceasta poate fi schimbat
+operează implicit în spațiul utilizatorilor, dar aceasta poate fi schimbat
 cu parametrul <parameter>flags</parameter>.</para>'>
 
 <!-- Notes for IPv6 -->
@@ -1133,113 +1133,113 @@ ea trebuie cuprinsă între paranteze pătrate &#2014; de exemplu
 <literal>tcp://[fe80::1]:80</literal>.</simpara></note>'>
 
 <!ENTITY ipv6.php5 '<note xmlns="http://docbook.org/ns/docbook"><simpara>
-Susţinerea IPv6 a fost adăugată în PHP 5.0.0.</simpara></note>'>
+Susținerea IPv6 a fost adăugată în PHP 5.0.0.</simpara></note>'>
 
 <!-- Notes for tidy -->
 <!ENTITY note.tidy.ze2 '<note xmlns="http://docbook.org/ns/docbook"><simpara>
-Această funcţie este disponibilă numai cu Zend Engine 2 (PHP &gt;= 5.0.0).
+Această funcție este disponibilă numai cu Zend Engine 2 (PHP &gt;= 5.0.0).
 </simpara></note>'>
 
 <!ENTITY tidy.object 'Obiectul <classname xmlns="http://docbook.org/ns/docbook">
 Tidy</classname>.'>
 
 <!ENTITY note.tidy.1only '<note xmlns="http://docbook.org/ns/docbook"><simpara>
-Această funcţie este disponibilă numai în Tidy 1.0. Ea a devenit învechită în
-Tidy 2.0 şi de aceea a fost eliminată.</simpara></note>'>
+Această funcție este disponibilă numai în Tidy 1.0. Ea a devenit învechită în
+Tidy 2.0 și de aceea a fost eliminată.</simpara></note>'>
 
 <!ENTITY note.tidy.2only '<note xmlns="http://docbook.org/ns/docbook"><simpara>
-Parametrii opţionali <parameter>config</parameter> şi <parameter>encoding
-</parameter> au fost adăugaţi în Tidy 2.0.</simpara></note>'>
+Parametrii opționali <parameter>config</parameter> și <parameter>encoding
+</parameter> au fost adăugați în Tidy 2.0.</simpara></note>'>
 
 <!ENTITY tidy.conf-enc '<para xmlns="http://docbook.org/ns/docbook">Parametrul
 <parameter>config</parameter> poate fi transmis sau sub forma unui tablou, sau
 sub forma unui string. Dacă este transmis ca string, el este interpretat ca
-denumirea fişierului de configurare, în caz contrar el este interpretat ca
-însăşi opţiunile. Accesaţi <link xmlns:xlink="http://www.w3.org/1999/xlink"
-xlink:href="&url.tidy.conf;">&url.tidy.conf;</link> pentru explicaţia fiecărei
-opţiuni.</para><para xmlns="http://docbook.org/ns/docbook">Parametrul
-<parameter>encoding</parameter> stabileşte codificarea pentru documentele de
-intrare/ieşire. Valorile posibile pentru <parameter>encoding</parameter> sunt:
+denumirea fișierului de configurare, în caz contrar el este interpretat ca
+însăși opțiunile. Accesați <link xmlns:xlink="http://www.w3.org/1999/xlink"
+xlink:href="&url.tidy.conf;">&url.tidy.conf;</link> pentru explicația fiecărei
+opțiuni.</para><para xmlns="http://docbook.org/ns/docbook">Parametrul
+<parameter>encoding</parameter> stabilește codificarea pentru documentele de
+intrare/ieșire. Valorile posibile pentru <parameter>encoding</parameter> sunt:
 <literal>ascii</literal>, <literal>latin0</literal>,
 <literal>latin1</literal>, <literal>raw</literal>,
 <literal>utf8</literal>, <literal>iso2022</literal>,
 <literal>mac</literal>, <literal>win1252</literal>,
 <literal>ibm858</literal>, <literal>utf16</literal>,
 <literal>utf16le</literal>, <literal>utf16be</literal>,
-<literal>big5</literal> şi <literal>shiftjis</literal>.</para>'>
+<literal>big5</literal> și <literal>shiftjis</literal>.</para>'>
 
 <!-- Snippets for the installation section -->
 <!ENTITY warn.apache2.compat '<warning xmlns="http://docbook.org/ns/docbook">
-<para>Nu vă recomandăm să utilizaţi în modul de producere un MPM bazat pe fire
-de execuţie cu Apache2. În loc, utilizaţi prefork MPM, care este cel implicit
-pentru Apache 2.0 şi 2.2. Pentru informaţii suplimentare despre cauze, citiţi
+<para>Nu vă recomandăm să utilizați în modul de producere un MPM bazat pe fire
+de execuție cu Apache2. În loc, utilizați prefork MPM, care este cel implicit
+pentru Apache 2.0 și 2.2. Pentru informații suplimentare despre cauze, citiți
 înregistrarea corespunzătoare din FAQ despre utilizarea
 <link linkend="faq.installation.apache2">Apache2 cu un MPM bazat pe fire de
-execuţie </link>.</para></warning>'>
+execuție </link>.</para></warning>'>
 
 <!ENTITY note.apache.slashes '<note xmlns="http://docbook.org/ns/docbook">
-<simpara>Ţineţi minte că la adăugarea căilor în fişierele de configurare Apache
+<simpara>Țineți minte că la adăugarea căilor în fișierele de configurare Apache
 pentru Windows, toate backslash-urile cum ar fi în
 <filename>c:\directory\file.ext</filename> ar trebui convertite în slash-uri
 normale: <filename>c:/directory/file.ext</filename>. De asemenea poate fi
-necesar un slash la sfârşit pentru directoare.</simpara></note>'>
+necesar un slash la sfârșit pentru directoare.</simpara></note>'>
 
 <!-- Snippets and titles for the contributors section -->
-<!ENTITY Credit.Authors.and.Contributors 'Autori şi colaboratori'>
+<!ENTITY Credit.Authors.and.Contributors 'Autori și colaboratori'>
 
 <!ENTITY Credit.Introduction '<para xmlns="http://docbook.org/ns/docbook">În
-prezent noi evidenţiem cele mai active persoane pe prima pagină a manualului,
-dar sunt mult mai mulţi colaboratori care în prezent ne ajută în lucrul nostru,
-sau care au acordat un sprijin substanţial proiectului în trecut. Există si
+prezent noi evidențiem cele mai active persoane pe prima pagină a manualului,
+dar sunt mult mai mulți colaboratori care în prezent ne ajută în lucrul nostru,
+sau care au acordat un sprijin substanțial proiectului în trecut. Există si
 multe persoane necunoscute, care ajută cu adnotări pe paginile manualului, care
-în mod continuu sunt incluse în referinţe; pentru lucrul lor le suntem de
-asemenea foarte recunoscători. Toate listele afişate mai jos sunt în ordine
+în mod continuu sunt incluse în referințe; pentru lucrul lor le suntem de
+asemenea foarte recunoscători. Toate listele afișate mai jos sunt în ordine
 alfabetică.</para>'>
 
-<!ENTITY Credit.Authors.and.Editors 'Autori şi redactori'>
+<!ENTITY Credit.Authors.and.Editors 'Autori și redactori'>
 
 <!ENTITY Credit.Past.Authors.Text 'Următorii colaboratori trebiue să fie
-recunoscuţi pentru impactul pe care l-au avut, şi/sau continuă să-l aibă
-asupra conţinutului manualului:'>
+recunoscuți pentru impactul pe care l-au avut, și/sau continuă să-l aibă
+asupra conținutului manualului:'>
 
 <!ENTITY Credit.Past.Editors.Text 'Următorii colaboratori au depus un efort
 semnificativ în redactarea manualului:'>
 
-<!ENTITY Credit.Note.Editors.Title 'Răspunzătorii pentru întreţinerea
+<!ENTITY Credit.Note.Editors.Title 'Răspunzătorii pentru întreținerea
 adnotărilor utilizatorilor'>
 
 <!ENTITY Credit.Note.Editors.Active 'Cei mai activi răspunzători pentru
-întreţinere în prezent sunt:'>
+întreținere în prezent sunt:'>
 
 <!ENTITY Credit.Note.Editors.Inactive 'Aceste persoane de asemenea au depus un
-mare efort la întreţinerea adnotărilor utilizatorilor:'>
+mare efort la întreținerea adnotărilor utilizatorilor:'>
 
-<!ENTITY listendand ' şi'>
+<!ENTITY listendand ' și'>
 
 <!-- classkit and runkit entities -->
 <!ENTITY note.classkit.selfmanipulation '<note
-xmlns="http://docbook.org/ns/docbook"><simpara>Această funcţie nu poate fi
-utilizată pentru a manipula metoda care la moment rulează, sau este înlănţuită.
+xmlns="http://docbook.org/ns/docbook"><simpara>Această funcție nu poate fi
+utilizată pentru a manipula metoda care la moment rulează, sau este înlănțuită.
 </simpara></note>'>
 
 <!ENTITY note.runkit.selfmanipulation '<note
-xmlns="http://docbook.org/ns/docbook"><simpara>Această funcţie nu poate fi
-utilizată pentru a manipula metoda care la moment rulează, sau este înlănţuită.
+xmlns="http://docbook.org/ns/docbook"><simpara>Această funcție nu poate fi
+utilizată pentru a manipula metoda care la moment rulează, sau este înlănțuită.
 </simpara></note>'>
 
 <!ENTITY note.runkit.sandbox '<note
-xmlns="http://docbook.org/ns/docbook"><simpara>Susţinerea cutiei cu nisip
+xmlns="http://docbook.org/ns/docbook"><simpara>Susținerea cutiei cu nisip
 (sandbox) (necesară pentru <function>runkit_lint</function>, <function>
-runkit_lint_file</function>, şi clasa <classname>Runkit_Sandbox</classname>)
+runkit_lint_file</function>, și clasa <classname>Runkit_Sandbox</classname>)
 este disponibilă numai în PHP 5.1 sau cu versiuni special modificate ale PHP
-5.0 şi necesită ca siguranţa firelor de execuţie să fie activată. Vedeţi
-fişierul <filename>README</filename> inclus în pachetul runkit pentru a afla
-mai multe informaţii.</simpara></note>'>
+5.0 și necesită ca siguranța firelor de execuție să fie activată. Vedeți
+fișierul <filename>README</filename> inclus în pachetul runkit pentru a afla
+mai multe informații.</simpara></note>'>
 
 <!ENTITY note.runkit.internal-override '<note
-xmlns="http://docbook.org/ns/docbook"><simpara>Implicit numai funcţii din
-spaţiul utilizatorilor pot fi eliminate, redenumite sau modificate. Pentru a
-depăşi (modifica) funcţiile interne, trebuie să activaţi parametrul
+xmlns="http://docbook.org/ns/docbook"><simpara>Implicit numai funcții din
+spațiul utilizatorilor pot fi eliminate, redenumite sau modificate. Pentru a
+depăși (modifica) funcțiile interne, trebuie să activați parametrul
 <literal>runkit.internal_override</literal> din &php.ini;.</simpara></note>'>
 
 <!-- SSH2 Extension -->
@@ -1247,13 +1247,13 @@ depăşi (modifica) funcţiile interne, trebuie să activaţi parametrul
 xmlns="http://docbook.org/ns/docbook"><simpara>Subsistemul de chei publice este
 utilizat pentru a gestiona cheile publice de pe un server la care clientul este
 <emphasis>deja</emphasis> autentificat. Pentru autentificare pe un sistem
-îndepărtat utilizând autentificarea cu chei publice, utilizaţi funcţia
+îndepărtat utilizând autentificarea cu chei publice, utilizați funcția
 <function>ssh2_auth_pubkey_file</function> în loc.</simpara></note>'>
 
 <!-- HTTP -->
 <!ENTITY see.http.request.options '<para xmlns="http://docbook.org/ns/docbook">
-Vedeţi lista întreagă de &link.http.request.options;.</para>'>
-<!ENTITY see.http.configuration.force_exit 'Vedeţi &link.http.configuration;
+Vedeți lista întreagă de &link.http.request.options;.</para>'>
+<!ENTITY see.http.configuration.force_exit 'Vedeți &link.http.configuration;
 <link xmlns="http://docbook.org/ns/docbook"
 linkend="http.configuration.force-exit">http.force_exit</link> pentru a afla ce
 înseamnă "iese".'>
@@ -1261,13 +1261,13 @@ linkend="http.configuration.force-exit">http.force_exit</link> pentru a afla ce
 <!ENTITY link.http.configuration '<link xmlns="http://docbook.org/ns/docbook"
 linkend="http.configuration">setarea INI</link>'>
 <!ENTITY link.http.request.option '<link xmlns="http://docbook.org/ns/docbook"
-linkend="http.request.options">opţiunea interpelării</link>'>
+linkend="http.request.options">opțiunea interpelării</link>'>
 <!ENTITY link.http.request.options '<link xmlns="http://docbook.org/ns/docbook"
-linkend="http.request.options">opţiunile interpelării</link>'>
+linkend="http.request.options">opțiunile interpelării</link>'>
 <!ENTITY link.http.request.info '<link xmlns="http://docbook.org/ns/docbook"
-linkend="http.request.info">Informaţia interpelării/răspunsului</link>'>
+linkend="http.request.info">Informația interpelării/răspunsului</link>'>
 <!ENTITY returns.http.response 'Întoarce răspunsul(urile) HTTP ca string în
-caz de succes, sau &false; în caz de eşec.'>
+caz de succes, sau &false; în caz de eșec.'>
 <!ENTITY returns.http.false.orexits 'Întoarce &false; sau
 <emphasis xmlns="http://docbook.org/ns/docbook">iese</emphasis> în caz de succes'>
 <!ENTITY http.request.affects 'Afectează numai următoarele metode de
@@ -1275,32 +1275,32 @@ interpelare:'>
 <!ENTITY http.request.affects.any 'Afectează orice metodă de interpelare.'>
 <!ENTITY http.response.class.php51 'clasa
 <link xmlns="http://docbook.org/ns/docbook" linkend="class.httpresponse">
-<classname>HttpResponse</classname></link> dacă utilizaţi PHP 5.1.0 sau
+<classname>HttpResponse</classname></link> dacă utilizați PHP 5.1.0 sau
 ulterior'>
-<!ENTITY http.maynotwork.SAPI 'Aceasta poate să nu funcţioneze conform
-aşteptărilor cu următoarele SAPI(uri):'>
+<!ENTITY http.maynotwork.SAPI 'Aceasta poate să nu funcționeze conform
+așteptărilor cu următoarele SAPI(uri):'>
 <!ENTITY http.content.disposition 'Antetul
 <literal xmlns="http://docbook.org/ns/docbook">Content-Disposition</literal>
-este foarte util în caz că datele transmise provin dintr-un fişier sau ceva
-similar şi care ar trebui &quot;salvate&quot; de client/utilizator (de ex. în
+este foarte util în caz că datele transmise provin dintr-un fișier sau ceva
+similar și care ar trebui &quot;salvate&quot; de client/utilizator (de ex. în
 navigator fereastra &quot;Salvează în...&quot;).'>
 <!ENTITY http.use.ob_start 'Pentru a fi utilizat cu
 <function xmlns="http://docbook.org/ns/docbook">ob_start</function>.'>
 
 <!ENTITY note.http.response.recalculate.etag.lm '<note
-xmlns="http://docbook.org/ns/docbook"><simpara><literal>ETag</literal> şi
+xmlns="http://docbook.org/ns/docbook"><simpara><literal>ETag</literal> și
 <literal>Last-Modified</literal> calculate sau definite anterior vor fi
 recalculate sau redefinite.</simpara></note>'>
 <!ENTITY note.http.throttling.yields.process '<note
 xmlns="http://docbook.org/ns/docbook"><simpara>Oferă un mecanism de limitare de
-bază, care va suspenda procesul sau firul de execuţie curent până când
+bază, care va suspenda procesul sau firul de execuție curent până când
 entitatea nu este transmisă deplin.</simpara></note>'>
 <!ENTITY note.http.send.API '<note xmlns="http://docbook.org/ns/docbook">
-<simpara>Această funcţie ar trebui să fie utilizată împreună cu
+<simpara>Această funcție ar trebui să fie utilizată împreună cu
 <function>http_send_data</function>, <function>http_send_file</function>
 &listendand; <function>http_send_stream</function>.</simpara></note>'>
 <!ENTITY note.http.send.API.mayuse '<note xmlns="http://docbook.org/ns/docbook">
-<simpara>Această funcţie ar putea fi utilizată împreună cu
+<simpara>Această funcție ar putea fi utilizată împreună cu
 <function>http_send_data</function>, <function>http_send_file</function>
 &listendand; <function>http_send_stream</function>.</simpara></note>'>
 <!ENTITY note.http.request.encodecookies '<note
@@ -1311,20 +1311,20 @@ procesate cu <function>urlencode</function>.</simpara></note>'>
 xmlns="http://docbook.org/ns/docbook"><simpara>&http.request.affects.any;
 </simpara></note>'>
 <!ENTITY note.http.ob.once '<note xmlns="http://docbook.org/ns/docbook">
-<simpara>Acest handler de ieşire poate fi utilizat numai o singură dată.
+<simpara>Acest handler de ieșire poate fi utilizat numai o singură dată.
 </simpara></note>'>
 
 <!-- XMLWriter Notes -->
 <!ENTITY xmlwriter.xmlwriter.description '<varlistentry
 xmlns="http://docbook.org/ns/docbook"><term><parameter>xmlwriter</parameter>
 </term><listitem><para>Numai pentru apelurile procedurale. <type>Resursa</type>
-XMLWriter care este modificată. Această resursă se obţine în urma apelării
+XMLWriter care este modificată. Această resursă se obține în urma apelării
 <function>xmlwriter_open_uri</function> sau <function>xmlwriter_open_memory
 </function>.</para></listitem></varlistentry>'>
 
 <!-- SOAP notes -->
 <!ENTITY soap.wsdl.mode.only "<note xmlns="http://docbook.org/ns/docbook">
-<para>Această funcţie funcţionează doar în modul WSDL.</para></note>">
+<para>Această funcție funcționează doar în modul WSDL.</para></note>">
 
 <!-- Stomp notes -->
 <!ENTITY stomp.param.link "<varlistentry
@@ -1348,14 +1348,14 @@ limita maximă de timp pentru citire.</simpara></tip>">
 
 <!-- SVN notes -->
 <!ENTITY svn.relativepath "<note xmlns="http://docbook.org/ns/docbook">
-<simpara>Căile relative vor fi rezolvate ca şi cum directorul curent este cel
-ce conţine binarul PHP. Pentru a utiliza directorul de lucru al scriptului
-apelant, utilizaţi <function>realpath</function> sau dirname(__FILE__).
+<simpara>Căile relative vor fi rezolvate ca și cum directorul curent este cel
+ce conține binarul PHP. Pentru a utiliza directorul de lucru al scriptului
+apelant, utilizați <function>realpath</function> sau dirname(__FILE__).
 </simpara></note>">
-<!ENTITY svn.referto.status 'Accesaţi <link
+<!ENTITY svn.referto.status 'Accesați <link
 xmlns="http://docbook.org/ns/docbook" linkend="svn.constants.status">
 constantele de stare</link>pentru a afla valorile posibile.'>
-<!ENTITY svn.referto.type 'Accesaţi <link
+<!ENTITY svn.referto.type 'Accesați <link
 xmlns="http://docbook.org/ns/docbook" linkend="svn.constants.type">
 constante de tip</link> pentru a afla valorile posibile.'>
 
@@ -1424,7 +1424,7 @@ Imagick a fost compilat cu ImageMagick de versiunea'>
 <!-- Imagick default channel information -->
 <!ENTITY imagick.default.channel.info 'Valoarea implicită este
 <constant xmlns="http://docbook.org/ns/docbook">Imagick::CHANNEL_DEFAULT</constant>.
-Iată lista de referinţă a
+Iată lista de referință a
 <link xmlns="http://docbook.org/ns/docbook" linkend="imagick.constants.channel">
 constantelor de canal</link>'>
 
@@ -1462,42 +1462,42 @@ iar 0.0 este deplin transparent.'>
 
 <!ENTITY note.openssl.cnf '<note xmlns="http://docbook.org/ns/docbook">
  <simpara>
-  Trebuie să aveţi un fişier <filename>openssl.cnf</filename> valid instalat
-  pentru ca această funcţie să opereze corect.
-  Vedeţi notele în <link linkend="openssl.installation">secţiunea de instalare
-  </link> pentru informaţii suplimentare.
+  Trebuie să aveți un fișier <filename>openssl.cnf</filename> valid instalat
+  pentru ca această funcție să opereze corect.
+  Vedeți notele în <link linkend="openssl.installation">secțiunea de instalare
+  </link> pentru informații suplimentare.
  </simpara>
 </note>'>
 <!ENTITY note.openssl.param-notext '<para xmlns="http://docbook.org/ns/docbook">
- Parametrul opţional <parameter>notext</parameter> afectează detalierea
- ieşirilor; dacă este &false; atunci informaţii suplimentare lizibile de către
- om sunt incluse în ieşiri. Valoarea implicită a <parameter>notext</parameter>
+ Parametrul opțional <parameter>notext</parameter> afectează detalierea
+ ieșirilor; dacă este &false; atunci informații suplimentare lizibile de către
+ om sunt incluse în ieșiri. Valoarea implicită a <parameter>notext</parameter>
  este &true;.
 </para>'>
 
 <!-- COM/Dotnet -->
 <!ENTITY com.variant-arith '<note xmlns="http://docbook.org/ns/docbook">
 <para>
- Ca şi în cazul tuturor funcţiilor aritmetice de variante, parametrii pentru
- această funcţie pot fi sau de un tip PHP indigen (integer, string, floating
- point, boolean sau &null;), sau o instanţă a claselor COM, VARIANT sau
+ Ca și în cazul tuturor funcțiilor aritmetice de variante, parametrii pentru
+ această funcție pot fi sau de un tip PHP indigen (integer, string, floating
+ point, boolean sau &null;), sau o instanță a claselor COM, VARIANT sau
  DOTNET. Tipurile PHP indigene vor fi convertite în variante utilizând
- aceleaşi reguli ca şi cele din constructorul <xref linkend="class.variant"/>
- clasei. De la obiectele COM şi DOTNET se va lua valoarea proprietăţii lor
- implicite şi va fi utilizată ca valoare a variantei.
+ aceleași reguli ca și cele din constructorul <xref linkend="class.variant"/>
+ clasei. De la obiectele COM și DOTNET se va lua valoarea proprietății lor
+ implicite și va fi utilizată ca valoare a variantei.
 </para>
 <para>
- Funcţiile aritmetice ale variantelor sunt nişte învelişuri ale funcţiilor
- denumite similar în biblioteca COM; pentru informaţii suplimentare despre
- aceste funcţii consultaţi biblioteca MSDN. Funcţiile PHP sunt denumite un pic
+ Funcțiile aritmetice ale variantelor sunt niște învelișuri ale funcțiilor
+ denumite similar în biblioteca COM; pentru informații suplimentare despre
+ aceste funcții consultați biblioteca MSDN. Funcțiile PHP sunt denumite un pic
  diferit; spre exemplu, <function>variant_add</function> din PHP corespunde
- cu <literal>VarAdd()</literal> în documentaţia MSDN.
+ cu <literal>VarAdd()</literal> în documentația MSDN.
 </para>
 </note>'>
 <!ENTITY com.use-oo-instead '<note xmlns="http://docbook.org/ns/docbook">
  <simpara>
-  Această funcţie nu există în PHP 5; în loc, ar trebui să utilizaţi sintaxa
-  OO care este mai obişnuită şi mai naturală pentru a accesa proprietăţile,
+  Această funcție nu există în PHP 5; în loc, ar trebui să utilizați sintaxa
+  OO care este mai obișnuită și mai naturală pentru a accesa proprietățile,
   sau pentru a apela metodele.
  </simpara>
 </note>
@@ -1508,27 +1508,27 @@ iar 0.0 este deplin transparent.'>
 <para>
  Această metodă necesită ca parametrul &php.ini;
  <literal>phar.readonly</literal> să fie stabilit în <literal>0</literal>
- pentru ca obiectele <classname>Phar</classname> să funcţioneze. În caz
- contrar va fi emisă o excepţie <classname>PharException</classname>.
+ pentru ca obiectele <classname>Phar</classname> să funcționeze. În caz
+ contrar va fi emisă o excepție <classname>PharException</classname>.
 </para></note>'>
 
 <!ENTITY phar.removed.pharcompress '<note xmlns="http://docbook.org/ns/docbook">
 <para>Această metodă a fost eliminată din cadrul extensiei phar începând cu
 versiunea 2.0.0. Implementări alternative sunt disponibile utilizând
 <function>Phar::compress</function>, <function>Phar::decompress</function>,
-<function>Phar::compressFiles</function> şi
+<function>Phar::compressFiles</function> și
 <function>Phar::decompressFiles</function>.</para></note>'>
 
 <!ENTITY phar.removed.pharfileinfocompress '<note xmlns="http://docbook.org/ns/docbook">
 <para>Această metodă a fost eliminată din cadrul extensiei phar începând cu
 versiunea 2.0.0. Implementări alternative sunt disponibile utilizând
 <function>PharFileInfo::isCompressed</function>,
-<function>PharFileInfo::decompress</function> şi
+<function>PharFileInfo::decompress</function> și
 <function>PharFileInfo::compress</function>.</para></note>'>
 
 <!-- XMLReader -->
 <!ENTITY xmlreader.libxml20620.note '<caution
-xmlns="http://docbook.org/ns/docbook"><para>Această funcţie este disponibilă
+xmlns="http://docbook.org/ns/docbook"><para>Această funcție este disponibilă
 numai când PHP este compilat cu libxml 20620 sau ulterioară.</para></caution>'>
 
 <!-- inotify -->
@@ -1570,26 +1570,26 @@ este stabilit în &true;, atunci valoarea exportată este întoarsă ca un
 xmlns="http://docbook.org/ns/docbook">Structuri de date</title>'>
 
 <!ENTITY spl.exceptions.intro.title '<title
-xmlns="http://docbook.org/ns/docbook">Excepţii</title>'>
+xmlns="http://docbook.org/ns/docbook">Excepții</title>'>
 <!ENTITY spl.exceptions.intro '<partintro
-xmlns="http://docbook.org/ns/docbook"><para>SPL oferă un set de Excepţii
-standard.</para><para>Vedeţi de asemenea
+xmlns="http://docbook.org/ns/docbook"><para>SPL oferă un set de Excepții
+standard.</para><para>Vedeți de asemenea
 <xref linkend="reserved.exceptions" /></para></partintro>'>
 
 <!ENTITY spl.files.intro.title '<title xmlns="http://docbook.org/ns/docbook">
-Manipularea fişierelor</title>'>
+Manipularea fișierelor</title>'>
 <!ENTITY spl.files.intro '<partintro
 xmlns="http://docbook.org/ns/docbook"><para>SPL oferă câteva clase pentru a
-lucra cu fişiere.</para></partintro>'>
+lucra cu fișiere.</para></partintro>'>
 
 <!ENTITY spl.interfaces.intro.title '<title
-xmlns="http://docbook.org/ns/docbook">Interfeţe</title>'>
+xmlns="http://docbook.org/ns/docbook">Interfețe</title>'>
 <!ENTITY spl.interfaces.intro '<para
-xmlns="http://docbook.org/ns/docbook">SPL oferă un set de interfeţe.</para>
-<para xmlns="http://docbook.org/ns/docbook">Vedeţi de asemenea
+xmlns="http://docbook.org/ns/docbook">SPL oferă un set de interfețe.</para>
+<para xmlns="http://docbook.org/ns/docbook">Vedeți de asemenea
 <xref linkend="reserved.interfaces" /></para>'>
 <!ENTITY spl.interfaces.list '<title xmlns="http://docbook.org/ns/docbook">
-Lista interfeţelor</title>'>
+Lista interfețelor</title>'>
 
 <!ENTITY spl.iterators.intro.title '<title
 xmlns="http://docbook.org/ns/docbook">Iteratori</title>'>
@@ -1597,7 +1597,7 @@ xmlns="http://docbook.org/ns/docbook">Iteratori</title>'>
 oferă un set de iteratori pentru a traversa prin obiecte.</para>'>
 
 <!ENTITY spl.misc.intro.title '<title xmlns="http://docbook.org/ns/docbook">
-Clase şi interfeţe diverse</title>'>
+Clase și interfețe diverse</title>'>
 <!ENTITY spl.misc.intro '<partintro xmlns="http://docbook.org/ns/docbook">
-<para>Clase şi interfeţe ce nu se încadrează în alte categorii SPL.</para>
+<para>Clase și interfețe ce nu se încadrează în alte categorii SPL.</para>
 </partintro>'>

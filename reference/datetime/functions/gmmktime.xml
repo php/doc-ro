@@ -5,7 +5,7 @@
 <refentry xml:id="function.gmmktime" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>gmmktime</refname>
-  <refpurpose>Obţine momentul de timp Unix pentru o dată GMT</refpurpose>
+  <refpurpose>Obține momentul de timp Unix pentru o dată GMT</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -21,13 +21,13 @@
    <methodparam choice="opt"><type>int</type><parameter>is_dst</parameter><initializer>-1</initializer></methodparam>
   </methodsynopsis>
   <para>
-   Este identică cu <function>mktime</function> cu excepţia că parametrii
-   furnizaţi reprezintă o dată GMT. <function>gmmktime</function> în interior
+   Este identică cu <function>mktime</function> cu excepția că parametrii
+   furnizați reprezintă o dată GMT. <function>gmmktime</function> în interior
    utilizează <function>mktime</function>, deci numai orele valide în timp
    local derivat pot fi utilizate.
   </para>
   <para>
-   Ca şi la <function>mktime</function> argumentele pot fi omise de la dreapta
+   Ca și la <function>mktime</function> argumentele pot fi omise de la dreapta
    spre stânga, cu fiecare argument omis stabilit la valoarea GMT curentă
    corespunzătoare.
   </para>
@@ -90,7 +90,7 @@
      <listitem>
       <para>
        Parametrii întotdeauna reprezintă o dată GMT, deci
-       <parameter>is_dst</parameter> nu influenţează rezultatul.
+       <parameter>is_dst</parameter> nu influențează rezultatul.
       </para>
      </listitem>
     </varlistentry>
@@ -139,7 +139,7 @@
     <programlisting role="php">
 <![CDATA[
 <?php
-gmmktime(0, 0, 0, 1, 1, 1970); // valid în GMT şi vest, invalid în est
+gmmktime(0, 0, 0, 1, 1, 1970); // valid în GMT și vest, invalid în est
 ?>
 ]]>
     </programlisting>

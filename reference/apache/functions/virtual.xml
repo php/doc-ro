@@ -16,17 +16,17 @@
    <methodparam><type>string</type><parameter>filename</parameter></methodparam>
   </methodsynopsis>
   <para>
-   <function>virtual</function> este o funcţie specifică Apache, care este
+   <function>virtual</function> este o funcție specifică Apache, care este
    similară cu <literal>&lt;!--#include virtual...--&gt;</literal> în
    <literal>mod_include</literal>. Ea efectuează o sub-interpelare Apache. Ea
-   este utilă pentru includerea script-urilor CGI, sau a fişierelor
+   este utilă pentru includerea script-urilor CGI, sau a fișierelor
    <filename>.shtml</filename>, sau orice altceva ce se interpretează de către
-   Apache. Atrageţi atenţia că în cazul unui script CGI, acesta trebuie să
+   Apache. Atrageți atenția că în cazul unui script CGI, acesta trebuie să
    genereze antete CGI valide. Aceasta înseamnă că el trebuie să genereze cel
-   puţin un antet <literal>Content-type</literal>.
+   puțin un antet <literal>Content-type</literal>.
   </para>
   <para>
-   Pentru a rula sub-interpelarea toate zonele-tampon sunt închise şi trimise
+   Pentru a rula sub-interpelarea toate zonele-tampon sunt închise și trimise
    către navigator, antetele rămase sunt de asemenea trimise.
   </para>
   &apache.req.module;
@@ -40,7 +40,7 @@
      <term><parameter>filename</parameter></term>
      <listitem>
       <para>
-       Fişierul asupra căruia se va efectua comanda virtuală.
+       Fișierul asupra căruia se va efectua comanda virtuală.
       </para>
      </listitem>
     </varlistentry>
@@ -52,7 +52,7 @@
   &reftitle.returnvalues;
   <para>
    Efectuează comanda virtuală în cazul de succes, sau întoarce &false; în caz
-   de eşec.
+   de eșec.
   </para>
  </refsect1>
 
@@ -71,9 +71,9 @@
       <row>
        <entry>4.0.6</entry>
        <entry>
-        Această funcţie poate fi utilizată asupra fişierelor PHP. Însă în mod
+        Această funcție poate fi utilizată asupra fișierelor PHP. Însă în mod
         normal e mai bine de a utiliza <function>include</function> sau
-        <function>require</function> pentru fişiere PHP.
+        <function>require</function> pentru fișiere PHP.
        </entry>
       </row>
      </tbody>
@@ -85,7 +85,7 @@
  <refsect1 role="examples">
   &reftitle.examples;
   <para>
-   Accesaţi <function>apache_note</function> pentru un exemplu.
+   Accesați <function>apache_note</function> pentru un exemplu.
   </para>
  </refsect1>
 
@@ -93,17 +93,17 @@
   &reftitle.notes;
   <warning>
    <para>
-    String-ul cu interpelarea poate fi transmis fişierului inclus, însă
-    <varname>$_GET</varname> este copiat din script-ul părinte şi numai
+    String-ul cu interpelarea poate fi transmis fișierului inclus, însă
+    <varname>$_GET</varname> este copiat din script-ul părinte și numai
     <varname>$_SERVER['QUERY_STRING']</varname> este completată cu string-ul
     cu interpelarea. String-ul cu interpelarea poate fi transmis când se
-    utilizează Apache 2. Fişierul interpelat nu va fi afişat în jurnalul de
+    utilizează Apache 2. Fișierul interpelat nu va fi afișat în jurnalul de
     acces al Apache.
    </para>
   </warning>
   <note>
    <para>
-    Variabilele de mediu stabilite în fişierul interpelat nu sunt vizibile
+    Variabilele de mediu stabilite în fișierul interpelat nu sunt vizibile
     script-ului apelant.
    </para>
   </note>

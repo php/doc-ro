@@ -2,7 +2,7 @@
 <!-- $Revision$ -->
 <!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: simionea Status: ready -->
  <sect3 xml:id="configure.options.misc" xmlns="http://docbook.org/ns/docbook">
-  <title>Opţiuni diverse</title>
+  <title>Opțiuni diverse</title>
   <variablelist>
    <varlistentry xml:id="configure.enable-debug">
     <term>
@@ -20,7 +20,7 @@
     </term>
     <listitem>
      <para>
-      Setează modul în care fişierele instalate vor fi amplasate.
+      Setează modul în care fișierele instalate vor fi amplasate.
       TYPE este una din valorile PHP (implicit) sau GNU.
      </para>
     </listitem>
@@ -82,7 +82,7 @@
     </term>
     <listitem>
      <para>
-      Include fluxurile PHP experimentale. Nu folosiţi decât dacă testaţi codul sursă!
+      Include fluxurile PHP experimentale. Nu folosiți decât dacă testați codul sursă!
      </para>
     </listitem>
    </varlistentry>
@@ -92,7 +92,7 @@
     </term>
     <listitem>
      <para>
-      Defineşte locaţia directorului de instalare zlib.
+      Definește locația directorului de instalare zlib.
      </para>
     </listitem>
    </varlistentry>
@@ -117,7 +117,7 @@
     </term>
     <listitem>
      <para>
-      Foloseşte firele POSIX (implicit).
+      Folosește firele POSIX (implicit).
      </para>
     </listitem>
    </varlistentry>
@@ -157,7 +157,7 @@
     </term>
     <listitem>
      <para>
-      Presupune că compilatorul C foloseşte ld al GNU [implicit=nu].
+      Presupune că compilatorul C folosește ld al GNU [implicit=nu].
      </para>
     </listitem>
    </varlistentry>
@@ -177,7 +177,7 @@
     </term>
     <listitem>
      <para>
-      Încearcă folosirea numai a obiectelor PIC/non-PIC [implicit=foloseşte ambele].
+      Încearcă folosirea numai a obiectelor PIC/non-PIC [implicit=folosește ambele].
      </para>
     </listitem>
    </varlistentry>
@@ -188,7 +188,7 @@
     </term>
     <listitem>
      <para>
-      Compilează cu susţineara limitelor de memorie.
+      Compilează cu susțineara limitelor de memorie.
       (nu este disponibilă începând cu PHP 5.2.1 - mereu activată)
      </para>
     </listitem>
@@ -199,8 +199,8 @@
     </term>
     <listitem>
      <para>
-      Dezactivează învelişul pentru funcţia fopen, care susţine accesarea
-      fişierelor prin HTTP sau FTP.
+      Dezactivează învelișul pentru funcția fopen, care susține accesarea
+      fișierelor prin HTTP sau FTP.
       (nu este disponibil începând cu PHP 5.2.5)
      </para>
     </listitem>
@@ -212,7 +212,7 @@
     <listitem>
      <para>
       Exportă numai simbolurile necesare.
-      Vezi INSTALL pentru informaţii suplimentare.
+      Vezi INSTALL pentru informații suplimentare.
      </para>
     </listitem>
    </varlistentry>

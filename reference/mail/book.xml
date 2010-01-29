@@ -5,13 +5,13 @@
 <!-- Membership: core -->
 
 <book xml:id="book.mail" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
- <title>Poşta</title>
+ <title>Poșta</title>
 
  <!-- {{{ preface -->
  <preface xml:id="intro.mail">
   &reftitle.intro;
   <para>
-   Funcţia <function>mail</function> vă permite să trimiteţi mesaje e-mail.
+   Funcția <function>mail</function> vă permite să trimiteți mesaje e-mail.
   </para>
  </preface>
  <!-- }}} -->

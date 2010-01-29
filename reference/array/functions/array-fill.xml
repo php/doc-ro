@@ -34,7 +34,7 @@
      <listitem>
       <para>
        Primul indice al tabloului întors.
-       Susţine doar indici non-negativi.
+       Susține doar indici non-negativi.
       </para>
      </listitem>
     </varlistentry>
@@ -117,9 +117,9 @@ Array
  <refsect1 role="notes">
   &reftitle.notes;
   <para>
-   Accesaţi de asemenea secţiunea manualului referitoare la
+   Accesați de asemenea secțiunea manualului referitoare la
    <link linkend="language.types.array">Tablouri</link>
-   pentru o explicaţie detaliată a cheilor negative.
+   pentru o explicație detaliată a cheilor negative.
   </para>
  </refsect1>
 

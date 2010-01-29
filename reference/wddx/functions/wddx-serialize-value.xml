@@ -36,7 +36,7 @@
      <term><parameter>comment</parameter></term>
      <listitem>
       <para>
-       Un string cu comentariu opţional, care apare în antetul pachetului.
+       Un string cu comentariu opțional, care apare în antetul pachetului.
       </para>
      </listitem>
     </varlistentry>

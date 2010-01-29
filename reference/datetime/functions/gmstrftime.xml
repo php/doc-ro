@@ -16,10 +16,10 @@
    <methodparam choice="opt"><type>int</type><parameter>timestamp</parameter><initializer>time()</initializer></methodparam>
   </methodsynopsis>
   <para>
-   Se comportă în acelaşi mod ca şi <function>strftime</function> cu excepţia
+   Se comportă în același mod ca și <function>strftime</function> cu excepția
    că ora întoarsă este Greenwich Mean Time (GMT) - Ora Medie Greenwich. Spre
    exemplu, când se rulează în Eastern Standard Time (GMT -0500), prima linie
-   de mai jos afişează "Dec 31 1998 20:00:00", în timp ce a doua afişează
+   de mai jos afișează "Dec 31 1998 20:00:00", în timp ce a doua afișează
    "Jan 01 1999 01:00:00".
   </para>
  </refsect1>
@@ -46,7 +46,7 @@
   <para>
    Întoarce un string formatat în conformitate cu string-ul format, utilizând
    <parameter>timestamp</parameter>-ul dat sau ora locală curentă, dacă nu este
-   dat un timestamp. Denumirile lunilor şi zilelor săptămânii şi alte string-uri
+   dat un timestamp. Denumirile lunilor și zilelor săptămânii și alte string-uri
    ce depind de limbă respectă setările locale stabilite cu ajutorul
    <function>setlocale</function>.
   </para>

@@ -39,7 +39,7 @@
   &reftitle.returnvalues;
   <para>
    Întoarce valoarea deserializată, care poate fi un string, un număr sau un
-   array. Observaţi că structurile sunt deserializate în tablouri asociative.
+   array. Observați că structurile sunt deserializate în tablouri asociative.
   </para>
  </refsect1>
 </refentry>

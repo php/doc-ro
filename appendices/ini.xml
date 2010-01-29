@@ -8,12 +8,12 @@
  <section xml:id="ini.list">
   <title>Lista directivelor &php.ini;</title>
   <para>
-   Această listă include directivele &php.ini; pe care le puteţi stabili
+   Această listă include directivele &php.ini; pe care le puteți stabili
    pentru a configura PHP.
   </para>
   <para>
    <table>
-    <title>Opţiunile de configurare</title>
+    <title>Opțiunile de configurare</title>
     <tgroup cols="4">
      <thead>
       <row>
@@ -3554,25 +3554,25 @@
  </section>
 
  <section xml:id="ini.sections">
-  <title>Lista secţiunilor &php.ini;</title>
+  <title>Lista secțiunilor &php.ini;</title>
    <para>
-   Această listă include secţiunile &php.ini; pe care le puteţi stabili în
-   configurarea PHP pe bază de 'Host' sau 'Path'. Aceste secţiuni sunt
-   opţionale.
+   Această listă include secțiunile &php.ini; pe care le puteți stabili în
+   configurarea PHP pe bază de 'Host' sau 'Path'. Aceste secțiuni sunt
+   opționale.
   </para>
   <para>
-   Aceste secţiuni nu afectează în mod direct PHP. Ele sunt utilizate pentru a
-   grupa directivele &php.ini; şi pentru a stabili ca ele să acţioneze asupra
+   Aceste secțiuni nu afectează în mod direct PHP. Ele sunt utilizate pentru a
+   grupa directivele &php.ini; și pentru a stabili ca ele să acționeze asupra
    unui host sau asupra unei căi anumite.
   </para>
   <para>
-   Aceste secţiuni sunt utilizate doar în modul CGI/FastCGI şi nu pot stabili
-   directivele <link linkend="ini.extension">extension</link> şi
+   Aceste secțiuni sunt utilizate doar în modul CGI/FastCGI și nu pot stabili
+   directivele <link linkend="ini.extension">extension</link> și
    <link linkend="ini.zend-extension">zend_extension</link>.
   </para>
   <para>
    <table>
-    <title>Secţiuni</title>
+    <title>Secțiuni</title>
     <tgroup cols="3">
      <thead>
       <row>
@@ -3607,7 +3607,7 @@
      </term>
      <listitem>
       <para>
-       Această secţiune vă permite să definiţi un set de directive &php.ini;
+       Această secțiune vă permite să definiți un set de directive &php.ini;
        care vor avea efect asupra host-ului denumit.
       </para>
       <para>
@@ -3632,7 +3632,7 @@ display_errors = On
       </term>
      <listitem>
       <para>
-       Această secţiune vă permite să definiţi un set de directive &php.ini;
+       Această secțiune vă permite să definiți un set de directive &php.ini;
        care vor avea efect când un script rulează în calea specificată.
       </para>
       <para>
@@ -3656,18 +3656,18 @@ auto_prepend_file=security.php
  <section xml:id="ini.core">
   <title>Descrierea directivelor de bază ale &php.ini;</title>
   <para>
-   Această listă include directivele de bază ale &php.ini;, pe care le puteţi
+   Această listă include directivele de bază ale &php.ini;, pe care le puteți
    stabili pentru a configura PHP. Directivele ce se referă la extensii sunt
-   listate şi detaliate pe paginile de documentare ale extensiilor
-   respective. Informaţii despre directivele de sesiune, spre exemplu, pot fi
+   listate și detaliate pe paginile de documentare ale extensiilor
+   respective. Informații despre directivele de sesiune, spre exemplu, pot fi
    găsite pe <link linkend="session.configuration">pagina de sesiuni</link>.
   </para>
 
   <section xml:id="ini.sect.httpd-options">
-   <title>Opţiunile Httpd</title>
+   <title>Opțiunile Httpd</title>
     <para>
      <table>
-      <title>Opţiunile Httpd</title>
+      <title>Opțiunile Httpd</title>
       <tgroup cols="4">
        <thead>
         <row>
@@ -3693,10 +3693,10 @@ auto_prepend_file=security.php
    </section>
 
   <section xml:id="ini.sect.language-options">
-   <title>Opţiunile limbajului</title>
+   <title>Opțiunile limbajului</title>
    <para>
    <table>
-    <title>Opţiuni de configurare a limbajului şi opţiuni diverse</title>
+    <title>Opțiuni de configurare a limbajului și opțiuni diverse</title>
     <tgroup cols="4">
      <thead>
       <row>
@@ -3784,12 +3784,12 @@ auto_prepend_file=security.php
        <listitem>
         <para>
          Indică dacă forma prescurtată (<userinput>&lt;? ?&gt;</userinput>)
-         a etichetei de deschidere a PHP este permisă. Dacă doriţi să
-         utilizaţi PHP în combinaţie cu XML, puteţi dezactiva această opţiune
+         a etichetei de deschidere a PHP este permisă. Dacă doriți să
+         utilizați PHP în combinație cu XML, puteți dezactiva această opțiune
          pentru a utiliza <userinput>&lt;?xml ?&gt;</userinput> direct în
-         text. În caz contrar, puteţi să le tipăriţi cu PHP, de exemplu:
+         text. În caz contrar, puteți să le tipăriți cu PHP, de exemplu:
          <userinput>&lt;?php echo '&lt;?xml version="1.0"?&gt;'; ?&gt;
-         </userinput>. De asemenea, dacă este dezactivată, trebuie să utilizaţi
+         </userinput>. De asemenea, dacă este dezactivată, trebuie să utilizați
          forma lungă a etichetei de deschidere PHP (<userinput>&lt;?php ?&gt;
          </userinput>).
         </para>
@@ -3812,10 +3812,10 @@ auto_prepend_file=security.php
        </term>
        <listitem>
         <simpara>
-         Permite utilizarea etichetelor de tip ASP &lt;% %&gt; în plus faţă
-         de etichetele obişnuite &lt;?php ?&gt;. Aceasta include şi
+         Permite utilizarea etichetelor de tip ASP &lt;% %&gt; în plus față
+         de etichetele obișnuite &lt;?php ?&gt;. Aceasta include și
          scurtătura pentru tiparul valorii variabilei &lt;%= $value %&gt;.
-         Pentru mai multe informaţii accesaţi
+         Pentru mai multe informații accesați
          <link linkend="language.basic-syntax.phpmode">Evadarea din HTML</link>.
         </simpara>
        </listitem>
@@ -3828,7 +3828,7 @@ auto_prepend_file=security.php
        </term>
        <listitem>
         <simpara>
-         Numărul cifrelor semnificative afişate în numerele cu virgulă
+         Numărul cifrelor semnificative afișate în numerele cu virgulă
          flotantă.
         </simpara>
        </listitem>
@@ -3841,7 +3841,7 @@ auto_prepend_file=security.php
        </term>
        <listitem>
         <simpara>
-         Forţează conformarea cu anul 2000 (va cauza probleme cu
+         Forțează conformarea cu anul 2000 (va cauza probleme cu
          navigatoarele nonconformante)
         </simpara>
        </listitem>
@@ -3855,35 +3855,35 @@ auto_prepend_file=security.php
        </term>
        <listitem>
         <para>
-         Afişarea avertizării în cazul când argumentele sunt transmise prin
-         referinţă în timpul apelării funcţiei. Metoda încurajată de
-         specificare a argumentelor ce trebuie transmise prin referinţă este în
-         declaraţia funcţiei. Sunteţi încurajat să încercaţi să dezactivaţi
-         această opţiune şi să aveţi grijă ca scripturile să lucreze în mod
-         normal cu ea, pentru a vă asigura că ele vor funcţiona cu versiunile
-         viitoare ale limbajului (veţi primi o avertizare de fiecare dată când
-         utilizaţi această facilitate).
+         Afișarea avertizării în cazul când argumentele sunt transmise prin
+         referință în timpul apelării funcției. Metoda încurajată de
+         specificare a argumentelor ce trebuie transmise prin referință este în
+         declarația funcției. Sunteți încurajat să încercați să dezactivați
+         această opțiune și să aveți grijă ca scripturile să lucreze în mod
+         normal cu ea, pentru a vă asigura că ele vor funcționa cu versiunile
+         viitoare ale limbajului (veți primi o avertizare de fiecare dată când
+         utilizați această facilitate).
         </para>
         <para>
-         Transmiterea argumentelor prin referinţă la momentul apelării
-         funcţiei a fost descurajată din motivul curăţeniei codului-sursă. O
-         funcţie poate să-şi modifice argumentul într-un mod nedocumentat
-         dacă nu a declarat că argumentul este transmis prin referinţă.
+         Transmiterea argumentelor prin referință la momentul apelării
+         funcției a fost descurajată din motivul curățeniei codului-sursă. O
+         funcție poate să-și modifice argumentul într-un mod nedocumentat
+         dacă nu a declarat că argumentul este transmis prin referință.
          Pentru a evita efecte secundare este mai bine de a specifica care
-         argumente sunt transmise prin referinţă numai în declaraţia
-         funcţiei.
+         argumente sunt transmise prin referință numai în declarația
+         funcției.
         </para>
         <para>
          În PHP5 <literal>allow_call_time_pass_reference</literal> este
          descurajată, în versiuni anterioare PHP 5.3.0 utilizarea acestei
-         facilităţi va emite o avertizate <constant>E_COMPILE_WARNING</constant>,
+         facilități va emite o avertizate <constant>E_COMPILE_WARNING</constant>,
          iar în PHP 5.3.0+ avertizarea a devenit o notificare
          <constant>E_DEPRECATED</constant>. Această directivă este eliminată
          începând cu PHP 6.
         </para>
         <para>
-         Accesaţi de asemenea <link linkend="language.references">explicaţia
-         referinţelor</link>.
+         Accesați de asemenea <link linkend="language.references">explicația
+         referințelor</link>.
         </para>
        </listitem>
       </varlistentry>
@@ -3898,7 +3898,7 @@ auto_prepend_file=security.php
          Decide dacă PHP va expune sau nu faptul că este instalat pe server
          (de ex. prin adăugarea semnăturii sale la antetul Web server-ului).
          Nu este nici un fel de pericol de securitate, însă acest lucru
-         permite de a determina dacă utilizaţi sau nu PHP pe server.
+         permite de a determina dacă utilizați sau nu PHP pe server.
         </para>
        </listitem>
       </varlistentry>
@@ -3910,14 +3910,14 @@ auto_prepend_file=security.php
       </term>
       <listitem>
        <simpara>
-        Această directivă vă permite să dezactivaţi anumite funcţii din motive
-        de <link linkend="security">securitate</link>. Ea conţine o listă a
-        denumirilor funcţiilor, separate prin virgulă. disable_functions
+        Această directivă vă permite să dezactivați anumite funcții din motive
+        de <link linkend="security">securitate</link>. Ea conține o listă a
+        denumirilor funcțiilor, separate prin virgulă. disable_functions
         nu este afectată de <link linkend="ini.safe-mode">Modul securizat</link>.
        </simpara>
        <simpara>
         Această directivă trebuie să fie stabilită în &php.ini; De exemplu nu
-        puteţi stabili aceasta în &httpd.conf;.
+        puteți stabili aceasta în &httpd.conf;.
        </simpara>
       </listitem>
      </varlistentry>
@@ -3929,14 +3929,14 @@ auto_prepend_file=security.php
       </term>
       <listitem>
        <simpara>
-        Această directivă vă permite să dezactivaţi anumite clase din motive
-        de <link linkend="security">securitate</link>. Ea conţine o listă a
+        Această directivă vă permite să dezactivați anumite clase din motive
+        de <link linkend="security">securitate</link>. Ea conține o listă a
         denumirilor claselor, separate prin virgulă. disable_classes
         nu este afectată de <link linkend="ini.safe-mode">Modul securizat</link>.
        </simpara>
        <simpara>
         Această directivă trebuie să fie stabilită în &php.ini; De exemplu nu
-        puteţi stabili aceasta în &httpd.conf;.
+        puteți stabili aceasta în &httpd.conf;.
        </simpara>
        <note>
         <title>Notă despre disponibilitate</title>
@@ -3956,13 +3956,13 @@ auto_prepend_file=security.php
        <para>
         Activează modul de compatibilitate cu Zend Engine 1 (PHP 4).
         Aceasta afectează clonarea, transformarea (obiectele fără
-        proprietăţi se transformă în &false; sau 0), şi
-        <link linkend="language.oop5.object-comparison">comparaţia
+        proprietăți se transformă în &false; sau 0), și
+        <link linkend="language.oop5.object-comparison">comparația
         obiectelor</link>. În acest mod, obiectele sunt transmise prin
-        valoare, dar nu prin referinţă, cum e stabilit implicit.
+        valoare, dar nu prin referință, cum e stabilit implicit.
        </para>
        <para>
-        Accesaţi de asemenea secţiunea întitulată
+        Accesați de asemenea secțiunea întitulată
         <link linkend="migration5">Migrarea de la PHP 4 la PHP 5</link>.
        </para>
       </listitem>
@@ -3975,7 +3975,7 @@ auto_prepend_file=security.php
       </term>
       <listitem>
        <para>
-        Verifică prezenţa BOM (Byte Order Mark) şi dacă fişierul conţine
+        Verifică prezența BOM (Byte Order Mark) și dacă fișierul conține
         caractere multioctet valide. Această detectare este efectuată înaintea
         procesării <function>__halt_compiler</function>. Este disponibilă doar
         în modul Zend Multibyte.
@@ -4024,10 +4024,10 @@ auto_prepend_file=security.php
       </term>
       <listitem>
        <para>
-        Aceata stabileşte mărimea maximă a memoriei în baiţi, pe care un
-        script o poate aloca. Astfel se evită situaţia când scripturile
-        scrise rău consumă toată memoria disponibilă pe server. Atrageţi
-        atenţia că pentru a dezactiva limita de memorie, trebuie să stabiliţi
+        Aceata stabilește mărimea maximă a memoriei în baiți, pe care un
+        script o poate aloca. Astfel se evită situația când scripturile
+        scrise rău consumă toată memoria disponibilă pe server. Atrageți
+        atenția că pentru a dezactiva limita de memorie, trebuie să stabiliți
         această directivă la valoarea <literal>-1</literal>.
        </para>
        <para>
@@ -4035,7 +4035,7 @@ auto_prepend_file=security.php
         să fi fost activată la momentul compilării indicând
         <option role="configure">--enable-memory-limit</option> în linia de
         configurare. Aceasta era de asemenea necesar pentru a defini
-        funcţiile <function>memory_get_usage</function> şi
+        funcțiile <function>memory_get_usage</function> și
         <function>memory_get_peak_usage</function>.
        </para>
 
@@ -4046,15 +4046,15 @@ auto_prepend_file=security.php
     </variablelist>
    </para>
    <para>
-    Accesaţi de asemenea: <link linkend="ini.max-execution-time">max_execution_time</link>.
+    Accesați de asemenea: <link linkend="ini.max-execution-time">max_execution_time</link>.
    </para>
   </section>
 
   <section xml:id="ini.sect.performance">
-   <title>Reglarea performanţei</title>
+   <title>Reglarea performanței</title>
    <para>
     <table>
-     <title>Reglarea performanţei</title>
+     <title>Reglarea performanței</title>
      <tgroup cols="4">
       <thead>
        <row>
@@ -4092,8 +4092,8 @@ auto_prepend_file=security.php
       <listitem>
        <para>
         Determină mărimea cache-ului căilor folosite de PHP. Această valoare
-        trebuie mărită pe sistemele unde PHP deschide multe fişiere, pentru a
-        reflecta cantitatea operaţiunilor efectuate cu fişiere.
+        trebuie mărită pe sistemele unde PHP deschide multe fișiere, pentru a
+        reflecta cantitatea operațiunilor efectuate cu fișiere.
        </para>
       </listitem>
      </varlistentry>
@@ -4104,9 +4104,9 @@ auto_prepend_file=security.php
       </term>
       <listitem>
        <para>
-        Durata de timp (în secunde) pentru a păstra în cache informaţia
-        despre calea unui fişier sau director. Pentru sisteme cu fişiere care
-        se modifică rar, consideraţi mărirea acestei valori.
+        Durata de timp (în secunde) pentru a păstra în cache informația
+        despre calea unui fișier sau director. Pentru sisteme cu fișiere care
+        se modifică rar, considerați mărirea acestei valori.
        </para>
       </listitem>
      </varlistentry>
@@ -4118,7 +4118,7 @@ auto_prepend_file=security.php
    <title>Manipularea datelor</title>
     <para>
      <table>
-      <title>Opţiunile de configurare pentru manipularea datelor</title>
+      <title>Opțiunile de configurare pentru manipularea datelor</title>
       <tgroup cols="4">
        <thead>
         <row>
@@ -4248,15 +4248,15 @@ auto_prepend_file=security.php
        <listitem>
         <para>
          Dacă este activat, atunci variabilele Environment, GET, POST, Cookie
-         şi Server pot fi găsite în tablourile asociative globale
+         și Server pot fi găsite în tablourile asociative globale
          <varname>$_ENV</varname>,
          <varname>$_GET</varname>,
          <varname>$_POST</varname>,
-         <varname>$_COOKIE</varname> şi
+         <varname>$_COOKIE</varname> și
          <varname>$_SERVER</varname>.
         </para>
         <para>
-         Atrageţi atenţia că începând cu PHP 4.0.3, <systemitem
+         Atrageți atenția că începând cu PHP 4.0.3, <systemitem
          role="directive">track_vars</systemitem> este întotdeauna activat.
         </para>
        </listitem>
@@ -4282,7 +4282,7 @@ auto_prepend_file=security.php
        </term>
        <listitem>
         <para>
-         Lista separator(arelor) folosite de PHP pentru a analiza şi
+         Lista separator(arelor) folosite de PHP pentru a analiza și
          transfera URL-urile de intrare în variabile.
         </para>
         <note>
@@ -4300,15 +4300,15 @@ auto_prepend_file=security.php
        </term>
        <listitem>
         <para>
-         Stabileşte ordinea prelucrării variabileleor EGPCS (
+         Stabilește ordinea prelucrării variabileleor EGPCS (
          <literal>E</literal>nvironment,
          <literal>G</literal>et, <literal>P</literal>ost,
-         <literal>C</literal>ookie şi <literal>S</literal>erver).
+         <literal>C</literal>ookie și <literal>S</literal>erver).
          Spre exemplu, dacă variables_order este stabilit în
          <literal>"SP"</literal>, atunci PHP va crea
-         &link.superglobals; <varname>$_SERVER</varname> şi
+         &link.superglobals; <varname>$_SERVER</varname> și
          <varname>$_POST</varname>, dar nu va crea
-         <varname>$_ENV</varname>, <varname>$_GET</varname> şi
+         <varname>$_ENV</varname>, <varname>$_GET</varname> și
          <varname>$_COOKIE</varname>.
          Stabilirea valorii "" înseamnă că nici un
          &link.superglobals; nu va fi stabilit.
@@ -4319,20 +4319,20 @@ auto_prepend_file=security.php
          este stabilită (nu mai există începând cu PHP 6.0.0), atunci
          variables_order de asemenea configurează ordinea în care variabilele
          <literal>ENV</literal>, <literal>GET</literal>,
-         <literal>POST</literal>, <literal>COOKIE</literal> şi
+         <literal>POST</literal>, <literal>COOKIE</literal> și
          <literal>SERVER</literal> sunt populate în domeniul global. Deci,
          spre exemplu, dacă variables_order este stabilit în
          <literal>"EGPCS"</literal>, register_globals este activat,
-         şi ambele <varname>$_GET['action']</varname> şi
+         și ambele <varname>$_GET['action']</varname> și
          <varname>$_POST['action']</varname> sunt stabilite, atunci
-         <varname>$action</varname> va conţine valoarea
+         <varname>$action</varname> va conține valoarea
          <varname>$_POST['action']</varname> deoarece <literal>P</literal>
          urmează după <literal>G</literal> în valoarea directivei din
          exemplul dat.
         </para>
         <warning>
          <para>
-          În ambele SAPI-uri CGI şi FastCGI,
+          În ambele SAPI-uri CGI și FastCGI,
           <varname>$_SERVER</varname> este de
           asemenea populat cu valori din mediu; <literal>S</literal>
           este întotdeauna echivalent cu <literal>ES</literal> independent de
@@ -4341,7 +4341,7 @@ auto_prepend_file=security.php
         </warning>
         <note>
          <para>
-          Conţinutul şi ordinea valorilor din variabila
+          Conținutul și ordinea valorilor din variabila
           <varname>$_REQUEST</varname> sunt de
           asemenea afectate de această directivă.
          </para>
@@ -4357,14 +4357,14 @@ auto_prepend_file=security.php
        <listitem>
         <para>
          Această directuvă descrie ordinea în care PHP PHP înregistrează
-         variabilele GET, POST şi Cookie în tabloul _REQUEST. Înregistrarea
+         variabilele GET, POST și Cookie în tabloul _REQUEST. Înregistrarea
          este efectuată de la stânga la dreapta, valorile noi se suprapun
          peste cele vechi.
         </para>
         <para>
          Dacă această directivă nu este stabilită,
          <link linkend="ini.variables-order">variables_order</link> este
-         utilizată pentru a umple conţinutul <varname>$_REQUEST</varname>.
+         utilizată pentru a umple conținutul <varname>$_REQUEST</varname>.
         </para>
        </listitem>
       </varlistentry>
@@ -4376,17 +4376,17 @@ auto_prepend_file=security.php
        </term>
        <listitem>
         <para>
-         Când este activată, variabilele SERVER şi ENV sunt create prima dată
+         Când este activată, variabilele SERVER și ENV sunt create prima dată
          când sunt utilizate (Exact la timp - Just In Time) în loc să fie
          create la lansarea scriptului.
          Dacă aceste variabile nu sunt utilizate în script, atunci activarea
-         acestei directive va duce la o creştere a performanţei.
+         acestei directive va duce la o creștere a performanței.
         </para>
         <para>
          Directivele PHP
          <link linkend="ini.register-globals">register_globals</link>,
          <link linkend="ini.register-long-arrays">register_long_arrays</link>
-         şi <link linkend="ini.register-argc-argv">register_argc_argv</link>
+         și <link linkend="ini.register-argc-argv">register_argc_argv</link>
          trebuie să fie dezactivate pentru ca această directivă să aibă
          efect. Începând cu PHP 5.1.3 nu este necesar de a avea
          <link linkend="ini.register-argc-argv">register_argc_argv</link>
@@ -4394,10 +4394,10 @@ auto_prepend_file=security.php
         </para>
        <warning>
         <para>
-         Utilizarea variabilelor SERVER şi ENV este verificată în timpul
+         Utilizarea variabilelor SERVER și ENV este verificată în timpul
          compilării de aceea utilizarea lor prin de ex.
          <link linkend="language.variables.variable">variabile variabile</link>
-         nu va cauza iniţializarea lor.
+         nu va cauza inițializarea lor.
         </para>
        </warning>
        </listitem>
@@ -4420,16 +4420,16 @@ auto_prepend_file=security.php
          această directivă are valoarea implicită <emphasis>off</emphasis>.
         </para>
         <para>
-         Vă rugăm să citiţi capitolul ce ţine de securitate
+         Vă rugăm să citiți capitolul ce ține de securitate
          <link linkend="security.globals">Utilizarea register_globals</link>
-         pentru mai multe informaţii.
+         pentru mai multe informații.
         </para>
         <para>
-         Vă rugăm să atrageţi atenţia că
+         Vă rugăm să atrageți atenția că
          <systemitem role="directive">register_globals</systemitem>
-         nu poate fi stabilit în timpul execuţiei (
+         nu poate fi stabilit în timpul execuției (
          <function>ini_set</function>). Cu toate acestea
-         puteţi utiliza &htaccess; dacă serverul permite aceasta, după cum e
+         puteți utiliza &htaccess; dacă serverul permite aceasta, după cum e
          descris anterior. Un exemplu de înregistrare &htaccess;:
          <userinput>php_flag register_globals off</userinput>.
         </para>
@@ -4452,12 +4452,12 @@ auto_prepend_file=security.php
        <listitem>
         <simpara>
          Indică PHP dacă trebuie declarate variabilele argv &amp; argc
-         (care ar conţine informaţia GET).
+         (care ar conține informația GET).
         </simpara>
         <simpara>
-         Accesaţi de asemenea <link linkend="features.commandline">linia de
+         Accesați de asemenea <link linkend="features.commandline">linia de
          comandă</link>.
-         De asemenea această directivă a apărut în PHP 4.0.0 şi a fost
+         De asemenea această directivă a apărut în PHP 4.0.0 și a fost
          întotdeauna "on" înainte de aceasta.
         </simpara>
        </listitem>
@@ -4476,8 +4476,8 @@ auto_prepend_file=security.php
          <varname>$HTTP_*_VARS</varname>. Când este stabilită în On
          (implicit), variabilele PHP predefinite lungi, cumar fi
          <varname>$HTTP_GET_VARS</varname> vor fi definite. Dacă nu le
-         utilizaţi, este recomandabil să le dezactivaţi din motivul
-         performanţei. În loc, utilizaţi tablourile superglobale, cum ar fi
+         utilizați, este recomandabil să le dezactivați din motivul
+         performanței. În loc, utilizați tablourile superglobale, cum ar fi
          <varname>$_GET</varname>.
         </simpara>
         <simpara>
@@ -4494,15 +4494,15 @@ auto_prepend_file=security.php
        </term>
        <listitem>
         <simpara>
-         Stabileţte mărimea maximă permisă a datelor "post". Această mărime
-         de asemenea afectează încărcarea fişierelor. Pentru a încărca
-         fişiere voluminoase această valoare trebuie să fie mai mare decât
+         Stabilețte mărimea maximă permisă a datelor "post". Această mărime
+         de asemenea afectează încărcarea fișierelor. Pentru a încărca
+         fișiere voluminoase această valoare trebuie să fie mai mare decât
          <link linkend="ini.upload-max-filesize">upload_max_filesize</link>.
         </simpara>
         <simpara>
          Dacă limita de memorie e activată de către scriptul de configurare,
          <link linkend="ini.memory-limit">memory_limit</link> de asemenea
-         afectează încărcarea fişierelor. Vorbind la general,
+         afectează încărcarea fișierelor. Vorbind la general,
          <link linkend="ini.memory-limit">memory_limit</link> ar trebui să
          fie mai mare decât <parameter>post_max_size</parameter>.
         </simpara>
@@ -4512,22 +4512,22 @@ auto_prepend_file=security.php
         <simpara>
          Dacă mărimea datelor post este mai mare decât post_max_size,
          <link linkend="language.variables.superglobals">superglobalele</link>
-         <varname>$_POST</varname> şi <varname>$_FILES</varname> sunt vide.
+         <varname>$_POST</varname> și <varname>$_FILES</varname> sunt vide.
          Acest fapt poate fi depistat prin diferite metode, de ex.
-         transmiţând o valoare variabilei <varname>$_GET</varname> în
+         transmițând o valoare variabilei <varname>$_GET</varname> în
          scriptul care procesează datele, de ex.
          <literal>&lt;form action="edit.php?processed=1"&gt;</literal>,
-         şi apoi verificând dacă <varname>$_GET['processed']</varname> este
+         și apoi verificând dacă <varname>$_GET['processed']</varname> este
          stabilit.
         </simpara>
         <para>
          <note>
           <para>
-           PHP permite prescurtări pentru valori în biţi, inclusiv K (kilo),
-	   M (mega) şi G (giga). PHP va efectua convertirea automat dacă veţi
-	   utiliza una din acestea. Fiţi atent să nu depăşiţi limita de 32 biţi
-	   pentru numere întregi cu semn (dacă utilizaţi versiuni pe 32 de biţi)
-	   deoarece aceasta va cauza eşuarea script-ului dumneavoastră.
+           PHP permite prescurtări pentru valori în biți, inclusiv K (kilo),
+	   M (mega) și G (giga). PHP va efectua convertirea automat dacă veți
+	   utiliza una din acestea. Fiți atent să nu depășiți limita de 32 biți
+	   pentru numere întregi cu semn (dacă utilizați versiuni pe 32 de biți)
+	   deoarece aceasta va cauza eșuarea script-ului dumneavoastră.
           </para>
          </note>
         </para>
@@ -4542,17 +4542,17 @@ auto_prepend_file=security.php
        </term>
        <listitem>
         <para>
-         Stabileşte ordinea analizei şi transferului variabilelor
+         Stabilește ordinea analizei și transferului variabilelor
          GET/POST/COOKIE.
          Valoarea implicită a acestei directive este "GPC". Stabilirea
          acesteia în "GP", spre exemplu, va cauza PHP să ignoreze complet
-         cookie şi să rescrie orice variabilă primită prin metoda GET cu
-         variabilele primite prin metoda POST şi care au acelaşi nume.
+         cookie și să rescrie orice variabilă primită prin metoda GET cu
+         variabilele primite prin metoda POST și care au același nume.
         </para>
         <note>
          <para>
-          Această opţiune nu este disponibilă în PHP 4.
-          În loc, utilizaţi <link linkend="ini.variables-order">
+          Această opțiune nu este disponibilă în PHP 4.
+          În loc, utilizați <link linkend="ini.variables-order">
           variables_order</link>.
          </para>
         </note>
@@ -4566,9 +4566,9 @@ auto_prepend_file=security.php
        </term>
        <listitem>
         <para>
-         Specifică denumirea unui fişier care va fi automat analizat şi
-         executat înainte de fişierul principal. Acest fişier este inclus, ca
-         şi cum ar fi fost apelat cu funcţia <function>require</function>,
+         Specifică denumirea unui fișier care va fi automat analizat și
+         executat înainte de fișierul principal. Acest fișier este inclus, ca
+         și cum ar fi fost apelat cu funcția <function>require</function>,
          deci <link linkend="ini.include-path">include_path</link> este
          utilizat.
         </para>
@@ -4586,9 +4586,9 @@ auto_prepend_file=security.php
        </term>
        <listitem>
         <para>
-         Specifică denumirea unui fişier care va fi automat analizat şi
-         executat după fişierul principal. Acest fişier este inclus, ca şi
-         cum ar fi fost apelat cu funcţia <function>require</function>, deci
+         Specifică denumirea unui fișier care va fi automat analizat și
+         executat după fișierul principal. Acest fișier este inclus, ca și
+         cum ar fi fost apelat cu funcția <function>require</function>, deci
          <link linkend="ini.include-path">include_path</link> este utilizat.
         </para>
         <para>
@@ -4623,7 +4623,7 @@ auto_prepend_file=security.php
         <para>
          PHP întotdeauna transmite implicit codificarea caracterelor în antetul
          Content-type: . Pentru a dezactiva trimiterea setului de caractere, pur
-         şi simplu eliminaţi valoarea acestui parametru.
+         și simplu eliminați valoarea acestui parametru.
         </para>
        </listitem>
       </varlistentry>
@@ -4655,8 +4655,8 @@ auto_prepend_file=security.php
         <para>
          Permite prelucrarea cererilor http WebDAV din scripturile PHP (de
          ex. PROPFIND, PROPPATCH, MOVE, COPY, etc.). Această directivă nu
-         există începând cu PHP 4.3.2. Dacă doriţi să primiţi datele post a
-         acestor cereri, trebuie să stabiliţi de asemenea şi
+         există începând cu PHP 4.3.2. Dacă doriți să primiți datele post a
+         acestor cereri, trebuie să stabiliți de asemenea și
          <link linkend="ini.always-populate-raw-post-data">
          always_populate_raw_post_data</link>.
         </para>
@@ -4665,18 +4665,18 @@ auto_prepend_file=security.php
      </variablelist>
     </para>
     <para>
-     Accesaţi de asemenea:
+     Accesați de asemenea:
      <link linkend="ini.magic-quotes-gpc">magic_quotes_gpc</link>,
-     <link linkend="ini.magic-quotes-runtime">magic_quotes_runtime</link> şi
+     <link linkend="ini.magic-quotes-runtime">magic_quotes_runtime</link> și
      <link linkend="ini.magic-quotes-sybase">magic_quotes_sybase</link>.
     </para>
    </section>
 
   <section xml:id="ini.sect.path-directory">
-   <title>Căile şi directoarele</title>
+   <title>Căile și directoarele</title>
     <para>
      <table>
-      <title>Opţiunile de configurare a căilor şi directoarelor</title>
+      <title>Opțiunile de configurare a căilor și directoarelor</title>
       <tgroup cols="4">
        <thead>
         <row>
@@ -4799,14 +4799,14 @@ auto_prepend_file=security.php
        </term>
        <listitem>
         <para>
-         Specifică o listă de directoare, unde funcţiile
+         Specifică o listă de directoare, unde funcțiile
          <function>require</function>, <function>include</function>,
          <function>fopen</function>, <function>file</function>,
-         <function>readfile</function> şi
+         <function>readfile</function> și
          <function>file_get_contents</function>
-         vor căuta fişierele. Formatul este ca şi în cazul variabilei de
+         vor căuta fișierele. Formatul este ca și în cazul variabilei de
          mediu a sistemului <envar>PATH</envar>: o listă de directoare
-         separate prin două puncte în Unix, sau punct şi virgulă în Windows.
+         separate prin două puncte în Unix, sau punct și virgulă în Windows.
         </para>
         <para>
          PHP ia în considerație fiecare înregistrare separată din calea de
@@ -4855,61 +4855,61 @@ include_path=".;c:\php\includes"
       </term>
       <listitem>
        <para>
-        Limitează fişierele ce pot fi deschise de PHP în arborele directoarelor
-        specificat, inclusiv şi însuşi fişierul. Această directivă
+        Limitează fișierele ce pot fi deschise de PHP în arborele directoarelor
+        specificat, inclusiv și însuși fișierul. Această directivă
         <emphasis>NU</emphasis> este afectată de activarea sau dezactivarea 
         Modului securizat.
        </para>
        <para>
-        Când un script încearcă să deschidă un fişier, de exemplu cu
+        Când un script încearcă să deschidă un fișier, de exemplu cu
         <function>fopen</function> sau <function>gzopen</function>,
-        se verifică amplasarea fişierului. Dacă fişierul este în afara
+        se verifică amplasarea fișierului. Dacă fișierul este în afara
         arborelui de directoare specificat, PHP va refuza să-l deschidă. Toate
         legăturile simbolice sunt rezolvate, de aceea nu este posibil de a
-        evita această restricţie cu un symlink. Dacă fişierul nu există atunci
-        symlink-ul nu poate fi rezolvat şi denumireas fişierului este comparată
+        evita această restricție cu un symlink. Dacă fișierul nu există atunci
+        symlink-ul nu poate fi rezolvat și denumireas fișierului este comparată
         cu <option>open_basedir</option> (rezolvată).
        </para>
        <para>
         Valoarea specială <systemitem class="filesystem">.</systemitem> indică
         că directorul de lucru al script-ului va fi utilizat în calitate de
         director de bază. Aceasta însă este un pic periculos, deoarece
-        directorul de lucru al script-ului poate fi uşor schimbat cu
+        directorul de lucru al script-ului poate fi ușor schimbat cu
         <function>chdir</function>.
        </para>
        <para>
         În <filename>httpd.conf</filename>, <option>open_basedir</option> poate
         fi deconectată (de ex. pentru unele gazde virtuale)
-        <link linkend="configuration.changes.apache">în acelaşi mod</link> ca
-        şi orice altă directivă de configurare astfel:
+        <link linkend="configuration.changes.apache">în același mod</link> ca
+        și orice altă directivă de configurare astfel:
         "<literal>php_admin_value open_basedir none</literal>".
        </para>
        <para>
-        În Windows, denumirile directoarelor trebuie separate cu punct şi
+        În Windows, denumirile directoarelor trebuie separate cu punct și
         virgulă. În celelalte sisteme denumirile directoarelor trebuie separate
         cu două puncte. În calitate de modul Apache, căile pentru
         <option>open_basedir</option> din directoarele-părinte sunt acum
-        moştenite automat.
+        moștenite automat.
        </para>
        <para>
-         Restricţia specificată cu <option>open_basedir</option> este de fapt
-         un prefix, şi nu o denumire a directorului. Aceasta înseamnă că
+         Restricția specificată cu <option>open_basedir</option> este de fapt
+         un prefix, și nu o denumire a directorului. Aceasta înseamnă că
          "<literal>open_basedir = /dir/incl</literal>" de asemenea permite
-         accesul la "<literal>/dir/include</literal>" şi
+         accesul la "<literal>/dir/include</literal>" și
          "<literal>/dir/incls</literal>", dacă acestea există. Atunci când
-         doriţi să restricţionaţi accesul doar la un anumit director, adăugaţi
-         un slash la sfârşit. De exemplu:
+         doriți să restricționați accesul doar la un anumit director, adăugați
+         un slash la sfârșit. De exemplu:
          <literal>open_basedir = /dir/incl/</literal>
        </para>
        <para>
-        Modul implicit este de a permite deschiderea tuturor fişierelor.
+        Modul implicit este de a permite deschiderea tuturor fișierelor.
        </para>
        <note>
         <para>
          Începând cu PHP 5.3.0 open_basedir poate fi restrânsă în timpul
          rulării. Aceasta înseamnă că dacă open_basedir este stabilită la
          <literal>/www/</literal> în &php.ini;, un script poate restrânge
-         configuraţia la <literal>/www/tmp/</literal> în timpul rulării cu
+         configurația la <literal>/www/tmp/</literal> în timpul rulării cu
          <function>ini_set</function>
         </para>
        </note>
@@ -4924,12 +4924,12 @@ include_path=".;c:\php\includes"
        <listitem>
         <para>
          "Directorul root" al PHP de pe server. Este utilizat numai dacă nu
-         este vid. Dacă PHP este configurat cu &safemode;, nici un fişier din
+         este vid. Dacă PHP este configurat cu &safemode;, nici un fișier din
          afara acestui director nu este servit.
          Dacă PHP nu a fost compilat cu FORCE_REDIRECT,
-         <emphasis>trebuie</emphasis> să stabiliţi doc_root dacă rulaţi PHP
+         <emphasis>trebuie</emphasis> să stabiliți doc_root dacă rulați PHP
          în calitate de CGI cu orice web server (în afară de IIS).
-         Alternativa este de a utiliza configuraţia
+         Alternativa este de a utiliza configurația
          <link linkend="ini.cgi.force-redirect">cgi.force_redirect</link> de
          mai jos.
         </para>
@@ -4944,7 +4944,7 @@ include_path=".;c:\php\includes"
        <listitem>
         <para>
          Denumirea de bază a directorului utilizat într-un director de bază
-         al utilizatorului pentru fişierele PHP, spre exemplu
+         al utilizatorului pentru fișierele PHP, spre exemplu
          <filename class="directory">public_html</filename>.
         </para>
        </listitem>
@@ -4958,8 +4958,8 @@ include_path=".;c:\php\includes"
        <listitem>
         <para>
          În care director PHP ar trebui să caute extensiile încărcate
-         dinamic. Accesaţi de asemenea:
-         <link linkend="ini.enable-dl">enable_dl</link>, şi
+         dinamic. Accesați de asemenea:
+         <link linkend="ini.enable-dl">enable_dl</link>, și
          <function>dl</function>.
         </para>
        </listitem>
@@ -5038,11 +5038,11 @@ include_path=".;c:\php\includes"
        </term>
        <listitem>
         <para>
-         Controlează dacă CGI PHP verifică existenţa liniei ce începe cu #!
+         Controlează dacă CGI PHP verifică existența liniei ce începe cu #!
          (shebang) la începutul scriptului ce va fi rulat. Această linie
-         poate fi necesară dacă script-ul susţine rularea atât în calitate de
-         script independent, cât şi ca PHP CGI. PHP în mod CGI trece peste
-         această linie şi ignoră conţinutul ei dacă această directivă e
+         poate fi necesară dacă script-ul susține rularea atât în calitate de
+         script independent, cât și ca PHP CGI. PHP în mod CGI trece peste
+         această linie și ignoră conținutul ei dacă această directivă e
          activată.
         </para>
        </listitem>
@@ -5056,15 +5056,15 @@ include_path=".;c:\php\includes"
        </term>
        <listitem>
         <para>
-         Oferă susţinerea PATH_INFO/PATH_TRANSLATED <emphasis>reale</emphasis>
+         Oferă susținerea PATH_INFO/PATH_TRANSLATED <emphasis>reale</emphasis>
          pentru CGI. Comportamentul precedent al PHP era de a stabili
-         PATH_TRANSLATED în SCRIPT_FILENAME şi de a nu analiza care este
-         PATH_INFO. Pentru mai multe informaţii despre PATH_INFO, vedeţi
-         specificările CGI. Stabilirea valorii 1 va cauza PHP CGI să-şi
-         corecteze căile pentru a se conforma specificaţiilor. Stabilirea
+         PATH_TRANSLATED în SCRIPT_FILENAME și de a nu analiza care este
+         PATH_INFO. Pentru mai multe informații despre PATH_INFO, vedeți
+         specificările CGI. Stabilirea valorii 1 va cauza PHP CGI să-și
+         corecteze căile pentru a se conforma specificațiilor. Stabilirea
          valorii 0 cauzează PHP să se comporte ca mai înainte. Valoarea
-         implicită este zero. Dumneavoastră ar trebui să vă corectaţi
-         script-urile ca să utilizeze SCRIPT_FILENAME şi nu PATH_TRANSLATED.
+         implicită este zero. Dumneavoastră ar trebui să vă corectați
+         script-urile ca să utilizeze SCRIPT_FILENAME și nu PATH_TRANSLATED.
         </para>
        </listitem>
       </varlistentry>
@@ -5078,16 +5078,16 @@ include_path=".;c:\php\includes"
         <para>
          cgi.force_redirect este necesar pentru a oferi securitate la rularea
          PHP în calitate de CGI cu majoritatea serverelor web. Dacă nu este
-         definită, PHP implicit activează această directivă. Puteţi să o
-         dezectivaţi <emphasis>la propriul risc</emphasis>.
+         definită, PHP implicit activează această directivă. Puteți să o
+         dezectivați <emphasis>la propriul risc</emphasis>.
         </para>
         <note>
          <para>
-          Utilizatorii Windows: <emphasis>puteţi</emphasis> să dezactivaţi
+          Utilizatorii Windows: <emphasis>puteți</emphasis> să dezactivați
           fără primejdie această directivă pentru IIS, de fapt
-          <emphasis>trebuie</emphasis> să faceţi aceasta. Pentru ca OmniHTTPD
-          sau Xitami să funcţioneze <emphasis>trebuie</emphasis> să o
-          dezactivaţi.
+          <emphasis>trebuie</emphasis> să faceți aceasta. Pentru ca OmniHTTPD
+          sau Xitami să funcționeze <emphasis>trebuie</emphasis> să o
+          dezactivați.
          </para>
         </note>
        </listitem>
@@ -5100,16 +5100,16 @@ include_path=".;c:\php\includes"
        </term>
        <listitem>
         <para>
-         Dacă cgi.force_redirect este activată şi nu rulaţi web server-ele
+         Dacă cgi.force_redirect este activată și nu rulați web server-ele
          Apache sau Netscape (iPlanet), <emphasis>s-ar putea</emphasis> să
-         fie necesar să stabiliţi o variabilă de mediu, pe care PHP o va
-         căuta pentru a şti dacă e OK de a continua execuţia.
+         fie necesar să stabiliți o variabilă de mediu, pe care PHP o va
+         căuta pentru a ști dacă e OK de a continua execuția.
         </para>
         <note>
          <para>
           Stabilirea acestei variabile <emphasis>ar putea</emphasis> cauza
-          probleme se securitate, <emphasis>întâi clarificaţi ce doriţi să
-          realizaţi</emphasis>.
+          probleme se securitate, <emphasis>întâi clarificați ce doriți să
+          realizați</emphasis>.
          </para>
         </note>
        </listitem>
@@ -5122,11 +5122,11 @@ include_path=".;c:\php\includes"
        </term>
        <listitem>
         <para>
-         FastCGI sub IIS (pe sisteme bazate pe WINNT) susţin posibilitatea de
+         FastCGI sub IIS (pe sisteme bazate pe WINNT) susțin posibilitatea de
          a juca rolul tichetelor de securitate ale clientului apelant.
          Aceasta îi permite IIS să definească contextul de securitate sub
-         care rulează cererea. mod_fastcgi sub Apache nu susţine în prezent
-         (03/17/2002) această facilitate. Stabiliţi valoarea 1 la rularea sub
+         care rulează cererea. mod_fastcgi sub Apache nu susține în prezent
+         (03/17/2002) această facilitate. Stabiliți valoarea 1 la rularea sub
          IIS. Implicit este zero.
         </para>
        </listitem>
@@ -5141,10 +5141,10 @@ include_path=".;c:\php\includes"
         <para>
          Indică PHP ce tip de antete să utilizeze la trimiterea codului de
          răspuns HTTP. Dacă este stabilită în 0, PHP trimite un antet Status:
-         care este susţinut de Apache şi alte servere web. Când această
-         opţiune este stabilită în 1, PHP va trimite antete ce se conformează
+         care este susținut de Apache și alte servere web. Când această
+         opțiune este stabilită în 1, PHP va trimite antete ce se conformează
          cu <link xlink:href="&url.rfc;2616">RFC 2616</link>.
-         Schimbaţi valoarea din 0 numai dacă cunoaşteţi ce faceţi.
+         Schimbați valoarea din 0 numai dacă cunoașteți ce faceți.
         </para>
        </listitem>
       </varlistentry>
@@ -5153,10 +5153,10 @@ include_path=".;c:\php\includes"
    </section>
 
   <section xml:id="ini.sect.file-uploads">
-   <title>Încărcarea fişierelor</title>
+   <title>Încărcarea fișierelor</title>
     <para>
      <table>
-      <title>Opţiunile de configurare a încărcării fişierelor</title>
+      <title>Opțiunile de configurare a încărcării fișierelor</title>
       <tgroup cols="4">
        <thead>
         <row>
@@ -5208,9 +5208,9 @@ include_path=".;c:\php\includes"
        <listitem>
         <para>
          Dacă să permită, sau nu <link linkend="features.file-upload">
-         încărcări de fişiere</link> prin HTTP. Accesaţi de asemenea directivele
+         încărcări de fișiere</link> prin HTTP. Accesați de asemenea directivele
          <link linkend="ini.upload-max-filesize">upload_max_filesize</link>,
-         <link linkend="ini.upload-tmp-dir">upload_tmp_dir</link> şi
+         <link linkend="ini.upload-tmp-dir">upload_tmp_dir</link> și
          <link linkend="ini.post-max-size">post_max_size</link>.
         </para>
 
@@ -5226,7 +5226,7 @@ include_path=".;c:\php\includes"
        </term>
        <listitem>
         <para>
-         Directorul temporar utilizat pentru stocarea fişierelor la
+         Directorul temporar utilizat pentru stocarea fișierelor la
          încărcare. Trebuie să aibă drept de înscriere pentru utilizatorul cu
          care rulează PHP. Dacă nu este specificat, PHP va folosi directorul
          implicit al sistemului.
@@ -5241,7 +5241,7 @@ include_path=".;c:\php\includes"
        </term>
        <listitem>
         <para>
-         Mărimea maximă a unui fişier încărcat.
+         Mărimea maximă a unui fișier încărcat.
         </para>
 
         &ini.shorthandbytes;
@@ -5255,7 +5255,7 @@ include_path=".;c:\php\includes"
        </term>
        <listitem>
         <para>
-         Numărul maxim de fişiere permise de a fi încărcate simultan.
+         Numărul maxim de fișiere permise de a fi încărcate simultan.
         </para>
        </listitem>
       </variablelist>
@@ -5266,7 +5266,7 @@ include_path=".;c:\php\includes"
    <title>SQL general</title>
     <para>
      <table>
-      <title>Opţiunile de configurare ale SQL general</title>
+      <title>Opțiunile de configurare ale SQL general</title>
       <tgroup cols="4">
        <thead>
         <row>
@@ -5299,10 +5299,10 @@ include_path=".;c:\php\includes"
        </term>
        <listitem>
         <para>
-         Dacă este activată, funcţiile de conectare la baze de date care
+         Dacă este activată, funcțiile de conectare la baze de date care
          utilizează valori implicite, le vor utiliza pe acestea, în locul
-         argumentelor furnizate. Pentru a afla valorite implicite, citiţi
-         documentaţia funcţiei de conectare pentru baza de date respectivă.
+         argumentelor furnizate. Pentru a afla valorite implicite, citiți
+         documentația funcției de conectare pentru baza de date respectivă.
         </para>
        </listitem>
       </varlistentry>

@@ -6,7 +6,7 @@
 <!ENTITY docweb.common.title.default 'Instrumente de documentare PHP'>
 <!ENTITY docweb.common.all 'Toate'>
 <!ENTITY docweb.common.n-a 'indisponibil'>
-<!ENTITY docweb.common.and 'şi'>
+<!ENTITY docweb.common.and 'și'>
 <!ENTITY docweb.common.submit 'Trimite'>
 
 <!-- common.linkname -->
@@ -14,19 +14,19 @@
 <!ENTITY docweb.common.linkname.request-for-comments 'Cerere de comentarii'>
 <!ENTITY docweb.common.linkname.submit-rfc 'Trimite o cerere de comentarii'>
 <!ENTITY docweb.common.linkname.rev-check 'Verificarea revizuirii'>
-<!ENTITY docweb.common.linkname.doc-howto 'Cum să documentaţi'>
-<!ENTITY docweb.common.linkname.checkent 'Verificarea entităţilor URL'>
+<!ENTITY docweb.common.linkname.doc-howto 'Cum să documentați'>
+<!ENTITY docweb.common.linkname.checkent 'Verificarea entităților URL'>
 <!ENTITY docweb.common.linkname.orphan-notes 'Note orfane'>
-<!ENTITY docweb.common.linkname.translation-info 'Informaţie despre traducere'>
-<!ENTITY docweb.common.linkname.entities 'Entităţile proiectelor'>
+<!ENTITY docweb.common.linkname.translation-info 'Informație despre traducere'>
+<!ENTITY docweb.common.linkname.entities 'Entitățile proiectelor'>
 <!ENTITY docweb.common.linkname.notes-stats 'Statistica notelor'>
-<!ENTITY docweb.common.linkname.undoc-functions 'Funcţii nedocumentate'>
+<!ENTITY docweb.common.linkname.undoc-functions 'Funcții nedocumentate'>
 <!ENTITY docweb.common.linkname.missing-examples 'Exemple ce lipsesc'>
 <!ENTITY docweb.common.linkname.admin 'Zona de administrare'>
 <!ENTITY docweb.common.linkname.userlist 'Lista utilizatorilor'>
 
 <!-- hyperlinks (include markup) -->
-<!ENTITY docweb.common.link.php-license '<a href="http://php.net/license/">Licenţa PHP</a>'>
+<!ENTITY docweb.common.link.php-license '<a href="http://php.net/license/">Licența PHP</a>'>
 <!ENTITY docweb.common.link.doc-license '<a href="mailto:doc-license@lists.php.net">doc-license@lists.php.net</a>'>
 
 
@@ -43,23 +43,23 @@ class="logo-t">T</span><span class="logo-k">K</span>'>
 <!-- common.header -->
 <!ENTITY docweb.common.header.welcome 'Bun venit!'>
 <!ENTITY docweb.common.header.contact 'Contact'>
-<!ENTITY docweb.common.header.checkent 'Verificarea entităţilor URL'>
+<!ENTITY docweb.common.header.checkent 'Verificarea entităților URL'>
 <!ENTITY docweb.common.header.revcheck 'Revcheck'>
 <!ENTITY docweb.common.header.orphan-notes 'Note orfane'>
 <!ENTITY docweb.common.header.currently-focused 'În prezent focalizat asupra'>
 <!ENTITY docweb.common.header.insite-context-nav 'Navigarea contextuală în interiorul site-ului'>
 <!ENTITY docweb.common.header.offsite-context-nav 'Navigarea contextuală în exteriorul site-ului'>
-<!ENTITY docweb.common.header.credits 'Menţiunile website-ului'>
+<!ENTITY docweb.common.header.credits 'Mențiunile website-ului'>
 <!ENTITY docweb.common.header.copyright 'Copyright'>
 <!ENTITY docweb.common.header.error 'Eroare'>
 <!ENTITY docweb.common.header.project-doc-bugs 'Problemele proiectului (de documentare)'>
 <!ENTITY docweb.common.header.open-bugs 'probleme deschise'>
-<!ENTITY docweb.common.header.entities 'Entităţile proiectului'>
-<!ENTITY docweb.common.header.undoc-functions 'Funcţii nedocumentate'>
+<!ENTITY docweb.common.header.entities 'Entitățile proiectului'>
+<!ENTITY docweb.common.header.undoc-functions 'Funcții nedocumentate'>
 <!ENTITY docweb.common.header.missing-examples 'Exemple ce lipsesc'>
 <!ENTITY docweb.common.header.login 'Login'>
-<!ENTITY docweb.common.header.users 'Informaţia utilizatorului'>
-<!ENTITY docweb.common.header.users.edit 'Redactarea informaţiei utilizatorului'>
+<!ENTITY docweb.common.header.users 'Informația utilizatorului'>
+<!ENTITY docweb.common.header.users.edit 'Redactarea informației utilizatorului'>
 <!ENTITY docweb.common.header.stats-not-available '&docweb.common.error.stats-not-available;'>
 <!ENTITY docweb.common.header.stats-not-available-yet '&docweb.common.error.stats-not-available-yet;'>
 <!ENTITY docweb.common.header.notes-stats 'Statistica gestiunii notelor'>
@@ -67,7 +67,7 @@ class="logo-t">T</span><span class="logo-k">K</span>'>
 <!-- common.footer -->
 <!ENTITY docweb.common.footer.copyright 'Copyright'>
 <!ENTITY docweb.common.footer.copyright-text 'Echipele de documentare PHP - Toate drepturile rezervate'>
-<!ENTITY docweb.common.footer.credits 'Menţiuni'>
+<!ENTITY docweb.common.footer.credits 'Mențiuni'>
 <!ENTITY docweb.common.footer.contact 'Contact'>
 
 <!-- common.error -->
@@ -78,38 +78,38 @@ class="logo-t">T</span><span class="logo-k">K</span>'>
 <!ENTITY docweb.home.header.what-is 'Ce este acest site?'>
 <!ENTITY docweb.home.text.what-is "Sunt diferite echipe de documentare ce
 operează oarecum independent pe subproiectele PHP.net. Doar un număr mic de
-oameni sunt implicaţi în mai mult de un proiect de documentare în prezent, ceea
-ce limitează schimbul de cunoştinţe, care ar fi fost posibil şi dezirabil. Toate
-echipele de documentare utilizează o bifurcaţie anterioară a sistemului original
-de compilare a manualului PHP. Aceste sisteme au evoluat independent şi
-ocazional au preluat unele îmbunătăţiri unele de la altele (de exemplu echipa de
+oameni sunt implicați în mai mult de un proiect de documentare în prezent, ceea
+ce limitează schimbul de cunoștințe, care ar fi fost posibil și dezirabil. Toate
+echipele de documentare utilizează o bifurcație anterioară a sistemului original
+de compilare a manualului PHP. Aceste sisteme au evoluat independent și
+ocazional au preluat unele îmbunătățiri unele de la altele (de exemplu echipa de
 documentare PEAR utilizează o variantă a revcheck creată pentru phpdoc). Acest
-site este axat pe convergenţa eforturilor de documentare şi oferirea mai multor
-instrumente şi informaţii pentru autorii manualelor şi traducători.">
-<!ENTITY docweb.home.header.join-us 'Alăturaţi-vă!'>
-<!ENTITY docweb.home.text.join-us "Toţi programatorii extensiilor PHP au acces
+site este axat pe convergența eforturilor de documentare și oferirea mai multor
+instrumente și informații pentru autorii manualelor și traducători.">
+<!ENTITY docweb.home.header.join-us 'Alăturați-vă!'>
+<!ENTITY docweb.home.text.join-us "Toți programatorii extensiilor PHP au acces
 la modulele de documentare PHP, însă diferite proiecte au diferite politici de
-acceptare a contribuţiilor. Sunteţi binevenit să vă alăturaţi eforturilor
-noastre! Crearea documentaţiei pentru o extensie este al doilea lucru foarte
-util la implementarea extensiei, dacă sunteţi interesat de posibilităţile,
-facilităţile şi utilizarea chiar şi în condiţii extreme. Noi de asemenea avem
+acceptare a contribuțiilor. Sunteți binevenit să vă alăturați eforturilor
+noastre! Crearea documentației pentru o extensie este al doilea lucru foarte
+util la implementarea extensiei, dacă sunteți interesat de posibilitățile,
+facilitățile și utilizarea chiar și în condiții extreme. Noi de asemenea avem
 versiuni traduse ale diferitor manuale, iar majoritatea echipelor de traducători
-au mereu nevoie de o mână de ajutor. Dacă sunteţi interesat, contactaţi lista de
-distribuţie poştală corespunzătoare. Proiectele şi traducătorii au liste de
-distribuţii poştale diferite.">
-<!ENTITY docweb.home.header.news-latest 'Ultimele noutăţi!'>
+au mereu nevoie de o mână de ajutor. Dacă sunteți interesat, contactați lista de
+distribuție poștală corespunzătoare. Proiectele și traducătorii au liste de
+distribuții poștale diferite.">
+<!ENTITY docweb.home.header.news-latest 'Ultimele noutăți!'>
 <!ENTITY docweb.home.text.news-latest 'În prezent doar manualul PHP utilizează
-acest site, citiţi <a href="/php/">secţiunea PHP</a> pentru detalii.'>
+acest site, citiți <a href="/php/">secțiunea PHP</a> pentru detalii.'>
 
 <!-- contact -->
-<!ENTITY docweb.contact.license.header 'Întrebări despre licenţiere?'>
-<!ENTITY docweb.contact.license.text 'În caz că aveţi întrebări referitor la
-licenţiere, vă rugăm să contactaţi lista de distribuţie poştală arhivată în
+<!ENTITY docweb.contact.license.header 'Întrebări despre licențiere?'>
+<!ENTITY docweb.contact.license.text 'În caz că aveți întrebări referitor la
+licențiere, vă rugăm să contactați lista de distribuție poștală arhivată în
 mod deschis <a href="mailto:doc-license@lists.php.net">doc-license@lists.php.net</a>.
 Pentru orice alte întrebări referitor la web site-ul instrumentelor de
-documentare PHP, vă rugăm să ne scrieţi la lista noastră de distribuţie poştală
+documentare PHP, vă rugăm să ne scrieți la lista noastră de distribuție poștală
 arhivată în mod deschis (<a href="mailto:doc-web@lists.php.net">doc-web@lists.php.net</a>).
-Diferite echipe de documentare au propriile liste de distribuţie poştale.'>
+Diferite echipe de documentare au propriile liste de distribuție poștale.'>
 
 <!-- credits -->
 <!ENTITY docweb.credits.subhead 'Următoarele persoane au contribuit la crearea
@@ -117,55 +117,55 @@ acestui site. Suntem foarte recunoscători pentru ajutorul lor.'>
 <!ENTITY docweb.credits.section.admin 'Administrarea serverului'>
 <!ENTITY docweb.credits.section.devs 'Programarea web site-ului'>
 <!ENTITY docweb.credits.section.php-services 'Serviciile PHP.net (SVN, lista
-de distribuţie poştală, etc)'>
-<!ENTITY docweb.credits.section.icons 'De asemenea am utilizat nişte iconiţe
+de distribuție poștală, etc)'>
+<!ENTITY docweb.credits.section.icons 'De asemenea am utilizat niște iconițe
 frumoase create de'>
 <!ENTITY docweb.credits.php-systems 'Echipa de asministrare a sistemului PHP.net'>
 
 <!-- copyright -->
 <!ENTITY docweb.copyright.section.source 'Copyright al codului-sursă'>
-<!ENTITY docweb.copyright.section.doc 'Copyright al documentaţiei'>
+<!ENTITY docweb.copyright.section.doc 'Copyright al documentației'>
 <!ENTITY docweb.copyright.source 'Codul-sursă al instrumentelor de documentare
-PHP sunt disponibile sub licenţa &docweb.common.link.php-license;. Vedeţi notele
-din codul-sursă pentru informaţii suplimentare şi lista autorilor.'>
-<!ENTITY docweb.copyright.doc 'Documentaţia diferitelor proiecte pe care le
-reunim se află sub diferite licenţe, deci trebuie să verificaţi notele de
-copyright din manualele respective pentru informaţii suplimentare. În caz că
-aveţi întrebări suplimentare despre licenţiere, vă rugăm să întrebaţi la
+PHP sunt disponibile sub licența &docweb.common.link.php-license;. Vedeți notele
+din codul-sursă pentru informații suplimentare și lista autorilor.'>
+<!ENTITY docweb.copyright.doc 'Documentația diferitelor proiecte pe care le
+reunim se află sub diferite licențe, deci trebuie să verificați notele de
+copyright din manualele respective pentru informații suplimentare. În caz că
+aveți întrebări suplimentare despre licențiere, vă rugăm să întrebați la
 &docweb.common.link.doc-license;.'>
 
 <!-- login page -->
-<!ENTITY docweb.login.subhead 'Logaţi-vă pe web site-ul echipei de documentare PHP.'>
-<!ENTITY docweb.login.text '<strong>Notă:</strong> Dacă doriţi doar să
-vizualizaţi web site-ul, nu este nevoie să vă logaţi. Pentru orice operaţiuni ce
-necesită autentificarea, veţi fi redirecţionat spre acest formular în mod
+<!ENTITY docweb.login.subhead 'Logați-vă pe web site-ul echipei de documentare PHP.'>
+<!ENTITY docweb.login.text '<strong>Notă:</strong> Dacă doriți doar să
+vizualizați web site-ul, nu este nevoie să vă logați. Pentru orice operațiuni ce
+necesită autentificarea, veți fi redirecționat spre acest formular în mod
 automat.'>
 
 <!-- user page -->
 <!ENTITY docweb.users.username 'Numele utilizatorului'>
 <!ENTITY docweb.users.name 'Numele real'>
-<!ENTITY docweb.users.country 'Ţara'>
+<!ENTITY docweb.users.country 'Țara'>
 <!ENTITY docweb.users.website 'Website'>
 <!ENTITY docweb.users.wishlist 'Lista solicitărilor'>
 <!ENTITY docweb.users.photo 'Fotografia utilizatorului'>
 <!ENTITY docweb.users.succes 'Profilul dumneavoastră a fost reînnoit'>
-<!ENTITY docweb.users.delete-photo 'Doriţi să eliminaţi fotografia curentă?'>
-<!ENTITY docweb.users.error.size 'Vă rugăm să păstraţi mărimea fotografiei sub 300kb'>
-<!ENTITY docweb.users.error.format 'Vă rugăm să verificaţi ca fotografia să fie
-în format jpg şi cu dimensiunile maxime de 500x500'>
-<!ENTITY docweb.users.error.notyou 'Puteţi să redactaţi doar propriul profil'>
+<!ENTITY docweb.users.delete-photo 'Doriți să eliminați fotografia curentă?'>
+<!ENTITY docweb.users.error.size 'Vă rugăm să păstrați mărimea fotografiei sub 300kb'>
+<!ENTITY docweb.users.error.format 'Vă rugăm să verificați ca fotografia să fie
+în format jpg și cu dimensiunile maxime de 500x500'>
+<!ENTITY docweb.users.error.notyou 'Puteți să redactați doar propriul profil'>
   
 <!-- error codes -->
-<!ENTITY docweb.error.404 'Fişierul nu a fost găsit'>
+<!ENTITY docweb.error.404 'Fișierul nu a fost găsit'>
 <!ENTITY docweb.error.nomesg 'Nu este disponibil vre-un mesaj.'>
 
 <!-- url entities -->
 <!ENTITY docweb.checkent.result.success 'SUCCES'>
 <!ENTITY docweb.checkent.result.unknown-host 'Gazdă necunoscută'>
-<!ENTITY docweb.checkent.result.ftp-connect 'Connexiunea a eşuat (FTP)'>
+<!ENTITY docweb.checkent.result.ftp-connect 'Connexiunea a eșuat (FTP)'>
 <!ENTITY docweb.checkent.result.ftp-login 'Eroare de login (FTP)'>
-<!ENTITY docweb.checkent.result.ftp-no-file 'Fişierul nu a fost găsit (FTP)'>
-<!ENTITY docweb.checkent.result.http-connect 'Connexiunea a eşuat (HTTP)'>
+<!ENTITY docweb.checkent.result.ftp-no-file 'Fișierul nu a fost găsit (FTP)'>
+<!ENTITY docweb.checkent.result.http-connect 'Connexiunea a eșuat (HTTP)'>
 <!ENTITY docweb.checkent.result.http-moved 'Resursa a fost mutată (HTTP)'>
 <!ENTITY docweb.checkent.result.http-wrong-header 'Antet incorect (HTTP)'>
 <!ENTITY docweb.checkent.result.http-internal-error 'Eroare internă (HTTP)'>
@@ -188,19 +188,19 @@ automat.'>
 <!ENTITY docweb.phpt.edit.title 'Titlul:'>
 <!ENTITY docweb.phpt.edit.skipif 'Skipif:'>
 <!ENTITY docweb.phpt.edit.test 'Testul:'>
-<!ENTITY docweb.phpt.edit.expected 'Se aşteaptă:'>
+<!ENTITY docweb.phpt.edit.expected 'Se așteaptă:'>
 <!ENTITY docweb.phpt.edit.approve 'Aprobă'>
 <!ENTITY docweb.phpt.commit 'Transmite!'>
 <!ENTITY docweb.phpt.limitreached 'Notă: limita de 200 rezultate ale căutării a fost atinsă.'>
-<!ENTITY docweb.phpt.list 'Afişează testele'>
-<!ENTITY docweb.phpt.import 'Importează testele din documentaţie'>
+<!ENTITY docweb.phpt.list 'Afișează testele'>
+<!ENTITY docweb.phpt.import 'Importează testele din documentație'>
 <!ENTITY docweb.phpt.search 'Caută'>
 <!ENTITY docweb.phpt.delete 'Elimină'>
 <!ENTITY docweb.phpt.list.id '&lt;redactează&gt; id'>
-<!ENTITY docweb.phpt.list.location 'Locaţia &lt;svn&gt;'>
+<!ENTITY docweb.phpt.list.location 'Locația &lt;svn&gt;'>
 <!ENTITY docweb.phpt.list.title 'Titlul'>
 <!ENTITY docweb.phpt.list.status 'Statutul'>
 <!ENTITY docweb.phpt.delete 'Elimină'>
 <!ENTITY docweb.phpt.editidnotfound 'Id necunoscut al testului.'>
 <!ENTITY docweb.common.linkname.phpt-generator 'Generatorul phpt'>
-<!ENTITY docweb.common.header.phptgen 'Generatorul fişierelor phpt'>
+<!ENTITY docweb.common.header.phptgen 'Generatorul fișierelor phpt'>

@@ -5,19 +5,19 @@
 <!-- Membership: bundled, external -->
 
 <book xml:id="book.imap" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
- <title>IMAP, POP3 şi NNTP</title>
+ <title>IMAP, POP3 și NNTP</title>
  <titleabbrev>IMAP</titleabbrev>
 
  <!-- {{{ preface -->
  <preface xml:id="intro.imap">
   &reftitle.intro;
   <para>
-   Aceste funcţii vă permit să operaţi cu protocolul <acronym>IMAP</acronym>,
-   precum şi cu metodele de accesare a cutiilor poştale locale şi prin
+   Aceste funcții vă permit să operați cu protocolul <acronym>IMAP</acronym>,
+   precum și cu metodele de accesare a cutiilor poștale locale și prin
    <acronym>NNTP</acronym>, <acronym>POP3</acronym>.
   </para>
   <para>
-   Vă atenţionăm însă că unele funcţii IMAP nu vor funcţiona corect cu
+   Vă atenționăm însă că unele funcții IMAP nu vor funcționa corect cu
    protocolul POP.
   </para>
  </preface>

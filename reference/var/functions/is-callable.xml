@@ -6,7 +6,7 @@
  <refnamediv>
   <refname>is_callable</refname>
   <refpurpose>
-   Verifică dacă conţinutul unei variabile poate fi apelat în calitate de funcţie
+   Verifică dacă conținutul unei variabile poate fi apelat în calitate de funcție
   </refpurpose>
  </refnamediv>
 
@@ -19,9 +19,9 @@
    <methodparam choice="opt"><type>string</type><parameter role="reference">callable_name</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Verifică dacă conţinutul unei variabile poate fi apelat în calitate de
-   funcţie. Aceasta poate verifica dacă o variabilă simplă conţine denumirea unei
-   funcţii valide, sau dacă un tablou conţine un obiect şi denumirea unei funcţii
+   Verifică dacă conținutul unei variabile poate fi apelat în calitate de
+   funcție. Aceasta poate verifica dacă o variabilă simplă conține denumirea unei
+   funcții valide, sau dacă un tablou conține un obiect și denumirea unei funcții
    codificate în mod corespunzător.
   </para>
  </refsect1>
@@ -34,8 +34,8 @@
      <term><parameter>name</parameter></term>
      <listitem>
       <para>
-       Poate fi denumirea unei funcţii stocate într-o variabilă string, sau
-       un obiect şi denumirea unei metode din cadrul obiectului, în modul
+       Poate fi denumirea unei funcții stocate într-o variabilă string, sau
+       un obiect și denumirea unei metode din cadrul obiectului, în modul
        următor:
        <screen>array($UnObiect, 'DenumireaMetodei')</screen>
       </para>
@@ -45,12 +45,12 @@
      <term><parameter>syntax_only</parameter></term>
      <listitem>
       <para>
-       Dacă este stabilit în &true; atunci funcţia verifică numai dacă
-       <parameter>name</parameter> poate fi o funcţie sau o metodă. Ea doar va
+       Dacă este stabilit în &true; atunci funcția verifică numai dacă
+       <parameter>name</parameter> poate fi o funcție sau o metodă. Ea doar va
        respinge variabilele simple care nu sunt stringuri, sau tablourile care
-       nu au structuri valide pentru a fi utilizate în calitate de funcţie de
+       nu au structuri valide pentru a fi utilizate în calitate de funcție de
        apel invers. Cele valide trebuie să aibă doar 2 înregistrări, prima
-       dintre care este un obiect sau un string, şi a doua - un string.
+       dintre care este un obiect sau un string, și a doua - un string.
       </para>
      </listitem>
     </varlistentry>
@@ -58,8 +58,8 @@
      <term><parameter>callable_name</parameter></term>
      <listitem>
       <para>
-       Primeşte "denumirea apelabilă". În exemplul de mai jos aceasta este
-       "someClass::someMethod". Observaţi însă că în ciuda faptului că
+       Primește "denumirea apelabilă". În exemplul de mai jos aceasta este
+       "someClass::someMethod". Observați însă că în ciuda faptului că
        someClass::SomeMethod() este o metodă apelabilă static, acesta nu este
        cazul.
       </para>
@@ -86,10 +86,10 @@
 <![CDATA[
 <?php
 //  Cum de verificat o variabilă dacă ea poate fi apelată în calitate de
-//  funcţie
+//  funcție
 
 //
-//  O variabilă simplă ce conţine o funcţie
+//  O variabilă simplă ce conține o funcție
 //
 
 function someFunction()
@@ -103,7 +103,7 @@ var_dump(is_callable($functionVariable, false, $callable_name));  // bool(true)
 echo $callable_name, "\n";  // someFunction
 
 //
-//  Tablou conţinând o metodă
+//  Tablou conținând o metodă
 //
 
 class someClass {

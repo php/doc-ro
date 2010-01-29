@@ -51,7 +51,7 @@
    <example>
     <title>Un exemplu alternativ <function>mysql_create_db</function></title>
     <para>
-     Funcţia <function>mysql_create_db</function> este învechită. Este
+     Funcția <function>mysql_create_db</function> este învechită. Este
      preferabil de a utiliza <function>mysql_query</function> pentru a
      efectua o interpelare SQL <literal>CREATE DATABASE</literal>.
     </para>
@@ -60,7 +60,7 @@
 <?php
 $link = mysql_connect('localhost', 'mysql_user', 'mysql_password');
 if (!$link) {
-    die('Eşec la conectare: ' . mysql_error());
+    die('Eșec la conectare: ' . mysql_error());
 }
 
 $sql = 'CREATE DATABASE my_db';
@@ -92,7 +92,7 @@ Baza de date my_db a fost creată cu succes
   </note>
   <note>
    <para>
-    Această funcţie nu va fi disponibilă dacă extensia MySQL a fost asamblată
+    Această funcție nu va fi disponibilă dacă extensia MySQL a fost asamblată
     cu biblioteca-client MySQL 4.x.
    </para>
   </note>

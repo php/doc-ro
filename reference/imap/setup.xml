@@ -11,38 +11,38 @@
   &reftitle.required;
   <para>
    Această extensie necesită instalarea bibliotecii c-client.
-   Obţineţi ultima versiune de la
+   Obțineți ultima versiune de la
    <link xlink:href="&url.imap;">&url.imap;</link>
-   şi compilaţi-o.
+   și compilați-o.
   </para>
   <para>
-   Este important să nu copiaţi fişierele-sursă IMAP direct în directorul de
-   includeri de sistem, deoarece pot apărea conflicte. În loc, creaţi un nou
+   Este important să nu copiați fișierele-sursă IMAP direct în directorul de
+   includeri de sistem, deoarece pot apărea conflicte. În loc, creați un nou
    director în interiorul directorului de includeri de sistem, cum ar fi de
-   exemplu <filename>/usr/local/imap-2000b/</filename> (amplasarea şi
-   denumirea depind de setările dumneavoastră şi de versiunea IMAP), şi în
-   interiorul acestui nou director creaţi directoare suplimentare denumite
-   <filename>lib/</filename> şi <filename>include/</filename>. Din directorul
-   <filename>c-client</filename> din arborele cu sursele IMAP copiaţi toate
-   fişierele <filename>*.h</filename> în <filename>include/</filename> şi
-   toate fişierele <filename>*.c</filename> în <filename>lib/</filename>.
-   Suplimentar, când aţi compilat IMAP, a fost creat un fişier cu denumirea
-   <filename>c-client.a</filename>. De asemenea puneţi-l în directorul
-   <filename>lib/</filename>, dar redenumiţi-l în
+   exemplu <filename>/usr/local/imap-2000b/</filename> (amplasarea și
+   denumirea depind de setările dumneavoastră și de versiunea IMAP), și în
+   interiorul acestui nou director creați directoare suplimentare denumite
+   <filename>lib/</filename> și <filename>include/</filename>. Din directorul
+   <filename>c-client</filename> din arborele cu sursele IMAP copiați toate
+   fișierele <filename>*.h</filename> în <filename>include/</filename> și
+   toate fișierele <filename>*.c</filename> în <filename>lib/</filename>.
+   Suplimentar, când ați compilat IMAP, a fost creat un fișier cu denumirea
+   <filename>c-client.a</filename>. De asemenea puneți-l în directorul
+   <filename>lib/</filename>, dar redenumiți-l în
    <filename>libc-client.a</filename>.
   </para>
   <note>
    <para>
-    Pentru a asambla biblioteca c-client cu susţinerea SSL şi/sau Kerberos
-    citiţi documentaţia furnizată cu pachetul.
+    Pentru a asambla biblioteca c-client cu susținerea SSL și/sau Kerberos
+    citiți documentația furnizată cu pachetul.
    </para>
   </note>
   <note>
    <simpara>
     În Mandrake Linux, biblioteca IMAP (<filename>libc-client.a</filename>)
-    este compilată fără susţinerea Kerberos. O versiune separată cu SSL
+    este compilată fără susținerea Kerberos. O versiune separată cu SSL
     (<filename>client-PHP4.a</filename>) este instalată. Biblioteca trebuie
-    să fie recompilată pentru a adăuga susţinerea Kerberos.
+    să fie recompilată pentru a adăuga susținerea Kerberos.
    </simpara>
   </note>
  </section>

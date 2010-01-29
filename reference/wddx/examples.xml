@@ -6,7 +6,7 @@
  &reftitle.examples;
  <section xml:id="wddx.examples-serialize">
   <para>
-   Toate funcţiile care serializează variabile utilizează primul element din
+   Toate funcțiile care serializează variabile utilizează primul element din
    array pentru a determina dacă array-ul trebuie serializat într-un array,
    sau într-o structură. Dacă primul element are o cheie-string, atunci el este
    serializat într-o structură, în caz contrar, într-un array.
@@ -65,9 +65,9 @@ echo $packet;
 
   <note>
    <para>
-    Dacă doriţi să serializaţi caractere non-ASCII, trebuie mai întâi să
-    convertiţi datele dumneavoastră în UTF-8 (vezi
-    <function>utf8_encode</function> şi <function>iconv</function>).
+    Dacă doriți să serializați caractere non-ASCII, trebuie mai întâi să
+    convertiți datele dumneavoastră în UTF-8 (vezi
+    <function>utf8_encode</function> și <function>iconv</function>).
    </para>
   </note>
  </section>

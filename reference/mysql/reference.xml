@@ -11,12 +11,12 @@
    &reftitle.notes;
     <note>
      <para>
-      Majoritatea funcţiilor MySQL functions acceptă
-      <parameter>link_identifier</parameter> ca ultimul parametru opţional.
+      Majoritatea funcțiilor MySQL functions acceptă
+      <parameter>link_identifier</parameter> ca ultimul parametru opțional.
       Dacă el nu este specificat, ultima conexiune deschisă este utilizată.
       Dacă ea nu există, se încearcă stabilirea conexiunii cu parametrii
-      impliciţi definiţi în &php.ini;. Dacă conexiunea nu se efectuează cu
-      succes, funcţiile întorc &false;.
+      impliciți definiți în &php.ini;. Dacă conexiunea nu se efectuează cu
+      succes, funcțiile întorc &false;.
      </para>
     </note>
    </section>
