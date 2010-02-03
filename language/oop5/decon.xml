@@ -98,6 +98,11 @@ $obj = new ClassaCuDestructor();
     Pentru a apela destructorul-părinte trebuie să apelați explicit
     <function>parent::__destruct</function> în destructorul descendent.
    </para>
+   <para>
+    Destructorul este apelat chiar dacă scriptul este terminat cu apelul la funcția
+    <function>exit</function>. Apelând <function>exit</function> într-un destructor
+    va preveni apelarea tuturor rutinelor de terminare din scriptul respectiv.
+   </para>
    <note>
     <para>
      Destructorii apelați la momentul terminării execuției scriptului au
