@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 2ae947a71b1aa19af39bcfd9a435b249a4076de3 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 56be43f8b269d5787397ceca343f36bbd62809a4 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.strval" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -63,10 +63,10 @@
 <?php
 class StrValTest
 {
-	public function __toString()
-	{
-		return __CLASS__;
-	}
+    public function __toString()
+    {
+        return __CLASS__;
+    }
 }
 
 // Afișează 'StrValTest'
