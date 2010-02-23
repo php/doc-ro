@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 56be43f8b269d5787397ceca343f36bbd62809a4 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 0c1167190ba9d215b84e1db6fe84d31223f074f6 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.is-numeric" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -81,6 +81,17 @@ foreach($tests as $element)
 ?>
 ]]>
     </programlisting>
+    &example.outputs;
+    <screen>
+<![CDATA[
+'42' este numeric
+'1337' este numeric
+'1e4' este numeric
+'not numeric' NU este numeric
+'Array' NU este numeric
+'9.1' este numeric
+]]>
+    </screen>
    </example>
   </para>
  </refsect1>

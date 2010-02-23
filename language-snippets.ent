@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 7f98d8474ef7e195535bb1fbdc609f5766d2dcca Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 9c90596b899e2588cb79554c05a3041db0244c75 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -193,7 +193,8 @@ viitoare a PHP. Utilizați această funcție la propriul risc.</simpara>
 <simpara>Extensiile <link linkend="ref.imap">IMAP</link>,
 <link linkend="ref.recode">recode</link>, <link linkend="ref.yaz">YAZ</link>
 și <link linkend="ref.cyrus">Cyrus</link> nu pot fi utilizate împreună,
-deoarece ele utilizează aceleași simboluri interne.</simpara></warning>'>
+deoarece ele utilizează aceleași simboluri interne. Notă: Yaz 2.0 și ulterior nu
+manifestă această problemă</simpara></warning>'>
 
 <!ENTITY warn.install.cgi '<warning xmlns="http://docbook.org/ns/docbook">
 <para>Un server configurat în regim CGI este susceptibil câtorva atacuri
@@ -859,6 +860,11 @@ fi găsită în capitolul manualului, întitulat
 Instalarea extensiilor PECL</link>. Informații adiționale, cum ar fi
 lansări noi, descărcări, fișiere-sursă, informații despre persoana care
 întreține extensia și istoria schimbărilor poate fi localizată aici: '>
+
+<!ENTITY pecl.info.dead 'Această extensie este considerată ne-întreținută și
+moartă. Oricum însă codul-sursă al acestei extensii este încă disponibil în
+<acronym xmlns="http://docbook.org/ns/docbook">PECL</acronym>
+<acronym xmlns="http://docbook.org/ns/docbook">SVN</acronym> aici: '>
 
 <!ENTITY pecl.source.4 'În PHP 4 sursa acestei extensii
 <acronym xmlns="http://docbook.org/ns/docbook">PECL</acronym> poate fi găsită
