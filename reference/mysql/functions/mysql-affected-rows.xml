@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: simionea Status: ready -->
+<!-- EN-Revision: da61e9c617aa7858bf2854df86e957ceb129a84c Maintainer: simionea Status: ready -->
 <!-- CREDITS: zamolxe -->
 <refentry xml:id="function.mysql-affected-rows" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -131,6 +131,14 @@ mysql_query("COMMIT");
    <para>
     Pentru a căpăta numărul de rânduri întoarse de un SELECT, utilizați
     <function>mysql_num_rows</function>.
+   </para>
+  </note>
+  <note>
+   <title>Cheile externe în cascadă</title>
+   <para>
+     <function>mysql_affected_rows</function> nu numără înregistrările afectate
+     implicit prin utilizarea ON DELETE CASCADE și/sau ON UPDATE CASCADE în
+     constrângerile cu chei externe.
    </para>
   </note>
  </refsect1>

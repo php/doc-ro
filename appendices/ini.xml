@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 86ede1372814ebc6e5b2ce6e8f66f306d873e9ff Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 568d68b95ac7a99963076491f4d8f76d6c2733c0 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&php.ini; directives</title>
@@ -3058,7 +3058,7 @@
       <row>
        <entry><link linkend="ini.max-file-uploads">max_file_uploads</link></entry>
        <entry>20</entry>
-       <entry>PHP_INI_ALL</entry>
+       <entry>PHP_INI_SYSTEM</entry>
        <entry>Disponibil începând cu PHP 5.2.12.</entry>
       </row>
       <row>
@@ -4757,25 +4757,31 @@ auto_prepend_file=security.php
          <entry>cgi.fix_pathinfo</entry>
          <entry>"1"</entry>
          <entry>PHP_INI_SYSTEM</entry>
-         <entry>Disponibil începând cu PHP 4.3.0. PHP_INI_ALL prior to PHP 5.2.1.</entry>
+         <entry>Disponibil începând cu PHP 4.3.0. PHP_INI_ALL anterior versiunii PHP 5.2.1.</entry>
         </row>
         <row>
          <entry>cgi.force_redirect</entry>
          <entry>"1"</entry>
          <entry>PHP_INI_SYSTEM</entry>
-         <entry>Disponibil începând cu PHP 4.2.0. PHP_INI_ALL prior to PHP 5.2.1.</entry>
+         <entry>Disponibil începând cu PHP 4.2.0. PHP_INI_ALL anterior versiunii PHP 5.2.1.</entry>
         </row>
         <row>
          <entry>cgi.redirect_status_env</entry>
          <entry>NULL</entry>
          <entry>PHP_INI_SYSTEM</entry>
-         <entry>Disponibil începând cu PHP 4.2.0. PHP_INI_ALL prior to PHP 5.2.1.</entry>
+         <entry>Disponibil începând cu PHP 4.2.0. PHP_INI_ALL anterior versiunii PHP 5.2.1.</entry>
         </row>
         <row>
          <entry>fastcgi.impersonate</entry>
          <entry>"0"</entry>
          <entry>PHP_INI_SYSTEM</entry>
-         <entry>Disponibil începând cu PHP 4.3.0. PHP_INI_ALL prior to PHP 5.2.1.</entry>
+         <entry>Disponibil începând cu PHP 4.3.0. PHP_INI_ALL anterior versiunii PHP 5.2.1.</entry>
+        </row>
+        <row>
+         <entry>fastcgi.logging</entry>
+         <entry>"1"</entry>
+         <entry>PHP_INI_SYSTEM</entry>
+         <entry>Disponibil începând cu PHP 4.3.0. PHP_INI_ALL anterior versiunii PHP 5.2.1.</entry>
         </row>
         <row>
          <entry>cgi.rfc2616_headers</entry>
@@ -5038,12 +5044,13 @@ include_path=".;c:\php\includes"
        </term>
        <listitem>
         <para>
-         Controlează dacă CGI PHP verifică existența liniei ce începe cu #!
-         (shebang) la începutul scriptului ce va fi rulat. Această linie
-         poate fi necesară dacă script-ul susține rularea atât în calitate de
-         script independent, cât și ca PHP CGI. PHP în mod CGI trece peste
-         această linie și ignoră conținutul ei dacă această directivă e
-         activată.
+         Controlează dacă PHP în varianta <literal>CGI</literal> verifică
+         existența liniei ce începe cu <literal>#!</literal> (shebang) la
+         începutul scriptului ce va fi rulat. Această linie poate fi necesară
+         dacă script-ul susține rularea atât în calitate de script independent,
+         cât și ca PHP <acronym>CGI</acronym>. PHP în mod <acronym>CGI</acronym>
+         trece peste această linie și ignoră conținutul ei dacă această
+         directivă e activată.
         </para>
        </listitem>
       </varlistentry>
@@ -5056,15 +5063,18 @@ include_path=".;c:\php\includes"
        </term>
        <listitem>
         <para>
-         Oferă susținerea PATH_INFO/PATH_TRANSLATED <emphasis>reale</emphasis>
-         pentru CGI. Comportamentul precedent al PHP era de a stabili
-         PATH_TRANSLATED în SCRIPT_FILENAME și de a nu analiza care este
-         PATH_INFO. Pentru mai multe informații despre PATH_INFO, vedeți
-         specificările CGI. Stabilirea valorii 1 va cauza PHP CGI să-și
-         corecteze căile pentru a se conforma specificațiilor. Stabilirea
-         valorii 0 cauzează PHP să se comporte ca mai înainte. Valoarea
+         Oferă susținerea <literal>PATH_INFO</literal>/<literal>PATH_TRANSLATED</literal>
+         <emphasis>reale</emphasis> pentru <acronym>CGI</acronym>. Comportamentul
+         precedent al PHP era de a stabili <literal>PATH_TRANSLATED</literal> în
+         <literal>SCRIPT_FILENAME</literal> și de a nu analiza care este
+         <literal>PATH_INFO</literal>. Pentru mai multe informații despre
+         <literal>PATH_INFO</literal>, vedeți specificările <acronym>CGI</acronym>.
+         Stabilirea valorii <literal>1</literal> va cauza PHP <acronym>CGI</acronym>
+         să-și corecteze căile pentru a se conforma specificațiilor. Stabilirea
+         valorii zero cauzează PHP să se comporte ca mai înainte. Valoarea
          implicită este zero. Dumneavoastră ar trebui să vă corectați
-         script-urile ca să utilizeze SCRIPT_FILENAME și nu PATH_TRANSLATED.
+         script-urile ca să utilizeze <literal>SCRIPT_FILENAME</literal> și nu
+         <literal>PATH_TRANSLATED</literal>.
         </para>
        </listitem>
       </varlistentry>
@@ -5077,9 +5087,9 @@ include_path=".;c:\php\includes"
        <listitem>
         <para>
          cgi.force_redirect este necesar pentru a oferi securitate la rularea
-         PHP în calitate de CGI cu majoritatea serverelor web. Dacă nu este
-         definită, PHP implicit activează această directivă. Puteți să o
-         dezectivați <emphasis>la propriul risc</emphasis>.
+         PHP în calitate de <acronym>CGI</acronym> cu majoritatea serverelor
+         web. Dacă nu este definită, PHP implicit activează această directivă.
+         Puteți să o dezectivați <emphasis>la propriul risc</emphasis>.
         </para>
         <note>
          <para>
@@ -5128,6 +5138,19 @@ include_path=".;c:\php\includes"
          care rulează cererea. mod_fastcgi sub Apache nu susține în prezent
          (03/17/2002) această facilitate. Stabiliți valoarea 1 la rularea sub
          IIS. Implicit este zero.
+        </para>
+       </listitem>
+      </varlistentry>
+
+      <varlistentry xml:id="ini.fastcgi.logging">
+       <term>
+        <parameter>fastcgi.logging</parameter>
+        <type>boolean</type>
+       </term>
+       <listitem>
+        <para>
+         Activează logarea SAPI la utilizarea FastCGI. Impicit logarea este
+         activată.
         </para>
        </listitem>
       </varlistentry>
@@ -5188,7 +5211,7 @@ include_path=".;c:\php\includes"
         <row>
          <entry>max_file_uploads</entry>
          <entry>20</entry>
-         <entry>PHP_INI_ALL</entry>
+         <entry>PHP_INI_SYSTEM</entry>
          <entry>Disponibilă începând cu PHP 5.2.12.</entry>
         </row>
        </tbody>
