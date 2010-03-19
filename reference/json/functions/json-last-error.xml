@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision: 283820 $ -->
-<!-- EN-Revision: c43ed67994fc5110646a9836194d0dd7f45114bc Maintainer: radical Status: ready -->
+<!-- EN-Revision: c65729614f8c01245e58a1141633f94843ebdef9 Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
 <refentry xml:id="function.json-last-error" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -37,24 +37,34 @@
      <row>
       <entry>Constantă</entry>
       <entry>Semnificație</entry>
+      <entry>Disponibilitate</entry>
      </row>
     </thead>
     <tbody>
      <row>
       <entry><constant>JSON_ERROR_NONE</constant></entry>
       <entry>Nu a survenit vre-o eroare</entry>
+      <entry></entry>
      </row>
      <row>
       <entry><constant>JSON_ERROR_DEPTH</constant></entry>
       <entry>A fost depășită limita maximă de imbricare</entry>
+      <entry></entry>
      </row>
      <row>
       <entry><constant>JSON_ERROR_CTRL_CHAR</constant></entry>
       <entry>Eroare a caracterului de control, posibil este codificat incorect</entry>
+      <entry></entry>
      </row>
      <row>
       <entry><constant>JSON_ERROR_SYNTAX</constant></entry>
       <entry>Eroare de sintaxă</entry>
+      <entry></entry>
+     </row>
+     <row>
+      <entry><constant>JSON_ERROR_UTF8</constant></entry>
+      <entry>Caractere UTF-8 deformate, posibil codificate incorect</entry>
+      <entry>PHP 5.3.1</entry>
      </row>
     </tbody>
    </tgroup>
