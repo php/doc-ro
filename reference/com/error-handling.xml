@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 283802 $ -->
+<!-- EN-Revision: a657af6cc4924b8ead92070821ca27d7504593e4 Maintainer: simionea Status: ready -->
+
+<chapter xml:id="com.error-handling" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <title>Erorile și prelucrarea lor</title>
+
+ <!-- FIXME: this markup -->
+ <para>
+  <emphasis>Excepții (PHP 5)</emphasis>
+ </para>
+ <para>
+  Această extensie va emite instanțe ale clasei <literal>com_exception</literal>
+  de fiecare dată când COM raportează o eroare potențial fatală. Toate
+  excepțiile COM posedă o proprietate <literal>code</literal> bine definită care
+  corespunde cu valoarea HRESULT întoarsă de diferite operații COM. Puteți
+  utiliza acest cod pentru a lua decizii în program în privința prelucrării
+  excepției.
+ </para>
+
+</chapter>
