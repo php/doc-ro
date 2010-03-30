@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 9c90596b899e2588cb79554c05a3041db0244c75 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 9726e9e4fcbeeee025f67206cc2e58fea98d853e Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -11,7 +11,9 @@ automat.</entry></row>'>
 <!ENTITY note.regex.deprecated '<note xmlns="http://docbook.org/ns/docbook">
 <para>Începând cu PHP 5.3.0 extensia regex este defavorizată în favoarea
 <link linkend="book.pcre">extensiei PCRE</link>. Apelarea acestei funcții va
-emite o notificare <constant>E_DEPRECATED</constant>.</para></note>'>
+emite o notificare <constant>E_DEPRECATED</constant>. Accesați
+<link linkend="reference.pcre.pattern.posix">lista diferențelor</link> pentru
+ajutor la convertirea în sintaxa PCRE.</para></note>'>
 
 <!ENTITY note.bin-safe '<note xmlns="http://docbook.org/ns/docbook"><simpara>
 Această funcție acceptă și date binare.</simpara></note>'>
@@ -84,9 +86,9 @@ aleatoare prin intermediul <function>srand</function> sau
 <title>register_globals: notă importantă</title><para>Începând cu PHP 4.2.0,
 valoarea implicită pentru directiva PHP
 <link linkend="ini.register-globals">register_globals</link> este <emphasis>
-off</emphasis>, și este eliminată complet începând cu PHP 6.0.0. Comunitatea
-PHP îi încurajează pe toți programatorii să nu se bazeze pe această directivă,
-dar să utilizeze alte mijloace, cum ar fi &link.superglobals;.</para></note>'>
+off</emphasis>. Comunitatea PHP îi încurajează pe toți programatorii să nu se
+bazeze pe această directivă, dar să utilizeze alte mijloace, cum ar fi
+&link.superglobals;.</para></note>'>
 
 <!ENTITY note.is-superglobal "<note xmlns="http://docbook.org/ns/docbook">
 <para>Aceasta este o variabilă 'superglobală', sau globală automată. Aceasta
@@ -163,15 +165,13 @@ extensie la propriul risc.</simpara></warning>'>
 5.3.0. Utilizarea acestei facilități este foarte nerecomandată.</simpara></warning>'>
 
 <!ENTITY warn.deprecated.feature-5-3-0.removed-6-0-0 '<warning xmlns="http://docbook.org/ns/docbook">
-<simpara>Această facilitate este <emphasis>DEZAPROBATĂ</emphasis> și este
-<emphasis>ELIMINATĂ</emphasis> începând cu PHP 6.0.0. Utilizarea acestei
-facilități este foarte nerecomandată.</simpara></warning>'>
+<simpara>Această facilitate este <emphasis>DEZAPROBATĂ</emphasis> începând cu
+PHP 5.3.0. Utilizarea acestei facilități este foarte nerecomandată.</simpara></warning>'>
 
 <!ENTITY warn.deprecated.function-5-3-0.removed-6-0-0 '<warning
 xmlns="http://docbook.org/ns/docbook"><simpara>Această funcție a fost
-<emphasis>DEZAPROBATĂ</emphasis> începând cu PHP 5.3.0 și <emphasis>ELIMINATĂ</emphasis>
-începând cu PHP 6.0.0. Utilizarea acestei facilități este foarte nerecomandată.
-</simpara></warning>'>
+<emphasis>DEZAPROBATĂ</emphasis> începând cu PHP 5.3.0. Utilizarea acestei
+facilități este foarte nerecomandată.</simpara></warning>'>
 
 <!ENTITY warn.deprecated.function.removed-5-3-0 '<warning xmlns="http://docbook.org/ns/docbook">
 <simpara>Această funcție este <emphasis>DEZAPROBATĂ</emphasis> și este

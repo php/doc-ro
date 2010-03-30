@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: d863f669d40af33634597ca676a1e37834e4da56 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&php.ini; directives</title>
@@ -4367,8 +4367,8 @@ auto_prepend_file=security.php
          utilizată pentru a umple conținutul <varname>$_REQUEST</varname>.
         </para>
         <para>
-         Observați că fișierul <file>php.ini</file> din distributivul original
-         nu conține <literal>'C'</literal> pentru cookies din motive de
+         Observați că fișierul <filename>php.ini</filename> din distributivul
+         original nu conține <literal>'C'</literal> pentru cookies din motive de
          securitate.
         </para>
        </listitem>
