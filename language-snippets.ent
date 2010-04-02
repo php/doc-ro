@@ -90,7 +90,7 @@ off</emphasis>. Comunitatea PHP îi încurajează pe toți programatorii să nu 
 bazeze pe această directivă, dar să utilizeze alte mijloace, cum ar fi
 &link.superglobals;.</para></note>'>
 
-<!ENTITY note.is-superglobal "<note xmlns="http://docbook.org/ns/docbook">
+<!ENTITY note.is-superglobal "<note xmlns='http://docbook.org/ns/docbook'>
 <para>Aceasta este o variabilă 'superglobală', sau globală automată. Aceasta
 pur și simplu înseamnă că ea este disponibilă în toate circumstanțele pe
 parcursul script-ului. Nu este nevoie de a scrie
@@ -498,10 +498,10 @@ dacă e necesar.'>
 <!ENTITY date.timezone.intro.title '<title xmlns="http://docbook.org/ns/docbook">
 Lista zonelor orare susținute</title>'>
 
-<!ENTITY date.timezone.intro "<para xmlns="http://docbook.org/ns/docbook">
+<!ENTITY date.timezone.intro "<para xmlns='http://docbook.org/ns/docbook'>
 Aici puteți găsi lista deplină a zonelor orare susținute de PHP, care pot fi
 utilizate cu de ex. <function>date_default_timezone_set</function>.</para>
-<note xmlns="http://docbook.org/ns/docbook"><simpara>Ultima versiune a bazei de
+<note xmlns='http://docbook.org/ns/docbook'><simpara>Ultima versiune a bazei de
 date cu zonele orare poate fi instalată prin
 <link xlink:href='&url.pecl.package.get;timezonedb'
 xmlns:xlink='http://www.w3.org/1999/xlink'>timezonedb</link> al PECL.</simpara>
@@ -1329,35 +1329,35 @@ XMLWriter care este modificată. Această resursă se obține în urma apelării
 </function>.</para></listitem></varlistentry>'>
 
 <!-- SOAP notes -->
-<!ENTITY soap.wsdl.mode.only "<note xmlns="http://docbook.org/ns/docbook">
+<!ENTITY soap.wsdl.mode.only "<note xmlns='http://docbook.org/ns/docbook'>
 <para>Această funcție funcționează doar în modul WSDL.</para></note>">
 
 <!-- Stomp notes -->
 <!ENTITY stomp.param.link "<varlistentry
-xmlns="http://docbook.org/ns/docbook"><term><parameter>link</parameter>
+xmlns='http://docbook.org/ns/docbook'><term><parameter>link</parameter>
 </term><listitem><para>Doar stilul procedural: Identificatorul legăturii
 stomp întors de <function>stomp_connect</function>.</para></listitem>
 </varlistentry>">
 <!ENTITY stomp.param.headers "<varlistentry
-xmlns="http://docbook.org/ns/docbook"><term><parameter>headers
+xmlns='http://docbook.org/ns/docbook'><term><parameter>headers
 </parameter></term><listitem><para>Un tablou asociativ conținând antetele
 suplimentare (de exemplu: receipt).</para></listitem></varlistentry>">
-<!ENTITY stomp.note.transaction "<note xmlns="http://docbook.org/ns/docbook">
+<!ENTITY stomp.note.transaction "<note xmlns='http://docbook.org/ns/docbook'>
 <para>Poate fi specificat un antet al tranzacției, indicând faptul că
 confirmarea mesajului trebuie să fie parte componentă a tranzacției cu nume.
 </para></note>">
-<!ENTITY stomp.note.sync "<tip xmlns="http://docbook.org/ns/docbook"><simpara>
+<!ENTITY stomp.note.sync '<tip xmlns="http://docbook.org/ns/docbook"><simpara>
 Stomp este în mod inerent asincron. O comunicare sincronă poate fi implementată
 adăugând un antet cu confirmare. Aceasta va face ca metodele să nu întoarcă
 nimic până când serverul confirmă primirea mesajului sau până când se atinge
-limita maximă de timp pentru citire.</simpara></tip>">
+limita maximă de timp pentru citire.</simpara></tip>'>
 
 <!-- SVN notes -->
-<!ENTITY svn.relativepath "<note xmlns="http://docbook.org/ns/docbook">
+<!ENTITY svn.relativepath '<note xmlns="http://docbook.org/ns/docbook">
 <simpara>Căile relative vor fi rezolvate ca și cum directorul curent este cel
 ce conține binarul PHP. Pentru a utiliza directorul de lucru al scriptului
 apelant, utilizați <function>realpath</function> sau dirname(__FILE__).
-</simpara></note>">
+</simpara></note>'>
 <!ENTITY svn.referto.status 'Accesați <link
 xmlns="http://docbook.org/ns/docbook" linkend="svn.constants.status">
 constantele de stare</link>pentru a afla valorile posibile.'>

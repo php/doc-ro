@@ -5286,6 +5286,7 @@ include_path=".;c:\php\includes"
          Numărul maxim de fișiere permise de a fi încărcate simultan.
         </para>
        </listitem>
+       </varlistentry>
       </variablelist>
     </para>
    </section>
