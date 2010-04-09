@@ -277,7 +277,7 @@ callback</link>'>
 <!ENTITY avail.register-long-arrays 'Începând cu PHP 5.0.0
 <link xmlns="http://docbook.org/ns/docbook" linkend="language.variables.predefined">
 variabilele predefinite</link> cu tablourile lungi pot fi dezactivate cu
-ajutorul directivei <link linkend="ini.register-long-arrays">register_long_arrays</link>.'>
+ajutorul directivei <link xmlns="http://docbook.org/ns/docbook" linkend="ini.register-long-arrays">register_long_arrays</link>.'>
 
 <!ENTITY ini.shorthandbytes '<simpara xmlns="http://docbook.org/ns/docbook">
 În cazul utilizării unui <type>integer</type>, valoarea este măsurată în
@@ -1125,12 +1125,12 @@ xmlns="http://docbook.org/ns/docbook"><term><parameter>pdf_document</parameter>
 cpdf_open</function>.</para></listitem></varlistentry>'>
 
 <!-- Xattr entities -->
-<!ENTITY xattr.namespace '<para>Atributele extinse au două spații de nume
+<!ENTITY xattr.namespace '<para xmlns="http://docbook.org/ns/docbook">Atributele extinse au două spații de nume
 diferite: spațiul de nume al utilizatorilor și spațiul de nume root. Spațiul
 de nume al utilizatorilor e disponibil tuturor, în timp ce spațiul de nume
 root este disponibil numai utilizatorilor cu privilegii de root. xattr
 operează implicit în spațiul utilizatorilor, dar aceasta poate fi schimbat
-cu parametrul <parameter>flags</parameter>.</para>'>
+cu parametrul <parameter xmlns="http://docbook.org/ns/docbook">flags</parameter>.</para>'>
 
 <!-- Notes for IPv6 -->
 <!ENTITY ipv6.brackets '<note xmlns="http://docbook.org/ns/docbook"><simpara>
