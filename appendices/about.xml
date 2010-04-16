@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 0a853b104ece715ea6224d73571648cad661a5f8 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 3e57d6ccfdd9e474227c60e0773a3c7d1ecb9536 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="about" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Despre manual</title>
@@ -270,11 +270,12 @@ int strlen ( string $string )
  <sect1 xml:id="about.phpversions">
   <title>Versiunile PHP documentate în acest manual</title>
   <para>
+   <!-- FIXME PHP_6 What is the latest? -->
    Acest manual conține informații despre versiunile trecute, curente și
    viitoare ale PHP. Schimbările în comportament sunt documentate ca adnotări,
    jurnale ale schimbărilor, texte incluse în paginile manualului.
    Cea mai anterioară versiune documentată este PHP 4.1.0, în timp ce ultima
-   este PHP 6.x.x
+   este PHP 5.x.x
   </para>
   <para>
    Există documentația parțială a versiunii PHP din SVN, ceea ce întotdeauna

@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 9726e9e4fcbeeee025f67206cc2e58fea98d853e Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 3e57d6ccfdd9e474227c60e0773a3c7d1ecb9536 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -172,6 +172,10 @@ PHP 5.3.0. Utilizarea acestei facilități este foarte nerecomandată.</simpara>
 xmlns="http://docbook.org/ns/docbook"><simpara>Această funcție a fost
 <emphasis>DEZAPROBATĂ</emphasis> începând cu PHP 5.3.0. Utilizarea acestei
 facilități este foarte nerecomandată.</simpara></warning>'>
+
+<!ENTITY removed.php.future 'Această facilitate dezaprobată
+<emphasis xmlns="http://docbook.org/ns/docbook">cu siguranță</emphasis> va fi
+<emphasis xmlns="http://docbook.org/ns/docbook">eliminată</emphasis> în viitor.'>
 
 <!ENTITY warn.deprecated.function.removed-5-3-0 '<warning xmlns="http://docbook.org/ns/docbook">
 <simpara>Această funcție este <emphasis>DEZAPROBATĂ</emphasis> și este

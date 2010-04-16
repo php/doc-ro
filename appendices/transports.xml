@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision: 283790 $ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 3e57d6ccfdd9e474227c60e0773a3c7d1ecb9536 Maintainer: simionea Status: ready -->
 <appendix xml:id="transports" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Lista transporturilor prin socket-e susținute</title>
  <para>
@@ -17,10 +17,11 @@
   PHP utilizați <function>stream_get_transports</function>.
  </para>
 
+ <!-- FIXME PHP_6 Mentioned PHP 6, but let's explore not hard coding PHP versions like this -->
  <section xml:id="transports.inet">
   <title>Domeniul Internet: TCP, UDP, SSL și TLS</title>
   <simpara>
-   PHP 4, PHP 5, PHP 6.
+   PHP 4, PHP 5.
    <literal>ssl://</literal> &amp; <literal>tls://</literal> începând cu PHP 4.3.0
    <literal>sslv2://</literal> &amp; <literal>sslv3://</literal> începând cu PHP 5.0.2
   </simpara>
