@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: zamolxe Status: ready -->
+<!-- EN-Revision: ab6785b01ce1006e3a9761988575289f40c9b678 Maintainer: zamolxe Status: ready -->
 <!-- CREDITS: simionea -->
 <!-- splitted from ./index.xml, last change in rev 1.66 -->
   <chapter xml:id="security.database" xmlns="http://docbook.org/ns/docbook">
@@ -22,9 +22,10 @@
     manipuleze o interpelare SQL</link>.
    </simpara>
    <simpara>
-    După cum probabil ați presupus, PHP nu vă poate proteja bazele de date în
-    sine. Următoarele secțiuni tind să fie o introducere în noțiunile de bază
-    ale accesării și manipulării bazelor de date cu scripturi PHP.
+    După cum probabil ați presupus, <acronym>PHP</acronym> nu vă poate proteja
+    bazele de date în sine. Următoarele secțiuni tind să fie o introducere în
+    noțiunile de bază ale accesării și manipulării bazelor de date cu scripturi
+    <acronym>PHP</acronym>.
    </simpara>
    <simpara>
     Păstrați în minte următoarea regulă: securitate maximă. Cu cât creșteți
@@ -84,7 +85,7 @@
     <!--simpara>
      If your database server has native SSL support, consider using <link
      linkend="ref.openssl">OpenSSL functions</link> in communication between
-     PHP and database via SSL.
+     <acronym>PHP</acronym> and database via SSL.
     </simpara-->
    </sect1>
 
@@ -104,9 +105,9 @@
     </simpara>
     <simpara>
      Cea mai ușoară cale de a rezolva problema este de a crea propriul pachet
-     de criptare, și apoi folosirea lui cu scripturile PHP. PHP vă poate ajuta
-     în aceasta prin intermediul câtorva extensii, cum ar fi
-     <link linkend="ref.mcrypt">Mcrypt</link> și
+     de criptare, și apoi folosirea lui cu scripturile <acronym>PHP</acronym>.
+     <acronym>PHP</acronym> vă poate ajuta în aceasta prin intermediul câtorva
+     extensii, cum ar fi <link linkend="ref.mcrypt">Mcrypt</link> și
      <link linkend="ref.mhash">Mhash</link>, care acoperă o varietate largă de
      algoritmi de criptare. Scriptul criptează datele înainte de a fi inserate
      în baza de date, și le decriptează la extragerea acestora. Verificați
@@ -189,10 +190,11 @@ $result = pg_query($conn, $query);
       </programlisting>
      </example>
       Utilizatorii obișnuiți fac click pe linkurile 'next', 'prev' unde
-      variabila <varname>$offset</varname> este encodată în URL. Scriptul se
-      așteaptă ca variabila <varname>$offset</varname> să fie un număr zecimal.
-      Cu toate acestea, ce se întâmplă dacă cineva încearcă să intervină,
-      adăugând la URL următoarele date prelucrate cu funcția
+      variabila <varname>$offset</varname> este encodată în
+      <acronym>URL</acronym>. Scriptul se așteaptă ca variabila
+      <varname>$offset</varname> să fie un număr zecimal. Cu toate acestea, ce
+      se întâmplă dacă cineva încearcă să intervină, adăugând la
+      <acronym>URL</acronym> următoarele date prelucrate cu funcția
       <function>urlencode</function>:
       <informalexample>
        <programlisting role="sql">
@@ -385,11 +387,11 @@ $result = mssql_query($query);
       </listitem>
       <listitem>
        <simpara>
-        Verificați dacă un input conține tipul de date corect. PHP are o
-        varietate de funcții de validare, de la cele mai simple, care pot fi
-        găsite în <link linkend="ref.var">Funcții asupra variabilelor</link> și
-        în <link linkend="ref.ctype">Funcții ale tipurilor de caractere</link>
-        (de ex. <function>is_numeric</function>,
+        Verificați dacă un input conține tipul de date corect.
+        <acronym>PHP</acronym> are o varietate de funcții de validare, de la
+        cele mai simple, care pot fi găsite în <link linkend="ref.var">Funcții
+        asupra variabilelor</link> și în <link linkend="ref.ctype">Funcții ale
+        tipurilor de caractere</link> (de ex. <function>is_numeric</function>,
         <function>ctype_digit</function> respectiv) și până la
         <link linkend="ref.pcre">Expresii regulate compatibile Perl</link>.
        </simpara>
