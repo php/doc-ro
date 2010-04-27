@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: a790488fa1334a01a21625df419cee9f3aa9c0b3 Maintainer: simionea Status: ready -->
 <section xml:id="var.configuration" xmlns="http://docbook.org/ns/docbook">
  &reftitle.runtime;
  &extension.runtime;
@@ -40,13 +40,11 @@
     </term>
     <listitem>
      <para>
-      Funcția de apel invers <function>unserialize</function> poate fi apelată
-      (cu denumirea clasei nedefinite în calitate de parametru), dacă
-      deserializatorul găsește o clasă nedefinită care ar trebui să fie
-      instanțiată. Va apărea o avertizare dacă funcția specificată nu este
-      definită, sau dacă funcția nu include/implementează clasa ce lipsește.
-      Deci stabiliți această înregistrare dacă doriți într-adevăr să
-      implementați o astfel de funcție de apel invers.
+      Funcția de apel invers specificată este apelată în cazul când
+      <function>unserialize</function> încearcă să utilizeze o clasă nedefinită.
+      Va apărea o avertizare dacă funcția de apel invers specificată nu este
+      definită, sau dacă funcția de apel invers nu reușește să definească clasa
+      ce lipsește.
      </para>
      <para>
       Accesați de asemenea <function>unserialize</function> și
