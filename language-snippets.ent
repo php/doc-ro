@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 3f417d1215cd626bd15942be0584ebb4e20758cf Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 73f2be32381564a79b55c01e09e87be31b67a710 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -45,9 +45,10 @@ precedent.</para></note>'>
 
 <!ENTITY note.funcnoparam '<note xmlns="http://docbook.org/ns/docbook"><para>
 Deoarece această funcție își determină detaliile parametrilor în dependență de
-circumstanță, ea nu poate fi utilizată în calitate de parametru-funcție. Dacă
-trebuie transmisă această valoare, atunci rezultatele trebuie atribuite unei
-variabile, și această variabilă trebuie transmisă.</para></note>'>
+circumstanță, ea nu poate fi utilizată în calitate de parametru-funcție în
+versiunile anterioare 5.3.0. Dacă trebuie transmisă această valoare, atunci
+rezultatele trebuie atribuite unei variabile, și această variabilă trebuie
+transmisă.</para></note>'>
 
 <!ENTITY note.line-endings '<note xmlns="http://docbook.org/ns/docbook">
 <simpara>Dacă PHP nu recunoaște corect terminațiile liniilor atunci când
@@ -338,6 +339,8 @@ linkend="ini.include-path">include_path</link>'>
 <!-- Returns -->
 
 <!ENTITY return.falseforfailure ' sau &false; în cazul eșecului'>
+<!ENTITY return.falseforfailure.style.procedural '&style.procedural; întoarce
+&false; în caz de eșec.'>
 
 <!ENTITY return.success 'Întoarce valoarea &true; în cazul
 succesului&return.falseforfailure;.'>
@@ -550,6 +553,9 @@ xmlns="http://docbook.org/ns/docbook"><term><parameter>object</parameter>
 <!ENTITY date.datetime.retval.changelog '<row xmlns="http://docbook.org/ns/docbook">
 <entry>5.3.0</entry><entry>A fost schimbată valoarea întoarsă din &null; în
 <classname>DateTime</classname>.</entry></row>'>
+
+<!ENTITY date.datetime.return.modifiedobjectorfalseforfailure 'Întoarce obiectul
+DateTime modificat &return.falseforfailure;.'>
 
 <!ENTITY date.timezone.dbversion 'Această listă este bazată pe baza de date a
 fuselor orare de versiunea'>
