@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 2886be7bf6c4fe3598c6a10ed14df5ed8599041e Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/datetime.xml, last change in rev 1.8 -->
 <refentry xml:id="function.strtotime" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -38,11 +38,7 @@
     <varlistentry>
      <term><parameter>time</parameter></term>
      <listitem>
-      <para>
-       String-ul pentru a fi interpretat. Înainte de PHP 5.0.0, microsecundele
-       nu erau permise în oră, începând cu PHP 5.0.0 ele sunt permise, dar sunt
-       ignorate.
-      </para>
+      <para>&date.formats.parameter;</para>
      </listitem>
     </varlistentry>
     <varlistentry>
@@ -115,6 +111,12 @@
         momente de timp relative erau calculate greșit relativ la miezul nopții
         de astăzi. Aceasta diferă de alte versiuni, unde el este calculat corect
         relativ la ora curentă.
+       </entry>
+      </row>
+      <row>
+       <entry>5.0.0</entry>
+       <entry>
+        Microsecundele au început să fie permise, dar sunt ignorate.
        </entry>
       </row>
       <row>

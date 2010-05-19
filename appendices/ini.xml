@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 36ebb0b6033f0ec60b2f385ce9f715b427919ca5 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: dcf36fc9c31780b21904a70e4d1e470e4a784853 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&php.ini; directives</title>
@@ -3891,8 +3891,8 @@ auto_prepend_file=security.php
          descurajată, în versiuni anterioare PHP 5.3.0 utilizarea acestei
          facilități va emite o avertizate <constant>E_COMPILE_WARNING</constant>,
          iar în PHP 5.3.0+ avertizarea a devenit o notificare
-         <constant>E_DEPRECATED</constant>. Această directivă este eliminată
-         începând cu PHP 6.
+         <constant>E_DEPRECATED</constant>.
+         <!-- FIXME PHP_6 Această directivă este eliminată începând cu PHP 6. -->
         </para>
         <para>
          Accesați de asemenea <link linkend="language.references">explicația

@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 73f2be32381564a79b55c01e09e87be31b67a710 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: d562dc3ee67e12efb17aef9e4ee4102affaac410 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -356,6 +356,16 @@ informații. Utilizați
 <link linkend="language.operators.comparison">operatorul ===</link> pentru a
 verifica valoarea întoarsă de această funcție.</simpara></warning>'>
 
+<!-- OpenSSL -->
+<!ENTITY openssl.param.x509 '<varlistentry xmlns="http://docbook.org/ns/docbook">
+ <term><parameter>x509</parameter></term>
+ <listitem>
+  <para>
+   Accesați <link linkend="openssl.certparams">Parametrii cheilor/certificatelor</link>
+   pentru a obține lista valorilor valide.
+  </para>
+ </listitem>
+</varlistentry>'>
 
 <!-- Image (GD) Notes -->
 <!ENTITY note.config.t1lib '<note xmlns="http://docbook.org/ns/docbook">
@@ -544,6 +554,12 @@ xmlns="http://docbook.org/ns/docbook"><term><parameter>object</parameter>
 <classname>DateTime</classname> întors de funcția
 <function>date_create</function></para></listitem></varlistentry>'>
 
+<!ENTITY date.datetime.description.modified '<varlistentry
+xmlns="http://docbook.org/ns/docbook"><term><parameter>object</parameter></term>
+<listitem><para>Doar stilul procedural: Un obiect <classname>DateTime</classname>
+întors de <function>date_create</function>. Funcția modifică acest obiect.
+</para></listitem></varlistentry>'>
+
 <!ENTITY date.datetimezone.description '<varlistentry
 xmlns="http://docbook.org/ns/docbook"><term><parameter>object</parameter>
 </term><listitem><para>Doar pentru stilul procedural: Un obiect
@@ -571,6 +587,11 @@ fuselor orare de versiunea'>
 <!ENTITY date.timezone.indian     'India'>
 <!ENTITY date.timezone.pacific    'Pacificul'>
 <!ENTITY date.timezone.others     'Altele'>
+
+<!ENTITY date.formats 'Formatele valide sunt explicate în
+<link xmlns="http://docbook.org/ns/docbook" linkend="datetime.formats">
+Formatele datelor și orelor</link>.'>
+<!ENTITY date.formats.parameter 'Un șir dată/oră. &date.formats;'>
 
 <!-- DomXml Notes -->
 <!ENTITY node.inserted 'Acest nod nu va apărea în document dacă nu este
