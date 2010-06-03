@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: d562dc3ee67e12efb17aef9e4ee4102affaac410 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 6b65b2d86df7e3ac423c23a3c8358672b0d9033c Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -240,6 +240,12 @@ lista sa de argumente.</simpara></warning>'>
 
 
 <!-- Misc -->
+
+<!ENTITY version.trunk.after.53 '<emphasis xmlns="http://docbook.org/ns/docbook">
+Această modificare există în <link linkend="about.phpversions">versiunea de
+dezvoltare</link> a PHP și probabil va exista după 5.3.</emphasis>'>
+
+<!ENTITY version.trunk.changelog 'Viitor'>
 
 <!ENTITY no.function.parameters '<para xmlns="http://docbook.org/ns/docbook">
 Această funcție nu are parametri.</para>'>
@@ -636,6 +642,10 @@ pentru detalii.</para>'>
 <!ENTITY odbc.parameter.search 'Acest parametru acceptă următoarele șabloane
 de căutare: "&#x25;" pentru a se potrivi cu zero sau mai multe caractere și
 "_" pentru a se potrivi cu un singur caracter.'>
+
+<!ENTITY oauth.callback.error 'Emite o eroare de nivel
+<constant xmlns="http://docbook.org/ns/docbook">E_ERROR</constant> dacă funcția
+de apel invers nu poate fi apelată, sau nu a fost specificată.'>
 
 <!-- Oracle -->
 <!ENTITY oci.db "<para xmlns='http://docbook.org/ns/docbook'
