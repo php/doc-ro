@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: radical Status: ready -->
+<!-- EN-Revision: 99ae2b40a634ca13082d236fbda64f120d2bd665 Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
 <refentry xml:id="function.json-decode" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -15,6 +15,7 @@
    <methodparam><type>string</type><parameter>json</parameter></methodparam>
    <methodparam choice="opt"><type>bool</type><parameter>assoc</parameter><initializer>false</initializer></methodparam>
    <methodparam choice="opt"><type>int</type><parameter>depth</parameter><initializer>512</initializer></methodparam>
+   <methodparam choice="opt"><type>int</type><parameter>options</parameter><initializer>0</initializer></methodparam>
   </methodsynopsis>
   <para>
    Preia un șir de caractere reprezentat JSON și îl convertește într-o
@@ -49,6 +50,20 @@
      <listitem>
       <para>
        Limita adâncimii de imbricare specificată de utilizator.
+      </para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><parameter>options</parameter></term>
+     <listitem>
+      <para>
+       Masca de biți a opțiunilor de decodificare JSON. în prezent este
+       susținută doar <constant>JSON_BIGINT_AS_STRING</constant>
+       (în mod implicit numerele întregi mari se transformă în numere cu virgulă
+       flotantă)
+      </para>
+      <para>
+       &version.trunk.after.53;
       </para>
      </listitem>
     </varlistentry>
@@ -211,6 +226,27 @@ Last error : The maximum stack depth has been exceeded
 ]]>
     </screen>
    </example>
+   <example>
+    <title><function>json_decode</function> cu numere întregi mari</title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+$json = '12345678901234567890';
+
+var_dump(json_decode($json));
+var_dump(json_decode($json, false, 512, JSON_BIGINT_AS_STRING));
+
+?>
+]]>
+    </programlisting>
+    &example.outputs;
+    <screen>
+<![CDATA[
+float(1.2345678901235E+19)
+string(20) "12345678901234567890"
+]]>
+    </screen>
+   </example>
   </para>
  </refsect1>
 
@@ -241,6 +277,12 @@ Last error : The maximum stack depth has been exceeded
       </row>
      </thead>
      <tbody>
+      <row>
+       <entry>&version.trunk.changelog;</entry>
+       <entry>
+        A fost adăugat parametrul <parameter>options</parameter>.
+       </entry>
+      </row>
       <row>
        <entry>5.3.0</entry>
        <entry>A fost adăugat parametrul opțional <parameter>depth</parameter>.
