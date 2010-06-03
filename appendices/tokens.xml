@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: ec6501cd337f391eb557aa1012a718d0bd574974 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="tokens" xmlns="http://docbook.org/ns/docbook">
  <title>Lista semnelor interpretorului</title>
@@ -494,12 +494,27 @@
      <entry><link linkend="language.operators.assignment">operatori de atribuire</link></entry>
     </row>
     <row>
+     <entry><constant>T_NAMESPACE</constant></entry>
+     <entry>namespace</entry>
+     <entry>
+      <link linkend="language.namespaces">spațiile de nume</link> (disponibile
+      începând cu PHP 5.3.0)
+     </entry>
+    </row>
+    <row>
      <entry><constant>T_NS_C</constant></entry>
      <entry>__NAMESPACE__</entry>
      <entry>
-      <link linkend="language.namespaces">spațiile de nume</link>.
-      De asemenea definit ca <constant>T_NAMESPACE</constant>
-      (disponibil începând cu PHP 5.3.0)
+      <link linkend="language.namespaces">spațiile de nume</link> (disponibile
+      începând cu PHP 5.3.0)
+     </entry>
+    </row>
+    <row>
+     <entry><constant>T_NS_SEPARATOR</constant></entry>
+     <entry>\</entry>
+     <entry>
+      <link linkend="language.namespaces">spațiile de nume</link> (disponibile
+      începând cu PHP 5.3.0)
      </entry>
     </row>
     <row>

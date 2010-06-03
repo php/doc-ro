@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 3e57d6ccfdd9e474227c60e0773a3c7d1ecb9536 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 221daf722c4bddc00cc1c8ca833002804fb82d12 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="about" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Despre manual</title>
@@ -278,36 +278,45 @@ int strlen ( string $string )
    este PHP 5.x.x
   </para>
   <para>
-   Există documentația parțială a versiunii PHP din SVN, ceea ce întotdeauna
-   înseamnă ultima versiune în dezvoltare. Aceasta încă urmează să fie lansată,
-   de aceea e disponibilă numai în sistemul de gestiune a versiunilor SVN, sau
-   prin intermediul unei <link xlink:href="&url.php.snapshots;">imagini
-   instantanee (snapshot)</link>. Deci fiți conștient că facilitățile marcate
-   "disponibil în SVN" în mod normal nu sunt disponibile. Însă aceste
-   facilități, cel mai probabil, vor fi disponibile în următoarea versiune
-   stabilă a PHP. Pentru a descărca versiunea SVN, verificați
-   <link xlink:href="&url.php.anonsvn;">pagina de acces anonim la SVN</link>.
+   Atunci când este disponibilă documentația pentru ultimele versiuni de
+   dezvoltare (nelansate) ale PHP, ea va fi marcată ca "disponibilă în SVN" sau
+   "versiune de dezvoltare". Și cu toate că trebuie să fiți pregătit pentru
+   modificări ale acestei documentații, aceasta se întâmplă în cazuri rare.
   </para>
   <para>
-   Deci poate exista documentație pentru versiuni PHP care încă nu sunt
-   lansate. (Ceva de tipul PHP 6.x.x în timp ce ultima versiune stabilă este
-   5.x.x). În cele mai multe cazuri, aceasta nu este o eroare în documentație.
-   Deseori sunt incluse explicații pentru facilități care nu sunt disponibile
-   în versiunea curentă PHP, dar vor fi disponibile într-o versiune PHP
-   viitoare, cunoscută deja. De obicei PHP capătă noi facilități în lansările
-   majore, în caz contrar numai erorile sunt corectate. Utilizând formatul
-   A.B.C pentru versiuni, o lansare majoră mărește numărul A sau B, în timp ce
-   lansările minore măresc numărul C. De aceea nu este ceva ieșit din comun ca,
-   de exemplu, o facilitate să fie documentată ca disponibilă în PHP x.1.x,
-   atunci cînd ultima versiune este PHP x.0.x. Observați, de asemenea, că
-   manualul este scris la timpul prezent, nu la timpul viitor.
+   Toate lucrările de dezvoltare se efectuează în Subversion (SVN) și pot fi
+   verificate după cum este descris în pagina
+   <link xlink:href="&url.php.anonsvn;">accesul anonim la SVN</link>. Sau
+   aceleași surse pot fi descărcate ca
+   <link xlink:href="&url.php.snapshots;">instantanee PHP</link>, disponibile
+   pentru toate ramurile active ale PHP.
   </para>
   <para>
-   Deseori manualul PHP oferă "Valori Implicite" pentru directivele PHP. Aceste
-   valori se bazează pe <filename>php.ini-development</filename> și nu pe
-   <filename>php.ini-production</filename>. Ele de asemenea se referă la
-   ultima versiune PHP. Vezi <link linkend="ini.list">anexa directivelor PHP
-   </link> pentru detalii despre aceste valori și schimbările survenite.
+   Și pentru a clarifica lucrurile, manualul se va referi la versiuni majore,
+   minore și "punct" ale PHP. Spre exemplu în denumirea PHP
+   <literal>5.3.1</literal>, <emphasis>5</emphasis> reprezintă versiunea majoră,
+   <emphasis>3</emphasis> reprezintă versiunea minoră și <emphasis>1</emphasis>
+   este versiunea-punct. În mod normal PHP capătă noi facilități doar în
+   versiuni majore și minore, iar în versiunile-punct se corectează defectele.
+   Oricum, însă această convenție nu este întotdeauna adevărată.
+  </para>
+  <para>
+   De asemenea, reţineţi că manualul PHP este scris la timpul prezent, nu la
+   viitor, chiar şi pentru facilități documentate care nu sunt încă disponibile.
+   Motivul pentru aceasta este ca manualul să poată rezista la testul timpului,
+   prin urmare, să nu necesite actualizări gramaticale plictisitoare cu fiecare
+   versiune PHP.
+  </para>
+  <para>
+   De multe ori manualul PHP oferă "valori implicite" pentru directivele PHP.
+   Aceste valori se bazează pe modul în care PHP se comportă fără fişierul de
+   configurare &php.ini;, astfel că aceste valori pot să difere de valorile din
+   fișierele <filename>php.ini-development</filename> și
+   <filename>php.ini-production</filename>.
+   Acestea se referă de asemenea la cea mai recentă versiune a PHP, deşi
+   intrările din jurnalul de modificări fac referire la valorile din trecut. A
+   se vedea <link linkend="ini.list">anexa directivelor PHP</link> pentru
+   detalii cu privire la aceste valori şi schimbările.
   </para>
  </sect1>
 
