@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: radical Status: ready -->
+<!-- EN-Revision: 9491eaf09cf62617ebf3921a42e51e5291010b6d Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
  <sect1 xml:id="language.oop5.visibility" xmlns="http://docbook.org/ns/docbook">
   <title>Vizibilitatea</title>
@@ -13,6 +13,7 @@
    precum și de clasele moștenite și clasele-părinte. Membrele declarate private
    pot fi accesate doar de clasa care le definește.
   </para>
+
   <sect2 xml:id="language.oop5.visibility-members">
    <title>Vizibilitatea proprietăților</title>
    <para>
@@ -87,6 +88,7 @@ $obj2->afiseazaBunaZiua();    // Afișează Eu sunt: Public, Eu sunt: Protected2
     </simpara>
    </note>
   </sect2>
+
   <sect2 xml:id="language.oop5.visiblity-methods">
    <title>Vizibilitatea metodelor</title>
    <para>
@@ -186,6 +188,60 @@ $myFoo->test(); // Bar::testPrivate
      </programlisting>
     </example>
    </para>
+  </sect2>
+
+  <sect2 xml:id="language.oop5.visibility-other-objects">
+   <title>Vizibilitatea din cadrul altor obiecte</title>
+   <para>
+    Obiectele de același tip vor avea acces reciproc la membrele private și
+    protejate, cu toate că nu reprezintă aceeași instanță. Aceasta se întâmplă
+    din cauza că detaliile specifice de implementare se cunosc deja în
+    interiorul acestor obiecte.
+   </para>
+   <example>
+    <title>Accesarea membrelor private ale unui obiect de același tip</title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+class Test
+{
+    private $foo;
+
+    public function __construct($foo)
+    {
+        $this->foo = $foo;
+    }
+
+    private function bar()
+    {
+        echo 'S-a accesat metoda privată.';
+    }
+
+    public function baz(Test $other)
+    {
+        // Putem modifica proprietatea privată:
+        $other->foo = 'salut';
+        var_dump($other->foo);
+
+        // Putem de asemenea apela metoda privată:
+        $other->bar();
+    }
+}
+
+$test = new Test('test');
+
+$test->baz(new Test('other'));
+?>
+]]>
+    </programlisting>
+    &example.outputs;
+    <screen>
+<![CDATA[
+string(5) "salut"
+S-a accesat metoda privată.
+]]>
+    </screen>
+   </example>
   </sect2>
  </sect1>
 
