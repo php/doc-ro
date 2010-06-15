@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 6b65b2d86df7e3ac423c23a3c8358672b0d9033c Maintainer: simionea Status: ready -->
+<!-- EN-Revision: e60158c00b2c8cdfabd794b53332f453334b19b0 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -643,9 +643,13 @@ pentru detalii.</para>'>
 de căutare: "&#x25;" pentru a se potrivi cu zero sau mai multe caractere și
 "_" pentru a se potrivi cu un singur caracter.'>
 
+<!-- OAUTH -->
 <!ENTITY oauth.callback.error 'Emite o eroare de nivel
 <constant xmlns="http://docbook.org/ns/docbook">E_ERROR</constant> dacă funcția
 de apel invers nu poate fi apelată, sau nu a fost specificată.'>
+
+<!ENTITY oauth.changelog.error.null 'Anterior întorcea &null; în caz de eșec, în
+loc de &false;.'>
 
 <!-- Oracle -->
 <!ENTITY oci.db "<para xmlns='http://docbook.org/ns/docbook'
