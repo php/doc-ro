@@ -96,7 +96,7 @@ supplemental files to mark section titles -->
 <!ENTITY reftitle.required          '<title xmlns="http://docbook.org/ns/docbook">Necesități</title>'>
 <!ENTITY reftitle.resources         '<title xmlns="http://docbook.org/ns/docbook">Tipurile resurselor</title>'>
 <!ENTITY reftitle.runtime           '<title xmlns="http://docbook.org/ns/docbook">Configurația la rulare</title>'>
-<!ENTITY reftitle.returnvalues      '<title xmlns="http://docbook.org/ns/docbook">Valorile întroarse</title>'>
+<!ENTITY reftitle.returnvalues      '<title xmlns="http://docbook.org/ns/docbook">Valorile întoarse</title>'>
 <!ENTITY reftitle.seealso           '<title xmlns="http://docbook.org/ns/docbook">Vedeți de asemenea</title>'>
 <!ENTITY reftitle.setup             '<title xmlns="http://docbook.org/ns/docbook">Instalarea / configurarea</title>'>
 <!ENTITY reftitle.unicode           '<title xmlns="http://docbook.org/ns/docbook">Unicode</title>'>
