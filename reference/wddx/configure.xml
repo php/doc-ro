@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 383b579aef7ccf8e553603db99fd3c4a89bddabe Maintainer: simionea Status: ready -->
 <section xml:id="wddx.installation" xmlns="http://docbook.org/ns/docbook">
  &reftitle.install;
  <para>
-  După instalarea expat compilați PHP cu opțiunea
-  <option role="configure">--enable-wddx</option>.
+  După instalarea bibliotecii expat, care este necesară, compilați PHP cu
+  opțiunea <option role="configure">--enable-wddx</option> și utilizați
+  <option role="configure">--with-libexpat-dir</option> pentru expat.
  </para>
  &windows.builtin;
 </section>
@@ -30,4 +31,3 @@ vim600: syn=xml fen fdm=syntax fdl=2 si
 vim: et tw=78 syn=sgml
 vi: ts=1 sw=1
 -->
-

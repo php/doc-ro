@@ -1,10 +1,13 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: e60158c00b2c8cdfabd794b53332f453334b19b0 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 383b579aef7ccf8e553603db99fd3c4a89bddabe Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
 <entry>4.2.0</entry><entry>Generatorul de numere aleatoare este însămânțat
 automat.</entry></row>'>
+
+<!ENTITY installation.enabled.disable 'Această extensie este activată în mod
+implicit. Ea poate fi dezactivată utilizând următoarea opțiune la compilare: '>
 
 <!-- Notes -->
 
@@ -1576,6 +1579,13 @@ versiunea 2.0.0. Implementări alternative sunt disponibile utilizând
 <function>PharFileInfo::isCompressed</function>,
 <function>PharFileInfo::decompress</function> și
 <function>PharFileInfo::compress</function>.</para></note>'>
+
+<!-- XML -->
+<!ENTITY libxml.required '<para xmlns="http://docbook.org/ns/docbook">Această
+extensie necesită extensia PHP <link linkend="book.libxml">libxml</link>.
+Aceasta înseamnă că e necesară de asemenea și indicarea opțiunii
+<option role="configure">--enable-libxml</option>, cu toate că aceasta este
+realizat în mod implicit deoarece libxml este activată implicit.</para>'>
 
 <!-- XMLReader -->
 <!ENTITY xmlreader.libxml20620.note '<caution

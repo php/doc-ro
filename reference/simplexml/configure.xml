@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision: 297028 $ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 383b579aef7ccf8e553603db99fd3c4a89bddabe Maintainer: simionea Status: ready -->
 <section xml:id="simplexml.installation" xmlns="http://docbook.org/ns/docbook">
  &reftitle.install;
  <para>
-  Extensia SimpleXML este activată implicit. Pentru a o dezactiva utilizați
-  opțiunea de configurare <option role="configure">--disable-simplexml</option>.
+  &installation.enabled.disable;
+  <option role="configure">--disable-simplexml</option>.
+ </para>
+ <para>
+  Notă: Înainte de PHP 5.1.2, indicarea opțiunii
+  <option role="configure">--enable-simplexml</option> era necesară pentru a
+  activa această extensie.
  </para>
 </section>
 
