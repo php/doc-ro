@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision: 297028 $ -->
 <!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
-<refentry xmlns="http://docbook.org/ns/docbook" xml:id="function.pdf-open-jpeg">
+<refentry xmlns="http://docbook.org/ns/docbook" xml:id="function.pdf-set-duration">
  <refnamediv>
-  <refname>PDF_open_jpeg</refname>
-  <refpurpose>Deschide o imagine JPEG [învechit]</refpurpose>
+  <refname>PDF_set_duration</refname>
+  <refpurpose>Stabilește durata dintre pagini [învechit]</refpurpose>
  </refnamediv>
  <refsect1 role="description">
   &reftitle.description;
- <para>
-  Această funcție este învechită începând cu PDFlib versiunea 3, utilizați
-  <function>PDF_load_image</function> în loc.
- </para>
+  <para>
+   Această funcție este învechită începând cu PDFlib versiunea 3, utilizați
+   opțiunea <parameter>duration</parameter> în
+   <function>PDF_begin_page_ext</function> sau
+   <function>PDF_end_page_ext</function> în loc.
+  </para>
  </refsect1>
 </refentry>
 

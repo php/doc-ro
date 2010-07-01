@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision: 297028 $ -->
 <!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
-<refentry xmlns="http://docbook.org/ns/docbook" xml:id="function.pdf-open-jpeg">
+<refentry xmlns="http://docbook.org/ns/docbook" xml:id="function.pdf-skew">
  <refnamediv>
-  <refname>PDF_open_jpeg</refname>
-  <refpurpose>Deschide o imagine JPEG [învechit]</refpurpose>
+  <refname>PDF_skew</refname>
+  <refpurpose>Deformează oblic sistemul de coordonate</refpurpose>
  </refnamediv>
  <refsect1 role="description">
   &reftitle.description;
- <para>
-  Această funcție este învechită începând cu PDFlib versiunea 3, utilizați
-  <function>PDF_load_image</function> în loc.
- </para>
+   <methodsynopsis>
+    <type>bool</type><methodname>PDF_skew</methodname>
+    <methodparam><type>resource</type><parameter>p</parameter></methodparam>
+    <methodparam><type>float</type><parameter>alpha</parameter></methodparam>
+    <methodparam><type>float</type><parameter>beta</parameter></methodparam>
+   </methodsynopsis>
+  <para>
+   Deformează oblic sistemul de coordonate în direcția x și y la
+   <parameter>alpha</parameter> și <parameter>beta</parameter> grade.
+   &return.success;
+  </para>
  </refsect1>
 </refentry>
 

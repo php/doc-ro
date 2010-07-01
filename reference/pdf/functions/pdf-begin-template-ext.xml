@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision: 297028 $ -->
 <!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
-<refentry xmlns="http://docbook.org/ns/docbook" xml:id="function.pdf-open-jpeg">
+<refentry xmlns="http://docbook.org/ns/docbook" xml:id="function.pdf-begin-template-ext">
  <refnamediv>
-  <refname>PDF_open_jpeg</refname>
-  <refpurpose>Deschide o imagine JPEG [învechit]</refpurpose>
+  <refname>PDF_begin_template_ext</refname>
+  <refpurpose>Începe definiția unui tipar</refpurpose>
  </refnamediv>
  <refsect1 role="description">
   &reftitle.description;
- <para>
-  Această funcție este învechită începând cu PDFlib versiunea 3, utilizați
-  <function>PDF_load_image</function> în loc.
- </para>
+  <methodsynopsis>
+   <type>int</type><methodname>PDF_begin_template_ext</methodname>
+   <methodparam><type>resource</type><parameter>pdfdoc</parameter></methodparam>
+   <methodparam><type>float</type><parameter>width</parameter></methodparam>
+   <methodparam><type>float</type><parameter>height</parameter></methodparam>
+    <methodparam><type>string</type><parameter>optlist</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   Începe definiția unui tipar nou.
+  </para>
  </refsect1>
 </refentry>
 

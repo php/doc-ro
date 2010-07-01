@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision: 297028 $ -->
 <!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
-<refentry xmlns="http://docbook.org/ns/docbook" xml:id="function.pdf-open-jpeg">
+<refentry xmlns="http://docbook.org/ns/docbook" xml:id="function.pdf-utf32-to-utf16">
  <refnamediv>
-  <refname>PDF_open_jpeg</refname>
-  <refpurpose>Deschide o imagine JPEG [învechit]</refpurpose>
+  <refname>PDF_utf32_to_utf16</refname>
+  <refpurpose>Convertește un string din UTF-32 în UTF-16</refpurpose>
  </refnamediv>
  <refsect1 role="description">
   &reftitle.description;
- <para>
-  Această funcție este învechită începând cu PDFlib versiunea 3, utilizați
-  <function>PDF_load_image</function> în loc.
- </para>
+   <methodsynopsis>
+    <type>string</type><methodname>PDF_utf32_to_utf16</methodname>
+    <methodparam><type>resource</type><parameter>pdfdoc</parameter></methodparam>
+    <methodparam><type>string</type><parameter>utf32string</parameter></methodparam>
+    <methodparam><type>string</type><parameter>ordering</parameter></methodparam>
+   </methodsynopsis>
+  <para>
+   Convertește un string din formatul UTF-32 în UTF-16.
+  </para>
  </refsect1>
 </refentry>
 
