@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 383b579aef7ccf8e553603db99fd3c4a89bddabe Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 4eec35e5a4991e37549cce218a64c86725210b5d Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -576,8 +576,8 @@ xmlns="http://docbook.org/ns/docbook"><term><parameter>object</parameter>
 <function>timezone_open</function></para></listitem></varlistentry>'>
 
 <!ENTITY date.datetime.retval.changelog '<row xmlns="http://docbook.org/ns/docbook">
-<entry>5.3.0</entry><entry>A fost schimbată valoarea întoarsă din &null; în
-<classname>DateTime</classname>.</entry></row>'>
+<entry>5.3.0</entry><entry>A fost schimbată valoarea întoarsă în caz de succes
+din &null; în <classname>DateTime</classname>.</entry></row>'>
 
 <!ENTITY date.datetime.return.modifiedobjectorfalseforfailure 'Întoarce obiectul
 DateTime modificat &return.falseforfailure;.'>
@@ -1471,6 +1471,9 @@ Imagick a fost compilat cu ImageMagick de versiunea 6.4.9 sau ulterior.'>
 
 <!ENTITY imagick.method.available.0x653 'Această metodă este disponibilă dacă
 Imagick a fost compilat cu ImageMagick de versiunea 6.5.3 sau ulterior.'>
+
+<!ENTITY imagick.method.available.0x657 'Această metodă este disponibilă dacă
+Imagick a fost compilat cu ImageMagick de versiunea 6.5.7 sau ulterior.'>
 
 <!ENTITY imagick.constant.available 'Această constantă este disponibilă dacă
 Imagick a fost compilat cu ImageMagick de versiunea'>
