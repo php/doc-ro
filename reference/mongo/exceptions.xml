@@ -1,10 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision: 294311 $ -->
-<!-- EN-Revision: 0137d3c264ab0c1ce34bfbd9610319ed61326a3f Maintainer: simionea Status: ready -->
+<!-- EN-Revision: bb9c7be2ef17f60fe6f6d9de446cdd851874850b Maintainer: simionea Status: ready -->
 
 <part xml:id="mongo.exceptions" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 
  <title>Excepții</title>
+
+ <partintro>
+  <section>
+   <title>Ciudățenii ale VMWare</title>
+   <para>
+    Dacă rulați VMWare pe Windows și utilizați CIFS, suspendarea mașinii
+    virtuale va cauza o desincronizare a CIFS și va cauza errors bizare
+    la reluarea execuției ("Obiectul Mongo nu a fost corect inițializat de
+    constructorul său"). Montarea permanentă a mapelor partajate Windows va
+    corecta aceasta și veți putea să suspendați și să reluați execuția în
+    orice moment.
+   </para>
+   <para>
+    Pentru a monta în mod permanent mapele partajate ale Windows executați:
+   </para>
+   <programlisting>
+    <![CDATA[
+$ sudo update-rc.d -f umountnfs.sh remove
+$ sudo update-rc.d umountnfs.sh stop 15 0 6 .
+]]>
+   </programlisting>
+   <para>
+    Vedeți <link xlink:href="&url.mongodb.cifs;">documentația Ubuntu</link>
+    pentru cele mai recente instrucțiuni.
+   </para>
+  </section>
+ </partintro>
 
  &reference.mongo.mongoexception;
  &reference.mongo.mongocursorexception;
