@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 9ad53a76ce25cb13e38a6b2d45d05bd54c9ccc84 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 657ad15f6e348ca21663a01d2c21f12f16cb7499 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="ini" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&php.ini; directives</title>
@@ -3922,19 +3922,25 @@ auto_prepend_file=security.php
        <type>string</type>
       </term>
       <listitem>
-       <simpara>
+       <para>
         Această directivă vă permite să dezactivați anumite funcții din motive
         de <link linkend="security">securitate</link>. Ea conține o listă a
         denumirilor funcțiilor, separate prin virgulă. disable_functions
         nu este afectată de <link linkend="ini.safe-mode">Modul securizat</link>.
-       </simpara>
-       <simpara>
+       </para>
+       <para>
+        Doar <link linkend="functions.internal">internal functions</link> poate
+        fi dezactivată utilizând această directivă.
+        <link linkend="functions.user-defined">Funcțiile definite de utilizator</link>
+        nu sunt afectate.
+       </para>
+       <para>
         Această directivă trebuie să fie stabilită în &php.ini; De exemplu nu
         puteți stabili aceasta în &httpd.conf;.
-       </simpara>
+       </para>
       </listitem>
      </varlistentry>
-     
+
      <varlistentry xml:id="ini.disable-classes">
       <term>
        <parameter>disable_classes</parameter>
@@ -3959,7 +3965,7 @@ auto_prepend_file=security.php
        </note>
       </listitem>
      </varlistentry>
-     
+
      <varlistentry xml:id="ini.zend.ze1-compatibility-mode">
       <term>
        <parameter>zend.ze1_compatibility_mode</parameter>
@@ -4546,10 +4552,10 @@ auto_prepend_file=security.php
          <note>
           <para>
            PHP permite prescurtări pentru valori în biți, inclusiv K (kilo),
-	   M (mega) și G (giga). PHP va efectua convertirea automat dacă veți
-	   utiliza una din acestea. Fiți atent să nu depășiți limita de 32 biți
-	   pentru numere întregi cu semn (dacă utilizați versiuni pe 32 de biți)
-	   deoarece aceasta va cauza eșuarea script-ului dumneavoastră.
+           M (mega) și G (giga). PHP va efectua convertirea automat dacă veți
+           utiliza una din acestea. Fiți atent să nu depășiți limita de 32 biți
+           pentru numere întregi cu semn (dacă utilizați versiuni pe 32 de biți)
+           deoarece aceasta va cauza eșuarea script-ului dumneavoastră.
           </para>
          </note>
         </para>
@@ -4885,7 +4891,7 @@ include_path=".;c:\php\includes"
        <para>
         Limitează fișierele ce pot fi deschise de PHP în arborele directoarelor
         specificat, inclusiv și însuși fișierul. Această directivă
-        <emphasis>NU</emphasis> este afectată de activarea sau dezactivarea 
+        <emphasis>NU</emphasis> este afectată de activarea sau dezactivarea
         Modului securizat.
        </para>
        <para>
@@ -4943,7 +4949,7 @@ include_path=".;c:\php\includes"
        </note>
       </listitem>
      </varlistentry>
-     
+
       <varlistentry xml:id="ini.doc-root">
        <term>
         <parameter>doc_root</parameter>
@@ -5357,8 +5363,6 @@ include_path=".;c:\php\includes"
    </section>
  </section>
 </appendix>
-
-<!-- Translated by Simion Onea -->
 
 <!-- Keep this comment at the end of the file
 Local variables:
