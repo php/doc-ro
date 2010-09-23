@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: radical Status: ready -->
+<!-- EN-Revision: 8574a2c1bd1dee8283a9d05fc0bd21c36efd237b Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
  <sect1 xml:id="language.oop5.decon" xmlns="http://docbook.org/ns/docbook">
   <title>Constructori și Destructori</title>
@@ -64,6 +64,27 @@ $obj = new ClasaExtinsa();
     este suprascrisă cu alți parametri decât cei ai metodei
     <function>__construct</function> din clasa-părinte.
    </para>
+   <para>
+    Începând cu PHP 5.3.3, metodele cu același nume ca și ultimul element al
+    unei clase din spațiul de nume nu vor mai fi tratate ca constructor. Această
+    schimbare nu afectează clasele fără spații de nume.
+   </para>
+   <example>
+    <title>Constructori în clasele cu spații de nume</title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+namespace Foo;
+class Bar {
+    public function Bar() {
+        // tratată ca constructor în PHP 5.3.0-5.3.2
+        // tratată ca o metodă obișnuită începând cu PHP 5.3.3
+    }
+}
+?>
+]]>
+    </programlisting>
+   </example>
   </sect2>
 
   <sect2 xml:id="language.oop5.decon.destructor">
