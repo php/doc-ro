@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 2ab5985e8bc37bc876e869a9836133f6050cc35f Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.strval" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -37,8 +37,11 @@
        Variabila ce este convertită în <type>string</type>.
       </para>
       <para>
-       <parameter>var</parameter> poate fi de orice tip scalar. Nu puteți
-       utiliza <function>strval</function> cu tablouri sau obiecte.
+       <parameter>var</parameter> poate fi de orice tip scalar sau un obiect ce
+       implementează metoda <link linkend="language.oop5.magic.tostring">__toString</link>.
+       Nu puteți utiliza <function>strval</function> cu tablouri sau cu obiecte
+       ce nu implementează metoda
+       <link linkend="language.oop5.magic.tostring">__toString</link>.
       </para>
      </listitem>
     </varlistentry>
@@ -57,7 +60,10 @@
   &reftitle.examples;
   <para>
    <example>
-    <title>Exemplu <function>strval</function> cu utilizarea metodei magice a PHP5 __toString</title>
+    <title>
+     Exemplu <function>strval</function> cu utilizarea metodei magice a PHP5
+     <link linkend="language.oop5.magic.tostring">__toString</link>.
+    </title>
     <programlisting role="php">
 <![CDATA[
 <?php
@@ -88,6 +94,7 @@ echo strval(new StrValTest);
     <member><function>sprintf</function></member>
     <member><function>number_format</function></member>
     <member><link linkend="language.types.type-juggling">Manipularea tipurilor</link></member>
+    <member><link linkend="language.oop5.magic.tostring">__toString</link></member>
    </simplelist>
   </para>
  </refsect1>
