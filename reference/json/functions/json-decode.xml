@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 99ae2b40a634ca13082d236fbda64f120d2bd665 Maintainer: radical Status: ready -->
+<!-- EN-Revision: 79422caf1a86d08a9ab1799c450c537e8a63646f Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
 <refentry xml:id="function.json-decode" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -33,6 +33,9 @@
       <para>
        Șirul (<type>string</type>) reprezentat <parameter>json</parameter> care
        trebuie convertit.
+      </para>
+      <para>
+       Această funcție operează doar cu date codificate în UTF-8.
       </para>
      </listitem>
     </varlistentry>
