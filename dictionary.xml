@@ -285,9 +285,9 @@
   </term>
   <term>
     <english>handle</english>
-    <romanian>handle</romanian>
+    <romanian>descriptor</romanian>
     <english_example>After this operation the handle becomes invalid.</english_example>
-    <romanian_example>După această operație handle-ul devine invalid.</romanian_example>
+    <romanian_example>După această operație descriptorul devine invalid.</romanian_example>
   </term>
   <term>
     <english>handler</english>
