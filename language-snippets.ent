@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 4eec35e5a4991e37549cce218a64c86725210b5d Maintainer: simionea Status: ready -->
+<!-- EN-Revision: efc1a628ed146ff90a8bf8146fcfe9b6e6164425 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -580,7 +580,7 @@ xmlns="http://docbook.org/ns/docbook"><term><parameter>object</parameter>
 din &null; în <classname>DateTime</classname>.</entry></row>'>
 
 <!ENTITY date.datetime.return.modifiedobjectorfalseforfailure 'Întoarce obiectul
-DateTime modificat &return.falseforfailure;.'>
+DateTime pentru înlănțuirea metodelor&return.falseforfailure;.'>
 
 <!ENTITY date.timezone.dbversion 'Această listă este bazată pe baza de date a
 fuselor orare de versiunea'>

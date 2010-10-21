@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision: 283790 $ -->
-<!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: simionea Status: ready -->
+<!-- EN-Revision: c65a7c1d80864159de9b61c325111e9dcce054a1 Maintainer: simionea Status: ready -->
 <appendix xml:id="userlandnaming" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Ghidul de stabilire a denumirilor de către utilizatori</title>
  <para>
@@ -49,8 +49,8 @@
    <listitem>
     <para>
      Denumirile funcțiilor utilizează linii de subliniere între cuvinte, în timp
-     ce denumirile claselor utilizează litere majuscule la începutul cuvintelor
-     (sunt unele excepții pentru clasele și funcțiile mai vechi).
+     ce denumirile claselor utilizează atât reguli de tip
+     <literal>camelCase</literal>, cât și de tip <literal>PascalCase</literal>.
     </para>
    </listitem>
    <listitem>
