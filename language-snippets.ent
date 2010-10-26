@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: efc1a628ed146ff90a8bf8146fcfe9b6e6164425 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 70b95e879754add828aa40a375858db9dc074073 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -1023,6 +1023,15 @@ xmlns="http://docbook.org/ns/docbook"><term><parameter>stmt</parameter></term>
 de <function>mysqli_stmt_init</function>.</para></listitem></varlistentry>'>
 <!ENTITY mysqli.available.mysqlnd 'Disponibil numai cu <link
 xmlns="http://docbook.org/ns/docbook" linkend="book.mysqlnd">mysqlnd</link>.'>
+<!ENTITY mysqli.charset.note '<note xmlns="http://docbook.org/ns/docbook">
+<para>MySQLnd întotdeauna preia setul de caractere implicit de pe server. Acest
+set de caractere este transmis în momentul stabilirii parametrilor/autentificării
+la conectare și este utilizat ulterior de mysqlnd.</para><para>Libmysql
+utilizează setul de caractere implicit stabilit în fișierul
+<filename>my.cnf</filename> sau printr-un apel explicit al funcției
+<function>mysqli_options</function> înainte de apelul
+<function>mysqli_real_connect</function>, dar după
+<function>mysqli_init</function>.</para></note>'>
 
 <!-- Notes for SAPI/Apache -->
 <!ENTITY note.apache.nsapi-module '<note xmlns="http://docbook.org/ns/docbook">
@@ -1665,3 +1674,11 @@ Clase și interfețe diverse</title>'>
 <!ENTITY spl.misc.intro '<partintro xmlns="http://docbook.org/ns/docbook">
 <para>Clase și interfețe ce nu se încadrează în alte categorii SPL.</para>
 </partintro>'>
+
+<!-- Win32Service -->
+<!ENTITY win32service.false.error ', &false; în caz că este vre-o problemă cu
+parametrii, sau un <link xmlns="http://docbook.org/ns/docbook"
+linkend="win32service.constants.errors">Cod de Eroare Win32</link> în caz de eșec.'>
+<!ENTITY win32service.success.false.error 'Întoarce &true; în caz de succes&win32service.false.error;'>
+<!ENTITY win32service.noerror.false.error 'Întoarce
+<constant xmlns="http://docbook.org/ns/docbook">WIN32_NO_ERROR</constant> în caz de succes&win32service.false.error;'>

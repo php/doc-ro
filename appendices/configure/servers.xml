@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: cdd201f7b1c520543a281c4df4ea8baad2caffbb Maintainer: simionea Status: ready -->
  <sect3 xml:id="configure.options.servers" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Opțiunile SAPI</title>
   <para>
@@ -232,6 +232,10 @@
      <para>
       Dezactivează asamblarea versiunii CGI a PHP. Disponibil începând cu PHP 4.3.0.
      </para>
+     <para>
+      Începând cu PHP 5.3.0 acest argument activează FastCGI, care anterior
+      trebuia activat cu ajutorul <literal>--enable-fastcgi</literal>.
+     </para>
     </listitem>
    </varlistentry>
 
@@ -244,6 +248,12 @@
       Activează controlul de securitate pentru redirecționările interne ale serverului.
       Ar trebui să utilizați această opțiune dacă rulați versiunea CGI cu Apache.
      </para>
+     <para>
+      Începând cu PHP 5.3.0 acest argument este activat implicit și nu mai există.
+      Pentru a dezactiva această funcționalitate, directiva ini
+      <link linkend="ini.cgi.force-redirect">cgi.force_redirect</link> trebuie
+      stabilită în <literal>0</literal>.
+     </para>
     </listitem>
    </varlistentry>
 
@@ -255,6 +265,11 @@
      <para>
       Dacă această opțiune e activată, fișierul binar CGI al PHP poate fi plasat în mod
       sigur în afara arborelui web și nimeni nu va putea sparge securitatea &htaccess;.
+     </para>
+      Începând cu PHP 5.3.0 acest argument este dezactivat implicit și nu mai
+      există. Pentru a activa această facilitate, directiva ini cgi.discard_path
+      trebuie stabilită în <literal>1</literal>.
+     <para>
      </para>
     </listitem>
    </varlistentry>
@@ -272,6 +287,24 @@
     </listitem>
    </varlistentry>
 
+  <!--<varlistentry xml:id="configure.disable-path-info-check">
+    <term>
+     <option role="configure">disable-path-info-check</option>
+    </term>
+    <listitem>
+     <para>
+      Dezactivează verificările informației despre cale, dezactivând căile precum
+      <literal>/file.php/test?a=b</literal>.
+     </para>
+     <para>
+      Începând cu PHP 5.3.0 acest argument este activat implicit și nu mai
+      există. Pentru a dezactiva aceasta, directiva ini
+      <link linkend="ini.cgi.fix-pathinfo">cgi.fix_pathinfo</link> trebuie
+      stabilită în <literal>0</literal>.
+     </para>
+    </listitem>
+   </varlistentry> -->
+
    <varlistentry xml:id="configure.enable-fastcgi">
     <term>
      <option role="configure">--enable-fastcgi</option>
@@ -280,6 +313,10 @@
      <para>
       Dacă această opțiune e activată, modulul CGI va fi asamblat de asemenea cu susținerea
       FastCGI. Disponibil începând cu PHP 4.3.0
+     </para>
+      Începând cu PHP 5.3.0 acest argument nu mai există și este activat cu
+      <literal>--enable-cgi</literal> în loc.
+     <para>
      </para>
     </listitem>
    </varlistentry>

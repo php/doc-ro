@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: d9c35b65d163cf11ebeeb907038a708c3a396b1a Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 9e10c49739b8f49cb747d0c0a46ca049943e7e34 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="tokens" xmlns="http://docbook.org/ns/docbook">
  <title>Lista semnelor interpretorului</title>
@@ -644,8 +644,10 @@
     </row>
     <row>
      <entry><constant>T_STRING</constant></entry>
-     <entry>"$a['a']"</entry>
-     <entry><link linkend="language.types.string.parsing">indice textual al tabloului în interiorul unui string</link></entry>
+     <entry>"parent"</entry>
+     <entry>identificatori, de ex. <link linkend="language.types.string.parsing">șiruri</link>,
+      cuvinte-cheie ce se referă la programarea orientată pe obiecte, precum <literal>parent</literal>
+      și <literal>self</literal>, funcții, clase și altele se potivesc.</entry>
     </row>
     <row>
      <entry><constant>T_STRING_CAST</constant></entry>
