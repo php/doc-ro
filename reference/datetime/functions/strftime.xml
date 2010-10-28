@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 422eb632815a02b9cf17c5619d32c323515a1eab Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.strftime" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
@@ -76,7 +76,11 @@
           </row>
           <row>
            <entry><literal>%e</literal></entry>
-           <entry>Ziua lunii prefixată cu spațiu în cazul unei singure cifre</entry>
+           <entry>
+            Ziua lunii prefixată cu spațiu în cazul unei singure cifre.
+            Implementarea pentru Windows nu coincide cu descrierea. Găsiți mai
+            jos informații suplimentare.
+           </entry>
            <entry>De la <literal> 1</literal> până la <literal>31</literal></entry>
           </row>
           <row>
@@ -315,6 +319,15 @@
         după cum este descris în acest manual.
        </simpara>
       </warning>
+      <warning>
+       <simpara>
+        <emphasis>Doar pentru Windows:</emphasis> Modificatorul <literal>%e</literal>
+        nu este susținut în implementarea Windows a acestei funcții. Pentru a
+        obține un rezultat analogic, utilizați modificatorul <literal>%#d</literal>
+        în loc. Exemplul de mai jos ilustrează modalitatea de a scrie o funcție
+        compatibilă cu orice platformă.
+       </simpara>
+      </warning>
      </listitem>
     </varlistentry>
 
@@ -392,6 +405,8 @@ echo strftime(" in German %A.\n");
 ]]>
     </programlisting>
    </example>
+  </para>
+  <para>
    <example>
     <title>Exemplu al numerelor săptămânilor conform standardului ISO 8601:1988</title>
     <programlisting role="php">
@@ -440,6 +455,27 @@ echo "1/2/2005 - %V,%G,%Y = " . strftime("%V,%G,%Y",strtotime("1/2/2005")) . "\n
 // Afișează: 1/3/2005 - %V,%G,%Y = 1,2005,2005
 echo "1/3/2005 - %V,%G,%Y = " . strftime("%V,%G,%Y",strtotime("1/3/2005")) . "\n";
 
+?>
+]]>
+    </programlisting>
+   </example>
+  </para>
+  <para>
+   <example>
+    <title>Un exemplu de funcție compatibilă pe mai multe platforme, ce utilizează modificatorul %e</title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+
+$format = '%e':
+
+// Verifică prezența Windows și încearcă să schimbe
+// modificatorii %e doar dacă ei există în format
+if (strtoupper(substr(PHP_OS, 0, 3)) == 'WIN' && strpos($format, '%e') !== false) {
+    $format = str_replace('%e', '%#d', $format);
+}
+
+echo strftime($format);
 ?>
 ]]>
     </programlisting>

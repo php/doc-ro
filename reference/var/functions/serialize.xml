@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: a9128651164a804d17c3b54142e8f272cc5f9baf Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.serialize" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -130,7 +130,18 @@ if (!odbc_execute($stmt, $sqldata)) {
   &reftitle.notes;
   <note>
    <para>
-    Nu este posibil de a serializa obiecte încorporate ale PHP.
+    Atrageți atenția că multe obiecte PHP încorporate nu pot fi serializate.
+    Însă cele ce permit acest lucru implementează interfața
+    <interfacename>Serializable</interfacename> sau metodele magice
+    <literal>__sleep</literal> și <literal>__wakeup</literal>. Dacă o clasă
+    internă nu îndeplinește cel puțin una dintre aceste cerințe, ea nu poate fi
+    serializată cu siguranță.
+   </para>
+   <para>
+    Există unele excepții istorice de la această regulă, când unele obiecte
+    interne pot fi serializate fără a implementa interfața sau a expune metodele.
+    Cel mai elocvent exemplu este <classname>ArrayObject</classname> în
+    versiunile anterioare PHP 5.2.0.
    </para>
   </note>
  </refsect1>
