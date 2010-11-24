@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 2886be7bf6c4fe3598c6a10ed14df5ed8599041e Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 1bbbd77ee0ebadbf1a4f695e1052b375f97a41c5 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/datetime.xml, last change in rev 1.8 -->
 <refentry xml:id="function.strtotime" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -16,11 +16,11 @@
    <methodparam choice="opt"><type>int</type><parameter>now</parameter></methodparam>
   </methodsynopsis>
   <simpara>
-   Funcția așteaptă să i se furnizeze un șir de caractere conținând un format al
-   datei US English și încearcă să transforme acest format într-un timestamp
-   Unix (numărul de secunde de la 1 Ianuarie 1970 00:00:00 UTC), relativ la
-   timestamp-ul parametrului <parameter>now</parameter>, sau ora curentă în
-   cazul dacă <parameter>now</parameter> nu este furnizat.
+   Funcția așteaptă un șir de caractere conținând un format de dată engleză și
+   încearcă să transforme acest format într-un timestamp Unix (numărul de
+   secunde de la 1 Ianuarie 1970 00:00:00 UTC), în raport cu timestamp-ul
+   dat în parametrul <parameter>now</parameter>, sau cu ora curentă dacă
+   parametrul <parameter>now</parameter> nu este furnizat.
   </simpara>
   <para>
    Această funcție va utiliza variabila de mediu <envar>TZ</envar> (dacă este
@@ -197,12 +197,28 @@ if (($timestamp = strtotime($str)) === false) {
     PHP 5.1.0 și versiunile ulterioare depășesc această limitare.
    </para>
   </note>
+  <note>
+   <para>
+    Datele în formatul <literal>m/d/y</literal> sau <literal>d-m-y</literal>
+    sunt disambiguate analizând separatorul dintre deferite componente: dacă
+    separatorul este slash (<literal>/</literal>), atunci este utilizat formatul
+    American <literal>m/d/y</literal>; iar dacă separatorul este liniuța
+    (<literal>-</literal>) sau punctul (<literal>.</literal>), atunci este
+    utilizat formatul European <literal>d-m-y</literal>.
+   </para>
+   <para>
+    Pentru a evita o potențială ambiguitate, cel mai bine este de a utiliza date
+    în format ISO 8601 (<literal>YYYY-MM-DD</literal>) sau
+    <methodname>DateTime::createFromFormat</methodname> atunci când este posibil.
+   </para>
+  </note>
  </refsect1>
 
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>
    <simplelist>
+    <member><methodname>DateTime::createFromFormat</methodname></member>
     <member><function>strptime</function></member>
    </simplelist>
   </para>
