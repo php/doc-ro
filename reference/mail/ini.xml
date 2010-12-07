@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: fb877d96cbd71d187c88677dfc3d69f97239902b Maintainer: simionea Status: ready -->
 <section xml:id="mail.configuration" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.runtime;
  &extension.runtime;
@@ -83,8 +83,9 @@
    </term>
    <listitem>
     <para>
-     Loghează toate apelurile <function>mail</function>, incluzând calea deplină
-     a script-ului, numărul liniei, adresele <literal>To</literal> și antetele.
+     Calea către un fișier-jurnal care va duce evidența tuturor apelurilor
+     <function>mail</function>. Înregistrările în jurnal includ calea deplină
+     a script-ului, numărul liniei, adresa <literal>To</literal> și antetele.
     </para>
    </listitem>
   </varlistentry>
