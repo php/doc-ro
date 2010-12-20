@@ -266,10 +266,10 @@
       Dacă această opțiune e activată, fișierul binar CGI al PHP poate fi plasat în mod
       sigur în afara arborelui web și nimeni nu va putea sparge securitatea &htaccess;.
      </para>
+     <para>
       Începând cu PHP 5.3.0 acest argument este dezactivat implicit și nu mai
       există. Pentru a activa această facilitate, directiva ini cgi.discard_path
       trebuie stabilită în <literal>1</literal>.
-     <para>
      </para>
     </listitem>
    </varlistentry>
@@ -314,9 +314,9 @@
       Dacă această opțiune e activată, modulul CGI va fi asamblat de asemenea cu susținerea
       FastCGI. Disponibil începând cu PHP 4.3.0
      </para>
+     <para>
       Începând cu PHP 5.3.0 acest argument nu mai există și este activat cu
       <literal>--enable-cgi</literal> în loc.
-     <para>
      </para>
     </listitem>
    </varlistentry>
