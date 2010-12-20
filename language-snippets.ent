@@ -1,5 +1,5 @@
 <!-- $Revision$ -->
-<!-- EN-Revision: 2c6338c3afa0b0be1c168259e95ca008730395dc Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 44aabb8f7e3cc8760d33b0ff60ffae362b9d1ed3 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -621,6 +621,9 @@ Această metodă <emphasis>poate</emphasis> fi apelată în mod static, dar va e
 o eroare <constant>E_STRICT</constant>.</para>'>
 
 <!-- FileSystem entities -->
+<!ENTITY fs.emits.warning.on.failure '<para xmlns="http://docbook.org/ns/docbook">
+În cazul eșecului este emis un <constant>E_WARNING</constant>.</para>'>
+
 <!ENTITY fs.validfp.all '<para xmlns="http://docbook.org/ns/docbook">
 Indicatorul fișierului trebuie să fie valid și trebuie să indice la un fișier
 deschis cu succes cu ajutorul <function>fopen</function> sau
