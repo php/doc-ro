@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 9fba3a1b2936f17a99c0790c09241a234f7fadb7 Maintainer: simionea Status: ready -->
 <!-- CREDITS: spooky -->
  <chapter xml:id="introduction" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <info><title>Introducere</title></info>
@@ -130,25 +130,19 @@
     </itemizedlist>
    </para>
    <para>
-    PHP poate fi utilizat pe toate sistemele de operare majore, inclusiv
-    Linux, multe variante Unix (inclusiv HP-UX, Solaris și OpenBSD),
-    Microsoft Windows, Mac OS X, RISC OS și probabil altele.
-    PHP de asemenea susține majoritatea server-elor web existente în
-    prezent. Acestea includ Apache, Microsoft Internet Information Server,
-    Personal Web Server, server-ele Netscape și iPlanet, server-ul Oreilly
-    Website Pro, Caudium, Xitami, OmniHTTPd și multe altele. Pentru
-    majoritatea server-elor PHP are modulul său, pentru altele susține
-    standardul CGI, PHP poate lucra în calitate de procesor CGI.
+    PHP poate fi <link linkend="install">utilizat</link> pe toate sistemele de
+    operare majore, inclusiv Linux, multe variante Unix (inclusiv HP-UX, Solaris
+    și OpenBSD), Microsoft Windows, Mac OS X, RISC OS și probabil altele. PHP de
+    asemenea susține majoritatea server-elor web existente în prezent. Acestea
+    includ Apache, IIS, și multe altele. De asemenea se includ și serverele ce
+    pot utiliza binarul PHP FastCGI, cum ar fi lighttpd și nginx. PHP
+    funcționează ca modul sau ca procesor CGI.
    </para>
    <para>
     Deci cu PHP aveți libertatea alegerii sistemului de operare și a
     serverului web. Ba chiar mai mult, aveți posibilitatea să utilizați
     programarea procedurală sau programarea orientată pe obiecte (POO),
-    sau o combinație a acestora. Cu toate că în PHP 4 nu sunt implementate
-    toate facilitățile POO, multe biblioteci de cod și aplicații mari
-    (inclusiv biblioteca PEAR) sunt scrise doar utilizând POO. PHP 5
-    repară toate deficiențele PHP 4, ce se referă la POO și prezintă un
-    model obiect-orientat deplin.
+    sau o combinație a acestora.
    </para>
    <para>
     Cu PHP nu sunteți limitat doar la afișarea HTML. Posibilitățile PHP
@@ -161,41 +155,15 @@
    </para>
    <para>
     Una dintre cele mai puternice și semnificative facilități ale PHP este
-    susținerea unui larg domeniu de baze de date. Scrierea unei pagini web
-    cu susținerea bazelor de date este incredibil de simplă. Următoarele
-    baze de date sunt susținute în prezent:
-    <blockquote>
-     <simplelist columns="3">
-      <member>Adabas D</member>
-      <member>dBase</member>
-      <member>Empress</member>
-      <member>FilePro (numai citire)</member>
-      <member>Hyperwave</member>
-      <member>IBM DB2</member>
-      <member>Informix</member>
-      <member>Ingres</member>
-      <member>InterBase</member>
-      <member>FrontBase</member>
-      <member>mSQL</member>
-      <member>Direct MS-SQL</member>
-      <member>MySQL</member>
-      <member>ODBC</member>
-      <member>Oracle (OCI7 și OCI8)</member>
-      <member>Ovrimos</member>
-      <member>PostgreSQL</member>
-      <member>SQLite</member>
-      <member>Solid</member>
-      <member>Sybase</member>
-      <member>Velocis</member>
-      <member>Unix dbm</member>
-     </simplelist>
-    </blockquote>
-    De asemenea avem o extensie de abstractizare a bazelor de date
-    (numită PDO) care vă permite să utilizați în mod transparent orice
-    bază de date susținută de această extensie. În plus, PHP susține ODBC,
-    Open Database Connection standard -- Standardul Deschis de Conectare la
-    Baze de Date, deci vă puteți conecta la orice altă bază de date ce
-    susține acest standard mondial.
+    susținerea unui <link linkend="refs.database">larg domeniu de baze de
+    date</link>. Scrierea unei pagini web ce accesează o bază de date este
+    incredibl de simplă utilizând una din extensiile de lucru cu baze de date
+    (de ex. pentru <link linkend="book.mysqli">mysql</link>), sau utilizând un
+    nivel de abstractizare precum <link linkend="book.pdo">PDO</link>, sau
+    conectarea la orice bază de date ce susține standardul "Open Database
+    Connection" cu ajutorul extensiei <link linkend="book.uodbc">ODBC</link>.
+    Alte baze de date pot utiliza <link linkend="book.curl">cURL</link> sau
+    <link linkend="book.sockets">socket-uri</link>, cum ar fi CouchDB.
    </para>
    <para>
     PHP de asemenea poate să "converseze" cu alte servicii utilizând protocoale
@@ -204,23 +172,26 @@
     să interacționați utilizând orice alt protocol. PHP susține WDDX - schimbul
     de date complexe între aproape toate limbajele de programare web.
     Vorbind despre interconectare, PHP susține instanțierea obiectelor Java
-    și utilizarea lor transparentă ca obiecte PHP. Puteți de asemenea să
-    utilizați extensia CORBA pentru a accesa obiecte la distanță.
+    și utilizarea lor transparentă ca obiecte PHP.
    </para>
    <para>
-    PHP posedă facilități foarte utile de procesare a textelor, de la expresii
-    regulare POSIX Extended sau Perl până la analiza documentelor XML.
-    Pentru analiza și accesarea documentelor XML, PHP 4 susține standardele
-    SAX și DOM, și pentru transformarea documentelor XML puteți utiliza
-    extensia XSLT. PHP 5 standardizează toate extensiile XML pe baza solidă a
-    libxml2 și extinde setul de facilități prin adăugarea susținerii SimpleXML
-    și XMLReader.
+    PHP posedă facilități de <link linkend="refs.basic.text">procesare a
+    textului</link> foarte utile, care includ expresii regulare compatibile cu
+    Perl (<link linkend="book.pcre">PCRE</link>) și multe extensii și
+    instrumente pentru <link linkend="refs.xml">accesarea și interpretarea
+    documentelor XML</link>. PHP standardizează toate extensiile XML pe baza
+    solidă a bibliotecii <link linkend="book.libxml">libxml2</link> și extinde
+    setul de facilități adăugând susținerea
+    <link linkend="book.simplexml">SimpleXML</link>,
+    <link linkend="book.xmlreader">XMLReader</link> și
+    <link linkend="book.xmlwriter">XMLWriter</link>.
    </para>
    <para>
-    Și, în sfârșit, avem multe alte extensii interesante:
-    funcții ale motoarelor de căutare mnoGoSearch, funcții
-    IRC Gateway, multe utilitare de compresie (gzip, bz2, zip),
-    conversii calendaristice, traduceri...
+    Există multe alte extensii interesante aranjate atât în ordine
+    <link linkend="extensions">alfabetică</link> cât și după
+    <link linkend="funcref">categorii</link>. De asemenea există extensii PECL
+    suplimentare care pot fi, sau pot să nu fie documentate în cadrul manualului
+    PHP, cum ar fi <link xlink:href="&url.xdebug;">XDebug</link>.
    </para>
    <para>
     După cum puteți vedea, această pagină nu este suficientă pentru a evidenția
