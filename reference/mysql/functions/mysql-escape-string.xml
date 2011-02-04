@@ -13,16 +13,16 @@
    <methodparam><type>string</type><parameter>unescaped_string</parameter></methodparam>
   </methodsynopsis>
   <para>
-   This function will escape the <parameter>unescaped_string</parameter>,
-   so that it is safe to place it in a <function>mysql_query</function>.
-   This function is deprecated.
+   Aceasta functie va escapa variabila <parameter>unescaped_string</parameter>,
+   asa incat sa poata fi folosita in functia <function>mysql_query</function> intr-un mod securizat.
+   Aceasta functie este va fi scoasa din uz.
   </para>
   <para>
-   This function is identical to <function>mysql_real_escape_string</function> 
-   except that <function>mysql_real_escape_string</function> takes a 
-   connection handler and escapes the string according to the current 
-   character set. <function>mysql_escape_string</function> does not take a
-   connection argument and does not respect the current charset setting.  
+   Aceasta functie este identica cu <function>mysql_real_escape_string</function> 
+   cu exceptia ca <function>mysql_real_escape_string</function> se foloseste de 
+  conexiunea curenta si escapeaza string-ul in fuctie de encodingul (charset-ul) setat. 
+    <function>mysql_escape_string</function> nu ia ca argument conexiunea curenta 
+   si nu respecta encodingul setat la momentul respectiv.  
   </para>
   &warn.deprecated.function-5-3-0.removed-6-0-0;
  </refsect1>
@@ -35,7 +35,7 @@
      <term><parameter>unescaped_string</parameter></term>
      <listitem>
       <para>
-       The string that is to be escaped.
+       String-ul ce urmeaza sa fie escapat.
       </para>
      </listitem>
     </varlistentry>
@@ -46,7 +46,7 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Returns the escaped string.
+   Returneaza string-ul escapat.
   </para>
  </refsect1>
 
@@ -65,14 +65,14 @@
       <row>
        <entry>5.3.0</entry>
        <entry>
-        This function now throws an E_DEPRECATED notice.
+        Aceasta functie returneaza o notificare de tip E_DEPRECATED.
        </entry>
       </row>
       <row>
        <entry>4.3.0</entry>
        <entry>
-        This function became deprecated, do not use this function. Instead, 
-        use <function>mysql_real_escape_string</function>.
+        Aceasta functie este scoasa din uz, nu o mai folositi. In locul ei, 
+        folositi <function>mysql_real_escape_string</function>.
        </entry>
       </row>
      </tbody>
@@ -85,7 +85,7 @@
   &reftitle.examples;
   <para>
    <example>
-    <title><function>mysql_escape_string</function> example</title>
+    <title>exemplu de uz al functiei <function>mysql_escape_string</function></title>
     <programlisting role="php">
 <![CDATA[
 <?php
@@ -109,8 +109,8 @@ Escaped string: Zak\'s Laptop
   &reftitle.notes;
   <note>
    <para>
-    <function>mysql_escape_string</function> does not escape
-    <literal>%</literal> and <literal>_</literal>.
+    <function>mysql_escape_string</function> nu escapeaza caracterele
+    <literal>%</literal> si <literal>_</literal>.
    </para>
   </note>
  </refsect1>
@@ -121,7 +121,7 @@ Escaped string: Zak\'s Laptop
    <simplelist>
     <member><function>mysql_real_escape_string</function></member>
     <member><function>addslashes</function></member>
-    <member>The <link linkend="ini.magic-quotes-gpc">magic_quotes_gpc</link> directive.</member>
+    <member>Directiva <link linkend="ini.magic-quotes-gpc">magic_quotes_gpc</link>.</member>
    </simplelist>
   </para>
  </refsect1>
