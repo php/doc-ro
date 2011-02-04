@@ -7,9 +7,6 @@
   <sect1 xml:id="debugger-about">
    <title>Despre debugging în PHP</title>
    <simpara>
-    PHP nu posedă o facilitate internă de debugging.
-   </simpara>
-   <simpara>
     PHP 4 nu posedă o facilitate internă de debugging.
     Însă puteți folosi unul dintre debugger-ele externe.
     <link xlink:href="&url.zend.ide;">Mediul Zend IDE</link> include
