@@ -8,7 +8,7 @@
   <refname>getallheaders</refname>
   <refpurpose>Obține toate antetele interpelării HTTP</refpurpose>
  </refnamediv>
-
+ 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
@@ -26,7 +26,7 @@
   </para>
   &apache.req.module;
  </refsect1>
-
+ 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
@@ -34,7 +34,7 @@
    &false; în caz de eșec.
   </para>
  </refsect1>
-
+ 
  <refsect1 role="changelog">
   &reftitle.changelog;
   <para>
@@ -52,7 +52,7 @@
        <entry>
         A devenit un pseudonim al <function>apache_request_headers</function>.
         Funcția, de fapt, a fost redenumită din cauza că funcționează numai cu
-	Apache.
+        Apache.
        </entry>
       </row>
      </tbody>
@@ -60,7 +60,7 @@
    </informaltable>
   </para>
  </refsect1>
-
+ 
  <refsect1 role="examples">
   &reftitle.examples;
   <para>
@@ -80,12 +80,12 @@ foreach (getallheaders() as $name => $value) {
    </example>
   </para>
  </refsect1>
-
+ 
  <refsect1 role="notes">
   &reftitle.notes;
   &note.apache.nsapi-module;
  </refsect1>
-
+ 
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>

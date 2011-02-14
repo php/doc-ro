@@ -3,62 +3,62 @@
 <!-- EN-Revision: ab6785b01ce1006e3a9761988575289f40c9b678 Maintainer: zamolxe Status: ready -->
 <!-- CREDITS: simionea -->
 <!-- splitted from ./index.xml, last change in rev 1.66 -->
-  <chapter xml:id="security.hiding" xmlns="http://docbook.org/ns/docbook">
-   <title>Ascunderea PHP</title>
-   <para>
-    În general, securitatea prin obscuritate este una dintre cele mai slabe
-    forme de securitate. Dar în unele cazuri se dorește orice sporire, cât de
-    mică a securității.
-   </para>
-   <para>
-    Câteva tehnici simple pot ajuta la ascunderea <acronym>PHP</acronym>,
-    posibil încetinind un atacator care încearcă să descopere puncte slabe în
-    sistemul dumneavoastră. Stabilind expose_php = <literal>off</literal> în
-    fișierul &php.ini;, puteți reduce cantitatea de informații trimisă de server.
-   </para>
-   <para>
-    O altă tactică este configurarea serverelor web, cum ar fi Apache să
-    prelucreze și să interpreteze diferite tipuri de fișiere cu
-    <acronym>PHP</acronym>, fie printr-o directivă &htaccess;, fie direct în
-    configurația Apache. Apoi puteți utiliza extensii de fișiere, care să inducă
-    în eroare:
-    <example>
-     <title>Ascunderea PHP ca alt limbaj de scripting</title>
-     <programlisting role="apache-conf">
+<chapter xml:id="security.hiding" xmlns="http://docbook.org/ns/docbook">
+ <title>Ascunderea PHP</title>
+ <para>
+  În general, securitatea prin obscuritate este una dintre cele mai slabe
+  forme de securitate. Dar în unele cazuri se dorește orice sporire, cât de
+  mică a securității.
+ </para>
+ <para>
+  Câteva tehnici simple pot ajuta la ascunderea <acronym>PHP</acronym>,
+  posibil încetinind un atacator care încearcă să descopere puncte slabe în
+  sistemul dumneavoastră. Stabilind expose_php = <literal>off</literal> în
+  fișierul &php.ini;, puteți reduce cantitatea de informații trimisă de server.
+ </para>
+ <para>
+  O altă tactică este configurarea serverelor web, cum ar fi Apache să
+  prelucreze și să interpreteze diferite tipuri de fișiere cu
+  <acronym>PHP</acronym>, fie printr-o directivă &htaccess;, fie direct în
+  configurația Apache. Apoi puteți utiliza extensii de fișiere, care să inducă
+  în eroare:
+  <example>
+   <title>Ascunderea PHP ca alt limbaj de scripting</title>
+   <programlisting role="apache-conf">
 <![CDATA[
 # Face codul PHP să arate ca alte limbaje de programare web
 AddType application/x-httpd-php .asp .py .pl
 ]]>
-     </programlisting>
-    </example>
-    Sau ascunderea lui completă:
-    <example>
-     <title>Utilizarea tipurilor necunoscute în calitate de extensii PHP</title>
-     <programlisting role="apache-conf">
+   </programlisting>
+  </example>
+  Sau ascunderea lui completă:
+  <example>
+   <title>Utilizarea tipurilor necunoscute în calitate de extensii PHP</title>
+   <programlisting role="apache-conf">
 <![CDATA[
 # Face codul PHP să aibă extensii ciudate
 AddType application/x-httpd-php .bop .foo .133t
 ]]>
-     </programlisting>
-    </example>
-    Sau deghizarea drept cod <acronym>HTML</acronym>, dar acest lucru are un
-    impact minor asupra performanței, deoarece tot codul
-    <acronym>HTML</acronym> va fi procesat de motorul <acronym>PHP</acronym>:
-    <example>
-     <title>Folosirea tipurilor HTML pentru extensiile PHP</title>
-     <programlisting role="apache-conf">
+   </programlisting>
+  </example>
+  Sau deghizarea drept cod <acronym>HTML</acronym>, dar acest lucru are un
+  impact minor asupra performanței, deoarece tot codul
+  <acronym>HTML</acronym> va fi procesat de motorul <acronym>PHP</acronym>:
+  <example>
+   <title>Folosirea tipurilor <acronym>HTML</acronym> pentru extensiile PHP</title>
+   <programlisting role="apache-conf">
 <![CDATA[
 # Face codul PHP să arate ca HTML
 AddType application/x-httpd-php .htm .html
 ]]>
-     </programlisting>
-    </example>
-    Pentru ca această modificare să funcționeze eficient, trebuie să redenumiți
-    toate fișierele <acronym>PHP</acronym> cu extensiile de mai sus. În timp ce
-    aceasta reprezintă o formă a securității prin obscuritate, este o măsură de
-    prevenire minoră, cu mici neajunsuri.
-   </para>
-  </chapter>
+   </programlisting>
+  </example>
+  Pentru ca această modificare să funcționeze eficient, trebuie să redenumiți
+  toate fișierele <acronym>PHP</acronym> cu extensiile de mai sus. În timp ce
+  aceasta reprezintă o formă a securității prin obscuritate, este o măsură de
+  prevenire minoră, cu mici neajunsuri.
+ </para>
+</chapter>
 
 
 <!-- Keep this comment at the end of the file
