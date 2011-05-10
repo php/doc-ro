@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 300373 $ -->
+<!-- $Revision$ -->
 <!-- EN-Revision: 61f453fe08c7bf71f921c5037891ca6aea9221f1 Maintainer: simionea Status: ready -->
 
 <chapter xml:id="amqp.setup" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">

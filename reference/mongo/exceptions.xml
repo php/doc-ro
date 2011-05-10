@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 294311 $ -->
+<!-- $Revision$ -->
 <!-- EN-Revision: bb9c7be2ef17f60fe6f6d9de446cdd851874850b Maintainer: simionea Status: ready -->
 
 <part xml:id="mongo.exceptions" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
