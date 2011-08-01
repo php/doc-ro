@@ -1338,7 +1338,7 @@ $obj->getCommentName('');
     <simpara>
      <link linkend="ref.json">JSON</link>
      - implementează formatul de schimb al datelor JavaScript Object Notation
-     (JSON) &mdash; Notarea Obiectelor în JavaScript. Această extensie este
+     (JSON) — Notarea Obiectelor în JavaScript. Această extensie este
      activată implicit.
     </simpara>
    </listitem>

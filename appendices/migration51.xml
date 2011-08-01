@@ -574,7 +574,7 @@ class test {
     Probabil primul lucru pe care îl veți observa când veți descărca PHP 5.1.x
     este că câteva extensii mai vechi au dispărut. Acele extensii care
     deocamdată sunt menținute activ sunt disponibile în PHP Extension
-    Community Library (PECL) &mdash; Biblioteca Comunității de Extensii PHP, la
+    Community Library (PECL) — Biblioteca Comunității de Extensii PHP, la
     adresa <link xlink:href="&url.pecl;">&url.pecl;</link>.
    </para>
    <table>
@@ -753,7 +753,7 @@ class test {
   <section xml:id="migration51.databases-pdo">
    <title>Prezentarea generală a PDO</title>
    <para>
-    <link linkend="intro.pdo">PHP Data Objects (PDO) &mdash; Obiectele de Date
+    <link linkend="intro.pdo">PHP Data Objects (PDO) — Obiectele de Date
     PHP</link> au fost introduse ca extensii PECL în PHP 5.0 și au devenit
     parte componentă a distributivului PHP în versiunea PHP 5.1.x. Extensia PDO
     furnizează o interfață consistentă pentru acces la baze de date și este

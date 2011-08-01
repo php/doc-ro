@@ -24,7 +24,7 @@
     fost creat de către Rasmus Lerdorf în 1995, inițial doar ca
     un simplu set de scripturi Perl pentru a urmări accesele
     la rezumatul său online. El a denumit acest set de scripturi
-    'Personal Home Page Tools &mdash; Instrumente pentru paginile
+    'Personal Home Page Tools — Instrumente pentru paginile
     personale'. Deoarece era necesară mai multă funcționalitate,
     Rasmus a scris o implementare mult mai largă în C, care era
     în stare să comunice cu baze de date și dădea posibilitate
@@ -37,7 +37,7 @@
    </para>
    <para>
     PHP/FI, care se descifra ca Personal Home Page / Forms Interpreter
-    &mdash; Interpretor al paginilor personale / al formularelor,
+    — Interpretor al paginilor personale / al formularelor,
     includea unele funcționalități de bază ale PHP pe care îl cunoaștem
     astăzi. El poseda variabile asemănătoare cu cele din Perl, interpretare
     automată a variabilelor din formulare și sintaxă inclusă în HTML.
@@ -114,7 +114,7 @@
     Noul limbaj a fost lansat sub un nou nume, care excludea implicarea
     unei utilizări personale limitate, pe care o avea numele PHP/FI 2.0.
     El a fost numit pur și simplu 'PHP', sensul fiind un acronim recursiv
-    - PHP: Hypertext Preprocessor &mdash; Preprocesor al Hipertextului.
+    - PHP: Hypertext Preprocessor — Preprocesor al Hipertextului.
    </para>
    <para>
     Spre sfîrșitul anului 1998, PHP a atins un număr de zeci de

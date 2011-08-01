@@ -44,7 +44,7 @@
   <para>
    Formatul manualului potrivit pentru cele mai multe platforme (sisteme de
    operare) este versiunea HTML. Aceasta este oferită în două modalități
-   &mdash; sub forma unui fișier HTML unic și sub forma unui pachet din mai
+   — sub forma unui fișier HTML unic și sub forma unui pachet din mai
    multe fișiere individuale pentru fiecare secțiune (ceea ce rezultă într-o
    colecție de câteva mii de fișiere). Noi furnizăm aceste versiuni în formă
    comprimată, deci este necesară o utilită de decompresie pentru a căpăta
@@ -351,7 +351,7 @@ int strlen ( string $string )
    Dacă în acest manual este găsită o eroare, în orice limbă, vă rugăm să o
    raportați folosind sistemul de erori la adresa
    <link xlink:href="&url.php.bugs;">&url.php.bugs;</link>.
-   Clasificați eroarea ca <literal>"Documentation Problem"</literal> &mdash;
+   Clasificați eroarea ca <literal>"Documentation Problem"</literal> —
    "Problemă în documentație". Toate problemele ce țin de documentație,
    inclusiv cele ce țin de formatele manualului, trebuie să fie înaintate în
    calitate de rapoarte de erori.
@@ -391,7 +391,7 @@ int strlen ( string $string )
    Acest manual este scris în <acronym>XML</acronym> folosind <link
    xlink:href="&url.docbook.xml;">DocBook XML DTD</link>, folosind <link
    xlink:href="&url.phd;"><acronym>PhD</acronym></link> (The [PH]P based
-   [D]ocBook renderer &mdash; interpretorul DocBook bazat pe PHP)
+   [D]ocBook renderer — interpretorul DocBook bazat pe PHP)
    pentru întreținere și formatare.
   </para>
   <para>

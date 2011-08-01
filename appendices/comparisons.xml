@@ -7,7 +7,7 @@
   Tabelele următoare demonstrează comportamentul
   <link linkend="language.types">tipurilor</link> și
   <link linkend="language.operators.comparison">operatorilor de comparare</link>
-  din PHP, pentru ambele tipuri de comparații &mdash; libere și stricte. Acest
+  din PHP, pentru ambele tipuri de comparații — libere și stricte. Acest
   supliment de asemenea are legătură și cu secțiunea din manual despre
   <link linkend="language.types.type-juggling">jonglarea cu tipurile</link>.
   Inspirația a fost adusă de diverse comentarii ale utilizatorilor și de lucrările
