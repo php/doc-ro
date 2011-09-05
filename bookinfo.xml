@@ -6,7 +6,7 @@
 
 <info xml:id="bookinfo" xmlns="http://docbook.org/ns/docbook">
  &frontpage.authors;
- <pubdate>&php.build-date;</pubdate>
+ <pubdate><?dbtimestamp format="Y-m-d"?></pubdate>
  &frontpage.editors;
 
  <authorgroup xml:id="translators">
@@ -33,14 +33,14 @@
  </authorgroup>
 
  <copyright>
-  <year>1997-&php.copyright-year;</year>
+  <year>1997-<?dbtimestamp format="Y"?></year>
   <holder>Grupul de Documentare PHP</holder>
  </copyright>
 
  <legalnotice xml:id="copyright" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Copyright</title>
   <simpara>
-   Copyright © 1997 - &php.copyright-year; de către Grupul de Documentare PHP.
+   Copyright © 1997 - <?dbtimestamp format="Y"?> de către Grupul de Documentare PHP.
    Acest material poate fi distribuit numai în baza termenelor și condițiilor
    stabilite în documentul "Creative Commons Attribution 3.0 License"
    sau ulterioară. O copie a licenței
