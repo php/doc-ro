@@ -17,7 +17,7 @@
   &reftitle.install;
   <para>
    Pentru informații despre instalarea PHP pe Apache vedeți
-   <link linkend='install'>capitolul despre instalare</link>.
+   <link linkend="install">capitolul despre instalare</link>.
   </para>
  </section>
  <!-- }}} -->

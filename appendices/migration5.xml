@@ -10,7 +10,7 @@
    <link linkend="migration53">5.3.x</link>.
   </para>
 
-  <section xml:id='migration5.changes'>
+  <section xml:id="migration5.changes">
    <title>Ce s-a schimbat în PHP 5.0.x</title>
    <para>
     PHP 5 și motorul integrat Zend Engine 2 au îmbunătățit considerabil performanța
@@ -873,7 +873,7 @@ Action application/x-httpd-php "/php/php-cgi.exe"
   </section>
 
 
-  <section xml:id='migration5.oop'>
+  <section xml:id="migration5.oop">
    <title>Noul Model de Obiecte</title>
    <para>
     În PHP 5 este un nou Model de Obiecte. Manipularea obiectelor în PHP a
@@ -906,7 +906,7 @@ Action application/x-httpd-php "/php/php-cgi.exe"
    </para>
   </section>
 
-  <section xml:id='migrating5.errorrep'>
+  <section xml:id="migrating5.errorrep">
    <title>Raportarea erorilor</title>
    <para>
     Începând cu PHP 5 este disponibilă constanta de raportare a erorilor
