@@ -3,7 +3,7 @@
 
 <!ENTITY livedocs.author 'Autorii:<br />'>
 <!ENTITY livedocs.editors 'Redactat de:<br />'>
-<!ENTITY livedocs.copyright 'Copyright &copy; %s %s'>
+<!ENTITY livedocs.copyright 'Copyright © %s %s'>
 <!ENTITY livedocs.published 'Publicat la: %s'>
 <!ENTITY livedocs.noversion 'nu există informație despre versiune, poate fi numai în SVN'>
 <!ENTITY livedocs.new-in-vers-5 'Nou în PHP 5'>
