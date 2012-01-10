@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 8574a2c1bd1dee8283a9d05fc0bd21c36efd237b Maintainer: radical Status: ready -->
+<!-- EN-Revision: 4e687b6db50ab3c9310d694cb460b531e486fa6d Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
  <sect1 xml:id="language.oop5.decon" xmlns="http://docbook.org/ns/docbook">
   <title>Constructori și Destructori</title>
@@ -96,8 +96,8 @@ class Bar {
    <para>
     PHP 5 introduce un concept de distrugere a unui obiect similar cu cel
     regăsit în alte limbaje de programare orientate pe obiecte (C++).
-    Metoda de distrugere va fi apelată imediat ce toate referințele către
-    un anumit obiect dispar sau atunci când obiectul este distrus explicit.
+    Metoda de distrugere va fi apelată imediat ce nu mai sunt careva referințe
+    către un anumit obiect sau în orice ordine în timpul secvenței de deconectare.
    </para>
    <example>
     <title>Exemplu destructor</title>
