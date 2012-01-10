@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 2fba385e29d69008ab48f031d86927e545c76de8 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 53b6f116ed5f8649ca540c38dfe0ce30619d0dd9 Maintainer: simionea Status: ready -->
 
  <appendix xml:id="reserved" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Lista cuvintelor rezervate</title>
@@ -315,7 +315,7 @@
       <term><classname>Directory</classname></term>
       <listitem>
        <simpara>
-        Clasa de la care se instanțiază <link linkend="class.dir">dir</link>.
+        Creată de <function>dir</function>.
        </simpara>
       </listitem>
      </varlistentry>
@@ -369,18 +369,13 @@
 
     <simpara>
      Clasa predefinită finală <classname>Closure</classname> a fost introdusă în
-     PHP 5.3.0. Ea este utilizată pentru implementarea internă a <link
-     linkend="functions.anonymous">funcțiilor anonime</link>.
+     PHP 5.3.0. Ea este utilizată pentru a reprezenta <link
+     linkend="functions.anonymous">funcții anonime</link>.
     </simpara>
     <simpara>
-     Clasa are un constructor ce interzice crearea manuală a obiectului
-     (emite o eroare <constant>E_RECOVERABLE_ERROR</constant>) și apelarea
-     metodei <literal>__invoke</literal> cu ajutorul <link
-     linkend="language.oop5.magic.invoke">magiei de apelare</link>.
+     Pentru informații suplimentare accesați <link linkend="class.closure">pagina clasei</link>.
     </simpara>
-
    </sect2>
-
 
    <sect2 xml:id="reserved.classes.special">
     <title>Clase speciale</title>
