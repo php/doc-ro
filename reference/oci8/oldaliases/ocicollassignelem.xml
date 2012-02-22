@@ -4,7 +4,7 @@
 <refentry xml:id="function.ocicollassignelem" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>ocicollassignelem</refname>
-  <refpurpose>&Alias; <xref linkend="function.oci-collection-element-assign" /></refpurpose>
+  <refpurpose>&Alias; <function>OCI-Collection::assignElem</function></refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
