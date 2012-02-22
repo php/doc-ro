@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: b827a32fad51ef9a8886f32576b0cb968ccc7497 Maintainer: simionea Status: ready -->
 <refentry xml:id="function.ocicollassignelem" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>ocicollassignelem</refname>
@@ -9,9 +9,7 @@
 
  <refsect1 role="description">
   &reftitle.description;
-  <simpara>
-   &info.function.alias; <xref linkend="function.oci-collection-element-assign" />.
-  </simpara>
+  &warn.deprecated.alias-5-4-0;
  </refsect1>
 
 </refentry>

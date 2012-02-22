@@ -52,17 +52,17 @@ $obj = new ClasaExtinsa();
    </example>
    <para>
     Pentru compatibilitate cu versiunile mai vechi, dacă PHP 5 nu găsește
-    funcția <function>__construct</function> pentru o clasă, va căuta
+    funcția <link linkend="object.construct">__construct()</link> pentru o clasă, va căuta
     în formatul vechi o funcție care are chiar numele clasei.
     Drept urmare, singura neconcordanță în compatibilitate va fi atunci când
-    ați folosit în clase funcția <function>__construct</function> pentru
+    ați folosit în clase funcția <link linkend="object.construct">__construct()</link> pentru
     alte scopuri decât inițializarea obiectului.
    </para>
    <para>
     Spre deosebire de alte metode, PHP nu va genera un mesaj de eroare de nivel
-    <constant>E_STRICT</constant> atunci când <function>__construct</function>
+    <constant>E_STRICT</constant> atunci când <link linkend="object.construct">__construct()</link>
     este suprascrisă cu alți parametri decât cei ai metodei
-    <function>__construct</function> din clasa-părinte.
+    <link linkend="object.construct">__construct()</link> din clasa-părinte.
    </para>
    <para>
     Începând cu PHP 5.3.3, metodele cu același nume ca și ultimul element al

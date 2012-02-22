@@ -4,14 +4,12 @@
 <refentry xml:id="function.ocisavelobfile" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>ocisavelobfile</refname>
-  <refpurpose>&Alias; <xref linkend="function.oci-lob-import" /></refpurpose>
+  <refpurpose>&Alias; <function>OCI-Lob::import</function></refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
-  <simpara>
-   &info.function.alias; <xref linkend="function.oci-lob-import" />.
-  </simpara>
+  &warn.deprecated.alias-5-4-0;
  </refsect1>
 
 </refentry>
