@@ -28,7 +28,7 @@
       <para>
        Implicit, resursele nu sunt eliberate, folosind opțiunea
        <constant>OCI_LOB_BUFFER_FREE</constant> se poate face explicit.
-       Folosește această pțiune numai dacă știi ce faci - pentru următoarea operațiune de citire/scriere
+       Folosește această opțiune numai dacă știi ce faci - pentru următoarea operațiune de citire/scriere
        în LOB va fi necesar inițializarea unei
        noi zone-tampon. Este recomandată folosirea opțiunii
        <constant>OCI_LOB_BUFFER_FREE</constant> atunci când nu 
