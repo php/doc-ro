@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: a2048ed42fe3df85010149ae85e9e01e574f274d Maintainer: radical Status: ready -->
+<!-- EN-Revision: d6105d5f559885cd3ecc6d03586bc90151d29ab6 Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
  <sect1 xml:id="language.oop5.autoload" xmlns="http://docbook.org/ns/docbook">
   <title>Autoîncărcarea claselor</title>
@@ -12,11 +12,19 @@
   </para>
   <para>
    În PHP 5, acest lucru nu mai este necasar. Se poate defini funcția
-   __autoload care este apelată automat în cazul în care doriți să folosiți
-   o clasă care nu a fost încă definită. Apelul la această funcție
-   oferă script-ului o ultimă șansă de a defini clasa pentru a nu
-   termina cu eroare.
+   <function>__autoload</function> care este apelată automat în cazul
+   în care doriți să folosiți o clasă care nu a fost încă definită.
+   Apelul la această funcție oferă script-ului o ultimă șansă de a defini
+   clasa pentru a nu termina cu eroare.
   </para>
+  <tip>
+   <para>
+    <function>spl_autoload_register</function> oferă o alternativă mai flexibilă
+    pentru autoîncărcarea claselor. Din acest motiv utilizarea
+    <function>__autoload</function> nu este recomandată și poate fi dezaprobată
+    sau eliminată în viitor.
+   </para>
+  </tip>
   <note>
    <para>
     Excepțiile aruncate în __autoload nu pot fi captate într-un bloc

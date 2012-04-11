@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 9491eaf09cf62617ebf3921a42e51e5291010b6d Maintainer: radical Status: ready -->
+<!-- EN-Revision: 84fee8e038581781a81abd8a20809d913700c840 Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
  <sect1 xml:id="language.oop5.visibility" xmlns="http://docbook.org/ns/docbook">
   <title>Vizibilitatea</title>
@@ -18,8 +18,7 @@
    <title>Vizibilitatea proprietăților</title>
    <para>
    Proprietățile unei clase trebuie definite ca public, private, sau protected.
-   Dacă sunt declarate utilizând <emphasis>var</emphasis> fără indicarea în mod
-   explicit a unui cuvânt-cheie de vizibilitate, atunci proprietatea va fi
+   Dacă sunt declarate utilizând <emphasis>var</emphasis>, proprietatea va fi
    definită ca publică.
    </para>
    <para>

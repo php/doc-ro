@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: radical Status: ready -->
+<!-- EN-Revision: f0550025342228d4a7e6caa0edd2ec9d6ff63a00 Maintainer: radical Status: ready -->
  <sect1 xml:id="language.oop5.abstract" xmlns="http://docbook.org/ns/docbook">
   <title>Clase Abstracte</title>
 
   <para>
-   PHP 5 introduce clase și metode abstracte. Nu este permisă crearea unei
-   instanțe pentru o clasă care a fost definită drept abstractă. Orice clasă
-   care conține cel puțin o metodă abstractă trebuie să fie și ea tot abstractă.
-   Metodele abstracte declară doar semnătura unei metode și nu pot
-   defini o implementare concretă.
+   PHP 5 introduce clase și metode abstracte. Clasele definite ca abstracte nu
+   pot fi instanțiate și orice clasă care conține cel puțin o metodă abstractă
+   trebuie să fie și ea abstractă. Metodele abstracte declară doar semnătura
+   unei metode și nu pot defini o implementare concretă.
   </para>
 
   <para>
    La moștenirea dintr-o clasă abstractă, toate metodele abstracte din
-   părinte trebuie implementate; în plus, aceste metode trebuie definite cu o 
+   părinte trebuie implementate; în plus, aceste metode trebuie definite cu o
    <link linkend="language.oop5.visibility">vizibilitate</link> identică
    (sau mai puțin restrictivă). De exemplu,
    dacă metoda este definită 'protected', implementarea concretă
    trebuie să definească funcția 'protected' sau 'public', dar nu 'private'.
+   În plus, semnăturile metodelor trebuie să corespundă una alteia, adică
+   sugestia tipului și numărul argumentelor necesare trebuie să fie aceleași.
+   Aceasta la fel se aplică și la constructori începând cu PHP 5.4. Înainte de
+   5.4 semnăturile constructorilor puteau să difere.
   </para>
 
   <example>

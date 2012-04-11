@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 28d123ef985df5a7b86f3601e035968ee1b3b142 Maintainer: radical Status: ready -->
+<!-- EN-Revision: a9b26c34e481fa948bcc7d75b73b441605142dd7 Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
  <sect1 xml:id="language.oop5.decon" xmlns="http://docbook.org/ns/docbook">
   <title>Constructori și Destructori</title>
@@ -127,7 +127,8 @@ $obj = new ClassaCuDestructor();
    </para>
    <para>
     Destructorul este apelat chiar dacă scriptul este terminat cu apelul la funcția
-    <function>exit</function>. Apelând <function>exit</function> într-un destructor
+    <link linkend="function.exit"><literal>exit</literal></link>. Apelând
+    <link linkend="function.exit"><literal>exit</literal></link> într-un destructor
     va preveni apelarea tuturor rutinelor de terminare din scriptul respectiv.
    </para>
    <note>
