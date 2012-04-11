@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- EN-Revision: 7207fb703d629604d393125cf665340d29420c10 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: d07d738896974299a078d3295c7d9d950d07e10a Maintainer: simionea Status: ready -->
 
 <!-- Part titles used mostly in manual.xml itself -->
 <!ENTITY PHPManual                                "Manualul PHP">
@@ -48,7 +48,11 @@
 <!ENTITY Internals                                "Interiorul PHP și a motorului Zend">
 <!ENTITY Internals2                               "Nucleul PHP: Ghidul unui hacker spre motorul Zend">
 <!ENTITY ZendAPI                                  "API al Zend: Aprofundare în nucleul PHP">
-<!ENTITY FunctionIndex                            "Indicele funcțiilor">
+<!ENTITY IndexListing                             "Listingul-indice">
+<!ENTITY FunctionListing                          "Listingul funcțiilor și metodelor">
+<!ENTITY FunctionListingDescription               "Lista tuturor funcțiilor și metodelor din manual">
+<!ENTITY ExampleListing                           "Listingul exemplelor">
+<!ENTITY ExampleListingDescription                "Lista tuturor exemplelor din manual">
 <!ENTITY CHMEdition                               "Ediția în formatul HTML Help">
 <!ENTITY ReservedConstants                        "Constante predefinite">
 <!ENTITY MissingStuff                             "Lucruri care lipsesc">
