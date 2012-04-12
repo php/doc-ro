@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
+<!-- $Author$ -->
 <!-- EN-Revision: 0d604bbc9d3b741d53e7fac26f5b24c306751e9a Maintainer: radical Status: ready -->
 <refentry xml:id="oci-lob.writetemporary" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>

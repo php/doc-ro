@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
+<!-- $Author$ -->
 <!-- EN-Revision: 5a37ef5632e7baa07120907ed35822c07794f450 Maintainer: simionea Status: ready -->
 <!-- CREDITS: radical -->
 <refentry xml:id="function.json-encode" xmlns="http://docbook.org/ns/docbook">
