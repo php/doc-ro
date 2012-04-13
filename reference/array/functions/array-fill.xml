@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 1bdcb1b9fdcaf92904fc4fdb0d89e1a37159665e Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.array-fill" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -35,7 +35,12 @@
      <listitem>
       <para>
        Primul indice al tabloului întors.
-       Susține doar indici non-negativi.
+      </para>
+      <para>
+       Dacă <parameter>start_index</parameter> este negativ, primul indice al
+       tabloului întors va fi <parameter>start_index</parameter> și următorii
+       indici vor începe de la zero
+       (vedeți <link linkend="function.array-fill.example.basic">exemplul</link>).
       </para>
      </listitem>
     </varlistentry>
@@ -44,7 +49,8 @@
      <term><parameter>num</parameter></term>
      <listitem>
       <para>
-       Numărul elementelor pentru a fi inserate
+       Numărul elementelor pentru a fi inserate.
+       Trebuie să fie mai mare decât zero.
       </para>
      </listitem>
     </varlistentry>
@@ -80,13 +86,13 @@
  <refsect1 role="examples">
   &reftitle.examples;
   <para>
-   <example>
+   <example xml:id="function.array-fill.example.basic">
     <title>Exemplu <function>array_fill</function></title>
     <programlisting role="php">
 <![CDATA[
 <?php
 $a = array_fill(5, 6, 'banana');
-$b = array_fill(-2, 2, 'pear');
+$b = array_fill(-2, 4, 'pear');
 print_r($a);
 print_r($b);
 ?>
@@ -108,6 +114,8 @@ Array
 (
     [-2] => pear
     [0] => pear
+    [1] => pear
+    [2] => pear
 )
 ]]>
     </screen>

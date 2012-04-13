@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 1bbbd77ee0ebadbf1a4f695e1052b375f97a41c5 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: eb169785f167d21344e5114f0ba379101ec8232d Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/datetime.xml, last change in rev 1.8 -->
 <refentry xml:id="function.strtotime" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -14,7 +14,7 @@
   <methodsynopsis>
    <type>int</type><methodname>strtotime</methodname>
    <methodparam><type>string</type><parameter>time</parameter></methodparam>
-   <methodparam choice="opt"><type>int</type><parameter>now</parameter></methodparam>
+   <methodparam choice="opt"><type>int</type><parameter>now</parameter><initializer>time()</initializer></methodparam>
   </methodsynopsis>
   <simpara>
    Funcția așteaptă un șir de caractere conținând un format de dată engleză și
@@ -24,11 +24,12 @@
    parametrul <parameter>now</parameter> nu este furnizat.
   </simpara>
   <para>
-   Această funcție va utiliza variabila de mediu <envar>TZ</envar> (dacă este
-   disponibilă) pentru a calcula timestamp-ul. Începând cu PHP 5.1.0 există
-   metode mai facile de a defini fusul orar, care este utilizat de toate
-   funcțiile de dată/oră. Acest proces este explicat în pagina cu descrierea
-   funcției <function>date_default_timezone_get</function>.
+   Fiecare parametru al acestei funcții utilizează fusul orar implicit, afară de
+   cazul când fusul orar este specificat în acel parametru. Fiți atenți să nu
+   utilizați diferite fusuri orare în fiecare parametru, afară de cazul când
+   anume așa se intenționează.
+   Vedeți <function>date_default_timezone_get</function> pentru diferite metode
+   de a defini fusul orar implicit.
   </para>
  </refsect1>
 
@@ -197,6 +198,11 @@ if (($timestamp = strtotime($str)) === false) {
     Windows, unele distributive Linux, și alte câteva sisteme de operare. Însă
     PHP 5.1.0 și versiunile ulterioare depășesc această limitare.
    </para>
+   <para>
+    Pentru versiunile PHP pe 64 de biți domeniul valid a unui timestamp este
+    practic infinit, deoarece pe 64 de biți se pot reprezenta aproximativ 293
+    milioane de ani în ambele direcții.
+   </para>
   </note>
   <note>
    <para>
@@ -213,13 +219,23 @@ if (($timestamp = strtotime($str)) === false) {
     <methodname>DateTime::createFromFormat</methodname> atunci când este posibil.
    </para>
   </note>
+  <note>
+   <para>
+    Utilizarea acestei funcții pentru operații matematice nu este recomandabilă.
+    Este mai bine de a utiliza <methodname>DateTime::add</methodname> și
+    <methodname>DateTime::sub</methodname> în PHP 5.3 și ulterior, sau
+    <methodname>DateTime::modify</methodname> în PHP 5.2.
+   </para>
+  </note>
  </refsect1>
 
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>
    <simplelist>
+    <member><link linkend="datetime.formats">Formatele datei și orei</link></member>
     <member><methodname>DateTime::createFromFormat</methodname></member>
+    <member><function>checkdate</function></member>
     <member><function>strptime</function></member>
    </simplelist>
   </para>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: a9b26c34e481fa948bcc7d75b73b441605142dd7 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/apache.xml, last change in rev 1.20 -->
 <refentry xml:id="function.apache-child-terminate" xmlns="http://docbook.org/ns/docbook">
@@ -37,6 +37,31 @@
   </para>
  </refsect1>
 
+ <refsect1 role="changelog">
+  &reftitle.changelog;
+  <para>
+   <informaltable>
+    <tgroup cols="2">
+     <thead>
+      <row>
+       <entry>&Version;</entry>
+       <entry>&Description;</entry>
+      </row>
+     </thead>
+     <tbody>
+      <row>
+       <entry>5.4.0</entry>
+       <entry>
+        Această funcție a devenit disponibilă în FastCGI. Anterior ea era
+        susținută doar când PHP era instalat ca modul Apache.
+       </entry>
+      </row>
+     </tbody>
+    </tgroup>
+   </informaltable>
+  </para>
+ </refsect1>
+
  <refsect1 role="notes">
   &reftitle.notes;
   &note.no-windows;
@@ -46,7 +71,7 @@
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function>exit</function></member>
+    <member><link linkend="function.exit"><literal>exit</literal></link></member>
    </simplelist>
   </para>
  </refsect1>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: e84c1f221cc8ad527ec2e37e9dd50e0d85499668 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.localtime" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -44,51 +44,50 @@
        <itemizedlist>
         <listitem>
          <simpara>
-          "tm_sec" - secunde
+          "tm_sec" - secunde, de la <literal>0</literal> până la <literal>59</literal>
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          "tm_min" - minute
+          "tm_min" - minute, de la <literal>0</literal> până la <literal>59</literal>
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          "tm_hour" - ora
+          "tm_hour" - ore, de la <literal>0</literal> până la <literal>23</literal>
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          "tm_mday" - ziua lunii
-         </simpara>
-         <simpara>
-          Lunile sunt de la 0 (Ian) până la 11 (Dec) și zilele săptămânii sunt
-          de la 0 (Duminică) până la 6 (Sâmbătă).
+          "tm_mday" - ziua lunii, de la <literal>1</literal> până la <literal>31</literal>
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          "tm_mon" - luna în an, începând cu 0 pentru Ianuarie
+          "tm_mon" - luna în an, de la <literal>0</literal> (Ian) până la <literal>11</literal> (Dec)
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          "tm_year" - Numărul de ani de la 1900
+          "tm_year" - numărul de ani începând cu 1900
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          "tm_wday" - Ziua din săptămână
+          "tm_wday" - ziua din săptămână, de la <literal>0</literal> (Duminică) până la <literal>6</literal> (Sâmbătă)
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          "tm_yday" - Ziua din an
+          "tm_yday" - ziua din an, de la <literal>0</literal> până la <literal>365</literal>
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          "tm_isdst" - Dacă timpul de vară este în vigoare
+          "tm_isdst" - este în vigoare timpul de vară?
+         </simpara>
+         <simpara>
+          Pozitiv dacă da, <literal>0</literal> dacă nu, negativ dacă nu se cunoaște.
          </simpara>
         </listitem>
        </itemizedlist>
@@ -175,6 +174,16 @@ Array
    </example>
   </para>
  </refsect1>
+
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>getdate</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
+
 </refentry>
 
 <!-- Keep this comment at the end of the file

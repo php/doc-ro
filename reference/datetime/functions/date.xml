@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 12bf2afc48d28a80298b70facdfff3a3654b0dd1 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.date" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
@@ -14,7 +14,7 @@
   <methodsynopsis>
    <type>string</type><methodname>date</methodname>
    <methodparam><type>string</type><parameter>format</parameter></methodparam>
-   <methodparam choice="opt"><type>int</type><parameter>timestamp</parameter></methodparam>
+   <methodparam choice="opt"><type>int</type><parameter>timestamp</parameter><initializer>time()</initializer></methodparam>
   </methodsynopsis>
   <para>
    Întoarce un string formatat în conformitate cu string-ul de formatare dat,
@@ -411,7 +411,7 @@ echo date(DATE_ATOM, mktime(0, 0, 0, 7, 1, 2000));
 <![CDATA[
 <?php
 // Afișează ceva de felul: Wednesday the 15th
-echo date("l \\t\h\e jS");
+echo date('l \t\h\e jS');
 ?>
 ]]>
     </programlisting>
@@ -506,6 +506,7 @@ $today = date("H:i:s");                         // 17:16:18
     <member><function>mktime</function></member>
     <member><function>strftime</function></member>
     <member><function>time</function></member>
+    <member><function>strtotime</function></member>
     <member><link linkend="datetime.constants.types">Constante DateTime predefinite</link></member>
    </simplelist>
   </para>

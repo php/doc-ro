@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 38b8faf1805fcaf24456c82563b2c8fcd599da81 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 0bce004e9443f12da0dce32dcabf278bfd684f47 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.strftime" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
@@ -263,7 +263,7 @@
            <entry><literal>%c</literal></entry>
            <entry>Reprezentarea preferențială a datei și orei bazate pe setările locale</entry>
            <entry>Exemplu: <literal>Tue Feb  5 00:45:10 2009</literal> pentru
-           4 februarie 2009, ora 12:45:10 AM</entry>
+           5 februarie 2009, ora 12:45:10 AM</entry>
           </row>
           <row>
            <entry><literal>%D</literal></entry>
@@ -576,6 +576,7 @@ foreach($strftimeValues as $format => $value){
 foreach(array_diff_key($strftimeFormats, $strftimeValues) as $format => $description){
     echo "Unknown format : '{$format}'   ", str_pad(' ', $maxValueLength), ($description ? " ( {$description} )" : ''), "\n";
 }
+?>
 ]]>
     </programlisting>
     &example.outputs.similar;
@@ -656,6 +657,8 @@ Unknown format : 'v'
   &reftitle.seealso;
   <para>
    <simplelist>
+    <member><link xlink:href="&url.strftime.format.designer;">Instrumentul
+     online pentru proiectarea formatelor strftime()</link></member>
     <member><function>setlocale</function></member>
     <member><function>mktime</function></member>
     <member><function>strptime</function></member>

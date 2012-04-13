@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 7ae82a50bb7cb029184a6d30001a2f165e88b28d Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/datetime.xml, last change in rev 1.2 -->
 <refentry xml:id="function.mktime" xmlns="http://docbook.org/ns/docbook">
@@ -54,7 +54,11 @@
      <term><parameter>hour</parameter></term>
      <listitem>
       <para>
-       Numărul orei.
+       Numărul orei relativ cu începutul zilei determinat de
+       <parameter>month</parameter>, <parameter>day</parameter> și
+       <parameter>year</parameter>.
+       Valorile negative se referă la ora înainte de miezul nopții a zilei în cauză.
+       Valorile mai mari decât 23 se referă la ora corespunzătoare a zilei (zilelor) următoare.
       </para>
      </listitem>
     </varlistentry>
@@ -62,7 +66,11 @@
      <term><parameter>minute</parameter></term>
      <listitem>
       <para>
-       Numărul minutei.
+       Numărul minutului relativ cu începutul orei determinat de
+       <parameter>hour</parameter>.
+       Valorile negative se referă la minutul orei precedente.
+       Valorile mai mari decât 59 se referă la minutul corespunzător a orei
+       (orelor) următoare.
       </para>
      </listitem>
     </varlistentry>
@@ -70,7 +78,11 @@
      <term><parameter>second</parameter></term>
      <listitem>
       <para>
-       Numărul de secunde de la începutul minutei.
+       Numărul de secunde relativ cu începutul minutului determinat de
+       <parameter>minute</parameter>.
+       Valorile negative se referă la secunda minutului precedent.
+       Valorile mai mari decât 59 se referă la secunda corespunzătoare ale
+       minutului (minutelor) următoare.
       </para>
      </listitem>
     </varlistentry>
@@ -78,7 +90,13 @@
      <term><parameter>month</parameter></term>
      <listitem>
       <para>
-       Numărul lunii.
+       Numărul lunii relativ cu sfârșitul anului precedent.
+       Valorile de la 1 până la 12 se referă la lunile normale ale anului în cauză.
+       Valorile mai mici decât 1 (inclusiv valorile negative) se referă la lunile
+       anului precedent în ordine inversă, deci 0 este Decembrie, -1 este
+       Noiembrie, etc.
+       Valorile mai mari decât 12 se referă la luna corespunzătoare a anului
+       (anilor) următor.
       </para>
      </listitem>
     </varlistentry>
@@ -86,7 +104,14 @@
      <term><parameter>day</parameter></term>
      <listitem>
       <para>
-       Numărul zilei.
+       Numărul zilei relativ cu sfârșitul lunii precedente.
+       Valorile de la 1 până la 28, 29, 30 sau 31 (în dependență de lună) se
+       referă la zilele normale ale lunii în cauză.
+       Valorile mai mici decât 1 (inclusiv valorile negative) se referă la zilele
+       lunii precedente, deci 0 este ultima zi a lunii precedente, -1 este
+       penultima zi, etc.
+       Valorile mai mari decât numărul de zile din luna respectivă se referă la
+       ziua corespunzătoare din luna (lunile) următoare.
       </para>
      </listitem>
     </varlistentry>
@@ -238,7 +263,7 @@ echo date("M-d-Y", mktime(0, 0, 0, 1, 1, 98));
   </para>
   <para>
    <example>
-    <title>Ultima zi a lunii următoare</title>
+    <title>Ultima zi a lunii</title>
     <para>
      Ultima zi a oricărei luni poate fi exprimată ca ziua "0" a lunii următoare,
      dar nu ziua -1. Ambele exemple ce urmează vor produce string-ul
@@ -273,6 +298,7 @@ echo strftime("Ultima zi din Februarie 2000 este: %d", $lastday);
   &reftitle.seealso;
   <para>
    <simplelist>
+    <member><function>checkdate</function></member>
     <member><function>gmmktime</function></member>
     <member><function>date</function></member>
     <member><function>time</function></member>

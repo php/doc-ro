@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: a9b26c34e481fa948bcc7d75b73b441605142dd7 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/apache.xml, last change in rev 1.20 -->
 <refentry xml:id="function.virtual" xmlns="http://docbook.org/ns/docbook">
@@ -70,11 +70,19 @@
      </thead>
      <tbody>
       <row>
+       <entry>4.3.3</entry>
+       <entry>
+        &note.apache.nsapi-module;
+       </entry>
+      </row>
+      <row>
        <entry>4.0.6</entry>
        <entry>
         Această funcție poate fi utilizată asupra fișierelor PHP. Însă în mod
-        normal e mai bine de a utiliza <function>include</function> sau
-        <function>require</function> pentru fișiere PHP.
+        normal e mai bine de a utiliza
+        <link linkend="function.include"><literal>include</literal></link> sau
+        <link linkend="function.require"><literal>require</literal></link> pentru
+        fișiere PHP.
        </entry>
       </row>
      </tbody>
@@ -108,7 +116,6 @@
     script-ului apelant.
    </para>
   </note>
-  &note.apache.nsapi-module;
  </refsect1>
 
  <refsect1 role="seealso">

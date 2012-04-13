@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 35313adda3ad8511abbb07506422af2a326c8b0c Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.microtime" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -13,7 +13,7 @@
   &reftitle.description;
   <methodsynopsis>
    <type>mixed</type><methodname>microtime</methodname>
-   <methodparam choice="opt"><type>bool</type><parameter>get_as_float</parameter></methodparam>
+   <methodparam choice="opt"><type>bool</type><parameter>get_as_float</parameter><initializer>false</initializer></methodparam>
   </methodsynopsis>
   <para>
    <function>microtime</function> întoarce timpul curent Unix cu microsecunde.
@@ -30,19 +30,30 @@
      <term><parameter>get_as_float</parameter></term>
      <listitem>
       <para>
-       Când este apelată fără parametrul opțional, această funcție întoarce
-       string-ul "msec sec", unde sec este timpul curent măsurat în numărul
-       de secunde de la Epoca Unix (0:00:00 January 1, 1970 GMT) și msec este
-       partea cu microsecunde. Ambele porțiuni ale string-ului sunt întoarse
-       în unități de secunde.
-      </para>
-      <para>
-       Dacă parametrul opțional <parameter>get_as_float</parameter> este
-       stabilit în &true;, atunci este întors un <type>float</type> (în secunde).
+       Dacă se utilizează și este stabilită în &true;, <function>microtime</function>
+       va întoarce un <type>float</type> în loc de <type>string</type>, după cum
+       este descris în secțiunea de mai jos despre valorile întoarse.
       </para>
      </listitem>
     </varlistentry>
    </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   În mod implicit <function>microtime</function> întoarce un <type>string</type>
+   de forma "msec sec", unde <literal>sec</literal> este timpul curent măsurat
+   în numărul de secunde ce s-au scurs de la epoca Unix (0:00:00 1 Ianuarie,
+   1970 GMT), și <literal>msec</literal> este numărul de microsecunde ce s-au
+   scurs după <literal>sec</literal> exprimat în secunde.
+  </para>
+  <para>
+   Dacă <parameter>get_as_float</parameter> este stabilit în &true;, atunci
+   <function>microtime</function> întoarce un <type>float</type>, care reprezintă
+   timpul curent în secunde ce s-au scurs de la epoca Unix cu precizia de
+   microsecundă.
   </para>
  </refsect1>
 

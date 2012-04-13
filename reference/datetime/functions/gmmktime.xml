@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 7ae82a50bb7cb029184a6d30001a2f165e88b28d Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.gmmktime" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -42,7 +42,11 @@
      <term><parameter>hour</parameter></term>
      <listitem>
       <para>
-       Ora
+       Numărul orei relativ cu începutul zilei determinat de
+       <parameter>month</parameter>, <parameter>day</parameter> și
+       <parameter>year</parameter>.
+       Valorile negative se referă la ora înainte de miezul nopții a zilei în cauză.
+       Valorile mai mari decât 23 se referă la ora corespunzătoare a zilei (zilelor) următoare.
       </para>
      </listitem>
     </varlistentry>
@@ -50,7 +54,11 @@
      <term><parameter>minute</parameter></term>
      <listitem>
       <para>
-       Minutul
+       Numărul minutului relativ cu începutul orei determinat de
+       <parameter>hour</parameter>.
+       Valorile negative se referă la minutul orei precedente.
+       Valorile mai mari decât 59 se referă la minutul corespunzător a orei
+       (orelor) următoare.
       </para>
      </listitem>
     </varlistentry>
@@ -58,7 +66,11 @@
      <term><parameter>second</parameter></term>
      <listitem>
       <para>
-       Secunda
+       Numărul de secunde relativ cu începutul minutului determinat de
+       <parameter>minute</parameter>.
+       Valorile negative se referă la secunda minutului precedent.
+       Valorile mai mari decât 59 se referă la secunda corespunzătoare ale
+       minutului (minutelor) următoare.
       </para>
      </listitem>
     </varlistentry>
@@ -66,7 +78,13 @@
      <term><parameter>month</parameter></term>
      <listitem>
       <para>
-       Luna
+       Numărul lunii relativ cu sfârșitul anului precedent.
+       Valorile de la 1 până la 12 se referă la lunile normale ale anului în cauză.
+       Valorile mai mici decât 1 (inclusiv valorile negative) se referă la lunile
+       anului precedent în ordine inversă, deci 0 este Decembrie, -1 este
+       Noiembrie, etc.
+       Valorile mai mari decât 12 se referă la luna corespunzătoare a anului
+       (anilor) următor.
       </para>
      </listitem>
     </varlistentry>
@@ -74,7 +92,14 @@
      <term><parameter>day</parameter></term>
      <listitem>
       <para>
-       Ziua
+       Numărul zilei relativ cu sfârșitul lunii precedente.
+       Valorile de la 1 până la 28, 29, 30 sau 31 (în dependență de lună) se
+       referă la zilele normale ale lunii în cauză.
+       Valorile mai mici decât 1 (inclusiv valorile negative) se referă la zilele
+       lunii precedente, deci 0 este ultima zi a lunii precedente, -1 este
+       penultima zi, etc.
+       Valorile mai mari decât numărul de zile din luna respectivă se referă la
+       ziua corespunzătoare din luna (lunile) următoare.
       </para>
      </listitem>
     </varlistentry>
@@ -136,11 +161,12 @@
   &reftitle.examples;
   <para>
    <example>
-    <title><function>gmmktime</function> în cadrul Windows</title>
+    <title>Exemplu simplu <function>gmmktime</function></title>
     <programlisting role="php">
 <![CDATA[
 <?php
-gmmktime(0, 0, 0, 1, 1, 1970); // valid în GMT și vest, invalid în est
+// Prints: July 1, 2000 is on a Friday
+echo "July 1, 2000 is on a " . date("l", gmmktime(0, 0, 0, 7, 1, 2000));
 ?>
 ]]>
     </programlisting>
