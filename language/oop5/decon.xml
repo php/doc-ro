@@ -128,8 +128,8 @@ $obj = new ClassaCuDestructor();
    </para>
    <para>
     Destructorul este apelat chiar dacă scriptul este terminat cu apelul la funcția
-    <link linkend="function.exit"><literal>exit</literal></link>. Apelând
-    <link linkend="function.exit"><literal>exit</literal></link> într-un destructor
+    <function>exit</function>. Apelând
+    <function>exit</function> într-un destructor
     va preveni apelarea tuturor rutinelor de terminare din scriptul respectiv.
    </para>
    <note>

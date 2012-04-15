@@ -80,8 +80,8 @@
        <entry>
         Această funcție poate fi utilizată asupra fișierelor PHP. Însă în mod
         normal e mai bine de a utiliza
-        <link linkend="function.include"><literal>include</literal></link> sau
-        <link linkend="function.require"><literal>require</literal></link> pentru
+        <function>include</function> sau
+        <function>require</function> pentru
         fișiere PHP.
        </entry>
       </row>
