@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: d9657d85a000aa25d6c2d5ec339661ab44e6a7be Maintainer: simionea Status: ready -->
 <appendix xml:id="types.comparisons" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Tabelele de comparații ale tipurilor PHP</title>
  <para>
@@ -38,7 +38,7 @@
  </note>
  <note>
   <para>
-   Unele operații numerice pot da o valoare reprezentată de constanta 
+   Unele operații numerice pot da o valoare reprezentată de constanta
    <constant>NAN</constant>. Orice comparații lejere sau stricte ale acestei
    valori cu orice altă valoare, inclusiv ea însăși, va avea un rezultat &false;.
    (de ex. <literal>NAN != NAN</literal> și <literal>NAN !== NAN</literal>)
