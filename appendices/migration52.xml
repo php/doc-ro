@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: ba28df480003640b326c0cf5472e940983a374e1 Maintainer: simionea Status: ready -->
 <appendix xml:id="migration52" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Migrarea de la PHP 5.1.x la PHP 5.2.x</title>
   <para>
@@ -115,12 +115,13 @@ print 10 % 0;
    </listitem>
    <listitem>
     <simpara>
-     A fost modificat <function>__toString</function> pentru a fi apelat
-     oricând este aplicabil.
+     A fost modificat <link linkend="object.tostring">__toString()</link> pentru
+     a fi apelat oricând este aplicabil.
     </simpara>
     <simpara>
-     Metoda magică <function>__toString</function> acum va fi apelată în
-     contextul unui string, adică oriunde un obiect este utilizat ca string.
+     Metoda magică <link linkend="object.tostring">__toString()</link> acum va
+     fi apelată în contextul unui string, adică oriunde un obiect este utilizat
+     ca string.
     </simpara>
     <simpara>
      Situația când se întoarce un string care conține identificatorul
@@ -145,14 +146,15 @@ print $foo;
      </programlisting>
     </informalexample>
     <simpara>
-     Chiar și cu <function>__toString</function> obiectele nu pot fi utilizate
-     ca indici ai tabloului sau chei. S-ar putea să adăugăm ulterior susținerea
-     încorporată a hash-urilor pentru aceasta, însă în PHP 5.2.x va trebui sau
-     să creați propria funcție hash, sau să utilizați noua funcție SPL
-     <function>spl_object_hash</function>.
+     Chiar și cu <link linkend="object.tostring">__toString()</link> obiectele
+     nu pot fi utilizate ca indici ai tabloului sau chei. S-ar putea să adăugăm
+     ulterior susținerea încorporată a hash-urilor pentru aceasta, însă în PHP
+     5.2.x va trebui sau să creați propria funcție hash, sau să utilizați noua
+     funcție SPL <function>spl_object_hash</function>.
     </simpara>
     <simpara>
-     Din metodele <function>__toString</function> nu pot fi atuncate excepții.
+     Din metodele <link linkend="object.tostring">__toString()</link> nu pot fi
+     aruncate excepții.
     </simpara>
     <informalexample>
      <programlisting role="php">
@@ -545,8 +547,7 @@ $obj->getCommentName('');
    <listitem>
     <simpara>
      din script utilizând funcția
-     <link linkend="function.date-default-timezone-get">
-     <function>date_default_timezone_set</function></link>
+     <function>date_default_timezone_set</function>
     </simpara>
    </listitem>
   </itemizedlist>
@@ -716,19 +717,19 @@ $obj->getCommentName('');
   <itemizedlist>
    <listitem>
     <simpara>
-     <link linkend="simplexmlelement.construct"><function>SimpleXMLElement::__construct</function></link>
+     <function>SimpleXMLElement::__construct</function>
      - s-a adăugat <parameter>is_prefix</parameter>
     </simpara>
    </listitem>
    <listitem>
     <simpara>
-     <link linkend="simplexmlelement.attributes"><function>SimpleXMLElement::attributes</function></link>
+     <function>SimpleXMLElement::attributes</function>
      - s-a adăugat <parameter>is_prefix</parameter>
     </simpara>
    </listitem>
    <listitem>
     <simpara>
-     <link linkend="simplexmlelement.children"><function>SimpleXMLElement::children</function></link>
+     <function>SimpleXMLElement::children</function>
      - s-a adăugat <parameter>is_prefix</parameter>
     </simpara>
    </listitem>
@@ -778,15 +779,13 @@ $obj->getCommentName('');
   <itemizedlist>
    <listitem>
     <simpara>
-     <link linkend="function.xmlwriter-write-element">
-     <function>XMLWriter::WriteElement</function></link>
+     <function>xmlwriter_write_element</function>
      - parametrul <parameter>content</parameter> a devenit opțional în PHP 5.2.3
     </simpara>
    </listitem>
    <listitem>
     <simpara>
-     <link linkend="function.xmlwriter-write-element-ns">
-     <function>XMLWriter::WriteElementNs</function></link>
+     <function>xmlwriter_write_element_ns</function>
      - parametrul <parameter>content</parameter> a devenit opțional în PHP 5.2.3
     </simpara>
    </listitem>
@@ -1986,7 +1985,7 @@ $obj->getCommentName('');
    acum 6143, în timp ce valoarea precedentă era 2047. Deoarece constantele
    PHP nu au nici o însemnătate în afara PHP, în unele cazuri este utilizată
    valoarea întreagă, de aceea ea va trebui ajustată. Deci, spre exemplu,
-   stabilind modul <literal>error_reporting</literal> în fișierele
+   stabilind modul error_reporting în fișierele
    <link linkend="apache.configuration">httpd.conf</link> sau
    <filename>.htaccess</filename>, valoarea trebuie schimbată corespunzător.
    Același lucru este valabil atunci când valorile numerice sunt utilizate în

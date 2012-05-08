@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 9e10c49739b8f49cb747d0c0a46ca049943e7e34 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 84b8fca68fc762fefe85acde180a38b2e77a28b9 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="tokens" xmlns="http://docbook.org/ns/docbook">
  <title>Lista semnelor interpretorului</title>
@@ -15,6 +15,26 @@
   tabel cu acești identificatori, sintaxa PHP și referințe către locurile
   corespunzătoare din manual.
  </para>
+
+ <note>
+  <title>Utilizarea constantelor T_*</title>
+  <para>
+   Toate semnele afișate mai jos sunt de asemenea definite și ca constante PHP.
+   Valorile lor este generată automat în baza infrastructurii din cadrul
+   analizatorului PHP. Aceasta înseamnă că valoarea concretă a unui semn poate
+   să se modifice între două versiuni PHP. Spre exemplu constanta
+   <constant>T_FILE</constant> este <literal>365</literal> în PHP 5.3, în timp
+   ce aceeași valoare acum se referă la <constant>T_TRAIT</constant> în PHP 5.4
+   și valoarea <constant>T_FILE</constant> este <literal>369</literal>. Aceasta
+   înseamnă că codul dumneavoastră nu trebuie să se bazeze direct pe valorile
+   T_* originale ale PHP de versiunea X.Y.Z, pentru a oferi o compatibilitate
+   între mai multe versiuni ale PHP. În loc, în codul dumneavoastră ar trebui să
+   utilizați valori personalizate (de ex. numere mari cum ar fi
+   <literal>10000</literal>) și o strategie potrivită care va lucra cu ambele
+   versiuni PHP și cu valorile T_*.
+  </para>
+ </note>
+
  <table>
   <title>Semne</title>
   <tgroup cols="3">
@@ -541,7 +561,7 @@
     <row>
      <entry><constant>T_OLD_FUNCTION</constant></entry>
      <entry>old_function</entry>
-     <entry>(Doar PHP 4)</entry>
+     <entry>(doar PHP 4)</entry>
     </row>
     <row>
      <entry><constant>T_OPEN_TAG</constant></entry>
@@ -690,7 +710,7 @@
      <entry><constant>T_USE</constant></entry>
      <entry>use</entry>
      <entry><link linkend="language.namespaces">spații de nume</link>
-     (disponibil începând cu PHP 5.3.0)</entry>
+     (disponibil începând cu PHP 5.3.0; rezervat începând cu PHP 4.0.0)</entry>
     </row>
     <row>
      <entry><constant>T_VAR</constant></entry>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: a9128651164a804d17c3b54142e8f272cc5f9baf Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 28d123ef985df5a7b86f3601e035968ee1b3b142 Maintainer: simionea Status: ready -->
 <appendix xml:id="userlandnaming" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Ghidul de stabilire a denumirilor de către utilizatori</title>
  <para>
@@ -92,7 +92,7 @@
      magice documentate. Exemple:
     </para>
     <itemizedlist>
-     <listitem><para><function>__get</function></para></listitem>
+     <listitem><para><link linkend="object.get">__get()</link></para></listitem>
      <listitem><para><function>__autoload</function></para></listitem>
     </itemizedlist>
    </listitem>

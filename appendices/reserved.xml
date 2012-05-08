@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 53b6f116ed5f8649ca540c38dfe0ce30619d0dd9 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 84b8fca68fc762fefe85acde180a38b2e77a28b9 Maintainer: simionea Status: ready -->
 
  <appendix xml:id="reserved" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Lista cuvintelor rezervate</title>
@@ -289,6 +289,7 @@
         <function>unset</function>
        </entry>
        <entry>
+        <function>__halt_compiler</function>
        </entry>
       </row>
      </tbody>
@@ -349,7 +350,7 @@
 
     <variablelist>
      <varlistentry>
-      <term><classname>exception</classname></term>
+      <term><classname>Exception</classname></term>
       <listitem>
        <simpara>
        </simpara>
