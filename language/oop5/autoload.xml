@@ -12,7 +12,7 @@
    incluse la începutul fiecărui script.
   </para>
   <para>
-   În PHP 5, acest lucru nu mai este necasar. Se poate defini funcția
+   În PHP 5, acest lucru nu mai este necesar. Se poate defini funcția
    <function>__autoload</function> care este apelată automat în cazul
    în care doriți să folosiți o clasă care nu a fost încă definită.
    Apelul la această funcție oferă script-ului o ultimă șansă de a defini
@@ -47,7 +47,7 @@
    <para>
     Dacă denumirea clasei este utilizată de ex. în <function>call_user_func</function>,
     atunci ea poate conține caractere periculoase, cum ar fi <literal>../</literal>.
-    Nu este recomandabil să utilizați datele introduse de utilizator în asemenea funcții,
+    Nu este recomandat să utilizați datele introduse de utilizator în asemenea funcții,
     sau, cel puțin, să verificați ce s-a introdus în <function>__autoload</function>.
    </para>
   </note>
