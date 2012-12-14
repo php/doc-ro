@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
+<!-- Membership: pecl -->
 <!-- $Author$ -->
-<!-- EN-Revision: 5293ead8496e5bf9ce06a6f6d9016a92e5aa7f70 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 21293f365608e4a820d65b37bd91abcd93f75018 Maintainer: simionea Status: ready -->
 
 <book xml:id="book.mongo" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
- <title>Mongo</title>
+ <?phpdoc extension-membership="pecl" ?>
+ <title>Driver-ul nativ MongoDB</title>
  <titleabbrev>Mongo</titleabbrev>
 
- <preface xml:id="intro.mongo">
-  &reftitle.intro;
-  <para>
-   Această extensie vă permite conectarea la MongoDB prin PHP.
-  </para>
- </preface>
+ &reference.mongo.setup;
+ <!-- &reference.mongo.constants; -->
 
  &reference.mongo.manual;
  &reference.mongo.core;
  &reference.mongo.types;
  &reference.mongo.gridfs;
- &reference.mongo.functions;
+ &reference.mongo.misc;
+ &reference.mongo.reference;
  &reference.mongo.exceptions;
+ &reference.mongo.changelog;
 
 </book>
 
