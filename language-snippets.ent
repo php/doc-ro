@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: f2019b9d10cbf49d85a4328166de80e6c7e687a4 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 65e697ff671608989432a6e6bf8ae8128b2be2c7 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -10,6 +10,13 @@ automat.</entry></row>'>
 
 <!ENTITY installation.enabled.disable 'Această extensie este activată în mod
 implicit. Ea poate fi dezactivată utilizând următoarea opțiune la compilare: '>
+
+<!-- Cautions -->
+<!ENTITY caution.cryptographically-insecure '<caution xmlns="http://docbook.org/ns/docbook">
+<para>Această funcție nu generează valori securizate din punct de vedere
+criptografic și deci nu trebuie utilizată pentru scopuri criptografice. Dacă
+aveți nevoie de o valoare securizată din punct de vedere criptografic considerați
+utilizarea <function>openssl_random_pseudo_bytes</function> în schimb.</para></caution>'>
 
 <!-- Notes -->
 
@@ -204,6 +211,11 @@ xmlns="http://docbook.org/ns/docbook"><simpara>Această facilitate a fost
 <emphasis>DEZAPROBATĂ</emphasis> începând cu PHP 5.3.0 și
 <emphasis>ELIMINATĂ</emphasis> începând cu PHP 5.4.0.</simpara></warning>'>
 
+<!ENTITY warn.deprecated.feature-5-5-0 '<warning
+xmlns="http://docbook.org/ns/docbook"><simpara>Această facilitate a fost
+<emphasis>DEZAPROBATĂ</emphasis> începând cu PHP 5.5.0. Utilizarea acestei
+facilități este foarte discurajată.</simpara></warning>'>
+
 <!ENTITY removed.php.future 'Această facilitate dezaprobată
 <emphasis xmlns="http://docbook.org/ns/docbook">cu siguranță</emphasis> va fi
 <emphasis xmlns="http://docbook.org/ns/docbook">eliminată</emphasis> în viitor.'>
@@ -211,6 +223,11 @@ xmlns="http://docbook.org/ns/docbook"><simpara>Această facilitate a fost
 <!ENTITY warn.deprecated.function.removed-5-3-0 '<warning xmlns="http://docbook.org/ns/docbook">
 <simpara>Această funcție este <emphasis>DEZAPROBATĂ</emphasis> și este
 <emphasis>ELIMINATĂ</emphasis> începând cu PHP 5.3.0.</simpara></warning>'>
+
+<!ENTITY warn.deprecated.function.removed-5-5-0 '<warning
+xmlns="http://docbook.org/ns/docbook"><simpara>Această funcție este
+<emphasis>DEZAPROBATĂ</emphasis> și <emphasis>ELIMINATĂ</emphasis> începând cu
+PHP 5.5.0.</simpara></warning>'>
 
 <!ENTITY warn.deprecated.alias-5-3-0 '<warning xmlns="http://docbook.org/ns/docbook">
 <simpara>Acest pseudonim este <emphasis>DEZAPROBAT</emphasis> începând cu PHP
@@ -224,6 +241,10 @@ xmlns="http://docbook.org/ns/docbook"><simpara>Această facilitate a fost
 <!ENTITY warn.deprecated.alias-5-4-0 '<warning xmlns="http://docbook.org/ns/docbook">
 <simpara>Acest pseudonim este <emphasis>DEZAPROBAT</emphasis> începând cu PHP
 5.4.0. Utilizarea acestui pseudonim este foarte nerecomandabilă.</simpara></warning>'>
+
+<!ENTITY warn.deprecated.func-5-5-0 '<warning xmlns="http://docbook.org/ns/docbook">
+<simpara>Această funcție este <emphasis>DEZAPROBATĂ</emphasis> începând cu PHP
+5.5.0. Utilizarea acestei funcții este foarte nerecomandată.</simpara></warning>'>
 
 <!ENTITY warn.experimental.func '<warning xmlns="http://docbook.org/ns/docbook">
 <simpara>Această funcție este <emphasis>EXPERIMENTALĂ</emphasis>.
@@ -380,6 +401,9 @@ linkend="language.types.resource">resource</link>'>
 
 <!ENTITY foreach '<link xmlns="http://docbook.org/ns/docbook"
 linkend="control-structures.foreach">foreach</link>'>
+
+<!ENTITY yield '<link xmlns="http://docbook.org/ns/docbook"
+linkend="language.generators.syntax.yield">beneficiu</link>'>
 
 <!ENTITY parameter.context 'Accesați secțiunea
 <link xmlns="http://docbook.org/ns/docbook" linkend="context">context</link>
@@ -557,6 +581,21 @@ automată (cum este cazul la <function>preg_replace</function>). Ignorarea
 acestui fapt va crea probabil vulnerabilități de executare a codului la
 distanță în aplicația dumneavoastră.</para></warning>'>
 
+<!-- mcrypt notes -->
+
+<!ENTITY mcrypt.parameter.cipher '<para xmlns="http://docbook.org/ns/docbook">
+Una din constantele <constant>MCRYPT_ciphername</constant> sau denumirea algoritmului ca șir de caractere.</para>'>
+
+<!ENTITY mcrypt.parameter.iv '<para xmlns="http://docbook.org/ns/docbook">
+Este utilizat pentru inițializare în modurile CBC, CFB, OFB și în unii algoritmi
+în mod STREAM. Dacă nu furnizați un IV atunci când este necesar pentru un algoritm,
+funcția emite o avertizare și utilizează un IV cu toți octeții stabiliți la
+valoarea "<literal>\0</literal>".</para>'>
+
+<!ENTITY mcrypt.parameter.mode '<para xmlns="http://docbook.org/ns/docbook">
+Una din constantele <constant>MCRYPT_MODE_modename</constant> sau unul din
+șirurile de caractere: "ecb", "cbc", "cfb", "ofb", "nofb" sau "stream".</para>'>
+
 <!-- MCVE notes -->
 
 <!ENTITY mcve.conn.description '<varlistentry xmlns="http://docbook.org/ns/docbook">
@@ -582,6 +621,25 @@ a fi stocate pe server.'>
 <!ENTITY memcached.result.getresultcode 'Utilizați
 <methodname xmlns="http://docbook.org/ns/docbook">Memcached::getResultCode</methodname>
 dacă e necesar.'>
+
+<!-- password notes -->
+
+<!ENTITY password.parameter.algo 'O <link xmlns="http://docbook.org/ns/docbook"
+linkend="password.constants">constantă a algoritmului de parole</link> ce denotă
+algoritmul ce va fi utilizat pentru dispersarea parolei.'>
+
+<!ENTITY password.parameter.hash 'O valoare de dispersie creată cu
+<function xmlns="http://docbook.org/ns/docbook">password_hash</function>.'>
+
+<!ENTITY password.parameter.options 'Un tablou asociativ ce conține opțiuni.
+În prezent sunt susținute două opțiuni:
+<literal xmlns="http://docbook.org/ns/docbook">salt</literal>, pentru a furniza
+o valoare "salt" ce va fi utilizată la dispersarea parolei și
+<literal xmlns="http://docbook.org/ns/docbook">cost</literal>, ce denotă costul
+algoritmic ce trebuie utilizat. Exemple ale acestor valori pot fi găsite pe
+pagina <function xmlns="http://docbook.org/ns/docbook">crypt</function>.'>
+
+<!ENTITY password.parameter.password 'The user&apos;s password.'>
 
 <!-- geaman notes -->
 
@@ -705,6 +763,41 @@ funcție poate să genereze erori de tip <constant>E_WARNING</constant> atunci c
 întâlnește un marcaj greșit. <link linkend="function.libxml-use-internal-errors">
 Funcțiile de gestiune a erorilor libxml</link> pot fi utilizate pentru a prelucra
 aceste erori.</para>'>
+
+<!-- Dom Examples -->
+<!ENTITY dom.book.example '<para xmlns="http://docbook.org/ns/docbook">
+Următoarele exemple utilizează <filename>book.xml</filename> ce conține următoarele:</para>
+<programlisting role="xml" xmlns="http://docbook.org/ns/docbook">
+<!-- Warning: The CDATA markup here is a little tricky. Please DO NOT BREAK it! -->
+<![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE books [
+  <!ELEMENT books   (book+)>
+  <!ELEMENT book    (title, author+, xhtml:blurb?)>
+  <!ELEMENT title   (#PCDATA)>
+  <!ELEMENT blurb   (#PCDATA)>
+  <!ELEMENT author  (#PCDATA)>
+  <!ATTLIST books   xmlns        CDATA  #IMPLIED>
+  <!ATTLIST books   xmlns:xhtml  CDATA  #IMPLIED>
+  <!ATTLIST book    id           ID     #IMPLIED>
+  <!ATTLIST author  email        CDATA  #IMPLIED>
+]>
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<books xmlns="http://books.php/" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <book id="php-basics">
+    <title>PHP Basics</title>
+    <author email="jim.smith@basics.php">Jim Smith</author>
+    <author email="jane.smith@basics.php">Jane Smith</author>
+    <xhtml:blurb><![CDATA[
+<p><em>PHP Basics</em> provides an introduction to PHP.</p>
+]]]]><![CDATA[></xhtml:blurb>
+  </book>
+  <book id="php-advanced">
+    <title>PHP Advanced Programming</title>
+    <author email="jon.doe@advanced.php">Jon Doe</author>
+  </book>
+</books>
+]]></programlisting>'>
 
 <!-- FileSystem entities -->
 <!ENTITY fs.emits.warning.on.failure '<para xmlns="http://docbook.org/ns/docbook">
@@ -878,6 +971,16 @@ documentul este convertit în pdf fie de Acrobat Distiller™ sau de Ghostview.
 <!ENTITY note.xslt.windows '<note xmlns="http://docbook.org/ns/docbook"><para>
 Vă atragem atenția că este necesar de indicat <literal>file://</literal> în
 fața căii, în cazul când utilizați Windows.</para></note>'>
+
+<!ENTITY xslt.parameter.processor '<varlistentry xmlns="http://docbook.org/ns/docbook">
+<term><parameter>processor</parameter></term><listitem><para>Identificatorul legăturii
+procesorului <acronym>XSLT</acronym> creat cu ajutorul <function>xslt_create</function>.
+</para></listitem></varlistentry>'>
+
+<!ENTITY xslt.parameter.xh '<varlistentry xmlns="http://docbook.org/ns/docbook">
+<term><parameter>xh</parameter></term><listitem><para>Identificatorul legăturii
+procesorului <acronym>XSLT</acronym> creat cu ajutorul <function>xslt_create</function>.
+</para></listitem></varlistentry>'>
 
 <!-- Notes for safe-mode limited functions: -->
 <!ENTITY note.sm.disabled '<note xmlns="http://docbook.org/ns/docbook">
@@ -1257,16 +1360,13 @@ field_offset</parameter> începe de la <literal>0</literal>. Dacă <parameter>
 field_offset</parameter> nu există, se generează de asemenea o eroare de nivel
 <constant>E_WARNING</constant>.</para></listitem></varlistentry>'>
 
-<!ENTITY mysql.alternative.include 'Ca alternative ale acestei funcții serversc: '>
-
-<!ENTITY mysql.alternative.note '<title xmlns="http://docbook.org/ns/docbook">
-Alternative recomandate</title>
-<para xmlns="http://docbook.org/ns/docbook">Utilizarea acestei extensii
-nu este recomandată. În loc trebuie utilizate extensiile
-<link linkend="book.mysqli">MySQLi</link> sau
-<link linkend="ref.pdo-mysql">PDO_MySQL</link>. Vedeți de asemenea
-<link linkend="mysqlinfo.api.choosing">MySQL: alegerea unei API</link> pentru
-informații suplimentare.</para>'>
+<!ENTITY mysql.alternative.note '<para xmlns="http://docbook.org/ns/docbook">
+Această extensie este dezaprobată începând cu PHP 5.5.0 și va fi eliminată în
+viitor. În locul ei trebuie utilizate extensiile <link linkend="book.mysqli">MySQLi</link>
+sau <link linkend="ref.pdo-mysql">PDO_MySQL</link>. Vedeți de asemenea ghidul
+<link linkend="mysqlinfo.api.choosing">MySQL: selectarea unei API</link> și
+<link linkend="faq.databases.mysql.deprecated">FAQ asociat</link> pentru mai
+multe informații. Alternative ale acestei funcții includ:</para>'>
 
 <!-- Sybase Notes -->
 <!ENTITY sybase.ct.only '<note xmlns="http://docbook.org/ns/docbook"><simpara>
@@ -1910,13 +2010,24 @@ linkend="win32service.constants.errors">Cod de Eroare Win32</link> în caz de e�
 Funcția <parameter xmlns="http://docbook.org/ns/docbook">callback</parameter>
 este apelată atunci când o interpelare este încheiată. Ea trebuie să corespundă
 următorului prototip: <programlisting role="php"><![CDATA[
-void callback($data, $result);
+void callback(mixed $data, int $result[, resource $req]);
 ]]></programlisting>
-<parameter xmlns="http://docbook.org/ns/docbook">$data</parameter> sunt niște
-date personalizate transmise în cerere.
-<parameter xmlns="http://docbook.org/ns/docbook">$result</parameter> conține
-rezultatul specific cererii; în esență, valoarea întoarsă de apelul de sistem
-corespunzător.
+<variablelist xmlns="http://docbook.org/ns/docbook">
+<varlistentry xmlns="http://docbook.org/ns/docbook">
+<term><parameter>data</parameter></term>
+<listitem><para>sunt niște date personalizate transmise în cerere.</para></listitem>
+</varlistentry>
+<varlistentry xmlns="http://docbook.org/ns/docbook">
+<term><parameter>result</parameter></term>
+<listitem><para>conține rezultatul specific cererii; în esență, valoarea întoarsă
+de apelul de sistem corespunzător.</para></listitem>
+</varlistentry>
+<varlistentry xmlns="http://docbook.org/ns/docbook">
+<term><parameter>req</parameter></term>
+<listitem><para>este o resursă a cererii opțională ce poate fi utilizată cu
+funcții precum <function>eio_get_last_error</function></para></listitem>
+</varlistentry>
+</variablelist>
 </para>
 '>
 
@@ -1935,3 +2046,60 @@ valoarea <constant xmlns="http://docbook.org/ns/docbook">EIO_PRI_DEFAULT</consta
 xmlns="http://docbook.org/ns/docbook">
 <simpara xmlns="http://docbook.org/ns/docbook">Evitați căile relative</simpara></warning>
 '>
+
+<!ENTITY trader.arg.array.of.real 'Un tablou cu valori reale.'>
+<!ENTITY trader.arg.array.of.real.high 'Prețul înalt, un tablou cu valori reale.'>
+<!ENTITY trader.arg.array.of.real.low 'Prețul jos, un tablou cu valori reale.'>
+<!ENTITY trader.arg.array.of.real.close 'Prețul de închidere, un tablou cu valori reale.'>
+<!ENTITY trader.arg.array.of.real.open 'Prețul de deschidere, un tablou cu valori reale.'>
+<!ENTITY trader.arg.array.of.real.volume 'Volumul tranzacționat, un tablou cu valori reale.'>
+<!ENTITY trader.arg.array.of.real.periods 'Un tablou cu valori reale.'>
+<!ENTITY trader.arg.penetration 'Procentul penetrării unei lumânări în altă lumânare.'>
+<!ENTITY trader.arg.vfactor 'Factorul de volum. Domeniul valorilor admisibile este de la 1 la 0.'>
+<!ENTITY trader.arg.time.period 'Numărul perioadei. Domeniul valorilor admisibile este de la 2 până la 100000.'>
+<!ENTITY trader.arg.fast.period 'Numărul perioadei pentru MA rapidă. Domeniul valorilor admisibile este de la 2 până la 100000.'>
+<!ENTITY trader.arg.slow.period 'Numărul perioadei pentru MA lentă. Domeniul valorilor admisibile este de la 2 până la 100000.'>
+<!ENTITY trader.arg.signal.period 'Netezirea pentru linia de semnalizare (nb al perioadei). Domeniul valorilor admisibile este de la 1 până la 100000.'>
+<!ENTITY trader.arg.fastk.period 'Perioada de timp pentru constituirea liniei Fast-K. Domeniul valorilor admisibile este de la 1 până la 100000.'>
+<!ENTITY trader.arg.fastd.period 'Netezirea pentru constituirea liniei Fast-D. Domeniul valorilor admisibile este de la 1 până la 100000, de obicei este stabilit la 3.'>
+<!ENTITY trader.arg.slowk.period 'Netezirea pentru constituirea liniei Slow-K. Domeniul valorilor admisibile este de la 1 până la 100000, de obicei este stabilit la 3.'>
+<!ENTITY trader.arg.slowd.period 'Netezirea pentru constituirea liniei Slow-D. Domeniul valorilor admisibile este de la 1 până la 100000.'>
+<!ENTITY trader.arg.min.period 'Valoarea mai mică decât minimul va fi schimbată în perioada Minimă. Domeniul valorilor admisibile este de la 2 până la 100000.'>
+<!ENTITY trader.arg.max.period 'Valoarea mai mare decât minimul va fi schimbată în perioada Maximă. Domeniul valorilor admisibile este de la 2 până la 100000.'>
+<!ENTITY trader.arg.ma.type 'Tipul Mediei Mobile. Trebuie utilizate constantele din seria <link xmlns="http://docbook.org/ns/docbook" linkend="trader.constants">TRADER_MA_TYPE_*</link>.'>
+<!ENTITY trader.arg.fast.ma.type 'Tipul Mediei Mobile pentru MA rapidă. Trebuie utilizate constantele din seria <link xmlns="http://docbook.org/ns/docbook" linkend="trader.constants">TRADER_MA_TYPE_*</link>.'>
+<!ENTITY trader.arg.slow.ma.type 'Tipul Mediei Mobile pentru MA lentă. Trebuie utilizate constantele din seria <link xmlns="http://docbook.org/ns/docbook" linkend="trader.constants">TRADER_MA_TYPE_*</link>.'>
+<!ENTITY trader.arg.fastd.ma.type 'Tipul Mediei Mobile pentru Fast-D. Trebuie utilizate constantele din seria <link xmlns="http://docbook.org/ns/docbook" linkend="trader.constants">TRADER_MA_TYPE_*</link>.'>
+<!ENTITY trader.arg.slowk.ma.type 'Tipul Mediei Mobile pentru Slow-K. Trebuie utilizate constantele din seria <link xmlns="http://docbook.org/ns/docbook" linkend="trader.constants">TRADER_MA_TYPE_*</link>.'>
+<!ENTITY trader.arg.slowd.ma.type 'Tipul Mediei Mobile pentru Slow-D. Trebuie utilizate constantele din seria <link xmlns="http://docbook.org/ns/docbook" linkend="trader.constants">TRADER_MA_TYPE_*</link>.'>
+<!ENTITY trader.arg.slowk.ma.type 'Tipul Mediei Mobile pentru Slow-K. Trebuie utilizate constantele din seria <link xmlns="http://docbook.org/ns/docbook" linkend="trader.constants">TRADER_MA_TYPE_*</link>.'>
+<!ENTITY trader.arg.signal.ma.type 'Tipul Mediei Mobile pentru linia de semnalizare. Trebuie utilizate constantele din seria <link xmlns="http://docbook.org/ns/docbook" linkend="trader.constants">TRADER_MA_TYPE_*</link>.'>
+<!ENTITY trader.arg.nbdevup 'Multiplificatorul deviației pentru banda superioară. Domeniul valorilor admisibile este de la <link xmlns="http://docbook.org/ns/docbook" linkend="constant.trader-real-min">TRADER_REAL_MIN</link> până la <link xmlns="http://docbook.org/ns/docbook" linkend="constant.trader-real-max">TRADER_REAL_MAX</link>.'>
+<!ENTITY trader.arg.nbdevdn 'Multiplificatorul deviației pentru banda inferioară. Domeniul valorilor admisibile este de la <link xmlns="http://docbook.org/ns/docbook" linkend="constant.trader-real-min">TRADER_REAL_MIN</link> până la <link xmlns="http://docbook.org/ns/docbook" linkend="constant.trader-real-max">TRADER_REAL_MAX</link>.'>
+<!ENTITY trader.arg.fast.limit 'Limita superioară în algoritmul adaptiv. Domeniul valorilor admisibile este de la 0.01 până la 0.99.'>
+<!ENTITY trader.arg.slow.limit 'Limita inferioară în algoritmul adaptiv. Domeniul valorilor admisibile este de la 0.01 până la 0.99.'>
+
+<!-- Mongo -->
+<!ENTITY mongo.setreadpreference.parameters '
+<variablelist xmlns="http://docbook.org/ns/docbook">
+<varlistentry xmlns="http://docbook.org/ns/docbook">
+<term><parameter>read_preference</parameter></term><listitem><para>
+Modul preferinței de citire: <constant>Mongo::RP_PRIMARY</constant>,
+<constant>Mongo::RP_PRIMARY_PREFERRED</constant>,
+<constant>Mongo::RP_SECONDARY</constant>,
+<constant>Mongo::RP_SECONDARY_PREFERRED</constant> sau
+<constant>Mongo::RP_NEAREST</constant>.
+</para></listitem></varlistentry>
+<varlistentry xmlns="http://docbook.org/ns/docbook">
+<term><parameter>tags</parameter></term><listitem><para>Un tablou din zero sau
+mai multe seturi de etichete, unde fiecare din seturile de etichete este însuși
+un tablou de criterii utilizate pentru potrivirea etichetelor pe membrii setului
+de replicare.</para></listitem></varlistentry></variablelist>
+'>
+<!ENTITY mongo.setreadpreference.return '<para xmlns="http://docbook.org/ns/docbook">Întoarce &true; în caz de succes, sau &false; în caz contrar.</para>'>
+<!ENTITY mongo.writes.parameters.writeconcern '<listitem xmlns="http://docbook.org/ns/docbook"><para><literal>"w"</literal></para><para>Vedeți <link linkend="mongo.writeconcerns">WriteConcerns</link>. Valoarea implicită pentru <classname>MongoClient</classname> este <literal>1</literal>.</para></listitem>'>
+<!ENTITY mongo.writes.parameters.fsync '<listitem xmlns="http://docbook.org/ns/docbook"><para><literal>"fsync"</literal></para><para>O valoare boolean-ă, valoarea implicită este &false;. Forțează sincronizarea pe disc a operațiunii de inserare înainte de a întoarce succes. Dacă are valoarea &true;, se presupune efectuarea unei inserări aprobate și setarea <literal>w</literal> va fi modificată în <literal>0</literal>.</para></listitem>'>
+<!ENTITY mongo.writes.parameters.timeout '<listitem xmlns="http://docbook.org/ns/docbook"><para><literal>"timeout"</literal></para><para>valoare întreagă, implicit este <literal>MongoCursor::$timeout</literal>. Dacă "safe" este stabilit, aceasta va stabili pentru client durata de așteptare (în milisecunde) a răspunsului de la baza de date. Dacă baza de date nu răspunde în intervalul de timp stabilit, va fi generată o excepție <classname>MongoCursorTimeoutException</classname>.</para></listitem>'>
+<!ENTITY mongo.writes.parameters.safe '<listitem xmlns="http://docbook.org/ns/docbook"><para><literal>"safe"</literal></para><para><emphasis>Dezaprobat</emphasis>. Utilizați opțiunea <link linkend="mongo.writeconcerns">WriteConcern</link> <literal>w</literal>.</para></listitem>'>
+<!ENTITY mongo.errors.exceptions.writeconcern '<para xmlns="http://docbook.org/ns/docbook">Generează o excepție <classname>MongoCursorException</classname> dacă opțiunea "w" este stabilită și înscrierea eșuează.</para><para xmlns="http://docbook.org/ns/docbook">Generează o excepție <classname>MongoCursorTimeoutException</classname> dacă opțiunea "w" este stabilită la o valoare mai mare decât unu și operațiunea durează mai mult de <varname>MongoCursor::$timeout</varname> milisecunde. Aceasta nu va întrerupe operațiunea pe server, este un timeout de partea clientului. Operațiunea din <literal>MongoCollection::$wtimeout</literal> este în milisecunde.</para>'>
+<!ENTITY mongo.errors.deprecated '<para xmlns="http://docbook.org/ns/docbook">Generează o avertizare <constant>E_DEPRECATED</constant></para>'>

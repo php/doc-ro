@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: d07d738896974299a078d3295c7d9d950d07e10a Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 747727e84a7c199c6a0575e646b5ef59ad57b9e1 Maintainer: simionea Status: ready -->
 
 <!-- Part titles used mostly in manual.xml itself -->
 <!ENTITY PHPManual                                "Manualul PHP">
@@ -55,6 +55,9 @@
 <!ENTITY FunctionListingDescription               "Lista tuturor funcțiilor și metodelor din manual">
 <!ENTITY ExampleListing                           "Listingul exemplelor">
 <!ENTITY ExampleListingDescription                "Lista tuturor exemplelor din manual">
+<!ENTITY ChangelogListingTitle                    "Jurnalul modificărilor">
+<!ENTITY ChangelogListingDescription              "Au fost efectuate următoarele modificări ale claselor/funcțiilor/metodelor acestei extensii.">
+<!ENTITY ChangelogListingBundledDescription       "Au fost efectuate următoarele modificări ale funcțiilor extensiilor încorporate.">
 <!ENTITY CHMEdition                               "Ediția în formatul HTML Help">
 <!ENTITY ReservedConstants                        "Constante predefinite">
 <!ENTITY MissingStuff                             "Lucruri care lipsesc">
