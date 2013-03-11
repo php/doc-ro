@@ -403,7 +403,7 @@ linkend="language.types.resource">resource</link>'>
 linkend="control-structures.foreach">foreach</link>'>
 
 <!ENTITY yield '<link xmlns="http://docbook.org/ns/docbook"
-linkend="language.generators.syntax.yield">beneficiu</link>'>
+linkend="control-structures.yield">beneficiu</link>'>
 
 <!ENTITY parameter.context 'Accesați secțiunea
 <link xmlns="http://docbook.org/ns/docbook" linkend="context">context</link>
