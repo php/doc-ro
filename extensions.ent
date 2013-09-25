@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 8a887a3be84772ab571d361e7cb03cec3e5e8725 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 0abaad099e3ec6064ed8cf31553dcd5e3e3fdfba Maintainer: simionea Status: ready -->
 
 <!ENTITY extcat.intro '<title xmlns="http://docbook.org/ns/docbook">
 Lista/Categoriile extensiilor</title>
@@ -110,15 +110,15 @@ Extensii adiționale</title>
 
 <!ENTITY extcat.membership.external '<title xmlns="http://docbook.org/ns/docbook">
 Extensii externe</title>
-<para xmlns="http://docbook.org/ns/docbook">Pentru a putea compila aceste
-extensii, vor fi necesare biblioteci externe.</para>'>
+<para xmlns="http://docbook.org/ns/docbook">Aceste extensii intră în componența PHP,
+dar pentru a le compila vor fi necesare biblioteci externe.</para>'>
 
 <!ENTITY extcat.membership.pecl '<title xmlns="http://docbook.org/ns/docbook">
 Extensii PECL</title>
 <para xmlns="http://docbook.org/ns/docbook">Aceste extensii sunt disponibile în
 <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.pecl;">PECL</link>.
-Există mai multe extensii PECL, dar ele nu sunt documentate în manualul PHP
-deocamdată.</para>'>
+Ele pot să necesite biblioteci externe. Există mai multe extensii PECL, dar ele
+nu sunt documentate în manualul PHP deocamdată.</para>'>
 
 <!-- ======================================================================= -->
 

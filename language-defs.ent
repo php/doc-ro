@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 747727e84a7c199c6a0575e646b5ef59ad57b9e1 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 0abaad099e3ec6064ed8cf31553dcd5e3e3fdfba Maintainer: simionea Status: ready -->
 
 <!-- Part titles used mostly in manual.xml itself -->
 <!ENTITY PHPManual                                "Manualul PHP">
@@ -48,7 +48,7 @@
 <!ENTITY FAQ                                      "FAQ: Întrebări frecvente">
 <!ENTITY FAQabbrev                                "FAQ">
 <!ENTITY Internals                                "Interiorul PHP și a motorului Zend">
-<!ENTITY Internals2                               "Nucleul PHP: Ghidul unui hacker spre motorul Zend">
+<!ENTITY Internals2                               "Nucleul PHP: Ghidul unui hacker">
 <!ENTITY ZendAPI                                  "API al Zend: Aprofundare în nucleul PHP">
 <!ENTITY IndexListing                             "Listingul-indice">
 <!ENTITY FunctionListing                          "Listingul funcțiilor și metodelor">
@@ -110,6 +110,7 @@ supplemental files to mark section titles -->
 <!ENTITY reftitle.seealso           '<title xmlns="http://docbook.org/ns/docbook">Vedeți de asemenea</title>'>
 <!ENTITY reftitle.setup             '<title xmlns="http://docbook.org/ns/docbook">Instalarea / configurarea</title>'>
 <!ENTITY reftitle.unicode           '<title xmlns="http://docbook.org/ns/docbook">Unicode</title>'>
+<!ENTITY reftitle.usage             '<title xmlns="http://docbook.org/ns/docbook">Utilizare</title>'>
 
 <!ENTITY url.ro.rophp      'http://www.rophp.net'>
 <!ENTITY url.ro.phpromania 'http://www.phpromania.net'>

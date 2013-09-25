@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 65e697ff671608989432a6e6bf8ae8128b2be2c7 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 8bc08ef8418d334ec29738409c546282149fa2c9 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -403,7 +403,7 @@ linkend="language.types.resource">resource</link>'>
 linkend="control-structures.foreach">foreach</link>'>
 
 <!ENTITY yield '<link xmlns="http://docbook.org/ns/docbook"
-linkend="control-structures.yield">beneficiu</link>'>
+linkend="control-structures.yield">yield</link>'>
 
 <!ENTITY parameter.context 'Accesați secțiunea
 <link xmlns="http://docbook.org/ns/docbook" linkend="context">context</link>
@@ -479,6 +479,10 @@ recomandată).</simpara></note>'>
 <para>Această funcție nu necesită biblioteca de prelucrare a imaginilor GD.
 </para></note>'>
 
+<!ENTITY note.gd.interpolation '<note xmlns="http://docbook.org/ns/docbook">
+<para>Această funcție este afectată de metoda de interpolare stabilită cu
+ajutorul <function>imagesetinterpolation</function>.</para></note>'>
+
 <!ENTITY gd.image.description '<varlistentry xmlns="http://docbook.org/ns/docbook">
 <term><parameter>image</parameter></term><listitem><para>O resursă - imagine,
 întoarsă de una din funcțiile de creare a imaginilor, cum ar fi
@@ -529,6 +533,12 @@ aceasta trebuie specificată în unități de pixeli (GD1) sau în unități de 
 xmlns="http://docbook.org/ns/docbook"><term><parameter>dbm_identifier</parameter>
 </term><listitem><para>Identificatorul legăturii DBM întors de
 <function>dbmopen</function>.</para></listitem></varlistentry>'>
+
+<!-- JSON notes -->
+<!ENTITY json.implementation.superset '<note xmlns="http://docbook.org/ns/docbook">
+<para>PHP implementează in superset al JSON - el de asemenea va codifica și va
+decodifica tipuri scalare și &null;. Standardul JSON susține astfel de valori
+doar când ele sunt încorporate într-un tablou sau obiect.</para></note>'>
 
 <!-- cURL notes -->
 
@@ -608,8 +618,12 @@ Una din constantele <constant>MCRYPT_MODE_modename</constant> sau unul din
 Accesați <link linkend="memcached.expiration" xmlns="http://docbook.org/ns/docbook">
 Timpurile de expirare</link> pentru informații suplimentare.'>
 
-<!ENTITY memcached.parameter.server_key 'Cheia ce identifică server-ul pe care
-se stochează valoarea.'>
+<!ENTITY memcached.parameter.server_key 'Cheia ce identifică serverul pe care se
+înscrie, sau de pe care se citește valoarea. În loc de a efectua hash asupra
+cheii nemijlocite a elementului, se efectuaează hash asupra cheii serverului,
+atunci când se decide cu care server memcached să se comunice. Aceasta permite
+ca elementele asociate să fie grupate împreună pe un singur server pentru a mări
+eficiența operațiilor multiple.'>
 
 <!ENTITY memcached.parameter.items 'Un tablou cu perechi de chei/valori pentru
 a fi stocate pe server.'>
@@ -632,12 +646,9 @@ algoritmul ce va fi utilizat pentru dispersarea parolei.'>
 <function xmlns="http://docbook.org/ns/docbook">password_hash</function>.'>
 
 <!ENTITY password.parameter.options 'Un tablou asociativ ce conține opțiuni.
-În prezent sunt susținute două opțiuni:
-<literal xmlns="http://docbook.org/ns/docbook">salt</literal>, pentru a furniza
-o valoare "salt" ce va fi utilizată la dispersarea parolei și
-<literal xmlns="http://docbook.org/ns/docbook">cost</literal>, ce denotă costul
-algoritmic ce trebuie utilizat. Exemple ale acestor valori pot fi găsite pe
-pagina <function xmlns="http://docbook.org/ns/docbook">crypt</function>.'>
+Accesați <link xmlns="http://docbook.org/ns/docbook" linkend="password.constants">
+constantele algoritmilor pentru parole</link> pentru documentație referitoare la
+opțiunile fiecărui algoritm.'>
 
 <!ENTITY password.parameter.password 'The user&apos;s password.'>
 
@@ -887,7 +898,7 @@ asemenea impune un timp mărit de prelucrare.</para>
 bibliotecile-client Oracle determină setul de caractere din variabila de mediu
 <constant>NLS_LANG</constant>.</para>
 <para xmlns='http://docbook.org/ns/docbook'>Transmiterea acestui parametru
-poate reduce timpul de conectare.</para>">
+poate reduce timpul necesar pentru conectare.</para>">
 
 <!ENTITY oci.sessionmode '<para xmlns="http://docbook.org/ns/docbook">Acest
 parametru este disponibil începând cu versiunea PHP 5 (PECL OCI8 1.1) și
@@ -1237,7 +1248,7 @@ xmlns="http://docbook.org/ns/docbook" linkend="book.mysqlnd">mysqlnd</link>.'>
 <!ENTITY mysqli.charset.note '<note xmlns="http://docbook.org/ns/docbook">
 <para>MySQLnd întotdeauna preia setul de caractere implicit de pe server. Acest
 set de caractere este transmis în momentul stabilirii parametrilor/autentificării
-la conectare și este utilizat ulterior de mysqlnd.</para><para>Libmysql
+la conectare și este utilizat ulterior de mysqlnd.</para><para>Libmysqlclient
 utilizează setul de caractere implicit stabilit în fișierul
 <filename>my.cnf</filename> sau printr-un apel explicit al funcției
 <function>mysqli_options</function> înainte de apelul
@@ -1651,6 +1662,25 @@ constantele de stare</link>pentru a afla valorile posibile.'>
 <!ENTITY svn.referto.type 'Accesați <link
 xmlns="http://docbook.org/ns/docbook" linkend="svn.constants.type">
 constante de tip</link> pentru a afla valorile posibile.'>
+
+<!-- FANN notes -->
+<!ENTITY fann.ann.description '<para xmlns="http://docbook.org/ns/docbook">
+<type>resource</type> a unei rețele neuronale.</para>'>
+<!ENTITY fann.train.description '<para xmlns="http://docbook.org/ns/docbook">
+<type>resource</type> a datelor pentru antrenarea rețelei neuronale.</para>'>
+<!ENTITY fann.errdat.description '<para xmlns="http://docbook.org/ns/docbook">
+<type>resource</type> a unei rețele neuronale, sau a datelor pentru antrenarea
+rețelei neuronale.</para>'>
+<!ENTITY fann.return.void '<para xmlns="http://docbook.org/ns/docbook">
+Nu este întoarsă nici o valoare.</para>'>
+<!ENTITY fann.return.bool '<para xmlns="http://docbook.org/ns/docbook">
+Întoarce &true; în caz de succes, sau &false; în caz contrar.</para>'>
+<!ENTITY fann.return.ann '<para xmlns="http://docbook.org/ns/docbook">
+Întoarce o <type>resource</type> a rețelei neuronale în caz de succes, sau
+&false; în caz de eroare.</para>'>
+<!ENTITY fann.return.train '<para xmlns="http://docbook.org/ns/docbook">
+Întoarce o <type>resource</type> a datelor pentru antrenarea rețelei neuronale
+în caz de succes, sau &false; în caz de eroare.</para>'>
 
 <!-- Imagick generic return types -->
 <!ENTITY imagick.return.success 'Întoarce &true; în caz de succes.'>
@@ -2080,26 +2110,108 @@ xmlns="http://docbook.org/ns/docbook">
 <!ENTITY trader.arg.slow.limit 'Limita inferioară în algoritmul adaptiv. Domeniul valorilor admisibile este de la 0.01 până la 0.99.'>
 
 <!-- Mongo -->
-<!ENTITY mongo.setreadpreference.parameters '
-<variablelist xmlns="http://docbook.org/ns/docbook">
-<varlistentry xmlns="http://docbook.org/ns/docbook">
-<term><parameter>read_preference</parameter></term><listitem><para>
-Modul preferinței de citire: <constant>Mongo::RP_PRIMARY</constant>,
-<constant>Mongo::RP_PRIMARY_PREFERRED</constant>,
-<constant>Mongo::RP_SECONDARY</constant>,
-<constant>Mongo::RP_SECONDARY_PREFERRED</constant> sau
-<constant>Mongo::RP_NEAREST</constant>.
-</para></listitem></varlistentry>
-<varlistentry xmlns="http://docbook.org/ns/docbook">
-<term><parameter>tags</parameter></term><listitem><para>Un tablou din zero sau
-mai multe seturi de etichete, unde fiecare din seturile de etichete este însuși
-un tablou de criterii utilizate pentru potrivirea etichetelor pe membrii setului
-de replicare.</para></listitem></varlistentry></variablelist>
-'>
-<!ENTITY mongo.setreadpreference.return '<para xmlns="http://docbook.org/ns/docbook">Întoarce &true; în caz de succes, sau &false; în caz contrar.</para>'>
-<!ENTITY mongo.writes.parameters.writeconcern '<listitem xmlns="http://docbook.org/ns/docbook"><para><literal>"w"</literal></para><para>Vedeți <link linkend="mongo.writeconcerns">WriteConcerns</link>. Valoarea implicită pentru <classname>MongoClient</classname> este <literal>1</literal>.</para></listitem>'>
-<!ENTITY mongo.writes.parameters.fsync '<listitem xmlns="http://docbook.org/ns/docbook"><para><literal>"fsync"</literal></para><para>O valoare boolean-ă, valoarea implicită este &false;. Forțează sincronizarea pe disc a operațiunii de inserare înainte de a întoarce succes. Dacă are valoarea &true;, se presupune efectuarea unei inserări aprobate și setarea <literal>w</literal> va fi modificată în <literal>0</literal>.</para></listitem>'>
-<!ENTITY mongo.writes.parameters.timeout '<listitem xmlns="http://docbook.org/ns/docbook"><para><literal>"timeout"</literal></para><para>valoare întreagă, implicit este <literal>MongoCursor::$timeout</literal>. Dacă "safe" este stabilit, aceasta va stabili pentru client durata de așteptare (în milisecunde) a răspunsului de la baza de date. Dacă baza de date nu răspunde în intervalul de timp stabilit, va fi generată o excepție <classname>MongoCursorTimeoutException</classname>.</para></listitem>'>
-<!ENTITY mongo.writes.parameters.safe '<listitem xmlns="http://docbook.org/ns/docbook"><para><literal>"safe"</literal></para><para><emphasis>Dezaprobat</emphasis>. Utilizați opțiunea <link linkend="mongo.writeconcerns">WriteConcern</link> <literal>w</literal>.</para></listitem>'>
-<!ENTITY mongo.errors.exceptions.writeconcern '<para xmlns="http://docbook.org/ns/docbook">Generează o excepție <classname>MongoCursorException</classname> dacă opțiunea "w" este stabilită și înscrierea eșuează.</para><para xmlns="http://docbook.org/ns/docbook">Generează o excepție <classname>MongoCursorTimeoutException</classname> dacă opțiunea "w" este stabilită la o valoare mai mare decât unu și operațiunea durează mai mult de <varname>MongoCursor::$timeout</varname> milisecunde. Aceasta nu va întrerupe operațiunea pe server, este un timeout de partea clientului. Operațiunea din <literal>MongoCollection::$wtimeout</literal> este în milisecunde.</para>'>
-<!ENTITY mongo.errors.deprecated '<para xmlns="http://docbook.org/ns/docbook">Generează o avertizare <constant>E_DEPRECATED</constant></para>'>
+<!ENTITY mongo.setreadpreference.parameters '<variablelist xmlns="http://docbook.org/ns/docbook"><varlistentry>
+<term><parameter>read_preference</parameter></term>
+<listitem><para>Modul preferinței de citire:
+<constant>MongoClient::RP_PRIMARY</constant>,
+<constant>MongoClient::RP_PRIMARY_PREFERRED</constant>,
+<constant>MongoClient::RP_SECONDARY</constant>,
+<constant>MongoClient::RP_SECONDARY_PREFERRED</constant> sau
+<constant>MongoClient::RP_NEAREST</constant>.</para></listitem></varlistentry>
+<varlistentry><term><parameter>tags</parameter></term>
+<listitem><para>Un tablou din zero sau mai multe seturi de etichete, unde fiecare
+set de etichete este la rândul său un tablou de criterii utilizate pentru a
+potrivi etichetele pe membrii setului de replicare.</para></listitem></varlistentry></variablelist>'>
+<!ENTITY mongo.setreadpreference.returnvalues '<para xmlns="http://docbook.org/ns/docbook">
+Întoarce &true; în caz de succes, sau &false; în caz contrar.</para>'>
+<!ENTITY mongo.setreadpreference.errors '<para xmlns="http://docbook.org/ns/docbook">
+Emite un <constant>E_WARNING</constant> dacă careva parametru nu e valid, sau
+dacă unul sau mai multe seturi de etichete sunt furnizate cu modul preferinței
+de citire <constant>MongoClient::RP_PRIMARY</constant>.</para>'>
+<!ENTITY mongo.getreadpreference.returnvalues '<para xmlns="http://docbook.org/ns/docbook">
+Această funcție întoarce un tablou ce descrie preferința de citire. Tabloul
+conține tipul (<literal>type</literal>) valorilor pentru șirul cu modul
+preferinței de citire (ce corespunde constantelor <classname>MongoClient</classname>),
+și <literal>tagsets</literal> conținând lista tuturor criteriilor setului de
+etichete. Dacă nu a fost specificat nici un set de etichete, <literal>tagsets</literal>
+nu va fi prezent în tablou.</para>'>
+<!ENTITY mongo.writes.parameters.writeconcern '<listitem xmlns="http://docbook.org/ns/docbook">
+<para><literal>"w"</literal></para><para>Vedeți
+<link linkend="mongo.writeconcerns">WriteConcerns</link>. Valoarea implicită
+pentru <classname>MongoClient</classname> este <literal>1</literal>.</para></listitem>'>
+<!ENTITY mongo.writes.parameters.writeconcerntimeout '<listitem xmlns="http://docbook.org/ns/docbook">
+<para><literal>"wtimeout"</literal></para><para>Cât timp să se aștepte confirmarea
+<link linkend="mongo.writeconcerns">WriteConcern</link>. Valoarea implicită pentru
+<classname>MongoClient</classname> este <literal>10000</literal> milisecunde.</para></listitem>'>
+<!ENTITY mongo.writes.parameters.fsync '<listitem xmlns="http://docbook.org/ns/docbook">
+<para><literal>"fsync"</literal></para><para>O valoare boolean-ă, valoarea
+implicită este &false;. Forțează sincronizarea pe disc a operațiunii de inserare
+înainte de a întoarce succes. Dacă are valoarea &true;, se presupune efectuarea
+unei inserări cu confirmare și setarea <literal>w</literal> va fi modificată în
+<literal>0</literal>.</para></listitem>'>
+<!-- <!ENTITY mongo.writes.parameters.sockettimeoutms '<listitem xmlns="http://docbook.org/ns/docbook">
+<para><literal>"socketTimeoutMS"</literal></para><para>Integer, defaults to
+<literal>MongoCursor::$timeout</literal>. If acknowledged writes are used, this
+sets how long (in milliseconds) for the client to wait for a database response.
+If the database does not respond within the timeout period, a
+<classname>MongoCursorTimeoutException</classname> will be thrown.</para></listitem>'> -->
+<!ENTITY mongo.writes.parameters.journal '<listitem xmlns="http://docbook.org/ns/docbook">
+<para><literal>"j"</literal></para><para>O valoare boolean-ă, cu valoarea
+implicită &false;. Forțează sincronizarea cu jurnalul a operațiunii de inserare,
+înainte de a întoarce succes. Dacă are valoarea &true;, se presupune efectuarea
+unei inserări cu confirmare și setarea <literal>w</literal> va fi modificată în
+<literal>0</literal>.</para></listitem>'>
+<!ENTITY mongo.writes.parameters.safe '<listitem xmlns="http://docbook.org/ns/docbook">
+<para><literal>"safe"</literal></para><para><emphasis>Dezaprobat</emphasis>.
+Utilizați opțiunea <link linkend="mongo.writeconcerns">WriteConcern</link>
+<literal>w</literal>.</para></listitem>'>
+<!ENTITY mongo.writes.parameters.timeout '<listitem xmlns="http://docbook.org/ns/docbook">
+<para><literal>"timeout"</literal></para><para>O valoare de tip întreg, implicit
+este <literal>MongoCursor::$timeout</literal>. Dacă se utilizează înscrieri cu
+confirmare, acest parametru stabilește intervalul de timp maximal (în milisecunde)
+pentru ca clientul să primească răspuns de la baza de date. Dacă baza de date nu
+răspunde în intervalul de timeout, o excepție <classname>MongoCursorTimeoutException</classname>
+va fi emisă.</para></listitem>'>
+<!ENTITY mongo.errors.exceptions.writeconcern '<para xmlns="http://docbook.org/ns/docbook">
+Generează o excepție <classname>MongoCursorException</classname> dacă opțiunea
+"w" este stabilită și înscrierea eșuează.</para>
+<para xmlns="http://docbook.org/ns/docbook">Generează o excepție
+<classname>MongoCursorTimeoutException</classname> dacă opțiunea "w" este
+stabilită la o valoare mai mare decât unu și operațiunea durează mai mult de
+<varname>MongoCursor::$timeout</varname> milisecunde. Aceasta nu va întrerupe
+operațiunea pe server, este un timeout de partea clientului. Operațiunea din
+<literal>MongoCollection::$wtimeout</literal> este în milisecunde.</para>'>
+<!ENTITY mongo.errors.deprecated '<para xmlns="http://docbook.org/ns/docbook">
+Generează o avertizare <constant>E_DEPRECATED</constant></para>'>
+<!ENTITY mongo.gridfs.store.metadata.note '<note xmlns="http://docbook.org/ns/docbook">
+<para>Aceste câmpuri pot să le rescrie pe cele create automat de către driver,
+după cum e descris în documentația de bază MongoDB pentru
+<link xlink:href="&url.mongodb.docs.gridfs;#the-files-collection" xmlns:xlink="http://www.w3.org/1999/xlink">colecția de fișiere</link>.
+Ca un exemplu de utilizare practică a acestui comportament ar fi specificarea
+unor valori specifice pentru <literal>chunkSize</literal> sau
+<literal>_id</literal> pentru fișier.</para></note>'>
+<!ENTITY mongo.gridfs.store.return '<para xmlns="http://docbook.org/ns/docbook">
+Întoarce valoarea <literal>_id</literal> a fișierului cu documentul salvat.
+Acesta va fi un <classname>MongoId</classname> generat, doar dacă un
+<literal>_id</literal> nu a fost specificat în mod explicit în parametrul <parameter>extra</parameter>.</para>'>
+
+<!-- Radius -->
+<!ENTITY radius.request.required '<note xmlns="http://docbook.org/ns/docbook">
+<para>O interpelare trebuie să fie creată cu ajutorul
+<function>radius_create_request</function>înainte ca această funcție să poată fi
+apelată.</para></note>'>
+<!ENTITY radius.parameter.attribute-type '<varlistentry xmlns="http://docbook.org/ns/docbook">
+<term><parameter>type</parameter></term><listitem><para>Tipul atributului.</para></listitem></varlistentry>'>
+<!ENTITY radius.parameter.handle '<varlistentry xmlns="http://docbook.org/ns/docbook">
+<term><parameter>radius_handle</parameter></term><listitem><para>Resursa RADIUS.</para></listitem></varlistentry>'>
+<!ENTITY radius.parameter.options '<varlistentry xmlns="http://docbook.org/ns/docbook">
+<term><parameter>options</parameter></term><listitem><para>O mască de biți a
+opțiunilor atributului. Opțiunile disponibile includ
+<link linkend="constant.radius-option-tagged"><constant>RADIUS_OPTION_TAGGED</constant></link> și
+<link linkend="constant.radius-option-salt"><constant>RADIUS_OPTION_SALT</constant></link>.</para></listitem></varlistentry>'>
+<!ENTITY radius.parameter.tag '<varlistentry xmlns="http://docbook.org/ns/docbook">
+<term><parameter>tag</parameter></term><listitem><para>Eticheta atributului.
+Acest parametru e ignorat dacă nu a fost stabilită opțiunea
+<link linkend="constant.radius-option-tagged"><constant>RADIUS_OPTION_TAGGED</constant></link>.</para></listitem></varlistentry>'>
+<!ENTITY radius.parameter.vendor '<varlistentry xmlns="http://docbook.org/ns/docbook">
+<term><parameter>vendor</parameter></term><listitem><para>ID-ul vânzătorului (producătorului).</para></listitem></varlistentry>'>
