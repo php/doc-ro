@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 79422caf1a86d08a9ab1799c450c537e8a63646f Maintainer: radical Status: ready -->
+<!-- EN-Revision: 8bc08ef8418d334ec29738409c546282149fa2c9 Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
 <refentry xml:id="function.json-decode" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -36,8 +36,9 @@
        trebuie convertit.
       </para>
       <para>
-       Această funcție operează doar cu date codificate în UTF-8.
+       Această funcție operează doar cu șiruri codificate în UTF-8.
       </para>
+      &json.implementation.superset;
      </listitem>
     </varlistentry>
     <varlistentry>
@@ -66,9 +67,6 @@
        (în mod implicit numerele întregi mari se transformă în numere cu virgulă
        flotantă)
       </para>
-      <para>
-       &version.trunk.after.53;
-      </para>
      </listitem>
     </varlistentry>
    </variablelist>
@@ -91,7 +89,7 @@
   &reftitle.examples;
   <para>
    <example>
-    <title><function>json_decode</function> exemplu</title>
+    <title>Exemple <function>json_decode</function></title>
     <programlisting role="php">
 <![CDATA[
 <?php
@@ -125,7 +123,13 @@ array(5) {
     </screen>
    </example>
    <example>
-    <title>Un alt exemplu</title>
+    <title>Accesarea proprietăților nevalide ale unui obiect</title>
+    <simpara>
+     Accesarea elementelor dintr-un obiect, care conțin caractere nepermise
+     conform convenției de denumiri PHP (de ex. liniuța), poate fi realizată
+     prin încapsularea denumirii elementului între paranteze figurate și
+     apostrofuri.
+    </simpara>
     <programlisting role="php">
 <![CDATA[
 <?php
@@ -140,23 +144,23 @@ print $obj->{'foo-bar'}; // 12345
     </programlisting>
    </example>
    <example>
-    <title>greșeli comune la utilizarea <function>json_decode</function></title>
+    <title>Greșeli tipice la utilizarea <function>json_decode</function></title>
     <programlisting role="php">
 <![CDATA[
 <?php
 
-// următoarele stringuri sunt JavaScript valid, dar nu și JSON valid
+// următoarele șiruri sunt valide în JavaScript, dar nu sunt valide în JSON
 
-// denumirea și valoarea trebuie incluse între ghilimele duble
-// ghilimelele obișnuite nu sunt valide
+// denumirea și valoarea trebuie să fie cuprinse între ghilimele duble
+// ghilimelele singulare nu sunt valide
 $bad_json = "{ 'bar': 'baz' }";
 json_decode($bad_json); // null
 
-// denumirea trebuie inclusă între ghilimele duble
+// denumirea trebuie să fie cuprinsă între ghilimele duble
 $bad_json = '{ bar: "baz" }';
 json_decode($bad_json); // null
 
-// virgula la sfârșit nu este permisă
+// virgule în plus la sfârșit nu sunt permise
 $bad_json = '{ bar: "baz", }';
 json_decode($bad_json); // null
 
@@ -165,11 +169,11 @@ json_decode($bad_json); // null
     </programlisting>
    </example>
    <example>
-    <title>Erori ale <parameter>depth</parameter></title>
+    <title>Erori la parametrul <parameter>depth</parameter></title>
     <programlisting role="php">
 <![CDATA[
 <?php
-// Codifică datele.
+// Codificarea datelor.
 $json = json_encode(
     array(
         1 => array(
@@ -185,19 +189,20 @@ $json = json_encode(
     )
 );
 
-// Definește erorile.
-$json_errors = array(
-    JSON_ERROR_NONE => 'No error has occurred',
-    JSON_ERROR_DEPTH => 'The maximum stack depth has been exceeded',
-    JSON_ERROR_CTRL_CHAR => 'Control character error, possibly incorrectly encoded',
-    JSON_ERROR_SYNTAX => 'Syntax error',
-);
+// Definirea erorilor.
+$constants = get_defined_constants(true);
+$json_errors = array();
+foreach ($constants["json"] as $name => $value) {
+    if (!strncmp($name, "JSON_ERROR_", 11)) {
+        $json_errors[$value] = $name;
+    }
+}
 
 // Arată erorile pentru diferite adâncimi.
-foreach(range(4, 3, -1) as $depth) {
-    var_dump(json_decode($json, True, $depth));
-    echo 'Last error : ', $json_errors[json_last_error()], PHP_EOL, PHP_EOL;
-    }
+foreach (range(4, 3, -1) as $depth) {
+    var_dump(json_decode($json, true, $depth));
+    echo 'Last error: ', $json_errors[json_last_error()], PHP_EOL, PHP_EOL;
+}
 ?>
 ]]>
     </programlisting>
@@ -223,10 +228,10 @@ array(1) {
     }
   }
 }
-Last error : No error has occurred
+Last error: JSON_ERROR_NONE
 
 NULL
-Last error : The maximum stack depth has been exceeded
+Last error: JSON_ERROR_DEPTH
 ]]>
     </screen>
    </example>
@@ -235,7 +240,7 @@ Last error : The maximum stack depth has been exceeded
     <programlisting role="php">
 <![CDATA[
 <?php
-$json = '12345678901234567890';
+$json = '{"number": 12345678901234567890}';
 
 var_dump(json_decode($json));
 var_dump(json_decode($json, false, 512, JSON_BIGINT_AS_STRING));
@@ -246,8 +251,14 @@ var_dump(json_decode($json, false, 512, JSON_BIGINT_AS_STRING));
     &example.outputs;
     <screen>
 <![CDATA[
-float(1.2345678901235E+19)
-string(20) "12345678901234567890"
+object(stdClass)#1 (1) {
+  ["number"]=>
+  float(1.2345678901235E+19)
+}
+object(stdClass)#1 (1) {
+  ["number"]=>
+  string(20) "12345678901234567890"
+}
 ]]>
     </screen>
    </example>
@@ -282,7 +293,7 @@ string(20) "12345678901234567890"
      </thead>
      <tbody>
       <row>
-       <entry>&version.trunk.changelog;</entry>
+       <entry>5.4.0</entry>
        <entry>
         A fost adăugat parametrul <parameter>options</parameter>.
        </entry>
@@ -295,6 +306,12 @@ string(20) "12345678901234567890"
       <row>
        <entry>5.2.3</entry>
        <entry>Limita de imbricare a fost mărită de la 20 la 128.</entry>
+      </row>
+      <row>
+       <entry>5.2.1</entry>
+       <entry>
+        A fost adăugată susținerea decodificării JSON a tipurilor de bază.
+       </entry>
       </row>
      </tbody>
     </tgroup>

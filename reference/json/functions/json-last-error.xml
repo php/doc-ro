@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: a72b61edd5305b4bd1efc2112b9d64c6aed43987 Maintainer: radical Status: ready -->
+<!-- EN-Revision: c29b97cf6e707290cdf6728d60119d38348d5f80 Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
 <refentry xml:id="function.json-last-error" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -16,8 +16,8 @@
    <void />
   </methodsynopsis>
   <para>
-   Întoarce ultima eroare (dacă este prezentă) care a survenit la interpretarea
-   JSON.
+   Întoarce ultima eroare (dacă este prezentă) care a survenit la ultima
+   codificare / decodificare JSON.
   </para>
  </refsect1>
 
@@ -53,13 +53,13 @@
       <entry></entry>
      </row>
      <row>
-      <entry><constant>JSON_ERROR_CTRL_CHAR</constant></entry>
-      <entry>Eroare a caracterului de control, posibil este codificat incorect</entry>
+      <entry><constant>JSON_ERROR_STATE_MISMATCH</constant></entry>
+      <entry>Șir JSON invalid sau deteriorat</entry>
       <entry></entry>
      </row>
      <row>
-      <entry><constant>JSON_ERROR_STATE_MISMATCH</constant></entry>
-      <entry>Șir JSON invalid sau deteriorat</entry>
+      <entry><constant>JSON_ERROR_CTRL_CHAR</constant></entry>
+      <entry>Eroare a caracterului de control, posibil este codificat incorect</entry>
       <entry></entry>
      </row>
      <row>
@@ -71,6 +71,26 @@
       <entry><constant>JSON_ERROR_UTF8</constant></entry>
       <entry>Caractere UTF-8 deformate, posibil codificate incorect</entry>
       <entry>PHP 5.3.3</entry>
+     </row>
+     <row>
+      <entry><constant>JSON_ERROR_RECURSION</constant></entry>
+      <entry>A fost găsită una sau mai multe referințe recursive în valoarea ce trebuie codificată</entry>
+      <entry>PHP 5.5.0</entry>
+     </row>
+     <row>
+      <entry><constant>JSON_ERROR_INF_OR_NAN</constant></entry>
+      <entry>
+       A fost găsită una sau mai multe valori
+       <link linkend="language.types.float.nan"><constant>NAN</constant></link>
+       sau <link linkend="function.is-infinite"><constant>INF</constant></link>
+       în valoarea ce trebuie codificată
+      </entry>
+      <entry>PHP 5.5.0</entry>
+     </row>
+     <row>
+      <entry><constant>JSON_ERROR_UNSUPPORTED_TYPE</constant></entry>
+      <entry>A fost furnizată o valoare cu un tip ce nu poate fi codificat</entry>
+      <entry>PHP 5.5.0</entry>
      </row>
     </tbody>
    </tgroup>
@@ -85,23 +105,27 @@
     <programlisting role="php">
 <![CDATA[
 <?php
-// Un string JSON valid
+// Un șir JSON valid
 $json[] = '{"Organization": "PHP Documentation Team"}';
 
-// Un string JSON invalid ce va cauza o eroare de sintaxă
-// în acest caz am utilizat ' în loc de " pentru citație
+// Un șir JSON invalid ce va cauza o eroare de sintaxă.
+// În cazul dat am folosit ' în loc de "
 $json[] = "{'Organization': 'PHP Documentation Team'}";
 
 
-foreach($json as $string)
-{
+foreach ($json as $string) {
     echo 'Decoding: ' . $string;
     json_decode($string);
 
-    switch(json_last_error())
-    {
+    switch (json_last_error()) {
+        case JSON_ERROR_NONE:
+            echo ' - No errors';
+        break;
         case JSON_ERROR_DEPTH:
             echo ' - Maximum stack depth exceeded';
+        break;
+        case JSON_ERROR_STATE_MISMATCH:
+            echo ' - Underflow or the modes mismatch';
         break;
         case JSON_ERROR_CTRL_CHAR:
             echo ' - Unexpected control character found';
@@ -109,8 +133,11 @@ foreach($json as $string)
         case JSON_ERROR_SYNTAX:
             echo ' - Syntax error, malformed JSON';
         break;
-        case JSON_ERROR_NONE:
-            echo ' - No errors';
+        case JSON_ERROR_UTF8:
+            echo ' - Malformed UTF-8 characters, possibly incorrectly encoded';
+        break;
+        default:
+            echo ' - Unknown error';
         break;
     }
 
@@ -128,13 +155,40 @@ Decoding: {'Organization': 'PHP Documentation Team'} - Syntax error, malformed J
     </screen>
    </example>
   </para>
+  <para>
+   <example>
+    <title>Exemplu <function>json_last_error</function> cu <function>json_encode</function></title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+// O secvență UTF8 invalidă
+$text = "\xB1\x31";
+
+$json  = json_encode($text);
+$error = json_last_error();
+
+var_dump($json, $error === JSON_ERROR_UTF8);
+?>
+]]>
+    </programlisting>
+    &example.outputs;
+    <screen>
+<![CDATA[
+string(4) "null"
+bool(true)
+]]>
+    </screen>
+   </example>
+  </para>
  </refsect1>
 
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>
    <simplelist>
+    <member><function>json_last_error_msg</function></member>
     <member><function>json_decode</function></member>
+    <member><function>json_encode</function></member>
    </simplelist>
   </para>
  </refsect1>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 5a37ef5632e7baa07120907ed35822c07794f450 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 01affe9d1b477a955c469540637fc187315f8021 Maintainer: simionea Status: ready -->
 <!-- CREDITS: radical -->
 <refentry xml:id="function.json-encode" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -15,6 +15,7 @@
    <type>string</type><methodname>json_encode</methodname>
    <methodparam><type>mixed</type><parameter>value</parameter></methodparam>
    <methodparam choice="opt"><type>int</type><parameter>options</parameter><initializer>0</initializer></methodparam>
+   <methodparam choice="opt"><type>int</type><parameter>depth</parameter><initializer>512</initializer></methodparam>
   </methodsynopsis>
   <para>
    Întoarce un șir care conține o reprezentare JSON pentru valoarea
@@ -34,8 +35,9 @@
        Poate fi de orice tip cu excepția <type>resource</type>.
       </para>
       <para>
-       Această funcție acceptă numai date codate în UTF-8.
+       Toate șirurile cu date trebuie să fie codificate în UTF-8.
       </para>
+      &json.implementation.superset;
      </listitem>
     </varlistentry>
     <varlistentry>
@@ -46,7 +48,21 @@
        <constant>JSON_HEX_TAG</constant>,
        <constant>JSON_HEX_AMP</constant>,
        <constant>JSON_HEX_APOS</constant>,
-       <constant>JSON_FORCE_OBJECT</constant>.
+       <constant>JSON_NUMERIC_CHECK</constant>,
+       <constant>JSON_PRETTY_PRINT</constant>,
+       <constant>JSON_UNESCAPED_SLASHES</constant>,
+       <constant>JSON_FORCE_OBJECT</constant>,
+       <constant>JSON_UNESCAPED_UNICODE</constant>. Comportamentul acestor
+       constante este descris în
+       <link linkend="json.constants">pagina cu constante JSON</link>.
+      </para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><parameter>depth</parameter></term>
+     <listitem>
+      <para>
+       Stabilește adâncimea maximă. Trebuie să fie mai mare decât zero.
       </para>
      </listitem>
     </varlistentry>
@@ -57,7 +73,8 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Întoarce un șir (<type>string</type>) reprezentat JSON dacă reușește.
+   Întoarce un șir (<type>string</type>) reprezentat JSON în caz de succes,
+   &return.falseforfailure;.
   </para>
  </refsect1>
 
@@ -74,15 +91,31 @@
      </thead>
      <tbody>
       <row>
-       <entry>5.3.0</entry>
+       <entry>5.5.0</entry>
        <entry>
-        A fost adăugat parametrul <parameter>options</parameter>.
+        A fost adăugat parametrul <parameter>depth</parameter>.
        </entry>
       </row>
       <row>
-       <entry>5.2.1</entry>
+       <entry>5.4.0</entry>
        <entry>
-        A fost adăugată susținerea codificării JSON a tipurilor de date elementare.
+        Au fost adăugate constantele
+        <constant>JSON_PRETTY_PRINT</constant>,
+        <constant>JSON_UNESCAPED_SLASHES</constant>,
+        <constant>JSON_UNESCAPED_UNICODE</constant>
+        pentru parametrul <parameter>options</parameter>.
+       </entry>
+      </row>
+      <row>
+       <entry>5.3.3</entry>
+       <entry>
+        A fost adăugată constanta <constant>JSON_NUMERIC_CHECK</constant> pentru parametrul <parameter>option</parameter>.
+       </entry>
+      </row>
+      <row>
+       <entry>5.3.0</entry>
+       <entry>
+        A fost adăugat parametrul <parameter>options</parameter>.
        </entry>
       </row>
      </tbody>
@@ -99,7 +132,7 @@
     <programlisting role="php">
 <![CDATA[
 <?php
-$arr = array ('a'=>1,'b'=>2,'c'=>3,'d'=>4,'e'=>5);
+$arr = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
 
 echo json_encode($arr);
 ?>
@@ -114,19 +147,21 @@ echo json_encode($arr);
    </example>
 
    <example>
-    <title>Un exemplu <function>json_encode</function> demonstrând toate
-    opțiunile în acțiune</title>
+    <title>
+     Un exemplu <function>json_encode</function> ce demonstrează utilizarea opțiunilor
+    </title>
     <programlisting role="php">
 <![CDATA[
 <?php
-$a = array('<foo>',"'bar'",'"baz"','&blong&');
+$a = array('<foo>',"'bar'",'"baz"','&blong&', "\xc3\xa9");
 
-echo "Normal: ", json_encode($a), "\n";
-echo "Tags: ",   json_encode($a,JSON_HEX_TAG), "\n";
-echo "Apos: ",   json_encode($a,JSON_HEX_APOS), "\n";
-echo "Quot: ",   json_encode($a,JSON_HEX_QUOT), "\n";
-echo "Amp: ",    json_encode($a,JSON_HEX_AMP), "\n";
-echo "All: ",    json_encode($a,JSON_HEX_TAG|JSON_HEX_APOS|JSON_HEX_QUOT|JSON_HEX_AMP), "\n\n";
+echo "Normal: ",  json_encode($a), "\n";
+echo "Tags: ",    json_encode($a, JSON_HEX_TAG), "\n";
+echo "Apos: ",    json_encode($a, JSON_HEX_APOS), "\n";
+echo "Quot: ",    json_encode($a, JSON_HEX_QUOT), "\n";
+echo "Amp: ",     json_encode($a, JSON_HEX_AMP), "\n";
+echo "Unicode: ", json_encode($a, JSON_UNESCAPED_UNICODE), "\n";
+echo "All: ",     json_encode($a, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE), "\n\n";
 
 $b = array();
 
@@ -148,12 +183,13 @@ echo "Associative array always output as object: ", json_encode($d, JSON_FORCE_O
     &example.outputs;
     <screen>
 <![CDATA[
-Normal: ["<foo>","'bar'","\"baz\"","&blong&"]
-Tags: ["\u003Cfoo\u003E","'bar'","\"baz\"","&blong&"]
-Apos: ["<foo>","\u0027bar\u0027","\"baz\"","&blong&"]
-Quot: ["<foo>","'bar'","\u0022baz\u0022","&blong&"]
-Amp: ["<foo>","'bar'","\"baz\"","\u0026blong\u0026"]
-All: ["\u003Cfoo\u003E","\u0027bar\u0027","\u0022baz\u0022","\u0026blong\u0026"]
+Normal: ["<foo>","'bar'","\"baz\"","&blong&","\u00e9"]
+Tags: ["\u003Cfoo\u003E","'bar'","\"baz\"","&blong&","\u00e9"]
+Apos: ["<foo>","\u0027bar\u0027","\"baz\"","&blong&","\u00e9"]
+Quot: ["<foo>","'bar'","\u0022baz\u0022","&blong&","\u00e9"]
+Amp: ["<foo>","'bar'","\"baz\"","\u0026blong\u0026","\u00e9"]
+Unicode: ["<foo>","'bar'","\"baz\"","&blong&","é"]
+All: ["\u003Cfoo\u003E","\u0027bar\u0027","\u0022baz\u0022","\u0026blong\u0026","é"]
 
 Empty array output as array: []
 Empty array output as object: {}
@@ -166,14 +202,119 @@ Associative array always output as object: {"foo":"bar","baz":"long"}
 ]]>
     </screen>
    </example>
+   <example>
+    <title>Un exemplu cu tablou secvențial versus un tablou non-secvențial</title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+echo "Sequential array".PHP_EOL;
+$sequential = array("foo", "bar", "baz", "blong");
+var_dump(
+ $sequential,
+ json_encode($sequential)
+);
+
+echo PHP_EOL."Non-sequential array".PHP_EOL;
+$nonsequential = array(1=>"foo", 2=>"bar", 3=>"baz", 4=>"blong");
+var_dump(
+ $nonsequential,
+ json_encode($nonsequential)
+);
+
+echo PHP_EOL."Sequential array with one key unset".PHP_EOL;
+unset($sequential[1]);
+var_dump(
+ $sequential,
+ json_encode($sequential)
+);
+?>
+]]>
+    </programlisting>
+    &example.outputs;
+    <screen>
+<![CDATA[
+Sequential array
+array(4) {
+  [0]=>
+  string(3) "foo"
+  [1]=>
+  string(3) "bar"
+  [2]=>
+  string(3) "baz"
+  [3]=>
+  string(5) "blong"
+}
+string(27) "["foo","bar","baz","blong"]"
+
+Non-sequential array
+array(4) {
+  [1]=>
+  string(3) "foo"
+  [2]=>
+  string(3) "bar"
+  [3]=>
+  string(3) "baz"
+  [4]=>
+  string(5) "blong"
+}
+string(43) "{"1":"foo","2":"bar","3":"baz","4":"blong"}"
+
+Sequential array with one key unset
+array(3) {
+  [0]=>
+  string(3) "foo"
+  [2]=>
+  string(3) "baz"
+  [3]=>
+  string(5) "blong"
+}
+string(33) "{"0":"foo","2":"baz","3":"blong"}"
+]]>
+    </screen>
+   </example>
   </para>
+ </refsect1>
+
+ <refsect1 role="notes">
+  &reftitle.notes;
+  <note>
+   <para>
+    În caz dacă eșuează codificarea, <function>json_last_error</function> poate
+    fi utilizat pentru a determina natura exactă a erorii.
+   </para>
+  </note>
+  <note>
+   <para>
+    La codificarea tablourilor, dacă cheile nu sunt consecutivități numerice
+    începând cu 0, atunci toate cheile vor fi codificate ca șiruri de caractere,
+    și vor fi specificate explicit pentru fiecare pereche cheie-valoare.
+   </para>
+  </note>
+  <note>
+   <para>
+    Ca și codificatorul JSON de referință, <function>json_encode</function> va
+    genera JSON care este o valoare simplă (adică nu este obiect sau tablou)
+    dacă îi este furnizată o valoare de tip <type>string</type>,
+    <type>integer</type>, <type>float</type> sau <type>boolean</type> pentru
+    parametrul <parameter>value</parameter>. În timp ce majoritatea
+    decodificatorilor JSON vor accepta aceste valori ca fiind JSON valid, altele
+    pot să nu-l accepte, deoarece specificația este ambiguă în această privință.
+   </para>
+   <para>
+    În concluzie, întotdeauna verificați ca decodificatorul JSON să poată
+    prelucra ceea ce se obține cu <function>json_encode</function>.
+   </para>
+  </note>
  </refsect1>
 
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>
    <simplelist>
+    <member><interfacename>JsonSerializable</interfacename></member>
     <member><function>json_decode</function></member>
+    <member><function>json_last_error</function></member>
+    <member><function>serialize</function></member>
    </simplelist>
   </para>
  </refsect1>

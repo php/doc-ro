@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 8bc08ef8418d334ec29738409c546282149fa2c9 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 8c2aa928b0ee108b4c29394ba20b1c5d2076eebc Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -579,6 +579,10 @@ dar nici una din submapele acstui director.</para>'>
 specificată de funcția <function>mb_regex_encoding</function> va fi utilizată
 în calitate de codificare a caracterelor pentru această funcție.</para></note>'>
 
+<!ENTITY note.mbstring.encoding.current '<note xmlns="http://docbook.org/ns/docbook">
+<para>Codificarea caracterelor specificată de <function>mb_regex_encoding</function>
+va fi utilizată implicit în calitate de codificare pentru această funcție.</para></note>'>
+
 <!ENTITY mbstring.encoding.parameter '<para xmlns="http://docbook.org/ns/docbook">
 Parametrul <parameter>encoding</parameter> reprezintă codificarea caracterelor.
 Dacă el este omis, va fi utilizată valoarea internă a codificării caracterelor.
@@ -871,10 +875,11 @@ Linux) sau <constant>LOCAL</constant> (în Windows) și <constant>ORACLE_SID
 </constant> pentru a determina <literal>instanța Oracle</literal> la care
 trebuie efectuată conexiunea.</para>
 <para xmlns='http://docbook.org/ns/docbook'>Pentru a utiliza metoda Easy
-Connect, PHP trebuie să fie legat cu bibliotecile-client Oracle 10g sau
-ulterioare. Șirul Easy Connect pentru Oracle 10g este de forma:
-<emphasis>[//]host_name[:port][/service_name]</emphasis>. Pentru Oracle 11g
-sintaxa este:
+Connect, PHP trebuie să fie legat cu bibliotecile-client Oracle
+10<emphasis>g</emphasis> sau ulterioare. Șirul Easy Connect pentru Oracle
+10<emphasis>g</emphasis> este de forma:
+<emphasis>[//]host_name[:port][/service_name]</emphasis>. Pentru Oracle
+11<emphasis>g</emphasis> sintaxa este:
 <emphasis>[//]host_name[:port][/service_name][:server_type][/instance_name]</emphasis>.
 Denumirile serviciilor pot fi găsite rulând utilitara Oracle
 <literal>lsnrctl status</literal> pe mașina unde rulează serverul de baze de
@@ -934,13 +939,11 @@ Un identificator al conexiunii Oracle, întors de
 <function>oci_connect</function>, <function>oci_pconnect</function> sau
 <function>oci_new_connect</function>.</para>'>
 
-<!ENTITY oci.name.compat.note 'Denumirea veche a funcției poate fi încă
-utilizată în versiunile curente, însă ea este învechită și nu este recomandată.'>
-
 <!ENTITY oci.availability.note.10g '<note xmlns="http://docbook.org/ns/docbook">
 <title>Versiune Oracle necesară</title>
 <para>Această funcție este disponibilă atunci când PHP este compilat cu
-bibliotecile Oracle Database de versiunea 10g sau ulterioare.</para></note>'>
+bibliotecile Oracle Database de versiunea 10<emphasis>g</emphasis>
+sau ulterioare.</para></note>'>
 
 <!ENTITY oci.clientinfo.tip '<tip xmlns="http://docbook.org/ns/docbook">
 <title>Performanță</title><para>Cu versiuni mai vechi ale OCI8 sau ale Oracle
@@ -2145,10 +2148,14 @@ pentru <classname>MongoClient</classname> este <literal>1</literal>.</para></lis
 <classname>MongoClient</classname> este <literal>10000</literal> milisecunde.</para></listitem>'>
 <!ENTITY mongo.writes.parameters.fsync '<listitem xmlns="http://docbook.org/ns/docbook">
 <para><literal>"fsync"</literal></para><para>O valoare boolean-ă, valoarea
-implicită este &false;. Forțează sincronizarea pe disc a operațiunii de inserare
-înainte de a întoarce succes. Dacă are valoarea &true;, se presupune efectuarea
+implicită este &false;. Dacă jurnalizarea e activată, ea funcționează exact ca
+<literal>"j"</literal>. Dacă jurnalizarea nu este acticvată, atunci se forțează
+sincronizarea pe disc a operațiunii de inserare înainte de a întoarce succes.
+Dacă are valoarea &true;, se presupune efectuarea
 unei inserări cu confirmare și setarea <literal>w</literal> va fi modificată în
-<literal>0</literal>.</para></listitem>'>
+<literal>0</literal>.</para>
+<note><para>Această opțiune e <emphasis>învechită</emphasis>. Utilizați în loc
+opțiunea <literal>"j"</literal>.</para></note></listitem>'>
 <!-- <!ENTITY mongo.writes.parameters.sockettimeoutms '<listitem xmlns="http://docbook.org/ns/docbook">
 <para><literal>"socketTimeoutMS"</literal></para><para>Integer, defaults to
 <literal>MongoCursor::$timeout</literal>. If acknowledged writes are used, this
