@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: a036f9237f6b8cf4ea75c4f9100d3921dcc3cf7b Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 519e5a4320843f375873960de319468547d904d3 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="about" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Despre manual</title>
@@ -280,14 +280,14 @@ int strlen ( string $string )
   </para>
   <para>
    Atunci când este disponibilă documentația pentru ultimele versiuni de
-   dezvoltare (nelansate) ale PHP, ea va fi marcată ca "disponibilă în SVN" sau
+   dezvoltare (nelansate) ale PHP, ea va fi marcată ca "disponibilă în Git" sau
    "versiune de dezvoltare". Și cu toate că trebuie să fiți pregătit pentru
    modificări ale acestei documentații, aceasta se întâmplă în cazuri rare.
   </para>
   <para>
-   Toate lucrările de dezvoltare se efectuează în Subversion (SVN) și pot fi
+   Toate lucrările de dezvoltare se efectuează în Git și pot fi
    verificate după cum este descris în pagina
-   <link xlink:href="&url.php.anonsvn;">accesul anonim la SVN</link>. Sau
+   <link xlink:href="&url.php.anongit;">accesul anonim la Git</link>. Sau
    aceleași surse pot fi descărcate ca
    <link xlink:href="&url.php.snapshots;">instantanee PHP</link>, disponibile
    pentru toate ramurile active ale PHP.
@@ -336,9 +336,6 @@ int strlen ( string $string )
    considerați folosirea acestor liste de distribuție. Pentru a vedea
    opțiunile de suport, inclusiv listele de distribuție poștale, vizitați
    <link xlink:href="&url.php.support;">pagina de suport PHP.net</link>.
-   În afară de aceasta, puteți găsi o listă de web site-uri devotate PHP,
-   care conțin articole, foruri, și galerii cu coduri-sursă pe
-   <link xlink:href="&url.php.links;">pagina de referințe PHP.net</link>.
   </para>
  </sect1>
 

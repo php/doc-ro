@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: a7058ef59ae01e237b4b3645ef2880de1e1da2b0 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: ea2add963c59fd24f10582829053bae519210074 Maintainer: simionea Status: ready -->
  <sect3 xml:id="configure.options.php" xmlns="http://docbook.org/ns/docbook">
   <title>Opțiunile PHP</title>
   <variablelist>
@@ -34,6 +34,7 @@
      <para>
       Implicit activează modul sigur (safe mode).
      </para>
+     &warn.deprecated.feature-5-3-0.removed-5-4-0;
     </listitem>
    </varlistentry>
    <varlistentry xml:id="configure.with-exec-dir">
@@ -45,6 +46,7 @@
       Permite executarea fișierelor numai din directorul DIR, atunci când
       este activat modul sigur. Implicit este <literal>/usr/local/php/bin</literal>.
      </para>
+     &warn.deprecated.feature-5-3-0.removed-5-4-0;
     </listitem>
    </varlistentry>
    <varlistentry xml:id="configure.enable-magic-quotes">
@@ -55,6 +57,7 @@
      <para>
       Implicit activează citatele magice (magic quotes).
      </para>
+     &warn.deprecated.feature-5-3-0.removed-5-4-0;
     </listitem>
    </varlistentry>
    <varlistentry xml:id="configure.disable-short-tags">
@@ -80,6 +83,7 @@
       în construcția
       <link linkend="control-structures.declare">declare</link>.
      </para>
+     &warn.deprecated.feature-5-3-0.removed-5-4-0;
     </listitem>
    </varlistentry>
    <varlistentry xml:id="configure.with-libdir">
