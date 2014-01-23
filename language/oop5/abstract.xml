@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: f0550025342228d4a7e6caa0edd2ec9d6ff63a00 Maintainer: radical Status: ready -->
+<!-- EN-Revision: 18e48e7ff442e12178ce0a379b29a2dfc7227140 Maintainer: radical Status: ready -->
  <sect1 xml:id="language.oop5.abstract" xmlns="http://docbook.org/ns/docbook">
   <title>Clase Abstracte</title>
 
@@ -21,8 +21,10 @@
    trebuie să definească funcția 'protected' sau 'public', dar nu 'private'.
    În plus, semnăturile metodelor trebuie să corespundă una alteia, adică
    sugestia tipului și numărul argumentelor necesare trebuie să fie aceleași.
-   Aceasta la fel se aplică și la constructori începând cu PHP 5.4. Înainte de
-   5.4 semnăturile constructorilor puteau să difere.
+   De exemplu, dacă clasa-fiică definește un argument opțional, în timp ce
+   semnătura metodei abstracte nu definește, atunci nu este nici un conflict în
+   semnătură. Aceasta la fel se aplică și la constructori începând cu PHP 5.4.
+   Înainte de 5.4 semnăturile constructorilor puteau să difere.
   </para>
 
   <example>
@@ -81,6 +83,49 @@ ConcreteClass1
 FOO_ConcreteClass1
 ConcreteClass2
 FOO_ConcreteClass2
+]]>
+   </screen>
+  </example>
+
+  <example>
+   <title>Exemplu cu clasă abstractă</title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+abstract class AbstractClass
+{
+    // Metoda noastră abstractă trebuie doar să definească argumentele necesare
+    abstract protected function prefixName($name);
+
+}
+
+class ConcreteClass extends AbstractClass
+{
+
+    // Clasa noastră fiică poate defini argumente opționale care nu sunt prezente în semnătura părintelui
+    public function prefixName($name, $separator = ".") {
+        if ($name == "Pacman") {
+            $prefix = "Mr";
+        } elseif ($name == "Pacwoman") {
+            $prefix = "Ms";
+        } else {
+            $prefix = "";
+        }
+        return "{$prefix}{$separator} {$name}";
+    }
+}
+
+$class = new ConcreteClass;
+echo $class->prefixName("Pacman"), "\n";
+echo $class->prefixName("Pacwoman"), "\n";
+?>
+]]>
+   </programlisting>
+   &example.outputs;
+   <screen>
+<![CDATA[
+Mr. Pacman
+Ms. Pacwoman
 ]]>
    </screen>
   </example>
