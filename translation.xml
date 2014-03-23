@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!DOCTYPE translation SYSTEM "../dtds/translation.dtd">
+<!DOCTYPE translation SYSTEM "../doc-base/phpbook/phpbook-xsml/translation.dtd">
 
 <translation xmlns="http://docbook.org/ns/docbook">
 
@@ -16,23 +16,23 @@
  </chmindex>
 
  <translators>
-  <person name="Paul Dorneanu"         email="spooky@php.net"                 nick="spooky"    cvs="yes" /> <!-- Joined: 2001-12-07 Status: unknown -->
-  <person name="Cristi Rădulescu"      email="cr@urbanxp.org"                 nick="cr_depend" cvs="yes" /> <!-- Joined: 2002-01-26 Status: unknown -->
-  <person name="Adrian Jurjica"        email="adiju@php.net"                  nick="adiju"     cvs="yes" /> <!-- Joined: 2002-01-26 Status: unknown -->
-  <person name="Mihai Uricaru"         email="muricaru@yahoo.com"             nick="muricaru"  cvs="yes" /> <!-- Joined: 2002-01-29 Status: unknown -->
-  <person name="Daniel Toma"           email="dt@webdev.ro"                   nick="dt"        cvs="yes" /> <!-- Joined: 2002-01-31 Status: unknown -->
-  <person name="Cristian"              email="cristian@goga.isjsibiu.ro"      nick="critix"    cvs="yes" /> <!-- Joined: 2002-01-31 Status: unknown -->
-  <person name="Adrian Ciutureanu"     email="adu@php.net"                    nick="adu"       cvs="yes" /> <!-- Joined: 2002-02-27 Status: unknown -->
-  <person name="Adrian Spinei"         email="aspinei@internal.metawings.com" nick="aspinei"   cvs="yes" /> <!-- Joined: 2002-03-11 Status: unknown -->
-  <person name="Dan Bajarca"           email="bbd@php.net"                    nick="bbd"       cvs="yes" /> <!-- Joined: 2002-06-26 Status: unknown -->
-  <person name="Dan Tofan"             email="tdan_99@yahoo.com"              nick="xelis"     cvs="yes" /> <!-- Joined: 2002-11-14 Status: unknown -->
-  <person name="Mircea Banu"           email="banu@ss.pub.ro"                 nick="mbr"       cvs="yes" /> <!-- Joined: 2003-04-01 Status: unknown -->
-  <person name="Florin Enache"         email="eflorin@home.ro"                nick="eflorin"   cvs="yes" /> <!-- Joined: 2003-09-01 Status: unknown -->
-  <person name="Șerban Gheorghe Ghiță" email="zamolxe@php.net"                nick="zamolxe"   cvs="yes" /> <!-- Joined: 2003-12-17 Status: active -->
-  <person name="Gabriel Preda"         email="gabriel.preda@gmail.com"        nick="radical"   cvs="yes" /> <!-- Joined: 2004-09-15 Status: active -->
-  <person name="ShOtY"                 email="shoty_my@yahoo.com"             nick="shoty"     cvs="yes" /> <!-- Joined: 2005-02-02 Status: unknown -->
-  <person name="Simion Onea"           email="simionea@gmail.com"             nick="simionea"  cvs="yes" /> <!-- Joined: 2007-06-04 Status: active -->
-  <person name="Alexandru Szasz"       email="alexxed@gmail.com"              nick="alexxed"   cvs="yes" /> <!-- Joined: 2008-03-20 Status: active -->
+  <person name="Paul Dorneanu"         email="spooky@php.net"                 nick="spooky"    vcs="yes" /> <!-- Joined: 2001-12-07 Status: unknown -->
+  <person name="Cristi Rădulescu"      email="cr@urbanxp.org"                 nick="cr_depend" vcs="yes" /> <!-- Joined: 2002-01-26 Status: unknown -->
+  <person name="Adrian Jurjica"        email="adiju@php.net"                  nick="adiju"     vcs="yes" /> <!-- Joined: 2002-01-26 Status: unknown -->
+  <person name="Mihai Uricaru"         email="muricaru@yahoo.com"             nick="muricaru"  vcs="yes" /> <!-- Joined: 2002-01-29 Status: unknown -->
+  <person name="Daniel Toma"           email="dt@webdev.ro"                   nick="dt"        vcs="yes" /> <!-- Joined: 2002-01-31 Status: unknown -->
+  <person name="Cristian"              email="cristian@goga.isjsibiu.ro"      nick="critix"    vcs="yes" /> <!-- Joined: 2002-01-31 Status: unknown -->
+  <person name="Adrian Ciutureanu"     email="adu@php.net"                    nick="adu"       vcs="yes" /> <!-- Joined: 2002-02-27 Status: unknown -->
+  <person name="Adrian Spinei"         email="aspinei@internal.metawings.com" nick="aspinei"   vcs="yes" /> <!-- Joined: 2002-03-11 Status: unknown -->
+  <person name="Dan Bajarca"           email="bbd@php.net"                    nick="bbd"       vcs="yes" /> <!-- Joined: 2002-06-26 Status: unknown -->
+  <person name="Dan Tofan"             email="tdan_99@yahoo.com"              nick="xelis"     vcs="yes" /> <!-- Joined: 2002-11-14 Status: unknown -->
+  <person name="Mircea Banu"           email="banu@ss.pub.ro"                 nick="mbr"       vcs="yes" /> <!-- Joined: 2003-04-01 Status: unknown -->
+  <person name="Florin Enache"         email="eflorin@home.ro"                nick="eflorin"   vcs="yes" /> <!-- Joined: 2003-09-01 Status: unknown -->
+  <person name="Șerban Gheorghe Ghiță" email="zamolxe@php.net"                nick="zamolxe"   vcs="yes" /> <!-- Joined: 2003-12-17 Status: active -->
+  <person name="Gabriel Preda"         email="gabriel.preda@gmail.com"        nick="radical"   vcs="yes" /> <!-- Joined: 2004-09-15 Status: active -->
+  <person name="ShOtY"                 email="shoty_my@yahoo.com"             nick="shoty"     vcs="yes" /> <!-- Joined: 2005-02-02 Status: unknown -->
+  <person name="Simion Onea"           email="simionea@gmail.com"             nick="simionea"  vcs="yes" /> <!-- Joined: 2007-06-04 Status: active -->
+  <person name="Alexandru Szasz"       email="alexxed@gmail.com"              nick="alexxed"   vcs="yes" /> <!-- Joined: 2008-03-20 Status: active -->
  </translators>
 
  <work-in-progress>
