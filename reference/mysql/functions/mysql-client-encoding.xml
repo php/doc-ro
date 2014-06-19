@@ -2,7 +2,7 @@
 <!-- $Revision$ -->
 <!-- $Author$ -->
 <!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
-<!-- CREDITS: yamolxe -->
+<!-- CREDITS: zamolxe -->
 <refentry xml:id="function.mysql-client-encoding" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>mysql_client_encoding</refname>
