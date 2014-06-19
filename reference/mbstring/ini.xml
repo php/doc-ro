@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 9ad53a76ce25cb13e38a6b2d45d05bd54c9ccc84 Maintainer: alexxed Status: ready -->
+<!-- EN-Revision: 556fb71ea42aaa91d7d536734aa0ab75951239dd Maintainer: alexxed Status: ready -->
 <!-- CREDITS: simionea -->
 <section xml:id="mbstring.configuration" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.runtime;
@@ -12,10 +12,10 @@
    <tgroup cols="4">
     <thead>
      <row>
-      <entry>Denumire</entry>
-      <entry>Valoare implicită</entry>
-      <entry>Se poate schimba</entry>
-      <entry>Istoric schimbări</entry>
+      <entry>&Name;</entry>
+      <entry>&Default;</entry>
+      <entry>&Changeable;</entry>
+      <entry>&Changelog;</entry>
      </row>
     </thead>
     <tbody>
@@ -23,7 +23,7 @@
       <entry><link linkend="ini.mbstring.language">mbstring.language</link></entry>
       <entry>"neutral"</entry>
       <entry>PHP_INI_ALL</entry>
-      <entry>Disponibilă începând cu PHP 4.3.0. PHP_INI_PERDIR în PHP &lt;= 5.2.6</entry>
+      <entry>Disponibilă începând cu PHP 4.3.0.; PHP_INI_PERDIR în PHP &lt;= 5.2.6</entry>
      </row>
      <row>
       <entry><link linkend="ini.mbstring.detect-order">mbstring.detect_order</link></entry>
@@ -53,7 +53,8 @@
       <entry>mbstring.script_encoding</entry>
       <entry>NULL</entry>
       <entry>PHP_INI_ALL</entry>
-      <entry>Disponibilă începând cu PHP 4.3.0.</entry>
+      <entry>Disponibilă începând cu PHP 4.3.0. Eliminată în PHP 5.4.0.
+       Folosiți în loc <link linkend="ini.zend.script-encoding">zend.script_encoding</link>.</entry>
      </row>
      <row>
       <entry><link linkend="ini.mbstring.substitute-character">mbstring.substitute_character</link></entry>
@@ -66,8 +67,7 @@
       <entry>"0"</entry>
       <entry>PHP_INI_SYSTEM</entry>
       <entry>
-       PHP_INI_SYSTEM în PHP &lt;= 4.2.3; PHP_INI_SYSTEM | PHP_INI_PERDIR de la
-       PHP 4.3 până la 5.2.6. Disponibilă începând cu PHP 4.2.0.
+        PHP_INI_PERDIR de la PHP 4.3 până la 5.2.6, în caz contrar PHP_INI_SYSTEM. Disponibilă începând cu PHP 4.2.0.
       </entry>
      </row>
      <row>
@@ -125,7 +125,9 @@
     </term>
     <listitem>
      <para>
-      Definește codarea internă a caracterelor.
+      Definește codarea internă a caracterelor. Începând cu PHP 5.6.0, dacă
+      această setare e vidă, va fi utilizată
+      <link linkend="ini.default-charset">default_charset</linkDD>.
      </para>
     </listitem>
    </varlistentry>
@@ -185,6 +187,9 @@
       <link linkend="mbstring.overload">Suprascrierea funcțiilor</link> pentru mai multe
       informații.
      </para>
+     <para>
+      Această setare poate fi schimbată doar din fișierul &php.ini;.
+     </para>
     </listitem>
    </varlistentry>
    <varlistentry xml:id="ini.mbstring.strict-detection">
@@ -237,8 +242,8 @@ mbstring.encoding_translation = On
 ;; Notă: Scripturile nu pot schimba setarea http_input.
 mbstring.http_input           = pass    ; Fără conversie
 mbstring.http_input           = auto    ; Conversie automată
-                                ; „auto” este extins la „ASCII,JIS,UTF-8,EUC-JP,SJIS”
-mbstring.http_input           = SJIS    ; Conversie la SJIS
+                                ; „auto” este extins în conformitate cu mbstring.language
+mbstring.http_input           = SJIS    ; Stabilește intrările HTTP în SJIS
 mbstring.http_input           = UTF-8,SJIS,EUC-JP ; Specifică ordinea
 
 ;; Stabilește codarea implicită pentru datele trimise prin HTTP
@@ -344,4 +349,3 @@ vim600: syn=xml fen fdm=syntax fdl=2 si
 vim: et tw=78 syn=sgml
 vi: ts=1 sw=1
 -->
-
