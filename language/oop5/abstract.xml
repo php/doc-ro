@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 18e48e7ff442e12178ce0a379b29a2dfc7227140 Maintainer: radical Status: ready -->
+<!-- EN-Revision: b7031192a2b7d97257d3e303b8eb0f4692819fee Maintainer: radical Status: ready -->
  <sect1 xml:id="language.oop5.abstract" xmlns="http://docbook.org/ns/docbook">
   <title>Clase Abstracte</title>
 
@@ -107,7 +107,7 @@ class ConcreteClass extends AbstractClass
         if ($name == "Pacman") {
             $prefix = "Mr";
         } elseif ($name == "Pacwoman") {
-            $prefix = "Ms";
+            $prefix = "Mrs";
         } else {
             $prefix = "";
         }
@@ -125,7 +125,7 @@ echo $class->prefixName("Pacwoman"), "\n";
    <screen>
 <![CDATA[
 Mr. Pacman
-Ms. Pacwoman
+Mrs. Pacwoman
 ]]>
    </screen>
   </example>
