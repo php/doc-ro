@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: zamolxe Status: ready -->
+<!-- EN-Revision: 65e697ff671608989432a6e6bf8ae8128b2be2c7 Maintainer: zamolxe Status: ready -->
 <!-- CREDITS: simionea -->
 <refentry xml:id="function.mysql-field-seek" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>mysql_field_seek</refname>
   <refpurpose>Stabilește indicatorul rezultatului la deplasamentul câmpului specificat</refpurpose>
  </refnamediv>
+
+ <refsynopsisdiv>
+  <warning>
+   &mysql.alternative.note;
+   <simplelist role="alternatives">
+    <member><function>mysqli_field_seek</function></member>
+    <!-- @TODO Expand on the following -->
+    <member><methodname>PDOStatement::fetch</methodname> utilizând parametri opționali</member>
+   </simplelist>
+  </warning>
+ </refsynopsisdiv>
 
  <refsect1 role="description">
   &reftitle.description;

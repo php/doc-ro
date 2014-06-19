@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: zamolxe Status: ready -->
+<!-- EN-Revision: 1634a886415d0ab4df195fe49d18a1c150b70758 Maintainer: zamolxe Status: ready -->
 <!-- CREDITS: simionea -->
-<!-- Purpose: database.vendors -->
-<!-- Membership: bundled, external -->
 
 <book xml:id="book.mysql" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
- <title>MySQL</title>
+ <?phpdoc extension-membership="bundledexternal"?>
+ <title>API originale ale MySQL</title>
+ <titleabbrev>Mysql</titleabbrev>
 
  <!-- {{{ preface -->
  <preface xml:id="intro.mysql">
   &reftitle.intro;
+  <para>
+   Această extensie este învechită începând cu PHP 5.5.0, și nu este recomandată
+   pentru scrierea codului nou, deoarece va fi eliminată în viitor. În loc,
+   folosiți extensia <link linkend="book.mysqli">mysqli</link> sau
+   <link linkend="ref.pdo-mysql">PDO_MySQL</link>. A se vedea de asemenea
+   <link linkend="mysqlinfo.api.choosing">Privire de ansamblu asupra MySQL API</link>
+   pentru ajutor suplimentar în alegerea unui API MySQL.
+  </para>
   <para>
    Aceste funcții vă permit accesarea serverelor de baze de date MySQL.
    Informații suplimentare despre MySQL pot fi găsite la
@@ -21,14 +29,11 @@
    Documentația pentru MySQL poate fi găsită la
    <link xlink:href="&url.mysql.docs;">&url.mysql.docs;</link>.
   </para>
-  <para>
-   Pentru o privire de ansamblu asupra termenelor de conectare la baze de date
-   și a produselor accesați <xref linkend="mysqli.overview"/>.
-  </para>
  </preface>
  <!-- }}} -->
 
  &reference.mysql.setup;
+ &reference.mysql.changelog;
  &reference.mysql.constants;
  &reference.mysql.examples;
  &reference.mysql.reference;

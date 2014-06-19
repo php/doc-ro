@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 0640e024d4b8a9400d457143ccd0ea66e5f98ead Maintainer: zamolxe Status: ready -->
+<!-- EN-Revision: 6bfcf7d9af614b4155c72e84814a61607be21229 Maintainer: zamolxe Status: ready -->
 <!-- CREDITS: simionea -->
 <!-- splitted from ./index.xml, last change in rev 1.66 -->
-  <chapter xml:id="security.database" xmlns="http://docbook.org/ns/docbook">
+  <chapter xml:id="security.database" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
    <title>Securitatea Bazelor de Date</title>
 
    <simpara>
@@ -118,10 +118,9 @@
     <simpara>
      În cazul datelor care trebuie să fie confidențiale, a căror expunere nu
      este necesară în nici un context, procedeul hashing poate fi luat în
-     considerare. Cel mai cunoscut exemplu este stocarea hash-ului MD5 al unei
-     parole în baza de date, în loc de stocarea parolei înseși. Vedeți de
-     asemenea și funcțiile <function>crypt</function> și
-     <function>md5</function>.
+     considerare. Cel mai cunoscut exemplu este stocarea hash-ului criptografic
+     al unei parole în baza de date, în loc de stocarea parolei înseși. A se
+     vedea de asemenea și funcția <function>crypt</function>.
     </simpara>
     <example>
      <title>Utilizarea hash-ului pentru parole</title>
@@ -129,20 +128,22 @@
 <![CDATA[
 <?php
 
-// stocăm hash-ul parolei --> md5($password)
+// stocarea hash-ului parolei
+// $random_chars obținute de ex. folosind /dev/random
 $query  = sprintf("INSERT INTO users(name,pwd) VALUES('%s','%s');",
-            pg_escape_string($username), md5($password));
+            pg_escape_string($username),
+            pg_escape_string(crypt($password, '$2a$07$' . $random_chars . '$')));
 $result = pg_query($connection, $query);
 
-// query - verificare dacă utilizatorul a introdus parola corectă
-$query = sprintf("SELECT 1 FROM users WHERE name='%s' AND pwd='%s';",
-            pg_escape_string($username), md5($password));
-$result = pg_query($connection, $query);
+// verificare dacă utilizatorul a introdus parola corectă
+$query = sprintf("SELECT pwd FROM users WHERE name='%s';",
+            pg_escape_string($username));
+$row = pg_fetch_assoc(pg_query($connection, $query));
 
-if (pg_num_rows($result) > 0) {
-    echo 'Bine ai venit, $username!';
+if ($row && crypt($password, $row['pwd']) == $row['pwd']) {
+    echo 'Bun venit, ' . htmlspecialchars($username) . '!';
 } else {
-    echo 'Autentificarea a eșuat pentru $username.';
+    echo 'Autentificarea a eșuat pentru ' . htmlspecialchars($username) . '.';
 }
 
 ?>
@@ -239,8 +240,7 @@ insert into pg_shadow(usename,usesysid,usesuper,usecatupd,passwd)
 <?php
 
 $query  = "SELECT id, name, inserted, size FROM products
-                  WHERE size = '$size'
-                  ORDER BY $order LIMIT $limit, $offset;";
+                  WHERE size = '$size'";
 $result = odbc_exec($conn, $query);
 
 ?>
@@ -286,22 +286,21 @@ $query = "UPDATE usertable SET pwd='$pwd' WHERE uid='$uid';";
       </programlisting>
      </example>
      Însă un utilizator rău voit poate introduce
-     <literal>' or uid like'%admin%'; --</literal> în locul
+     <literal>' or uid like'%admin%</literal> în
      <varname>$uid</varname> pentru a schimba parola utilizatorului admin, sau
      pur și simplu setează valoarea <varname>$pwd</varname> în
-     <literal>"hehehe', admin='yes', trusted=100 "</literal> (cu spațiu la
-     sfârșit) pentru a obține mai multe privilegii. În acest caz interpelarea
-     ar arăta în felul următor:
+     <literal>hehehe', trusted=100, admin='yes</literal> pentru a obține mai
+     multe privilegii. În acest caz interpelarea ar arăta în felul următor:
      <informalexample>
       <programlisting role="php">
 <![CDATA[
 <?php
 
-// $uid == ' or uid like'%admin%'; --
-$query = "UPDATE usertable SET pwd='...' WHERE uid='' or uid like '%admin%'; --";
+// $uid: ' or uid like '%admin%
+$query = "UPDATE usertable SET pwd='...' WHERE uid='' or uid like '%admin%';";
 
-// $pwd == "hehehe', admin='yes', trusted=100 "
-$query = "UPDATE usertable SET pwd='hehehe', admin='yes', trusted=100 WHERE
+// $pwd: hehehe', trusted=100, admin='yes
+$query = "UPDATE usertable SET pwd='hehehe', trusted=100, admin='yes' WHERE
 ...;";
 
 ?>
@@ -334,8 +333,8 @@ $result = mssql_query($query);
 <?php
 
 $query  = "SELECT * FROM products
-                    WHERE id LIKE '%a%'
-                    exec master..xp_cmdshell 'net user test testpass /ADD'--";
+           WHERE id LIKE '%a%'
+           exec master..xp_cmdshell 'net user test testpass /ADD'--";
 $result = mssql_query($query);
 
 ?>
@@ -356,18 +355,31 @@ $result = mssql_query($query);
       poate fi vulnerabil într-o manieră asemănătoare.
      </para>
     </note>
+    <para>
+     <mediaobject>
+      <alt>Un exemplu amuzant legat de probleme cu injectări SQL</alt>
+      <imageobject>
+       <imagedata fileref="en/security/figures/xkcd-bobby-tables.png" format="PNG"/>
+      </imageobject>
+     </mediaobject>
+     Imagine oferită de <link xlink:href="&url.xkcd;327">xkcd</link>
+    </para>
 
     <sect2 xml:id="security.database.avoiding">
      <title>Tehnici de evitare</title>
      <simpara>
-      Puteți spune că un atacator trebuie să dețină informații despre baza de
-      date și schema acesteia în majoritatea exemplelor. În majoritatea
-      cazurilor așa este, dar nu se știe niciodată cum poate fi descoperită
-      aceasta, în mod direct sau indirect. Dacă folosiți un soft open source,
-      sau alt pachet disponibil publicului larg (content management system sau
-      forum), atacatorii pot duplica cu ușurință codul dumneavoastră. De
-      asemenea un risc îl reprezintă și designul necorespunzător al bazei de
-      date.
+      Cu toate că este evident că un atacator trebuie să posede cel puțin careva
+      cunoștințe în privința arhitecturii bazei de date pentru a desfășura un
+      atac cu succes, obținerea acestei informații este deseori foarte simplă.
+      Spre exemplu, dacă o bază de date face parte dintr-un pachet software cu
+      sursă deschisă, sau disponibilă publicului larg, cu o instalare implicită,
+      această informație este absolut deschisă și disponibilă tuturor. Această
+      informație poate de asemenea să fie divulgată de un cod-sursă închis -
+      chiar dacă este codificat, camuflat sau compilat - și chiar de propriul
+      dumneavoastră cod prin afișarea mesajelor de eroare. Alte metode includ
+      utilizarea numelor răspândite pentru tabele și coloane. Spre exemplu, un
+      formular de login care utilizează un tabel 'users' cu denumirile coloanelor
+      'id', 'username' și 'password'.
      </simpara>
      <simpara>
       Aceste atacuri sunt de obicei bazate pe exploatarea codului scris de
@@ -388,6 +400,14 @@ $result = mssql_query($query);
       </listitem>
       <listitem>
        <simpara>
+        Utilizați interpelări preparate cu variabile atașate. Ele sunt oferite
+        <link linkend="pdo.prepared-statements">de PDO</link>,
+        <link linkend="mysqli.quickstart.prepared-statements">de MySQLi</link>
+        și de alte biblioteci.
+       </simpara>
+      </listitem>
+      <listitem>
+       <simpara>
         Verificați dacă un input conține tipul de date corect.
         <acronym>PHP</acronym> are o varietate de funcții de validare, de la
         cele mai simple, care pot fi găsite în <link linkend="ref.var">Funcții
@@ -400,7 +420,7 @@ $result = mssql_query($query);
       <listitem>
        <para>
         Dacă aplicația așteaptă un input numeric, încercați să verificați
-        datele cu funcția <function>is_numeric</function>, sau schimbați tipul
+        datele cu funcția <function>ctype_digit</function>, sau schimbați tipul
         variabilei utilizând funcția <function>settype</function>, sau folosiți
         reprezentația numerică prin <function>sprintf</function>.
         <example>
@@ -425,17 +445,15 @@ $query = sprintf("SELECT id, name FROM products ORDER BY name LIMIT 20 OFFSET %d
       </listitem>
       <listitem>
        <simpara>
-        Aplicați asupra fiecărei valori non-numerice furnizate de utilizator,
-        ce va fi transmisă bazei de date, funcția 'string escape' specifică
-        fiecărei baze de date (de ex.
-        <function>mysql_real_escape_string</function>,
-        <function>sqlite_escape_string</function>, etc.). Dacă baza de date nu
-        posedă un mecanism specific de 'string escape', pot fi utile funcțiile
-        <function>addslashes</function> și <function>str_replace</function> (în
-        dependență de tipul bazei de date).
-        Vedeți <link linkend="security.database.storage">primul exemplu</link>.
-        Dupa cum arată exemplul, adăugarea ghilimelelor în partea statică a
-        interpelării nu este de ajuns, făcând-o susceptibilă la atacuri.
+        Dacă nivelul bazei de date nu susține atașarea variabilelor, atunci
+        filtrați fiecare valoare non-numerică furnizată de utilizator transmisă
+        bazei de date cu ajutorul funcției 'string escape' specifică fiecărei
+        baze de date (de ex. <function>mysql_real_escape_string</function>,
+        <function>sqlite_escape_string</function>, etc.). Funcții generice precum
+        <function>addslashes</function> sunt utile doar în medii foarte specifice
+        (de. ex. MySQL cu un set de caractere single-byte cu opțiunea
+        <varname>NO_BACKSLASH_ESCAPES</varname> deconectată), de aceea este mai
+        bine să fie evitate.
        </simpara>
       </listitem>
       <listitem>

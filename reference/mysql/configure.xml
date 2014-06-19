@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 9f7e2da29b5f39053817e63f652c0622b835ae88 Maintainer: zamolxe Status: ready -->
+<!-- EN-Revision: cd09fab47b40563cb8b2316d817efc973d991713 Maintainer: zamolxe Status: ready -->
 <!-- CREDITS: simionea -->
 <section xml:id="mysql.installation" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.install;
@@ -16,7 +16,7 @@
   Cu toate că această extensie MySQL este compatibilă cu MySQL 4.1.0 și
   versiunile ulterioare, ea nu susține funcționalitatea suplimentară oferită de
   aceste versiuni. Pentru aceasta utilizați extensia
-  <link linkend="ref.mysqli">MySQLi</link>.
+  <link linkend="book.mysqli">MySQLi</link>.
  </para>
  <para>
   Dacă doriți să instalați extensia mysql împreună cu extensia mysqli, trebuie
@@ -25,51 +25,58 @@
 
  <section xml:id="mysql.installation.linux">
   <title>Instalarea pe sisteme Linux</title>
-  <section>
-   <title>PHP 4</title>
-   <para>
-    Opțiunea <option role="configure">--with-mysql</option> este activată
-    implicit. Acest comportament implicit poate fi dezactivat cu opțiunea de
-    configurare <option role="configure">--without-mysql</option>.
-    Dacă MySQL este activat fără specificarea căii către directorul DIR de
-    instalare al MySQL, PHP va utiliza bibliotecile-client MySQL încorporate.
-   </para>
-   <para>
-    Utilizatorii care rulează alte aplicații care utilizează MySQL (spre
-    exemplu, <literal>auth-mysql</literal>) nu ar trebui să utilizeze biblioteca
-    furnizată, dar să specifice calea către directorul de instalare al MySQL,
-    în felul următor:
-    <option role="configure">--with-mysql=/path/to/mysql</option>.
-    Aceasta va forța PHP să utilizeze bibliotecile-client instalate de MySQL,
-    evitând în acest fel orice conflicte.
-   </para>
-  </section>
-  <section>
-   <title>PHP 5.0.x, 5.1.x, 5.2.x</title>
-   <para>
-    MySQL nu este activat implicit, și nici biblioteca MySQL nu este
-    furnizată cu PHP. Citiți acest <link linkend="faq.databases.mysql.php5">
-    FAQ</link> pentru a afla detalii despre cauze. Utilizați opțiunea de
-    configurare <option role="configure">--with-mysql[=DIR]</option> pentru a
-    include susținerea MySQL. Puteți descărca <emphasis>antete și biblioteci
-    </emphasis> de pe <link xlink:href="&url.mysql;">MySQL</link>.
-   </para>
-  </section>
-  <section xml:id="mysql.installation.linux.mysqlnd">
-    <title>PHP 5.3.0+</title>
-    <para>
-      În PHP 5.3.0 și ulterior extensiile bazelor de date MySQL utilizează
-      implicit <link linkend="mysqlnd.overview">driver-ul nativ MySQL</link>.
-      Aceasta înseamnă că biblioteca-client MySQL (<literal>libmysql</literal>)
-      nu mai este necesară pentru a susține conexiuni la baze de date MySQL.
-      Extensiile <literal>mysql</literal>, <literal>mysqli</literal> și
-      <literal>PHP_PDO_MYSQL</literal> sunt toate activate implicit în PHP
-      5.3.0+, și toate utilizează implicit driver-ul nativ MySQL. În orice caz
-      nu sunt necesari alți pași de instalare pentru a utiliza aceste extensii,
-      cu toate că ar fi bine să stabiliți unele preferințe în
-      <filename>php.ini</filename> în dependență de necesitățile dumneavoastră.
-    </para>
-  </section>
+  <para>
+   Notă: <literal>[DIR]</literal> este calea către fișierele bibliotecilor-client
+   MySQL (<emphasis>antetele și bibliotecile</emphasis>), care pot fi descărcate
+   din <link xlink:href="&url.mysql;">MySQL</link>.
+  </para>
+  <table>
+   <title>matricea de suport la compilare a ext/mysql</title>
+   <tgroup cols="5">
+    <thead>
+     <row>
+      <entry>&Version; PHP</entry>
+      <entry>&Default;</entry>
+      <entry>&ConfigureOptions;: <link linkend="mysqlnd.overview">mysqlnd</link></entry>
+      <entry>&ConfigureOptions;: <literal>libmysqlclient</literal></entry>
+      <entry>&Changelog;</entry>
+     </row>
+    </thead>
+    <tbody>
+     <row>
+      <entry>4.x.x</entry>
+      <entry>libmysqlclient</entry>
+      <entry>&NotAvailable;</entry>
+      <entry><option role="configure">--without-mysql</option> pentru a dezactiva</entry>
+      <entry>MySQL este activat implicit, bibliotecile-client MySQL sunt încorporate</entry>
+     </row>
+     <row>
+      <entry>5.0.x, 5.1.x, 5.2.x</entry>
+      <entry>libmysqlclient</entry>
+      <entry>&NotAvailable;</entry>
+      <entry><option role="configure">--with-mysql=[DIR]</option></entry>
+      <entry>
+       MySQL nu este activat implicit și bibliotecile-client MySQL
+       <link linkend="faq.databases.mysql.php5">nu mai sunt încorporate</link>
+      </entry>
+     </row>
+     <row>
+      <entry>5.3.x</entry>
+      <entry>libmysqlclient</entry>
+      <entry><option role="configure">--with-mysql=mysqlnd</option></entry>
+      <entry><option role="configure">--with-mysql=[DIR]</option></entry>
+      <entry>mysqlnd este acum disponibil</entry>
+     </row>
+     <row>
+      <entry>5.4.x</entry>
+      <entry>mysqlnd</entry>
+      <entry><option role="configure">--with-mysql</option></entry>
+      <entry><option role="configure">--with-mysql=[DIR]</option></entry>
+      <entry>mysqlnd este acum utilizat implicit</entry>
+     </row>
+    </tbody>
+   </tgroup>
+  </table>
  </section>
 
  <section xml:id="mysql.installation.windows">
@@ -118,12 +125,12 @@
    </note>
   </section>
   <section>
-    <title>PHP 5.3.0+</title>
-    <para>
-      Vă rugăm să vă referiți la
-      <link linkend="mysql.installation.linux.mysqlnd">aceste note</link> în
-      legătură cu instalarea susținerii MySQL în PHP 5.3.0 și ulterior.
-    </para>
+   <title>PHP 5.3.0+</title>
+   <para>
+    <link linkend="mysqlnd.overview">Driver-ul MySQL Înnăscut</link> este activat
+    implicit. Includeți <filename>php_mysql.dll</filename>, iar <filename>libmysql.dll</filename>
+    nu mai este necesar sau folosit.
+   </para>
   </section>
  </section>
 
@@ -141,7 +148,7 @@
     <para>
      Dacă aveți nevoie se seturi de caractere ce diferă de
      <emphasis>latin</emphasis> (implicit), trebuie să instalați biblioteca
-     externă libmysql compilată pentru a susține setul de caractere dorit.
+     externă libmysqlclient compilată pentru a susține setul de caractere dorit.
     </para>
    </note>
  </section>

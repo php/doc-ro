@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: zamolxe Status: ready -->
+<!-- EN-Revision: 7afe7c875019605f355748d0a886d568f4c3f2fd Maintainer: zamolxe Status: ready -->
 <!-- CREDITS: simionea -->
 <section xml:id="mysql.configuration" xmlns="http://docbook.org/ns/docbook">
  &reftitle.runtime;
@@ -12,13 +12,19 @@
    <tgroup cols="4">
     <thead>
      <row>
-      <entry>Denumire</entry>
-      <entry>Valoare implicită</entry>
-      <entry>Se poate schimba</entry>
-      <entry>Istoric schimbări</entry>
+      <entry>&Name;</entry>
+      <entry>&Default;</entry>
+      <entry>&Changeable;</entry>
+      <entry>&Changelog;</entry>
      </row>
     </thead>
-    <tbody>
+    <tbody xml:id="mysql.configuration.list">
+     <row>
+      <entry><link linkend="ini.mysql.allow-local-infile">mysql.allow_local_infile</link></entry>
+      <entry>"1"</entry>
+      <entry>PHP_INI_SYSTEM</entry>
+      <entry></entry>
+     </row>
      <row>
       <entry><link linkend="ini.mysql.allow-persistent">mysql.allow_persistent</link></entry>
       <entry>"1"</entry>
@@ -89,7 +95,19 @@
 
 <para>
  <variablelist>
-   <varlistentry xml:id="ini.mysql.allow-persistent">
+  <varlistentry xml:id="ini.mysql.allow-local-infile">
+   <term>
+    <parameter>mysql.allow_local_infile</parameter>
+    <type>integer</type>
+   </term>
+   <listitem>
+    <para>
+     Permite accesul, din perspectiva PHP, la fișiere locale cu interpelări LOAD DATA
+    </para>
+   </listitem>
+  </varlistentry>
+
+  <varlistentry xml:id="ini.mysql.allow-persistent">
    <term>
     <parameter>mysql.allow_persistent</parameter>
     <type>boolean</type>

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: zamolxe Status: ready -->
+<!-- EN-Revision: 47ce3a5932d99d63d526b278557d64f22b8703aa Maintainer: zamolxe Status: ready -->
 <!-- CREDITS: simionea -->
 
 <chapter xml:id="mysql.examples" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.examples;
  <section xml:id="mysql.examples-basic">
+  <title>Exemplu de ansamblu pentru extensia MySQL</title>
   <para>
    Acest exemplu simplu demonstrează connectarea, executarea unei interpelări,
    afișarea rândurilor rezultante și deconectarea de la o bază de date MySQL.

@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: zamolxe Status: ready -->
+<!-- EN-Revision: 65e697ff671608989432a6e6bf8ae8128b2be2c7 Maintainer: zamolxe Status: ready -->
 <refentry xml:id="function.mysql-escape-string" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>mysql_escape_string</refname>
   <refpurpose>Escapeaza un string pentru fi folosit in mysql_query</refpurpose>
  </refnamediv>
+
+ <refsynopsisdiv>
+  <warning>
+   &mysql.alternative.note;
+   <simplelist role="alternatives">
+    <member><function>mysqli_escape_string</function></member>
+    <member><methodname>PDO::quote</methodname></member>
+   </simplelist>
+  </warning>
+ </refsynopsisdiv>
 
  <refsect1 role="description">
   &reftitle.description;
