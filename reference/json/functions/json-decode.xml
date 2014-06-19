@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 8bc08ef8418d334ec29738409c546282149fa2c9 Maintainer: radical Status: ready -->
+<!-- EN-Revision: 6353c52d0ee11ceb942e857b001e95d85500d690 Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
 <refentry xml:id="function.json-decode" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -78,10 +78,10 @@
   <para>
    Întoarce valoarea codificată în <parameter>json</parameter> cu tipul PHP
    corespunzător. Valorile <literal>true</literal>, <literal>false</literal> și
-   <literal>null</literal> (indiferent de tipul caracterelor - minuscule sau
-   majuscule) sunt întoarse ca &true;, &false; și &null; respectiv. &null; este
-   întors dacă parametrul <parameter>json</parameter> nu poate fi decodificat
-   sau dacă datele pentru codificare sunt mai adânci decât limita de imbricare.
+   <literal>null</literal> sunt întoarse ca &true;, &false; și &null; respectiv.
+   &null; este întors dacă parametrul <parameter>json</parameter> nu poate fi
+   decodificat sau dacă datele pentru codificare sunt mai adânci decât limita de
+   imbricare.
   </para>
  </refsect1>
 
@@ -292,6 +292,15 @@ object(stdClass)#1 (1) {
       </row>
      </thead>
      <tbody>
+      <row>
+       <entry>5.6.0</entry>
+       <entry>
+        Variantele cuvintelor-cheie <literal>true</literal>,
+        <literal>false</literal> și <literal>null</literal> care nu sunt scrise
+        în întregime cu litere minuscule nu mai sunt acceptate ca date de
+        intrare valide și vor genera avertismente.
+       </entry>
+      </row>
       <row>
        <entry>5.4.0</entry>
        <entry>

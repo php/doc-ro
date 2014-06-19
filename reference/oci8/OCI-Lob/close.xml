@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 0d604bbc9d3b741d53e7fac26f5b24c306751e9a Maintainer: radical Status: ready -->
+<!-- EN-Revision: c13a9a675e62f31f1bd85d9f16958c1764f86d38 Maintainer: radical Status: ready -->
 <refentry xml:id="oci-lob.close" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>OCI-Lob::close</refname>
   <refpurpose>Închide un descriptor LOB</refpurpose>
  </refnamediv>
- 
+
  <refsect1 role="description">
   &reftitle.description;
-  <methodsynopsis>
+  <methodsynopsis role="oop">
    <type>bool</type><methodname>OCI-Lob::close</methodname>
    <void />
   </methodsynopsis>
