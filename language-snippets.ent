@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 8c2aa928b0ee108b4c29394ba20b1c5d2076eebc Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 8932dc479ab319693fe984a4eed2b3c768540256 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -319,6 +319,12 @@ Exemplul de mai sus va afișa în PHP 5.3:</para>'>
 
 <!ENTITY example.outputs.54 '<para xmlns="http://docbook.org/ns/docbook">
 Exemplul de mai sus va afișa în PHP 5.4:</para>'>
+
+<!ENTITY example.outputs.55 '<para xmlns="http://docbook.org/ns/docbook">
+Exemplul de mai sus va afișa în PHP 5.5:</para>'>
+
+<!ENTITY example.outputs.56 '<para xmlns="http://docbook.org/ns/docbook">
+Exemplul de mai sus va afișa în PHP 5.6:</para>'>
 
 <!ENTITY example.outputs.32bit '<para xmlns="http://docbook.org/ns/docbook">
 Exemplul de mai sus va afișa pe mașini pe 32 de biți:</para>'>
@@ -1224,11 +1230,15 @@ xmlns="http://docbook.org/ns/docbook"><term><parameter>result</parameter>
 </para></listitem></varlistentry>'>
 
 <!-- GMP Notes -->
-<!ENTITY gmp.return 'O <type xmlns="http://docbook.org/ns/docbook">resursă
-</type> număr GMP.'>
-<!ENTITY gmp.parameter '<para xmlns="http://docbook.org/ns/docbook">Aceasta
-poate fi sau o <type>resursă</type> număr GMP, sau un șir de caractere numeric,
-dacă este posibilă convertirea acestuia într-un număr.</para>'>
+<!ENTITY gmp.return 'Un număr GMP sub formă de
+<type xmlns="http://docbook.org/ns/docbook">resource</type> în PHP 5.5 și anterior,
+sau obiect <classname xmlns="http://docbook.org/ns/docbook">GMP</classname> în
+PHP 5.6 și ulterior.'>
+
+<!ENTITY gmp.parameter '<para xmlns="http://docbook.org/ns/docbook">Un număr GMP
+sub formă de <type>resource</type> în PHP 5.5 și anterior, un obiect
+<classname>GMP</classname> în PHP 5.6 și ultrior, su un șir de caractere numeric
+atunci când acesta poate fi convertit într-un număr.</para>'>
 
 <!-- MySQLi Notes -->
 <!ENTITY mysqli.result.description '<varlistentry
@@ -2125,12 +2135,15 @@ xmlns="http://docbook.org/ns/docbook">
 <listitem><para>Un tablou din zero sau mai multe seturi de etichete, unde fiecare
 set de etichete este la rândul său un tablou de criterii utilizate pentru a
 potrivi etichetele pe membrii setului de replicare.</para></listitem></varlistentry></variablelist>'>
+
 <!ENTITY mongo.setreadpreference.returnvalues '<para xmlns="http://docbook.org/ns/docbook">
 Întoarce &true; în caz de succes, sau &false; în caz contrar.</para>'>
+
 <!ENTITY mongo.setreadpreference.errors '<para xmlns="http://docbook.org/ns/docbook">
 Emite un <constant>E_WARNING</constant> dacă careva parametru nu e valid, sau
 dacă unul sau mai multe seturi de etichete sunt furnizate cu modul preferinței
 de citire <constant>MongoClient::RP_PRIMARY</constant>.</para>'>
+
 <!ENTITY mongo.getreadpreference.returnvalues '<para xmlns="http://docbook.org/ns/docbook">
 Această funcție întoarce un tablou ce descrie preferința de citire. Tabloul
 conține tipul (<literal>type</literal>) valorilor pentru șirul cu modul
@@ -2138,14 +2151,112 @@ preferinței de citire (ce corespunde constantelor <classname>MongoClient</class
 și <literal>tagsets</literal> conținând lista tuturor criteriilor setului de
 etichete. Dacă nu a fost specificat nici un set de etichete, <literal>tagsets</literal>
 nu va fi prezent în tablou.</para>'>
+
+<!ENTITY mongo.setwriteconcern.parameters '<variablelist xmlns="http://docbook.org/ns/docbook">
+<varlistentry><term><parameter>w</parameter></term>
+<listitem><para>Gradul de participare la înscriere. Aceasta poate fi un întreg
+ce denotă numărul de servere necesare pentru a confirma operațiunea de înscriere,
+sau un mod scris ca șir de caractere (de ex. "majority").</para></listitem></varlistentry>
+<varlistentry><term><parameter>wtimeout</parameter></term>
+<listitem><para>Numărul maximal de milisecunde de așteptare până când serverul
+satisface gradul de participare la înscriere.</para></listitem></varlistentry></variablelist>'>
+
+<!ENTITY mongo.setwriteconcern.returnvalues '<para xmlns="http://docbook.org/ns/docbook">
+Întoarce &true; în caz de succes, sau &false; în caz contrar.</para>'>
+
+<!ENTITY mongo.setwriteconcern.errors '<para xmlns="http://docbook.org/ns/docbook">
+Emite un <constant>E_WARNING</constant> dacă parametrul <literal>w</literal> nu
+este un întreg sau un șir de caractere.</para>'>
+
+<!ENTITY mongo.getwriteconcern.returnvalues '<para xmlns="http://docbook.org/ns/docbook">
+Această funcție întoarce un tablou ce descrie gradul de participare la înscriere.
+Tabloul conține valorile <literal>w</literal> pentru un nivel de confirmare
+întreg sau ca șir de caractere și <literal>wtimeout</literal> ce denotă numărul
+maximal de milisecunde de așteptare până când serverul satisface gradul de
+participare la înscriere.</para>'>
+
+<!ENTITY mongo.command.parameters.maxtimems '<listitem xmlns="http://docbook.org/ns/docbook">
+<para><literal>"maxTimeMS"</literal></para>
+<para>Specifică o limită de timp cumulativă în milisecunde pentru procesarea
+operațiunii (nu include timpul de așteptare). Dacă operațiunea nu este terminată
+în timpul rezervat, va fi emisă o
+<classname>MongoExecutionTimeoutException</classname>.</para></listitem>'>
+
+<!ENTITY mongo.index.parameters.background '<listitem xmlns="http://docbook.org/ns/docbook">
+<para><literal>"background"</literal></para>
+<para>Calculează indicele în fundal, pentru ca aceasta să <emphasis>nu</emphasis>
+blocheze alte activități ale bazei de date. Specificați &true; pentru a calcula
+în fundal. Valoarea implicită e &false;.</para>
+<warning xmlns="http://docbook.org/ns/docbook"><para>Înainte de MongoDB 2.6.0,
+calculele indicilor erau executate ca operațiuni în prim plan, indiferent de
+această opțiune. A se vedea
+<link xlink:href="&url.mongodb.dochub.indexes.rs;" xmlns:xlink="http://www.w3.org/1999/xlink">Calcularea Indicilor cu Seturi de Replici</link>
+pentru informații suplimentare.</para></warning></listitem>'>
+
+<!ENTITY mongo.index.parameters.dropdups '<listitem xmlns="http://docbook.org/ns/docbook">
+<para><literal>"dropDups"</literal></para><para>Specificați &true; pentru a forța
+crearea unui indice unic care poate avea dubluri. MongoDB va indexa prima apariție
+a cheii și va elimina toate documentele din colecție care conțin următoarele
+apariții ale acelei chei. Valoarea implicită e &false;.</para>
+<warning xmlns="http://docbook.org/ns/docbook"><para><literal>"dropDups"</literal>
+poate să elimine date din baza dumneavoastră de date. Folosiți cu mare precauție.
+</para></warning></listitem>'>
+
+<!ENTITY mongo.index.parameters.expireafterseconds '<listitem xmlns="http://docbook.org/ns/docbook">
+<para><literal>"expireAfterSeconds"</literal></para>
+<para>Valoarea acestei opțiuni ar trebui să specifice numărul de secunde după
+care un document ar trebui să fie considerat expirat și automat eliminat din
+colecție. Această opțiune este compatibilă doar cu indici pe un singur câmp, unde
+câmpul va conține valori <classname>MongoDate</classname>.</para>
+<note xmlns="http://docbook.org/ns/docbook"><para>Această facilitate este
+disponibilă în MongoDB 2.2+. A se vedea
+<link xlink:href="&url.mongodb.docs.expire_data;" xmlns:xlink="http://www.w3.org/1999/xlink">Expirarea Datelor din Colecții prin Stabilirea TTL</link>
+pentru informații suplimentare.</para></note></listitem>'>
+
+<!ENTITY mongo.index.parameters.name '<listitem xmlns="http://docbook.org/ns/docbook">
+<para><literal>"name"</literal></para><para>Un nume opțional care identifică
+univoc indicele.</para>
+<note xmlns="http://docbook.org/ns/docbook"><para>Implicit driver-ul va genera
+un nume al indicelui bazat pe câmpurile lui și ordinea de sortare sau tip. De
+exemplu, un indice compus <literal>array("x" => 1, "y" => -1)</literal> va fi
+numit <literal>"x_1_y_-1"</literal> și un indice geospațial
+<literal>array("loc" => "2dsphere")</literal> va fi numit <literal>"loc_2dsphere"</literal>.
+Pentru indici cu mai multe câmpuri este posibil ca numele generat să depășească
+<link xlink:href="&url.mongodb.docs.limits;#Index-Name-Length" xmlns:xlink="http://www.w3.org/1999/xlink">limita pentru denumirile indicilor</link>
+din MongoDB. Opțiunea <literal>"name"</literal> poate fi folosită în acest caz
+pentru a furniza un nume mai scurt.</para></note></listitem>'>
+
+<!ENTITY mongo.index.parameters.sparse '<listitem xmlns="http://docbook.org/ns/docbook">
+<para><literal>"sparse"</literal></para>
+<para>Specificați &true; pentru a crea un indice distribuit, ce indexează doar
+documente ce conțin un anumit câmp. Valoarea implicită e &false;.</para></listitem>'>
+
+<!ENTITY mongo.index.parameters.unique '<listitem xmlns="http://docbook.org/ns/docbook">
+<para><literal>"unique"</literal></para><para>Specificați &true; pentru a crea
+un indice unic. Valoarea implicită este &false;. Această opțiune se aplică doar
+pentru indici ascendenți/descendenți.</para>
+<note xmlns="http://docbook.org/ns/docbook"><para>Când MongoDB indexează un câmp,
+dacă un document nu are valoare pentru acel câmp, o valoare &null; este indexată.
+Dacă mai multe documente nu conțin câmpul, un indice unic va respinge toate
+documentele în afară de primul. Opiunea <literal>"sparse"</literal> poate fi
+utilizată pentru a depăși aceasta, deoarece ea va preveni indexarea documentelor
+fără valoarea câmpului.</para></note></listitem>'>
+
 <!ENTITY mongo.writes.parameters.writeconcern '<listitem xmlns="http://docbook.org/ns/docbook">
 <para><literal>"w"</literal></para><para>Vedeți
 <link linkend="mongo.writeconcerns">WriteConcerns</link>. Valoarea implicită
 pentru <classname>MongoClient</classname> este <literal>1</literal>.</para></listitem>'>
+
 <!ENTITY mongo.writes.parameters.writeconcerntimeout '<listitem xmlns="http://docbook.org/ns/docbook">
-<para><literal>"wtimeout"</literal></para><para>Cât timp să se aștepte confirmarea
-<link linkend="mongo.writeconcerns">WriteConcern</link>. Valoarea implicită pentru
-<classname>MongoClient</classname> este <literal>10000</literal> milisecunde.</para></listitem>'>
+<para><literal>"wtimeout"</literal></para><para>Un pseudonim învechit pentru
+<literal>"wTimeoutMS"</literal>.</para></listitem>'>
+
+<!ENTITY mongo.writes.parameters.writeconcerntimeoutms '<listitem xmlns="http://docbook.org/ns/docbook">
+<para><literal>"wTimeoutMS"</literal></para><para>Cât timp să fie așteptată
+confirmarea <link linkend="mongo.writeconcerns">write concern</link>. Valoarea
+implicită pentru <classname>MongoClient</classname> este <literal>10000</literal>
+milisecunde.</para></listitem>'>
+
 <!ENTITY mongo.writes.parameters.fsync '<listitem xmlns="http://docbook.org/ns/docbook">
 <para><literal>"fsync"</literal></para><para>O valoare boolean-ă, valoarea
 implicită este &false;. Dacă jurnalizarea e activată, ea funcționează exact ca
@@ -2154,42 +2265,50 @@ sincronizarea pe disc a operațiunii de inserare înainte de a întoarce succes.
 Dacă are valoarea &true;, se presupune efectuarea
 unei inserări cu confirmare și setarea <literal>w</literal> va fi modificată în
 <literal>0</literal>.</para>
-<note><para>Această opțiune e <emphasis>învechită</emphasis>. Utilizați în loc
-opțiunea <literal>"j"</literal>.</para></note></listitem>'>
-<!-- <!ENTITY mongo.writes.parameters.sockettimeoutms '<listitem xmlns="http://docbook.org/ns/docbook">
-<para><literal>"socketTimeoutMS"</literal></para><para>Integer, defaults to
-<literal>MongoCursor::$timeout</literal>. If acknowledged writes are used, this
-sets how long (in milliseconds) for the client to wait for a database response.
-If the database does not respond within the timeout period, a
-<classname>MongoCursorTimeoutException</classname> will be thrown.</para></listitem>'> -->
+<note><simpara>Dacă jurnalizarea este activată, utilizatorii sunt încurajați să
+utilizeze opțiunea <literal>"j"</literal> în loc de <literal>"fsync"</literal>.
+Nu utilizați <literal>"fsync"</literal> și <literal>"j"</literal> simultan,
+deoarece aceasta va rezulta în eroare.</simpara></note></listitem>'>
+
+<!ENTITY mongo.writes.parameters.sockettimeoutms '<listitem xmlns="http://docbook.org/ns/docbook">
+<para><literal>"socketTimeoutMS"</literal></para><para>Un întreg, implicit este
+<literal>MongoCursor::$timeout</literal>. Dacă sunt utilizate înscrieri cu
+confirmare, acest parametru stabilește cât timp (în milisecunde) clientul va
+aștepta răspunsul de la baza de date. Dacă baza de date nu răspunde în intervalul
+de timp specificat, se emite o <classname>MongoCursorTimeoutException</classname>.</para></listitem>'>
+
 <!ENTITY mongo.writes.parameters.journal '<listitem xmlns="http://docbook.org/ns/docbook">
 <para><literal>"j"</literal></para><para>O valoare boolean-ă, cu valoarea
 implicită &false;. Forțează sincronizarea cu jurnalul a operațiunii de inserare,
 înainte de a întoarce succes. Dacă are valoarea &true;, se presupune efectuarea
 unei inserări cu confirmare și setarea <literal>w</literal> va fi modificată în
-<literal>0</literal>.</para></listitem>'>
+<literal>0</literal>.</para>
+<note><simpara>Dacă această opțiune e utilizată, iar jurnalizarea e dezactivată,
+MongoDB 2.6+ va emite o eroare și înscrierea va eșua; versiunile mai vechi ale
+serverului pur și simplu vor ignora opțiunea.</simpara></note></listitem>'>
+
 <!ENTITY mongo.writes.parameters.safe '<listitem xmlns="http://docbook.org/ns/docbook">
-<para><literal>"safe"</literal></para><para><emphasis>Dezaprobat</emphasis>.
+<para><literal>"safe"</literal></para><para><emphasis>Învechită</emphasis>.
 Utilizați opțiunea <link linkend="mongo.writeconcerns">WriteConcern</link>
 <literal>w</literal>.</para></listitem>'>
+
 <!ENTITY mongo.writes.parameters.timeout '<listitem xmlns="http://docbook.org/ns/docbook">
-<para><literal>"timeout"</literal></para><para>O valoare de tip întreg, implicit
-este <literal>MongoCursor::$timeout</literal>. Dacă se utilizează înscrieri cu
-confirmare, acest parametru stabilește intervalul de timp maximal (în milisecunde)
-pentru ca clientul să primească răspuns de la baza de date. Dacă baza de date nu
-răspunde în intervalul de timeout, o excepție <classname>MongoCursorTimeoutException</classname>
-va fi emisă.</para></listitem>'>
+<para><literal>"timeout"</literal></para><para>Un pseudonim învechit pentru <literal>"socketTimeoutMS"</literal>.</para></listitem>'>
+
 <!ENTITY mongo.errors.exceptions.writeconcern '<para xmlns="http://docbook.org/ns/docbook">
 Generează o excepție <classname>MongoCursorException</classname> dacă opțiunea
-"w" este stabilită și înscrierea eșuează.</para>
+<literal>"w"</literal> este stabilită și înscrierea eșuează.</para>
 <para xmlns="http://docbook.org/ns/docbook">Generează o excepție
-<classname>MongoCursorTimeoutException</classname> dacă opțiunea "w" este
-stabilită la o valoare mai mare decât unu și operațiunea durează mai mult de
-<varname>MongoCursor::$timeout</varname> milisecunde. Aceasta nu va întrerupe
-operațiunea pe server, este un timeout de partea clientului. Operațiunea din
-<literal>MongoCollection::$wtimeout</literal> este în milisecunde.</para>'>
+<classname>MongoCursorTimeoutException</classname> dacă opțiunea
+<literal>"w"</literal> este stabilită la o valoare mai mare decât unu și
+operațiunea durează mai mult de <varname>MongoCursor::$timeout</varname>
+milisecunde. Aceasta nu va întrerupe operațiunea pe server, este un timeout de
+partea clientului. Operațiunea din <literal>MongoCollection::$wtimeout</literal>
+este în milisecunde.</para>'>
+
 <!ENTITY mongo.errors.deprecated '<para xmlns="http://docbook.org/ns/docbook">
 Generează o avertizare <constant>E_DEPRECATED</constant></para>'>
+
 <!ENTITY mongo.gridfs.store.metadata.note '<note xmlns="http://docbook.org/ns/docbook">
 <para>Aceste câmpuri pot să le rescrie pe cele create automat de către driver,
 după cum e descris în documentația de bază MongoDB pentru
@@ -2197,10 +2316,121 @@ după cum e descris în documentația de bază MongoDB pentru
 Ca un exemplu de utilizare practică a acestui comportament ar fi specificarea
 unor valori specifice pentru <literal>chunkSize</literal> sau
 <literal>_id</literal> pentru fișier.</para></note>'>
+
 <!ENTITY mongo.gridfs.store.return '<para xmlns="http://docbook.org/ns/docbook">
 Întoarce valoarea <literal>_id</literal> a fișierului cu documentul salvat.
 Acesta va fi un <classname>MongoId</classname> generat, doar dacă un
-<literal>_id</literal> nu a fost specificat în mod explicit în parametrul <parameter>extra</parameter>.</para>'>
+<literal>_id</literal> nu a fost specificat în mod explicit în parametrul
+<parameter>extra</parameter>.</para>'>
+
+<!ENTITY mongo.mongowritebatch.writeoptions.description '<listitem xmlns="http://docbook.org/ns/docbook">
+<para>Un tablou cu Opiuni de Înscriere.
+<informaltable>
+<thead><row><entry>cheia</entry><entry>însemnătatea valorii</entry></row></thead>
+<tbody>
+<row>
+<entry>w (int|string)</entry>
+<entry>Valoare a <link linkend="mongo.writeconcerns">Gradului de participare la înscriere</link></entry>
+</row>
+<row>
+<entry>wtimeout (int)</entry>
+<entry><link linkend="mongo.writeconcerns">Timpul maximal de așteptare a replicării</link></entry>
+</row>
+<row>
+<entry>ordered</entry><entry>Determină dacă MongoDB trebuie să aplice acest set
+în ordinea stabilită (secvențial, câte o înregistrare) sau îl poate rearanja.
+Valoarea implicită este &true;</entry>
+</row>
+<row>
+<entry>j (bool)</entry>
+<entry>Așteaptă jurnalizarea pe primar. Această valoare e nerecomandată, utilizați WriteConcern în loc</entry>
+</row>
+<row>
+<entry>fsync (bool)</entry>
+<entry>Așteaptă fsync pe primar. Această valoare e nerecomandată, utilizați WriteConcern în loc</entry>
+</row></tbody></informaltable></para></listitem>'>
+
+<!ENTITY mongo.mongowritebatch.collection.description '<listitem xmlns="http://docbook.org/ns/docbook">
+<para>Clasa <classname>MongoCollection</classname> asupra căreia se execută setul.
+<link linkend="mongo.writeconcerns">Gradele ei de participare</link> vor fi
+copiate și folosite ca implicite dacă nu au fost furnizate cu <parameter>$write_options</parameter>
+sau în timpul executării <methodname>MongoWriteBatch::execute</methodname>.</para></listitem>'>
+
+<!ENTITY mongo.context.server '<varlistentry xmlns="http://docbook.org/ns/docbook">
+<term><parameter>server</parameter></term>
+<listitem><para>Un tablou cu informațiile de bază despre serverul ales.
+<informaltable><tgroup cols="2"><thead><row><entry>cheie</entry><entry>valoare</entry></row></thead>
+<tbody>
+<row>
+<entry>hash</entry>
+<entry>hash-ul serverului, de exemplu:<literal>localhost:27017;-;X;56052</literal></entry>
+</row>
+<row>
+<entry>type</entry>
+<entry>Tipul nodului (primary/secondary/mongos/arbiter): <literal>2</literal></entry>
+</row>
+<row>
+<entry>max_bson_size</entry>
+<entry>Dimensiunea maximală BSON prin fir, pe care acest nod o acceptă: <literal>16777216</literal></entry>
+</row>
+<row>
+<entry>max_message_size</entry>
+<entry>Dimensiunea maximală a mesajului prin fir, pe care acest nod o acceptă: <literal>48000000</literal></entry>
+</row>
+<row>
+<entry>request_id</entry>
+<entry>Identificatorul interpelării pentru acest mesaj: <literal>42</literal></entry>
+</row></tbody></tgroup></informaltable></para></listitem></varlistentry>'>
+
+<!ENTITY mongo.context.writeoptions '<varlistentry xmlns="http://docbook.org/ns/docbook">
+<term><parameter>writeOptions</parameter></term>
+<listitem><para><informaltable><tgroup cols="2">
+<thead><row><entry>cheie</entry><entry>valoare</entry></row></thead>
+<tbody>
+<row>
+<entry>ordered</entry>
+<entry>Boolean, dacă operațiunea (în cazul unei operațiuni în set) trebuie executată secvențial (ordered=true)</entry>
+</row>
+<row>
+<entry>writeConcern</entry>
+<entry>Un tablou cu opțiuni writeConcern (a se vedea mai jos)</entry>
+</row></tbody></tgroup></informaltable>
+<table><title>Valorile tabloului writeConcern</title><tgroup cols="2">
+<thead><row><entry>cheie</entry><entry>valoare</entry></row></thead>
+<tbody>
+<row>
+<entry>fsync</entry>
+<entry>Boolean, forțează înscrierea pe disc înainte de a se întoarce</entry>
+</row>
+<row>
+<entry>j</entry>
+<entry>Boolean, forțează înscrierea jurnalului înainte de a se întoarce</entry>
+</row>
+<row>
+<entry>wtimeout</entry>
+<entry>integer, milisecunde, timpul maximal care îi este acordat primarului ca să verifice replicarea</entry>
+</row>
+<row>
+<entry>w</entry>
+<entry>integer=numărul de servere, sau string=eticheta de replicare</entry>
+</row></tbody></tgroup></table></para></listitem></varlistentry>'>
+
+<!ENTITY mongo.context.protocoloptions '<varlistentry xmlns="http://docbook.org/ns/docbook">
+<term><parameter>protocolOptions</parameter></term>
+<listitem><para><informaltable><tgroup cols="2">
+<thead><row><entry>cheie</entry><entry>valoare</entry></row></thead>
+<tbody>
+<row>
+<entry>message_length</entry><entry>Dimensiunea totală (în octeți) a mesajului codificat transmis pe fir</entry>
+</row>
+<row>
+<entry>request_id</entry>
+<entry>Identificatorul interpelării pentru acest mesaj: <literal>42</literal></entry>
+</row>
+<row>
+<entry>namespace</entry>
+<entry>Spațiul de nume MongoDB utilizat pentru mesajul de protocol <literal>dbname.collectionname</literal></entry>
+</row></tbody></tgroup></informaltable></para></listitem></varlistentry>'>
 
 <!-- Radius -->
 <!ENTITY radius.request.required '<note xmlns="http://docbook.org/ns/docbook">
@@ -2222,3 +2452,34 @@ Acest parametru e ignorat dacă nu a fost stabilită opțiunea
 <link linkend="constant.radius-option-tagged"><constant>RADIUS_OPTION_TAGGED</constant></link>.</para></listitem></varlistentry>'>
 <!ENTITY radius.parameter.vendor '<varlistentry xmlns="http://docbook.org/ns/docbook">
 <term><parameter>vendor</parameter></term><listitem><para>ID-ul vânzătorului (producătorului).</para></listitem></varlistentry>'>
+
+<!-- Migration Guide snippets -->
+<!ENTITY migration56.openssl.peer-verification '
+   <para xmlns="http://docbook.org/ns/docbook">
+    Toate torentele-client criptate oferă acum implicit verificarea
+    corespondentului. Implicit aceasta va utiliza setul implicit de CA al OpenSSL
+    pentru a verifica certificatul corespondentului. În majoritatea cazurilor nu
+    va fi nevoie de careva schimbări pentru a comunica cu servere cu certificate
+    SSL valide, deoarece distribuitorii de obicei configurează OpenSSL să
+    utilizeze seturi valide de CA bine cunoscute.
+   </para>
+
+   <para xmlns="http://docbook.org/ns/docbook">
+    Setul implicit de CA poate fi înlocuit global stabilind opțiunile de
+    configurare openssl.cafile sau openssl.capath, sau la nivelul interpelării
+    utilizând opțiunile de context
+    <link linkend="context.ssl.cafile"><parameter>cafile</parameter></link> sau
+    <link linkend="context.ssl.capath"><parameter>capath</parameter></link>.
+   </para>
+
+   <para xmlns="http://docbook.org/ns/docbook">
+    Cu toate că nu este recomandabil la general, este posibil de a dezactiva
+    verificarea certificatului corespondentului pentru o interpelare stabilind
+    opțiunea de context
+    <link linkend="context.ssl.verify-peer"><parameter>verify_peer</parameter></link>
+    în &false;, și de a dezactiva validarea numelui corespondentului stabilind
+    opțiunea de context <parameter>verify_peer_name</parameter>
+    <!--<link linkend="context.ssl.verify-peer-name"><parameter>verify_peer_name</parameter></link>-->
+    în &false;.
+   </para>
+'>
