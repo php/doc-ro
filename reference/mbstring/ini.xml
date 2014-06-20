@@ -127,7 +127,7 @@
      <para>
       Definește codarea internă a caracterelor. Începând cu PHP 5.6.0, dacă
       această setare e vidă, va fi utilizată
-      <link linkend="ini.default-charset">default_charset</linkDD>.
+      <link linkend="ini.default-charset">default_charset</link>.
      </para>
     </listitem>
    </varlistentry>
