@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 12bf2afc48d28a80298b70facdfff3a3654b0dd1 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 088c4558a55a8443df1a8d4b0e50c32b43006a9d Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.date" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
@@ -225,7 +225,12 @@
           </row>
           <row>
            <entry><literal>u</literal></entry>
-           <entry>Microsecundele (adăugat în PHP 5.2.2)</entry>
+           <entry>
+            Microsecundele (adăugat în PHP 5.2.2). Atrageți atenția că
+            <function>date</function> întotdeauna va genera <literal>000000</literal>,
+            deoarece ea primește un parametru <type>integer</type>, iar metoda
+            <methodname>DateTime::format</methodname> susține microsecundele.
+           </entry>
            <entry>Exemplu: <literal>654321</literal></entry>
           </row>
           <row>
@@ -390,8 +395,8 @@ echo date('l jS \of F Y h:i:s A');
 echo "July 1, 2000 is on a " . date("l", mktime(0, 0, 0, 7, 1, 2000));
 
 /* utilizarea constantelor în parametrul format */
-// Afișează ceva de felul: Mon, 15 Aug 2005 15:12:46 UTC
-echo date(DATE_RFC822);
+// Afișează ceva de felul: Wed, 25 Sep 2013 15:28:57 -0700
+echo date(DATE_RFC2822);
 
 // Afișează ceva de felul: 2000-07-01T00:00:00+00:00
 echo date(DATE_ATOM, mktime(0, 0, 0, 7, 1, 2000));
@@ -464,6 +469,7 @@ $today = date('\i\t \i\s \t\h\e jS \d\a\y.');   // it is the 10th day.
 $today = date("D M j G:i:s T Y");               // Sat Mar 10 17:16:18 MST 2001
 $today = date('H:m:s \m \i\s\ \m\o\n\t\h');     // 17:03:18 m is month
 $today = date("H:i:s");                         // 17:16:18
+$today = date("Y-m-d H:i:s");                   // 2001-03-10 17:16:18 (formatul MySQL DATETIME)
 ?>
 ]]>
     </programlisting>

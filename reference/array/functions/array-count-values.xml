@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 3ce14fde5cd5f15171a7ed2b64fdc7bd652c3842 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.array-count-values" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -13,12 +13,12 @@
   &reftitle.description;
   <methodsynopsis>
    <type>array</type><methodname>array_count_values</methodname>
-   <methodparam><type>array</type><parameter>input</parameter></methodparam>
+   <methodparam><type>array</type><parameter>array</parameter></methodparam>
   </methodsynopsis>
   <para>
    <function>array_count_values</function> întoarce un tablou utilizând valorile
-   tabloului <parameter>input</parameter> în calitate de chei și frecvența
-   apariției lor în <parameter>input</parameter> în calitate de valori.
+   tabloului <parameter>array</parameter> în calitate de chei și frecvența
+   apariției lor în <parameter>array</parameter> în calitate de valori.
   </para>
  </refsect1>
 
@@ -28,7 +28,7 @@
    <variablelist>
 
     <varlistentry>
-     <term><parameter>input</parameter></term>
+     <term><parameter>array</parameter></term>
      <listitem>
       <para>
        Tabloul valorilor ce vor fi numărate
@@ -43,7 +43,7 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Întoarce un tablou asociativ de valori din <parameter>input</parameter> în
+   Întoarce un tablou asociativ de valori din <parameter>array</parameter> în
    calitate de chei și numărul lor în calitate de valori.
   </para>
  </refsect1>

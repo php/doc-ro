@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 965f8ae1ca8d21ba03e80e76105ee1d84bbbc81d Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 80b1dd15aca25fb968294fdb5f16fb1c9b9e6884 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.array-chunk" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -13,7 +13,7 @@
   &reftitle.description;
   <methodsynopsis>
    <type>array</type><methodname>array_chunk</methodname>
-   <methodparam><type>array</type><parameter>input</parameter></methodparam>
+   <methodparam><type>array</type><parameter>array</parameter></methodparam>
    <methodparam><type>int</type><parameter>size</parameter></methodparam>
    <methodparam choice="opt"><type>bool</type><parameter>preserve_keys</parameter><initializer>false</initializer></methodparam>
   </methodsynopsis>
@@ -30,7 +30,7 @@
    <variablelist>
 
     <varlistentry>
-     <term><parameter>input</parameter></term>
+     <term><parameter>array</parameter></term>
      <listitem>
       <para>
        Tabloul cu care se lucrează

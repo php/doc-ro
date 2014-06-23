@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 5faa7a6747bca628b3bdcc9f93aec5603b65581f Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 395344c7708a4e8024f41e38ea972e5530ceca08 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.array-filter" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -13,14 +13,14 @@
   &reftitle.description;
   <methodsynopsis>
    <type>array</type><methodname>array_filter</methodname>
-   <methodparam><type>array</type><parameter>input</parameter></methodparam>
-   <methodparam choice="opt"><type>callable</type><parameter>callback</parameter><initializer>""</initializer></methodparam>
+   <methodparam><type>array</type><parameter>array</parameter></methodparam>
+   <methodparam choice="opt"><type>callable</type><parameter>callback</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Iterează prin fiecare valoare în tabloul <parameter>input</parameter>
+   Iterează prin fiecare valoare în tabloul <parameter>array</parameter>
    transmițând-o funcției <parameter>callback</parameter>. Dacă funcția
    <parameter>callback</parameter> întoarce true, valoarea curentă din
-   <parameter>input</parameter> este întoarsă în tabloul rezultant.
+   <parameter>array</parameter> este întoarsă în tabloul rezultant.
    Cheile tabloului sunt păstrate.
   </para>
 </refsect1>
@@ -31,7 +31,7 @@
    <variablelist>
 
     <varlistentry>
-     <term><parameter>input</parameter></term>
+     <term><parameter>array</parameter></term>
      <listitem>
       <para>
        Tabloul în care se iterează
@@ -47,7 +47,7 @@
       </para>
       <para>
        Dacă nu este furnizată nici o funcție <parameter>callback</parameter>,
-       toate înregistrările din <parameter>input</parameter> egale cu &false;
+       toate înregistrările din <parameter>array</parameter> egale cu &false;
        (vedeți <link linkend="language.types.boolean.casting">convertarea în
         boolean</link>) vor fi eliminate.
       </para>

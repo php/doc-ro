@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 35313adda3ad8511abbb07506422af2a326c8b0c Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 631b47c6b2c585cdbf666aaa464442e8b13399d1 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.microtime" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -44,10 +44,10 @@
   &reftitle.returnvalues;
   <para>
    În mod implicit <function>microtime</function> întoarce un <type>string</type>
-   de forma "msec sec", unde <literal>sec</literal> este timpul curent măsurat
-   în numărul de secunde ce s-au scurs de la epoca Unix (0:00:00 1 Ianuarie,
-   1970 GMT), și <literal>msec</literal> este numărul de microsecunde ce s-au
-   scurs după <literal>sec</literal> exprimat în secunde.
+   de forma "msec sec", unde <literal>sec</literal> este numărul de secunde ce
+   s-au scurs de la epoca Unix (0:00:00 1 Ianuarie, 1970 GMT), și
+   <literal>msec</literal> este numărul de microsecunde ce s-au scurs după
+   <literal>sec</literal> exprimat în secunde.
   </para>
   <para>
    Dacă <parameter>get_as_float</parameter> este stabilit în &true;, atunci
@@ -123,6 +123,23 @@ usleep(100);
 
 $time_end = microtime(true);
 $time = $time_end - $time_start;
+
+echo "Nu am făcut nimic timp de $time secunde\n";
+?>
+]]>
+    </programlisting>
+   </example>
+   <example>
+    <title><function>microtime</function> și <literal>REQUEST_TIME_FLOAT</literal> (începând cu PHP 5.4.0)</title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+// ”Adormire” pentru un interval de timp aleator
+usleep(mt_rand(100, 10000));
+
+// Începând cu PHP 5.4.0, REQUEST_TIME_FLOAT este disponibil în tabloul superglobal $_SERVER .
+// El conține timpul startării interpelării cu precizie de microsecunde.
+$time = microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"];
 
 echo "Nu am făcut nimic timp de $time secunde\n";
 ?>

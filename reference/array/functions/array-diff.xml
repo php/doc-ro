@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: cd7c33a6ce49166219f8b967c4e2db4ac3dc34f3 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: ba15ed813ede4db6505d1c387c1c2e4814a5cd55 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.array-diff" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -18,8 +18,9 @@
    <methodparam choice="opt"><type>array</type><parameter>...</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Compară <parameter>array1</parameter> cu <parameter>array2</parameter> și
-   întoarce diferența.
+   Compară <parameter>array1</parameter> cu unul sau mai multe tablouri și
+   întoarce valorile din <parameter>array1</parameter> care nu sunt prezente în
+   celelalte tablouri.
   </para>
  </refsect1>
 
