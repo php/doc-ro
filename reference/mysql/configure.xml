@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: cd09fab47b40563cb8b2316d817efc973d991713 Maintainer: zamolxe Status: ready -->
+<!-- EN-Revision: 42a727aa49e400b0023fc17bdcb9c34eeae8ecd7 Maintainer: zamolxe Status: ready -->
 <!-- CREDITS: simionea -->
 <section xml:id="mysql.installation" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.install;
@@ -81,13 +81,13 @@
 
  <section xml:id="mysql.installation.windows">
   <title>Instalarea pe sisteme Windows</title>
-  <section>
+  <section xml:id="mysql.installation.windows.php4">
    <title>PHP 4</title>
    <para>
     Extensia PHP MySQL este compilată în PHP.
    </para>
   </section>
-  <section>
+  <section xml:id="mysql.installation.windows.php52">
    <title>PHP 5.0.x, 5.1.x, 5.2.x</title>
    <para>
     MySQL nu mai este activat implicit, deci biblioteca DLL
@@ -124,7 +124,7 @@
     </para>
    </note>
   </section>
-  <section>
+  <section xml:id="mysql.installation.windows.php53">
    <title>PHP 5.3.0+</title>
    <para>
     <link linkend="mysqlnd.overview">Driver-ul MySQL Înnăscut</link> este activat

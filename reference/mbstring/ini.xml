@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 556fb71ea42aaa91d7d536734aa0ab75951239dd Maintainer: alexxed Status: ready -->
+<!-- EN-Revision: 9804d7589793cbe3023148130d351e6cf19fe6c7 Maintainer: alexxed Status: ready -->
 <!-- CREDITS: simionea -->
 <section xml:id="mbstring.configuration" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.runtime;
@@ -149,7 +149,8 @@
     </term>
     <listitem>
      <para>
-      Definește codarea implicită a caracterelor trimise prin HTTP către client.
+      Definește codarea implicită a caracterelor trimise prin HTTP către client
+      (caracterele trimise vor fi convertite la transmitere din codarea internă în codarea HTTP).
      </para>
     </listitem>
    </varlistentry>
