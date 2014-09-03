@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: eb169785f167d21344e5114f0ba379101ec8232d Maintainer: simionea Status: ready -->
+<!-- EN-Revision: e41aab5ecacf449e51179886c17f1d41735b0234 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/datetime.xml, last change in rev 1.8 -->
 <refentry xml:id="function.strtotime" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -84,6 +84,17 @@
       <row>
        <entry>5.3.0</entry>
        <entry>
+        Anterior versiunii PHP 5.3.0, formatele de timp relative transmise prin
+        argumentul <parameter>time</parameter> al funcției <function>strtotime</function>,
+        cum ar fi <literal>this week</literal>, <literal>previous week</literal>,
+        <literal>last week</literal> și <literal>next week</literal> erau
+        interpretate ca perioadă de 7 zile relativ cu data/ora curentă, și nu ca
+        o perioadă de o săptămână de la <literal>Monday</literal> până la
+        <literal>Sunday</literal>.
+       </entry>
+      </row>
+      <row>
+       <entry>
         Anterior versiunii PHP 5.3.0, <literal>24:00</literal> nu era un format
         valid și <function>strtotime</function> întorcea &false;.
        </entry>
@@ -119,14 +130,6 @@
        <entry>5.0.0</entry>
        <entry>
         Microsecundele au început să fie permise, dar sunt ignorate.
-       </entry>
-      </row>
-      <row>
-       <entry>4.4.0</entry>
-       <entry>
-        În PHP de versiunile anterioare 4.4.0, <literal>"next"</literal> este
-        calculat incorect ca +2. O soluție tipică pentru aceasta este utilizarea
-        <literal>"+1"</literal>.
        </entry>
       </row>
      </tbody>
@@ -192,11 +195,13 @@ if (($timestamp = strtotime($str)) === false) {
     20:45:54 UTC până la Tue, 19 Jan 2038 03:14:07 UTC. (Acestea sunt datele
     ce corespund valorilor minimă și maximă pentru un întreg pe 32 biți cu
     semn.)
-    În plus, nu toate platformele susțin timestamp-uri negative, de aceea
-    domeniul datelor poate fi limitat la valorile de după Epoca Unix. Aceasta
-    înseamnă că de ex. datele de până la 1 Ianuarie 1970 nu vor fi valide în
-    Windows, unele distributive Linux, și alte câteva sisteme de operare. Însă
-    PHP 5.1.0 și versiunile ulterioare depășesc această limitare.
+   </para>
+   <para>
+    Anterior versiunii PHP 5.1.0, nu toate platformele susțin timestamp-uri
+    negative, de aceea domeniul datelor poate fi limitat la valorile de după
+    Epoca Unix. Aceasta înseamnă că de ex. datele de până la 1 Ianuarie 1970 nu
+    vor fi valide în Windows, unele distributive Linux, și alte câteva sisteme
+    de operare.
    </para>
    <para>
     Pentru versiunile PHP pe 64 de biți domeniul valid a unui timestamp este

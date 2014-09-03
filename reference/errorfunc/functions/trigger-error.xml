@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 158026d7b2c41d8245b8a76130a74052e662056b Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.trigger-error" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -37,7 +37,7 @@
      <listitem>
       <para>
        Mesajul desemnat pentru aceată eroare. Lungimea este limitată la 1024
-       caractere. Toate caracterele peste lungimea de 1024 vor fi trunchiate.
+       octeți. Toate caracterele peste lungimea de 1024 octeți vor fi trunchiate.
       </para>
      </listitem>
     </varlistentry>

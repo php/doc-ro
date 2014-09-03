@@ -1,20 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 9c41222b3046bfb9b6716f6e68a9051cea82be7f Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.wddx-deserialize" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>wddx_deserialize</refname>
-  <refpurpose>&Alias; <function>wddx_unserialize</function></refpurpose>
+  <refpurpose>Deserializează un pachet WDDX</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
-  <simpara>
-   &info.function.alias;
-   <function>wddx_unserialize</function>.
-  </simpara>
+  <methodsynopsis>
+   <type>mixed</type><methodname>wddx_deserialize</methodname>
+   <methodparam><type>string</type><parameter>packet</parameter></methodparam>
+  </methodsynopsis>
+  <para>
+   Deserializează un <parameter>packet</parameter> WDDX.
+  </para>
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>packet</parameter></term>
+     <listitem>
+      <para>
+       Un pachet WDDX reprezentat ca string sau stream.
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Întoarce valoarea deserializată, care poate fi un string, un număr sau un
+   tablou. Observați că structurile sunt deserializate în tablouri asociative.
+  </para>
  </refsect1>
 </refentry>
 

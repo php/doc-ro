@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 2fd3f0c96d9d221fe37109775af4df4cf949d5d8 Maintainer: simionea Status: ready -->
-<!-- Purpose: basic.other -->
-<!-- Membership: pecl, bundled, external -->
+<!-- EN-Revision: 1634a886415d0ab4df195fe49d18a1c150b70758 Maintainer: simionea Status: ready -->
 
  <reference xml:id="ref.tidy" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>&Functions; Tidy</title>

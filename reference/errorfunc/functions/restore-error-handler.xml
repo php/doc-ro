@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 13bf1bc8f52ce8b4e26a2887313bcb3f1e00d36d Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.restore-error-handler" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -62,16 +62,6 @@ Invalid serialized value.
     </screen>
    </example>
   </para>
- </refsect1>
-
- <refsect1 role="notes">
-  &reftitle.notes;
-  <note>
-   <para>
-    Apelarea <function>restore_error_handler</function> din interiorul funcției
-    <literal>error_handler</literal> este ignorată.
-   </para>
-  </note>
  </refsect1>
 
  <refsect1 role="seealso">

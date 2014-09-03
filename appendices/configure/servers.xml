@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: cdd201f7b1c520543a281c4df4ea8baad2caffbb Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 2bb07c8c43f028c665a33bfc08a22639e9e35dc6 Maintainer: simionea Status: ready -->
  <sect3 xml:id="configure.options.servers" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Opțiunile SAPI</title>
   <para>
@@ -275,19 +275,6 @@
     </listitem>
    </varlistentry>
 
-   <varlistentry xml:id="configure.with-fastcgi">
-    <term>
-     <option role="configure">--with-fastcgi</option>
-    </term>
-    <listitem>
-     <para>
-      Asamblează PHP în calitate de aplicație FastCGI. Aceasta nu mai este disponibilă
-      începând cu  PHP 4.3.0. În loc, ar trebui să folosiți
-      <option role="configure">--enable-fastcgi</option>.
-     </para>
-    </listitem>
-   </varlistentry>
-
   <!--<varlistentry xml:id="configure.disable-path-info-check">
     <term>
      <option role="configure">disable-path-info-check</option>
@@ -313,7 +300,7 @@
     <listitem>
      <para>
       Dacă această opțiune e activată, modulul CGI va fi asamblat de asemenea cu susținerea
-      FastCGI. Disponibil începând cu PHP 4.3.0
+      FastCGI.
      </para>
      <para>
       Începând cu PHP 5.3.0 acest argument nu mai există și este activat cu
@@ -330,7 +317,7 @@
      <para>
       Dacă această opțiune e dezactivată, căile ca
       <filename>/info.php/test?a=b</filename>
-      nu vor funcționa. Disponibil începând cu PHP 4.3.0.
+      nu vor funcționa.
       Pentru informații suplimentare, accesați
       <link xlink:href="&url.apache.core;#acceptpathinfo">Manualul Apache</link>.
      </para>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 2bb07c8c43f028c665a33bfc08a22639e9e35dc6 Maintainer: simionea Status: ready -->
  <sect3 xml:id="configure.options.misc" xmlns="http://docbook.org/ns/docbook">
   <title>Opțiuni diverse</title>
   <variablelist>
@@ -94,20 +94,6 @@
     <listitem>
      <para>
       Definește locația directorului de instalare zlib.
-     </para>
-    </listitem>
-   </varlistentry>
-
-   <varlistentry xml:id="configure.enable-trans-sid">
-    <term>
-     <option role="configure">--enable-trans-sid</option>
-    </term>
-    <listitem>
-     <para>
-      Activează propagarea identificatorului de sesiune transparent.
-      Valid numai pentru PHP 4.1.2 sau mai mic. Începând cu PHP 4.2.0
-      facilitatea identificatorului de sesiune transparent este compilată
-      întotdeauna.
      </para>
     </listitem>
    </varlistentry>
