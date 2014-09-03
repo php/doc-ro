@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 20921e0003650cf65965d91b038bb98771d49f37 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <preface xml:id="preface" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://docbook.org/ns/docbook">
@@ -11,7 +11,7 @@
    <acronym>PHP</acronym>, ce înseamnă &quot;<literal>PHP: Hypertext
    Preprocessor</literal>&quot; este un limbaj de scripting de uz general, cu
    cod-sursă deschis (Open Source), utilizat pe scară largă, și care este
-   potrivit în special pentru dezvoltarea aplicațiilor Web și poate fi integrat
+   potrivit în special pentru dezvoltarea aplicațiilor web și poate fi integrat
    în HTML. Sintaxa sa provine din C, Java și Perl și este ușor de învățat.
    Scopul principal al limbajului este acela de a permite programatorilor web să
    creeze rapid pagini web generate dinamic, însă cu PHP puteți realiza mult mai
