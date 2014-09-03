@@ -847,7 +847,7 @@ class test {
   <informalexample>
    <para>
     Dacă aveți de verificat un singur script, puteți intercepta erorile
-    <constant>E_STRICT</constant> utilizând facilitatea <literal>lint</literal>
+    <constant>E_STRICT</constant> utilizând facilitatea lint
     din linia de comandă a PHP:
    </para>
    <programlisting role="shell">
