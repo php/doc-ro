@@ -94,6 +94,7 @@
        </entry>
       </row>
       <row>
+       <entry>5.3.0</entry>
        <entry>
         Anterior versiunii PHP 5.3.0, <literal>24:00</literal> nu era un format
         valid și <function>strtotime</function> întorcea &false;.
