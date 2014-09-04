@@ -150,7 +150,7 @@ din motivul rapidității acestui algoritm de hashing. Vedeți
 
 <!ENTITY tip.fopen-wrapper '<tip xmlns="http://docbook.org/ns/docbook">
 <simpara>Un URL poate fi utilizat în calitate de denumire a fișierului în
-această funcție dacă<link linkend="ini.allow-url-fopen"> învelișurile
+această funcție dacă <link linkend="ini.allow-url-fopen" >învelișurile
 fopen</link> au fost activate. Accesați <function>fopen</function> pentru mai
 multe detalii despre modul de specificare a denumirii fișierului. Accesați
 <xref linkend="wrappers"/> pentru referințe la informații despre posibilitățile
@@ -442,10 +442,9 @@ respectiv mai mic, egal cu sau mai mare decât al doilea argument.'>
 
 <!ENTITY return.falseproblem '<warning xmlns="http://docbook.org/ns/docbook">
 <simpara>Această funcție poate întoarce valoarea Boolean &false;, dar poate de
-asemenea întoarce o valoare non-Boolean care evaluează în &false;, cum ar fi
-<literal>0</literal> sau &quot;&quot;. Vă rugăm să citiți secțiunea despre
-tipul <link linkend="language.types.boolean">Boolean</link> pentru mai multe
-informații. Utilizați
+asemenea întoarce o valoare non-Boolean care evaluează în &false;. Vă rugăm să
+citiți secțiunea despre tipul <link linkend="language.types.boolean">Boolean</link>
+pentru informații suplimentare. Utilizați
 <link linkend="language.operators.comparison">operatorul ===</link> pentru a
 verifica valoarea întoarsă de această funcție.</simpara></warning>'>
 
@@ -1443,7 +1442,7 @@ diferite: spațiul de nume al utilizatorilor și spațiul de nume root. Spațiul
 de nume al utilizatorilor e disponibil tuturor, în timp ce spațiul de nume
 root este disponibil numai utilizatorilor cu privilegii de root. xattr
 operează implicit în spațiul utilizatorilor, dar aceasta poate fi schimbat
-cu parametrul <parameter xmlns="http://docbook.org/ns/docbook">flags</parameter>.</para>'>
+cu parametrul <parameter>flags</parameter>.</para>'>
 
 <!-- Notes for IPv6 -->
 <!ENTITY ipv6.brackets '<note xmlns="http://docbook.org/ns/docbook"><simpara>
@@ -1476,7 +1475,7 @@ sub forma unui string. Dacă este transmis ca string, el este interpretat ca
 denumirea fișierului de configurare, în caz contrar el este interpretat ca
 însăși opțiunile. Accesați <link xmlns:xlink="http://www.w3.org/1999/xlink"
 xlink:href="&url.tidy.conf;">&url.tidy.conf;</link> pentru explicația fiecărei
-opțiuni.</para><para xmlns="http://docbook.org/ns/docbook">Parametrul
+opțiuni.</para><para>Parametrul
 <parameter>encoding</parameter> stabilește codificarea pentru documentele de
 intrare/ieșire. Valorile posibile pentru <parameter>encoding</parameter> sunt:
 <literal>ascii</literal>, <literal>latin0</literal>,
@@ -1662,18 +1661,18 @@ suplimentare (de exemplu: receipt).</para></listitem></varlistentry>">
 <para>Poate fi specificat un antet al tranzacției, indicând faptul că
 confirmarea mesajului trebuie să fie parte componentă a tranzacției cu nume.
 </para></note>">
-<!ENTITY stomp.note.sync '<tip xmlns="http://docbook.org/ns/docbook"><simpara>
+<!ENTITY stomp.note.sync "<tip xmlns='http://docbook.org/ns/docbook'><simpara>
 Stomp este în mod inerent asincron. O comunicare sincronă poate fi implementată
 adăugând un antet cu confirmare. Aceasta va face ca metodele să nu întoarcă
 nimic până când serverul confirmă primirea mesajului sau până când se atinge
-limita maximă de timp pentru citire.</simpara></tip>'>
+limita maximă de timp pentru citire.</simpara></tip>">
 
 <!-- SVN notes -->
-<!ENTITY svn.relativepath '<note xmlns="http://docbook.org/ns/docbook">
+<!ENTITY svn.relativepath "<note xmlns='http://docbook.org/ns/docbook'>
 <simpara>Căile relative vor fi rezolvate ca și cum directorul curent este cel
 ce conține binarul PHP. Pentru a utiliza directorul de lucru al scriptului
 apelant, utilizați <function>realpath</function> sau dirname(__FILE__).
-</simpara></note>'>
+</simpara></note>">
 <!ENTITY svn.referto.status 'Accesați <link
 xmlns="http://docbook.org/ns/docbook" linkend="svn.constants.status">
 constantele de stare</link>pentru a afla valorile posibile.'>
@@ -1687,8 +1686,8 @@ constante de tip</link> pentru a afla valorile posibile.'>
 <!ENTITY fann.train.description '<para xmlns="http://docbook.org/ns/docbook">
 <type>resource</type> a datelor pentru antrenarea rețelei neuronale.</para>'>
 <!ENTITY fann.errdat.description '<para xmlns="http://docbook.org/ns/docbook">
-<type>resource</type> a unei rețele neuronale, sau a datelor pentru antrenarea
-rețelei neuronale.</para>'>
+<type>resource</type> a unei rețele neuronale, sau <type>resource</type> a datelor
+pentru antrenarea rețelei neuronale.</para>'>
 <!ENTITY fann.return.void '<para xmlns="http://docbook.org/ns/docbook">
 Nu este întoarsă nici o valoare.</para>'>
 <!ENTITY fann.return.bool '<para xmlns="http://docbook.org/ns/docbook">
@@ -2301,8 +2300,8 @@ MongoDB 2.6+ va emite o eroare și înscrierea va eșua; versiunile mai vechi al
 serverului pur și simplu vor ignora opțiunea.</simpara></note></listitem>'>
 
 <!ENTITY mongo.writes.parameters.safe '<listitem xmlns="http://docbook.org/ns/docbook">
-<para><literal>"safe"</literal></para><para><emphasis>Învechită</emphasis>.
-Utilizați opțiunea <link linkend="mongo.writeconcerns">WriteConcern</link>
+<para><literal>"safe"</literal></para><para>Învechită. Utilizați opțiunea
+<link linkend="mongo.writeconcerns">WriteConcern</link>
 <literal>w</literal>.</para></listitem>'>
 
 <!ENTITY mongo.writes.parameters.timeout '<listitem xmlns="http://docbook.org/ns/docbook">
@@ -2542,7 +2541,8 @@ Acest parametru e ignorat dacă nu a fost stabilită opțiunea
     opțiunea de context
     <link linkend="context.ssl.verify-peer"><parameter>verify_peer</parameter></link>
     în &false;, și de a dezactiva validarea numelui corespondentului stabilind
-    opțiunea de context <parameter>verify_peer_name</parameter>
+    opțiunea de context
+    <link linkend="context.ssl.verify-peer-name"><parameter>verify_peer_name</parameter></link>
     în &false;.
    </para>
 '>
