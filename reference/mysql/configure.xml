@@ -98,11 +98,11 @@
     trebuie să fie disponibil în căile din variabila <envar>PATH</envar> a
     sistemului Windows. Accesați și FAQ întitulat
     "<link linkend="faq.installation.addtopath">Cum să adaug directorul PHP
-    în variabila PATH din Windows</link>" pentru informații despre cum să
-    realizați acest lucru. Cu toate că copierea <filename>libmysql.dll
-    </filename> în directorul de sistem al Windows de asemenea funcționează
-    (deoarece directorul de sistem se află implicit înscris în variabila
-    <envar>PATH</envar> a sistemului), aceasta nu e recomandabil.
+    în variabila <varname>PATH</varname> din Windows</link>" pentru informații
+    despre cum să realizați acest lucru. Cu toate că copierea
+    <filename>libmysql.dll</filename> în directorul de sistem al Windows de
+    asemenea funcționează (deoarece directorul de sistem se află implicit înscris
+    în variabila <envar>PATH</envar> a sistemului), aceasta nu e recomandabil.
    </para>
    <para>
     Ca și în cazul activării oricărei extensii PHP (cum ar fi
@@ -116,10 +116,8 @@
    <note>
     <para>
      Dacă la startarea server-ului web apare o eroare similară cu aceasta:
-     <literal>"Unable to load dynamic library './php_mysql.dll'"</literal>
-     (<literal>"Nu s-a reușit încărcarea bibliotecii dinamice
-     './php_mysql.dll'"</literal>), aceasta este din cauza că
-     <filename>php_mysql.dll</filename> și/sau
+     <literal>"Unable to load dynamic library './php_mysql.dll'"</literal>,
+     aceasta este din cauza că <filename>php_mysql.dll</filename> și/sau
      <filename>libmysql.dll</filename> nu pot fi găsite de către sistem.
     </para>
    </note>
