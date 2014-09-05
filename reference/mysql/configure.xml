@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 42a727aa49e400b0023fc17bdcb9c34eeae8ecd7 Maintainer: zamolxe Status: ready -->
+<!-- EN-Revision: ba08db8805ddb14cbab613c893dd47eacbda22f2 Maintainer: zamolxe Status: ready -->
 <!-- CREDITS: simionea -->
 <section xml:id="mysql.installation" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.install;
