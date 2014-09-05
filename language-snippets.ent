@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 2562557ca572d4ae49474c89f82c06548f4cb417 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: ba08db8805ddb14cbab613c893dd47eacbda22f2 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -387,8 +387,8 @@ nu este recomandată, deoarece ea poate fi eliminată din PHP în viitor.</simpa
 
 <!ENTITY ext.windows.path.dll 'Pentru ca această extensie să funcționeze,
 anumite fișiere <acronym xmlns="http://docbook.org/ns/docbook">DLL</acronym>
-trebuie să fie accesibile în calea de sistem a Windows din
-<literal xmlns="http://docbook.org/ns/docbook">variabila PATH</literal>. Pentru
+trebuie să fie accesibile în calea de sistem a Windows din variabila
+<envar xmlns="http://docbook.org/ns/docbook">PATH</envar>. Pentru
 informații despre cum poate fi realizat acest lucru, accesați
 <acronym xmlns="http://docbook.org/ns/docbook">FAQ</acronym> întitulat
 "<link xmlns="http://docbook.org/ns/docbook" linkend="faq.installation.addtopath">
@@ -396,10 +396,10 @@ Cum să adaug directorul meu PHP la variabila PATH din Windows</link>" pentru
 informații despre cum să realizați aceasta. Cu toate că copierea fișierelor DLL
 din directorul PHP în directorul de sistem al Windows de asemenea funcționează
 (deoarece directorul de sistem este în mod implicit inclus în variabila
-<literal xmlns="http://docbook.org/ns/docbook">PATH</literal>), acest lucru nu
+<envar xmlns="http://docbook.org/ns/docbook">PATH</envar>), acest lucru nu
 este recomandabil. <emphasis xmlns="http://docbook.org/ns/docbook">Această
-extensie necesită ca următoarele fișiere să existe în calea <literal>PATH
-</literal>:</emphasis> '>
+extensie necesită ca următoarele fișiere să existe în calea <envar>PATH
+</envar>:</emphasis> '>
 
 <!ENTITY manual.migration.seealso 'Accesați de asemenea ghidurile de migrare
 pentru versiunile PHP'>

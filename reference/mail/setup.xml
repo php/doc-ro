@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: simionea Status: ready -->
+<!-- EN-Revision: ba08db8805ddb14cbab613c893dd47eacbda22f2 Maintainer: simionea Status: ready -->
 
 <chapter xml:id="mail.setup" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.setup;
@@ -17,10 +17,10 @@
    <productname>qmail</productname> sau <productname>postfix</productname>,
    asigurați-vă că utilizați învelișul sendmail corespunzător cu care
    sunt furnizate. PHP mai întâi va căuta sendmail în căile din
-   <literal>PATH</literal>, și după aceasta în următoarele locuri:
+   <envar>PATH</envar>, și după aceasta în următoarele locuri:
    <literal>/usr/bin:/usr/sbin:/usr/etc:/etc:/usr/ucblib:/usr/lib</literal>.
    Este foarte recomandabil să aveți sendmail disponibil în una din căile
-   din <literal>PATH</literal>. De asemenea, utilizatorul ce a compilat
+   din <envar>PATH</envar>. De asemenea, utilizatorul ce a compilat
    PHP trebuie să aibă permisiunea de a accesa binarul sendmail.
   </para>
  </section>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: f621ea25b00e93f645e6e663ce448cafdd85f45f Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 7e88ca5ef326ce30c49bfdd27e4def109a4921ab Maintainer: simionea Status: ready -->
 
 <refentry xml:id="function.json-last-error-msg" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
@@ -29,8 +29,8 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Întoarce mesajul de eroare în caz de succes, sau &null; în cazul parametrilor
-   incorecți.
+   Întoarce mesajul de eroare în caz de succes, <literal>"No Error"</literal>
+   dacă nu s-a produs vre-o eroare, &return.falseforfailure;.
   </para>
  </refsect1>
 

@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 8b5940cadeb4f1c8492f4a7f70743a2be807cf39 Maintainer: simionea Status: ready -->
 <!-- CREDITS: zamolxe -->
 <refentry xml:id="function.mysql-connect" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>mysql_connect</refname>
   <refpurpose>Deschide o conexiune la un server MySQL</refpurpose>
  </refnamediv>
+
+ <refsynopsisdiv>
+  <warning>
+   &mysql.alternative.note;
+   <simplelist role="alternatives">
+    <member><function>mysqli_connect</function></member>
+    <member><methodname>PDO::__construct</methodname></member>
+   </simplelist>
+  </warning>
+ </refsynopsisdiv>
 
  <refsect1 role="description">
   &reftitle.description;
@@ -122,15 +132,9 @@
      </thead>
      <tbody>
       <row>
-       <entry>4.3.0</entry>
+       <entry>5.5.0</entry>
        <entry>
-        A fost adăugat parametrul <parameter>client_flags</parameter>.
-       </entry>
-      </row>
-      <row>
-       <entry>4.2.0</entry>
-       <entry>
-        A fost adăugat parametrul <parameter>new_link</parameter>.
+        Această funcție va genera o eroare <constant>E_DEPRECATED</constant>.
        </entry>
       </row>
      </tbody>

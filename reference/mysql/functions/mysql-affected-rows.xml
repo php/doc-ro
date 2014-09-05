@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 65e697ff671608989432a6e6bf8ae8128b2be2c7 Maintainer: simionea Status: ready -->
 <!-- CREDITS: zamolxe -->
 <refentry xml:id="function.mysql-affected-rows" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -9,11 +9,21 @@
   <refpurpose>Obține numărul de rânduri afectate de precedenta operațiune MySQL</refpurpose>
  </refnamediv>
 
+ <refsynopsisdiv>
+  <warning>
+   &mysql.alternative.note;
+   <simplelist role="alternatives">
+    <member><function>mysqli_affected_rows</function></member>
+    <member><methodname>PDOStatement::rowCount</methodname></member>
+   </simplelist>
+  </warning>
+ </refsynopsisdiv>
+
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
    <type>int</type><methodname>mysql_affected_rows</methodname>
-   <methodparam choice="opt"><type>resource</type><parameter>link_identifier</parameter></methodparam>
+   <methodparam choice="opt"><type>resource</type><parameter>link_identifier</parameter><initializer>NULL</initializer></methodparam>
   </methodsynopsis>
   <para>
    Obține numărul de rânduri afectate de ultima interpelare INSERT, UPDATE,
@@ -52,6 +62,11 @@
    Interpelarea REPLACE întâi elimină înregistrarea cu aceeași cheie primară,
    apoi inserează noua înregistrare. Această funcție întoarce numărul
    înregistrărilor eliminate plus numărul înregistrărilor inserate.
+  </para>
+  <para>
+   În cazul interpelărilor de tip "INSERT ... ON DUPLICATE KEY UPDATE", valoarea
+   întoarsă va fi <literal>1</literal> dacă a fost efectuată inserare, sau
+   <literal>2</literal> dacă a fost actualizat un rând existent.
   </para>
  </refsect1>
 
