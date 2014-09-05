@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 3c5e32fa72b84e56f3eb8abc8b091d869e9cf9ff Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 9add359e149c2ba9fefa8efebec44130e56c4eff Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.is-numeric" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -21,9 +21,10 @@
    Determină dacă variabila dată este numerică. String-urile numerice constau
    din semnul opțional, orice număr de cifre, partea decimală opțională și
    partea exponențială opțională. Astfel <literal>+0123.45e6</literal> este
-   o valoare numerică validă. Notarea hexadecimală (<literal>0xFF</literal>)
-   este de asemenea permisă, dar numai fără semn, parte decimală și parte
-   exponențială.
+   o valoare numerică validă. Notarea hexadecimală (de ex.
+   <literal>0xf4c3b00c</literal>), binară (de ex. <literal>0b10100111001</literal>),
+   octală (de ex. <literal>0777</literal>) este de asemenea permisă, dar numai
+   fără semn, parte decimală și parte exponențială.
   </para>
  </refsect1>
 
@@ -62,17 +63,20 @@
 $tests = array(
     "42",
     1337,
-    "1e4",
-    "non numeric",
-    Array(),
+    0x539,
+    02471,
+    0b10100111001,
+    1337e0,
+    "not numeric",
+    array(),
     9.1
-    );
+);
 
 foreach ($tests as $element) {
     if (is_numeric($element)) {
-        echo "'{$element}' este numeric", PHP_EOL;
+        echo "'{$element}' is numeric", PHP_EOL;
     } else {
-        echo "'{$element}' NU este numeric", PHP_EOL;
+        echo "'{$element}' is NOT numeric", PHP_EOL;
     }
 }
 ?>
@@ -81,12 +85,15 @@ foreach ($tests as $element) {
     &example.outputs;
     <screen>
 <![CDATA[
-'42' este numeric
-'1337' este numeric
-'1e4' este numeric
-'not numeric' NU este numeric
-'Array' NU este numeric
-'9.1' este numeric
+'42' is numeric
+'1337' is numeric
+'1337' is numeric
+'1337' is numeric
+'1337' is numeric
+'1337' is numeric
+'not numeric' is NOT numeric
+'Array' is NOT numeric
+'9.1' is numeric
 ]]>
     </screen>
    </example>

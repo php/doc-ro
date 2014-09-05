@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 7c20e7b4b6164cb7b98430466270dcce34e8640c Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/var.xml, last change in rev 1.75 -->
 <refentry xml:id="function.get-resource-type" xmlns="http://docbook.org/ns/docbook">
@@ -65,7 +65,7 @@
 $c = mysql_connect();
 echo get_resource_type($c) . "\n";
 
-// Afișează: file
+// Afișează: stream
 $fp = fopen("foo", "w");
 echo get_resource_type($fp) . "\n";
 

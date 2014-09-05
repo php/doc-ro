@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 03083e6a6633a433d4269d7c24b7be0bd546ebc6 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.floatval" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -39,7 +39,12 @@
   &reftitle.returnvalues;
   <para>
    Valoarea float a variabilei date. În cazul tablourilor vide va fi întors 0,
-   iar în cazul tablourilor nevide va fi întors 1. 
+   iar în cazul tablourilor nevide va fi întors 1.
+  </para>
+  <para>
+   Șirurile de caractere cel mai probabil vor întoarce 0, cu toate că aceasta
+   depinde de cele mai din stânga caractere ale string-ului. Aici se aplică
+   regulile generale de <link linkend="language.types.float.casting">float casting</link>.
   </para>
  </refsect1>
  <refsect1 role="examples">
@@ -58,11 +63,26 @@ echo $float_value_of_var; // 122.34343
     </programlisting>
    </example>
   </para>
+  <para>
+   <example>
+    <title>Exemplu <function>floatval</function> cu cele mai din stânga caractere non-numerice</title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+$var = 'The122.34343';
+$float_value_of_var = floatval($var);
+echo $float_value_of_var; // 0
+?>
+]]>
+    </programlisting>
+   </example>
+  </para>
  </refsect1>
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>
    <simplelist>
+    <member><function>boolval</function></member>
     <member><function>intval</function></member>
     <member><function>strval</function></member>
     <member><function>settype</function></member>

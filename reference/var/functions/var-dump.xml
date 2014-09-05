@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 4307b3bcdf87f058147f6a917051986871ed8fe1 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/var.xml, last change in rev 1.84 -->
 <refentry xml:id="function.var-dump" xmlns="http://docbook.org/ns/docbook">
@@ -15,8 +15,7 @@
   <methodsynopsis>
    <type>void</type><methodname>var_dump</methodname>
    <methodparam><type>mixed</type><parameter>expression</parameter></methodparam>
-   <methodparam choice="opt"><type>mixed</type><parameter>expression</parameter></methodparam>
-   <methodparam choice="opt"><parameter>...</parameter></methodparam>
+   <methodparam choice="opt"><type>mixed</type><parameter>...</parameter></methodparam>
   </methodsynopsis>
   <simpara>
    Această funcție afișează informația structurată despre una sau mai multe
@@ -25,8 +24,10 @@
    reflecte structura.
   </simpara>
   <simpara>
-   În PHP 5 toate proprietățile publice, private și protejate ale obiectelor
-   vor fi afișate.
+   Toate proprietățile publice, private și protejate ale obiectelor vor fi
+   afișate, doar dacă obiectul nu implementeaă metoda
+   <link linkend="language.oop5.magic.debuginfo">__debugInfo()</link>
+   (implementată în PHP 5.6.0).
   </simpara>
   &tip.ob-capture;
  </refsect1>
@@ -39,7 +40,7 @@
      <term><parameter>expression</parameter></term>
      <listitem>
       <para>
-       Variabila, pe care doriți să o exportați.
+       Variabila, pe care doriți să o afișați.
       </para>
      </listitem>
     </varlistentry>
@@ -113,8 +114,10 @@ bool(true)
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function>var_export</function></member>
     <member><function>print_r</function></member>
+    <member><function>debug_zval_dump</function></member>
+    <member><function>var_export</function></member>
+    <member><link linkend="language.oop5.magic.debuginfo">__debugInfo()</link></member>
    </simplelist>
   </para>
  </refsect1>

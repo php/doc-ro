@@ -1,55 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 3c5e32fa72b84e56f3eb8abc8b091d869e9cf9ff Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 504a1e19b435344e2c456bd9e2a1d6aaed570749 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
-  <refentry xml:id="function.is-float" xmlns="http://docbook.org/ns/docbook">
-   <refnamediv>
-    <refname>is_float</refname>
-    <refpurpose>Determină dacă tipul unei variabile este float</refpurpose>
-   </refnamediv>
-   <refsect1 role="description">
-    &reftitle.description;
-     <methodsynopsis>
-      <type>bool</type><methodname>is_float</methodname>
-      <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
-     </methodsynopsis>
-    <para>
-     Determină dacă tipul variabilei date este float.
-    </para>
-    <note>
-     <para>
-      Pentru a verifica dacă o variabilă este un număr sau un string numeric
-      (ca în cazul datelor introduse, care întotdeauna este un string), trebuie
-      să utilizați <function>is_numeric</function>.
-     </para>
-    </note>
-   </refsect1>
-   <refsect1 role="parameters">
-    &reftitle.parameters;
-    <para>
-     <variablelist>
-      <varlistentry>
-       <term><parameter>var</parameter></term>
-       <listitem>
-        <para>
-         Variabila ce este evaluată.
-        </para>
-       </listitem>
-      </varlistentry>
-     </variablelist>
-    </para>
-   </refsect1>
-   <refsect1 role="returnvalues">
-    &reftitle.returnvalues;
-    <para>
-     Întoarce &true; dacă <parameter>var</parameter> este un <type>float</type>,
-     &false; în caz contrar.
-    </para>
-   </refsect1>
-   <refsect1 role="examples">
-     &reftitle.examples;
-     <para>
+<refentry xml:id="function.is-float" xmlns="http://docbook.org/ns/docbook">
+ <refnamediv>
+  <refname>is_float</refname>
+  <refpurpose>Determină dacă tipul unei variabile este float</refpurpose>
+ </refnamediv>
+
+ <refsect1 role="description">
+  &reftitle.description;
+   <methodsynopsis>
+    <type>bool</type><methodname>is_float</methodname>
+    <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
+   </methodsynopsis>
+  <para>
+   Determină dacă tipul variabilei date este float.
+  </para>
+  <note>
+   <para>
+    Pentru a verifica dacă o variabilă este un număr sau un string numeric
+    (ca în cazul datelor introduse, care întotdeauna este un string), trebuie
+    să utilizați <function>is_numeric</function>.
+   </para>
+  </note>
+ </refsect1>
+
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>var</parameter></term>
+     <listitem>
+      <para>
+       Variabila ce este evaluată.
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
+ </refsect1>
+
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Întoarce &true; dacă <parameter>var</parameter> este un <type>float</type>,
+   &false; în caz contrar.
+  </para>
+ </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
    <example>
     <title>Exemplu <function>is_float</function></title>
     <programlisting role="php">
@@ -83,20 +87,20 @@ bool(false)
   </para>
  </refsect1>
 
-   <refsect1 role="seealso">
-    &reftitle.seealso;
-    <para>
-     <simplelist>
-      <member><function>is_bool</function></member>
-      <member><function>is_int</function></member>
-      <member><function>is_numeric</function></member>
-      <member><function>is_string</function></member>
-      <member><function>is_array</function></member>
-      <member><function>is_object</function></member>
-     </simplelist>
-    </para>
-   </refsect1>
-  </refentry>
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>is_bool</function></member>
+    <member><function>is_int</function></member>
+    <member><function>is_numeric</function></member>
+    <member><function>is_string</function></member>
+    <member><function>is_array</function></member>
+    <member><function>is_object</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
+</refentry>
 
 <!-- Keep this comment at the end of the file
 Local variables:

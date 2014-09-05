@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 2ab5985e8bc37bc876e869a9836133f6050cc35f Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 1a28eb6e507b3c9f4277fcc5303819947eb8aacd Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.strval" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -39,10 +39,10 @@
       </para>
       <para>
        <parameter>var</parameter> poate fi de orice tip scalar sau un obiect ce
-       implementează metoda <link linkend="language.oop5.magic.tostring">__toString</link>.
+       implementează metoda <link linkend="object.tostring">__toString()</link>.
        Nu puteți utiliza <function>strval</function> cu tablouri sau cu obiecte
        ce nu implementează metoda
-       <link linkend="language.oop5.magic.tostring">__toString</link>.
+       <link linkend="object.tostring">__toString()</link>.
       </para>
      </listitem>
     </varlistentry>
@@ -62,8 +62,8 @@
   <para>
    <example>
     <title>
-     Exemplu <function>strval</function> cu utilizarea metodei magice a PHP5
-     <link linkend="language.oop5.magic.tostring">__toString</link>.
+     Exemplu <function>strval</function> cu utilizarea metodei magice a PHP 5
+     <link linkend="object.tostring">__toString()</link>.
     </title>
     <programlisting role="php">
 <![CDATA[
@@ -89,13 +89,14 @@ echo strval(new StrValTest);
   &reftitle.seealso;
   <para>
    <simplelist>
+    <member><function>boolval</function></member>
     <member><function>floatval</function></member>
     <member><function>intval</function></member>
     <member><function>settype</function></member>
     <member><function>sprintf</function></member>
     <member><function>number_format</function></member>
     <member><link linkend="language.types.type-juggling">Manipularea tipurilor</link></member>
-    <member><link linkend="language.oop5.magic.tostring">__toString</link></member>
+    <member><link linkend="object.tostring">__toString()</link></member>
    </simplelist>
   </para>
  </refsect1>

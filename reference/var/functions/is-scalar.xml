@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: bc8b580e62235a58179e6f2447bc200e7b2732d1 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/var.xml, last change in rev 1.35 -->
 <refentry xml:id="function.is-scalar" xmlns="http://docbook.org/ns/docbook">
@@ -33,6 +33,11 @@
     <type>resource</type> a fi scalare deoarece resursele sunt tipuri de date
     abstracte care în prezent se bazează pe numere întregi. Nu trebuie de bazat
     pe acest detaliu de implementare, deoarece poate fi schimbat în viitor.
+   </para>
+  </note>
+  <note>
+   <para>
+    <function>is_scalar</function> nu consideră NULL ca scalar.
    </para>
   </note>
  </refsect1>

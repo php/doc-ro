@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: e41aab5ecacf449e51179886c17f1d41735b0234 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.empty" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>empty</refname>
   <refpurpose>Determină dacă o variabilă este vidă</refpurpose>
  </refnamediv>
+
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
@@ -15,9 +16,12 @@
    <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Determină dacă o variabilă este considerată vidă.
+   Determină dacă o variabilă este considerată vidă. O variabilă este considerată
+   vidă dacă ea nu există, sau dacă valoarea ei este egală cu &false;.
+   Funcția <function>empty</function> nu generează o avertizare dacă variabila nu există.
   </para>
  </refsect1>
+
  <refsect1 role="parameters">
   &reftitle.parameters;
   <para>
@@ -30,42 +34,45 @@
       </para>
       <note>
        <para>
-        <function>empty</function> verifică numai variabile, deoarece orice
-        altceva va duce la o eroare de interpretare. Cu alte cuvinte,
-        următoarea comandă nu va funcționa:
-        <command>empty(trim($name))</command>.
+        Anterior versiunii PHP 5.5, <function>empty</function> susține doar
+        variabile; orice altceva va duce la o eroare de interpretare. Cu alte
+        cuvinte, următoarea comandă nu va funcționa:
+        <command>empty(trim($name))</command>. În loc, utilizați
+        <command>trim($name) == false</command>.
        </para>
       </note>
       <para>
-       <function>empty</function> este opusa <literal>(boolean) var</literal>,
-       cu excepția că nu se generează o avertizare atunci când variabila nu
-       este stabilită (inițializată).
+       Nici o avertizare nu este generată dacă variabila nu există. Aceasta
+       înseamnă că <function>empty</function> este în esență varianta prescurtată
+       a <command>!isset($var) || $var == false</command>.
       </para>
      </listitem>
     </varlistentry>
    </variablelist>
   </para>
  </refsect1>
+
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
    Întoarce &false; dacă <parameter>var</parameter> are o valoare nevidă și
-   neegală cu zero.
+   neegală cu zero. În caz contrar, întoarce &true;.
   </para>
   <para>
    Următoarele entități sunt considerate a fi vide:
    <simplelist>
-    <member><literal>"" (un string vid)</literal></member>
-    <member><literal>0 (0 în calitate de integer)</literal></member>
-    <member><literal>"0" (0 în calitate de string)</literal></member>
+    <member><literal>""</literal> (un string vid)</member>
+    <member><literal>0</literal> (0 în calitate de integer)</member>
+    <member><literal>0.0</literal> (0 în calitate de float)</member>
+    <member><literal>"0"</literal> (0 în calitate de string)</member>
     <member>&null;</member>
     <member>&false;</member>
-    <member><literal>array() (un tablou vid)</literal></member>
-    <member><literal>var $var; (o variabilă declarată, dar fără o valoare
-    într-o clasă)</literal></member>
+    <member><literal>array()</literal> (un tablou vid)</member>
+    <member><literal>$var;</literal> (o variabilă declarată, dar fără o valoare)</member>
    </simplelist>
   </para>
  </refsect1>
+
  <refsect1 role="changelog">
   &reftitle.changelog;
   <para>
@@ -79,11 +86,19 @@
      </thead>
      <tbody>
       <row>
-       <entry>PHP 5</entry>
+       <entry>5.5.0</entry>
        <entry>
         <para>
-         Începând cu PHP 5 obiectele fără proprietăți nu mai sunt considerate
-         vide.
+         <function>empty</function> acum susține și expresii, nu doar variabile.
+        </para>
+       </entry>
+      </row>
+      <row>
+       <entry>5.4.0</entry>
+       <entry>
+        <para>
+         Verificarea deplasamentelor non-numerice ale șirurilor de caractere
+         întoarce &true;.
         </para>
        </entry>
       </row>
@@ -92,24 +107,25 @@
    </informaltable>
   </para>
  </refsect1>
+
  <refsect1 role="examples">
   &reftitle.examples;
   <para>
    <example>
     <title>
-     O comparație simplă <function>empty</function> / <function>isset</function>.
+     O simplă conparație între <function>empty</function> / <function>isset</function>.
     </title>
     <programlisting role="php">
 <![CDATA[
 <?php
 $var = 0;
 
-// Evaluează în true deoarece $var este vidă
+// Evaluează în true, deoarece $var este vidă
 if (empty($var)) {
     echo '$var is either 0, empty, or not set at all';
 }
 
-// Evaluează în true deoarece $var este inițializat
+// Evaluează în true, deoarece $var este stabilită
 if (isset($var)) {
     echo '$var is set even though it is empty';
 }
@@ -118,7 +134,50 @@ if (isset($var)) {
     </programlisting>
    </example>
   </para>
+  <example>
+   <title><function>empty</function> cu deplasamente în șiruri de caractere</title>
+   <para>
+    PHP 5.4 schimbă modul în care funcționează <function>empty</function> când
+    îi sunt transmise deplasamente în șiruri de caractere.
+   </para>
+   <programlisting role="php">
+<![CDATA[
+<?php
+$expected_array_got_string = 'somestring';
+var_dump(empty($expected_array_got_string['some_key']));
+var_dump(empty($expected_array_got_string[0]));
+var_dump(empty($expected_array_got_string['0']));
+var_dump(empty($expected_array_got_string[0.5]));
+var_dump(empty($expected_array_got_string['0.5']));
+var_dump(empty($expected_array_got_string['0 Mostel']));
+?>
+]]>
+   </programlisting>
+   &example.outputs.53;
+   <screen>
+<![CDATA[
+bool(false)
+bool(false)
+bool(false)
+bool(false)
+bool(false)
+bool(false)
+]]>
+   </screen>
+   &example.outputs.54;
+   <screen>
+<![CDATA[
+bool(true)
+bool(false)
+bool(false)
+bool(false)
+bool(true)
+bool(true)
+]]>
+   </screen>
+  </example>
  </refsect1>
+
  <refsect1 role="notes">
   &reftitle.notes;
   &note.language-construct;
@@ -126,17 +185,18 @@ if (isset($var)) {
    <para>
     La utilizarea <function>empty</function> asupra proprietăților inaccesibile
     ale obiectelor, va fi apelată metoda de supraîncărcare
-    <link linkend="language.oop5.overloading.members">__isset</link>, dacă este
+    <link linkend="object.isset">__isset()</link>, dacă este
     declarată.
    </para>
   </note>
  </refsect1>
+
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>
    <simplelist>
     <member><function>isset</function></member>
-    <member><link linkend="language.oop5.overloading.members">__isset</link></member>
+    <member><link linkend="object.isset">__isset()</link></member>
     <member><function>unset</function></member>
     <member><function>array_key_exists</function></member>
     <member><function>count</function></member>

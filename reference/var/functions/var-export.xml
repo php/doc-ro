@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: a953cad1bb2fa27c67e079123df7ce2a44fab39e Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/var.xml, last change in rev 1.6 -->
 <refentry xml:id="function.var-export" xmlns="http://docbook.org/ns/docbook">
@@ -43,7 +43,6 @@
        Dacă este utilizat și stabilit în &true;, <function>var_export</function>
        va întoarce reprezentarea variabilei în loc să o afișeze.
       </para>
-      &note.uses-ob;
      </listitem>
     </varlistentry>
    </variablelist>
@@ -57,6 +56,11 @@
    este utilizat și evaluează în &true;. În caz contrar, această funcție va
    întoarce &null;.
   </para>
+ </refsect1>
+
+ <refsect1 role="notes">
+  &reftitle.notes;
+  &note.uses-ob;
  </refsect1>
 
  <refsect1 role="changelog">
@@ -75,8 +79,7 @@
        <entry>5.1.0</entry>
        <entry>
         Posibilitatea de a exporta clase și tablouri conținând clase utilizând
-        metoda magică
-        <link linkend="language.oop5.magic.set-state">__set_state</link>.
+        metoda magică <link linkend="object.set-state">__set_state()</link>.
        </entry>
       </row>
      </tbody>
@@ -157,7 +160,7 @@ A::__set_state(array(
   </para>
   <para>
    <example>
-    <title>Utilizarea <link linkend="language.oop5.magic.set-state">__set_state</link> (începând cu PHP 5.1.0)</title>
+    <title>Utilizarea <link linkend="object.set-state">__set_state()</link> (începând cu PHP 5.1.0)</title>
     <programlisting role="php">
 <![CDATA[
 <?php
@@ -218,6 +221,13 @@ object(A)#2 (2) {
     utilizați <function>serialize</function>.
    </para>
   </note>
+  <warning>
+   <para>
+    Când <function>var_export</function> exportă obiecte, în denumirea clasei nu
+    se include slash-ul din față (pentru clasele cu spații de nume), pentru a
+    maximiza compatibilitatea.
+   </para>
+  </warning>
  </refsect1>
 
  <refsect1 role="seealso">

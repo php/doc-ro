@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 5faa7a6747bca628b3bdcc9f93aec5603b65581f Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.is-callable" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -15,7 +15,7 @@
   &reftitle.description;
   <methodsynopsis>
    <type>bool</type><methodname>is_callable</methodname>
-   <methodparam><type>callback</type><parameter>name</parameter></methodparam>
+   <methodparam><type>callable</type><parameter>name</parameter></methodparam>
    <methodparam choice="opt"><type>bool</type><parameter>syntax_only</parameter><initializer>false</initializer></methodparam>
    <methodparam choice="opt"><type>string</type><parameter role="reference">callable_name</parameter></methodparam>
   </methodsynopsis>
@@ -35,10 +35,7 @@
      <term><parameter>name</parameter></term>
      <listitem>
       <para>
-       Poate fi denumirea unei funcții stocate într-o variabilă string, sau
-       un obiect și denumirea unei metode din cadrul obiectului, în modul
-       următor:
-       <screen>array($UnObiect, 'DenumireaMetodei')</screen>
+       Denumirea funcției de apel invers spre a fi verificată.
       </para>
      </listitem>
     </varlistentry>

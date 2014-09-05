@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: a9128651164a804d17c3b54142e8f272cc5f9baf Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 8b5940cadeb4f1c8492f4a7f70743a2be807cf39 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.serialize" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -45,11 +45,11 @@
       </para>
       <para>
        La serializarea obiectelor, PHP va încerca să apeleze funcția-membru
-       <link linkend="language.oop5.magic">__sleep</link> înainte de
+       <link linkend="object.sleep">__sleep()</link> înainte de
        serializare. Aceasta se efectuează pentru a-i permite obiectului să
        efectueze orice curățiri, etc. înainte de a fi serializat. La fel, când
        obiectul este restabilit cu ajutorul <function>unserialize</function>
-       funcția-membru <link linkend="language.oop5.magic">__wakeup</link>
+       funcția-membru <link linkend="object.wakeup">__wakeup()</link>
        este apelată.
       </para>
       <note>
@@ -70,6 +70,13 @@
   <para>
    Întoarce un string conținând reprezentarea <parameter>value</parameter> sub
    formă de byte-stream care poate fi stocată oriunde.
+  </para>
+  <para>
+   Atrageți atenția că acesta este un șir de caractere binar, ce poate include
+   octeți null, de aceea trebuie stocat și manipulat ca atare. De exemplu,
+   rezultatele funcției <function>serialize</function> la general ar trebui
+   stocate într-un câmp BLOB într-o bază de date, și nu într-un câmp CHAR sau
+   TEXT.
   </para>
  </refsect1>
 
@@ -103,30 +110,6 @@ if (!odbc_execute($stmt, $sqldata)) {
   </para>
  </refsect1>
 
- <refsect1 role="changelog">
-  &reftitle.changelog;
-  <para>
-   <informaltable>
-    <tgroup cols="2">
-     <thead>
-      <row>
-       <entry>&Version;</entry>
-       <entry>&Description;</entry>
-      </row>
-     </thead>
-     <tbody>
-      <row>
-       <entry>4.0.7</entry>
-       <entry>
-        Procesul serializării obiectelor a fost corectat.
-       </entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-  </para>
- </refsect1>
-
  <refsect1 role="notes">
   &reftitle.notes;
   <note>
@@ -134,9 +117,10 @@ if (!odbc_execute($stmt, $sqldata)) {
     Atrageți atenția că multe obiecte PHP încorporate nu pot fi serializate.
     Însă cele ce permit acest lucru implementează interfața
     <interfacename>Serializable</interfacename> sau metodele magice
-    <literal>__sleep</literal> și <literal>__wakeup</literal>. Dacă o clasă
-    internă nu îndeplinește cel puțin una dintre aceste cerințe, ea nu poate fi
-    serializată cu siguranță.
+    <link linkend="object.sleep">__sleep()</link> și
+    <link linkend="object.wakeup">__wakeup()</link>. Dacă o clasă internă nu
+    îndeplinește cel puțin una dintre aceste cerințe, ea nu poate fi serializată
+    cu siguranță.
    </para>
    <para>
     Există unele excepții istorice de la această regulă, când unele obiecte
@@ -145,6 +129,13 @@ if (!odbc_execute($stmt, $sqldata)) {
     versiunile anterioare PHP 5.2.0.
    </para>
   </note>
+  <warning>
+   <para>
+    Când <function>serialize</function> serializează obiecte, primul slash din
+    denumirea clasei, în cazul claselor cu spații de nume, este exclus pentru a
+    maximiza compatibilitatea.
+   </para>
+  </warning>
  </refsect1>
 
  <refsect1 role="seealso">
@@ -152,7 +143,11 @@ if (!odbc_execute($stmt, $sqldata)) {
   <para>
    <simplelist>
     <member><function>unserialize</function></member>
+    <member><function>var_export</function></member>
+    <member><function>json_encode</function></member>
     <member><link linkend="language.oop5.serialization">Serializarea Obiectelor</link></member>
+    <member><link linkend="object.sleep">__sleep()</link></member>
+    <member><link linkend="object.wakeup">__wakeup()</link></member>
    </simplelist>
   </para>
  </refsect1>

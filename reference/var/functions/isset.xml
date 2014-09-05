@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: eac82849b3c30b0779c0397391f5776bceb2da0a Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.isset" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -14,8 +14,7 @@
   <methodsynopsis>
    <type>bool</type><methodname>isset</methodname>
    <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
-   <methodparam choice="opt"><type>mixed</type><parameter>var</parameter></methodparam>
-   <methodparam choice="opt"><parameter>...</parameter></methodparam>
+   <methodparam choice="opt"><type>mixed</type><parameter>...</parameter></methodparam>
   </methodsynopsis>
   <para>
    Determină dacă o variablă este stabilită și nu este &null;.
@@ -48,17 +47,10 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><parameter>var</parameter></term>
-     <listitem>
-      <para>
-       O altă variabilă ..
-      </para>
-     </listitem>
-    </varlistentry>
-    <varlistentry>
      <term><parameter>...</parameter></term>
      <listitem>
       <para>
+       O altă variabilă ...
       </para>
      </listitem>
     </varlistentry>
@@ -74,24 +66,50 @@
   </para>
  </refsect1>
 
+ <refsect1 role="changelog">
+  &reftitle.changelog;
+  <para>
+   <informaltable>
+    <tgroup cols="2">
+     <thead>
+      <row>
+       <entry>&Version;</entry>
+       <entry>&Description;</entry>
+      </row>
+     </thead>
+     <tbody>
+      <row>
+       <entry>5.4.0</entry>
+       <entry>
+        <para>
+         Verificarea deplasamentelor non-numerice în șiruri de caractere acum întoarce &false;.
+        </para>
+       </entry>
+      </row>
+     </tbody>
+    </tgroup>
+   </informaltable>
+  </para>
+ </refsect1>
+
  <refsect1 role="examples">
   &reftitle.examples;
   <para>
    <example>
-    <title>Exemple <function>isset</function></title>
+    <title>Ecemple <function>isset</function></title>
     <programlisting role="php">
 <![CDATA[
 <?php
 
 $var = '';
 
-// Aceasta va evalua în TRUE, deci textul va fi afișat.
+// Aceasta va evalua în TRUE, de aceea textul va fi afișat.
 if (isset($var)) {
-    echo "Această variabilă este stabilită, deci eu mă voi afișa.";
+    echo "This var is set so I will print.";
 }
 
-// În următorul exemplu vom utiliza var_dump pentru a afișa valoarea întoarsă
-// de isset().
+// În următoarele exemple vom utiliza var_dump pentru a afișa
+// valoarea întoarsă de isset().
 
 $a = "test";
 $b = "anothertest";
@@ -113,27 +131,74 @@ var_dump(isset($foo));   // FALSE
    </example>
   </para>
   <para>
-   Aceasta de asemenea funcționează și pentru elementele din tablouri:
+   Aceasta de asemenea funcționează și pentru elemente din tablouri:
    <informalexample>
     <programlisting role="php">
 <![CDATA[
 <?php
 
-$a = array ('test' => 1, 'hello' => NULL);
+$a = array ('test' => 1, 'hello' => NULL, 'pie' => array('a' => 'apple'));
 
 var_dump(isset($a['test']));            // TRUE
 var_dump(isset($a['foo']));             // FALSE
 var_dump(isset($a['hello']));           // FALSE
 
-// Cheia 'hello' este egală cu NULL, de aceea este considerată "ne-stabilită"
-// Dacă doriți să verificați valorile NULL ale cheii, încercați:
+// Cheia 'hello' este egală cu NULL, de aceea este considerată nesetată
+// Dacă doriți să verificați cheile cu valori NULL, atunci încercați:
 var_dump(array_key_exists('hello', $a)); // TRUE
+
+// Verificarea valorilor la nivele mai adânci în tablou
+var_dump(isset($a['pie']['a']));        // TRUE
+var_dump(isset($a['pie']['b']));        // FALSE
+var_dump(isset($a['cake']['a']['b']));  // FALSE
 
 ?>
 ]]>
     </programlisting>
    </informalexample>
   </para>
+  <example>
+   <title><function>isset</function> cu deplasamente în șiruri de caractere</title>
+   <para>
+    PHP 5.4 modifică modul cum funcționează <function>isset</function> când îi
+    sunt transmise deplasamente în șiruri de caractere.
+   </para>
+   <programlisting role="php">
+<![CDATA[
+<?php
+$expected_array_got_string = 'somestring';
+var_dump(isset($expected_array_got_string['some_key']));
+var_dump(isset($expected_array_got_string[0]));
+var_dump(isset($expected_array_got_string['0']));
+var_dump(isset($expected_array_got_string[0.5]));
+var_dump(isset($expected_array_got_string['0.5']));
+var_dump(isset($expected_array_got_string['0 Mostel']));
+?>
+]]>
+   </programlisting>
+   &example.outputs.53;
+   <screen>
+<![CDATA[
+bool(true)
+bool(true)
+bool(true)
+bool(true)
+bool(true)
+bool(true)
+]]>
+   </screen>
+   &example.outputs.54;
+   <screen>
+<![CDATA[
+bool(false)
+bool(true)
+bool(true)
+bool(true)
+bool(false)
+bool(false)
+]]>
+   </screen>
+  </example>
  </refsect1>
 
  <refsect1 role="notes">
@@ -151,7 +216,7 @@ var_dump(array_key_exists('hello', $a)); // TRUE
    <para>
     La utilizarea <function>isset</function> asupra proprietăților inaccesibile
     ale obiectelor, va fi apelată metoda de supraîncărcare
-    <link linkend="language.oop5.overloading.members">__isset</link>, dacă este
+    <link linkend="object.isset">__isset()</link>, dacă este
     declarată.
    </para>
   </note>
@@ -162,7 +227,7 @@ var_dump(array_key_exists('hello', $a)); // TRUE
   <para>
    <simplelist>
     <member><function>empty</function></member>
-    <member><link linkend="language.oop5.overloading.members">__isset</link></member>
+    <member><link linkend="object.isset">__isset()</link></member>
     <member><function>unset</function></member>
     <member><function>defined</function></member>
     <member><link linkend="types.comparisons">tabelele de comparare a tipurilor</link></member>

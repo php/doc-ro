@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: e22c33c1aebfc21e20c8c4f965be45d919937a91 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.gettype" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -16,19 +16,9 @@
    <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Întoarce tipul variabilei PHP
-   <parameter>var</parameter>.
+   Întoarce tipul variabilei PHP <parameter>var</parameter>. Pentru verificarea
+   tipului, utilizați funcțiile <literal>is_*</literal>.
   </para>
-  <warning>
-   <simpara>
-    Niciodată nu utilizați <function>gettype</function> pentru a verifica tipul
-    deoarece string-ul întors poate să se schimbe într-o versiune viitoare.
-    În plus, aceasts este lent, deoarece implică comparații ale string-urilor.
-   </simpara>
-   <simpara>
-    În loc, utilizați funcțiile <literal>is_*</literal>.
-   </simpara>
-  </warning>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -142,6 +132,7 @@ string
     <member><function>get_class</function></member>
     <member><function>is_array</function></member>
     <member><function>is_bool</function></member>
+    <member><function>is_callable</function></member>
     <member><function>is_float</function></member>
     <member><function>is_int</function></member>
     <member><function>is_null</function></member>
