@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: e6f83d54482f3552aa446d02863142c02b14b4b2 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 2bb07c8c43f028c665a33bfc08a22639e9e35dc6 Maintainer: simionea Status: ready -->
 <appendix xml:id="filters" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Lista filtrelor disponibile</title>
  <para>
@@ -48,7 +48,6 @@
 
   <simpara>
    <literal>string.rot13</literal>
-   (începând cu PHP 4.3.0)
    Folosirea acestui filtru este echivalentă cu procesarea tuturor datelor
    din flux prin funcția <function>str_rot13</function>.
   </simpara>
@@ -68,7 +67,6 @@ fwrite($fp, "This is a test.\n");
 
   <simpara>
    <literal>string.toupper</literal>
-   (începând cu PHP 5.0.0)
    Folosirea acestui filtru este echivalentă cu procesarea tuturor datelor
    din flux prin funcția <function>strtoupper</function>.
   </simpara>
@@ -88,7 +86,6 @@ fwrite($fp, "This is a test.\n");
 
   <simpara>
    <literal>string.tolower</literal>
-   (începând cu PHP 5.0.0)
    Folosirea acestui filtru este echivalentă cu procesarea tuturor datelor
    din flux prin funcția <function>strtolower</function>.
   </simpara>
@@ -286,8 +283,7 @@ fwrite($fp, "This is a test.\n");
     dacă susținerea <link linkend="ref.zlib">zlib</link> a fost activată. Ele de asemenea sunt disponibile
     în calitate de cod portabil și pentru versiunea <literal>5.0.x</literal> instalând pachetul
     <link xlink:href="&url.pecl.package;zlib_filter">zlib_filter</link> din
-    <link xlink:href="&url.pecl;">PECL</link>. Aceste filtre <emphasis>nu</emphasis> sunt disponibile pentru
-    PHP 4.
+    <link xlink:href="&url.pecl;">PECL</link>.
   </simpara>
 
   <example>
@@ -389,7 +385,7 @@ The compressed file is 56 bytes long.
     dacă susținerea <link linkend="ref.bzip2">bz2</link> a fost activată. Ele de asemenea sunt disponibile
     în calitate de cod portabil și pentru versiunea <literal>5.0.x</literal> instalând pachetul
     <link xlink:href="&url.pecl.package;bz2_filter">bz2_filter</link> din
-    <link xlink:href="&url.pecl;">PECL</link>. Aceste filtre <emphasis>nu</emphasis> sunt disponibile în PHP 4.
+    <link xlink:href="&url.pecl;">PECL</link>.
   </simpara>
 
   <example>
