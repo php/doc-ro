@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: afc3f34c682418a582b0f9199db0bac4a087821f Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.mail" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
@@ -67,7 +67,7 @@
        Mesajul spre a fi trimis.
       </para>
       <para>
-       Fiecare rând trebuie să fie încheiat cu LF (\n). Lungimea rândurilor nu
+       Fiecare rând trebuie să fie încheiat cu CRLF (\r\n). Lungimea rândurilor nu
        trebuie să depășească 70 de caractere.
       </para>
       <caution>
@@ -96,7 +96,9 @@ $text = str_replace("\n.", "\n..", $text);
       <para>
        Acesta este utilizat de obicei pentru a adăuga antete suplimentare
        (From, Cc, și Bcc). Antetele suplimentare multiple trebuie separate cu
-       CRLF (\r\n).
+       CRLF (\r\n). Dacă pentru a stabili acest antet se folosesc date externe,
+       ele trebuie filtrate, astfel încât să nu fie posibilă inserarea antetelor
+       nedorite.
       </para>
       <note>
        <para>
@@ -118,11 +120,11 @@ $text = str_replace("\n.", "\n..", $text);
       <note>
        <para>
         Dacă mesajele nu sunt primite, încercați să utilizați numai LF (\n).
-        Unii agenți de transfer a mesajelor de calitate proastă în Unix
-        înlocuiesc LF cu CRLF în mod automat (ceea ce duce la dublarea CR dacă
-        este utilizat CRLF). Utilizați acest procedeu numai în caz excepțional,
-        deoarece acesta nu se conformaeză cu <link xlink:href="&url.rfc;2822">
-        RFC 2822</link>.
+        Unii agenți de transfer a mesajelor în Unix (în special
+        <link xlink:href="&url.qmail;">qmail</link>) înlocuiesc LF cu CRLF în
+        mod automat (ceea ce duce la dublarea CR dacă este utilizat CRLF).
+        Utilizați acest procedeu numai în caz excepțional, deoarece acesta nu se
+        conformaeză cu <link xlink:href="&url.rfc;2822">RFC 2822</link>.
        </para>
       </note>
      </listitem>
@@ -137,6 +139,23 @@ $text = str_replace("\n.", "\n..", $text);
        <literal>sendmail_path</literal>. Spre exemplu, acesta poate fi utilizat
        pentru a stabili adresa expeditorului de pe plic când se utilizează
        sendmail cu opțiunea <literal>-f</literal>.
+      </para>
+      <para>
+       Acest parametru este filtrat cu <function>escapeshellcmd</function> în mod
+       automat pentru a preveni execuția comenzilor. <function>escapeshellcmd</function>
+       previne execuția comenzilor, dar permite adăugarea parametrilor
+       suplimentari. Din punct de vedere al securității este recomandabil ca
+       utilizatorul să filtreze și să verifice acest parametru pentru a evita
+       adăugarea parametrilor nedoriți la comanda pentru înveliș.
+      </para>
+      <para>
+       Deoarece <function>escapeshellcmd</function> este aaplicată în mod automat,
+       unele caractere care sunt permise în adrese email de standardele RFC, nu
+       pot fi utilizate. Funcția <function>mail</function> nu poate permite
+       asemenea caractere, de aceea în programele în care este necesară
+       utilizarea acestor caractere, se recomandă utilizarea metodelor
+       alternative de transmitere a email-urilor (de ex. utilizarea unui
+       framework sau a unei biblioteci).
       </para>
       <para>
        Utilizatorul cu care rulează serveul web trebuie adăugat în calitate de
@@ -178,29 +197,12 @@ $text = str_replace("\n.", "\n..", $text);
      </thead>
      <tbody>
       <row>
-       <entry>4.3.0 (numai pentru Windows)</entry>
-       <entry>
-        Toate antetele personalizate (cum ar fi From, Cc, Bcc și Date) sunt
-        susținute și nu fac diferențiere între caracterele minuscule /
-        majuscule. (Deoarece antetele personalizate nu sunt interpretate de
-        MTA, dar sunt procesate de PHP, PHP &lt; 4.3 susținea numai elementul
-        de antet Cc, care făcea diferențiere între caracterele minuscule /
-        majuscule).
-       </entry>
-      </row>
-      <row>
        <entry>4.2.3</entry>
        <entry>
         Parametrul <parameter>additional_parameters</parameter> este dezactivat
         în <link linkend="ini.safe-mode">safe_mode</link> și funcția
         <function>mail</function> va emite un mesaj de avertizare și va
         întoarce &false; atunci când este utilizat.
-       </entry>
-      </row>
-      <row>
-       <entry>4.0.5</entry>
-       <entry>
-        Parametrul <parameter>additional_parameters</parameter> a fost adăugat.
        </entry>
       </row>
      </tbody>
@@ -221,11 +223,11 @@ $text = str_replace("\n.", "\n..", $text);
 <![CDATA[
 <?php
 // Mesajul
-$message = "Line 1\nLine 2\nLine 3";
+$message = "Line 1\r\nLine 2\r\nLine 3";
 
 // În caz că vre-un rând depășește 70 de caractere, trebuie să utilizăm
 // wordwrap()
-$message = wordwrap($message, 70);
+$message = wordwrap($message, 70, "\r\n");
 
 // Trimiterea
 mail('caffeinated@example.com', 'My Subject', $message);

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 0b4c5897dd4f9ca3ec78ac7e1be64ffe82b27d32 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 74508ae0d21dc4df1d6529a7f8dbaf51c894eee0 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xmlns="http://docbook.org/ns/docbook" xml:id="function.error-reporting">
  <refnamediv>
@@ -75,23 +75,21 @@
      </thead>
      <tbody>
       <row>
-       <entry>5.0.0</entry>
-       <entry>A fost introdusă <constant>E_STRICT</constant> (nu face parte din <constant>E_ALL</constant>).</entry>
+       <entry>5.4.0</entry>
+       <entry><constant>E_STRICT</constant> a devenit parte componentă a <constant>E_ALL</constant>.</entry>
+      </row>
+      <row>
+       <entry>5.3.0</entry>
+       <entry>Au fost introduse <constant>E_DEPRECATED</constant> și <constant>E_USER_DEPRECATED</constant>.</entry>
       </row>
       <row>
        <entry>5.2.0</entry>
        <entry>A fost introdusă <constant>E_RECOVERABLE_ERROR</constant>.</entry>
       </row>
       <row>
-       <entry>5.3.0</entry>
-       <entry>Au fost introduse <constant>E_DEPRECATED</constant> și <constant>E_USER_DEPRECATED</constant>.</entry>
+       <entry>5.0.0</entry>
+       <entry>A fost introdusă <constant>E_STRICT</constant> (nu face parte din <constant>E_ALL</constant>).</entry>
       </row>
-      <!-- FIXME PHP_6
-      <row>
-       <entry>6.0.0</entry>
-       <entry><constant>E_STRICT</constant> a devenit parte a <constant>E_ALL</constant>.</entry>
-      </row>
-      -->
      </tbody>
     </tgroup>
    </informaltable>
@@ -119,8 +117,7 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
 error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
 
 // Raportează toate erorile cu excepția E_NOTICE
-// Aceasta este valoarea implicită stabilită în php.ini
-error_reporting(E_ALL ^ E_NOTICE);
+error_reporting(E_ALL & ~E_NOTICE);
 
 // Raportează toate erorile PHP (vezi jurnalul schimbărilor)
 error_reporting(E_ALL);
@@ -152,11 +149,8 @@ ini_set('error_reporting', E_ALL);
    <simpara>
     Transmiterea valorii <literal>-1</literal> va afișa toate erorile posibile,
     chiar și atunci când vor fi adăugate nivele și constante noi în versiunile
-    viitoare ale PHP.
-    <!-- FIXME PHP_6
-    Constanta <constant>E_ALL</constant> se comportă în
-    același mod începând cu PHP 6.
-    -->
+    viitoare ale PHP. Constanta <constant>E_ALL</constant> se comportă în același
+    mod începând cu PHP 5.4.
    </simpara>
   </tip>
  </refsect1>

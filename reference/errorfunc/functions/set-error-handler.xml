@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 3e2947ca55e1c4e6217808a3ad7cb2816dcfad70 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: e41aab5ecacf449e51179886c17f1d41735b0234 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.set-error-handler" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -13,7 +13,7 @@
   &reftitle.description;
   <methodsynopsis>
    <type>mixed</type><methodname>set_error_handler</methodname>
-   <methodparam><type>callback</type><parameter>error_handler</parameter></methodparam>
+   <methodparam><type>callable</type><parameter>error_handler</parameter></methodparam>
    <methodparam choice="opt"><type>int</type><parameter>error_types</parameter><initializer>E_ALL | E_STRICT</initializer></methodparam>
   </methodsynopsis>
   <para>
@@ -69,16 +69,14 @@
      <term><parameter>error_handler</parameter></term>
      <listitem>
       <para>
-       Funcția utilizatorului trebuie să accepte doi parametri: codul erorii
-       și un string ce descrie eroarea. Apoi sunt trei parametri opționali ce
-       pot fi furnizați: denumirea fișierului în care a survenit eroarea,
-       numărul liniei în care a survenit eroarea și contextul în care a
-       survenit eroarea (un tablou ce indică spre tabelul de simboluri activ
-       la momentul apariției erorii). Funcția poate fi definită ca:
+       O funcție de apel invers cu următoarea semnătură &null; poate fi transmisă
+       pentru a restabili acest handler la starea sa implicită. În loc de
+       denumirea funcției, un tablou ce conține o referință la obiect și
+       denumirea metodei pot fi furnizate.
       </para>
       <para>
        <methodsynopsis>
-        <methodname><replaceable>handler</replaceable></methodname>
+        <type>bool</type><methodname><replaceable>handler</replaceable></methodname>
         <methodparam><type>int</type><parameter>errno</parameter></methodparam>
         <methodparam><type>string</type><parameter>errstr</parameter></methodparam>
         <methodparam choice="opt"><type>string</type><parameter>errfile</parameter></methodparam>
@@ -187,32 +185,16 @@
      </thead>
      <tbody>
       <row>
+       <entry>5.5.0</entry>
+       <entry>
+        <parameter>error_handler</parameter> acum acceptă &null;.
+       </entry>
+      </row>
+      <row>
        <entry>5.2.0</entry>
        <entry>
         Funcția de prelucrare a erorii trebuie să întoarcă &false; pentru a
         popula <varname>$php_errormsg</varname>.
-       </entry>
-      </row>
-      <row>
-       <entry>5.0.0</entry>
-       <entry>
-        A fost introdus parametrul <parameter>error_types</parameter>.
-       </entry>
-      </row>
-      <row>
-       <entry>4.3.0</entry>
-       <entry>
-        În locul denumirii funcției, poate fi furnizat de asemenea și un tablou
-        conținând o referință la un obiect și denumirea unei metode în
-        parametrul <parameter>error_handler</parameter>.
-       </entry>
-      </row>
-      <row>
-       <entry>4.0.2</entry>
-       <entry>
-        Au fost introduși trei parametri opționali pentru funcția
-        utilizatorului <parameter>error_handler</parameter>. Aceștia sunt
-        denumirea fișierului, numărul liniei și contextul.
        </entry>
       </row>
      </tbody>

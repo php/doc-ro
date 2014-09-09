@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: a2db0ec37511850cc529be2b141bf194ad878ee2 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.error-log" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>error_log</refname>
-  <refpurpose>Trimite undeva un mesaj de eroare</refpurpose>
+  <refpurpose>Trimite un mesaj de eroare către rutinele definite de prelucrare a erorilor</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -19,8 +19,8 @@
    <methodparam choice="opt"><type>string</type><parameter>extra_headers</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Trimite un mesaj de eroare în log-ul de erori al server-ului web, spre un
-   port <acronym>TCP</acronym>, sau într-un fișier.
+   Trimite un mesaj de eroare în log-ul de erori al server-ului web, sau într-un
+   fișier.
   </para>
  </refsect1>
 
@@ -125,28 +125,23 @@
   </para>
  </refsect1>
 
- <refsect1 role="changelog">
-  &reftitle.changelog;
-  <para>
-   <informaltable>
-    <tgroup cols="2">
-     <thead>
-      <row>
-       <entry>&Version;</entry>
-       <entry>&Description;</entry>
-      </row>
-     </thead>
-     <tbody>
-     <row>
-       <entry>5.2.7</entry>
-       <entry>
-        A fost adăugată valoarea 4 pentru <parameter>message_type</parameter>.
-       </entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-  </para>
+ <refsect1 role="notes">
+  &reftitle.notes;
+  <warning>
+   <simpara>
+    <function>error_log</function> nu este sigură binar.
+    <parameter>message</parameter> va fi trunchiat de caracterul null.
+   </simpara>
+  </warning>
+  <tip>
+   <simpara>
+    <parameter>message</parameter> nu trebuie să conțină caracterul null.
+    Observați că <parameter>message</parameter> poate fi transmis într-un fișier,
+    mail, syslog, etc. Utilizați funcțiile de convertire/evadare necesare,
+    <function>base64_encode</function>, <function>rawurlencode</function> sau
+    <function>addslashes</function> înainte de a apela <function>error_log</function>.
+   </simpara>
+  </tip>
  </refsect1>
 
  <refsect1 role="examples">
@@ -175,6 +170,30 @@ error_log("Ai dat-o în bară!", 3, "/var/tmp/my-errors.log");
 ]]>
     </programlisting>
    </example>
+  </para>
+ </refsect1>
+
+ <refsect1 role="changelog">
+  &reftitle.changelog;
+  <para>
+   <informaltable>
+    <tgroup cols="2">
+     <thead>
+      <row>
+       <entry>&Version;</entry>
+       <entry>&Description;</entry>
+      </row>
+     </thead>
+     <tbody>
+     <row>
+       <entry>5.2.7</entry>
+       <entry>
+        A fost adăugată valoarea posibilă 4 la <parameter>message_type</parameter>.
+       </entry>
+      </row>
+     </tbody>
+    </tgroup>
+   </informaltable>
   </para>
  </refsect1>
 </refentry>
