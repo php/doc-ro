@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 14af302c9c0e561fa6f9cdd956268758ba9a89c5 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="history" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Istoria PHP și a proiectelor asociate</title>
  <para>
-  PHP a parcurs o cale lungă în decursul ultimilor ani.
-  Dezvoltarea până la nivelul unuia din cele mai proeminente
-  limbaje care dirijează Web-ul nu a fost o sarcină ușoară.
-  Cei dintre voi interesați de a afla pe scurt cum PHP a crescut
-  până la ceea ce este el în ziua de azi, citiți în continuare.
-  Versiunile vechi ale PHP pot fi găsite la
+  PHP a parcurs o cale lungă de la conceperea sa în mijlocul anilor 1990. La
+  început modest, devenind apoi unul din cele mai proeminente limbaje care
+  dirijează web-ul, evoluția PHP este o poveste pentru tocilari. Or, o astfel de
+  creștere explozivă nu a fost o sarcină ușoară. Cei dintre voi interesați de a
+  afla pe scurt cum PHP a crescut până la ceea ce este el în ziua de azi, citiți
+  în continuare. Dacă doriți să atingeți o parte din istoria Internetului,
+  puteți găsi versiuni mai vechi ale PHP în
   <link xlink:href="&url.php.museum;">muzeul PHP</link>.
  </para>
 
@@ -19,45 +20,71 @@
   <title>Istoria PHP</title>
 
   <sect2 xml:id="history.phpfi">
-   <title>PHP/FI</title>
+   <title>Unelte PHP, FI, Construction Kit și PHP/FI</title>
    <para>
-    PHP succede un produs mai vechi, numit PHP/FI. PHP/FI a
-    fost creat de către Rasmus Lerdorf în 1995, inițial doar ca
-    un simplu set de scripturi Perl pentru a urmări accesele
-    la rezumatul său online. El a denumit acest set de scripturi
-    'Personal Home Page Tools — Instrumente pentru paginile
-    personale'. Deoarece era necesară mai multă funcționalitate,
-    Rasmus a scris o implementare mult mai largă în C, care era
-    în stare să comunice cu baze de date și dădea posibilitate
-    utilizatorilor să dezvolte simple aplicații Web dinamice.
-    Rasmus a hotărât să
-    <link xlink:href="&url.php.release1.0.0;">lanseze</link>
-    codurile-sursă ale PHP/FI pentru ca oricine să le poată vedea,
-    utiliza, să poată corecta erorile din ele și să îmbunătățească
-    codul-sursă.
+    PHP cum este cunoscut astăzi este, de fapt succesorul unui produs numit
+    PHP/FI. Creat în 1994 de către Rasmus Lerdorf, prima încarnare a PHP a fost
+    un simplu set de binare Common Gateway Interface (CGI) scrise în limbajul
+    de programare C. Inițial folosit pentru urmărirea vizitelor la CV-ul său
+    on-line, el a numit suita de script-uri "Personal Home Page Tools", mai
+    frecvent menționate ca "Unelte PHP". De-a lungul timpului, a apărut dorința
+    de a avea mai multe funcționalități, și Rasmus a rescris Uneltele PHP,
+    producând o implementare mult mai mare și mai bogată. Acest nou model a
+    fost capabil de interacțiune cu baze de date și mai mult, oferind un
+    framework cu ajutorul cărora utilizatorii puteau dezvolta aplicatii web
+    simple și dinamice, cum ar fi cărțile de oaspeți. În luna iunie a anului
+    1995, Rasmus <link xlink:href="&url.php.release1.0.0;">a lansat</link>
+    codul sursă pentru Uneltele PHP către public, ceea ce a permis
+    dezvoltatorilor să-l folosească după cum considerau de cuviință. Acest
+    lucru, de asemenea, a permis și a încurajat utilizatorii să ofere remedieri
+    pentru bug-uri în cod, și în general să-l îmbunătățească.
    </para>
    <para>
-    PHP/FI, care se descifra ca Personal Home Page / Forms Interpreter
-    — Interpretor al paginilor personale / al formularelor,
-    includea unele funcționalități de bază ale PHP pe care îl cunoaștem
-    astăzi. El poseda variabile asemănătoare cu cele din Perl, interpretare
-    automată a variabilelor din formulare și sintaxă inclusă în HTML.
-    Insăși sintaxa era similară cu cea din Perl, cu toate că era mult mai
-    limitată, simplă și într-un anumit fel inconsistentă.
+    În luna septembrie a aceluiași an, Rasmus a extins PHP și, pentru o perioadă
+    scurtă de timp, chiar a renunțat la denumirea PHP. Acum, referindu-se la
+    Unelte ca FI (prescurtarea de la "Forms Interpreter"), noua implementare a
+    inclus o parte din funcționalitatea de bază a PHP așa cum o știm astăzi. Ea
+    a avut variabile ca în Perl, interpretare automată a variabilelor din
+    formulare și sintaxă inclusă în HTML. Insăși sintaxa a fost similară cu cea
+    din Perl, deși mult mai limitată, simplă, și oarecum inconsistentă. De fapt,
+    pentru a încorpora codul într-un fișier HTML, dezvoltatorii trebuiau să
+    utilizeze comentarii HTML. Deși această metodă nu a fost în întregime
+    bine-primită, FI a continuat să se bucure de o creștere și de acceptare ca
+    un instrument CGI, dar încă nu chiar ca un limbaj. Cu toate acestea, acest
+    lucru a început să se schimbe în luna următoare; în octombrie 1995,
+    Rasmus a lansat o rescriere completă a codului. Readucând denumirea PHP, a
+    fost acum (pe scurt) numit "Personal Home Page Construction Kit", și a fost
+    prima versiune ce s-a lăudat cu ceea ce a fost considerat, la momentul
+    respectiv, o interfață avansată de scripting. Limbajul a fost în mod
+    intenționat conceput să semene cu structura C, ceea ce făcea mai simplă
+    adopția sa pentru dezvoltatori familiarizați cu C, Perl, și limbaje similare.
+    Fiind până acum limitat doar la sisteme UNIX și sisteme compatibile POSIX,
+    a început explorarea potențialului pentru o implementare Windows NT.
    </para>
    <para>
-    În 1997, PHP/FI 2.0, a doua re-scriere a implementării în C,
-    avea un cult din câțiva mii de utilizatori din lume (estimat),
-    cu aproximativ 50,000 domenii, care raportau că îl au instalat,
-    ceea ce reprezenta aproximativ 1% din toate domeniile din
-    Internet. Cu toate că erau câteva persoane, care contribuiau
-    porțiuni de coduri-sursă în acest proiect, el era totuși în mare
-    măsură un proiect al unui singur om.
+    Codul iarăși a suferit o rescriere completă, și în aprilie 1996,
+    combinând denumirile implementărilor din trecut, Rasmus a introdus PHP/FI.
+    Această implementare de generația a doua a început să evolueze cu adevărat
+    PHP de la o suită de instrumente spre un limbaj de programare cu drepturi
+    depline. Aceasta a inclus susținerea încorporată a bazelor de date DBM, mSQL
+    Postgres95, cookies, suport pentru funcții definite de utilizator, și multe
+    altele. În acea lună iunie, lui PHP/FI i-a fost oferit un statut de versiune
+    2.0. Un fapt interesant despre aceasta este că a fost doar o singură
+    versiune deplină de PHP 2.0. Când în cele din urmă ea a absolvit statutul de
+    versiune beta în noiembrie 1997, motorul de interpretare care stătea la bază
+    a fost deja rescris în întregime.
    </para>
    <para>
-    PHP/FI 2.0 a fost oficial lansat doar în noiembrie 1997, după
-    ce și-a petrecut o bună parte a vieții în versiuni beta. În scurt
-    timp el a fost înlocuit de versiunile alfa ale PHP 3.0.
+    Deși a trăit o viață de dezvoltare scurtă, el a continuat să se bucure de o
+    popularitate în creștere în lumea încă tânără a dezvoltării web. În 1997 și
+    1998, PHP/FI a avut un cult de câțiva mii de utilizatori în jurul lumii. Un
+    sondaj Netcraft din luna mai, 1998, a indicat că aproape 60.000 de domenii
+    au raportat prezența antetelor care conțin "PHP", indicând faptul că serverul
+    gazdă într-adevăr îl avea instalat. Acest număr echivala cu aproximativ 1%
+    din toate domeniile pe Internet existente la momentul respectiv. În ciuda
+    acestor cifre impresionante, maturizarea PHP/FI era condamnată la limitări;
+    în timp ce au existat mai mulți contribuabili mici, el încă mai era dezvoltat
+    cu precădere de către un singur individ.
    </para>
    <para>
     <example>
@@ -88,83 +115,68 @@
   <sect2 xml:id="history.php3">
    <title>PHP 3</title>
    <para>
-    PHP 3.0 a fost prima versiune care se aseamănă mult cu PHP,
-    așa cum îl cunoaștem astăzi. El a fost creat de către
-    Andi Gutmans și Zeev Suraski în 1997 ca o re-scriere completă,
-    după ce ei au descoperit că PHP/FI 2.0 avea o capacitate
-    foarte redusă pentru a dezvolta o aplicație de comerț electronic,
-    asupra cărei ei lucrau într-un proiect al Universității.
-    Într-un efort de a coopera și a continua dezvoltarea PHP/FI cu
-    baza existentă de utilizatori, Andi, Rasmus și Zeev au decis
-    să coopereze și au anunțat PHP 3.0 în calitate de succesor oficial
-    al PHP/FI 2.0, iar dezvoltarea PHP/FI 2.0 a fost în mare măsură
-    stopată.
+    PHP 3.0 a fost prima versiune care se aseamănă mult cu PHP cum el este
+    astăzi. Găsind PHP/FI 2.0 încă ineficient și fără funcționalitățile de care
+    aveau nevoie pentru a susține o aplicație de comerț electronic, pe care o
+    dezvoltau pentru un proiect universitar, Andi Gutmans și Zeev Suraski de la
+    Tel Aviv, Israel, au început încă o rescriere completă a interpretorului
+    de bază în 1997. Apropiindu-se de Rasmus on-line, ei au discutat diverse
+    aspecte ale implementării curente și redezvoltarea lor a PHP. Într-un efort
+    de a îmbunătăți motorul și a continua dezvoltarea pe baza de utilizatori
+    deja existentă a PHP/FI, Andi, Rasmus, și Zeev au decis să colaboreze în
+    dezvoltarea unui nou limbaj de programare independent. Acest cu totul nou
+    limbaj a fost lansat sub o altă denumire, care a eliminat implicarea uzului
+    pur personal, pe care îl implica denumirea PHP/FI 2.0. Acesta a fost
+    redenumit pur și simplu "PHP", semnificând un acronim recursiv - PHP:
+    Hypertext Preprocessor.
    </para>
    <para>
-    Unul din cele mai mari avantaje ale PHP 3.0 erau facilitățile
-    sale largi de extindere. În afară de faptul că oferea utilizatorilor
-    finali o infrastructură solidă pentru o multitudine de baze de date,
-    protocoale și interfețe API, facilitățile de extindere ale PHP 3.0
-    au impulsionat zeci de programatori să se alăture și să înainteze
-    noi module de extindere. Discutabil, aceasta a fost cheia succesului
-    enorm al PHP 3.0. Alte facilități de bază introduse în PHP 3.0 au fost
-    susținerea sintaxei orientate pe obiecte și o sintaxă a limbajului
-    mult mai puternică și consistentă.
+    Unul dintre cele mai mari avantaje ale PHP 3.0 au fost facilitățile puternice
+    de extindere. Adițional la oferirea utilizatorilor finali a unei interfețe
+    mature pentru multiple baze de date, protocoale și API-uri, ușurința de a
+    extinde însuși limbajul a atras zeci de dezvoltatori care au creat o
+    varietate de module. Probabil aceasta a fost cheia PHP 3.0 către un succes
+    imens. Alte facilități-cheie introduse în PHP 3.0 au inclus susținerea
+    programării orientate pe obiecte și o mult mai puternică și consistentă
+    sintaxă a limbajului.
    </para>
    <para>
-    Noul limbaj a fost lansat sub un nou nume, care excludea implicarea
-    unei utilizări personale limitate, pe care o avea numele PHP/FI 2.0.
-    El a fost numit pur și simplu 'PHP', sensul fiind un acronim recursiv
-    - PHP: Hypertext Preprocessor — Preprocesor al Hipertextului.
-   </para>
-   <para>
-    Spre sfîrșitul anului 1998, PHP a atins un număr de zeci de
-    mii de utilizatori (estimat) și sute de mii de site-uri Web
-    raportau că îl au instalat. În punctul său de vârf, PHP 3.0
-    a fost instalat aproximativ pe 10% din toate serverele Web din
-    Internet.
-   </para>
-   <para>
-    PHP 3.0 a fost lansat oficial în iunie 1998, după ce a petrecut
-    aproximativ 9 luni în faza de testare publică.
+    În iunie 1998, cu mulți dezvoltatori noi din întreaga lume aderând la efort,
+    PHP 3.0 a fost anunțat de către noua Echipă de Dezvoltare PHP ca succesor
+    oficial al PHP/FI 2.0. Dezvoltarea activă a PHP/FI 2.0, care practic încetase
+    în noiembrie a anului precedent, a fost acum încheiată oficial. După
+    aproximativ nouă luni de testare publică deschisă, când s-a dat anunțul
+    despre lansarea oficială a PHP 3.0, el deja era instalat pe mai mult de
+    70.000 domenii din întreaga lume, și nu mai era limitat la sisteme de operare
+    POSIX compatibile. O pondere relativ mică de domenii, care raportau instalarea
+    PHP, erau găzduite pe servere ce rulau Windows 95, 98, și NT, și Macintosh.
+    La momentul de vârf, PHP 3.0 a fost instalat pe aproximativ 10% din serverele
+    web din Internet.
    </para>
   </sect2>
 
   <sect2 xml:id="history.php4">
    <title>PHP 4</title>
    <para>
-    Către iarna anului 1998, la scurt timp după ce PHP 3.0 a fost
-    lansat oficial, Andi Gutmans și Zeev Suraski au început lucrul
-    asupra rescrierii nucleului PHP. Scopurile reproiectării erau de a
-    îmbunătăți performanța aplicațiilor complexe și de a îmbunătăți
-    modularitatea bazei de coduri-sursă ale PHP. Astfel de aplicații
-    puteau fi realizate datorită noilor facilități din PHP 3.0, precum
-    și a susținerii unei game largi de baze de date și interfețe API
-    ale terților producători, însă PHP 3.0 nu fusese proiectat să
-    lucreze cu astfel de aplicații complexe în mod eficient.
+    Către iarna anului 1998, la scurt timp după ce PHP 3.0 a fost lansat oficial,
+    Andi Gutmans și Zeev Suraski au început lucrul asupra rescrierii nucleului
+    PHP. Scopurile reproiectării erau de a îmbunătăți performanța aplicațiilor
+    complexe și de a îmbunătăți modularitatea bazei de coduri-sursă ale PHP.
+    Astfel de aplicații puteau fi realizate datorită noilor facilități din PHP
+    3.0, precum și a susținerii unei game largi de baze de date și interfețe API
+    ale terților producători, însă PHP 3.0 nu fusese proiectat să lucreze cu
+    astfel de aplicații complexe în mod eficient.
    </para>
    <para>
-    Noul nucleu, denumit 'Zend Engine' (compus din numele autorilor,
-    Zeev și Andi), a făcut față cerințelor de proiect cu succes,
-    și a fost prezentat pentru prima dată la mijlocul anului 1999.
-    PHP 4.0, bazat pe acest nucleu și în cuplu cu o gamă largă de
-    facilități noi a fost lansat oficial în mai 2000, aproape doi
-    ani după predecesorul său, PHP 3.0.
-    Suplimentar la performanța îmbunătățită substanțial în această
-    versiune, PHP 4.0 a inclus alte facilități de bază, cum ar fi
-    susținerea mult mai multor servere Web, sesiunilor HTTP, buferizarea
-    ieșirii, metode mai securizate de gestionare a datelor introduse
-    de utilizatori și câteva construcții noi ale limbajului.
-   </para>
-   <para>
-    Astăzi PHP este utilizat de sute de mii de programatori (estimat)
-    și câteva milioane de site-uri raportează că îl au instalat,
-    ceea ce alcătuiește peste 20% din toate domeniile din Internet.
-   </para>
-   <para>
-    Echipa de dezvoltare a PHP include zeci de programatori, precum și
-    alte zeci de persoane ce lucrează asupra proiectelor asociate cu PHP,
-    cum ar fi PEAR și proiectul de documentare.
+    Noul nucleu, denumit 'Zend Engine' (compus din numele autorilor, Zeev și
+    Andi), a făcut față cerințelor de proiect cu succes, și a fost prezentat
+    pentru prima dată la mijlocul anului 1999. PHP 4.0, bazat pe acest nucleu și
+    în cuplu cu o gamă largă de facilități noi a fost lansat oficial în mai 2000,
+    aproape doi ani după predecesorul său. Suplimentar la performanța
+    îmbunătățită substanțial în această versiune, PHP 4.0 a inclus alte
+    facilități de bază, cum ar fi susținerea mult mai multor servere Web,
+    sesiunilor HTTP, buferizarea ieșirii, metode mai securizate de gestionare a
+    datelor introduse de utilizatori și câteva construcții noi ale limbajului.
    </para>
   </sect2>
 
@@ -175,6 +187,15 @@
     și câteva lansări preliminare. El este condus de nucleul său,
     <literal>Zend Engine 2.0</literal> cu un nou model de obiecte și o duzină
     de alte noi facilități.
+   </para>
+   <para>
+    Echipa de dezvoltare a PHP include zeci de programatori, precum și alte zeci
+    de persoane care lucrează la proiecte PHP conexe și de suport, cum ar fi
+    PEAR, PECL și documentare, precum și o infrastructură de rețea cu peste
+    o sută servere web individuale pe șase din cele șapte continente ale lumii.
+    Deși este numai o estimare bazată pe statistici din anii anteriori, putem cu
+    siguranță să presupunem că PHP este acum instalat pe zeci sau poate chiar
+    sute de milioane de domenii din întreaga lume.
    </para>
   </sect2>
  </sect1>
@@ -302,20 +323,20 @@
    observarea cărților despre PHP, care au apărut pe parcursul anilor.
   </para>
   <para>
-    Din câte cunoaștem, prima carte dedicată PHP a fost 'PHP - tvorba
-    interaktivních internetových aplikací' - o carte cehă publicată în aprilie
-    1999 de către Jirka Kosek. În următoarea lună a urmat o carte germană
-    scrisă de Egon Schmid, Christian Cartus și Richard Blume. Prima carte
-    în engleză despre PHP a fost publicată în scurt timp, aceasta fiind
-    'Core PHP Programming' ('Programarea de bază în PHP') scrisă de
-    Leon Atkinson. Ambele cărți cuprindeau versiunea PHP 3.0.
+   Din câte cunoaștem, prima carte dedicată PHP a fost "PHP - tvorba aplikací
+   internetových interaktivních" (<emphasis>PHP - Crearea de aplicatii Internet
+   interactive</emphasis>) - o carte cehă publicată în aprilie 1999, scrisă de
+   Jirka Kosek. În luna următoare a urmat o carte germană scrisă de Egon Schmid,
+   Christian Cartus și Richard Blume. Prima carte în limba engleză despre PHP a
+   fost publicată la scurt timp după aceea, și a fost întitulată "Core PHP
+   Programming" de Leon Atkinson. Aceste cărți au abordat PHP 3.0.
   </para>
   <para>
-    În timp ce aceste cărți erau primele de acest gen - după ele a urnmat
-    un număr mare de publicații de la diferiți autori și editori. Există
-    peste 40 de cărți în engleză, 50 de cărți în germană, și peste 20 de
-    cărți în franceză! În plus, puteți găsi cărți despre PHP în multe alte
-    șimbi, inclusiv spaniolă, koreeană, japoneză și ebraică.
+   În timp ce aceste cărți erau primele de acest gen, ele au fost urmate de un
+   număr mare de cărți de la o serie de autori și editori. Exista peste 400 de
+   cărți în limba engleză, peste 100 de cărți în Germană, și peste 50 de cărți
+   în limba franceză sau spaniolă! În plus, puteți găsi cărți despre PHP în
+   multe alte limbi, inclusiv coreeană, japoneză și ebraică.
   </para>
   <para>
    În mod cert, acest mare număr de cărți scrise de diferiți autori,
