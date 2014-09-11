@@ -357,14 +357,13 @@
   <para>
    Articole despre PHP au apărut în Dr. Dobbs, Linux Enterprise,
    Linux Magazine și în multe altele. Articole despre migrarea aplicațiilor
-   bazate pe ASP în PHP pentru Windows apar chiar și în propriul
-   <acronym>MSDN</acronym> al <productname>Microsoft</productname>!
+   bazate pe ASP în PHP pentru Windows apar chiar și la
+   <productname>Microsoft</productname> în propriul lor
+   <acronym>MSDN</acronym>!
   </para>
  </sect1>
 
 </appendix>
-
-<!-- Translated by Simion Onea -->
 
 <!-- Keep this comment at the end of the file
 Local variables:
