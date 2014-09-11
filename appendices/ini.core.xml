@@ -190,13 +190,15 @@
          </userinput>).
         </para>
        <note>
-         <para>
-          Această directivă de asemenea afectează scurtătura
-          <userinput>&lt;?=</userinput>, care este identică cu
-          <userinput>&lt;? echo</userinput>. Utilizarea acestei scurtături
-          necesită ca <systemitem role="directive">short_open_tag</systemitem>
-          să fie activată.
-         </para>
+        <para>
+         Această directivă de asemenea afectează scurtătura
+         <userinput>&lt;?=</userinput> înainte de PHP 5.4.0, care este identică cu
+         <userinput>&lt;? echo</userinput>. Utilizarea acestei scurtături
+         necesită ca <systemitem role="directive">short_open_tag</systemitem>
+         să fie activată.
+         Începând cu PHP 5.4.0, <userinput>&lt;?=</userinput> este întotdeauna
+         disponibilă.
+        </para>
        </note>
       </listitem>
      </varlistentry>
@@ -459,9 +461,9 @@
       </listitem>
      </varlistentry>
 
-     <varlistentry xml:id="ini.detect-unicode">
+     <varlistentry xml:id="ini.zend.detect-unicode">
       <term>
-       <parameter>detect_unicode</parameter>
+       <parameter>zend.detect_unicode</parameter>
        <type>boolean</type>
       </term>
       <listitem>
@@ -997,9 +999,9 @@
       <listitem>
        <simpara>
         Indică PHP dacă trebuie înregistrate, sau nu
+        <varname>$HTTP_*_VARS</varname> -
         <link linkend="language.variables.predefined">variabilele
-        predefinite</link> lungi învechite de tip
-        <varname>$HTTP_*_VARS</varname>. Când este stabilită în On
+        predefinite</link> lungi învechite. Când este stabilită în On
         (implicit), variabilele PHP predefinite lungi, cumar fi
         <varname>$HTTP_GET_VARS</varname> vor fi definite. Dacă nu le
         utilizați, este recomandabil să le dezactivați din motivul
@@ -1053,12 +1055,12 @@
        &ini.shorthandbytes;
 
        <simpara>
-         Dacă mărimea datelor post este mai mare decât post_max_size,
-         <link linkend="language.variables.superglobals">superglobalele</link>
-         <varname>$_POST</varname> și <varname>$_FILES</varname> sunt vide.
-         Acest fapt poate fi depistat prin diferite metode, de ex.
-         transmițând o valoare variabilei <varname>$_GET</varname> în
-         scriptul care procesează datele, de ex.
+         Dacă mărimea datelor post este mai mare decât post_max_size, atunci
+         <varname>$_POST</varname> și <varname>$_FILES</varname>
+         (<link linkend="language.variables.superglobals">variabile superglobale</link>)
+         sunt vide. Acest fapt poate fi depistat prin diferite metode, de ex.
+         transmițând o valoare variabilei <varname>$_GET</varname> în scriptul
+         care procesează datele, de ex.
          <literal>&lt;form action="edit.php?processed=1"&gt;</literal>,
          și apoi verificând dacă <varname>$_GET['processed']</varname> este
          stabilit.
@@ -1116,7 +1118,7 @@
         utilizat.
        </para>
        <para>
-         Valoarea specială <constant>none</constant> anulează executarea
+         Valoarea specială <literal>none</literal> anulează executarea
          automată.
        </para>
       </listitem>
@@ -1135,7 +1137,7 @@
          <link linkend="ini.include-path">include_path</link> este utilizat.
        </para>
        <para>
-         Valoarea specială <constant>none</constant> anulează executarea
+         Valoarea specială <literal>none</literal> anulează executarea
          automată.
         <note>
           <simpara>
@@ -1547,7 +1549,9 @@ include_path = ".:${USER}/pear/php"
          rulării. Aceasta înseamnă că dacă open_basedir este stabilită la
          <literal>/www/</literal> în &php.ini;, un script poate restrânge
          configurația la <literal>/www/tmp/</literal> în timpul rulării cu
-         <function>ini_set</function>
+         <function>ini_set</function>. Când se listează câteva directoare,
+         puteți utiliza constanta <constant>PATH_SEPARATOR</constant> ca
+         separator, indiferent de sistemul de operare.
         </para>
        </note>
       </listitem>
@@ -1674,7 +1678,7 @@ include_path = ".:${USER}/pear/php"
       </term>
       <listitem>
        <para>
-        Controlează dacă PHP în varianta <literal>CGI</literal> verifică
+        Controlează dacă PHP în varianta <acronym>CGI</acronym> verifică
         existența liniei ce începe cu <literal>#!</literal> (shebang) la
         începutul scriptului ce va fi rulat. Această linie poate fi necesară
         dacă script-ul susține rularea atât în calitate de script independent,
@@ -1692,9 +1696,10 @@ include_path = ".:${USER}/pear/php"
       </term>
       <listitem>
        <para>
-        Oferă susținerea <literal>PATH_INFO</literal>/<literal>PATH_TRANSLATED</literal>
-        <emphasis>reale</emphasis> pentru <acronym>CGI</acronym>. Comportamentul
-        precedent al PHP era de a stabili <literal>PATH_TRANSLATED</literal> în
+        Oferă susținerea <emphasis>reală</emphasis> a <literal>PATH_INFO</literal>/
+        <literal>PATH_TRANSLATED</literal> pentru <acronym>CGI</acronym>.
+        Comportamentul precedent al PHP era de a stabili
+        <literal>PATH_TRANSLATED</literal> în
         <literal>SCRIPT_FILENAME</literal> și de a nu analiza care este
         <literal>PATH_INFO</literal>. Pentru mai multe informații despre
         <literal>PATH_INFO</literal>, vedeți specificările <acronym>CGI</acronym>.
@@ -1722,11 +1727,9 @@ include_path = ".:${USER}/pear/php"
        </para>
        <note>
         <para>
-         Utilizatorii Windows: <emphasis>puteți</emphasis> să dezactivați
-         fără primejdie această directivă pentru IIS, de fapt
-         <emphasis>trebuie</emphasis> să faceți aceasta. Pentru ca OmniHTTPD
-         sau Xitami să funcționeze <emphasis>trebuie</emphasis> să o
-         dezactivați.
+         Utilizatorii Windows: Când utilizați IIS, această opțiune
+         <emphasis>trebuie</emphasis> dezactivată. Același lucru se aplică și
+         pentru OmniHTTPD sau Xitami.
         </para>
        </note>
       </listitem>
