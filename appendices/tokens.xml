@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 84b8fca68fc762fefe85acde180a38b2e77a28b9 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 2bb07c8c43f028c665a33bfc08a22639e9e35dc6 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="tokens" xmlns="http://docbook.org/ns/docbook">
  <title>Lista semnelor interpretorului</title>
@@ -100,6 +100,11 @@
      <entry><link linkend="control-structures.break">break</link></entry>
     </row>
     <row>
+     <entry><constant>T_CALLABLE</constant></entry>
+     <entry>callable</entry>
+     <entry><link linkend="language.types.callable">callable</link></entry>
+    </row>
+    <row>
      <entry><constant>T_CASE</constant></entry>
      <entry>case</entry>
      <entry><link linkend="control-structures.switch">switch</link></entry>
@@ -124,7 +129,6 @@
      <entry>__CLASS__</entry>
      <entry>
       <link linkend="language.constants.predefined">constante magice</link>
-      (disponibil începând cu PHP 4.3.0)
      </entry>
     </row>
     <row>
@@ -132,7 +136,6 @@
      <entry>clone</entry>
      <entry>
       <link linkend="language.oop5">clase și obiecte</link>
-      (disponibil începând cu PHP 5.0.0)
      </entry>
     </row>
     <row>
@@ -142,7 +145,7 @@
     </row>
     <row>
      <entry><constant>T_COMMENT</constant></entry>
-     <entry>// sau #, și /* */ în PHP 5</entry>
+     <entry>// sau #, și /* */</entry>
      <entry><link linkend="language.basic-syntax.comments">comentarii</link></entry>
     </row>
     <row>
@@ -210,7 +213,6 @@
      <entry>/** */</entry>
      <entry>
       <link linkend="language.basic-syntax.comments">comentarii în stil PHPDoc</link>
-      (disponibile începând cu PHP 5.0.0)
      </entry>
     </row>
     <row>
@@ -330,7 +332,12 @@
     <row>
      <entry><constant>T_FINAL</constant></entry>
      <entry>final</entry>
-     <entry><xref linkend="language.oop5.final"/> (disponibil începând cu PHP 5.0.0)</entry>
+     <entry><xref linkend="language.oop5.final"/></entry>
+    </row>
+    <row>
+     <entry><constant>T_FINALLY</constant></entry>
+     <entry>finally</entry>
+     <entry><xref linkend="language.exceptions"/> (disponibil începând cu PHP 5.5.0)</entry>
     </row>
     <row>
      <entry><constant>T_FOR</constant></entry>
@@ -352,7 +359,6 @@
      <entry>__FUNCTION__</entry>
      <entry>
       <link linkend="language.constants.predefined">constante magice</link>
-      (disponibil începând cu PHP 4.3.0)
      </entry>
     </row>
     <row>
@@ -378,7 +384,7 @@
     <row>
      <entry><constant>T_IMPLEMENTS</constant></entry>
      <entry>implements</entry>
-     <entry><xref linkend="language.oop5.interfaces"/> (disponibil începând cu PHP 5.0.0)</entry>
+     <entry><xref linkend="language.oop5.interfaces"/></entry>
     </row>
     <row>
      <entry><constant>T_INC</constant></entry>
@@ -407,8 +413,12 @@
      <entry>instanceof</entry>
      <entry>
       <link linkend="language.operators.type">operatori ai tipurilor</link>
-      (disponibil începând cu PHP 5.0.0)
      </entry>
+    </row>
+    <row>
+     <entry><constant>T_INSTEADOF</constant></entry>
+     <entry>insteadof</entry>
+     <entry><xref linkend="language.oop5.traits"/> (disponibilă începând cu PHP 5.4.0)</entry>
     </row>
     <row>
      <entry><constant>T_INT_CAST</constant></entry>
@@ -418,7 +428,7 @@
     <row>
      <entry><constant>T_INTERFACE</constant></entry>
      <entry>interface</entry>
-     <entry><xref linkend="language.oop5.interfaces"/> (disponibil începând cu PHP 5.0.0)</entry>
+     <entry><xref linkend="language.oop5.interfaces"/></entry>
     </row>
     <row>
      <entry><constant>T_ISSET</constant></entry>
@@ -467,7 +477,7 @@
     </row>
     <row>
      <entry><constant>T_LNUMBER</constant></entry>
-     <entry>123, 012, 0x1ac, etc</entry>
+     <entry>123, 012, 0x1ac, etc.</entry>
      <entry><link linkend="language.types.integer">întregi</link></entry>
     </row>
     <row>
@@ -490,19 +500,12 @@
      <entry>__METHOD__</entry>
      <entry>
       <link linkend="language.constants.predefined">constante magice</link>
-      (disponibil începând cu PHP 5.0.0)
      </entry>
     </row>
     <row>
      <entry><constant>T_MINUS_EQUAL</constant></entry>
      <entry>-=</entry>
      <entry><link linkend="language.operators.assignment">operatori de atribuire</link></entry>
-    </row>
-    <row>
-     <entry><constant>T_ML_COMMENT</constant></entry>
-     <entry>/* și */</entry>
-     <entry><link linkend="language.basic-syntax.comments">comentarii</link>
-      (doar PHP 4)</entry>
     </row>
     <row>
      <entry><constant>T_MOD_EQUAL</constant></entry>
@@ -559,11 +562,6 @@
      <entry><link linkend="language.oop5">clase și obiecte</link></entry>
     </row>
     <row>
-     <entry><constant>T_OLD_FUNCTION</constant></entry>
-     <entry>old_function</entry>
-     <entry>(doar PHP 4)</entry>
-    </row>
-    <row>
      <entry><constant>T_OPEN_TAG</constant></entry>
      <entry>&lt;?php, &lt;? sau &lt;%</entry>
      <entry><link linkend="language.basic-syntax.phpmode">evadarea din HTML</link></entry>
@@ -599,7 +597,6 @@
      <entry>private</entry>
      <entry>
       <link linkend="language.oop5">clase și obiecte</link>
-      (disponibil începând cu PHP 5.0.0)
      </entry>
     </row>
     <row>
@@ -607,7 +604,6 @@
      <entry>public</entry>
      <entry>
       <link linkend="language.oop5">clase și obiecte</link>
-      (disponibil începând cu PHP 5.0.0)
      </entry>
     </row>
     <row>
@@ -615,7 +611,6 @@
      <entry>protected</entry>
      <entry>
       <link linkend="language.oop5">clase și obiecte</link>
-      (disponibil începând cu PHP 5.0.0)
      </entry>
     </row>
     <row>
@@ -665,10 +660,12 @@
     </row>
     <row>
      <entry><constant>T_STRING</constant></entry>
-     <entry>"parent"</entry>
-     <entry>identificatori, de ex. <link linkend="language.types.string.parsing">șiruri</link>,
-      cuvinte-cheie ce se referă la programarea orientată pe obiecte, precum <literal>parent</literal>
-      și <literal>self</literal>, funcții, clase și altele se potivesc.</entry>
+     <entry>parent, self, etc.</entry>
+     <entry>
+      identificatori, de ex. cuvinte-cheie ca <literal>parent</literal> și <literal>self</literal>,
+      denumiri de funcții, denumiri de clase și altele se potrivesc.
+      A se vedea și <constant>T_CONSTANT_ENCAPSED_STRING</constant>.
+     </entry>
     </row>
     <row>
      <entry><constant>T_STRING_CAST</constant></entry>
@@ -688,12 +685,22 @@
     <row>
      <entry><constant>T_THROW</constant></entry>
      <entry>throw</entry>
-     <entry><xref linkend="language.exceptions"/> (disponibil începând cu PHP 5.0.0)</entry>
+     <entry><xref linkend="language.exceptions"/></entry>
+    </row>
+    <row>
+     <entry><constant>T_TRAIT</constant></entry>
+     <entry>trait</entry>
+     <entry><xref linkend="language.oop5.traits"/> (disponibilă începând cu PHP 5.4.0)</entry>
+    </row>
+    <row>
+     <entry><constant>T_TRAIT_C</constant></entry>
+     <entry>__TRAIT__</entry>
+     <entry><link linkend="constant.trait">__TRAIT__</link> (disponibilă începând cu PHP 5.4.0)</entry>
     </row>
     <row>
      <entry><constant>T_TRY</constant></entry>
      <entry>try</entry>
-     <entry><xref linkend="language.exceptions"/> (disponibil începând cu PHP 5.0.0)</entry>
+     <entry><xref linkend="language.exceptions"/></entry>
     </row>
     <row>
      <entry><constant>T_UNSET</constant></entry>
@@ -703,8 +710,7 @@
     <row>
      <entry><constant>T_UNSET_CAST</constant></entry>
      <entry>(unset)</entry>
-     <entry><link linkend="language.types.typecasting">type-casting</link>
-     (disponibil începând cu PHP 5.0.0)</entry>
+     <entry><link linkend="language.types.typecasting">type-casting</link></entry>
     </row>
     <row>
      <entry><constant>T_USE</constant></entry>
@@ -738,11 +744,16 @@
      <entry>^=</entry>
      <entry><link linkend="language.operators.assignment">operatori de atribuire</link></entry>
     </row>
+    <row>
+     <entry><constant>T_YIELD</constant></entry>
+     <entry>yield</entry>
+     <entry><link linkend="control-structures.yield">generators</link> (disponibilă începând cu PHP 5.5.0)</entry>
+    </row>
    </tbody>
   </tgroup>
  </table>
  <para>
-  Vedeți de asemenea <function>token_name</function>.
+  A se vedea și <function>token_name</function>.
  </para>
 </appendix>
 
