@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 84b8fca68fc762fefe85acde180a38b2e77a28b9 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 547857d6033690c942cb455b2a4d23b283af0540 Maintainer: simionea Status: ready -->
 
  <appendix xml:id="reserved" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Lista cuvintelor rezervate</title>
@@ -14,7 +14,7 @@
   </para>
 
   <sect1 xml:id="reserved.keywords">
-  <title>Lista cuvintelor-cheie</title>
+   <title>Lista cuvintelor-cheie</title>
    <simpara>
     Aceste cuvinte au o semnificație specială în PHP. Unele din ele se aseamănă
     cu funcții, altele cu constante ș.a.m.d., însă aceasta nu este așa: ele sunt
@@ -29,7 +29,10 @@
      <tbody>
       <row>
        <entry>
-        <link linkend="language.oop5.abstract">abstract</link> (începând cu PHP 5)
+        <function>__halt_compiler</function>
+       </entry>
+       <entry>
+        <link linkend="language.oop5.abstract">abstract</link>
        </entry>
        <entry>
         <link linkend="language.operators.logical">and</link>
@@ -40,28 +43,28 @@
        <entry>
         <link linkend="control-structures.foreach">as</link>
        </entry>
+      </row>
+      <row>
        <entry>
         <link linkend="control-structures.break">break</link>
        </entry>
-      </row>
-      <row>
+       <entry>
+        <link linkend="language.types.callable">callable</link> (începând cu PHP 5.4)
+       </entry>
        <entry>
         <link linkend="control-structures.switch">case</link>
        </entry>
        <entry>
-        <link linkend="language.exceptions">catch</link> (începând cu PHP 5)
-       </entry>
-       <entry>
-        cfunction (doar PHP 4)
+        <link linkend="language.exceptions">catch</link>
        </entry>
        <entry>
         <link linkend="keyword.class">class</link>
        </entry>
-       <entry>
-        <link linkend="language.oop5.cloning">clone</link> (începând cu PHP 5)
-       </entry>
       </row>
       <row>
+       <entry>
+        <link linkend="language.oop5.cloning">clone</link>
+       </entry>
        <entry>
         <link linkend="language.oop5.constants">const</link>
        </entry>
@@ -74,16 +77,27 @@
        <entry>
         <link linkend="control-structures.switch">default</link>
        </entry>
+      </row>
+      <row>
+       <entry>
+        <function>die</function>
+       </entry>
        <entry>
         <link linkend="control-structures.do.while">do</link>
        </entry>
-      </row>
-      <row>
+       <entry>
+        <function>echo</function>
+       </entry>
        <entry>
         <link linkend="control-structures.else">else</link>
        </entry>
        <entry>
         <link linkend="control-structures.elseif">elseif</link>
+       </entry>
+      </row>
+      <row>
+       <entry>
+        <function>empty</function>
        </entry>
        <entry>
         <link linkend="control-structures.declare">enddeclare</link>
@@ -94,11 +108,11 @@
        <entry>
         <link linkend="control-structures.alternative-syntax">endforeach</link>
        </entry>
-      </row>
-      <row>
        <entry>
         <link linkend="control-structures.alternative-syntax">endif</link>
        </entry>
+      </row>
+      <row>
        <entry>
         <link linkend="control-structures.alternative-syntax">endswitch</link>
        </entry>
@@ -106,13 +120,22 @@
         <link linkend="control-structures.alternative-syntax">endwhile</link>
        </entry>
        <entry>
-        <link linkend="keyword.class">extends</link>
+        <function>eval</function>
        </entry>
        <entry>
-        <link linkend="language.oop5.final">final</link> (începând cu PHP 5)
+        <function>exit</function>
+       </entry>
+       <entry>
+        <link linkend="keyword.class">extends</link>
        </entry>
       </row>
       <row>
+       <entry>
+        <link linkend="language.oop5.final">final</link>
+       </entry>
+       <entry>
+        <link linkend="language.exceptions">finally</link> (începând cu PHP 5.5)
+       </entry>
        <entry>
         <link linkend="control-structures.for">for</link>
        </entry>
@@ -122,28 +145,45 @@
        <entry>
         <link linkend="functions.user-defined">function</link>
        </entry>
+      </row>
+      <row>
        <entry>
         <link linkend="language.variables.scope">global</link>
        </entry>
        <entry>
         <link linkend="control-structures.goto">goto</link> (începând cu PHP 5.3)
        </entry>
-      </row>
-      <row>
        <entry>
         <link linkend="control-structures.if">if</link>
        </entry>
        <entry>
-        <link linkend="language.oop5.interfaces">implements</link> (începând cu PHP 5)
+        <link linkend="language.oop5.interfaces">implements</link>
        </entry>
        <entry>
-        <link linkend="language.oop5.interfaces">interface</link> (începând cu PHP 5)
-       </entry>
-       <entry>
-        <link linkend="language.operators.type">instanceof</link> (începând cu PHP 5)
+        <function>include</function>
        </entry>
       </row>
       <row>
+       <entry>
+        <function>include_once</function>
+       </entry>
+       <entry>
+        <link linkend="language.operators.type">instanceof</link>
+       </entry>
+       <entry>
+        <link linkend="language.oop5.traits.conflict">insteadof</link> (începând cu PHP 5.4)
+       </entry>
+       <entry>
+        <link linkend="language.oop5.interfaces">interface</link>
+       </entry>
+       <entry>
+        <function>isset</function>
+       </entry>
+      </row>
+      <row>
+       <entry>
+        <function>list</function>
+       </entry>
        <entry>
         <link linkend="language.namespaces">namespace</link> (începând cu PHP 5.3)
        </entry>
@@ -151,21 +191,32 @@
         <link linkend="keyword.class">new</link>
        </entry>
        <entry>
-        old_function (doar PHP 4)
-       </entry>
-       <entry>
         <link linkend="language.operators.logical">or</link>
        </entry>
        <entry>
-        <link linkend="language.oop5.visibility">private</link> (începând cu PHP 5)
+        <function>print</function>
        </entry>
       </row>
       <row>
        <entry>
-        <link linkend="language.oop5.visibility">protected</link> (începând cu PHP 5)
+        <link linkend="language.oop5.visibility">private</link>
        </entry>
        <entry>
-        <link linkend="language.oop5.visibility">public</link> (începând cu PHP 5)
+        <link linkend="language.oop5.visibility">protected</link>
+       </entry>
+       <entry>
+        <link linkend="language.oop5.visibility">public</link>
+       </entry>
+       <entry>
+        <function>require</function>
+       </entry>
+       <entry>
+        <function>require_once</function>
+       </entry>
+      </row>
+      <row>
+       <entry>
+        <function>return</function>
        </entry>
        <entry>
         <link linkend="language.variables.scope">static</link>
@@ -174,12 +225,18 @@
         <link linkend="control-structures.switch">switch</link>
        </entry>
        <entry>
-        <link linkend="language.exceptions">throw</link> (începând cu PHP 5)
+        <link linkend="language.exceptions">throw</link>
+       </entry>
+       <entry>
+        <link linkend="language.oop5.traits">trait</link> (începând cu PHP 5.4)
        </entry>
       </row>
       <row>
        <entry>
-        <link linkend="language.exceptions">try</link> (începând cu PHP 5)
+        <link linkend="language.exceptions">try</link>
+       </entry>
+       <entry>
+        <function>unset</function>
        </entry>
        <entry>
         <link linkend="language.namespaces">use</link>
@@ -190,13 +247,25 @@
        <entry>
         <link linkend="control-structures.while">while</link>
        </entry>
+      </row>
+      <row>
        <entry>
         <link linkend="language.operators.logical">xor</link>
+       </entry>
+       <entry>
+        <link linkend="language.generators">yield</link> (începând cu PHP 5.5)
+       </entry>
+       <entry>
+       </entry>
+       <entry>
+       </entry>
+       <entry>
        </entry>
       </row>
      </tbody>
     </tgroup>
    </table>
+
    <table>
     <title>Constante la compilare</title>
     <tgroup cols="5">
@@ -212,10 +281,10 @@
         <link linkend="language.constants.predefined">__FILE__</link>
        </entry>
        <entry>
-        <link linkend="language.constants.predefined">__LINE__</link>
+        <link linkend="language.constants.predefined">__FUNCTION__</link>
        </entry>
        <entry>
-        <link linkend="language.constants.predefined">__FUNCTION__</link>
+        <link linkend="language.constants.predefined">__LINE__</link>
        </entry>
        <entry>
         <link linkend="language.constants.predefined">__METHOD__</link>
@@ -223,7 +292,10 @@
       </row>
       <row>
        <entry>
-        <link linkend="language.namespaces">__NAMESPACE__</link> (începând cu PHP 5.3)
+        <link linkend="language.namespaces.nsconstants">__NAMESPACE__</link> (începând cu PHP 5.3)
+       </entry>
+       <entry>
+        <link linkend="language.constants.predefined">__TRAIT__</link> (începând cu PHP 5.4)
        </entry>
        <entry>
        </entry>
@@ -232,64 +304,6 @@
        <entry>
        </entry>
        <entry>
-       </entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </table>
-   <table>
-    <title>Construcții ale limbajului</title>
-    <tgroup cols="5">
-     <tbody>
-      <row>
-       <entry>
-        <function>die</function>
-       </entry>
-       <entry>
-        <function>echo</function>
-       </entry>
-       <entry>
-        <function>empty</function>
-       </entry>
-       <entry>
-        <function>exit</function>
-       </entry>
-       <entry>
-        <function>eval</function>
-       </entry>
-      </row>
-      <row>
-       <entry>
-        <function>include</function>
-       </entry>
-       <entry>
-        <function>include_once</function>
-       </entry>
-       <entry>
-        <function>isset</function>
-       </entry>
-       <entry>
-        <function>list</function>
-       </entry>
-       <entry>
-        <function>require</function>
-       </entry>
-      </row>
-      <row>
-       <entry>
-        <function>require_once</function>
-       </entry>
-       <entry>
-        <function>return</function>
-       </entry>
-       <entry>
-        <function>print</function>
-       </entry>
-       <entry>
-        <function>unset</function>
-       </entry>
-       <entry>
-        <function>__halt_compiler</function>
        </entry>
       </row>
      </tbody>
@@ -357,6 +371,14 @@
       </listitem>
      </varlistentry>
      <varlistentry>
+      <term><classname>ErrorException</classname></term>
+      <listitem>
+       <simpara>
+        Disponibilă începând cu PHP 5.1.0.
+       </simpara>
+      </listitem>
+     </varlistentry>
+     <varlistentry>
       <term><classname>php_user_filter</classname></term>
       <listitem>
        <simpara>
@@ -376,6 +398,20 @@
     </simpara>
     <simpara>
      Pentru informații suplimentare accesați <link linkend="class.closure">pagina clasei</link>.
+    </simpara>
+   </sect2>
+
+   <sect2 xml:id="reserved.classes.generator">
+    <title>Generator</title>
+
+    <simpara>
+     Clasa finală predefinită <classname>Generator</classname> a fost introdusă
+     în PHP 5.5.0. Ea este utilizată pentru reprezentarea <link
+     linkend="language.generators">generatoarelor</link>.
+    </simpara>
+    <simpara>
+     Pentru informații suplimentare accesați
+     <link linkend="class.generator">pagina clasei</link>.
     </simpara>
    </sect2>
 
