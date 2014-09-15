@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision: 330617 $ -->
+<!-- $Author: simionea $ -->
+<!-- EN-Revision: a38dbf56cbbf3658e44dcab55e7530fffbc8aa1d Maintainer: simionea Status: ready -->
+
+<para xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+ Una din <link linkend="intlcalendar.constants">constantele de câmp</link>
+ dată/oră ale <classname>IntlCalendar</classname>. Acestea sunt valori întregi
+ de la <literal>0</literal> până la <constant>IntlCalendar::FIELD_COUNT</constant>.
+</para>
