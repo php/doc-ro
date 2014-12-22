@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: e2a8eac73fb432067e592341ea7749dc60b281b8 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: c572cd51a9caea624c83640061408a5f6e082bfe Maintainer: simionea Status: ready -->
  <appendix xml:id="migration5" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Migrarea de la PHP 4 la PHP 5.0.x</title>
   <para>
@@ -818,10 +818,11 @@ Action application/x-httpd-php "/php/php-cgi.exe"
    <itemizedlist>
     <listitem>
      <simpara>
-      mail.force_extra_parameters - Forțează trimiterea parametrilor specificați
-      în calitate de parametri suplimentari pentru binarul sendmail.
-      Acești parametri întotdeauna vor înlocui valoarea parametrului al 5-lea cu
-      <function>mail</function>, chiar și în modul sigur
+      <link linkend="ini.mail.force_extra_parameters">mail.force_extra_parameters</link>
+      - Forțează trimiterea parametrilor specificați în calitate de parametri
+      suplimentari pentru binarul sendmail. Acești parametri întotdeauna vor
+      înlocui valoarea parametrului al 5-lea cu <function>mail</function>,
+      chiar și în modul sigur
      </simpara>
     </listitem>
     <listitem>

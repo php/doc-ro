@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 2bb07c8c43f028c665a33bfc08a22639e9e35dc6 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 42696d22790105fb77c88a76c5dd08d0b63c176e Maintainer: simionea Status: ready -->
 
 <appendix xml:id="tokens" xmlns="http://docbook.org/ns/docbook">
  <title>Lista semnelor interpretorului</title>
@@ -245,6 +245,14 @@
      <entry><constant>T_ECHO</constant></entry>
      <entry>echo</entry>
      <entry><function>echo</function></entry>
+    </row>
+    <row>
+     <entry><constant>T_ELLIPSIS</constant></entry>
+     <entry>...</entry>
+     <entry>
+      <link linkend="functions.variable-arg-list.new">argumentele funcțiilor</link>
+      (disponibilă începând cu PHP 5.6.0)
+     </entry>
     </row>
     <row>
      <entry><constant>T_ELSE</constant></entry>
@@ -586,6 +594,22 @@
      <entry><constant>T_PLUS_EQUAL</constant></entry>
      <entry>+=</entry>
      <entry><link linkend="language.operators.assignment">operatori de atribuire</link></entry>
+    </row>
+    <row>
+     <entry><constant>T_POW</constant></entry>
+     <entry>**</entry>
+     <entry>
+      <link linkend="language.operators.arithmetic">operatori aritmetici</link>
+      (disponibil începând cu PHP 5.6.0)
+     </entry>
+    </row>
+    <row>
+     <entry><constant>T_POW_EQUAL</constant></entry>
+     <entry>**=</entry>
+     <entry>
+      <link linkend="language.operators.assignment">operatori de atribuire</link>
+      (disponibil începând cu PHP 5.6.0)
+     </entry>
     </row>
     <row>
      <entry><constant>T_PRINT</constant></entry>

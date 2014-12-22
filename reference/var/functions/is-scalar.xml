@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: bc8b580e62235a58179e6f2447bc200e7b2732d1 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: ddfd04b767a0dbbdd403bc8e59ee737893b690a2 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
-<!-- splitted from ./en/functions/var.xml, last change in rev 1.35 -->
+
 <refentry xml:id="function.is-scalar" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>is_scalar</refname>

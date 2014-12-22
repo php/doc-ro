@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 1bdcb1b9fdcaf92904fc4fdb0d89e1a37159665e Maintainer: simionea Status: ready -->
+<!-- EN-Revision: b455daa1c77ecf415cb55be7a594b5ba4603db00 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.array-fill" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -50,7 +50,7 @@
      <listitem>
       <para>
        Numărul elementelor pentru a fi inserate.
-       Trebuie să fie mai mare decât zero.
+       Trebuie să fie mai mare decât sau egal cu zero.
       </para>
      </listitem>
     </varlistentry>
@@ -78,8 +78,33 @@
  <refsect1 role="errors">
   &reftitle.errors;
   <para>
-   Aruncă o <constant>E_WARNING</constant> dacă <parameter>num</parameter>
-   este mai mic decât unu.
+   Emite o <constant>E_WARNING</constant> dacă <parameter>num</parameter>
+   este mai mic decât zero.
+  </para>
+ </refsect1>
+
+ <refsect1 role="changelog">
+  &reftitle.changelog;
+  <para>
+   <informaltable>
+    <tgroup cols="2">
+     <thead>
+      <row>
+       <entry>&Version;</entry>
+       <entry>&Description;</entry>
+      </row>
+     </thead>
+     <tbody>
+      <row>
+       <entry>5.6.0</entry>
+       <entry>
+        <parameter>num</parameter> nu poate fi zero. Anterior
+        <parameter>num</parameter> trebuia să fie mai mare decât zero.
+       </entry>
+      </row>
+     </tbody>
+    </tgroup>
+   </informaltable>
   </para>
  </refsect1>
 

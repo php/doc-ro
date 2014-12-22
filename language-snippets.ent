@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: ba08db8805ddb14cbab613c893dd47eacbda22f2 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 0b93d1fa3a46529bbec57ed1454cf19dd98ae42d Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -615,6 +615,12 @@ Este utilizat pentru inițializare în modurile CBC, CFB, OFB și în unii algor
 în mod STREAM. Dacă nu furnizați un IV atunci când este necesar pentru un algoritm,
 funcția emite o avertizare și utilizează un IV cu toți octeții stabiliți la
 valoarea "<literal>\0</literal>".</para>'>
+
+<!ENTITY mcrypt.parameter.iv.strict '<para xmlns="http://docbook.org/ns/docbook">
+Utilizat pentru inițializare în modurile CBC, CFB, OFB și în unii algoritmi în
+modul STREAM. Dacă dimensiunea IV furnizat nu este susținută de modul înlănțuirii,
+sau dacă nu a fost furnizat un IV, însă modul de înlănțuire îl necesită, funcția
+va emite o avertizare și va întoarce &false;.</para>'>
 
 <!ENTITY mcrypt.parameter.mode '<para xmlns="http://docbook.org/ns/docbook">
 Una din constantele <constant>MCRYPT_MODE_modename</constant> sau unul din
@@ -2199,12 +2205,14 @@ pentru informații suplimentare.</para></warning></listitem>'>
 
 <!ENTITY mongo.index.parameters.dropdups '<listitem xmlns="http://docbook.org/ns/docbook">
 <para><literal>"dropDups"</literal></para><para>Specificați &true; pentru a forța
-crearea unui indice unic care poate avea dubluri. MongoDB va indexa prima apariție
-a cheii și va elimina toate documentele din colecție care conțin următoarele
-apariții ale acelei chei. Valoarea implicită e &false;.</para>
+crearea unui indice unic, când colecția poate conține dubluri pentru o cheie.
+MongoDB va indexa prima apariție a cheii și va elimina toate documentele din
+colecție care conțin următoarele apariții ale acelei chei. Valoarea implicită e &false;.</para>
 <warning xmlns="http://docbook.org/ns/docbook"><para><literal>"dropDups"</literal>
 poate să elimine date din baza dumneavoastră de date. Folosiți cu mare precauție.
-</para></warning></listitem>'>
+</para></warning><note xmlns="http://docbook.org/ns/docbook"><para>Această opțiune
+nu este susținută de MongoDB 2.8+. Crearea indicelui va eșua dacă colecția conține
+dubluri.</para></note></listitem>'>
 
 <!ENTITY mongo.index.parameters.expireafterseconds '<listitem xmlns="http://docbook.org/ns/docbook">
 <para><literal>"expireAfterSeconds"</literal></para>
@@ -2514,6 +2522,25 @@ Acest parametru e ignorat dacă nu a fost stabilită opțiunea
    <link linkend="ini.default-charset">default_charset</link>.
   </entry>
  </row>
+'>
+
+<!-- filter snippets -->
+<!ENTITY filter.param.filter '
+ <varlistentry xmlns="http://docbook.org/ns/docbook">
+  <term><parameter>filter</parameter></term>
+  <listitem>
+   <para>
+    Identificatorul ID al filtrului ce va fi aplicat. Pagina manualului pentru
+    <xref linkend="filter.filters" /> afișează filtrele disponibile.
+   </para>
+   <para>
+    Dacă parametrul este omis, se va utiliza <constant>FILTER_DEFAULT</constant>,
+    ceea ce este echivalent cu
+    <link linkend="filter.filters.sanitize"><constant>FILTER_UNSAFE_RAW</constant></link>.
+    Aceasta va duce la neaplicarea filtrării în mod implicit.
+   </para>
+  </listitem>
+ </varlistentry>
 '>
 
 <!-- Migration Guide snippets -->
