@@ -3,19 +3,33 @@
 <!-- $Author$ -->
 <!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
 
-<refentry xml:id="function.ncurses-end" xmlns="http://docbook.org/ns/docbook">
+<refentry xml:id="function.ncurses-attrset" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
-  <refname>ncurses_end</refname>
-  <refpurpose>Oprește utilizarea ncurses, curăță ecranul</refpurpose>
+  <refname>ncurses_attrset</refname>
+  <refpurpose>Stabilește atributele date</refpurpose>
  </refnamediv>
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>int</type><methodname>ncurses_end</methodname>
-   <void/>
+   <type>int</type><methodname>ncurses_attrset</methodname>
+   <methodparam><type>int</type><parameter>attributes</parameter></methodparam>
   </methodsynopsis>
   &warn.experimental.func;
   &warn.undocumented.func;
+ </refsect1>
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>attributes</parameter></term>
+     <listitem>
+      <para>
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
  </refsect1>
 </refentry>
 

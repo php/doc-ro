@@ -3,19 +3,30 @@
 <!-- $Author$ -->
 <!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
 
-<refentry xml:id="function.ncurses-end" xmlns="http://docbook.org/ns/docbook">
+<refentry xml:id="function.ncurses-beep" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
-  <refname>ncurses_end</refname>
-  <refpurpose>Oprește utilizarea ncurses, curăță ecranul</refpurpose>
+  <refname>ncurses_beep</refname>
+  <refpurpose>Face ca terminalul să emită un semnal sonor</refpurpose>
  </refnamediv>
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>int</type><methodname>ncurses_end</methodname>
+   <type>int</type><methodname>ncurses_beep</methodname>
    <void/>
   </methodsynopsis>
   &warn.experimental.func;
-  &warn.undocumented.func;
+  <para>
+   <function>ncurses_beep</function> transmite o alertă audibilă (bell)
+   și dacă aceasta nu este posibil, sclipește ecranul.
+  </para>
+ </refsect1>
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>ncurses_flash</function></member>
+   </simplelist>
+  </para>
  </refsect1>
 </refentry>
 

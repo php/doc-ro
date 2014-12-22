@@ -3,18 +3,32 @@
 <!-- $Author$ -->
 <!-- EN-Revision: 14af302c9c0e561fa6f9cdd956268758ba9a89c5 Maintainer: simionea Status: ready -->
 
-<refentry xml:id="function.ncurses-reset-prog-mode" xmlns="http://docbook.org/ns/docbook">
+<refentry xml:id="function.ncurses-bottom-panel" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
-  <refname>ncurses_reset_prog_mode</refname>
-  <refpurpose>Resetează modul programului salvat cu def_prog_mode</refpurpose>
+  <refname>ncurses_bottom_panel</refname>
+  <refpurpose>Mută panelul vizibil la fundul stivei</refpurpose>
  </refnamediv>
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>int</type><methodname>ncurses_reset_prog_mode</methodname>
-   <void/>
+   <type>int</type><methodname>ncurses_bottom_panel</methodname>
+   <methodparam><type>resource</type><parameter>panel</parameter></methodparam>
   </methodsynopsis>
   &warn.undocumented.func;
+ </refsect1>
+ <refsect1 role="parameters">
+  &reftitle.parameters;
+  <para>
+   <variablelist>
+    <varlistentry>
+     <term><parameter>panel</parameter></term>
+     <listitem>
+      <para>
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </para>
  </refsect1>
 </refentry>
 
