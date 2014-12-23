@@ -5,7 +5,7 @@
 
 <!-- Part titles used mostly in manual.xml itself -->
 <!ENTITY PHPManual                                "Manualul PHP">
-<!ENTITY Seealso                                  "Accesați de asemenea">
+<!ENTITY Seealso                                  "A se vedea și">
 <!ENTITY Date                                     "Data:">
 <!ENTITY GettingStarted                           "Pentru început">
 <!ENTITY InstallAndConfigure                      "Installarea și configurarea">
@@ -16,12 +16,12 @@
 <!ENTITY FunctionReference                        "Informații de referință despre funcții">
 <!ENTITY VariableandTypeRelatedExtensions         "Extensii referitoare la variabile și tipuri">
 <!ENTITY TextProcessing                           "Procesarea textului">
-<!ENTITY AffectingPHPsBehaviour                   "Afectează comportamentul PHP">
-<!ENTITY SessionExtensions                        "Extensiile sesiunilor">
+<!ENTITY AffectingPHPsBehaviour                   "Afectarea comportamentului PHP">
+<!ENTITY SessionExtensions                        "Extensii de lucru cu sesiuni">
 <!ENTITY OtherBasicExtensions                     "Alte extensii de bază">
-<!ENTITY DatabaseExtensions                       "Extensii ale bazelor de date">
+<!ENTITY DatabaseExtensions                       "Extensii de lucru cu baze de date">
 <!ENTITY AbstractionLayers                        "Nivele de abstractizare">
-<!ENTITY VendorSpecificDatabaseExtensions         "Extensii ale bazelor de date specifice anumitor producători">
+<!ENTITY VendorSpecificDatabaseExtensions         "Extensii de lucru cu baze de date specifice anumitor producători">
 <!ENTITY XMLManipulation                          "Manipularea XML">
 <!ENTITY WebServices                              "Servicii Web">
 <!ENTITY CreditCardProcessing                     "Procesarea cardurilor de credit">
@@ -37,11 +37,11 @@
 <!ENTITY CalendarandEventRelatedExtensions        "Extensii referitoare la dată și oră">
 <!ENTITY NonTextMIMEOutput                        "Ieșiri MIME non-textuale">
 <!ENTITY ImageProcessingandGeneration             "Generarea și procesarea imaginilor">
-<!ENTITY AudioFormatsManipulation                 "Manipularea cu formatele audio">
+<!ENTITY AudioFormatsManipulation                 "Manipularea cu formate audio">
 <!ENTITY CommandLineSpecificExtensions            "Extensii specifice liniei de comandă">
 <!ENTITY WindowsOnlyExtensions                    "Extensii doar pentru Windows">
 <!ENTITY ServerSpecificExtensions                 "Extensii specifice serverului">
-<!ENTITY SearchEngineExtensions                   "Extensii ale motorului de cÄutare">
+<!ENTITY SearchEngineExtensions                   "Extensii ale motorului de căutare">
 <!ENTITY MiscExtensions                           "Extensii diverse">
 <!ENTITY Appendices                               "Anexe">
 <!ENTITY PEAR                                     "PEAR: colecția de extensii și aplicații PHP">
@@ -62,17 +62,17 @@
 <!ENTITY ReservedConstants                        "Constante predefinite">
 <!ENTITY MissingStuff                             "Lucruri care lipsesc">
 <!ENTITY AndSeveralOthers                         "Și alții">
-<!ENTITY Version                                  "Versiunea">
+<!ENTITY Version                                  "Versiune">
 <!ENTITY Description                              "Descriere">
 <!ENTITY Changeable                               "Poate fi modificată">
 <!ENTITY ConfigureOptions                         "Opțiuni de configurare pentru">
-<!ENTITY Default                                  "Valoarea implicită">
-<!ENTITY Definition                               "Definiția">
+<!ENTITY Default                                  "Valoare implicită">
+<!ENTITY Definition                               "Definiție">
 <!ENTITY Functions                                "Funcții">
-<!ENTITY Name                                     "Denumirea">
+<!ENTITY Name                                     "Denumire">
 <!ENTITY Alias                                    "Pseudonim pentru">
-<!ENTITY Type                                     "Tipul">
-<!ENTITY Changelog                                "Jurnalul modificărilor">
+<!ENTITY Type                                     "Tip">
+<!ENTITY Changelog                                "Jurnal al modificărilor">
 <!ENTITY Methods                                  "Metode">
 <!ENTITY InheritedMethods                         "Metode moștenite">
 <!ENTITY InheritedProperties                      "Proprietăți moștenite">
@@ -82,7 +82,7 @@
 
 <!-- These are used in reference/$extname/reference.xml and other
 supplemental files to mark section titles -->
-<!ENTITY reftitle.changelog         '<title xmlns="http://docbook.org/ns/docbook">Istoria schimbărilor</title>'>
+<!ENTITY reftitle.changelog         '<title xmlns="http://docbook.org/ns/docbook">Istoricul schimbărilor</title>'>
 <!ENTITY reftitle.classes           '<title xmlns="http://docbook.org/ns/docbook">Clase predefinite</title>'>
 <!ENTITY reftitle.classsynopsis     '<title xmlns="http://docbook.org/ns/docbook">Sinopsisul clasei</title>'>
 <!ENTITY reftitle.constants         '<title xmlns="http://docbook.org/ns/docbook">Constante predefinite</title>'>
@@ -107,7 +107,7 @@ supplemental files to mark section titles -->
 <!ENTITY reftitle.resources         '<title xmlns="http://docbook.org/ns/docbook">Tipurile resurselor</title>'>
 <!ENTITY reftitle.runtime           '<title xmlns="http://docbook.org/ns/docbook">Configurația la rulare</title>'>
 <!ENTITY reftitle.returnvalues      '<title xmlns="http://docbook.org/ns/docbook">Valorile întoarse</title>'>
-<!ENTITY reftitle.seealso           '<title xmlns="http://docbook.org/ns/docbook">Vedeți de asemenea</title>'>
+<!ENTITY reftitle.seealso           '<title xmlns="http://docbook.org/ns/docbook">A se vedea și</title>'>
 <!ENTITY reftitle.setup             '<title xmlns="http://docbook.org/ns/docbook">Instalarea / configurarea</title>'>
 <!ENTITY reftitle.unicode           '<title xmlns="http://docbook.org/ns/docbook">Unicode</title>'>
 <!ENTITY reftitle.usage             '<title xmlns="http://docbook.org/ns/docbook">Utilizare</title>'>
