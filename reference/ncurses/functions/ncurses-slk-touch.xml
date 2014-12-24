@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 14af302c9c0e561fa6f9cdd956268758ba9a89c5 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
 
-<refentry xml:id="function.ncurses-update-panels" xmlns="http://docbook.org/ns/docbook">
+<refentry xml:id="function.ncurses-slk-touch" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
-  <refname>ncurses_update_panels</refname>
-  <refpurpose>Actualizează ecranul virtual pentru a reflecta relațiile dintre panelurile din stivă</refpurpose>
+  <refname>ncurses_slk_touch</refname>
+  <refpurpose>Forțează afișarea când este efectuat ncurses_slk_noutrefresh</refpurpose>
  </refnamediv>
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>void</type><methodname>ncurses_update_panels</methodname>
+   <type>int</type><methodname>ncurses_slk_touch</methodname>
    <void/>
   </methodsynopsis>
-  &warn.undocumented.func;
+  &warn.experimental.func;
+  <para>
+   Forțează ca toate etichetele tastelor soft să fie afișate următoarea dată când
+   este efectuată <function>ncurses_slk_noutrefresh</function>.
+  </para>
  </refsect1>
 </refentry>
 

@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 14af302c9c0e561fa6f9cdd956268758ba9a89c5 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
 
-<refentry xml:id="function.ncurses-update-panels" xmlns="http://docbook.org/ns/docbook">
+<refentry xml:id="function.ncurses-slk-attr" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
-  <refname>ncurses_update_panels</refname>
-  <refpurpose>Actualizează ecranul virtual pentru a reflecta relațiile dintre panelurile din stivă</refpurpose>
+  <refname>ncurses_slk_attr</refname>
+  <refpurpose>Întoarce atributul curent al etichetelor soft ale tastelor</refpurpose>
  </refnamediv>
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>void</type><methodname>ncurses_update_panels</methodname>
+   <type>int</type><methodname>ncurses_slk_attr</methodname>
    <void/>
   </methodsynopsis>
-  &warn.undocumented.func;
+  &warn.experimental.func;
+  <para>
+   Întoarce atributul etichetei soft a tastei curente.
+  </para>
+ </refsect1>
+ <refsect1 role="returnvalues">
+  &reftitle.returnvalues;
+  <para>
+   Atributul, ca un număr întreg.
+  </para>
  </refsect1>
 </refentry>
 
