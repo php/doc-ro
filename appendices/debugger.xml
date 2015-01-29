@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 0ac4d8c6b617817bea0de733b986268ba80b0eae Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 56591e6754bc29c9cc36b5c901a47699f7bb421b Maintainer: simionea Status: ready -->
  <appendix xml:id="debugger" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Depistarea erorilor (debugging) în PHP</title>
 
   <sect1 xml:id="debugger-about">
    <title>Despre debugging în PHP</title>
    <simpara>
-    PHP nu posedă o facilitate internă de debugging.
+    PHP 5.6 este furnizat cu <link linkend="migration56.new-features.phpdbg">debugger-ul
+    interactiv phpdbg</link>.
+    Însă versiunile PHP anterioare 5.6 nu au o facilitate internă de debugging.
     Însă puteți folosi unul dintre debugger-ele externe.
     <link xlink:href="&url.zend.ide;">Mediul Zend IDE</link> include
     un debugger, și mai sunt și alte extensii gratuite de debugging, cum ar fi
