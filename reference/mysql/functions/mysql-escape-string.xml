@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 65e697ff671608989432a6e6bf8ae8128b2be2c7 Maintainer: zamolxe Status: ready -->
+<!-- EN-Revision: 8a4247cc1b7daf4daaaec8701d46d1daa1c0b886 Maintainer: zamolxe Status: ready -->
 <refentry xml:id="function.mysql-escape-string" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>mysql_escape_string</refname>
@@ -10,7 +10,7 @@
 
  <refsynopsisdiv>
   <warning>
-   &mysql.alternative.note;
+   &mysql.alternative.note.4-3-0;
    <simplelist role="alternatives">
     <member><function>mysqli_escape_string</function></member>
     <member><methodname>PDO::quote</methodname></member>
@@ -36,7 +36,6 @@
     <function>mysql_escape_string</function> nu ia ca argument conexiunea curenta 
    si nu respecta encodingul setat la momentul respectiv.  
   </para>
-  &warn.deprecated.function-5-3-0.removed-6-0-0;
  </refsect1>
 
  <refsect1 role="parameters">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 65e697ff671608989432a6e6bf8ae8128b2be2c7 Maintainer: zamolxe Status: ready -->
+<!-- EN-Revision: 3678ad381351e239a28248ac235a41336d970011 Maintainer: zamolxe Status: ready -->
 <!-- CREDITS: simionea -->
 <refentry xml:id="function.mysql-field-seek" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -14,8 +14,10 @@
    &mysql.alternative.note;
    <simplelist role="alternatives">
     <member><function>mysqli_field_seek</function></member>
-    <!-- @TODO Expand on the following -->
-    <member><methodname>PDOStatement::fetch</methodname> utilizând parametri opționali</member>
+    <member>
+     <methodname>PDOStatement::fetch</methodname> utilizând parametrii
+     <parameter>cursor_orientation</parameter> și <parameter>offset</parameter>
+    </member>
    </simplelist>
   </warning>
  </refsynopsisdiv>

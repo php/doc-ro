@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 41060e691dc09b9b190e2181123dbc8286e05843 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 9ccb86fb6f74ca88541ae1e6d056cbc680cadc32 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="about" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Despre manual</title>
@@ -285,10 +285,7 @@ int strlen ( string $string )
   <para>
    Toate lucrările de dezvoltare se efectuează în Git și pot fi
    verificate după cum este descris în pagina
-   <link xlink:href="&url.php.anongit;">accesul anonim la Git</link>. Sau
-   aceleași surse pot fi descărcate ca
-   <link xlink:href="&url.php.snapshots;">instantanee PHP</link>, disponibile
-   pentru toate ramurile active ale PHP.
+   <link xlink:href="&url.php.anongit;">accesul anonim la Git</link>.
   </para>
   <para>
    Și pentru a clarifica lucrurile, manualul se va referi la versiuni majore,

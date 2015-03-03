@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 0b93d1fa3a46529bbec57ed1454cf19dd98ae42d Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 8a4247cc1b7daf4daaaec8701d46d1daa1c0b886 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -545,10 +545,24 @@ xmlns="http://docbook.org/ns/docbook"><term><parameter>dbm_identifier</parameter
 <function>dbmopen</function>.</para></listitem></varlistentry>'>
 
 <!-- JSON notes -->
-<!ENTITY json.implementation.superset '<note xmlns="http://docbook.org/ns/docbook">
-<para>PHP implementează in superset al JSON - el de asemenea va codifica și va
-decodifica tipuri scalare și &null;. Standardul JSON susține astfel de valori
-doar când ele sunt încorporate într-un tablou sau obiect.</para></note>'>
+<!ENTITY json.implementation.superset '
+ <note xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <para>
+   PHP implementează un superset al JSON, după cum este specificat în documentul
+   <link xlink:href="&url.rfc;4627">RFC 4627</link> original; de asemenea el va
+   codifica și va decodifica tipuri scalare și &null;. RFC 4627 susține aceste
+   valori doar atunci când ele sunt încorporate într-un tablou sau obiect.
+  </para>
+  <para>
+   Cu toate că acest superset este consecvent cu definiția extinsă de "text JSON"
+   din noul <link xlink:href="&url.rfc;7159">RFC 7159</link> (care are ca scop să
+   înlocuiască RFC 4627) și
+   <link xlink:href="&url.json.ecma;">ECMA-404</link>, aceasta poate cauza
+   probleme de interoperabilitate cu interpretorii JSON mai vechi care aderă
+   strict la RFC 4627 la codificarea unei singure valori scalare.
+  </para>
+ </note>
+'>
 
 <!-- cURL notes -->
 
@@ -706,6 +720,25 @@ xmlns:xlink='http://www.w3.org/1999/xlink'>timezonedb</link> al PECL.</simpara>
 <!ENTITY date.timezone.bc '<simpara xmlns="http://docbook.org/ns/docbook">Nu
 utilizați zonele orare enumerate aici (afară de UTC), ele există numai din
 motive de compatibilitate inversă.</simpara>'>
+
+<!ENTITY date.timezone.posix-signs '<simpara xmlns="http://docbook.org/ns/docbook">
+ Dacă nu țineți seama de avertizarea anterioară, vă rugăm să atrageți atenția că
+ baza de date a fuselor orare IANA, care oferă susținerea furelor orare în PHP
+ utilizează semne în stil POSIX, ceea ce va duce la faptul că fusele orare
+ <literal>Etc/GMT+n</literal> și <literal>Etc/GMT-n</literal> vor fi inversate
+ față de modul în care se utilizează de obicei.
+</simpara>
+<simpara xmlns="http://docbook.org/ns/docbook">
+ Spre exemplu, fusul orar de 8 ore înainte de GMT, care e utilizat în China și
+ Australia de Vest (printre altele) este de fapt <literal>Etc/GMT-8</literal>
+ în această bază de date, și nu <literal>Etc/GMT+8</literal> după cum s-ar fi
+ așteptat în mod normal.
+</simpara>
+<simpara xmlns="http://docbook.org/ns/docbook">
+ Și iarăși, este foarte recomandabil să utilizați fusul orar corect pentru
+ locația dumneavoastră, cum ar fi <literal>Asia/Shanghai</literal> sau
+ <literal>Australia/Perth</literal> pentru exemplele de mai sus.
+</simpara>'>
 
 <!ENTITY date.timezone.errors.description '<para xmlns="http://docbook.org/ns/docbook">
 Fiecare apel al unei funcții de dată/oră va genera o <constant>E_NOTICE
@@ -1394,13 +1427,43 @@ field_offset</parameter> începe de la <literal>0</literal>. Dacă <parameter>
 field_offset</parameter> nu există, se generează de asemenea o eroare de nivel
 <constant>E_WARNING</constant>.</para></listitem></varlistentry>'>
 
-<!ENTITY mysql.alternative.note '<para xmlns="http://docbook.org/ns/docbook">
-Această extensie este dezaprobată începând cu PHP 5.5.0 și va fi eliminată în
-viitor. În locul ei trebuie utilizate extensiile <link linkend="book.mysqli">MySQLi</link>
-sau <link linkend="ref.pdo-mysql">PDO_MySQL</link>. Vedeți de asemenea ghidul
+<!ENTITY mysql.alternative.note.4-3-0 '<para xmlns="http://docbook.org/ns/docbook">
+Această funcție a devenit învechită în PHP 4.3.0, și va fi eliminată în viitor,
+împreună cu întreaga <link linkend="book.mysql">extensie MySQL originală</link>.
+În locul ei trebuie utilizată extensia <link linkend="book.mysqli">MySQLi</link>
+sau <link linkend="ref.pdo-mysql">PDO_MySQL</link>. Accesați de asemenea ghidul
 <link linkend="mysqlinfo.api.choosing">MySQL: selectarea unei API</link> și
-<link linkend="faq.databases.mysql.deprecated">FAQ asociat</link> pentru mai
-multe informații. Alternative ale acestei funcții includ:</para>'>
+<link linkend="faq.databases.mysql.deprecated">FAQ asociat</link>
+pentru informații suplimentare. Variante alternative pentru această funcție
+includ:</para>'>
+
+<!ENTITY mysql.alternative.note.5-3-0 '<para xmlns="http://docbook.org/ns/docbook">
+Această funcție a devenit învechită în PHP 5.3.0, și va fi eliminată în viitor,
+împreună cu întreaga <link linkend="book.mysql">extensie MySQL originală</link>.
+În locul ei trebuie utilizată extensia <link linkend="book.mysqli">MySQLi</link>
+sau <link linkend="ref.pdo-mysql">PDO_MySQL</link>. Accesați de asemenea ghidul
+<link linkend="mysqlinfo.api.choosing">MySQL: selectarea unei API</link> și
+<link linkend="faq.databases.mysql.deprecated">FAQ asociat</link>
+pentru informații suplimentare. Variante alternative pentru această funcție
+includ:</para>'>
+
+<!ENTITY mysql.alternative.note.5-4-0 '<para xmlns="http://docbook.org/ns/docbook">
+Această funcție a devenit învechită în PHP 5.4.0, și va fi eliminată în viitor,
+împreună cu întreaga <link linkend="book.mysql">extensie MySQL originală</link>.
+În locul ei trebuie utilizată extensia <link linkend="book.mysqli">MySQLi</link>
+sau <link linkend="ref.pdo-mysql">PDO_MySQL</link>. Accesați de asemenea ghidul
+<link linkend="mysqlinfo.api.choosing">MySQL: selectarea unei API</link> și
+<link linkend="faq.databases.mysql.deprecated">FAQ asociat</link>
+pentru informații suplimentare. Variante alternative pentru această funcție
+includ:</para>'>
+
+<!ENTITY mysql.alternative.note '<para xmlns="http://docbook.org/ns/docbook">
+Această extensie a devenit învechită începând cu PHP 5.5.0 și va fi eliminată în
+viitor. În locul ei trebuie utilizată extensia <link linkend="book.mysqli">MySQLi</link>
+sau <link linkend="ref.pdo-mysql">PDO_MySQL</link>. Accesați de asemenea ghidul
+<link linkend="mysqlinfo.api.choosing">MySQL: selectarea unei API</link> și
+<link linkend="faq.databases.mysql.deprecated">FAQ asociat</link> pentru
+informații suplimentare. Variante alternative pentru această funcție includ:</para>'>
 
 <!-- Sybase Notes -->
 <!ENTITY sybase.ct.only '<note xmlns="http://docbook.org/ns/docbook"><simpara>
@@ -2253,6 +2316,31 @@ Dacă mai multe documente nu conțin câmpul, un indice unic va respinge toate
 documentele în afară de primul. Opiunea <literal>"sparse"</literal> poate fi
 utilizată pentru a depăși aceasta, deoarece ea va preveni indexarea documentelor
 fără valoarea câmpului.</para></note></listitem>'>
+
+<!ENTITY mongo.listcollections.note '<note xmlns="http://docbook.org/ns/docbook">
+<simpara>Această metodă va utiliza comanda bazei de date
+<link xlink:href="&url.mongodb.dochub.listcollections;" xmlns:xlink="http://www.w3.org/1999/xlink">listCollections</link>
+la comunicarea cu MongoDB 2.8+. Pentru versiunile anterioare ale bazei de date, metoda va interpela colecția specială
+<literal>system.namespaces</literal>.</simpara></note>'>
+
+<!ENTITY mongo.listcollections.parameters.filter '<listitem xmlns="http://docbook.org/ns/docbook">
+<para><literal>"filter"</literal></para><para>Criteriu opțional pentru
+interpelare. Dacă este furnizat, acest criteriu va fi utilizat pentru a filtra
+colecțile incluse în rezultat.</para><para>Câmpurile relevante, ce pot fi
+interpelate, includ <literal>"name"</literal> (colecția name ca șir de caractere,
+fără prefixul cu denumirea bazei de date) și <literal>"options" (obiect ce
+conține opțiuni utilizate la crearea colecției).</literal>.</para>
+<note><simpara>MongoDB 2.6 și versiunile anterioare necesită ca criteriul
+<literal>"name"</literal>, dacă este specificat, să fie o valoare string (de ex.
+potrivirea la egalitate). Aceasta este din cauza că driver-ul trebuie să adauge
+ca prefix la valoare denumirea bazei de date pentru a interpela colecția
+<literal>system.namespaces</literal>. Versiunile ulterioare ale MongoDB nu au
+această limitare, deoarece driver-ul va utiliza comanda listCollections.
+</simpara></note></listitem>'>
+
+<!ENTITY mongo.listcollections.parameters.includesystemcollections '<listitem xmlns="http://docbook.org/ns/docbook">
+<para><literal>"includeSystemCollections"</literal></para><para>Boolean, implicit
+este &false;. Determină dacă colecțiile de sistem trebuie incluse în rezultat.</para></listitem>'>
 
 <!ENTITY mongo.writes.parameters.writeconcern '<listitem xmlns="http://docbook.org/ns/docbook">
 <para><literal>"w"</literal></para><para>Vedeți
