@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 43af58dcc6ed213c9f3b74f01c5a1c31813f2398 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 543e4ac3144bf5444a3abd584a8974b4e44c9947 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="json.constants" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.constants;
@@ -263,6 +263,18 @@
      Codifică caracterele Unicode pe mai mulți baiți așa cum sunt (implicit se
      efectuează evadarea de tip \uXXXX).
      Disponibilă începând cu PHP 5.4.0.
+    </simpara>
+   </listitem>
+  </varlistentry>
+  <varlistentry xml:id="constant.json-preserve-zero-fraction">
+   <term>
+    <constant>JSON_PRESERVE_ZERO_FRACTION</constant>
+     (<type>integer</type>)
+   </term>
+   <listitem>
+    <simpara>
+     Asigură ca valorile <type>float</type> să fie întotdeauna codificate ca valori float.
+     Disponibilă începând cu PHP 5.6.6.
     </simpara>
    </listitem>
   </varlistentry>

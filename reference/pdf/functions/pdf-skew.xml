@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: a44a1e0b7918846659a3c91013855d2c3d674fb9 Maintainer: simionea Status: ready -->
 <refentry xmlns="http://docbook.org/ns/docbook" xml:id="function.pdf-skew">
  <refnamediv>
   <refname>PDF_skew</refname>
@@ -17,7 +17,7 @@
    </methodsynopsis>
   <para>
    Deformează oblic sistemul de coordonate în direcția x și y la
-   <parameter>alpha</parameter> și <parameter>beta</parameter> grade.
+   <parameter>alpha</parameter> și <parameter>beta</parameter> grade respectiv.
    &return.success;
   </para>
  </refsect1>

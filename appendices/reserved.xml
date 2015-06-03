@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 547857d6033690c942cb455b2a4d23b283af0540 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: c027c09f4c507830592bb67aedf00962b6c1ca17 Maintainer: simionea Status: ready -->
 
  <appendix xml:id="reserved" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Lista cuvintelor rezervate</title>
@@ -455,6 +455,66 @@
   </sect1>
 
   &appendices.reserved.constants;
+
+  <sect1 xml:id="reserved.other-reserved-words">
+   <title>Lista altor cuvinte rezervate</title>
+   <simpara>
+    Aceste cuvinte nu pot fi utilizate pentru a denumi o clasă, interfață sau
+    trăsătură. Aceste cuvinte de asemenea nu pot fi utilizate în spații de nume.
+    Unele din aceste cuvinte sunt rezervate pentru a introduce în viitor
+    facilități PHP fără a strica compatibilitatea inversă.
+   </simpara>
+   <para>
+    <table>
+     <title>Cuvinte rezervate</title>
+     <tgroup cols="5">
+      <tbody>
+       <row>
+        <entry>
+         int (începând cu PHP 7)
+        </entry>
+        <entry>
+         float (începând cu PHP 7)
+        </entry>
+        <entry>
+         bool (începând cu PHP 7)
+        </entry>
+        <entry>
+         string (începând cu PHP 7)
+        </entry>
+       </row>
+       <row>
+        <entry>
+         true (începând cu PHP 7)
+        </entry>
+        <entry>
+         false (începând cu PHP 7)
+        </entry>
+        <entry>
+         null (începând cu PHP 7)
+        </entry>
+        <entry>
+         resource (începând cu PHP 7)
+        </entry>
+       </row>
+       <row>
+        <entry>
+         object (începând cu PHP 7)
+        </entry>
+        <entry>
+         mixed (începând cu PHP 7)
+        </entry>
+        <entry>
+         numeric (începând cu PHP 7)
+        </entry>
+        <entry>
+        </entry>
+       </row>
+      </tbody>
+     </tgroup>
+    </table>
+   </para>
+  </sect1>
 
 </appendix>
 

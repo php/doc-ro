@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 7ae82a50bb7cb029184a6d30001a2f165e88b28d Maintainer: simionea Status: ready -->
+<!-- EN-Revision: bce4e5f7d7979c5b672e9375a17860b0ced5eef3 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
-<!-- splitted from ./en/functions/datetime.xml, last change in rev 1.2 -->
 <refentry xml:id="function.mktime" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>mktime</refname>
@@ -153,6 +152,11 @@
         în loc.
        </para>
       </note>
+      <note>
+       <para>
+        Acest parametru a fost eliminat în PHP 7.0.0.
+       </para>
+      </note>
      </listitem>
     </varlistentry>
    </variablelist>
@@ -185,6 +189,12 @@
       </row>
      </thead>
      <tbody>
+      <row>
+       <entry>7.0.0</entry>
+       <entry>
+        Parametrul <parameter>is_dst</parameter> a fost eliminat.
+       </entry>
+      </row>
       <row>
        <entry>5.3.0</entry>
        <entry>

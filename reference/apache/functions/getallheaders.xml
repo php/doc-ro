@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 8b5940cadeb4f1c8492f4a7f70743a2be807cf39 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: ad8e0151314c98ae54244ce625ed41cf14798bed Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/apache.xml, last change in rev 1.2 -->
 <refentry xml:id="function.getallheaders" xmlns="http://docbook.org/ns/docbook">
@@ -57,7 +57,9 @@
        <entry>5.4.0</entry>
        <entry>
         Această funcție a devenit disponibilă în FastCGI. Anterior ea era
-        susținută doar dacă PHP a fost instalat ca modul Apache.
+        susținută dacă PHP era instalat ca modul Apache sau ca
+        <link linkend="book.nsapi">modul server NSAPI</link> în serverele web
+        Netscape/iPlanet/SunONE.
        </entry>
       </row>
       <row>

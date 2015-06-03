@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 8a4247cc1b7daf4daaaec8701d46d1daa1c0b886 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: f404900be98ab7799ce3010dc04f5c8818054b56 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -94,10 +94,9 @@ Această funcție nu este implementată pe platformele Windows.</simpara></note>
 <simpara>Această extensie nu este disponibilă pe platformele Windows.</simpara></note>'>
 
 <!ENTITY note.randomseed '<note xmlns="http://docbook.org/ns/docbook"><simpara>
-Începând cu PHP 4.2.0 nu este nevoie de a însămânța generatorul de numere
-aleatoare prin intermediul <function>srand</function> sau
-<function>mt_srand</function>, deoarece aceasta se efectuează în mod automat.
-</simpara></note>'>
+Nu este nevoie de a însămânța generatorul de numere aleatoare cu ajutorul
+<function>srand</function> sau <function>mt_srand</function>, deoarece aceasta
+se efectuează în mod automat.</simpara></note>'>
 
 <!ENTITY note.registerglobals '<note xmlns="http://docbook.org/ns/docbook">
 <title>register_globals: notă importantă</title><para>Începând cu PHP 4.2.0,
@@ -113,13 +112,6 @@ pur și simplu înseamnă că ea este disponibilă în toate circumstanțele pe
 parcursul script-ului. Nu este nevoie de a scrie
 <command>global $variable;</command> pentru a o accesa din funcții sau metode.
 </para></note>">
-
-<!ENTITY note.superglobals '<note xmlns="http://docbook.org/ns/docbook"><title>
-Superglobalele: notă despre disponibilitate</title><para>Tablourile
-superglobale, cum ar fi <varname>$_GET</varname>, <varname>$_POST</varname> și
-<varname>$_SERVER</varname>, etc. sunt disponibile începând cu PHP 4.1.0.
-Pentru mai multe informații, citiți secțiunea manualului despre
-&link.superglobals;</para></note>'>
 
 <!ENTITY note.uses-ob '<note xmlns="http://docbook.org/ns/docbook"><para>
 Când este utilizat parametrul <parameter>return</parameter>, această funcție
@@ -251,6 +243,14 @@ PHP 5.5.0.</simpara></warning>'>
 <simpara>Această funcție este <emphasis>DEZAPROBATĂ</emphasis> începând cu PHP
 5.5.0. Utilizarea acestei funcții este foarte nerecomandată.</simpara></warning>'>
 
+<!ENTITY warn.deprecated.feature-5-5-0.removed-7-0-0 '<warning xmlns="http://docbook.org/ns/docbook">
+<simpara>Această facilitate este <emphasis>DEZAPROBATĂ</emphasis> începând cu PHP
+5.5.0 și <emphasis>ELIMINATĂ</emphasis> începând cu PHP 7.0.0.</simpara></warning>'>
+
+<!ENTITY warn.deprecated.function-5-5-0.removed-7-0-0 '<warning xmlns="http://docbook.org/ns/docbook">
+<simpara>Această funcție este <emphasis>DEZAPROBATĂ</emphasis> începând cu PHP
+5.5.0 și <emphasis>ELIMINATĂ</emphasis> începând cu PHP 7.0.0.</simpara></warning>'>
+
 <!ENTITY warn.experimental.func '<warning xmlns="http://docbook.org/ns/docbook">
 <simpara>Această funcție este <emphasis>EXPERIMENTALĂ</emphasis>.
 Comportamentul acestei funcții, denumirea sa și orice alte aspecte documentate
@@ -279,20 +279,14 @@ implicită <literal>on</literal>. În esență ea execută
 <function>stripslashes</function> poate fi utilizată pentru a elimina
 slash-urile suplimentare.</para></note>'>
 
-<!ENTITY warn.no-win32-fopen-wrapper '<warning xmlns="http://docbook.org/ns/docbook">
-<para>Versiunile PHP pentru Windows până la PHP 4.3.0 nu susțin accesarea
-fișierelor la distanță prin intermediul acestei funcții, chiar dacă
-<link linkend="ini.allow-url-fopen">allow_url_fopen</link> este activată.
-</para></warning>'>
-
 <!ENTITY warn.ssl-non-standard '<warning xmlns="http://docbook.org/ns/docbook">
 <para>La utilizarea SSL, Microsoft IIS va viola protocolul prin închiderea
 conexiunii fără a trimite un indicator <literal>close_notify</literal>. PHP va
 raporta aceasta ca "SSL: Fatal Protocol Error" (eroare fatală de protocol) când
 se ajunge la sfârșitul datelor. Pentru a evita aceasta coborât nivelul
 <link linkend="ini.error-reporting">error_reporting</link> pentru a nu include
-avertizări. PHP 4.3.7 și versiunile ulterioare pot detecta soft-ul de server
-IIS care produce astfel de greșeli când deschideți fluxul utilizând învelișul
+avertizări. PHP poate detecta soft-ul de server IIS care produce astfel de
+greșeli când deschideți fluxul utilizând învelișul
 <literal>https://</literal> și va suprima automat avertizările. La utilizarea
 <function>fsockopen</function> pentru a crea un socket
 <literal>ssl://</literal> programatorul este responsabil să detecteze și să
@@ -1180,17 +1174,6 @@ moartă. Oricum însă codul-sursă al acestei extensii este încă disponibil �
 <acronym xmlns="http://docbook.org/ns/docbook">PECL</acronym>
 <acronym xmlns="http://docbook.org/ns/docbook">SVN</acronym> aici: '>
 
-<!ENTITY pecl.source.4 'În PHP 4 sursa acestei extensii
-<acronym xmlns="http://docbook.org/ns/docbook">PECL</acronym> poate fi găsită
-în directorul <filename xmlns="http://docbook.org/ns/docbook">ext/</filename>
-din sursa PHP, sau la referința <acronym xmlns="http://docbook.org/ns/docbook">
-PECL</acronym> de mai sus.'>
-
-<!ENTITY pecl.windows.4 'În PHP 4 acest
-<acronym xmlns="http://docbook.org/ns/docbook">DLL</acronym> se află în
-directorul <filename xmlns="http://docbook.org/ns/docbook">extensions/</filename>
-al distributivului PHP pentru Windows.'>
-
 <!ENTITY pecl.windows.download 'O bibliotecă
 <acronym xmlns="http://docbook.org/ns/docbook">DLL</acronym> pentru această
 extensie <acronym xmlns="http://docbook.org/ns/docbook">PECL</acronym> nu este
@@ -1312,14 +1295,10 @@ utilizează setul de caractere implicit stabilit în fișierul
 <function>mysqli_init</function>.</para></note>'>
 
 <!-- Notes for SAPI/Apache -->
-<!ENTITY note.apache.nsapi-module '<para xmlns="http://docbook.org/ns/docbook">
-Începând cu PHP 4.3.3 puteți utiliza această funcție cu
-<link linkend="book.nsapi">modulul de server NSAPI</link> și în webserver-ele
-Netscape/iPlanet/SunONE.</para>'>
-
 <!ENTITY apache.req.module '<simpara xmlns="http://docbook.org/ns/docbook">
-Această funcție e susținută numai dacă PHP este instalat ca modul Apache.
-</simpara>'>
+Această funcție e susținută atunci când PHP este instalat ca modul Apache sau ca
+<link linkend="book.nsapi">Modul server NSAPI</link> în servere web
+Netscape/iPlanet/SunONE.</simpara>'>
 
 <!-- SimpleXML Notes -->
 <!ENTITY simplexml.iteration '<note xmlns="http://docbook.org/ns/docbook">
@@ -2539,6 +2518,167 @@ sau în timpul executării <methodname>MongoWriteBatch::execute</methodname>.</p
 <entry>namespace</entry>
 <entry>Spațiul de nume MongoDB utilizat pentru mesajul de protocol <literal>dbname.collectionname</literal></entry>
 </row></tbody></tgroup></informaltable></para></listitem></varlistentry>'>
+
+<!-- mongodb -->
+<!ENTITY mongodb.parameter.namespace '
+   <varlistentry xmlns="http://docbook.org/ns/docbook">
+    <term><parameter>namespace</parameter></term>
+    <listitem>
+     <para>
+      Un spațiu de nume deplin (databaseName.collectionName)
+     </para>
+    </listitem>
+   </varlistentry>
+'>
+<!ENTITY mongodb.parameter.readPreference '
+   <varlistentry xmlns="http://docbook.org/ns/docbook">
+    <term><parameter>readPreference</parameter></term>
+    <listitem>
+     <para>
+      Opțional o clasă <classname>MongoDB\Driver\ReadPreference</classname> spre
+      care va fi direcționată comanda. Dacă nu este furnizată, ca valoare
+      implicită vor fi considerate preferințele Read Preferences stabilite de
+      <link linkend="mongodb-driver-manager.construct-uri">MongoDB Connection URI</link>.
+     </para>
+    </listitem>
+   </varlistentry>
+'>
+<!ENTITY mongodb.parameter.writeConcern '
+   <varlistentry xmlns="http://docbook.org/ns/docbook">
+    <term><parameter>writeConcern</parameter></term>
+    <listitem>
+     <para>
+      Opțional o clasă <classname>MongoDB\Driver\WriteConcern</classname>. Dacă
+      nu este furnizată, ca valoare implicită va fi considerat Write Concern
+      stabilit de <link linkend="mongodb-driver-manager.construct-uri">MongoDB Connection URI</link>.
+     </para>
+    </listitem>
+   </varlistentry>
+'>
+<!ENTITY mongodb.parameter.filter '
+   <varlistentry xmlns="http://docbook.org/ns/docbook">
+    <term><parameter>filter</parameter></term>
+    <listitem>
+     <para>
+      Filtrul de căutare.
+     </para>
+    </listitem>
+   </varlistentry>
+'>
+<!ENTITY mongodb.parameter.newObj '
+   <varlistentry xmlns="http://docbook.org/ns/docbook">
+    <term><parameter>newObj</parameter></term>
+    <listitem>
+     <para>
+      Un tablou de operatori de actualizare, sau întregul obiect cu care va fi înlocuit.
+     </para>
+    </listitem>
+   </varlistentry>
+'>
+<!ENTITY mongodb.parameter.deleteOptions '
+   <varlistentry xmlns="http://docbook.org/ns/docbook">
+    <term><parameter>deleteOptions</parameter></term>
+    <listitem>
+     <para>
+      <table>
+       <title>deleteOptions</title>
+       <tgroup cols="4">
+        <thead>
+         <row>
+          <entry>Opțiune</entry>
+          <entry>Tip</entry>
+          <entry>Descriere</entry>
+          <entry>Valoare implicită</entry>
+         </row>
+        </thead>
+        <tbody>
+         <row>
+          <entry>limit</entry>
+          <entry>boolean</entry>
+          <entry>Elimină toate documentele ce se potrivesc (limit=0), sau doar primul document ce se potrivește (limit=1)</entry>
+          <entry>0</entry>
+         </row>
+        </tbody>
+       </tgroup>
+      </table>
+     </para>
+    </listitem>
+   </varlistentry>
+'>
+<!ENTITY mongodb.parameter.updateOptions '
+   <varlistentry xmlns="http://docbook.org/ns/docbook">
+    <term><parameter>updateOptions</parameter></term>
+    <listitem>
+     <para>
+      <table>
+       <title>updateOptions</title>
+       <tgroup cols="4">
+        <thead>
+         <row>
+          <entry>Opțiune</entry>
+          <entry>Tip</entry>
+          <entry>Descriere</entry>
+          <entry>Valoare implicită</entry>
+         </row>
+        </thead>
+        <tbody>
+         <row>
+          <entry>multi</entry>
+          <entry>boolean</entry>
+          <entry>Actualizează doar primul document ce se potrivește (multi=false), sau toate documentele ce se potrivesc (multi=true)</entry>
+          <entry>false</entry>
+         </row>
+         <row>
+          <entry>upsert</entry>
+          <entry>boolean</entry>
+          <entry>Dacă <parameter>filter</parameter> nu potrivește vre-un document
+           existent, inserează <parameter>newObj</parameter> ca un obiect nou,
+           aplicând orice modificatori atomari asupra <parameter>filter</parameter>,
+           dacă se aplică.</entry>
+          <entry>0</entry>
+         </row>
+        </tbody>
+       </tgroup>
+      </table>
+     </para>
+    </listitem>
+   </varlistentry>
+'>
+<!ENTITY mongodb.returns.WriteResult '
+  <para xmlns="http://docbook.org/ns/docbook">
+   Întoarce <classname>MongoDB\Driver\WriteResult</classname> în caz de succes, &mongodb.throws.onfailure;.
+  </para>
+'>
+<!ENTITY mongodb.throws.onfailure 'emite o excepție (instanceof <classname xmlns="http://docbook.org/ns/docbook" >MongoDB\Driver\Exception</classname>) în caz de eșec'>
+<!ENTITY mongodb.throws.std '&mongodb.throws.authentication;&mongodb.throws.connection;'>
+<!ENTITY mongodb.throws.executesingle '&mongodb.throws.duplicatekey;&mongodb.throws.writeexception;&mongodb.throws.writeconcernexception;'>
+<!ENTITY mongodb.throws.bulkwriteexception '<member xmlns="http://docbook.org/ns/docbook">Emite <classname>MongoDB\Driver\BulkWriteException</classname> la orice eșec de înscriere (eșecuri la WriteError și WriteConcern)</member>'>
+<!ENTITY mongodb.throws.argumentparsing '<member xmlns="http://docbook.org/ns/docbook">Emite <classname>MongoDB\Driver\InvalidArgumentException</classname> la erori de analiză a argumentelor.</member>'>
+<!ENTITY mongodb.throws.duplicatekey '<member xmlns="http://docbook.org/ns/docbook">Emite <classname>MongoDB\Driver\DuplicateKeyException</classname> dacă o înscriere cauzează erori Duplicate Key</member>'>
+<!ENTITY mongodb.throws.writeexception '<member xmlns="http://docbook.org/ns/docbook">Emite <classname>MongoDB\Driver\WriteException</classname> în caz de Write Error</member>'>
+<!ENTITY mongodb.throws.writeconcernexception '<member xmlns="http://docbook.org/ns/docbook">Emite <classname>MongoDB\Driver\WriteConcernException</classname> în caz de eșec Write Concern</member>'>
+<!ENTITY mongodb.throws.authentication '<member xmlns="http://docbook.org/ns/docbook">Emite <classname>MongoDB\Driver\AuthenticationException</classname> dacă autentificarea este necesară și eșuează</member>'>
+<!ENTITY mongodb.throws.connection '<member xmlns="http://docbook.org/ns/docbook">Emite <classname>MongoDB\Driver\ConnectionException</classname> dacă conexiunea către server eșuează din cauza unui alt motiv decât autentificarea</member>'>
+<!ENTITY mongodb.note.getwriteerrors '
+  <note xmlns="http://docbook.org/ns/docbook">
+   <para>
+    În caz de eșec la înscriere,
+    <methodname>MongoDB\Driver\WriteResult::getWriteErrors</methodname> va avea
+    doar o <classname>MongoDB\Driver\WriteError</classname> în tablou, și
+    <methodname>MongoDB\Driver\WriteError::getIndex</methodname> va fi întotdeauna
+    0 (indicele acestei operațiuni în set).
+   </para>
+  </note>
+'>
+<!ENTITY mongodb.note.getupsertedids '
+  <note xmlns="http://docbook.org/ns/docbook">
+   <para>
+    <methodname>MongoDB\Driver\WriteResult::getUpsertedIds</methodname> va avea
+    doar un <classname>BSON\ObjectID</classname> în tablou, și indicele va fi
+    întotdeauna 0 (indicele acestei operațiuni în set).
+   </para>
+  </note>
+'>
 
 <!-- Radius -->
 <!ENTITY radius.request.required '<note xmlns="http://docbook.org/ns/docbook">

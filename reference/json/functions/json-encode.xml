@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 01affe9d1b477a955c469540637fc187315f8021 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 543e4ac3144bf5444a3abd584a8974b4e44c9947 Maintainer: simionea Status: ready -->
 <!-- CREDITS: radical -->
 <refentry xml:id="function.json-encode" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -52,6 +52,7 @@
        <constant>JSON_PRETTY_PRINT</constant>,
        <constant>JSON_UNESCAPED_SLASHES</constant>,
        <constant>JSON_FORCE_OBJECT</constant>,
+       <constant>JSON_PRESERVE_ZERO_FRACTION</constant>,
        <constant>JSON_UNESCAPED_UNICODE</constant>. Comportamentul acestor
        constante este descris în
        <link linkend="json.constants">pagina cu constante JSON</link>.
@@ -90,6 +91,12 @@
       </row>
      </thead>
      <tbody>
+      <row>
+       <entry>5.6.6</entry>
+       <entry>
+        <parameter>option</parameter> <constant>JSON_PRESERVE_ZERO_FRACTION</constant> a fost adăugată.
+       </entry>
+      </row>
       <row>
        <entry>5.5.0</entry>
        <entry>
@@ -203,6 +210,52 @@ Associative array always output as object: {"foo":"bar","baz":"long"}
     </screen>
    </example>
    <example>
+    <title>Exemplu a opțiunii JSON_NUMERIC_CHECK</title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+echo "Strings representing numbers automatically turned into numbers".PHP_EOL;
+$numbers = array('+123123', '-123123', '1.2e3', '0.00001');
+var_dump(
+ $numbers,
+ json_encode($numbers, JSON_NUMERIC_CHECK)
+);
+echo "Strings containing improperly formatted numbers".PHP_EOL;
+$strings = array('+a33123456789', 'a123');
+var_dump(
+ $strings,
+ json_encode($strings, JSON_NUMERIC_CHECK)
+);
+?>
+]]>
+    </programlisting>
+    &example.outputs;
+    <screen>
+<![CDATA[
+Strings representing numbers automatically turned into numbers
+array(4) {
+  [0]=>
+  string(7) "+123123"
+  [1]=>
+  string(7) "-123123"
+  [2]=>
+  string(5) "1.2e3"
+  [3]=>
+  string(7) "0.00001"
+}
+string(28) "[123123,-123123,1200,1.0e-5]"
+Strings containing improperly formatted numbers
+array(2) {
+  [0]=>
+  string(13) "+a33123456789"
+  [1]=>
+  string(4) "a123"
+}
+string(24) "["+a33123456789","a123"]"
+]]>
+    </screen>
+   </example>
+   <example>
     <title>Un exemplu cu tablou secvențial versus un tablou non-secvențial</title>
     <programlisting role="php">
 <![CDATA[
@@ -269,6 +322,24 @@ array(3) {
   string(5) "blong"
 }
 string(33) "{"0":"foo","2":"baz","3":"blong"}"
+]]>
+    </screen>
+   </example>
+   <example>
+    <title>Exemplu cu opțiunea <constant>JSON_PRESERVE_ZERO_FRACTION</constant></title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+var_dump(json_encode(12.0, JSON_PRESERVE_ZERO_FRACTION));
+var_dump(json_encode(12.0));
+?>
+]]>
+    </programlisting>
+    &example.outputs;
+    <screen>
+<![CDATA[
+string(4) "12.0"
+string(2) "12"
 ]]>
     </screen>
    </example>

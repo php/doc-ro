@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 2bb07c8c43f028c665a33bfc08a22639e9e35dc6 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 6a772ab6a22e9885f2e77c68bdebb847e45a3896 Maintainer: simionea Status: ready -->
  <sect3 xml:id="configure.options.servers" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Opțiunile SAPI</title>
   <para>
@@ -90,6 +90,18 @@
       și <link linkend="configure.without-pear">--without-pear</link>).
       Mai multe informații sunt disponibile în secțiunea desspre
       <link linkend="features.commandline">Utilizarea PHP din linia de comandă</link>.
+     </para>
+    </listitem>
+   </varlistentry>
+
+   <varlistentry xml:id="configure.enable-phpdbg">
+    <term>
+     <option role="configure">--enable-phpdbg</option>
+    </term>
+    <listitem>
+     <para>
+      Activează susținerea debugger-ului interactiv phpdbg ca modul SAPI în PHP
+      5.6.x sau ulterior.
      </para>
     </listitem>
    </varlistentry>

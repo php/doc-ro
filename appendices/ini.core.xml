@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: f01797a01e4312568d297c37d25d1474f44d7170 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 1ca94c488cdf14c98b041ab56a7bdf8ea63774e7 Maintainer: simionea Status: ready -->
 
  <section xml:id="ini.core" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Descrierea directivelor de bază ale &php.ini;</title>
@@ -216,6 +216,27 @@
          Pentru mai multe informații accesați
          <link linkend="language.basic-syntax.phpmode">Evadarea din HTML</link>.
        </simpara>
+       <para>
+        <table>
+         <title>Istoricul schimbărilor pentru <literal>asp_tags</literal></title>
+         <tgroup cols="2">
+          <thead>
+           <row>
+            <entry>&Version;</entry>
+            <entry>&Description;</entry>
+           </row>
+          </thead>
+          <tbody>
+           <row>
+            <entry>7.0.0</entry>
+            <entry>
+             Eliminat din PHP.
+            </entry>
+           </row>
+          </tbody>
+         </tgroup>
+        </table>
+       </para>
       </listitem>
      </varlistentry>
 
@@ -721,12 +742,6 @@
         <entry>PHP_INI_SYSTEM în PHP &lt;= 4.2.3. Disponibil începând cu PHP 4.0.3.</entry>
        </row>
        <row>
-        <entry><link linkend="ini.gpc-order">gpc_order</link></entry>
-        <entry>"GPC"</entry>
-        <entry>PHP_INI_ALL</entry>
-        <entry>Eliminat în PHP 5.0.0.</entry>
-       </row>
-       <row>
         <entry><link linkend="ini.auto-prepend-file">auto_prepend_file</link></entry>
         <entry>NULL</entry>
         <entry>PHP_INI_PERDIR</entry>
@@ -1012,67 +1027,72 @@
       <listitem>
        <simpara>
         Stabilețte mărimea maximă permisă a datelor "post". Această mărime
-         de asemenea afectează încărcarea fișierelor. Pentru a încărca
-         fișiere voluminoase această valoare trebuie să fie mai mare decât
-         <link linkend="ini.upload-max-filesize">upload_max_filesize</link>.
+        de asemenea afectează încărcarea fișierelor. Pentru a încărca
+        fișiere voluminoase această valoare trebuie să fie mai mare decât
+        <link linkend="ini.upload-max-filesize">upload_max_filesize</link>.
        </simpara>
        <simpara>
-         Dacă limita de memorie e activată de către scriptul de configurare,
-         <link linkend="ini.memory-limit">memory_limit</link> de asemenea
-         afectează încărcarea fișierelor. Vorbind la general,
-         <link linkend="ini.memory-limit">memory_limit</link> ar trebui să
-         fie mai mare decât <parameter>post_max_size</parameter>.
+        Dacă limita de memorie e activată de către scriptul de configurare,
+        <link linkend="ini.memory-limit">memory_limit</link> de asemenea
+        afectează încărcarea fișierelor. Vorbind la general,
+        <link linkend="ini.memory-limit">memory_limit</link> ar trebui să
+        fie mai mare decât <parameter>post_max_size</parameter>.
        </simpara>
 
        &ini.shorthandbytes;
 
        <simpara>
-         Dacă mărimea datelor post este mai mare decât post_max_size, atunci
-         <varname>$_POST</varname> și <varname>$_FILES</varname>
-         (<link linkend="language.variables.superglobals">variabile superglobale</link>)
-         sunt vide. Acest fapt poate fi depistat prin diferite metode, de ex.
-         transmițând o valoare variabilei <varname>$_GET</varname> în scriptul
-         care procesează datele, de ex.
-         <literal>&lt;form action="edit.php?processed=1"&gt;</literal>,
-         și apoi verificând dacă <varname>$_GET['processed']</varname> este
-         stabilit.
+        Dacă mărimea datelor post este mai mare decât post_max_size, atunci
+        <varname>$_POST</varname> și <varname>$_FILES</varname>
+        (<link linkend="language.variables.superglobals">variabile superglobale</link>)
+        sunt vide. Acest fapt poate fi depistat prin diferite metode, de ex.
+        transmițând o valoare variabilei <varname>$_GET</varname> în scriptul
+        care procesează datele, de ex.
+        <literal>&lt;form action="edit.php?processed=1"&gt;</literal>,
+        și apoi verificând dacă <varname>$_GET['processed']</varname> este
+        stabilit.
        </simpara>
        <para>
         <note>
          <para>
-           PHP permite prescurtări pentru valori în biți, inclusiv K (kilo),
-           M (mega) și G (giga). PHP va efectua convertirea automat dacă veți
-           utiliza una din acestea. Fiți atent să nu depășiți limita de 32 biți
-           pentru numere întregi cu semn (dacă utilizați versiuni pe 32 de biți)
-           deoarece aceasta va cauza eșuarea script-ului dumneavoastră.
+          PHP permite prescurtări pentru valori în biți, inclusiv K (kilo),
+          M (mega) și G (giga). PHP va efectua convertirea automat dacă veți
+          utiliza una din acestea. Fiți atent să nu depășiți limita de 32 biți
+          pentru numere întregi cu semn (dacă utilizați versiuni pe 32 de biți)
+          deoarece aceasta va cauza eșuarea script-ului dumneavoastră.
          </para>
         </note>
        </para>
-
-      </listitem>
-     </varlistentry>
-
-     <varlistentry xml:id="ini.gpc-order">
-      <term>
-       <parameter>gpc_order</parameter>
-       <type>string</type>
-      </term>
-      <listitem>
        <para>
-         Stabilește ordinea analizei și transferului variabilelor
-         GET/POST/COOKIE.
-         Valoarea implicită a acestei directive este "GPC". Stabilirea
-         acesteia în "GP", spre exemplu, va cauza PHP să ignoreze complet
-         cookie și să rescrie orice variabilă primită prin metoda GET cu
-         variabilele primite prin metoda POST și care au același nume.
+        <table>
+         <title>Istoricul schimbărilor pentru <literal>post_max_size</literal></title>
+         <tgroup cols="2">
+          <thead>
+           <row>
+            <entry>&Version;</entry>
+            <entry>&Description;</entry>
+           </row>
+          </thead>
+          <tbody>
+           <row>
+            <entry>5.3.4</entry>
+            <entry>
+             <parameter>post_max_size</parameter> = 0 nu va dezactiva limita în
+             caz dacă tipul conținutului este application/x-www-form-urlencoded
+             sau dacă nu este înregistrat cu PHP.
+            </entry>
+           </row>
+           <row>
+            <entry>5.3.2 , 5.2.12</entry>
+            <entry>
+             Permite dimensiunea nelimitată a datelor transmise prin post prin
+             stabilirea <parameter>post_max_size</parameter> în 0.
+            </entry>
+           </row>
+          </tbody>
+         </tgroup>
+        </table>
        </para>
-       <note>
-        <para>
-          Această opțiune a fost eliminată în PHP 5.0.0.
-          În loc, utilizați <link linkend="ini.variables-order">
-          variables_order</link>.
-        </para>
-       </note>
       </listitem>
      </varlistentry>
 

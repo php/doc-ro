@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 2bb07c8c43f028c665a33bfc08a22639e9e35dc6 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 2e0d77d131c66cfc19fdaa2f8207752923963013 Maintainer: simionea Status: ready -->
  <sect2 xml:id="reserved.constants.core" xmlns="http://docbook.org/ns/docbook">
    <title>Constantele predefinite de bază</title>
    <simpara>
@@ -164,6 +164,20 @@
       </simpara>
      </listitem>
     </varlistentry>
+    <varlistentry xml:id="constant.php-int-min">
+     <term>
+      <constant>PHP_INT_MIN</constant>
+      (<type>integer</type>)
+     </term>
+     <listitem>
+      <simpara>
+       Cea mai mică valoare întreagă susținută în această asamblare a PHP. De
+       regulă int(-2147483648) pe sisteme de 32 biți și
+       int(-9223372036854775808) pe sisteme de 64 biți. Disponibilă începând cu
+       PHP 7.0.0.
+      </simpara>
+     </listitem>
+    </varlistentry>
     <varlistentry xml:id="constant.php-int-size">
      <term>
       <constant>PHP_INT_SIZE</constant>
@@ -171,7 +185,8 @@
      </term>
      <listitem>
       <simpara>
-       Disponibilă începând cu PHP 5.0.5
+       Dimensiunea în octeți a unui întreg în această asamblare a PHP.
+       Disponibilă începând cu PHP 5.0.5.
       </simpara>
      </listitem>
     </varlistentry>

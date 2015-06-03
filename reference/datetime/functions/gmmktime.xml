@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: e25450d9dc5f49da38026350643730de2017ac67 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: bce4e5f7d7979c5b672e9375a17860b0ced5eef3 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.gmmktime" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -118,6 +118,11 @@
        Parametrii întotdeauna reprezintă o dată GMT, deci
        <parameter>is_dst</parameter> nu influențează rezultatul.
       </para>
+      <note>
+       <para>
+        Acest parametru a fost eliminat în PHP 7.0.0.
+       </para>
+      </note>
      </listitem>
     </varlistentry>
    </variablelist>
@@ -143,6 +148,12 @@
       </row>
      </thead>
      <tbody>
+      <row>
+       <entry>7.0.0</entry>
+       <entry>
+        Parametrul <parameter>is_dst</parameter> a fost eliminat.
+       </entry>
+      </row>
       <row>
        <entry>5.1.0</entry>
        <entry>

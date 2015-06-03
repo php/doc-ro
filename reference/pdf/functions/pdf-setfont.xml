@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: a44a1e0b7918846659a3c91013855d2c3d674fb9 Maintainer: simionea Status: ready -->
 <refentry xmlns="http://docbook.org/ns/docbook" xml:id="function.pdf-setfont">
  <refnamediv>
   <refname>PDF_setfont</refname>
@@ -16,7 +16,7 @@
    <methodparam><type>float</type><parameter>fontsize</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Stabilește fontul curent la mărimea <parameter>size</parameter>, utilizând un
+   Stabilește fontul curent la mărimea <parameter>fontsize</parameter>, utilizând un
    handle <parameter>font</parameter> întors de <function>PDF_load_font</function>.
    &return.success;
   </para>

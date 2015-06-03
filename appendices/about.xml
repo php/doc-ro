@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 9ccb86fb6f74ca88541ae1e6d056cbc680cadc32 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: e121a3a894a377685208abd6f0fd2731e432dc87 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="about" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Despre manual</title>
@@ -250,6 +250,24 @@ int strlen ( string $string )
      <parameter>strict</parameter> are valoarea implicită boolean &false;.
      Vedeți pagina manualului referitoare la fiecare funcție pentru detalii
      despre cum ea funcționează.
+    </para>
+    <para>
+     În plus, simbolul &amp; (ampersand) plasat la începutul unui parametru al
+     funcției permite ca parametrul să fie transmis prin
+     <link linkend="language.references.pass">referință</link>, supă cum e
+     prezentat mai jos:
+    </para>
+    <para>
+     <screen>
+<![CDATA[
+       int preg_match ( string $pattern , string $subject [, array &$matches
+      [, int $flags = 0 [, int $offset = 0 ]]] )
+]]>
+     </screen>
+    </para>
+    <para>
+     În acest exemplu observăm că al treilea parametru opțional
+     <parameter>&amp;$matches</parameter> va fi transmis prin referință.
     </para>
     <para>
      Există funcții cu informație mai complexă despre versiunea PHP. Să luăm
