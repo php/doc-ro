@@ -62,12 +62,6 @@
         Netscape/iPlanet/SunONE.
        </entry>
       </row>
-      <row>
-       <entry>4.3.3</entry>
-       <entry>
-        &note.apache.nsapi-module;
-       </entry>
-      </row>
      </tbody>
     </tgroup>
    </informaltable>
