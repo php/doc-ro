@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 8b5940cadeb4f1c8492f4a7f70743a2be807cf39 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: d1b39ea532d197c48104180f5e54e5d8b8e10505 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.serialize" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -131,7 +131,7 @@ if (!odbc_execute($stmt, $sqldata)) {
   </note>
   <warning>
    <para>
-    Când <function>serialize</function> serializează obiecte, primul slash din
+    Când <function>serialize</function> serializează obiecte, primul backslash din
     denumirea clasei, în cazul claselor cu spații de nume, este exclus pentru a
     maximiza compatibilitatea.
    </para>

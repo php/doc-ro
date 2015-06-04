@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: a953cad1bb2fa27c67e079123df7ce2a44fab39e Maintainer: simionea Status: ready -->
+<!-- EN-Revision: d1b39ea532d197c48104180f5e54e5d8b8e10505 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/var.xml, last change in rev 1.6 -->
 <refentry xml:id="function.var-export" xmlns="http://docbook.org/ns/docbook">
@@ -224,7 +224,7 @@ object(A)#2 (2) {
   <warning>
    <para>
     Când <function>var_export</function> exportă obiecte, în denumirea clasei nu
-    se include slash-ul din față (pentru clasele cu spații de nume), pentru a
+    se include backslash-ul din față (pentru clasele cu spații de nume), pentru a
     maximiza compatibilitatea.
    </para>
   </warning>

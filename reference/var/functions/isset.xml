@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: eac82849b3c30b0779c0397391f5776bceb2da0a Maintainer: simionea Status: ready -->
+<!-- EN-Revision: a44a1e0b7918846659a3c91013855d2c3d674fb9 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.isset" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -22,8 +22,8 @@
   <para>
    Dacă o variabilă a fost eliminată cu <function>unset</function>, ea nu va
    mai fi stabilită. <function>isset</function> va întoarce &false; la testarea
-   unei variabile care a fost stabilită în &null;. De asemenea observați că un
-   byte &null; (<literal>"\0"</literal>) nu este echivalent cu constanta PHP
+   unei variabile care a fost stabilită în &null;. De asemenea observați că
+   caracterul nul (<literal>"\0"</literal>) nu este echivalent cu constanta PHP
    &null;.
   </para>
   <para>

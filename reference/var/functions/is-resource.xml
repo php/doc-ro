@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: e5f41806a6474a2c181862849f05cff6924dfa2b Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/var.xml, last change in rev 1.19 -->
 <refentry xml:id="function.is-resource" xmlns="http://docbook.org/ns/docbook">
@@ -66,6 +66,17 @@ if (!is_resource($db_link)) {
     </programlisting>
    </example>
   </para>
+ </refsect1>
+
+ <refsect1 role="notes">
+  &reftitle.notes;
+  <note>
+   <para>
+    <function>is_resource</function> nu este o metodă strictă de verificare a
+    tipului: ea va întoarce &false; dacă <parameter>var</parameter> este o
+    variabilă cu resursă care a fost închisă.
+   </para>
+  </note>
  </refsect1>
 
  <refsect1 role="seealso">
