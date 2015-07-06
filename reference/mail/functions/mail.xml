@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: afc3f34c682418a582b0f9199db0bac4a087821f Maintainer: simionea Status: ready -->
+<!-- EN-Revision: ecfc4c394dc12dbf8d09680429f5d89fb62702e3 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.mail" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
@@ -100,6 +100,15 @@ $text = str_replace("\n.", "\n..", $text);
        ele trebuie filtrate, astfel încât să nu fie posibilă inserarea antetelor
        nedorite.
       </para>
+      <note>
+       <para>
+        <parameter>additional_headers</parameter> nu are o protecție împotriva
+        injectării antetelor de email. De aceea utilizatorii trebuie să se
+        asigure că antetele specificate sunt în siguranță și că conțin doar
+        antete. De ex. niciodată nu începeți corpul mesajului inserând mai multe
+        linii noi.
+       </para>
+      </note>
       <note>
        <para>
         La trimiterea mesajului, acesta <emphasis>trebuie</emphasis> să conțină

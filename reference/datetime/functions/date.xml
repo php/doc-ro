@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 088c4558a55a8443df1a8d4b0e50c32b43006a9d Maintainer: simionea Status: ready -->
+<!-- EN-Revision: f9aed876b8d55edeacb49d52940fd89c098641c9 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.date" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
@@ -229,7 +229,8 @@
             Microsecundele (adăugat în PHP 5.2.2). Atrageți atenția că
             <function>date</function> întotdeauna va genera <literal>000000</literal>,
             deoarece ea primește un parametru <type>integer</type>, iar metoda
-            <methodname>DateTime::format</methodname> susține microsecundele.
+            <methodname>DateTime::format</methodname> susține microsecundele dacă
+            <classname>DateTime</classname> a fost creată cu microsecunde.
            </entry>
            <entry>Exemplu: <literal>654321</literal></entry>
           </row>

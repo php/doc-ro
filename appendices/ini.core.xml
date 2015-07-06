@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 1ca94c488cdf14c98b041ab56a7bdf8ea63774e7 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 140bbbaa8091e71a26428db9e810156392dd383d Maintainer: simionea Status: ready -->
 
  <section xml:id="ini.core" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Descrierea directivelor de bază ale &php.ini;</title>

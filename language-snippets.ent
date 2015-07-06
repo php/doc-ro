@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: f404900be98ab7799ce3010dc04f5c8818054b56 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 66d4ce2b23282e7448510fbd81cdf1efc86e4699 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -16,7 +16,8 @@ implicit. Ea poate fi dezactivată utilizând următoarea opțiune la compilare:
 <para>Această funcție nu generează valori securizate din punct de vedere
 criptografic și deci nu trebuie utilizată pentru scopuri criptografice. Dacă
 aveți nevoie de o valoare securizată din punct de vedere criptografic considerați
-utilizarea <function>openssl_random_pseudo_bytes</function> în schimb.</para></caution>'>
+utilizarea <function>random_int</function>, <function>random_bytes</function> sau
+<function>openssl_random_pseudo_bytes</function> în schimb.</para></caution>'>
 
 <!-- Notes -->
 
@@ -246,6 +247,14 @@ PHP 5.5.0.</simpara></warning>'>
 <!ENTITY warn.deprecated.feature-5-5-0.removed-7-0-0 '<warning xmlns="http://docbook.org/ns/docbook">
 <simpara>Această facilitate este <emphasis>DEZAPROBATĂ</emphasis> începând cu PHP
 5.5.0 și <emphasis>ELIMINATĂ</emphasis> începând cu PHP 7.0.0.</simpara></warning>'>
+
+<!ENTITY warn.deprecated.function-5-3-0.removed-7-0-0 '<warning xmlns="http://docbook.org/ns/docbook">
+<simpara>Această funcție este <emphasis>DEZAPROBATĂ</emphasis> începând cu PHP
+5.3.0 și <emphasis>ELIMINATĂ</emphasis> începând cu PHP 7.0.0.</simpara></warning>'>
+
+<!ENTITY warn.deprecated.alias-5-3-0.removed-7-0-0 '<warning xmlns="http://docbook.org/ns/docbook">
+<simpara>Acest pseudonim este <emphasis>DEZAPROBAT</emphasis> începând cu PHP
+5.3.0 și <emphasis>ELIMINAT</emphasis> începând cu PHP 7.0.0.</simpara></warning>'>
 
 <!ENTITY warn.deprecated.function-5-5-0.removed-7-0-0 '<warning xmlns="http://docbook.org/ns/docbook">
 <simpara>Această funcție este <emphasis>DEZAPROBATĂ</emphasis> începând cu PHP
@@ -875,6 +884,16 @@ creată utilizând <function>fopen</function>.</para>'>
 Deoarece tipul întreg al PHP este cu semn și multe platforme utilizează întregi
 de 32 de biți, unele funcții ale sistemului de fișiere pot întoarce rezultate
 neașteptate pentru fișiere ce depășesc 2GB.</simpara></note>'>
+
+<!ENTITY ini.scanner.typed '<para xmlns="http://docbook.org/ns/docbook">
+Începând cu PHP 5.6.1 poate de asemenea fi specificat ca
+<constant>INI_SCANNER_TYPED</constant>. În acest mod tipurile boolean, null și
+integer sunt păstrate, când este posibil. Valorile string <literal>"true"</literal>,
+<literal>"on"</literal> și <literal>"yes"</literal> sunt convertite în &true;.
+<literal>"false"</literal>, <literal>"off"</literal>, <literal>"no"</literal> și
+<literal>"none"</literal> sunt considerate &false;. <literal>"null"</literal>
+este convertit în &null; în modul cu tipuri. De asemenea toate șirurile numerice
+sunt convertite în integer, dacă acest lucru este posibil.</para>'>
 
 <!-- GNUPG -->
 <!ENTITY gnupg.identifier '<para xmlns="http://docbook.org/ns/docbook">
