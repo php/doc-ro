@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision$ -->
+<!-- EN-Revision: 48d21bbd423859b8cb97b3db4bb95b5de4ae109d Maintainer: simionea Status: ready -->
+<!-- Reviewed: no -->
+
+ <chapter xml:id="language.basic-syntax" xmlns="http://docbook.org/ns/docbook">
+  <title>Sintaxa de bază</title>
+  <sect1 xml:id="language.basic-syntax.phptags">
+   <title>Tag-uri PHP</title>
+   <para>
+    Când PHP parsează un fișier, se uită după tag-urile de deschidere și închidere,
+    acestea sunt <literal>&lt;?php</literal> și <literal>?&gt;</literal>,
+    care indică când PHP începe și termină interpretarea codului dintre ele.
+    Parsarea în această manieră permite PHP să fie încorporat în tot felul de documente,
+    pentru că orice este în afara perechii de tag-uri de deschidere și închidere este
+    ignorat de către parsatorul PHP.
+   </para>
+   <para>
+     De asemenea, PHP permite tag scurt de deschidere <literal>&lt;?</literal>
+    (nu se încurajează folosirea lui deoarece este valabil numai activând directiva
+    <link linkend="ini.short-open-tag">short_open_tag</link> din fișierul de configurare &php.ini;,
+    sau dacă PHP a fost configurat cu opțiunea <option>--enable-short-tags</option>).
+   </para>
+   <para>
+    <table>
+     <title>Istoric schimbări</title>
+     <tgroup cols="2">
+      <thead>
+       <row>
+        <entry>&Version;</entry>
+        <entry>&Description;</entry>
+       </row>
+      </thead>
+      <tbody>
+       <row>
+        <entry>7.0.0</entry>
+         <entry>
+          Tag-urile ASP &lt;% , %&gt; , &lt;%= , și script tag-uri &lt;script language=php&gt; 
+          sunt excluse din PHP.
+         </entry>
+       </row>
+       <row>
+        <entry>5.4.0</entry>
+         <entry>
+          Tag-ul &lt;?= este mereu disponibil indiferent de setarea ini short_open_tag.
+         </entry>
+       </row>
+      </tbody>
+     </tgroup>
+    </table>
+   </para>
+   <para>
+    Dacă un fișier conține numai cod PHP, este de preferat omiterea tag-ului de închidere PHP de la
+    sfârșitul paginii. Aceasta previne spațiu gol accidental sau noi rânduri adăugate după tag-ul
+    de închidere PHP, ceea ce ar cauza efecte nedorite deaorece PHP va începe buferizarea ieșirii
+    când nu este nici o intenție din partea programatorului să trimită vre-o ieșire la acel punct
+    din script.
+    <informalexample>
+     <programlisting role="php">
+<![CDATA[
+<?php
+echo "Hello world";
+
+// ... more code
+
+echo "Ultima declarație";
+
+// script-ul se termină aici fără tag de închidere
+]]>
+     </programlisting>
+    </informalexample>
+   </para>
+  </sect1>
+  <sect1 xml:id="language.basic-syntax.phpmode">
+   <title>Evadarea din HTML</title>
+   <para>
+    Totul ce se află în afara perechilor de tag-uri de deschidere și închidere este ignorat de către
+    parsatorul PHP, ceea ce permite fișierelor PHP să aibă conținut mixt. Aceasta permite
+    PHP să fie încorporat în documente HTML, de exemplu pentru a crea șabloane.
+    <example>
+     <programlisting role="php">
+<![CDATA[
+<p>Acesta va fi ignorat de PHP și afișat în browser.</p>
+<?php echo 'În timp ce acesta va fi parsat.'; ?>
+<p>Acesta va fi de asemenea ignorat de PHP și afișat în browser.</p>
+]]>
+     </programlisting>
+    </example>
+    Aceasta funcționează conform așteptărilor, deoarece când PHP întâlnește tag-ul de închidere,
+    pur și simplu începe să afișeze tot ce găsește (cu excepția trecerii la linie nouă ce urmează imediat după acesta - vezi
+    <link linkend="language.basic-syntax.instruction-separation">separarea instrucțiunilor</link>)
+    până când dă de un alt tag de deschidere, doar dacă nu este în mijlocul unei declarații
+    condiționale, caz în care interpretatorul va determina rezultatul condiționalului înainte
+    de a lua o decizie peste ce să sară.
+    Vezi următorul exemplu.
+   </para>
+   <para>
+    Utilizarea structurilor cu condiții
+    <example>
+     <title>Evadare avansată folosind condiții</title>
+     <programlisting role="php">
+<![CDATA[
+<?php if ($expression == true): ?>
+  Aceasta se va afișa dacă expresia este adevărată.
+<?php else: ?>
+  Altfel aceasta va fi afișat.
+<?php endif; ?>
+]]>
+     </programlisting>
+    </example>
+    În acest exemplu PHP va sări peste blocurile unde conționalul nu este îndeplinit,
+    chiar dacă sunt în afara tag-urilor PHP de deschidere/închidere, PHP sare peste ele conform
+    condițiilor, deoarece interpretatorul PHP va sări peste blocurile condiției neîndeplinite.
+   </para>
+   <para>
+    Pentru afișarea blocurilor mari de text, în general ieșirea din parsatorul PHP este
+    mai eficientă decât trimiterea întregului text prin
+    <function>echo</function> sau <function>print</function>.
+   </para>
+   <para>
+    Există patru perechi diferite de tag-uri de deschidere și de închidere care pot fi
+    folosite în PHP. Două dintre ele, &lt;?php ?&gt; și
+    &lt;script language="php"&gt; &lt;/script&gt; sunt mereu disponibile.
+    Celelalte două sunt tag-uri scurte și tag-uri stil <productname>ASP</productname>,
+    și pot fi activate sau dezactivate din fișierul de configurare &php.ini;.
+    Ca atare, în timp ce unii oameni găsesc tag-urile scurte și tag-urile stil
+    <productname>ASP</productname> comode, ele sunt mai puțin portabile, si în general nerecomandate.
+    <note>
+     <para>
+      De asemenea rețineți că dacă încorporați PHP în XML sau XHTML va trebui să folosiți
+      tag-urile &lt;?php ?&gt; pentru a vă conforma standardelor.
+     </para>
+    </note>
+   </para>
+   <para>
+    <example>
+     <title>Tag-uri PHP de deschidere și închidere</title>
+     <programlisting role="php">
+<![CDATA[
+1.  <?php echo 'dacă vrei să folosești cod PHP în documente XHTML sau XML
+                folosește aceste tag-uri'; ?>
+
+2.  <script language="php">
+        echo 'anumitori editori (precum FrontPage) nu le place
+              să proceseze instrucțiuni între aceste tag-uri';
+    </script>
+
+3.  <? echo 'acest cod este între tag-uri scurte'; ?>
+    Codul între aceste tag-uri <?= 'ceva text' ?> este o scurtătură pentru acest cod <? echo 'some text' ?>
+
+4.  <% echo 'Opțional puteți folosi tag-uri stil ASP'; %>
+    Codul între aceste tag-uri <%= $variable; %> este o scurtătură pentru acest cod <% echo $variable; %>
+]]>
+     </programlisting>
+    </example>
+   </para>
+   <para>
+    În timp ce tag-urile observate în exemplul unu și doi sunt amândouă disponibile,
+    exemplul unu este cel mai des folosit, și recomandat, dintre cele două.
+   </para>
+   <para>
+    Tag-uri scurte (exemplul trei) sunt disponibile numai când sunt activate
+    cu ajutorul directivei <link linkend="ini.short-open-tag">short_open_tag</link>
+    din fișierul de configurare &php.ini;, sau dacă PHP a fost configurat cu
+    opțiunea <option>--enable-short-tags</option>.
+   </para>
+   <para>
+    Tag-uri stil <productname>ASP</productname> (exemplul patru) sunt valabile numai
+    când sunt activate cu ajutorul directivei <link linkend="ini.asp-tags">asp_tags</link>
+    din fișierul de configurare &php.ini;.
+   </para>
+   <para>
+    <note>
+     <para>
+      Folosirea tag-urilor scurte ar trebui evitată în timpul dezvoltării aplicațiilor
+      sau bibliotecilor destinate redistribuirii, sau implemetării pe servere PHP asupra cărora
+      nu aveți control, deoarece tag-urile scurte s-ar putea să nu fie susținute de acel server.
+      Pentru cod portabil, redistribuibil, asigurați-vă că nu folosiți tag-uri scurte.
+     </para>
+    </note>
+    <note>
+     <para>
+      În PHP 5.2 și versiunile anterioare, parsatorul nu permite ca tag-ul de deschidere
+      <literal>&lt;?php</literal> să fie singurul element din fișier.
+      Aceasta este permis începând cu PHP 5.3 cu condiția să existe unul sau mai multe caractere
+      spațiu gol după tag-ul de deschidere.
+     </para>
+    </note>
+    <note>
+     <para>
+      Începând cu PHP 5.4, tag-ul scurt de afișare <literal>&lt;?=</literal> este mereu recunoscut și valid,
+      indiferent de setarea <link linkend="ini.short-open-tag">short_open_tag</link>.
+     </para>
+    </note>
+   </para>
+  </sect1>
+  <sect1 xml:id="language.basic-syntax.instruction-separation">
+   <title>Separarea instrucțiunilor</title>
+   <para>
+    Precum în C sau Perl, PHP necesită ca instrucțiunile să fie terminate cu punct și virgulă.
+    Tag-ul de închidere al unui bloc de cod PHP implică automat
+    punct și virgulă; nu trebuie să aveți punct și virgulă la finalul ultimului rând al unui bloc PHP.
+    Tag-ul de închidere pentru bloc va include și trecerea la linia nouă imediat următoare, dacă aceasta este prezentă.
+    <informalexample>
+     <programlisting role="php">
+<![CDATA[
+<?php
+    echo 'Acesta este un test';
+?>
+
+<?php echo 'Acesta este un test' ?>
+
+<?php echo 'Am omis ultimul tag de închidere';
+]]>
+     </programlisting>
+    </informalexample>
+    <note>
+     <para>
+      Tag-ul de închidere al unui bloc PHP la sfârșitul unui fișier este opțional
+      și, în anumite cazuri, omiterea lui este folositoare când se folosesc <function>include</function>
+      sau <function>require</function>, astfel încât nu apar spații goale nedorite la sfârșitul
+      fișierelor, și veți putea să adăugați antete la răspuns mai târziu. Este de asemenea comod dacă
+      folosiți buferizarea ieșirii, și nu este de dorit vizualizarea spațiului gol la sfârșitul
+      părții generate de fișierele incluse.
+     </para>
+    </note>
+   </para>
+  </sect1>
+  <sect1 xml:id="language.basic-syntax.comments">
+   <title>Comentarii</title>
+   <para>
+    PHP suportă comentarii 'C', 'C++' sau stil Unix shell (stil Perl). De exemplu:
+
+    <informalexample>
+     <programlisting role="php">
+<![CDATA[
+<?php
+    echo 'Acesta este un test'; // Acesta este un comentariu de un rând tip C++
+    /* Acesta este un comentariu multi-rând
+       înca un rând de comentariu */
+    echo 'Acesta este încă un test';
+    echo 'Un Test Final'; # Acesta este un comentariu de un rând stil shell
+?>
+]]>
+     </programlisting>
+    </informalexample>
+   </para>
+   <simpara>
+    Comentariul stil "un rând" comentează până la sfârșitul liniei sau blocului curent de cod PHP, oricare
+    dintre acestea survine mai întâi. Aceasta înseamnă că codul HTML după <literal>// ... ?&gt;</literal>
+    sau <literal># ...  ?&gt;</literal> VA FI afișat:
+    ?&gt; iese din modul PHP și intră în modul HTML, iar
+    <literal>//</literal> sau <literal>#</literal> nu pot influența acest lucru.
+    Dacă directiva de configurație <link linkend="ini.asp-tags">asp_tags</link> 
+    este activată, se comportă la fel cu <literal>// %&gt;</literal> și
+    <literal># %&gt;</literal>.
+    Totuși, tag-ul <literal>&lt;/script&gt;</literal> nu iese din modul PHP in comentariile de un rând.
+   </simpara>
+   <para>
+    <informalexample>
+     <programlisting role="php">
+<![CDATA[
+<h1>Acesta este un <?php # echo 'simplu';?> exemplu</h1>
+<p>Antetul de deasupra va arăta 'Acesta este un  exemplu'.</p>
+]]>
+     </programlisting>
+    </informalexample>
+   </para>
+   <simpara>
+    Comentariile în stil "C" se termină la primul <literal>*/</literal> întâlnit.
+    Asigurați-vă că nu încorporați comentarii în stil "C" unul în altul. Este ușor de făcut această greșeală
+    dacă încercați să comentați un bloc mare de cod.
+   </simpara>
+   <para>
+    <informalexample>
+     <programlisting role="php">
+<![CDATA[
+<?php
+ /*
+    echo 'Acesta este un test'; /* Acest comentariu va cauza o problemă */
+ */
+?>
+]]>
+     </programlisting>
+    </informalexample>
+   </para>
+  </sect1>
+ </chapter>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:1
+sgml-indent-data:t
+indent-tabs-mode:nil
+sgml-parent-document:nil
+sgml-default-dtd-file:"~/.phpdoc/manual.ced"
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+vim600: syn=xml fen fdm=syntax fdl=2 si
+vim: et tw=78 syn=sgml
+vi: ts=1 sw=1
+-->
