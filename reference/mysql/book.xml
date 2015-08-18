@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 10fd47c55d84d3a5fa2a377a4a36d2f87049c9dc Maintainer: zamolxe Status: ready -->
+<!-- EN-Revision: 2b204e9c8e3f3d95a95418d520b995ac4c5eda6e Maintainer: zamolxe Status: ready -->
 <!-- CREDITS: simionea -->
 
 <book xml:id="book.mysql" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -13,9 +13,9 @@
  <preface xml:id="intro.mysql">
   &reftitle.intro;
   <para>
-   Această extensie este învechită începând cu PHP 5.5.0, și nu este recomandată
-   pentru scrierea codului nou, deoarece va fi eliminată în viitor. În loc,
-   folosiți extensia <link linkend="book.mysqli">mysqli</link> sau
+   Această extensie este învechită începând cu PHP 5.5.0, și a fost eliminată
+   începând cu PHP 7.0.0. În loc, folosiți extensia
+   <link linkend="book.mysqli">mysqli</link> sau
    <link linkend="ref.pdo-mysql">PDO_MySQL</link>. A se vedea de asemenea
    <link linkend="mysqlinfo.api.choosing">Privire de ansamblu asupra MySQL API</link>
    pentru ajutor suplimentar în alegerea unui API MySQL.

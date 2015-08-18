@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 543e4ac3144bf5444a3abd584a8974b4e44c9947 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: f9254e756882a011921138392fa240189dcc3a8c Maintainer: simionea Status: ready -->
 <!-- CREDITS: radical -->
 <refentry xml:id="function.json-encode" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -53,7 +53,8 @@
        <constant>JSON_UNESCAPED_SLASHES</constant>,
        <constant>JSON_FORCE_OBJECT</constant>,
        <constant>JSON_PRESERVE_ZERO_FRACTION</constant>,
-       <constant>JSON_UNESCAPED_UNICODE</constant>. Comportamentul acestor
+       <constant>JSON_UNESCAPED_UNICODE</constant>,
+       <constant>JSON_PARTIAL_OUTPUT_ON_ERROR</constant>. Comportamentul acestor
        constante este descris în
        <link linkend="json.constants">pagina cu constante JSON</link>.
       </para>

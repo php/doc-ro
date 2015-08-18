@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 9c41222b3046bfb9b6716f6e68a9051cea82be7f Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 0e5f3d37b258329172203b06035f74b3cb5aa974 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.wddx-deserialize" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -42,6 +42,18 @@
    Întoarce valoarea deserializată, care poate fi un string, un număr sau un
    tablou. Observați că structurile sunt deserializate în tablouri asociative.
   </para>
+ </refsect1>
+
+ <refsect1 role="notes">
+  &reftitle.notes;
+  <warning>
+   <para>
+    Nu transmiteți date introduse de utilizator, în care nu aveți încredere, spre
+    <function>wddx_deserialize</function>. Deserializarea poate rezulta în cod ce
+    va fi încărcat și executat datorită instanțierii și autoîncărcării obiectelor,
+    și un utilizator malign s-ar putea folosi de aceasta.
+   </para>
+  </warning>
  </refsect1>
 </refentry>
 
