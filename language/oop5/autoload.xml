@@ -22,8 +22,8 @@
    <para>
     <function>spl_autoload_register</function> oferă o alternativă mai flexibilă
     pentru autoîncărcarea claselor. Din acest motiv utilizarea
-    <function>__autoload</function> nu este recomandată și poate fi dezaprobată
-    sau eliminată în viitor.
+    <function>__autoload</function> nu este recomandată și poate fi considerată
+    învechită sau chiar eliminată în viitor.
    </para>
   </tip>
   <note>

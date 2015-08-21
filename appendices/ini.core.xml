@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 140bbbaa8091e71a26428db9e810156392dd383d Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 4dcc5b1210b0972e8c4db8c2bb10fb282e078823 Maintainer: simionea Status: ready -->
 
  <section xml:id="ini.core" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Descrierea directivelor de bază ale &php.ini;</title>
@@ -39,7 +39,7 @@
         <entry>async_send</entry>
         <entry>"0"</entry>
         <entry>PHP_INI_ALL</entry>
-        <entry></entry>
+        <entry>Disponibilă începând cu PHP 4.2.0. Eliminată în PHP 4.3.0.</entry>
        </row>
       </tbody>
      </tgroup>
@@ -74,7 +74,7 @@
         <entry><link linkend="ini.asp-tags">asp_tags</link></entry>
         <entry>"0"</entry>
         <entry>PHP_INI_PERDIR</entry>
-        <entry>PHP_INI_ALL în PHP 4.0.0.</entry>
+        <entry>PHP_INI_ALL în PHP 4.0.0. Eliminată în PHP 7.0.0.</entry>
        </row>
        <row>
         <entry><link linkend="ini.precision">precision</link></entry>
@@ -147,6 +147,12 @@
         <entry>"0"</entry>
         <entry>PHP_INI_SYSTEM</entry>
         <entry>Disponibil începând cu PHP 5.4.0</entry>
+       </row>
+       <row>
+        <entry><link linkend="ini.zend.assertions">zend.assertions</link></entry>
+        <entry>"1"</entry>
+        <entry>PHP_INI_ALL</entry>
+        <entry>Disponibilă începând cu PHP 7.0.0.</entry>
        </row>
        <row>
         <entry><link linkend="ini.zend.ze1-compatibility-mode">zend.ze1_compatibility_mode</link></entry>
@@ -332,7 +338,7 @@
            <row>
             <entry>5.0.0</entry>
             <entry>
-             Dezaprobat, și generează o eroare de nivel <constant>E_COMPILE_WARNING</constant>.
+             Învechit, și generează o eroare de nivel <constant>E_COMPILE_WARNING</constant>.
             </entry>
            </row>
           </tbody>
@@ -414,12 +420,23 @@
         Această directivă trebuie să fie stabilită în &php.ini; De exemplu nu
         puteți stabili aceasta în &httpd.conf;.
        </simpara>
-       <note>
-        <title>Notă despre disponibilitate</title>
-        <simpara>
-         Această directivă a devenit disponibilă în PHP 4.3.2
-        </simpara>
-       </note>
+      </listitem>
+     </varlistentry>
+
+     <varlistentry xml:id="ini.zend.assertions">
+      <term>
+       <parameter>zend.assertions</parameter>
+       <type>integer</type>
+      </term>
+      <listitem>
+       <simpara>
+        Când este stabilită în <literal>1</literal>, va fi generat și executat
+        cod de aserțiune (în regimul de dezvoltare). Când este stabilită în
+        <literal>0</literal>, va fi generat cod de aserțiune, dar nu va fi
+        executat la rulare. Când este stabilit în <literal>-1</literal>, nu va fi
+        generat cod de aserțiune, făcând ca aserțiunile să fie cu cost nul (în
+        regimul de producție).
+       </simpara>
       </listitem>
      </varlistentry>
 
@@ -769,7 +786,7 @@
         <entry><link linkend="ini.always-populate-raw-post-data">always_populate_raw_post_data</link></entry>
         <entry>"0"</entry>
         <entry>PHP_INI_PERDIR</entry>
-        <entry>PHP_INI_ALL în PHP &lt;= 4.2.3. Disponibil începând cu PHP 4.1.0.</entry>
+        <entry>PHP_INI_ALL în PHP &lt;= 4.2.3. Disponibil începând cu PHP 4.1.0. Eliminat în PHP 7.0.0.</entry>
        </row>
       </tbody>
      </tgroup>
@@ -828,7 +845,7 @@
         &link.superglobals; nu va fi stabilit.
        </para>
        <para>
-        Dacă directiva dezaprobată
+        Dacă directiva învechită
         <link linkend="ini.register-globals">register_globals</link>
         este stabilită, atunci variables_order de asemenea configurează ordinea
         în care variabilele <literal>ENV</literal>, <literal>GET</literal>,
@@ -1032,11 +1049,8 @@
         <link linkend="ini.upload-max-filesize">upload_max_filesize</link>.
        </simpara>
        <simpara>
-        Dacă limita de memorie e activată de către scriptul de configurare,
-        <link linkend="ini.memory-limit">memory_limit</link> de asemenea
-        afectează încărcarea fișierelor. Vorbind la general,
-        <link linkend="ini.memory-limit">memory_limit</link> ar trebui să
-        fie mai mare decât <parameter>post_max_size</parameter>.
+        Vorbind la general, <link linkend="ini.memory-limit">memory_limit</link>
+        ar trebui să fie mai mare decât <parameter>post_max_size</parameter>.
        </simpara>
 
        &ini.shorthandbytes;
@@ -1055,7 +1069,7 @@
        <para>
         <note>
          <para>
-          PHP permite prescurtări pentru valori în biți, inclusiv K (kilo),
+          PHP permite prescurtări pentru valori în baiți, inclusiv K (kilo),
           M (mega) și G (giga). PHP va efectua convertirea automat dacă veți
           utiliza una din acestea. Fiți atent să nu depășiți limita de 32 biți
           pentru numere întregi cu semn (dacă utilizați versiuni pe 32 de biți)
@@ -1147,6 +1161,9 @@
       </term>
       <listitem>
        <para>
+        Implicit PHP va afișa o codificare a caracterelor utilizând antetul
+        Content-Type. Pentru a dezactiva transmiterea codificării caracterelor,
+        stabiliți o valoare vidă pentru opțiune.
        </para>
       </listitem>
      </varlistentry>
@@ -1236,6 +1253,7 @@
        <type>mixed</type>
       </term>
       <listitem>
+       &warn.deprecated.feature-5-6-0.removed-7-0-0;
        <para>
         Dacă este stabilit în &true;, PHP întotdeauna va popula
         <varname>$HTTP_RAW_POST_DATA</varname> cu conținutul neprelucrat al

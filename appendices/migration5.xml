@@ -828,7 +828,7 @@ Action application/x-httpd-php "/php/php-cgi.exe"
     <listitem>
      <simpara>
       <link linkend="ini.register-long-arrays">register_long_arrays</link> -
-      permite/interzice PHP să înregistreze variabilele lungi dezaprobate
+      permite/interzice PHP să înregistreze variabilele lungi învechite
       <varname>$HTTP_*_VARS</varname>
      </simpara>
     </listitem>

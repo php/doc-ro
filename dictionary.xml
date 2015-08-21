@@ -215,9 +215,9 @@
   </term>
   <term>
     <english>deprecated /adverb/</english>
-    <romanian>dezaprobat || descurajat</romanian>
-    <english_example>The use of the old syntax is deprecated.</english_example>
-    <romanian_example>Utilizarea sintaxei vechi este dezaprobată.</romanian_example>
+    <romanian>învechit</romanian>
+    <english_example>This function is deprecated as of PHP 7.0.0.</english_example>
+    <romanian_example>Această funcție este învechită începând cu PHP 7.0.0.</romanian_example>
   </term>
   <term>
     <english>deprecated /adjectiv/</english>

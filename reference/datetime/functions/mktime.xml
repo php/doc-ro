@@ -147,9 +147,9 @@
       </para>
       <note>
        <para>
-        Începând cu PHP 5.1.0, acest parametru a devenit dezaprobat. În
-        rezultat noile facilități de gestiune a fusului orar trebuie utilizate
-        în loc.
+        Începând cu PHP 5.1.0, acest parametru a devenit învechit. În consecința
+        acestui fapt trebuie utilizate noile facilități de gestiune a fusului
+        orar.
        </para>
       </note>
       <note>
