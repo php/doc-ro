@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: da75c15e022c72fdab6ed68f936ee41ecc5909b1 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 6e6d82f0970ebfa4f3322e96efb6f9d0cc114205 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
+
 <refentry xml:id="function.unserialize" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>unserialize</refname>
@@ -16,6 +17,7 @@
   <methodsynopsis>
    <type>mixed</type><methodname>unserialize</methodname>
    <methodparam><type>string</type><parameter>str</parameter></methodparam>
+   <methodparam choice="opt"><type>array</type><parameter>options</parameter></methodparam>
   </methodsynopsis>
   <simpara>
    <function>unserialize</function> preia o singură variabilă serializată și o
@@ -55,6 +57,47 @@
       </para>
      </listitem>
     </varlistentry>
+    <varlistentry>
+     <term><parameter>options</parameter></term>
+     <listitem>
+      <para>
+       Orice opțiuni ce trebuie transmise <function>unserialize</function>, ca
+       tablou asociativ.
+      </para>
+      <table>
+       <title>Opțiuni valide</title>
+       <tgroup cols="3">
+        <thead>
+         <row>
+          <entry>Nume</entry>
+          <entry>Tip</entry>
+          <entry>Descriere</entry>
+         </row>
+        </thead>
+        <tbody>
+         <row>
+          <entry><literal>allowed_classes</literal></entry>
+          <entry><type>mixed</type></entry>
+          <entry>
+           <simpara>
+            Poate fi un <type>array</type> cu denumiri de clase, ce trebuie să
+            fie acceptate, &false; pentru a nu accepta clase sau &true; pentru a
+            accepta toate clasele. Dacă această opțiune e definită și
+            <function>unserialize</function> întâlnește un obiect al unei clase
+            ce nu trebuie acceptată, atunci obiectul va fi instanțiat ca
+            <classname>__PHP_Incomplete_Class</classname>.
+           </simpara>
+           <simpara>
+            Omiterea acestei opțiuni are același efect ca și definirea sa în
+            &true;: PHP va încerca să instanțieze obiecte de orice clasă.
+           </simpara>
+          </entry>
+         </row>
+        </tbody>
+       </tgroup>
+      </table>
+     </listitem>
+    </varlistentry>
    </variablelist>
   </para>
  </refsect1>
@@ -84,6 +127,12 @@
       </row>
      </thead>
      <tbody>
+      <row>
+       <entry>7.0.0</entry>
+       <entry>
+        Parametrul <parameter>options</parameter> a fost adăugat.
+       </entry>
+      </row>
       <row>
        <entry>5.6.0</entry>
        <entry>
@@ -181,7 +230,7 @@ function mycallback($classname)
   <para>
    <simplelist>
     <member><function>serialize</function></member>
-    <member><link linkend="language.oop5.autoload">Autoîncărcarea obiectelor</link></member>
+    <member><link linkend="language.oop5.autoload">Autoîncărcarea claselor</link></member>
     <member><link linkend="unserialize-callback-func">unserialize_callback_func</link></member>
     <member><link linkend="object.wakeup">__wakeup()</link></member>
    </simplelist>

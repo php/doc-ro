@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 61146174fd0c190c94ed4ac343dc2143de241984 Maintainer: radical Status: ready -->
+<!-- EN-Revision: 5098c06cdda162bcb91e38eee37b1235aa9be74e Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
+
  <sect1 xml:id="language.oop5.decon" xmlns="http://docbook.org/ns/docbook">
   <title>Constructori și Destructori</title>
 
@@ -65,13 +66,14 @@ $obj = new OtherSubClass();
     </programlisting>
    </example>
    <para>
-    Pentru compatibilitate cu versiunile mai vechi, dacă PHP 5 nu găsește
-    funcția <link linkend="object.construct">__construct()</link> pentru o clasă,
-    și dacă aceasta nu a moștenit constructorul de la o clasă-părinte, atunci se
-    va căuta o funcție-constructor de stil vechi, care are chiar numele clasei.
+    Pentru compatibilitate, în cazul în care o clasă nu a moștenit un
+    <link linkend="object.construct">__construct()</link> dintr-o clasă părinte,
+    fie __construct() sau funcția constructor de stil vechi cu numele clasei va
+    fi folosit ca funcție constructor, oricare dintre acestea survine mai întâi.
     Drept urmare, singura neconcordanță în compatibilitate va fi atunci când
-    ați folosit în clase funcția <link linkend="object.construct">__construct()</link> pentru
-    alte scopuri decât inițializarea obiectului.
+    ați folosit în clase funcția <link linkend="object.construct">__construct()</link>
+    pentru alte scopuri decât inițializarea obiectului și definiția a fost amplasată
+    înaintea constructorului de stil vechi.
    </para>
    <para>
     Spre deosebire de alte metode, PHP nu va genera un mesaj de eroare de nivel
