@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 5f9ee1e86617efc184a2ee1fafabe1a0ca4dc34a Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 3a01997da5d4332f922061df0e60631336771b6d Maintainer: simionea Status: ready -->
 
 <book xml:id="book.mongo" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
- <title>Driver-ul MongoDB (stabil și susținut)</title>
+ <title>Driver-ul MongoDB (învechit)</title>
  <titleabbrev>Mongo</titleabbrev>
 
  &reference.mongo.setup;

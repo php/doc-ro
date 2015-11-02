@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: a9f96e8c83e989c5edca55ccb36ed9b7579d8a44 Maintainer: radical Status: ready -->
+<!-- EN-Revision: eec101b31ff70f6da1c3158f863bc206a1fa90d3 Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
+
  <sect1 xml:id="language.oop5.visibility" xmlns="http://docbook.org/ns/docbook">
   <title>Vizibilitatea</title>
   <para>
@@ -11,8 +12,8 @@
    <emphasis>protected</emphasis> sau <emphasis>private</emphasis>. Membrele
    claselor (proprietăți sau metode) declarate public pot fi accesate oriunde.
    Membrele declarate protected pot fi accesate doar în interiorul clasei,
-   precum și de clasele moștenite și clasele-părinte. Membrele declarate private
-   pot fi accesate doar de clasa care le definește.
+   precum și de clasele moștenite. Membrele declarate private pot fi accesate
+   doar de clasa care le definește.
   </para>
 
   <sect2 xml:id="language.oop5.visibility-members">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 5098c06cdda162bcb91e38eee37b1235aa9be74e Maintainer: radical Status: ready -->
+<!-- EN-Revision: 664dfca34e287631fefb83032e810ea505a621e4 Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
 
  <sect1 xml:id="language.oop5.decon" xmlns="http://docbook.org/ns/docbook">
@@ -66,15 +66,24 @@ $obj = new OtherSubClass();
     </programlisting>
    </example>
    <para>
-    Pentru compatibilitate, în cazul în care o clasă nu a moștenit un
-    <link linkend="object.construct">__construct()</link> dintr-o clasă părinte,
-    fie __construct() sau funcția constructor de stil vechi cu numele clasei va
-    fi folosit ca funcție constructor, oricare dintre acestea survine mai întâi.
-    Drept urmare, singura neconcordanță în compatibilitate va fi atunci când
-    ați folosit în clase funcția <link linkend="object.construct">__construct()</link>
-    pentru alte scopuri decât inițializarea obiectului și definiția a fost amplasată
-    înaintea constructorului de stil vechi.
+    Pentru compatibilitate cu PHP 3 și 4, dacă PHP nu poate găsi funcția
+    <link linkend="object.construct">__construct()</link> pentru o clasă dată,
+    și această funcție nu a fost moștenită de la clasa părinte, va fi căutată
+    funcția constructor de stil vechi, cu numele clasei.
+    Drept urmare, singurul caz care va duce la probleme de compatibilitate este
+    dacă clasa a avut o metodă <link linkend="object.construct">__construct()</link>
+    folosită cu alt scop semantic.
    </para>
+   <!-- Not using an entity because I want specific wording here, since we're
+   not deprecating constructors in general. -->
+   <warning>
+    <simpara>
+     Constructorii de stil vechi sunt <emphasis>ÎNVECHIȚI</emphasis> în PHP 7.0
+     și vor fi eliminați într-o versiune ulterioară. Trebuie întotdeauna să
+     utilizați <link linkend="object.construct">__construct()</link> în
+     coduri-sursă noi.
+    </simpara>
+   </warning>
    <para>
     Spre deosebire de alte metode, PHP nu va genera un mesaj de eroare de nivel
     <constant>E_STRICT</constant> atunci când <link linkend="object.construct">__construct()</link>

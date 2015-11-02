@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 4dcc5b1210b0972e8c4db8c2bb10fb282e078823 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 277f92663bcdb417ae8e569ec40733117cb73774 Maintainer: simionea Status: ready -->
 
  <section xml:id="ini.core" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Descrierea directivelor de bază ale &php.ini;</title>
@@ -480,6 +480,10 @@
         datele șirurilor de caractere multi-byte. Codificările compatibile cu
         ISO-8859-1, precum UTF-8, EUC, etc. nu necesită această opțiune.
        </para>
+       <para>
+        Pentru a activa zend.multibyte este necesar ca extensia mbstring să fie
+        disponibilă.
+       </para>
       </listitem>
      </varlistentry>
 
@@ -495,6 +499,11 @@
         apare la începutul scriptului. Când este utilizată o codificare
         incompatibilă cu ISO-8859-1, trebuie utilizate atât zend.multibyte, cât
         și zend.script_encoding.
+       </para>
+       <para>
+        Șirurile de caractere literale vor fi transliterate din
+        zend.script_enconding în mbstring.internal_encoding, ca și cum ar fi
+        fost apelată <function>mb_convert_encoding</function>.
        </para>
       </listitem>
      </varlistentry>
