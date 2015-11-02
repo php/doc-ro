@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: d1b39ea532d197c48104180f5e54e5d8b8e10505 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 1f12c25effdcb4dca881e99f698e2c1f4d309b04 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/var.xml, last change in rev 1.6 -->
+
 <refentry xml:id="function.var-export" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>var_export</refname>
@@ -228,6 +229,14 @@ object(A)#2 (2) {
     maximiza compatibilitatea.
    </para>
   </warning>
+  <note>
+   <para>
+    Pentru a putea evalua codul PHP generat de <function>var_export</function>,
+    toate obiectele procesate trebuie să implementeze metoda magică <link
+    linkend="object.set-state">__set_state</link>. Observați că StdClass
+    nu implementează __set_state().
+   </para>
+  </note>
  </refsect1>
 
  <refsect1 role="seealso">

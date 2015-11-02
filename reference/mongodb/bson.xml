@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 415c4e34d46e2c984c47f362de9715e10511fbe5 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 95ae6e2ac91ea2469e549e56bdcb10ab86799598 Maintainer: simionea Status: ready -->
 
  <book xml:id="book.bson" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <title>BSON</title>
-  <titleabbrev>BSON</titleabbrev>
+  <title>Clase și funcții de serializare de tip BSON</title>
+  <titleabbrev>MongoDB\Driver\BSON</titleabbrev>
 
   &reference.mongodb.reference;
 

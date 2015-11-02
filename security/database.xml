@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 6bfcf7d9af614b4155c72e84814a61607be21229 Maintainer: zamolxe Status: ready -->
+<!-- EN-Revision: 1e62810892b046040f252fca61913817e3aef39f Maintainer: zamolxe Status: ready -->
 <!-- CREDITS: simionea -->
-<!-- splitted from ./index.xml, last change in rev 1.66 -->
+
   <chapter xml:id="security.database" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
    <title>Securitatea Bazelor de Date</title>
 
@@ -115,41 +115,90 @@
      documentația de rigoare pentru a studia mai multe despre modalitățile de
      operare ale criptării.
     </simpara>
-    <simpara>
-     În cazul datelor care trebuie să fie confidențiale, a căror expunere nu
-     este necesară în nici un context, procedeul hashing poate fi luat în
-     considerare. Cel mai cunoscut exemplu este stocarea hash-ului criptografic
-     al unei parole în baza de date, în loc de stocarea parolei înseși. A se
-     vedea de asemenea și funcția <function>crypt</function>.
-    </simpara>
-    <example>
-     <title>Utilizarea hash-ului pentru parole</title>
-     <programlisting role="php">
+
+    <sect2 xml:id="security.database.storage.hashing">
+    <title>Hashing</title>
+     <simpara>
+      În cazul datelor cu adevărat ascunse, dacă reprezentarea lor deschisă nu
+      este necesară (de ex. nu vor fi afișate), ar trebui luată în considerare
+      procedura de hashing. Cel mai cunoscut exemplu este stocarea hash-ului
+      criptografic al unei parole în baza de date, în loc de stocarea parolei
+      înseși.
+     </simpara>
+     <simpara>
+      În PHP 5.5 sau ulterior funcțiile de lucru cu <link linkend="ref.password">
+      parole</link> oferă o metodă comodă de a transforma în hash date
+      confidențiale și de a lucra mai departe cu aceste hash-uri.
+      În PHP 5.3.7+ poate fi utilizată și biblioteca
+      <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.password.compat;">
+      password_compat</link>.
+     </simpara>
+     <simpara>
+      <function>password_hash</function> este utilizată pentru a transforma în
+      hash un șir de caractere dat utilizând cel mai puternic algoritm disponibil
+      la moment, și <function>password_verify</function> verifică dacă o parolă
+      dată se potrivește hash-ului stocat în baza de date.
+     </simpara>
+     <example>
+      <title>Transformarea parolei în hash</title>
+      <programlisting role="php">
 <![CDATA[
 <?php
 
-// stocarea hash-ului parolei
-// $random_chars obținute de ex. folosind /dev/random
+// storing password hash
+$query  = sprintf("INSERT INTO users(name,pwd) VALUES('%s','%s');",
+            pg_escape_string($username),
+            password_hash($password, PASSWORD_DEFAULT));
+$result = pg_query($connection, $query);
+
+// querying if user submitted the right password
+$query = sprintf("SELECT pwd FROM users WHERE name='%s';",
+            pg_escape_string($username));
+$row = pg_fetch_assoc(pg_query($connection, $query));
+
+if ($row && password_verify($password, $row['pwd'])) {
+    echo 'Welcome, ' . htmlspecialchars($username) . '!';
+} else {
+    echo 'Authentication failed for ' . htmlspecialchars($username) . '.';
+}
+
+?>
+]]>
+      </programlisting>
+     </example>
+     <simpara>
+      În versiuni mai vechi ale PHP aceasta poate fi obținut cu ajutorul funcției
+      <function>crypt</function>.
+     </simpara>
+     <example>
+      <title>Transformarea parolei în hash utilizând <function>crypt</function></title>
+      <programlisting role="php">
+<![CDATA[
+<?php
+
+// storing password hash
+// $random_chars retrieved e.g. using /dev/random
 $query  = sprintf("INSERT INTO users(name,pwd) VALUES('%s','%s');",
             pg_escape_string($username),
             pg_escape_string(crypt($password, '$2a$07$' . $random_chars . '$')));
 $result = pg_query($connection, $query);
 
-// verificare dacă utilizatorul a introdus parola corectă
+// querying if user submitted the right password
 $query = sprintf("SELECT pwd FROM users WHERE name='%s';",
             pg_escape_string($username));
 $row = pg_fetch_assoc(pg_query($connection, $query));
 
 if ($row && crypt($password, $row['pwd']) == $row['pwd']) {
-    echo 'Bun venit, ' . htmlspecialchars($username) . '!';
+    echo 'Welcome, ' . htmlspecialchars($username) . '!';
 } else {
-    echo 'Autentificarea a eșuat pentru ' . htmlspecialchars($username) . '.';
+    echo 'Authentication failed for ' . htmlspecialchars($username) . '.';
 }
 
 ?>
 ]]>
-     </programlisting>
-    </example>
+      </programlisting>
+     </example>
+    </sect2>
    </sect1>
 
    <sect1 xml:id="security.database.sql-injection">

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 65e697ff671608989432a6e6bf8ae8128b2be2c7 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 5dd7ff3e72db8436523e5eaeba2e44b8a7daa8bf Maintainer: simionea Status: ready -->
 <!-- CREDITS: zamolxe -->
+
 <refentry xml:id="function.mysql-close" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>mysql_close</refname>
@@ -31,13 +32,7 @@
    Dacă <parameter>link_identifier</parameter> nu este specificat, este
    utilizată ultima conexiune deschisă.
   </para>
-  <para>
-   Utilizarea <function>mysql_close</function> de obicei nu este necesară
-   deoarece conexiunile non-persistente deschise sunt închise în mod automat
-   la sfârșitul execuției script-ului. Vedeți de asemenea
-   <link linkend="language.types.resource.self-destruct">eliberarea
-   resurselor</link>.
-  </para>
+  &mysql.close.connections.result.sets;
  </refsect1>
 
  <refsect1 role="parameters">
@@ -89,6 +84,8 @@ Conexiunea a fost realizată cu succes
    <para>
     <function>mysql_close</function> nu va închide conexiuni persistente create
     cu <function>mysql_pconnect</function>.
+    Pentru detalii suplimentare, accesați pagina manualului despre
+    <link linkend="features.persistent-connections">conexiuni persistente</link>.
    </para>
   </note>
  </refsect1>

@@ -1,20 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 415c4e34d46e2c984c47f362de9715e10511fbe5 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: c47299bd48333ebe8c305a9463d539373a468275 Maintainer: simionea Status: ready -->
 
 <article xml:id="mongodb.installation" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.install;
 
- <para>
-  Utilizați <option role="configure">--with-mongodb[=DIR]</option> la compilarea PHP.
- </para>
+ <section xml:id="mongodb.installation.php">
+  <title>PHP</title>
 
- <para>
-  Utilizatorii Windows trebuie să includă <filename>php_mongodb.dll</filename> în secțiunea necesară din &php.ini;
- </para>
+  <para>
+   Executați:
+   <programlisting role="shell">
+<![CDATA[
+$ sudo pecl install mongodb
+]]>
+   </programlisting>
+  </para>
+
+  <para>
+   Adăugați următoarea linie în fișierul de configurare php.ini:
+   <programlisting role="ini">
+<![CDATA[
+extension=mongodb.so
+]]>
+   </programlisting>
+  </para>
+
+  <para>
+   Utilizatorii Windows trebuie să includă <filename>php_mongodb.dll</filename> în &php.ini;
+  </para>
+ </section>
+
+ <section xml:id="mongodb.installation.hhvm">
+  <title>HHVM</title>
+
+  <para>
+   Utilizatorii HHVM trebuie să descarce ultima versiune de pe
+   <link
+   xlink:href="https://s3.amazonaws.com/drivers.mongodb.org/hhvm/index.html">S3</link>
+   pentru moment.
+  </para>
+
+  <para>
+   După ce a fost descărcat, executați următorii pași:
+   <programlisting><![CDATA[
+cd libbson
+./autogen.sh
+cd ..
+
+cd libmongoc
+./autogen.sh
+cd ..
+
+hphpize
+cmake .
+
+make -j 5
+make install
+]]></programlisting>
+  </para>
+
+  <para>
+   Adăugați următoarea linie la fișierul de configurare php.ini (de obicei se găsește în /etc/hhvm):
+   <programlisting role="ini">
+<![CDATA[
+hhvm.dynamic_extension_path=/usr/local/hhvm/3.9.1/lib/hhvm/extensions/20150212
+hhvm.dynamic_extensions[mongodb]=mongodb.so
+]]>
+   </programlisting>
+  </para>
+ </section>
 
 </article>
+
 
 <!-- Keep this comment at the end of the file
 Local variables:
