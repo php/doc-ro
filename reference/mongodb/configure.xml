@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: c47299bd48333ebe8c305a9463d539373a468275 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 16995ef64bbed43f54edcd2ffd2528ce7a83694b Maintainer: simionea Status: ready -->
 
 <article xml:id="mongodb.installation" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.install;
@@ -45,16 +45,10 @@ extension=mongodb.so
   <para>
    După ce a fost descărcat, executați următorii pași:
    <programlisting><![CDATA[
-cd libbson
-./autogen.sh
-cd ..
-
-cd libmongoc
-./autogen.sh
-cd ..
-
 hphpize
 cmake .
+
+make configlib
 
 make -j 5
 make install
