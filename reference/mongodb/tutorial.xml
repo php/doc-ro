@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 3a01997da5d4332f922061df0e60631336771b6d Maintainer: simionea Status: ready -->
+<!-- EN-Revision: c718200b2753a2182682aa7fd00e093cd33e3d74 Maintainer: simionea Status: ready -->
 
  <book xml:id="mongodb.tutorial" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Ghiduri de utilizare</title>
@@ -14,24 +14,13 @@
      cu PHP și HHVM. Deoarece driver-ele funcționează la fel pe ambele sisteme,
      ghidurile de utilizare vor fi comune, dar cu secțiunile de instalare separate.
     </para>
-    <para>
-     Pentru a le vizualiza pe toate, alegeți secțiunea
-     <xref linkend="mongodb.tutorial.install.php"/> sau
-     <xref linkend="mongodb.tutorial.install.hhvm"/> și apoi continuați urmând
-     referința de la sfârșitul fiecărei secțiuni.
-    </para>
    </abstract>
   </info>
 
-  <chapter xml:id="mongodb.tutorial.install" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-   <title>Instalarea driver-ului</title>
-
-   &reference.mongodb.tutorial.hhvm;
-   &reference.mongodb.tutorial.php;
-  </chapter>
-
+  &reference.mongodb.tutorial.hhvm;
   &reference.mongodb.tutorial.library;
  </book>
+
 
 <!-- Keep this comment at the end of the file
 Local variables:
