@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 5b5ab43c78ecf2d9b8c678569afceff8b5e79c5f Maintainer: radical Status: ready -->
+<!-- EN-Revision: 4e85725855dcbe7a8265e63663c3827c01368f9c Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
  <sect1 xml:id="language.oop5.autoload" xmlns="http://docbook.org/ns/docbook">
   <title>Autoîncărcarea claselor</title>
@@ -12,29 +12,33 @@
    incluse la începutul fiecărui script.
   </para>
   <para>
-   În PHP 5, acest lucru nu mai este necesar. Se poate defini funcția
-   <function>__autoload</function> care este apelată automat în cazul
-   în care doriți să folosiți o clasă care nu a fost încă definită.
-   Apelul la această funcție oferă script-ului o ultimă șansă de a defini
-   clasa pentru a nu termina cu eroare.
+   În PHP 5, acest lucru nu mai este necesar. Funcția
+   <function>spl_autoload_register</function> înregistrează orice număr de
+   autoîncărcătoare, permițând claselor și interfețelor să fie încărcate automat
+   în caz că nu sunt încă definite. Înregistrând autoîncărcătoarele, PHP i se
+   oferă o ultimă șansă de a încărca clasa sau interfața înainte de a eșua cu
+   eroare.
   </para>
   <tip>
    <para>
-    <function>spl_autoload_register</function> oferă o alternativă mai flexibilă
-    pentru autoîncărcarea claselor. Din acest motiv utilizarea
-    <function>__autoload</function> nu este recomandată și poate fi considerată
-    învechită sau chiar eliminată în viitor.
+    Cu toate că și funcția <function>__autoload</function> poate fi utilizată
+    pentru autoîncărcarea claselor și interfețelor, este preferabilă utilizarea
+    funcției <function>spl_autoload_register</function>. Aceasta reprezintă o
+    alternativă mai flexibilă (permițând specificarea în aplicație a oricărui
+    număr de autoîncărcătoare, ca de exemplu în biblioteci ale terților). Din
+    acest motiv utilizarea <function>__autoload</function> nu este recomandată
+    și poate fi considerată învechită sau chiar eliminată în viitor.
    </para>
   </tip>
   <note>
    <para>
-    Excepțiile aruncate în __autoload nu pot fi captate într-un bloc
-    <link linkend="language.exceptions">catch</link> rezultând
-    astfel o eroare fatală. Din 5.3.0+ excepțiile aruncate in funcția
-    __autoload pot fi captate într-un bloc <link linkend="language.exceptions">
-    catch</link>, cu o mică excepție. Dacă folosiți o excepție personalizată, atunci
-    clasa respectiva trebuie să fie deja încărcată. Funcția __autoload poate
-    fi folosită pentru a încărca recursiv excepția personalizată.
+    Înainte de PHP 5.3, excepțiile aruncate în funția <function>__autoload</function>
+    nu puteau fi captate într-un bloc
+    <link linkend="language.exceptions">catch</link> rezultând astfel o eroare
+    fatală. Începând cu PHP 5.3 aceasta este posibil dacă clasa unei excepții
+    personalizate este definită la momentul generării excepției personalizate.
+    Funcția <function>__autoload</function> poate fi folosită pentru a încărca
+    recursiv clasa excepției personalizate.
    </para>
   </note>
   <note>
@@ -62,9 +66,9 @@
     <programlisting role="php">
 <![CDATA[
 <?php
-function __autoload($class_name) {
+spl_autoload_register(function ($class_name) {
     include $class_name . '.php';
-}
+});
 
 $obj  = new MyClass1();
 $obj2 = new MyClass2();
@@ -81,9 +85,9 @@ $obj2 = new MyClass2();
 <![CDATA[
 <?php
 
-function __autoload($name) {
+spl_autoload_register(function ($name) {
     var_dump($name);
-}
+});
 
 class Foo implements ITest {
 }
@@ -105,10 +109,10 @@ Fatal error: Interface 'ITest' not found in ...
     <programlisting role="php">
 <![CDATA[
 <?php
-function __autoload($name) {
+spl_autoload_register(function ($name) {
     echo "Vreau sa încarc $name.\n";
     throw new Exception("Nu pot încărca $name.");
-}
+});
 
 try {
     $obj = new NonLoadableClass();
@@ -134,10 +138,10 @@ Nu pot încărca NonLoadableClass.
     <programlisting role="php">
 <![CDATA[
 <?php
-function __autoload($name) {
+spl_autoload_register(function ($name) {
     echo "Vreau să încarc $name.\n";
     throw new MissingException("Nu pot încărca $name.");
-}
+});
 
 try {
     $obj = new NonLoadableClass();
@@ -165,8 +169,9 @@ Fatal error: Class 'MissingException' not found in testMissingException.php on l
     <simplelist>
      <member><function>unserialize</function></member>
      <member><link linkend="unserialize-callback-func">unserialize_callback_func</link></member>
-     <member><function>spl_autoload</function></member>
      <member><function>spl_autoload_register</function></member>
+     <member><function>spl_autoload</function></member>
+     <member><function>__autoload</function></member>
     </simplelist>
    </para>
   </simplesect>
