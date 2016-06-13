@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: e09bcd86249d989839826d4696c9f8b4559b644c Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 17fc359d7eb75d7d6199db77518924f2d351ed8b Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -20,13 +20,6 @@ utilizarea <function>random_int</function>, <function>random_bytes</function> sa
 <function>openssl_random_pseudo_bytes</function> în schimb.</para></caution>'>
 
 <!-- Notes -->
-
-<!ENTITY note.regex.deprecated '<note xmlns="http://docbook.org/ns/docbook">
-<para>Începând cu PHP 5.3.0 extensia regex este defavorizată în favoarea
-<link linkend="book.pcre">extensiei PCRE</link>. Apelarea acestei funcții va
-emite o notificare <constant>E_DEPRECATED</constant>. Accesați
-<link linkend="reference.pcre.pattern.posix">lista diferențelor</link> pentru
-ajutor la convertirea în sintaxa PCRE.</para></note>'>
 
 <!ENTITY note.bin-safe '<note xmlns="http://docbook.org/ns/docbook"><simpara>
 Această funcție acceptă și date binare.</simpara></note>'>
@@ -58,7 +51,9 @@ precedent.</para></note>'>
 
 <!ENTITY note.funcbyref '<note xmlns="http://docbook.org/ns/docbook"><para>
 Dacă argumentele sunt transmise prin referință atunci orice schimbare a lor va
-fi reflectată în valorile întoarse de această funcție.</para></note>'>
+fi reflectată în valorile întoarse de această funcție. Începând cu PHP 7 valorile
+curente vor fi întoarse de asemenea și atunci când argumentele sunt transmise
+prin valoare.</para></note>'>
 
 <!ENTITY note.funcnoparam '<note xmlns="http://docbook.org/ns/docbook"><para>
 Deoarece această funcție își determină detaliile parametrilor în dependență de
@@ -325,6 +320,67 @@ lista sa de proprietăți și metode.</simpara></warning>'>
 <simpara>Această funcție nu este documentată în prezent; este disponibilă numai
 lista sa de argumente.</simpara></warning>'>
 
+<!-- Deprecation and removal warnings designed for use with a list of
+     alternatives. See en/reference/regex/functions/ereg.xml and
+     en/reference/regex/reference.xml for examples of these in action. -->
+
+<!ENTITY warn.deprecated.function.4-1-0.removed.7-0-0.alternatives '
+<para xmlns="http://docbook.org/ns/docbook">
+ Această funcție este <emphasis>ÎNVECHITĂ</emphasis> începând cu PHP 4.1.0 și
+ <emphasis>ELIMINATĂ</emphasis> în PHP 7.0.0.
+</para>
+<para xmlns="http://docbook.org/ns/docbook">
+ Variante alternative pentru această funcție sunt:
+</para>
+'>
+
+<!ENTITY warn.deprecated.feature.5-3-0.removed.7-0-0.alternatives '
+<para xmlns="http://docbook.org/ns/docbook">
+ Această facilitate este <emphasis>ÎNVECHITĂ</emphasis> începând cu PHP 5.3.0 și
+ <emphasis>ELIMINATĂ</emphasis> în PHP 7.0.0.
+</para>
+<para xmlns="http://docbook.org/ns/docbook">
+ Variante alternative pentru această facilitate sunt:
+</para>
+'>
+
+<!ENTITY warn.deprecated.function.5-3-0.removed.7-0-0.alternatives '
+<para xmlns="http://docbook.org/ns/docbook">
+ Această funcție este <emphasis>ÎNVECHITĂ</emphasis> începând cu PHP 5.3.0 și
+ <emphasis>ELIMINATĂ</emphasis> în PHP 7.0.0.
+</para>
+<para xmlns="http://docbook.org/ns/docbook">
+ Variante alternative pentru această funcție sunt:
+</para>
+'>
+
+<!ENTITY warn.deprecated.function.5-5-0.removed.7-0-0.alternatives '
+<para xmlns="http://docbook.org/ns/docbook">
+ Această funcție este <emphasis>ÎNVECHITĂ</emphasis> începând cu PHP 5.5.0 și
+ <emphasis>ELIMINATĂ</emphasis> în PHP 7.0.0.
+</para>
+<para xmlns="http://docbook.org/ns/docbook">
+ Variante alternative pentru această funcție sunt:
+</para>
+'>
+
+<!ENTITY warn.removed.feature.7-0-0.alternatives '
+<para xmlns="http://docbook.org/ns/docbook">
+ Această facilitate a fost <emphasis>ELIMINATĂ</emphasis> în PHP 7.0.0.
+</para>
+<para xmlns="http://docbook.org/ns/docbook">
+ Variante alternative pentru această facilitate sunt:
+</para>
+'>
+
+<!ENTITY warn.removed.function.7-0-0.alternatives '
+<para xmlns="http://docbook.org/ns/docbook">
+ Această funcție a fost <emphasis>ELIMINATĂ</emphasis> în PHP 7.0.0.
+</para>
+<para xmlns="http://docbook.org/ns/docbook">
+ Variante alternative pentru această funcție sunt:
+</para>
+'>
 
 <!-- Misc -->
 
@@ -1087,21 +1143,6 @@ va fi viziblă dacă documentul este tipărit sau vizualizat, dar va apare dacă
 documentul este convertit în pdf fie de Acrobat Distiller™ sau de Ghostview.
 </para>'>
 
-<!-- XSLT Notes -->
-<!ENTITY note.xslt.windows '<note xmlns="http://docbook.org/ns/docbook"><para>
-Vă atragem atenția că este necesar de indicat <literal>file://</literal> în
-fața căii, în cazul când utilizați Windows.</para></note>'>
-
-<!ENTITY xslt.parameter.processor '<varlistentry xmlns="http://docbook.org/ns/docbook">
-<term><parameter>processor</parameter></term><listitem><para>Identificatorul legăturii
-procesorului <acronym>XSLT</acronym> creat cu ajutorul <function>xslt_create</function>.
-</para></listitem></varlistentry>'>
-
-<!ENTITY xslt.parameter.xh '<varlistentry xmlns="http://docbook.org/ns/docbook">
-<term><parameter>xh</parameter></term><listitem><para>Identificatorul legăturii
-procesorului <acronym>XSLT</acronym> creat cu ajutorul <function>xslt_create</function>.
-</para></listitem></varlistentry>'>
-
 <!-- Notes for safe-mode limited functions: -->
 <!ENTITY note.sm.disabled '<note xmlns="http://docbook.org/ns/docbook">
 <simpara>&sm.disabled;</simpara></note>'>
@@ -1214,6 +1255,11 @@ poate fi utilizată pentru a obține atributul <constant>PDO_ATTR_DRIVER_NAME
 </constant>, pentru a verifica driver-ul în caz că codul-sursă al
 dumneavoastră poate rula cu mai multe driver-e.</simpara>'>
 
+<!ENTITY pdo.errors.exception-not-errmode '<note xmlns="http://docbook.org/ns/docbook">
+<simpara>O excepție este emisă chiar atunci când atributul
+<constant>PDO::ATTR_ERRMODE</constant> nu are valoarea
+<constant>PDO::ERRMODE_EXCEPTION</constant>.</simpara></note>'>
+
 <!-- PECL entities -->
 <!ENTITY pecl.moved 'Această extensie
 <link xmlns="http://docbook.org/ns/docbook"
@@ -1241,7 +1287,7 @@ moartă. Oricum însă codul-sursă al acestei extensii este încă disponibil �
 <acronym xmlns="http://docbook.org/ns/docbook">DLL</acronym> pentru această
 extensie <acronym xmlns="http://docbook.org/ns/docbook">PECL</acronym> nu este
 disponibilă în prezent. Accesați de asemenea și secțiunea
-<link xmlns="http://docbook.org/ns/docbook" linkend="install.windows.building">
+<link xmlns="http://docbook.org/ns/docbook" linkend="install.windows.legacy.building">
 compilarea în Windows</link>.'>
 
 <!ENTITY pecl.windows.download.unbundled '&pecl.windows.download;'>
@@ -1289,8 +1335,9 @@ FUNCTIONS, ARGS SUMMARY (ca în cazul strace -c)) utilizați valoarea 99</para>
 <!ENTITY bc.scale.description '<varlistentry xmlns="http://docbook.org/ns/docbook">
 <term><parameter>scale</parameter></term><listitem><para>Acest parametru
 opțional este utilizat pentru a stabili numărul cifrelor după virgulă din
-rezultat. De asemenea puteți să stabiliți parametrul global scale pentru toate
-funcțiile utilizând <function>bcscale</function>.</para></listitem>
+rezultat. Dacă este omis, valoarea implicită va fi cea stabilită global cu
+funcția <function>bcscale</function>, sau va fi <literal>0</literal> dacă nu
+a fost stabilită cu ajutorul acestei funcții.</para></listitem>
 </varlistentry>'>
 
 <!-- CTYPE Notes -->
@@ -1697,72 +1744,10 @@ utilizat pentru a gestiona cheile publice de pe un server la care clientul este
 îndepărtat utilizând autentificarea cu chei publice, utilizați funcția
 <function>ssh2_auth_pubkey_file</function> în loc.</simpara></note>'>
 
-<!-- HTTP -->
-<!ENTITY see.http.request.options '<para xmlns="http://docbook.org/ns/docbook">
-Vedeți lista întreagă de &link.http.request.options;.</para>'>
-<!ENTITY see.http.configuration.force_exit 'Vedeți &link.http.configuration;
-<link xmlns="http://docbook.org/ns/docbook"
-linkend="http.configuration.force-exit">http.force_exit</link> pentru a afla ce
-înseamnă "iese".'>
-
-<!ENTITY link.http.configuration '<link xmlns="http://docbook.org/ns/docbook"
-linkend="http.configuration">setarea INI</link>'>
-<!ENTITY link.http.request.option '<link xmlns="http://docbook.org/ns/docbook"
-linkend="http.request.options">opțiunea interpelării</link>'>
-<!ENTITY link.http.request.options '<link xmlns="http://docbook.org/ns/docbook"
-linkend="http.request.options">opțiunile interpelării</link>'>
-<!ENTITY link.http.request.info '<link xmlns="http://docbook.org/ns/docbook"
-linkend="http.request.info">Informația interpelării/răspunsului</link>'>
-<!ENTITY returns.http.response 'Întoarce răspunsul(urile) HTTP ca string în
-caz de succes, sau &false; în caz de eșec.'>
-<!ENTITY returns.http.false.orexits 'Întoarce &false; sau
-<emphasis xmlns="http://docbook.org/ns/docbook">iese</emphasis> în caz de succes'>
+<!-- Session notes -->
 <!ENTITY returns.session.storage.retval 'Valoarea întoarsă (de regulă &true; în
 caz de succes, &false; în caz de eșec). Notă: această valoare este întoarsă
 intern către PHP pentru procesare.'>
-<!ENTITY http.request.affects 'Afectează numai următoarele metode de
-interpelare:'>
-<!ENTITY http.request.affects.any 'Afectează orice metodă de interpelare.'>
-<!ENTITY http.response.class.php51 'clasa
-<link xmlns="http://docbook.org/ns/docbook" linkend="class.httpresponse">
-<classname>HttpResponse</classname></link> dacă utilizați PHP 5.1.0 sau
-ulterior'>
-<!ENTITY http.maynotwork.SAPI 'Aceasta poate să nu funcționeze conform
-așteptărilor cu următoarele SAPI(uri):'>
-<!ENTITY http.content.disposition 'Antetul
-<literal xmlns="http://docbook.org/ns/docbook">Content-Disposition</literal>
-este foarte util în caz că datele transmise provin dintr-un fișier sau ceva
-similar și care ar trebui &quot;salvate&quot; de client/utilizator (de ex. în
-navigator fereastra &quot;Salvează în...&quot;).'>
-<!ENTITY http.use.ob_start 'Pentru a fi utilizat cu
-<function xmlns="http://docbook.org/ns/docbook">ob_start</function>.'>
-
-<!ENTITY note.http.response.recalculate.etag.lm '<note
-xmlns="http://docbook.org/ns/docbook"><simpara><literal>ETag</literal> și
-<literal>Last-Modified</literal> calculate sau definite anterior vor fi
-recalculate sau redefinite.</simpara></note>'>
-<!ENTITY note.http.throttling.yields.process '<note
-xmlns="http://docbook.org/ns/docbook"><simpara>Oferă un mecanism de limitare de
-bază, care va suspenda procesul sau firul de execuție curent până când
-entitatea nu este transmisă deplin.</simpara></note>'>
-<!ENTITY note.http.send.API '<note xmlns="http://docbook.org/ns/docbook">
-<simpara>Această funcție ar trebui să fie utilizată împreună cu
-<function>http_send_data</function>, <function>http_send_file</function>
-&listendand; <function>http_send_stream</function>.</simpara></note>'>
-<!ENTITY note.http.send.API.mayuse '<note xmlns="http://docbook.org/ns/docbook">
-<simpara>Această funcție ar putea fi utilizată împreună cu
-<function>http_send_data</function>, <function>http_send_file</function>
-&listendand; <function>http_send_stream</function>.</simpara></note>'>
-<!ENTITY note.http.request.encodecookies '<note
-xmlns="http://docbook.org/ns/docbook"><simpara>&link.http.request.option;
-<literal>encodecookies</literal> controlează dacă valorile cookie trebuie
-procesate cu <function>urlencode</function>.</simpara></note>'>
-<!ENTITY note.http.request.affects.any '<note
-xmlns="http://docbook.org/ns/docbook"><simpara>&http.request.affects.any;
-</simpara></note>'>
-<!ENTITY note.http.ob.once '<note xmlns="http://docbook.org/ns/docbook">
-<simpara>Acest handler de ieșire poate fi utilizat numai o singură dată.
-</simpara></note>'>
 
 <!-- XMLWriter Notes -->
 <!ENTITY xmlwriter.xmlwriter.description '<varlistentry
@@ -2311,8 +2296,8 @@ participare la înscriere.</para>'>
 <!ENTITY mongo.command.parameters.maxtimems '<listitem xmlns="http://docbook.org/ns/docbook">
 <para><literal>"maxTimeMS"</literal></para>
 <para>Specifică o limită de timp cumulativă în milisecunde pentru procesarea
-operațiunii (nu include timpul de așteptare). Dacă operațiunea nu este terminată
-în timpul rezervat, va fi emisă o
+operațiunii pe server (nu include timpul de așteptare). Dacă operațiunea nu este
+terminată pe server în timpul rezervat, va fi emisă o
 <classname>MongoExecutionTimeoutException</classname>.</para></listitem>'>
 
 <!ENTITY mongo.index.parameters.background '<listitem xmlns="http://docbook.org/ns/docbook">
@@ -2506,7 +2491,9 @@ Acesta va fi un <classname>MongoId</classname> generat, doar dacă un
 </row>
 <row>
 <entry>ordered</entry><entry>Determină dacă MongoDB trebuie să aplice acest set
-în ordinea stabilită (secvențial, câte o înregistrare) sau îl poate rearanja.
+în ordinea stabilită. Înscrierile ordonate se execută secvențial (adică câte o
+înregistrare) și execuția se întrerupe după prima eroare. Înscrierile neordonate
+pot fi executate în paralel și execuția nu se va stopa după prima eroare.
 Valoarea implicită este &true;</entry>
 </row>
 <row>
@@ -2600,42 +2587,131 @@ sau în timpul executării <methodname>MongoWriteBatch::execute</methodname>.</p
 <entry>Spațiul de nume MongoDB utilizat pentru mesajul de protocol <literal>dbname.collectionname</literal></entry>
 </row></tbody></tgroup></informaltable></para></listitem></varlistentry>'>
 
+<!ENTITY mongo.alternative.class.note '<para xmlns="http://docbook.org/ns/docbook">
+Extensia care definește această clasă este învechită. În loc, trtebuie utilizată
+extensia <link linkend="set.mongodb">MongoDB</link>.
+Variante alternative pentru această clasă includ:</para>'>
+
+<!ENTITY mongo.noalternative.class.note '<para xmlns="http://docbook.org/ns/docbook">
+Extensia care definește această clasă este învechită. În loc, trtebuie utilizată
+extensia <link linkend="set.mongodb">MongoDB</link>.
+Nu există un echivalent al acestei clase în noua extensie.</para>'>
+
+<!ENTITY mongo.alternative.method.note '<para xmlns="http://docbook.org/ns/docbook">
+Extensia care definește această metodă este învechită. În loc, trtebuie utilizată
+extensia <link linkend="set.mongodb">MongoDB</link>.
+Variante alternative pentru această metodă includ:</para>'>
+
+<!ENTITY mongo.noalternative.method.note '<para xmlns="http://docbook.org/ns/docbook">
+Extensia care definește această metodă este învechită. În loc, trtebuie utilizată
+extensia <link linkend="set.mongodb">MongoDB</link>.
+Nu există un echivalent al acestei metode în noua extensie.</para>'>
+
+<!ENTITY mongo.alternative.phplib.note '<para xmlns="http://docbook.org/ns/docbook">
+Extensia care definește această metodă este învechită. În loc, trtebuie utilizată
+extensia <link linkend="set.mongodb">MongoDB</link>.
+Nu există un echivalent al acestei metode în noua extensie, însă există o
+alternativă în <link linkend="mongodb.overview">biblioteca PHP</link>:</para>'>
+
+<!ENTITY mongo.deprecated.note '<para xmlns="http://docbook.org/ns/docbook">
+Această extensie este învechită. În loc, trtebuie utilizată
+extensia <link linkend="set.mongodb">MongoDB</link>.</para>'>
+
 <!-- mongodb -->
 <!ENTITY mongodb.parameter.namespace '
    <varlistentry xmlns="http://docbook.org/ns/docbook">
-    <term><parameter>namespace</parameter></term>
+    <term><parameter>namespace</parameter> (<type>string</type>)</term>
     <listitem>
      <para>
-      Un spațiu de nume deplin (databaseName.collectionName)
+      Un spațiu de nume complet calificat (de ex. <literal>"databaseName.collectionName"</literal>).
      </para>
     </listitem>
    </varlistentry>
 '>
-<!ENTITY mongodb.parameter.readPreference '
+
+<!ENTITY mongodb.parameter.db '
    <varlistentry xmlns="http://docbook.org/ns/docbook">
-    <term><parameter>readPreference</parameter></term>
+    <term><parameter>db</parameter> (<type>string</type>)</term>
     <listitem>
      <para>
-      Opțional o clasă <classname>MongoDB\Driver\ReadPreference</classname> spre
-      care va fi direcționată comanda. Dacă nu este furnizată, ca valoare
-      implicită vor fi considerate preferințele Read Preferences stabilite de
+      Denumirea bazei de date asupra căreia va fi executată comanda.
+     </para>
+    </listitem>
+   </varlistentry>
+'>
+
+<!ENTITY mongodb.parameter.bulkwrite '
+   <varlistentry xmlns="http://docbook.org/ns/docbook">
+    <term><parameter>bulk</parameter> (<type>MongoDB\Driver\BulkWrite</type>)</term>
+    <listitem>
+     <para>
+      <classname>MongoDB\Driver\BulkWrite</classname> spre a fi executată.
+     </para>
+    </listitem>
+   </varlistentry>
+'>
+
+<!ENTITY mongodb.parameter.command '
+   <varlistentry xmlns="http://docbook.org/ns/docbook">
+    <term><parameter>command</parameter> (<type>MongoDB\Driver\Command</type>)</term>
+    <listitem>
+     <para>
+      <classname>MongoDB\Driver\Command</classname> spre a fi executată.
+     </para>
+    </listitem>
+   </varlistentry>
+'>
+
+<!ENTITY mongodb.parameter.query '
+   <varlistentry xmlns="http://docbook.org/ns/docbook">
+    <term><parameter>query</parameter> (<type>MongoDB\Driver\Query</type>)</term>
+    <listitem>
+     <para>
+      <classname>MongoDB\Driver\Query</classname> spre a fi executată.
+     </para>
+    </listitem>
+   </varlistentry>
+'>
+
+<!ENTITY mongodb.parameter.readPreference '
+   <varlistentry xmlns="http://docbook.org/ns/docbook">
+    <term><parameter>readPreference</parameter> (<type>MongoDB\Driver\ReadPreference</type>)</term>
+    <listitem>
+     <para>
+      Opțional o <classname>MongoDB\Driver\ReadPreference</classname> pentru a
+      selecta serverul pentru această operațiune. Dacă nu este indicată vre-una,
+      va fi utilizată preferința de citire din
       <link linkend="mongodb-driver-manager.construct-uri">MongoDB Connection URI</link>.
      </para>
     </listitem>
    </varlistentry>
 '>
-<!ENTITY mongodb.parameter.writeConcern '
+
+<!ENTITY mongodb.parameter.typeMap '
    <varlistentry xmlns="http://docbook.org/ns/docbook">
-    <term><parameter>writeConcern</parameter></term>
+    <term><parameter>typeMap</parameter> (<type>array</type>)</term>
     <listitem>
      <para>
-      Opțional o clasă <classname>MongoDB\Driver\WriteConcern</classname>. Dacă
-      nu este furnizată, ca valoare implicită va fi considerat Write Concern
-      stabilit de <link linkend="mongodb-driver-manager.construct-uri">MongoDB Connection URI</link>.
+      <link linkend="mongodb.persistence.typemaps">configurația Type map</link>.
      </para>
     </listitem>
    </varlistentry>
 '>
+
+<!ENTITY mongodb.parameter.writeConcern '
+   <varlistentry xmlns="http://docbook.org/ns/docbook">
+    <term><parameter>writeConcern</parameter> (<type>MongoDB\Driver\WriteConcern</type>)</term>
+    <listitem>
+     <para>
+      Opțional un <classname>MongoDB\Driver\WriteConcern</classname> pentru a fi
+      aplicat la operațiunea de înscrieire. Dacă nu este indicat vre-unul, va fi
+      utilizat "write concern" din
+      <link linkend="mongodb-driver-manager.construct-uri">MongoDB Connection URI</link>.
+     </para>
+    </listitem>
+   </varlistentry>
+'>
+
 <!ENTITY mongodb.parameter.filter '
    <varlistentry xmlns="http://docbook.org/ns/docbook">
     <term><parameter>filter</parameter> (<type>array|object</type>)</term>
@@ -2646,38 +2722,47 @@ sau în timpul executării <methodname>MongoWriteBatch::execute</methodname>.</p
     </listitem>
    </varlistentry>
 '>
-<!ENTITY mongodb.returns.WriteResult '
-  <para xmlns="http://docbook.org/ns/docbook">
-   Întoarce <classname>MongoDB\Driver\WriteResult</classname> în caz de succes, &mongodb.throws.onfailure;.
-  </para>
-'>
-<!ENTITY mongodb.throws.onfailure 'emite o excepție (instanceof <classname xmlns="http://docbook.org/ns/docbook" >MongoDB\Driver\Exception</classname>) în caz de eșec'>
-<!ENTITY mongodb.throws.std '&mongodb.throws.authentication;&mongodb.throws.connection;'>
-<!ENTITY mongodb.throws.executesingle '&mongodb.throws.duplicatekey;&mongodb.throws.writeexception;&mongodb.throws.writeconcernexception;'>
-<!ENTITY mongodb.throws.bulkwriteexception '<member xmlns="http://docbook.org/ns/docbook">Emite <classname>MongoDB\Driver\BulkWriteException</classname> la orice eșec de înscriere (eșecuri la WriteError și WriteConcern)</member>'>
-<!ENTITY mongodb.throws.argumentparsing '<member xmlns="http://docbook.org/ns/docbook">Emite <classname>MongoDB\Driver\InvalidArgumentException</classname> la erori de analiză a argumentelor.</member>'>
-<!ENTITY mongodb.throws.duplicatekey '<member xmlns="http://docbook.org/ns/docbook">Emite <classname>MongoDB\Driver\DuplicateKeyException</classname> dacă o înscriere cauzează erori Duplicate Key</member>'>
-<!ENTITY mongodb.throws.writeexception '<member xmlns="http://docbook.org/ns/docbook">Emite <classname>MongoDB\Driver\WriteException</classname> în caz de Write Error</member>'>
-<!ENTITY mongodb.throws.writeconcernexception '<member xmlns="http://docbook.org/ns/docbook">Emite <classname>MongoDB\Driver\WriteConcernException</classname> în caz de eșec Write Concern</member>'>
-<!ENTITY mongodb.throws.authentication '<member xmlns="http://docbook.org/ns/docbook">Emite <classname>MongoDB\Driver\AuthenticationException</classname> dacă autentificarea este necesară și eșuează</member>'>
-<!ENTITY mongodb.throws.connection '<member xmlns="http://docbook.org/ns/docbook">Emite <classname>MongoDB\Driver\ConnectionException</classname> dacă conexiunea către server eșuează din cauza unui alt motiv decât autentificarea</member>'>
+
+<!ENTITY mongodb.returns.cursor '<para xmlns="http://docbook.org/ns/docbook">Întoarce <classname>MongoDB\Driver\Cursor</classname> în caz de succes.</para>'>
+
+<!ENTITY mongodb.returns.writeresult '<para xmlns="http://docbook.org/ns/docbook">Întoarce <classname>MongoDB\Driver\WriteResult</classname> în caz de succes.</para>'>
+
+<!ENTITY mongodb.throws.std '&mongodb.throws.argumentparsing;&mongodb.throws.connection;&mongodb.throws.authentication;'>
+
+<!ENTITY mongodb.throws.bulkwriteexception '<member xmlns="http://docbook.org/ns/docbook">
+Emite <classname>MongoDB\Driver\Exception\BulkWriteException</classname> la orice
+eșec de înscriere (de ex. eroare de înscriere, eșec la aplicarea unui "write concern")</member>'>
+
+<!ENTITY mongodb.throws.argumentparsing '<member xmlns="http://docbook.org/ns/docbook">
+Emite <classname>MongoDB\Driver\Exception\InvalidArgumentException</classname> în
+cazul erorilor la interpretarea argumentelor.</member>'>
+
+<!ENTITY mongodb.throws.authentication '<member xmlns="http://docbook.org/ns/docbook">
+Emite <classname>MongoDB\Driver\Exception\AuthenticationException</classname>
+dacă este necesară autentificare și aceasta eșuează.</member>'>
+
+<!ENTITY mongodb.throws.connection '<member xmlns="http://docbook.org/ns/docbook">
+Emite <classname>MongoDB\Driver\Exception\ConnectionException</classname> dacă
+conexiunea către server eșuează (din alte motive decât autentificarea).</member>'>
+
 <!ENTITY mongodb.note.getwriteerrors '
   <note xmlns="http://docbook.org/ns/docbook">
    <para>
-    În caz de eșec la înscriere,
+    În cazul eșecului la înscriere
     <methodname>MongoDB\Driver\WriteResult::getWriteErrors</methodname> va avea
-    doar o <classname>MongoDB\Driver\WriteError</classname> în tablou, și
+    doar un <classname>MongoDB\Driver\WriteError</classname> în tablou și
     <methodname>MongoDB\Driver\WriteError::getIndex</methodname> va fi întotdeauna
-    0 (indicele acestei operațiuni în set).
+    0 (indicele acestei operațiuni din serie).
    </para>
   </note>
 '>
+
 <!ENTITY mongodb.note.getupsertedids '
   <note xmlns="http://docbook.org/ns/docbook">
    <para>
     <methodname>MongoDB\Driver\WriteResult::getUpsertedIds</methodname> va avea
-    doar un <classname>BSON\ObjectID</classname> în tablou, și indicele va fi
-    întotdeauna 0 (indicele acestei operațiuni în set).
+    doar un <classname>BSON\ObjectID</classname> în tablou și indicele va fi
+    întotdeauna 0 (indicele acestei operațiuni din serie).
    </para>
   </note>
 '>
@@ -2829,6 +2914,16 @@ Acest parametru e ignorat dacă nu a fost stabilită opțiunea
     <classname>TypeError</classname>.
   </simpara>
  </listitem>
+'>
+
+<!ENTITY csprng.function.backport '
+ <note xmlns="http://docbook.org/ns/docbook">
+  <simpara>
+   Cu toate că această funcție a fost adăugată în PHP 7.0, o
+   <link xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="&url.csprng.compat;">implementare în spațiul utilizatorului</link>
+   este disponibilă pentru PHP de la versiunea 5.2 până la 5.6 inclusiv.
+  </simpara>
+ </note>
 '>
 
 <!-- Migration Guide snippets -->
