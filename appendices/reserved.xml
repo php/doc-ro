@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 4ed9525149bda7d63b90321c551e36590127ca7c Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 47b50ee7a88fd9d89b90c10e95f77a74ee0441dd Maintainer: simionea Status: ready -->
 
  <appendix xml:id="reserved" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Lista cuvintelor rezervate</title>
@@ -459,10 +459,8 @@
   <sect1 xml:id="reserved.other-reserved-words">
    <title>Lista altor cuvinte rezervate</title>
    <simpara>
-    Aceste cuvinte nu pot fi utilizate pentru a denumi o clasă, interfață sau
-    trăsătură. Aceste cuvinte de asemenea nu pot fi utilizate în spații de nume.
-    Unele din aceste cuvinte sunt rezervate pentru a introduce în viitor
-    facilități PHP fără a strica compatibilitatea inversă.
+    Următoarele cuvinte nu pot fi utilizate pentru a denumi o clasă, interfață sau
+    trăsătură și de asemenea nu pot fi utilizate în spații de nume.
    </simpara>
    <para>
     <table>
@@ -493,11 +491,27 @@
         <entry>
          null (începând cu PHP 7)
         </entry>
+       </row>
+      </tbody>
+     </tgroup>
+    </table>
+   </para>
+   <para>
+    Următoarea listă de cuvinte are o rezervare ”lejeră”.
+    Cu toate că aceste cuvinte pot fi încă utilizare pentru denumiri de clase,
+    interfețe și trăsături (la fel ca și pentru spații de nume), utilizarea lor
+    este foarte nerecomandată deoarece ele pot fi utilizate în versiuni viitoare
+    ale PHP.
+   </para>
+   <para>
+    <table>
+     <title>Cuvinte rezervate ”lejer”</title>
+     <tgroup cols="5">
+      <tbody>
+       <row>
         <entry>
          resource (începând cu PHP 7)
         </entry>
-       </row>
-       <row>
         <entry>
          object (începând cu PHP 7)
         </entry>
@@ -515,7 +529,6 @@
     </table>
    </para>
   </sect1>
-
 </appendix>
 
 <!-- Keep this comment at the end of the file

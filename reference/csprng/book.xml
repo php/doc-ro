@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 8e70d616196fd5c7f94d6cbe23489db43c9ce6a1 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 4f23caf682c8abcf05594e57aecf8c45a5186401 Maintainer: simionea Status: ready -->
 
-<book xml:id="book.csprng" xmlns="http://docbook.org/ns/docbook">
+<book xml:id="book.csprng" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <?phpdoc extension-membership="core" ?>
  <title>CSPRNG</title>
 
@@ -18,7 +18,7 @@
    criptografice.
   </para>
   <para>
-   &version.exists.asof; 7.0.0.
+   &version.exists.asof;7.0.0 dar de asemenea există și o <link xlink:href="&url.csprng.compat;">implementare în spațiul utilizatorului</link> pentru PHP &gt;= 5.2.0.
   </para>
  </preface>
 

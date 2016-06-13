@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 277f92663bcdb417ae8e569ec40733117cb73774 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: e1ff080a511ae0e12f5c0ac501a82f05686823f4 Maintainer: simionea Status: ready -->
 
  <section xml:id="ini.core" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Descrierea directivelor de bază ale &php.ini;</title>
@@ -151,7 +151,7 @@
        <row>
         <entry><link linkend="ini.zend.assertions">zend.assertions</link></entry>
         <entry>"1"</entry>
-        <entry>PHP_INI_ALL</entry>
+        <entry>PHP_INI_ALL cu restricții</entry>
         <entry>Disponibilă începând cu PHP 7.0.0.</entry>
        </row>
        <row>
@@ -437,6 +437,19 @@
         generat cod de aserțiune, făcând ca aserțiunile să fie cu cost nul (în
         regimul de producție).
        </simpara>
+       <note>
+        <para>
+         Dacă un proces e lansat în regim de producție,
+         <link linkend="ini.zend.assertions">zend.assertions</link> nu poate fi
+         schimbată în timpul rulării, deoarece codul pentru aserțiuni nu a fost
+         generat.
+        </para>
+        <para>
+         Dacă un proces e lansat în regim de dezvoltare,
+         <link linkend="ini.zend.assertions">zend.assertions</link>
+         nu poate fi stabilită în <literal>-1</literal> în timpul rulării.
+        </para>
+       </note>
       </listitem>
      </varlistentry>
 
@@ -1170,9 +1183,11 @@
       </term>
       <listitem>
        <para>
-        Implicit PHP va afișa o codificare a caracterelor utilizând antetul
-        Content-Type. Pentru a dezactiva transmiterea codificării caracterelor,
-        stabiliți o valoare vidă pentru opțiune.
+        Implicit PHP va afișa un tip de media utilizând antetul Content-Type.
+        Pentru a dezactiva aceasta, stabiliți o valoare vidă pentru opțiune.
+       </para>
+       <para>
+        Tipul de media implicit pentru PHP este text/html.
        </para>
       </listitem>
      </varlistentry>

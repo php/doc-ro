@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: d22db7f5b0ed55d6f904549bd3116be900a0e8d3 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 1028f8d7e2416678242ccabcd7469b6f6e4aba9f Maintainer: simionea Status: ready -->
 
  <section xml:id="ini.list" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Lista directivelor &php.ini;</title>
@@ -43,8 +43,8 @@
       <row>
        <entry><link linkend="ini.allow-url-include">allow_url_include</link></entry>
        <entry>"0"</entry>
-       <entry>PHP_INI_ALL</entry>
-       <entry>PHP_INI_SYSTEM în PHP 5. Disponibilă începând cu PHP 5.2.0.</entry>
+       <entry>PHP_INI_SYSTEM</entry>
+       <entry>Disponibilă începând cu PHP 5.2.0.</entry>
       </row>
       <row>
        <entry><link linkend="ini.always-populate-raw-post-data">always_populate_raw_post_data</link></entry>
@@ -2087,12 +2087,18 @@
        <entry>PHP_INI_ALL</entry>
        <entry>Disponibilă începând cu PHP 5.2.0.</entry>
       </row>
-         <row>
-          <entry><link linkend="ini.pdo.dsn">pdo.dsn.*</link></entry>
-          <entry></entry>
-          <entry>Doar în &php.ini;</entry>
-          <entry>Disponibilă începând cu PHP 5.1.0.</entry>
-         </row>
+      <row>
+       <entry><link linkend="ini.pcre.jit">pcre.jit</link></entry>
+       <entry>"1"</entry>
+       <entry>PHP_INI_ALL</entry>
+       <entry>Disponibilă începând cu PHP 7.0.0.</entry>
+      </row>
+      <row>
+       <entry><link linkend="ini.pdo.dsn">pdo.dsn.*</link></entry>
+       <entry></entry>
+       <entry>Doar în &php.ini;</entry>
+       <entry>Disponibilă începând cu PHP 5.1.0.</entry>
+      </row>
       <row>
        <entry><link linkend="ini.pdo-odbc.connection-pooling">pdo_odbc.connection_pooling</link></entry>
        <entry>"strict"</entry>

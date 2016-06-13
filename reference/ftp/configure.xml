@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: c1d43d9bb6e1b43d7ae41d28b3571b1965b470ad Maintainer: simionea Status: ready -->
 <section xml:id="ftp.installation" xmlns="http://docbook.org/ns/docbook">
  &reftitle.install;
  <para>
   Pentru a utiliza funcțiile FTP în PHP este necesar de a adăuga opțiunea
   <option role="configure">--enable-ftp</option> la instalarea PHP.
  </para>
- &windows.builtin;
+ <para>
+  Versiunea Windows a PHP 5 posedă suport încorporat pentru această extensie. Nu
+  trebuie încărcate careva extensii suplimentare pentru a utiliza aceste funcții.
+ </para>
+ <para>
+  Începând cu PHP 7.0.0 pe Windows această extensie este întotdeauna compilată ca
+  extensie partajată și deci trebuie să fie activată în &php.ini;.
+ </para>
 </section>
 
 <!-- Keep this comment at the end of the file

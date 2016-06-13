@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 9fba3a1b2936f17a99c0790c09241a234f7fadb7 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 4c10034ceed36be7bba47b5d824f3f37e0060df5 Maintainer: simionea Status: ready -->
 <!-- CREDITS: spooky -->
  <chapter xml:id="introduction" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <info><title>Introducere</title></info>
@@ -22,7 +22,7 @@
      <info><title>Un exemplu introductiv</title></info>
      <programlisting role="php">
 <![CDATA[
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
 <html>
     <head>
         <title>Exemplu</title>

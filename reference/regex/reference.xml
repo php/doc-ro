@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: b38c2956ff4b9bd38834fce799ead05314ddee63 Maintainer: simionea Status: ready -->
 
 <reference xml:id="ref.regex" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>&Functions; Regex POSIX</title>
  <partintro xml:id="regex.seealso">
   &reftitle.seealso;
-  <para>
-   Pentru expresii regulare cu sintaxă compatibilă Perl, accesați
-   <link linkend="book.pcre">funcții PCRE</link>. Potrivirea mai simplă, conform
-   șabloanelor în stil shell este oferită de funcția <function>fnmatch</function>.
-  </para>
+  <warning>
+   &warn.deprecated.feature.5-3-0.removed.7-0-0.alternatives;
+   <simplelist role="alternatives">
+    <member>
+     <link linkend="book.pcre">PCRE</link>
+     (pentru susținerea deplină a expresiilor regulare)
+    </member>
+    <member>
+     <function>fnmatch</function>
+     (pentru o mai simplă potrivire a șabloanelor de tip shell wildcard)
+    </member>
+   </simplelist>
+  </warning>
  </partintro>
 
  &reference.regex.entities.functions;
