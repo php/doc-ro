@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 6aa6df5ffeecaaa9bfc04e10ef515c733b16bdd4 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 913a662cc354087c3d1795d5758102d0f7e51ce9 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.is-numeric" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -22,8 +22,8 @@
    din semnul opțional, orice număr de cifre, partea decimală opțională și
    partea exponențială opțională. Astfel <literal>+0123.45e6</literal> este
    o valoare numerică validă. Notarea hexadecimală (de ex.
-   <literal>0xf4c3b00c</literal>), binară (de ex. <literal>0b10100111001</literal>),
-   octală (de ex. <literal>0777</literal>) nu este permisă.
+   <literal>0xf4c3b00c</literal>) sau binară (de ex. <literal>0b10100111001</literal>),
+   nu este permisă.
   </para>
  </refsect1>
 

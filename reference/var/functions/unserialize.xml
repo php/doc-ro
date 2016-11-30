@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 6e6d82f0970ebfa4f3322e96efb6f9d0cc114205 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 153a97e29dc7a5bba8c394b8b16ea77bc20a7fbf Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.unserialize" xmlns="http://docbook.org/ns/docbook">
@@ -23,6 +23,22 @@
    <function>unserialize</function> preia o singură variabilă serializată și o
    convertește invers într-o valoare PHP.
   </simpara>
+  <warning>
+   <para>
+    Nu transmiteți date ale utilizatorilor, de care nu sunteți sigur, funcției
+    <function>unserialize</function>. Deserializarea poate rezulta în încărcarea
+    și executarea codului datorită instanțierii și autoîncărcării obiectelor, și
+    un utilizator rău-intenționat poate să exploateze această posibilitate.
+    Utilizați un format securizat, standard de schimb de date, cum ar fi JSON
+    (cu ajutorul <function>json_decode</function> și <function>json_encode</function>)
+    dacă aveți nevoie să transmiteți date serializate utilizatorului.
+   </para>
+   <para>
+    Dacă aveți nevoie să deserializați date serializate stocate extern, considerați
+    utilizarea <function>hash_hmac</function> pentru validarea datelor. Asigurați-vă
+    că datele nu au fost modificate de altcineva.
+   </para>
+  </warning>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -212,23 +228,15 @@ function mycallback($classname)
     <constant>E_NOTICE</constant> emisă.
    </para>
   </warning>
-  <warning>
-   <para>
-    Nu transmiteți date introduse de utilizator, ce nu sunt de încredere,
-    funcției <function>unserialize</function>. Deserializarea poate rezulta în
-    cod ce va fi încărcat și executat datorită instanțierii și autoîncărcării
-    obiectelor, și un utilizator rău intenționat poate să exploateze aceasta.
-    Utilizați un format de interschimb al datelor sigur, standardizat, cum ar fi
-    JSON (cu ajutorul <function>json_decode</function> și <function>json_encode</function>)
-    dacă aveți nevoie să transmiteți date serializate utilizatorului.
-   </para>
-  </warning>
  </refsect1>
 
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>
    <simplelist>
+    <member><function>json_encode</function></member>
+    <member><function>json_decode</function></member>
+    <member><function>hash_hmac</function></member>
     <member><function>serialize</function></member>
     <member><link linkend="language.oop5.autoload">Autoîncărcarea claselor</link></member>
     <member><link linkend="unserialize-callback-func">unserialize_callback_func</link></member>

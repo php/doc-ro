@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 1e62810892b046040f252fca61913817e3aef39f Maintainer: zamolxe Status: ready -->
+<!-- EN-Revision: 0a7a550a651bf837463ea57270bdbd4697b66fb9 Maintainer: zamolxe Status: ready -->
 <!-- CREDITS: simionea -->
 
   <chapter xml:id="security.database" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">

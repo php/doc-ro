@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 0abaad099e3ec6064ed8cf31553dcd5e3e3fdfba Maintainer: simionea Status: ready -->
+<!-- EN-Revision: eedaaf7a5ee638bcb1670236c63bd7809474fd46 Maintainer: simionea Status: ready -->
 
 <!-- Part titles used mostly in manual.xml itself -->
 <!ENTITY PHPManual                                "Manualul PHP">
@@ -43,6 +43,7 @@
 <!ENTITY ServerSpecificExtensions                 "Extensii specifice serverului">
 <!ENTITY SearchEngineExtensions                   "Extensii ale motorului de căutare">
 <!ENTITY MiscExtensions                           "Extensii diverse">
+<!ENTITY UIExtensions                             "Extensii GUI">
 <!ENTITY Appendices                               "Anexe">
 <!ENTITY PEAR                                     "PEAR: colecția de extensii și aplicații PHP">
 <!ENTITY FAQ                                      "FAQ: Întrebări frecvente">
