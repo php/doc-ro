@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: c572cd51a9caea624c83640061408a5f6e082bfe Maintainer: simionea Status: ready -->
+<!-- EN-Revision: ae6be5bb4f40f334c713bdf0dc11ac6a59f6461d Maintainer: simionea Status: ready -->
  <appendix xml:id="migration5" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Migrarea de la PHP 4 la PHP 5.0.x</title>
   <para>
@@ -861,8 +861,14 @@ Action application/x-httpd-php "/php/php-cgi.exe"
    </para>
    <para>
     În PHP 5 bibliotecile clientului MySQL nu sunt încorporate din cauza problemelor
-    de licențiere și a altor probleme. Pentru mai multe informații citiți <link
-     linkend="faq.databases.mysql.php5">înregistrarea FAQ</link>.
+    de licențiere și mentenanță. MySQL este susținut cu unica modificare că această
+    susținere nu este activată <emphasis>implicit</emphasis> în PHP 5. Aceasta în
+    esență înseamnă că PHP nu include opțiunea <option role="configure">--with-mysql</option>
+    în linia de <link linkend="configuration">configurare</link> și deci trebuie
+    să o includeți manual la compilarea PHP. Utilizatorii Windows vor trebui să
+    redacteze &php.ini; și să activeze biblioteca <filename>php_mysql.dll</filename>
+    deoarece în PHP 4 un astfel de DLL nu exista, ci era pur și simplu încorporat
+    în binarele PHP sub Windows.
    </para>
    <para>
     De asemenea este o nouă extensie, <link linkend="ref.mysqli">MySQLi (MySQL

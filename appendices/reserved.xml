@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 47b50ee7a88fd9d89b90c10e95f77a74ee0441dd Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 82d79c66531b3a08b781ac8c89c0c2f2fe4efb8f Maintainer: simionea Status: ready -->
 
  <appendix xml:id="reserved" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Lista cuvintelor rezervate</title>
   <para>
-   În continuare urmează lista identificatorilor predefiniți în PHP. Nici un
-   identificator din această listă nu trebuie să-l utilizați ca identificator
-   în script-urile dumneavoastră. Aceste liste includ cuvinte-cheie și variabile
-   predefinite, denumiri de constante și clase. Aceste liste nu sunt exhaustive
-   sau depline.
+   În continuare urmează lista identificatorilor predefiniți în PHP. Nici unul
+   din identificatorii enumerați aici nu trebuie să fie utilizați ca identificatori
+   în script-urile dumneavoastră, doar dacă nu este specificat în mod explicit
+   altfel. Aceste liste includ cuvinte-cheie și variabile predefinite, denumiri
+   de constante și clase. Aceste liste nu sunt exhaustive sau depline.
   </para>
 
   <sect1 xml:id="reserved.keywords">
@@ -21,6 +21,11 @@
     construcții ale limbajului. Nu puteți utiliza cuvintele ce urmează ca
     constante, denumiri ale claselor, funcțiilor sau metodelor. Utilizarea lor
     ca denumiri ale variabilelor este în general OK, dar poate duce la confuzie.
+   </simpara>
+   <simpara>
+    Începând cu PHP 7.0.0 aceste cuvinte-cheie sunt permise în denumiri de
+    proprietăți, constante și metode ale claselor, interfețelor și trăsăturilor,
+    cu excepția că <literal>class</literal> nu poate fi folosit ca nume de constantă.
    </simpara>
 
    <table>
@@ -126,7 +131,7 @@
         <function>exit</function>
        </entry>
        <entry>
-        <link linkend="keyword.class">extends</link>
+        <link linkend="language.oop5.basic.extends">extends</link>
        </entry>
       </row>
       <row>
@@ -188,7 +193,7 @@
         <link linkend="language.namespaces">namespace</link> (începând cu PHP 5.3)
        </entry>
        <entry>
-        <link linkend="keyword.class">new</link>
+        <link linkend="language.oop5.basic.new">new</link>
        </entry>
        <entry>
         <link linkend="language.operators.logical">or</link>
@@ -413,6 +418,66 @@
      Pentru informații suplimentare accesați
      <link linkend="class.generator">pagina clasei</link>.
     </simpara>
+   </sect2>
+
+   <sect2 xml:id="reserved.classes.php7">
+    <title>Interfețe și clase predefinite începând cu PHP 7</title>
+
+    <simpara>
+     Aceste interfețe și clase predefinite suplimentare au fost introduse în PHP 7.0.0.
+    </simpara>
+
+    <variablelist>
+     <varlistentry>
+      <term><classname>ArithmeticError</classname></term>
+      <listitem>
+       <simpara>
+       </simpara>
+      </listitem>
+     </varlistentry>
+     <varlistentry>
+      <term><classname>AssertionError</classname></term>
+      <listitem>
+       <simpara>
+       </simpara>
+      </listitem>
+     </varlistentry>
+     <varlistentry>
+      <term><classname>DivisionByZeroError</classname></term>
+      <listitem>
+       <simpara>
+       </simpara>
+      </listitem>
+     </varlistentry>
+     <varlistentry>
+      <term><classname>Error</classname></term>
+      <listitem>
+       <simpara>
+       </simpara>
+      </listitem>
+     </varlistentry>
+     <varlistentry>
+      <term><classname>Throwable</classname></term>
+      <listitem>
+       <simpara>
+       </simpara>
+      </listitem>
+     </varlistentry>
+     <varlistentry>
+      <term><classname>ParseError</classname></term>
+      <listitem>
+       <simpara>
+       </simpara>
+      </listitem>
+     </varlistentry>
+     <varlistentry>
+      <term><classname>TypeError</classname></term>
+      <listitem>
+       <simpara>
+       </simpara>
+      </listitem>
+     </varlistentry>
+    </variablelist>
    </sect2>
 
    <sect2 xml:id="reserved.classes.special">

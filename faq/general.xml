@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: ae6be5bb4f40f334c713bdf0dc11ac6a59f6461d Maintainer: simionea Status: ready -->
 <!-- Reviewed: yes -->
 
 <chapter xml:id="faq.general" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -71,48 +71,6 @@
      <para>
        Da. Vezi fișierul <filename>INSTALL</filename>, care este inclus
        în codul sursă distribuit cu PHP.
-     </para>
-    </answer>
-   </qandaentry>
-
-   <qandaentry xml:id="faq.general.differences-45">
-    <question>
-     <para>Care sunt diferențele dintre PHP 4 și PHP 5?</para>
-    </question>
-    <answer>
-     <para>
-      Cu toate că PHP 5 a fost conceput să fie cât mai compatibil cu putință cu
-      versiunile anterioare, sunt câteva modificări substanțiale. Unele din
-      aceste schimbări includ:
-      <itemizedlist>
-       <listitem>
-        <simpara>Un <link linkend="language.oop5">nou model OOP</link>
-        bazat pe <emphasis>Zend Engine 2.0</emphasis></simpara>
-       </listitem>
-       <listitem>
-        <simpara>O nouă extensie pentru suport înbunătățit al MySQL</simpara>
-       </listitem>
-       <listitem>
-        <simpara>Suport nativ pentru SQLite</simpara>
-       </listitem>
-       <listitem>
-        <simpara>O nouă constantă de raportare a erorilor,
-         <link linkend="migrating5.errorrep">E_STRICT</link>,
-         pentru sugestii de cod run-time
-        </simpara>
-       </listitem>
-       <listitem>
-        <simpara>O mulțime de
-         <link linkend="migration5.functions">funcții</link> noi pentru a
-         simplifica scrierea codului (și a reduce necesitatea de a scri funcții
-         proprii pentru multe proceduri generale)
-        </simpara>
-       </listitem>
-      </itemizedlist>
-      Pentru informații mai detaliate, accesați secțiunea despre
-      <link linkend="faq.migration5">Migrarea de la PHP 4 la PHP 5</link> și
-      secțiunea despre <link linkend="migration5.incompatible">Modificări invers
-      incompatibile</link>.
      </para>
     </answer>
    </qandaentry>

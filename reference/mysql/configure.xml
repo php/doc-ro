@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: ba08db8805ddb14cbab613c893dd47eacbda22f2 Maintainer: zamolxe Status: ready -->
+<!-- EN-Revision: ae6be5bb4f40f334c713bdf0dc11ac6a59f6461d Maintainer: zamolxe Status: ready -->
 <!-- CREDITS: simionea -->
 <section xml:id="mysql.installation" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.install;
+
+ <warning>
+  &mysql.alternative.note;
+ </warning>
 
  <para xml:id="mysql.configure">
   Pentru compilare, pur și simplu utilizați opțiunea de configurare
@@ -57,7 +61,7 @@
       <entry><option role="configure">--with-mysql=[DIR]</option></entry>
       <entry>
        MySQL nu este activat implicit și bibliotecile-client MySQL
-       <link linkend="faq.databases.mysql.php5">nu mai sunt încorporate</link>
+       nu mai sunt încorporate
       </entry>
      </row>
      <row>
