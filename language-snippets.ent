@@ -642,7 +642,7 @@ xmlns="http://docbook.org/ns/docbook"><term><parameter>dbm_identifier</parameter
    Cu toate că acest superset este consecvent cu definiția extinsă de "text JSON"
    din noul <link xlink:href="&url.rfc;7159">RFC 7159</link> (care are ca scop să
    înlocuiască RFC 4627) și
-   <link xlink:href="&url.json.ecma;">ECMA-404</link>, aceasta poate cauza
+   ECMA-404<!-- Removed link to fix the build ~sobak 12/06/2016 -->, aceasta poate cauza
    probleme de interoperabilitate cu interpretorii JSON mai vechi care aderă
    strict la RFC 4627 la codificarea unei singure valori scalare.
   </para>
