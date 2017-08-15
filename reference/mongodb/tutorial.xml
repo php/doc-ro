@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: c718200b2753a2182682aa7fd00e093cd33e3d74 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 45ece29b4ac78b34ffec6ecae522f5dc42a9c0a8 Maintainer: simionea Status: ready -->
 
  <book xml:id="mongodb.tutorial" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Ghiduri de utilizare</title>
@@ -10,14 +10,12 @@
   <info xml:id="mongodb.tutorial.intro">
    <abstract>
     <para>
-     În această secțiune veți găsi câteva ghiduri de utilizare a driver-ului MongoDB
-     cu PHP și HHVM. Deoarece driver-ele funcționează la fel pe ambele sisteme,
-     ghidurile de utilizare vor fi comune, dar cu secțiunile de instalare separate.
+     În această secțiune veți găsi câteva ghiduri de utilizare
+     a driver-ului MongoDB pentru PHP.
     </para>
    </abstract>
   </info>
 
-  &reference.mongodb.tutorial.hhvm;
   &reference.mongodb.tutorial.library;
  </book>
 
