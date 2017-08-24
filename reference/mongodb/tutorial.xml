@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 45ece29b4ac78b34ffec6ecae522f5dc42a9c0a8 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 680b85d4cc40065d48ae1f918e7579d8eb244f85 Maintainer: simionea Status: ready -->
 
  <book xml:id="mongodb.tutorial" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Ghiduri de utilizare</title>
@@ -17,6 +17,7 @@
   </info>
 
   &reference.mongodb.tutorial.library;
+  &reference.mongodb.tutorial.apm;
  </book>
 
 
