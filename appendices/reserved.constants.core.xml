@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: ffdc37b3f1fb1d00953c1294378fe5c350c260a9 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 90535be6391ae81ee86689d452fa544e74274e7e Maintainer: simionea Status: ready -->
  <sect2 xml:id="reserved.constants.core" xmlns="http://docbook.org/ns/docbook">
    <title>Constantele predefinite de bază</title>
    <simpara>
@@ -124,7 +124,22 @@
      </term>
      <listitem>
       <simpara>
-
+       Sistemul de operare pentru care PHP a fost compilat.
+      </simpara>
+     </listitem>
+    </varlistentry>
+    <varlistentry xml:id="constant.php-os-family">
+     <term>
+      <constant>PHP_OS_FAMILY</constant> 
+      (<type>string</type>)
+     </term>
+     <listitem>
+      <simpara>
+       Familia sistemului de operare pentru care PHP a fost compilat. Poate fi una din
+       <literal>'Windows'</literal>, <literal>'BSD'</literal>,
+       <literal>'Darwin'</literal>, <literal>'Solaris'</literal>,
+       <literal>'Linux'</literal> or <literal>'Unknown'</literal>.
+       Disponibil din PHP 7.2.0.
       </simpara>
      </listitem>
     </varlistentry>
@@ -190,6 +205,57 @@
       </simpara>
      </listitem>
     </varlistentry>
+    <varlistentry xml:id="constant.php-float-dig">
+     <term>
+      <constant>PHP_FLOAT_DIG</constant> 
+      (<type>integer</type>)
+     </term>
+     <listitem>
+      <simpara>
+       Numărul de zecimale care pot fi rotunjite în float și înapoi
+       fără a pierde din precizie.
+       Disponibil din PHP 7.2.0.
+      </simpara>
+     </listitem>
+    </varlistentry>
+    <varlistentry xml:id="constant.php-float-epsilon">
+     <term>
+      <constant>PHP_FLOAT_EPSILON</constant> 
+      (<type>float</type>)
+     </term>
+     <listitem>
+      <simpara>
+       Cel mai mic număr real pozitiv reprezentabil x, astfel încât <literal>x + 1.0 !=
+       1.0</literal>.
+       Available as of PHP 7.2.0.
+      </simpara>
+     </listitem>
+    </varlistentry>
+    <varlistentry xml:id="constant.php-float-min">
+     <term>
+      <constant>PHP_FLOAT_MIN</constant> 
+      (<type>float</type>)
+     </term>
+     <listitem>
+      <simpara>
+       Cel mai mic număr real reprezentabil.
+       Disponibil din PHP 7.2.0.
+      </simpara>
+     </listitem>
+    </varlistentry>
+    <varlistentry xml:id="constant.php-float-max">
+     <term>
+      <constant>PHP_FLOAT_MAX</constant> 
+      (<type>float</type>)
+     </term>
+     <listitem>
+      <simpara>
+       Cel mai mare număr real reprezentabil.
+       Disponibil din PHP 7.2.0.
+      </simpara>
+     </listitem>
+    </varlistentry>
+
     <varlistentry xml:id="constant.default-include-path">
      <term>
       <constant>DEFAULT_INCLUDE_PATH</constant>
