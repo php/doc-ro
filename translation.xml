@@ -4,15 +4,34 @@
 <translation xmlns="http://docbook.org/ns/docbook">
 
  <intro>
-  The Romanian translation of the PHP Documentation is managed by an international
-  team of translators. If you would like to join us and contribute to this translation,
-  please subscribe to doc-ro@lists.php.net mailing list and contact us.
+   Versiunea în limba română a manualului PHP este realizată, în mod voluntar,
+   de o echipă internațională de traducători voluntari formată din
+   Paul Dorneanu (inițiatorul acestui proiect),
+   Adrian Jurjica,
+   Cristi Rădulescu,
+   Valentin Țuțu,
+   Iulian Năstăsache,
+   Daniel Toma,
+   1ns0mn1a,
+   Dorel Năstasă,
+   Dan Matornei,
+   Rareș Benea,
+   Valentin Agachi,
+   Cristi Armeana,
+   Adrian Spinei,
+   Șerban Gheorghe Ghiță,
+   Gabriel Preda,
+   Simion Onea,
+   Alexandru Szasz.
+
+   Dacă doriți să contribuiți la traducerea manualului PHP, este de ajuns să vă
+   înscrieți la lista de discuții doc-ro@lists.php.net și să ne contactați.
  </intro>
 
  <chmindex>
-  This file was generated: <datetime/><br/>
-  Go to <a href="http://www.php.net/download-docs">http://www.php.net/download-docs</a>
-  to get the actual version.
+  Acest fișier a fost generat la: <datetime/><br/>
+  Mergeți la <a href="http://www.php.net/download-docs">http://www.php.net/download-docs</a>
+  pentru ultima versiune.
  </chmindex>
 
  <translators>
@@ -29,7 +48,7 @@
   <person name="Mircea Banu"           email="banu@ss.pub.ro"                 nick="mbr"       vcs="yes" /> <!-- Joined: 2003-04-01 Status: unknown -->
   <person name="Florin Enache"         email="eflorin@home.ro"                nick="eflorin"   vcs="yes" /> <!-- Joined: 2003-09-01 Status: unknown -->
   <person name="Șerban Gheorghe Ghiță" email="zamolxe@php.net"                nick="zamolxe"   vcs="yes" /> <!-- Joined: 2003-12-17 Status: active -->
-  <person name="Gabriel Preda"         email="gabriel.preda@gmail.com"        nick="radical"   vcs="yes" /> <!-- Joined: 2004-09-15 Status: active -->
+  <person name="Gabriel Preda"         email="radical@php.net"                nick="radical"   vcs="yes" /> <!-- Joined: 2004-09-15 Status: active -->
   <person name="ShOtY"                 email="shoty_my@yahoo.com"             nick="shoty"     vcs="yes" /> <!-- Joined: 2005-02-02 Status: unknown -->
   <person name="Simion Onea"           email="simionea@gmail.com"             nick="simionea"  vcs="yes" /> <!-- Joined: 2007-06-04 Status: active -->
   <person name="Alexandru Szasz"       email="alexxed@gmail.com"              nick="alexxed"   vcs="yes" /> <!-- Joined: 2008-03-20 Status: active -->

@@ -35,42 +35,8 @@
   interesează <link linkend="history">istoria PHP</link>, vizitați anexa
   corespunzătoare.
  </para>
-
+  
  &contributors;
-
- <section>
-  <info><title>Traducerea în limba Română</title></info>
-  <para>
-   Versiunea în limba română a manualului PHP este realizată, în mod voluntar,
-   de o echipă internațională de traducători formată din
-   Paul Dorneanu (inițiatorul acestui proiect),
-   Adrian Jurjica,
-   Cristi Rădulescu,
-   Valentin Țuțu,
-   Iulian Năstăsache,
-   Daniel Toma,
-   1ns0mn1a,
-   Dorel Năstasă,
-   Dan Matornei,
-   Rareș Benea,
-   Valentin Agachi,
-   Cristi Armeana,
-   Adrian Spinei,
-   Șerban Gheorghe Ghiță,
-   Gabriel Preda,
-   Simion Onea,
-   Alexandru Szasz.
-  </para>
-
-  <para>
-   Dacă doriți să contribuiți la traducerea manualului PHP, este de ajuns să vă
-   înscrieți la lista de discuții doc-ro@lists.php.net și să ne contactați. De
-   asemenea vă recomandăm să vizitați următoarele resurse PHP românești:
-   <link xlink:href="http://www.rophp.net/">http://www.rophp.net/</link> și
-   <link xlink:href="http://www.phpromania.net">http://www.phpromania.net</link>.
-  </para>
- </section>
-
 </preface>
 
 <!-- Keep this comment at the end of the file
