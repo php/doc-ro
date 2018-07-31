@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 33040b3b1b95210112f7b3b71f57a1c005de1a3b Maintainer: cretuandrei  Status: ready -->
+<!-- EN-Revision: 33040b3b1b95210112f7b3b71f57a1c005de1a3b Maintainer: simionea Status: ready -->
 <!-- Reviewed: no -->
 
  <sect1 xml:id="language.oop5.final" xmlns="http://docbook.org/ns/docbook">
@@ -8,8 +8,7 @@
   <para>
    PHP 5 a introdus cuvântul cheie <emphasis>final</emphasis> care, pus la începutul 
    definiției pentru metodă, o va împiedica să poată fi moștenită de o altă clasă. Iar
-   dacă însuși clasa va conține în definiție cuvântul cheie <emphasis>final</emphasis>, 
-   atunci acea clasa nu va putea fi extinsă.
+   dacă însăși clasa va fi definită ca finală, atunci ea nu va mai putea fi extinsă.
   </para>
   <para>
    <example>
@@ -17,22 +16,22 @@
     <programlisting role="php">
 <![CDATA[
 <?php
-class ClasaDeBaza {
+class BaseClass {
    public function test() {
-       echo "ClasaDeBaza::test() apelată\n";
+       echo "BaseClass::test() apelată\n";
    }
    
-   final public function altTest() {
-       echo "ClasaDeBaza::altTest() apelată\n";
+   final public function moreTesting() {
+       echo "BaseClass::moreTesting() apelată\n";
    }
 }
 
-class ClasaCopil extends ClasaDeBaza {
-   public function altTest() {
-       echo "ClasaCopil::altTest() apelată\n";
+class ChildClass extends BaseClass {
+   public function moreTesting() {
+       echo "ChildClass::moreTesting() apelată\n";
    }
 }
-// Rezultă o eroare fatală: Cannot override final method ClasaDeBaza::altTest()
+// Rezultă: Fatal error: Cannot override final method BaseClass::moreTesting()
 ?> 
 ]]>
    </programlisting>
@@ -44,20 +43,20 @@ class ClasaCopil extends ClasaDeBaza {
     <programlisting role="php">
 <![CDATA[
 <?php
-final class ClasaDeBaza {
+final class BaseClass {
    public function test() {
-       echo "ClasaDeBaza::test() apelată\n";
+       echo "BaseClass::test() apelată\n";
    }
 
    // Aici nu contează dacă adăugăm cuvântul final în definiția metodei
-   final public function altTest() {
-       echo "ClasaDeBaza::altTest() apelată\n";
+   final public function moreTesting() {
+       echo "BaseClass::moreTesting() apelată\n";
    }
 }
 
-class ClasaCopil extends ClasaDeBaza {
+class ChildClass extends BaseClass {
 }
-// Rezultă o eroare fatală: Class ClasaCopil may not inherit from final class (ClasaDeBaza)
+// Rezultă: Fatal error: Class ChildClass may not inherit from final class (BaseClass)
 ?> 
 ]]>
     </programlisting>
