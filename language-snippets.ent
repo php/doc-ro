@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 17fc359d7eb75d7d6199db77518924f2d351ed8b Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 366509eacd25fd083006e411d553b5cb178db38d Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -133,6 +133,22 @@ SAPI care le susține.</para></note>'>
 <para>Nu este recomandabilă utilizatea acestei funcții pentru a securiza parole
 din motivul rapidității acestui algoritm de hashing. Vedeți
 <link linkend="faq.passwords.fasthash">aici</link> pentru detalii.</para></note>'>
+
+<!ENTITY note.sigchild '<note xmlns="http://docbook.org/ns/docbook">
+ <para>
+  Dacă PHP a fost compilat cu --enable-sigchild, valoarea întoarsă de această
+  funcție este nedefinită.
+ </para>
+</note>
+'>
+
+<!ENTITY note.sort-unstable '<note xmlns="http://docbook.org/ns/docbook">
+ <para>
+  Dacă în rezultatul comparației doi membri sunt egali, ordinea lor relativă în
+  tabloul sortat nu este definită.
+ </para>
+</note>
+'>
 
 <!-- Tips -->
 
@@ -416,6 +432,9 @@ Exemplul de mai sus va afișa în PHP 5.6:</para>'>
 <!ENTITY example.outputs.7 '<para xmlns="http://docbook.org/ns/docbook">
 Exemplul de mai sus va afișa în PHP 7:</para>'>
 
+<!ENTITY example.outputs.71 '<para xmlns="http://docbook.org/ns/docbook">
+Exemplul de mai sus va afișa în PHP 7.1:</para>'>
+
 <!ENTITY example.outputs.32bit '<para xmlns="http://docbook.org/ns/docbook">
 Exemplul de mai sus va afișa pe mașini pe 32 de biți:</para>'>
 
@@ -523,7 +542,9 @@ succesului&return.falseforfailure;.'>
 
 <!ENTITY return.callbacksort 'Funcția de comparare trebuie să întoarcă un întreg
 mai mic, egal cu sau mai mare decât zero dacă primul argument este considerat
-respectiv mai mic, egal cu sau mai mare decât al doilea argument.'>
+respectiv mai mic, egal cu sau mai mare decât al doilea argument. Notă: înainte
+de PHP 7.0.0 acest întreg trebuia să fie cuprins în domeniul de la -2147483648
+până la 2147483647.'>
 
 <!ENTITY return.falseproblem '<warning xmlns="http://docbook.org/ns/docbook">
 <simpara>Această funcție poate întoarce valoarea Boolean &false;, dar poate de
@@ -549,26 +570,10 @@ verifica valoarea întoarsă de această funcție.</simpara></warning>'>
 <simpara>Această funcție e disponibilă numai dacă PHP este compilat utilizând
 <option role="configure">--with-t1lib[=DIR]</option>.</simpara></note>'>
 
-<!ENTITY note.config.jpeg '<note xmlns="http://docbook.org/ns/docbook">
-<simpara>Susținerea JPEG este disponibilă numai dacă PHP a fost compilat cu
-GD-1.8 sau ulterior.</simpara></note>'>
-
-<!ENTITY note.config.wbmp '<note xmlns="http://docbook.org/ns/docbook">
-<simpara>Susținerea WBMP este disponibilă numai dacă PHP a fost compilat cu
-GD-1.8 sau ulterior.</simpara></note>'>
-
-<!ENTITY note.bundled.gd '<note xmlns="http://docbook.org/ns/docbook"><simpara>
-Această funcție este disponibilă numai dacă PHP este compilat cu versiunea
-bibliotecii GD furnizată împreună cu PHP.</simpara></note>'>
-
 <!ENTITY note.freetype '<note xmlns="http://docbook.org/ns/docbook"><simpara>
 Această funcție este disponibilă numai dacă PHP este compilat cu susținerea
 freetype (<option role="configure">--with-freetype-dir=DIR</option>)</simpara>
 </note>'>
-
-<!ENTITY note.gd.2 '<note xmlns="http://docbook.org/ns/docbook"><simpara>
-Această funcție necesită GD 2.0.1 sau ulterioară (2.0.28 sau ulterioară este
-recomandată).</simpara></note>'>
 
 <!ENTITY note.gd.notrequired '<note xmlns="http://docbook.org/ns/docbook">
 <para>Această funcție nu necesită biblioteca de prelucrare a imaginilor GD.
@@ -603,8 +608,9 @@ imagine în cazul succesului, &false; în caz de erori.'>
 
 <!ENTITY gd.source.width 'Lățimea sursei.'>
 
-<!ENTITY gd.image.path 'Calea unde va fi salvat fișierul. Dacă nu este stabilită
-sau este &null;, atunci fluxul imaginii va fi afișat direct.'>
+<!ENTITY gd.image.path 'Calea către o resursă stream deschisă (care automat va
+fi închisă după ce această funcție se încheie) în care va fi salvat fișierul.
+Dacă nu este stabilită sau este &null;, atunci fluxul imaginii va fi afișat direct.'>
 
 <!ENTITY gd.image.new 'Creează o imagine nouă din fișier sau din URL'>
 
@@ -814,6 +820,8 @@ Lista zonelor orare susținute</title>'>
 <!ENTITY date.timezone.intro "<para xmlns='http://docbook.org/ns/docbook'>
 Aici puteți găsi lista deplină a zonelor orare susținute de PHP, care pot fi
 utilizate cu de ex. <function>date_default_timezone_set</function>.</para>
+<caution><simpara>Comportamentul zonelor orare care nu sunt enumerate aici este
+nedefinit.</simpara></caution>
 <note xmlns='http://docbook.org/ns/docbook'><simpara>Ultima versiune a bazei de
 date cu zonele orare poate fi instalată prin
 <link xlink:href='&url.pecl.package.get;timezonedb'
@@ -822,11 +830,11 @@ xmlns:xlink='http://www.w3.org/1999/xlink'>timezonedb</link> al PECL.</simpara>
 
 <!ENTITY date.timezone.bc '<simpara xmlns="http://docbook.org/ns/docbook">Nu
 utilizați zonele orare enumerate aici (afară de UTC), ele există numai din
-motive de compatibilitate inversă.</simpara>'>
+motive de compatibilitate inversă și pot duce la un comportament eronat.</simpara>'>
 
 <!ENTITY date.timezone.posix-signs '<simpara xmlns="http://docbook.org/ns/docbook">
  Dacă nu țineți seama de avertizarea anterioară, vă rugăm să atrageți atenția că
- baza de date a fuselor orare IANA, care oferă susținerea furelor orare în PHP
+ baza de date a fuselor orare IANA, care oferă susținerea fuselor orare în PHP
  utilizează semne în stil POSIX, ceea ce va duce la faptul că fusele orare
  <literal>Etc/GMT+n</literal> și <literal>Etc/GMT-n</literal> vor fi inversate
  față de modul în care se utilizează de obicei.
@@ -841,6 +849,13 @@ motive de compatibilitate inversă.</simpara>'>
  Și iarăși, este foarte recomandabil să utilizați fusul orar corect pentru
  locația dumneavoastră, cum ar fi <literal>Asia/Shanghai</literal> sau
  <literal>Australia/Perth</literal> pentru exemplele de mai sus.
+</simpara>'>
+
+<!ENTITY date.timezone.abbrev-volatile '<simpara xmlns="http://docbook.org/ns/docbook">
+ Aceste abrevieri ale fuselor orare trebuie privite ca foarte volatile, adică ele
+ pot să difere odată cu o nouă versiune timezonedb, și nu trebuie să vă bazați
+ pe ele. Este foarte recomandabil să fie evitată folosirea abrevierilor fuselor
+ orare.
 </simpara>'>
 
 <!ENTITY date.timezone.errors.description '<para xmlns="http://docbook.org/ns/docbook">
@@ -892,17 +907,18 @@ din &null; în <classname>DateTime</classname>.</entry></row>'>
 <!ENTITY date.timezone.dbversion 'Această listă este bazată pe baza de date a
 fuselor orare de versiunea'>
 
-<!ENTITY date.timezone.africa     'Africa'>
-<!ENTITY date.timezone.america    'America'>
-<!ENTITY date.timezone.antarctica 'Antarctica'>
-<!ENTITY date.timezone.arctic     'Arctica'>
-<!ENTITY date.timezone.asia       'Asia'>
-<!ENTITY date.timezone.atlantic   'Atlantica'>
-<!ENTITY date.timezone.australia  'Australia'>
-<!ENTITY date.timezone.europe     'Europa'>
-<!ENTITY date.timezone.indian     'India'>
-<!ENTITY date.timezone.pacific    'Pacificul'>
-<!ENTITY date.timezone.others     'Altele'>
+<!ENTITY date.timezone.africa        'Africa'>
+<!ENTITY date.timezone.america       'America'>
+<!ENTITY date.timezone.antarctica    'Antarctica'>
+<!ENTITY date.timezone.arctic        'Arctica'>
+<!ENTITY date.timezone.asia          'Asia'>
+<!ENTITY date.timezone.atlantic      'Atlantica'>
+<!ENTITY date.timezone.australia     'Australia'>
+<!ENTITY date.timezone.europe        'Europa'>
+<!ENTITY date.timezone.indian        'India'>
+<!ENTITY date.timezone.pacific       'Pacificul'>
+<!ENTITY date.timezone.others        'Altele'>
+<!ENTITY date.timezone.abbreviations 'Abrevieri'>
 
 <!ENTITY date.formats 'Formatele valide sunt explicate în
 <link xmlns="http://docbook.org/ns/docbook" linkend="datetime.formats">
@@ -1282,6 +1298,11 @@ lansări noi, descărcări, fișiere-sursă, informații despre persoana care
 moartă. Oricum însă codul-sursă al acestei extensii este încă disponibil în
 <acronym xmlns="http://docbook.org/ns/docbook">PECL</acronym>
 <acronym xmlns="http://docbook.org/ns/docbook">SVN</acronym> aici: '>
+
+<!ENTITY pecl.info.dead.git 'Această extensie este considerată ne-întreținută și
+moartă. Oricum însă codul-sursă al acestei extensii este încă disponibil în
+<acronym xmlns="http://docbook.org/ns/docbook">PECL</acronym>
+<acronym xmlns="http://docbook.org/ns/docbook">GIT</acronym> aici: '>
 
 <!ENTITY pecl.windows.download 'O bibliotecă
 <acronym xmlns="http://docbook.org/ns/docbook">DLL</acronym> pentru această
@@ -2070,6 +2091,12 @@ Clase și interfețe diverse</title>'>
 <!ENTITY spl.misc.intro '<partintro xmlns="http://docbook.org/ns/docbook">
 <para>Clase și interfețe ce nu se încadrează în alte categorii SPL.</para>
 </partintro>'>
+
+<!-- ZIP -->
+<!ENTITY zip.filename.separator '<note xmlns="http://docbook.org/ns/docbook">
+<simpara>Pentru o portabilitate maximă se recomandă întotdeauna să fie utilizat
+forward slash (<literal>/</literal>) ca separator al directoarelor în denumiri
+de fișiere ZIP.</simpara></note>'>
 
 <!-- Win32Service -->
 <!ENTITY win32service.false.error ', &false; în caz că este vre-o problemă cu

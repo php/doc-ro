@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: eedaaf7a5ee638bcb1670236c63bd7809474fd46 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 437bbf134e015c678f9d4b8a5b8da53429a9a12d Maintainer: simionea Status: ready -->
 
 <!-- Part titles used mostly in manual.xml itself -->
 <!ENTITY PHPManual                                "Manualul PHP">
@@ -78,6 +78,7 @@
 <!ENTITY InheritedMethods                         "Metode moștenite">
 <!ENTITY InheritedProperties                      "Proprietăți moștenite">
 <!ENTITY Properties                               "Proprietăți">
+<!ENTITY InheritedConstants                       "Constante moștenite">
 <!ENTITY Constants                                "Constante">
 <!ENTITY NotAvailable                             "Nu este disponibil">
 
