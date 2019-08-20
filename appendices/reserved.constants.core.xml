@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 90535be6391ae81ee86689d452fa544e74274e7e Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 2f491ab5e13f4d1286d15785e2e3e0b4fb23b3b4 Maintainer: simionea Status: ready -->
  <sect2 xml:id="reserved.constants.core" xmlns="http://docbook.org/ns/docbook">
    <title>Constantele predefinite de bază</title>
    <simpara>
@@ -175,7 +175,8 @@
      <listitem>
       <simpara>
        Cea mai mare valoare întreagă susținută în această asamblare a PHP. De
-       regulă int(2147483647). Disponibilă începând cu PHP 5.0.5
+       regulă int(2147483647) pe sisteme de 32 biți și int(9223372036854775807)
+       pe sisteme de 64 biți. Disponibilă începând cu PHP 5.0.5
       </simpara>
      </listitem>
     </varlistentry>

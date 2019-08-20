@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: ae6be5bb4f40f334c713bdf0dc11ac6a59f6461d Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 91376f31d472fad0c6af42f1beda5c33ed62f39b Maintainer: simionea Status: ready -->
  <appendix xml:id="migration5" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Migrarea de la PHP 4 la PHP 5.0.x</title>
   <para>

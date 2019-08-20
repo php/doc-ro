@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 3a0c7df3b6875a78c3f10c072d4239ecc63dd29d Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 9cc4767b2ddf65c4ed592c9deb818cbb2c9def7b Maintainer: simionea Status: ready -->
  <sect1 xml:id="install.macosx.compile" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <title>Compilarea PHP pe Mac OS X</title>
+  <title>Compilarea PHP pe macOS</title>
   <simpara>
    Utilizați <link linkend="install.unix">Ghidul de instalare pe Unix</link>
-   pentru a compila PHP pe Mac OS X.
+   pentru a compila PHP pe macOS.
   </simpara>
  </sect1>
 

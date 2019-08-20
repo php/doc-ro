@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 6b25eaaf7d07c2fd3c0d19274fbb8be1c231762e Maintainer: simionea Status: ready -->
 <!-- CREDITS: spooky -->
   <chapter xml:id="install.general" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
    <title>Aspecte generale privind instalarea</title>
@@ -21,7 +21,7 @@
     Pentru prima, și cea mai des întâlnită formă, veți avea nevoie de trei
     lucruri: însuși PHP, un server web și un navigator web. Probabil deja aveți
     un navigator web și, în dependență de sistemul dumneavoastră de operare,
-    puteți să aveți și un server web (de ex. Apache pe Linux și MacOS X; IIS pe
+    puteți să aveți și un server web (de ex. Apache pe Linux și macOS; IIS pe
     Windows). Puteți de asemenea să închiriați spațiu web de la o companie.
     În acest caz nu trebuie personal să configurați ceva, numai să scrieți
     script-urile PHP, să le încărcați pe server-ul care îl închiriați și să
@@ -67,9 +67,6 @@
    <para>
     Codul-sursă PHP și distributivele binare pentru Windows pot fi găsite la
     <link xlink:href="&url.php.downloads;">&url.php.downloads;</link>.
-    Vă recomandăm să alegeți o
-    <link xlink:href="&url.mirrors;">oglindă</link> mai apropiată pentru a
-    descărca distributivele.
    </para>
   </chapter>
 

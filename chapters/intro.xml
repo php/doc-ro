@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 4c10034ceed36be7bba47b5d824f3f37e0060df5 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: f0b0e5bb633b40536bda7141b85674441a62aa95 Maintainer: simionea Status: ready -->
 <!-- CREDITS: spooky -->
  <chapter xml:id="introduction" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <info><title>Introducere</title></info>
@@ -22,7 +22,7 @@
      <info><title>Un exemplu introductiv</title></info>
      <programlisting role="php">
 <![CDATA[
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
     <head>
         <title>Exemplu</title>
@@ -90,7 +90,7 @@
       <simpara>
        Scripting de partea serverului. Acesta este cel mai tradițional
        și de bază domeniu al PHP. Aveți nevoie de trei lucruri pentru
-       ca aceasta să funcționeze. Analizatorul PHP (în calitate de CGI,
+       ca aceasta să funcționeze: analizatorul PHP (în calitate de CGI,
        sau modul pentru server), un server web și un navigator web.
        Trebuie să rulați serverul web cu o instalare PHP conectată la
        el. Puteți accesa ieșirile programului PHP cu navigatorul web,
@@ -133,7 +133,7 @@
    <para>
     PHP poate fi <link linkend="install">utilizat</link> pe toate sistemele de
     operare majore, inclusiv Linux, multe variante Unix (inclusiv HP-UX, Solaris
-    și OpenBSD), Microsoft Windows, Mac OS X, RISC OS și probabil altele. PHP de
+    și OpenBSD), Microsoft Windows, macOS, RISC OS și probabil altele. PHP de
     asemenea susține majoritatea server-elor web existente în prezent. Acestea
     includ Apache, IIS, și multe altele. De asemenea se includ și serverele ce
     pot utiliza binarul PHP FastCGI, cum ar fi lighttpd și nginx. PHP

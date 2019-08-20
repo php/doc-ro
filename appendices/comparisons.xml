@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: e3e2d8a30429ed8b2cc1529409664894b8e5251a Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 0ade9d91c1e45a8afef45c9ee514fccdc1900ca1 Maintainer: simionea Status: ready -->
 <appendix xml:id="types.comparisons" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Tabelele de comparații ale tipurilor PHP</title>
  <para>
@@ -40,11 +40,11 @@
   <para>
    Unele operații numerice pot da o valoare reprezentată de constanta
    <constant>NAN</constant>. Orice comparații lejere sau stricte ale acestei
-   valori cu orice altă valoare, inclusiv ea însăși, va avea un rezultat &false;.
-   (de ex. <literal>NAN != NAN</literal> și <literal>NAN !== NAN</literal>)
-   Exemple de operații care produc <constant>NAN</constant> includ
-   <literal>sqrt(-1)</literal>, <literal>asin(2)</literal> și
-   <literal>asinh(0)</literal>.
+   valori cu orice altă valoare, inclusiv ea însăși, însă cu excepția &true;, va
+   avea un rezultat &false;. (de ex. <literal>NAN != NAN</literal> și
+   <literal>NAN !== NAN</literal>) Exemple de operații care produc
+   <constant>NAN</constant> includ <literal>sqrt(-1)</literal>,
+   <literal>asin(2)</literal> și <literal>acosh(0)</literal>.
   </para>
  </note>
  <para>
