@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 6a772ab6a22e9885f2e77c68bdebb847e45a3896 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 21e01236e01d2e4fdad5e243e237f47060a3e21e Maintainer: simionea Status: ready -->
  <sect3 xml:id="configure.options.servers" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Opțiunile SAPI</title>
   <para>
@@ -86,7 +86,7 @@
     </term>
     <listitem>
      <para>
-      Disponibil odată cu PHP 4.3.0. Dezactivează asamblarea versiunii CLI a PHP (aceasta impune
+      Dezactivează asamblarea versiunii CLI a PHP (aceasta impune
       și <link linkend="configure.without-pear">--without-pear</link>).
       Mai multe informații sunt disponibile în secțiunea desspre
       <link linkend="features.commandline">Utilizarea PHP din linia de comandă</link>.
@@ -114,23 +114,11 @@
      <para>
       Activează asamblarea unei biblioteci SAPI încorporate. TYPE poate fi sau
       <literal>shared</literal>, sau <literal>static</literal> și implicit este
-      <literal>shared</literal>. Disponibil odată cu PHP 4.3.0.
+      <literal>shared</literal>.
      </para>
     </listitem>
    </varlistentry>
 
-   <varlistentry xml:id="configure.with-fhttpd">
-    <term>
-     <option role="configure">--with-fhttpd[=DIR]</option>
-    </term>
-    <listitem>
-     <para>
-      Asamblează un modul fhttpd. DIR este directorul cu sursele fhttpd, implicit are valoarea
-      <filename>/usr/local/src/fhttpd</filename>. Nu mai este disponibil începând cu PHP
-      4.3.0.
-     </para>
-    </listitem>
-   </varlistentry>
    <varlistentry xml:id="configure.with-isapi">
     <term>
      <option role="configure">--with-isapi=DIR</option>
@@ -243,7 +231,7 @@
     </term>
     <listitem>
      <para>
-      Dezactivează asamblarea versiunii CGI a PHP. Disponibil începând cu PHP 4.3.0.
+      Dezactivează asamblarea versiunii CGI a PHP.
      </para>
      <para>
       Începând cu PHP 5.3.0 acest argument activează FastCGI, care anterior
@@ -332,6 +320,12 @@
       nu vor funcționa.
       Pentru informații suplimentare, accesați
       <link xlink:href="&url.apache.core;#acceptpathinfo">Manualul Apache</link>.
+     </para>
+     <para>
+      Începând cu PHP 5.3.0 acest argument este activat în mod implicit și de fapt
+      nici nu mai există. Pentru a dezactiva această facilitate directiva ini
+      <link linkend="ini.cgi.fix-pathinfo">cgi.fix_pathinfo</link> trebuie stabilită
+      la valoarea <literal>0</literal>.
      </para>
     </listitem>
    </varlistentry>

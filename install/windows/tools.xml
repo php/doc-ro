@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: b4c0293c1bc70151fde3c69e0f04dea42a6d3533 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: b34890c3c5a66c24a2733a94e0b47c73d3bd8f0f Maintainer: simionea Status: ready -->
 
 <sect1 xml:id="install.windows.tools" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
 <title>Instrumente de instalare a PHP pe Windows</title>
@@ -8,13 +8,19 @@
 <sect2>
   <title>Instrumente de instalare a PHP</title>
 <para>
-Dacă doriți să configurați PHP, unele aplicații PHP generale și utilizați IIS,
-cea mai ușoară modalitate este de a utiliza Web Platform Installer (WebPI) de
-la Microsoft.
+ Dacă doriți să configurați PHP și utilizați IIS cea mai ușoară modalitate este
+ de a utiliza <link xlink:href="https://www.microsoft.com/web/downloads/platform.aspx">Microsoft Web Platform Installer (WebPI)</link>.
 </para>
 
-<para>XAMPP, WampServer și BitNami vor configura aplicațiile PHP pentru a fi
-utilizate cu Apache pe Windows.</para>
+<para>
+ <link xlink:href="https://www.apachefriends.org/index.html">XAMPP</link>,
+ WampServer și BitNami vor configura aplicațiile PHP pentru a fi utilizate cu
+ Apache pe Windows.
+</para>
+<para>
+ Instalarea și configurarea Nginx în Windows necesită mai multe configurări.
+ Accesați <link xlink:href="https://www.nginx.com/resources/wiki/start/topics/examples/phpfastcgionwindows/">documentația Nginx</link>
+ pentru ajutor suplimentar de configurare.</para>
 </sect2>
 
 </sect1>

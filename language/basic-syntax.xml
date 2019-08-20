@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 5bdb18a52e265ad87c7dfcaa0f72daa457928ef8 Maintainer: simionea Status: ready -->
-<!-- Reviewed: no -->
+<!-- EN-Revision: 2fd5de559f683e55b33367e74c5b7a4d7072ceb7 Maintainer: simionea Status: ready -->
 
  <chapter xml:id="language.basic-syntax" xmlns="http://docbook.org/ns/docbook">
   <title>Sintaxa de bază</title>
@@ -78,7 +77,7 @@ echo "Ultima declarație";
     Totul ce se află în afara perechilor de tag-uri de deschidere și închidere este ignorat de către
     parsatorul PHP, ceea ce permite fișierelor PHP să aibă conținut mixt. Aceasta permite
     PHP să fie încorporat în documente HTML, de exemplu pentru a crea șabloane.
-    <example>
+    <informalexample>
      <programlisting role="php">
 <![CDATA[
 <p>Acesta va fi ignorat de PHP și afișat în browser.</p>
@@ -86,7 +85,7 @@ echo "Ultima declarație";
 <p>Acesta va fi de asemenea ignorat de PHP și afișat în browser.</p>
 ]]>
      </programlisting>
-    </example>
+    </informalexample>
     Aceasta funcționează conform așteptărilor, deoarece când PHP întâlnește tag-ul de închidere,
     pur și simplu începe să afișeze tot ce găsește (cu excepția trecerii la linie nouă ce urmează imediat după acesta - vezi
     <link linkend="language.basic-syntax.instruction-separation">separarea instrucțiunilor</link>)
@@ -110,7 +109,7 @@ echo "Ultima declarație";
      </programlisting>
     </example>
     În acest exemplu PHP va sări peste blocurile unde conționalul nu este îndeplinit,
-    chiar dacă sunt în afara tag-urilor PHP de deschidere/închidere, PHP sare peste ele conform
+    chiar dacă sunt în afara tag-urilor PHP de deschidere/închidere; PHP sare peste ele conform
     condițiilor, deoarece interpretatorul PHP va sări peste blocurile condiției neîndeplinite.
    </para>
    <para>

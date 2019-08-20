@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 82d79c66531b3a08b781ac8c89c0c2f2fe4efb8f Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 7600ab33382f8f35e63ad775603f5084857c65f8 Maintainer: simionea Status: ready -->
 
  <appendix xml:id="reserved" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Lista cuvintelor rezervate</title>
@@ -261,6 +261,7 @@
         <link linkend="language.generators">yield</link> (începând cu PHP 5.5)
        </entry>
        <entry>
+        <link linkend="control-structures.yield.from">yield from</link> (începând cu PHP 7.0)
        </entry>
        <entry>
        </entry>
@@ -556,6 +557,17 @@
         <entry>
          null (începând cu PHP 7)
         </entry>
+        <entry>
+         void (începând cu PHP 7.1)
+        </entry>
+       </row>
+       <row>
+        <entry>
+         iterable (începând cu PHP 7.1)
+        </entry>
+        <entry>
+         object (începând cu PHP 7.2)
+        </entry>
        </row>
       </tbody>
      </tgroup>
@@ -576,9 +588,6 @@
        <row>
         <entry>
          resource (începând cu PHP 7)
-        </entry>
-        <entry>
-         object (începând cu PHP 7)
         </entry>
         <entry>
          mixed (începând cu PHP 7)

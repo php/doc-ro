@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 28d123ef985df5a7b86f3601e035968ee1b3b142 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 0ad6aa08fb58311737ae61515d12651d7f14626e Maintainer: simionea Status: ready -->
 <appendix xml:id="userlandnaming" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Ghidul de stabilire a denumirilor de către utilizatori</title>
  <para>
@@ -102,19 +102,52 @@
  <section xml:id="userlandnaming.tips">
   <title>Sfaturi</title>
   <para>
-   Pentru a scrie cod-sursă valid în viitor se recomandă să prefixați (sau să
-   sufixați) orice nimerește în spațiul global al denumirilor cu un prefix (sau
-   sufix) din 3-4 litere separat cu o linie de subliniere. Pentru a evita
-   conflicte de denumiri cu alt cod-sursă este recomandabil ca proiectele în PHP
-   să cerceteze prefixele (sau sufixele) existente utilizate în alte proiecte
-   și să dea publicității prefixele (sau sufixele) proprii. Exemple:
+   Pentru a scrie cod-sursă valid în viitor se recomandă să nu plasați multe
+   variabile, funcții sau clase în spațiul de nume global. Aceasta va preveni
+   conflictele de nume cu codul părților terțe, precum și posibile adăugări viitoare
+   la limbă.
   </para>
+  <para>
+   O metodă răspândită de a evita conflictele de nume ale funcțiilor și claselor
+   este de a le adăuga la spațiul lor de nume
+   (<link linkend="language.namespaces">namespace</link>) dedicat.
+  </para>
+  <informalexample>
+   <programlisting role="php">
+<![CDATA[
+<?php
 
-  <itemizedlist>
-   <listitem><para>MyPx_someFunc()</para></listitem>
-   <listitem><para>Foo_Date</para></listitem>
-   <listitem><para>$asdf_dbh</para></listitem>
-  </itemizedlist>
+namespace MyProject;
+
+function my_function() {
+    return true;
+}
+
+\MyProject\my_function();
+]]>
+   </programlisting>
+  </informalexample>
+  <para>
+   Totuși este nevoie să urmăriți spațiile de nume deja utilizate, dar odată ce
+   decideți asupra unui spațiu de nume pe care îl veți utiliza, puteți adăuga la
+   el toate clasaele și funcțiile fără să vă mai gândiți la conflicte.
+  </para>
+  <para>
+   Se consideră o practică bună limitarea numărului de variabile adăugate la
+   circumstanța globală (global scope) pentru a preveni conflictele de nume cu
+   codul părților terțe.
+  </para>
+  <note>
+   <title>Circumstanțele variabilelor</title>
+   <para>
+    Datorită regulilor de atribuire a
+    <link linkend="language.variables.scope">circumstanțelor</link> în PHP
+    variabilele definite în interiorul funcțiilor și metodelor nu se află în
+    circumstanța globală și deci nu pot conflicta cu alte variabile definite în
+    circumstanța globală.
+   </para>
+  </note>
+
  </section>
 
 </appendix>
