@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: b824e2b1086e94a1077bd071964547283616030a Maintainer: simionea Status: ready -->
 
 <section xml:id="ctype.installation" xmlns="http://docbook.org/ns/docbook">
  &reftitle.install;
  <para>
-  Începând cu PHP 4.2.0 aceste funcții sunt activate implicit. Pentru versiuni
-  mai vechi trebuie să configurați și să compilați PHP cu opțiunea
-  <option role="configure">--enable-ctype</option>. Puteți dezactiva susținerea
-  ctype la compilare cu opțiunea <option role="configure">--disable-ctype</option>.
+  Susținerea ctype poate fi deconectată cu opțiunea
+  <option role="configure">--disable-ctype</option>.
  </para>
  &windows.builtin;
- <note>
-  <simpara>
-   Susținerea ctype este încorporată în PHP începând cu versiunea 4.3.0.
-  </simpara>
- </note>
 </section>
 
 <!-- Keep this comment at the end of the file

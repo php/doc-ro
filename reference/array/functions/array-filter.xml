@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 27acde0b15f7131bbc5239a14073d63307770b18 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 821b199e5c6f7dad1366b811c079df33db863c34 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.array-filter" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -20,8 +20,8 @@
   <para>
    Iterează prin fiecare valoare în tabloul <parameter>array</parameter>
    transmițând-o funcției <parameter>callback</parameter>. Dacă funcția
-   <parameter>callback</parameter> întoarce true, valoarea curentă din
-   <parameter>array</parameter> este întoarsă în tabloul rezultant.
+   <parameter>callback</parameter> întoarce &true;, valoarea curentă din
+   <parameter>array</parameter> este întoarsă în &array; rezultant.
    Cheile tabloului sunt păstrate.
   </para>
 </refsect1>
@@ -71,6 +71,8 @@
          și nu doar valoarea</simpara>
         </listitem>
        </itemizedlist>
+       Valoarea implicită este <literal>0</literal> ceea ce va face ca valoarea
+       să fie transmisă ca unic argument către <parameter>callback</parameter>.
       </para>
      </listitem>
     </varlistentry>
@@ -128,17 +130,17 @@
 function odd($var)
 {
     // întoarce true dacă numărul întreg transmis este impar
-    return($var & 1);
+    return $var & 1;
 }
 
 function even($var)
 {
     // întoarce true dacă numărul întreg transmis este par
-    return(!($var & 1));
+    return !($var & 1);
 }
 
-$array1 = array("a"=>1, "b"=>2, "c"=>3, "d"=>4, "e"=>5);
-$array2 = array(6, 7, 8, 9, 10, 11, 12);
+$array1 = ['a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5];
+$array2 = [6, 7, 8, 9, 10, 11, 12];
 
 echo "Odd :\n";
 print_r(array_filter($array1, "odd"));
@@ -175,13 +177,15 @@ Array
 <![CDATA[
 <?php
 
-$entry = array(
-             0 => 'foo',
-             1 => false,
-             2 => -1,
-             3 => null,
-             4 => ''
-          );
+$entry = [
+    0 => 'foo',
+    1 => false,
+    2 => -1,
+    3 => null,
+    4 => '',
+    5 => '0',
+    6 => 0,
+];
 
 print_r(array_filter($entry));
 ?>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 33040b3b1b95210112f7b3b71f57a1c005de1a3b Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 1ae887f71cee9a2b171e8344cef33af689cfcde0 Maintainer: simionea Status: ready -->
 <!-- Reviewed: no -->
 
  <sect1 xml:id="language.oop5.final" xmlns="http://docbook.org/ns/docbook">
   <title>Cuvântul cheie Final</title>
   <para>
-   PHP 5 a introdus cuvântul cheie <emphasis>final</emphasis> care, pus la începutul 
+   PHP 5 a introdus cuvântul cheie <emphasis>final</emphasis> care, pus la începutul
    definiției pentru metodă, o va împiedica să poată fi moștenită de o altă clasă. Iar
    dacă însăși clasa va fi definită ca finală, atunci ea nu va mai putea fi extinsă.
   </para>
@@ -20,7 +20,7 @@ class BaseClass {
    public function test() {
        echo "BaseClass::test() apelată\n";
    }
-   
+
    final public function moreTesting() {
        echo "BaseClass::moreTesting() apelată\n";
    }
@@ -32,7 +32,7 @@ class ChildClass extends BaseClass {
    }
 }
 // Rezultă: Fatal error: Cannot override final method BaseClass::moreTesting()
-?> 
+?>
 ]]>
    </programlisting>
   </example>
@@ -57,19 +57,18 @@ final class BaseClass {
 class ChildClass extends BaseClass {
 }
 // Rezultă: Fatal error: Class ChildClass may not inherit from final class (BaseClass)
-?> 
+?>
 ]]>
     </programlisting>
    </example>
   </para>
   <note>
    <simpara>
-    De reținut: Cuvântul cheie final poate fi folosit numai pentru clase sau metode. Nu și
-    pentru proprietățile unei clase.
+    Proprietățile și constantele nu pot fi declarate ”final”, doar clasele și metodele.
    </simpara>
   </note>
  </sect1>
- 
+
 <!-- Keep this comment at the end of the file
 Local variables:
 mode: sgml

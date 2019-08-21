@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: ba15ed813ede4db6505d1c387c1c2e4814a5cd55 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 52ae7dd55e62b1e7b6920499ed7448892e09bb48 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.array-diff" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -102,7 +102,7 @@ Array
   <note>
    <para>
     Două elemente sunt considerate egale dacă și numai dacă <literal>(string)
-    $elem1 === (string) $elem2</literal>. În cuvinte: dacă reprezentarea lor
+    $elem1 === (string) $elem2</literal>. Cu alte cuvinte: dacă reprezentarea lor
     ca șiruri de caractere este aceeași.
     <!-- TODO: example of it... -->
    </para>

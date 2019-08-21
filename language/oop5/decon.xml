@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 664dfca34e287631fefb83032e810ea505a621e4 Maintainer: radical Status: ready -->
+<!-- EN-Revision: db2ac1420fa7946f15518a9e42e1474159b765fd Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
 
  <sect1 xml:id="language.oop5.decon" xmlns="http://docbook.org/ns/docbook">
@@ -36,16 +36,16 @@
 <![CDATA[
 <?php
 class BaseClass {
-   function __construct() {
-       print "In BaseClass constructor\n";
-   }
+    function __construct() {
+        print "In BaseClass constructor\n";
+    }
 }
 
 class SubClass extends BaseClass {
-   function __construct() {
-       parent::__construct();
-       print "In SubClass constructor\n";
-   }
+    function __construct() {
+        parent::__construct();
+        print "In SubClass constructor\n";
+    }
 }
 
 class OtherSubClass extends BaseClass {
@@ -68,8 +68,7 @@ $obj = new OtherSubClass();
    <para>
     Pentru compatibilitate cu PHP 3 și 4, dacă PHP nu poate găsi funcția
     <link linkend="object.construct">__construct()</link> pentru o clasă dată,
-    și această funcție nu a fost moștenită de la clasa părinte, va fi căutată
-    funcția constructor de stil vechi, cu numele clasei.
+    va fi căutată funcția constructor de stil vechi, cu numele clasei.
     Drept urmare, singurul caz care va duce la probleme de compatibilitate este
     dacă clasa a avut o metodă <link linkend="object.construct">__construct()</link>
     folosită cu alt scop semantic.
@@ -130,19 +129,20 @@ class Bar {
     <programlisting role="php">
 <![CDATA[
 <?php
-class ClassaCuDestructor {
-   function __construct() {
-       print "Sunt în constructor.\n";
-       $this->name = "ClassaCuDestructor";
-   }
 
-   function __destruct() {
-       print "Distrug " . $this->name . "\n";
-   }
+class MyDestructableClass
+{
+    function __construct() {
+        print "In constructor\n";
+    }
+
+    function __destruct() {
+        print "Destroying " . __CLASS__ . "\n";
+    }
 }
 
-$obj = new ClassaCuDestructor();
-?>
+$obj = new MyDestructableClass();
+
 ]]>
     </programlisting>
    </example>

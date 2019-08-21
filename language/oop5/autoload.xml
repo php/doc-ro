@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 4e85725855dcbe7a8265e63663c3827c01368f9c Maintainer: radical Status: ready -->
+<!-- EN-Revision: 71b5a8fe9132b287da51b55290bce09d51512077 Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
  <sect1 xml:id="language.oop5.autoload" xmlns="http://docbook.org/ns/docbook">
   <title>Autoîncărcarea claselor</title>
@@ -27,7 +27,7 @@
     alternativă mai flexibilă (permițând specificarea în aplicație a oricărui
     număr de autoîncărcătoare, ca de exemplu în biblioteci ale terților). Din
     acest motiv utilizarea <function>__autoload</function> nu este recomandată
-    și poate fi considerată învechită sau chiar eliminată în viitor.
+    și se consideră învechită începând cu PHP 7.2.0.
    </para>
   </tip>
   <note>
@@ -168,7 +168,7 @@ Fatal error: Class 'MissingException' not found in testMissingException.php on l
    <para>
     <simplelist>
      <member><function>unserialize</function></member>
-     <member><link linkend="unserialize-callback-func">unserialize_callback_func</link></member>
+     <member><link linkend="ini.unserialize-callback-func">unserialize_callback_func</link></member>
      <member><function>spl_autoload_register</function></member>
      <member><function>spl_autoload</function></member>
      <member><function>__autoload</function></member>
