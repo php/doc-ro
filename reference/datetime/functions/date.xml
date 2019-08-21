@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: f9aed876b8d55edeacb49d52940fd89c098641c9 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 2e4914ba37887a1d59f0d66f46ee9231613dd517 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.date" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
@@ -111,7 +111,7 @@
           <row>
            <entry><literal>W</literal></entry>
            <entry>Numărul săptămânii în an conform standardului ISO-8601,
-            săptămânile încep Luni (adăugat în PHP 4.1.0)</entry>
+            săptămânile încep Luni</entry>
            <entry>Exemplu: <literal>42</literal> (a 42-a săptămână a anului)</entry>
           </row>
           <row>
@@ -235,6 +235,14 @@
            <entry>Exemplu: <literal>654321</literal></entry>
           </row>
           <row>
+           <entry><literal>v</literal></entry>
+           <entry>
+            Milisecunde (adăugat în PHP 7.0.0). Se aplică aceeași notă ca și pentru
+            <literal>u</literal>.
+           </entry>
+           <entry>Exemplu: <literal>654</literal></entry>
+          </row>
+          <row>
            <entry align="center"><emphasis>Fusul orar</emphasis></entry>
            <entry>---</entry>
            <entry>---</entry>
@@ -349,6 +357,14 @@
      </thead>
      <tbody>
       <row>
+       <entry>5.1.1</entry>
+       <entry>
+        Există <link linkend="datetime.constants">constante</link> utile pentru
+        formate standarde de date/ore, ce pot fi utilizate pentru a specifica
+        parametrul <parameter>format</parameter>.
+       </entry>
+      </row>
+      <row>
        <entry>5.1.0</entry>
        <entry>
         Domeniul valid al unui timestamp este de obicei de la Fri, 13 Dec 1901
@@ -361,14 +377,6 @@
 
       &date.timezone.errors.changelog;
 
-      <row>
-       <entry>5.1.1</entry>
-       <entry>
-        Există <link linkend="datetime.constants">constante</link> utile pentru
-        formate standarde de date/ore, ce pot fi utilizate pentru a specifica
-        parametrul <parameter>format</parameter>.
-       </entry>
-      </row>
      </tbody>
     </tgroup>
    </informaltable>

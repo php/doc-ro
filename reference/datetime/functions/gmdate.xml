@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 83c927f576b72abb11701326d9e33eb2fdfce8e3 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 2e4914ba37887a1d59f0d66f46ee9231613dd517 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <refentry xml:id="function.gmdate" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -64,6 +64,14 @@
      </thead>
      <tbody>
       <row>
+       <entry>5.1.1</entry>
+       <entry>
+        Există <link linkend="datetime.constants">constante</link> utile a
+        unor formate standarde ale datei/orei ce pot fi utilizate pentru a
+        specifica parametrul <parameter>format</parameter>.
+       </entry>
+      </row>
+      <row>
        <entry>5.1.0</entry>
        <entry>
         Domeniul valid al unui timestamp este de obicei de la Fri, 13 Dec 1901
@@ -71,14 +79,6 @@
         ce corespund valorilor minimă și maximă a unui integer pe 32 de biți).
         Însă până la PHP 5.1.0 acest domeniu era limitat de la 01-01-1970 până
         la 19-01-2038 pe unele sisteme (de ex. Windows).
-       </entry>
-      </row>
-      <row>
-       <entry>5.1.1</entry>
-       <entry>
-        Există <link linkend="datetime.constants">constante</link> utile a
-        unor formate standarde ale datei/orei ce pot fi utilizate pentru a
-        specifica parametrul <parameter>format</parameter>.
        </entry>
       </row>
      </tbody>
