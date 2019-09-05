@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 366509eacd25fd083006e411d553b5cb178db38d Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 1b63ce3ba8054efb358f5cb7929a0e2f501118b0 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -432,6 +432,9 @@ Exemplul de mai sus va afișa în PHP 5.6:</para>'>
 <!ENTITY example.outputs.7 '<para xmlns="http://docbook.org/ns/docbook">
 Exemplul de mai sus va afișa în PHP 7:</para>'>
 
+<!ENTITY example.outputs.70 '<para xmlns="http://docbook.org/ns/docbook">
+Exemplul de mai sus va afișa în PHP 7.0:</para>'>
+
 <!ENTITY example.outputs.71 '<para xmlns="http://docbook.org/ns/docbook">
 Exemplul de mai sus va afișa în PHP 7.1:</para>'>
 
@@ -627,6 +630,54 @@ nu sunt determinate.'>
 <!ENTITY gd.font.size 'Dimensiunea font-ului. În dependență de versiunea GD,
 aceasta trebuie specificată în unități de pixeli (GD1) sau în unități de puncte
 (GD2).'>
+
+<!ENTITY gd.constants.types '<simpara xmlns="http://docbook.org/ns/docbook">
+    Utilizată de funcția <function>imagetypes</function> în calitate de valoare întoarsă
+</simpara>'>
+
+<!ENTITY gd.constants.color '<simpara xmlns="http://docbook.org/ns/docbook">
+    O opțiune specială pentru culoare, ce poate fi utilizată în locul unei culori
+    alocate cu <function>imagecolorallocate</function> sau
+    <function>imagecolorallocatealpha</function>.
+</simpara>'>
+
+<!ENTITY gd.constants.affine '<simpara xmlns="http://docbook.org/ns/docbook">
+    O constantă de tip transformare afină folosită de funcția
+    <function>imageaffinematrixget</function>.
+</simpara>'>
+
+<!ENTITY gd.constants.arc '<simpara xmlns="http://docbook.org/ns/docbook">
+    O constantă de stil folosită de funcția <function>imagefilledarc</function>.
+</simpara>'>
+
+<!ENTITY gd.constants.gd2 '<simpara xmlns="http://docbook.org/ns/docbook">
+    O constantă de tip folosită de funcția <function>imagegd2</function>.
+</simpara>'>
+
+<!ENTITY gd.constants.effect '<simpara xmlns="http://docbook.org/ns/docbook">
+    Efect de tip alpha blending folosit de funcția <function>imagelayereffect</function>.
+</simpara>'>
+
+<!ENTITY gd.constants.filter '<simpara xmlns="http://docbook.org/ns/docbook">
+    Un filtru special GD folosit de funcția <function>imagefilter</function>.
+</simpara>'>
+
+<!ENTITY gd.constants.type '<simpara xmlns="http://docbook.org/ns/docbook">
+    O constantă de tip al imaginii folosită de funcțiile <function>image_type_to_mime_type</function>
+    și <function>image_type_to_extension</function>.
+</simpara>'>
+
+<!ENTITY gd.constants.png-filter '<simpara xmlns="http://docbook.org/ns/docbook">
+    Un filtru special PNG folosit de funcția <function>imagepng</function>.
+</simpara>'>
+
+<!ENTITY gd.constants.flip '<simpara xmlns="http://docbook.org/ns/docbook">
+    Utilizat cu <function>imageflip</function>, disponibil începând cu PHP 5.5.0.
+</simpara>'>
+
+<!ENTITY gd.constants.interpolation '<simpara xmlns="http://docbook.org/ns/docbook">
+    Utilizat cu <function>imagesetinterpolation</function>, disponibil începând cu PHP 5.5.0.
+</simpara>'>
 
 <!-- DBM notes -->
 
@@ -2645,6 +2696,24 @@ Această extensie este învechită. În loc, trtebuie utilizată
 extensia <link linkend="set.mongodb">MongoDB</link>.</para>'>
 
 <!-- mongodb -->
+<!ENTITY mongodb.option.collation '
+         <row xmlns="http://docbook.org/ns/docbook">
+          <entry>collation</entry>
+          <entry><type>array|object</type></entry>
+          <entry>
+           <para>
+            <link xlink:href="&url.mongodb.docs.collation;" xmlns:xlink="http://www.w3.org/1999/xlink">Collation</link> permite utilizatorilor să indice reguli specifice limbii pentru comparații ale șirurilor de caractere cum ar fi reguli pentru caractere minuscule, majuscule, cu accente. La specificarea collation câmpul <literal>"locale"</literal> este obligatoriu; restul câmpurilor collation sunt opționale. Pentru descrierile câmpurilor a se vedea <link xlink:href="&url.mongodb.docs.collation;#collation-document" xmlns:xlink="http://www.w3.org/1999/xlink">Collation Document</link>.
+           </para>
+           <para>
+            Dacă collation nu este specificat, dar colecția are un collation implicit, atunci operațiunea folosește collation specificat pentru colecție. Dacă nu este specificat un collation pentru colecție sau pentru operație, MongoDB folosește comparația binară simplă, ca în versiunile anterioare, pentru compararea șirurilor de caractere.
+           </para>
+           <para>
+            Această opțiune este disponibilă în MongoDB 3.4+ și va rezulta într-o excepție în timpul execuției dacă este specificată pentru o versiune mai veche a serverului.
+           </para>
+          </entry>
+         </row>
+'>
+
 <!ENTITY mongodb.parameter.namespace '
    <varlistentry xmlns="http://docbook.org/ns/docbook">
     <term><parameter>namespace</parameter> (<type>string</type>)</term>
