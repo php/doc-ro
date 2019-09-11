@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 6353c52d0ee11ceb942e857b001e95d85500d690 Maintainer: radical Status: ready -->
+<!-- EN-Revision: 40352bfbde2dba2110bab608d6a65687c85ad064 Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
 <refentry xml:id="function.json-decode" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -14,7 +14,7 @@
   <methodsynopsis>
    <type>mixed</type><methodname>json_decode</methodname>
    <methodparam><type>string</type><parameter>json</parameter></methodparam>
-   <methodparam choice="opt"><type>bool</type><parameter>assoc</parameter><initializer>false</initializer></methodparam>
+   <methodparam choice="opt"><type>bool</type><parameter>assoc</parameter><initializer>&false;</initializer></methodparam>
    <methodparam choice="opt"><type>int</type><parameter>depth</parameter><initializer>512</initializer></methodparam>
    <methodparam choice="opt"><type>int</type><parameter>options</parameter><initializer>0</initializer></methodparam>
   </methodsynopsis>
@@ -45,8 +45,8 @@
      <term><parameter>assoc</parameter></term>
      <listitem>
       <para>
-       Dacă specificați &true;, obiectul va fi convertit într-un
-       <type>array</type> asociativ.
+       Dacă e specificată valoarea &true;, &object; întors va fi convertit într-un
+       &array; asociativ.
       </para>
      </listitem>
     </varlistentry>
@@ -62,10 +62,14 @@
      <term><parameter>options</parameter></term>
      <listitem>
       <para>
-       Masca de biți a opțiunilor de decodificare JSON. în prezent este
-       susținută doar <constant>JSON_BIGINT_AS_STRING</constant>
-       (în mod implicit numerele întregi mari se transformă în numere cu virgulă
-       flotantă)
+       Masca de biți a opțiunilor
+       <constant>JSON_BIGINT_AS_STRING</constant>,
+       <constant>JSON_INVALID_UTF8_IGNORE</constant>,
+       <constant>JSON_INVALID_UTF8_SUBSTITUTE</constant>,
+       <constant>JSON_OBJECT_AS_ARRAY</constant>,
+       <constant>JSON_THROW_ON_ERROR</constant>.
+       Efectele acestor constante sunt descrise pe pagina
+       <link linkend="json.constants">Constante JSON</link>.
       </para>
      </listitem>
     </varlistentry>
@@ -82,6 +86,102 @@
    &null; este întors dacă parametrul <parameter>json</parameter> nu poate fi
    decodificat sau dacă datele pentru codificare sunt mai adânci decât limita de
    imbricare.
+  </para>
+ </refsect1>
+
+ <refsect1 role="changelog">
+  &reftitle.changelog;
+  <para>
+   <informaltable>
+    <tgroup cols="2">
+     <thead>
+      <row>
+       <entry>&Version;</entry>
+       <entry>&Description;</entry>
+      </row>
+     </thead>
+     <tbody>
+      <row>
+       <entry>7.3.0</entry>
+       <entry>
+        A fost adăugată valoarea <constant>JSON_THROW_ON_ERROR</constant>
+        a parametrului <parameter>options</parameter>.
+       </entry>
+      </row>
+      <row>
+       <entry>7.2.0</entry>
+       <entry>
+        Au fost adăugate valorile <constant>JSON_INVALID_UTF8_IGNORE</constant> și
+        <constant>JSON_INVALID_UTF8_SUBSTITUTE</constant> a parametrului
+        <parameter>options</parameter>.
+       </entry>
+      </row>
+      <row>
+       <entry>7.1.0</entry>
+       <entry>
+        O cheie JSON vidă ("") poate fi codificată într-o proprietate vidă a
+        obiectului în loc de a folosi o cheie cu valoarea <literal>_empty_</literal>.
+       </entry>
+      </row>
+      <row>
+       <entry>7.0.0</entry>
+       <entry>
+        S-a renunțat la formatele de numere incompatibile cu RFC 7159 - la nivel superior
+        (07, 0xff, .1, -.1) și la toate nivelele ([1.], [1.e1])
+       </entry>
+      </row>
+      <row>
+       <entry>7.0.0</entry>
+       <entry>
+        Un șir de caractere PHP vid sau o valoare care după transformarea în șir
+        de caractere devine vidă (<literal>NULL</literal>, <literal>FALSE</literal>) rezultă
+        într-o eroare de sintaxă JSON.
+       </entry>
+      </row>
+      <row>
+       <entry>5.6.0</entry>
+       <entry>
+        Variantele cuvintelor-cheie <literal>true</literal>,
+        <literal>false</literal> și <literal>null</literal> care nu sunt scrise
+        în întregime cu litere minuscule nu mai sunt acceptate ca date de
+        intrare valide și vor genera avertismente.
+       </entry>
+      </row>
+      <row>
+       <entry>5.4.0</entry>
+       <entry>
+        Au fost adăugate valorile parametrului <parameter>options</parameter>
+        <constant>JSON_BIGINT_AS_STRING</constant> și <constant>JSON_OBJECT_AS_ARRAY</constant>.
+       </entry>
+      </row>
+      <row>
+       <entry>5.4.0</entry>
+       <entry>
+        A fost adăugat parametrul <parameter>options</parameter>.
+       </entry>
+      </row>
+      <row>
+       <entry>5.3.0</entry>
+       <entry>
+        A fost adăugat parametrul opțional <parameter>depth</parameter>.
+        Limita de imbricare implicită a fost mărită de la 128 la 512.
+       </entry>
+      </row>
+      <row>
+       <entry>5.2.3</entry>
+       <entry>
+        Limita de imbricare a fost mărită de la 20 la 128.
+       </entry>
+      </row>
+      <row>
+       <entry>5.2.1</entry>
+       <entry>
+        A fost adăugată susținerea decodificării JSON a tipurilor de bază.
+       </entry>
+      </row>
+     </tbody>
+    </tgroup>
+   </informaltable>
   </para>
  </refsect1>
 
@@ -278,54 +378,6 @@ object(stdClass)#1 (1) {
     poate fi utilizată pentru a determina natura exactă a erorii.
    </para>
   </note>
- </refsect1>
-
- <refsect1 role="changelog">
-  &reftitle.changelog;
-  <para>
-   <informaltable>
-    <tgroup cols="2">
-     <thead>
-      <row>
-       <entry>&Version;</entry>
-       <entry>&Description;</entry>
-      </row>
-     </thead>
-     <tbody>
-      <row>
-       <entry>5.6.0</entry>
-       <entry>
-        Variantele cuvintelor-cheie <literal>true</literal>,
-        <literal>false</literal> și <literal>null</literal> care nu sunt scrise
-        în întregime cu litere minuscule nu mai sunt acceptate ca date de
-        intrare valide și vor genera avertismente.
-       </entry>
-      </row>
-      <row>
-       <entry>5.4.0</entry>
-       <entry>
-        A fost adăugat parametrul <parameter>options</parameter>.
-       </entry>
-      </row>
-      <row>
-       <entry>5.3.0</entry>
-       <entry>A fost adăugat parametrul opțional <parameter>depth</parameter>.
-       Limita de imbricare implicită a fost mărită de la 128 la 512.</entry>
-      </row>
-      <row>
-       <entry>5.2.3</entry>
-       <entry>Limita de imbricare a fost mărită de la 20 la 128.</entry>
-      </row>
-      <row>
-       <entry>5.2.1</entry>
-       <entry>
-        A fost adăugată susținerea decodificării JSON a tipurilor de bază.
-       </entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-  </para>
  </refsect1>
 
  <refsect1 role="seealso">

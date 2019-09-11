@@ -412,6 +412,12 @@
     <romanian_example>Puteți utiliza indicatori expliciți ai tipului în definițiile funcțiilor.</romanian_example>
   </term>
   <term>
+    <english>type casting || typecasting</english>
+    <romanian>transformarea tipului</romanian>
+    <english_example>A convenient method is to use type casting.</english_example>
+    <romanian_example>O metodă convenabilă este utilizarea transformării tipului.</romanian_example>
+  </term>
+  <term>
     <english>synopsis</english>
     <romanian>descriere succintă</romanian>
     <english_example>Interface synopsis</english_example>
@@ -434,5 +440,23 @@
     <romanian>sistem de urmărire a problemelor</romanian>
     <english_example>Our bug-tracking system works 24 hours a day.</english_example>
     <romanian_example>Sistemul nostru de urmărire a problemelor funcționează 24 de ore pe zi.</romanian_example>
+  </term>
+  <term>
+    <english>lowercase</english>
+    <romanian>caractere minuscule</romanian>
+    <english_example>Function names should be lowercase.</english_example>
+    <romanian_example>Denumirile funcțiilor ar trebui să constea din caractere minuscule.</romanian_example>
+  </term>
+  <term>
+    <english>uppercase</english>
+    <romanian>caractere majuscule</romanian>
+    <english_example>Constant names should be uppercase.</english_example>
+    <romanian_example>Denumirile constantelor ar trebui să constea din caractere majuscule.</romanian_example>
+  </term>
+  <term>
+    <english>case-insensitive</english>
+    <romanian>insensibil la caractere minuscule sau majuscule</romanian>
+    <english_example>This function is case-insensitive.</english_example>
+    <romanian_example>Această funcție este insensibilă la caractere minuscule sau majuscule.</romanian_example>
   </term>
 </dictionary>

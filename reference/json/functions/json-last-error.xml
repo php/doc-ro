@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: c29b97cf6e707290cdf6728d60119d38348d5f80 Maintainer: radical Status: ready -->
+<!-- EN-Revision: b9b36ec7576f4d44640b8c998199690b1650bd50 Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
 <refentry xml:id="function.json-last-error" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
@@ -17,7 +17,8 @@
   </methodsynopsis>
   <para>
    Întoarce ultima eroare (dacă este prezentă) care a survenit la ultima
-   codificare / decodificare JSON.
+   codificare / decodificare JSON, care nu a specificat
+   <constant>JSON_THROW_ON_ERROR</constant>.
   </para>
  </refsect1>
 
@@ -91,6 +92,16 @@
       <entry><constant>JSON_ERROR_UNSUPPORTED_TYPE</constant></entry>
       <entry>A fost furnizată o valoare cu un tip ce nu poate fi codificat</entry>
       <entry>PHP 5.5.0</entry>
+     </row>
+     <row>
+      <entry><constant>JSON_ERROR_INVALID_PROPERTY_NAME</constant></entry>
+      <entry>A fost furnizat un nume de proprietate care nu poate fi codificat</entry>
+      <entry>PHP 7.0.0</entry>
+     </row>
+     <row>
+      <entry><constant>JSON_ERROR_UTF16</constant></entry>
+      <entry>Caractere UTF-16 defecte, posibil codificate incorect</entry>
+      <entry>PHP 7.0.0</entry>
      </row>
     </tbody>
    </tgroup>
@@ -175,6 +186,31 @@ var_dump($json, $error === JSON_ERROR_UTF8);
     <screen>
 <![CDATA[
 string(4) "null"
+bool(true)
+]]>
+    </screen>
+   </example>
+  </para>
+  <para>
+   <example>
+    <title>Exemplu <function>json_last_error</function> și <constant>JSON_THROW_ON_ERROR</constant></title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+// O secvență UTF8 invalidă, ce va cauza JSON_ERROR_UTF8
+json_encode("\xB1\x31");
+
+// Următoarea secvență nu cauzează o eroare JSON
+json_encode('okay', JSON_THROW_ON_ERROR);
+
+// Statutul de eroare global nu a fost schimbat de ultimul json_encode()
+var_dump(json_last_error() === JSON_ERROR_UTF8);
+?>
+]]>
+    </programlisting>
+    &example.outputs;
+    <screen>
+<![CDATA[
 bool(true)
 ]]>
     </screen>

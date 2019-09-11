@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 9a4f5c40960522312a1a08b1780cf66da96adf24 Maintainer: alexxed Status: ready -->
+<!-- EN-Revision: 7fe8548cfea516a5587267f9a06aa19ff46c93b5 Maintainer: alexxed Status: ready -->
 <section xml:id="mbstring.installation" xmlns="http://docbook.org/ns/docbook">
   &reftitle.install;
   <para>
@@ -24,58 +24,29 @@
      <para>
       <productname>libmbfl</productname> e necesar pentru <literal>mbstring</literal>.
       <productname>libmbfl</productname> e distribuit cu <literal>mbstring</literal>.
-      Dacă <productname>libmbfl</productname> este deja instalat pe sistem
-      cu opțiunea <option role="configure">--with-libmbfl[=DIR]</option> puteți specifica
-      că doriți să utilizați librăria instalată.
+      Înainte de PHP 7.3.0, dacă <productname>libmbfl</productname> este deja
+      instalat pe sistem cu opțiunea <option role="configure">--with-libmbfl[=DIR]</option>
+      puteți specifica că doriți să utilizați librăria instalată.
      </para>
-     <para>
-      De la PHP 4.3.0, extensia <literal>mbstring</literal> oferă suport îmbunătățit
-      pentru chineza simplificată, chineza tradițională, coreeană și rusă la fel ca în japoneză.
-     </para>
-     <para>
-      Pentru PHP 4.3.3 sau mai vechi, pentru a activa această îmbunătățire, trebuie să specificați valoarea
-      parametrului <literal>LANG</literal> din opțiunea
-      <option role="configure">--enable-mbstring=LANG</option>;
-      <option role="configure">--enable-mbstring=cn</option> pentru chineza simplificată,
-      <option role="configure">--enable-mbstring=tw</option> pentru chineza tradițională,
-      <option role="configure">--enable-mbstring=kr</option> pentru coreeană,
-      <option role="configure">--enable-mbstring=ru</option> pentru rusă și
-      <option role="configure">--enable-mbstring=ja</option> pentru japoneză (implicit).
-       Pentru a activa toate codările suportate, folosiți <option role="configure">--enable-mbstring=all</option>.
-     </para>
-     <note>
-      <para>
-       De la PHP 4.3.4,
-       toate codările suportate de <productname>libmbfl</productname> sunt activate prin opțiunea
-       <option role="configure">--enable-mbstring</option>.
-      </para>
-     </note>
-    </listitem>
-    <listitem>
-     <para>
-      <option role="configure">--enable-mbstr-enc-trans</option> :
-      Activează conversia de codare a caracterelor introduse prin HTTP
-      folosind motorul de conversie din <literal>mbstring</literal>.
-      Dacă această facilitate este activată, codarea caracterelor introduse prin HTTP
-      poate fi convertită la <literal>mbstring.internal_encoding</literal>
-      automat.
-     </para>
-     <note>
-      <para>
-       De la PHP 4.3.0, opțiunea
-       <option role="configure">--enable-mbstr-enc-trans</option>
-       a fost eliminată și înlocuită cu setarea
-       <literal>mbstring.encoding_translation</literal>.
-       Conversia de codare a caracterelor introduse prin HTTP este activată
-       când această setare este <literal>On</literal>
-       (implicit este <literal>Off</literal>).
-      </para>
-     </note>
     </listitem>
     <listitem>
      <para>
       <option role="configure">--disable-mbregex</option>: Dezactivează
       funcțiile pentru expresii regulate care suportă caracterele multioctet.
+     </para>
+     <para>
+      <productname>Oniguruma</productname> este necesar pentru funcțiile cu
+      expresii regulare cu susținerea caracterelor pe mai mulți baiți.
+      <productname>Oniguruma</productname> e încorporat cu
+      <literal>mbstring</literal>. Începând cu PHP 5.4.0, dacă
+      <productname>Oniguruma</productname> este deja instalat în sistem,
+      poate fi specificată opțiunea <option role="configure">--with-onig[=DIR]</option>
+      pentru a utiliza biblioteca instalată.
+     </para>
+     <para>
+      Începând cu PHP 5.4.0 este bosibil de a deconecta verificarea multibyte
+      regex backtrack specificând
+      <option role="configure">--disable-mbregex-backtrack</option>.
      </para>
     </listitem>
    </itemizedlist>
