@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 1b63ce3ba8054efb358f5cb7929a0e2f501118b0 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: c483acdb5156624dbbc804226711ff1fac10a715 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -715,6 +715,37 @@ xmlns="http://docbook.org/ns/docbook"><term><parameter>dbm_identifier</parameter
 <!ENTITY curl.mh.description '<varlistentry xmlns="http://docbook.org/ns/docbook">
 <term><parameter>mh</parameter></term><listitem><para>Un multi-handle cURL
 întors de <function>curl_multi_init</function>.</para></listitem></varlistentry>'>
+
+<!-- dbase notes -->
+
+<!ENTITY dbase.type-conversion '<para xmlns="http://docbook.org/ns/docbook">
+   Fiecare câmp este convertit în tipul PHP corespunzător cu excepția:
+   <itemizedlist>
+    <listitem>
+     <simpara>
+      Datele rămân ca șiruri de caractere.
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      Valorile DateTime sunt convertite în șiruri de caractere.
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      Valorile întregi din afara domeniului
+      <constant>PHP_INT_MIN</constant>..<constant>PHP_INT_MAX</constant> sunt
+      întoarse ca șiruri de caractere.
+     </simpara>
+    </listitem>
+    <listitem>
+     <simpara>
+      Anterior dbase 7.0.0, valorile boolean-e (<literal>L</literal>) erau
+      convertite în <literal>1</literal> sau <literal>0</literal>.
+     </simpara>
+    </listitem>
+   </itemizedlist>
+  </para>'>
 
 <!-- IMAP notes -->
 
@@ -2813,7 +2844,8 @@ extensia <link linkend="set.mongodb">MongoDB</link>.</para>'>
     <term><parameter>filter</parameter> (<type>array|object</type>)</term>
     <listitem>
      <para>
-      Filtrul de căutare.
+      <link xlink:href="&url.mongodb.docs;tutorial/query-documents/" xmlns:xlink="http://www.w3.org/1999/xlink">predicatul interpelării</link>.
+      Un predicat vid se va potrivi cu toate documentele din colecție.
      </para>
     </listitem>
    </varlistentry>
@@ -2840,6 +2872,27 @@ dacă este necesară autentificare și aceasta eșuează.</member>'>
 <!ENTITY mongodb.throws.connection '<member xmlns="http://docbook.org/ns/docbook">
 Emite <classname>MongoDB\Driver\Exception\ConnectionException</classname> dacă
 conexiunea către server eșuează (din alte motive decât autentificarea).</member>'>
+
+<!ENTITY mongodb.note.decimal128 '
+   <note xmlns="http://docbook.org/ns/docbook">
+    <simpara>
+     <classname>MongoDB\BSON\Decimal128</classname> este compatibil doar cu
+     MongoDB 3.4+. Încercarea de a utiliza tipul BSON cu o versiune anterioară a
+     MongoDB va rezulta în eroare.
+    </simpara>
+   </note>
+'>
+
+<!ENTITY mongodb.note.forking '
+   <note xmlns="http://docbook.org/ns/docbook">
+    <simpara>
+     Pe platforme Unix driver-ul MongoDB este senzitiv la scripturi care
+     utilizează apelul de sistem fork() fără a apela și exec(). Utilizatorii sunt
+     sfătuiți să nu reutilizeze instanțe <classname>MongoDB\Driver\Manager</classname>
+     într-un proces-fiu creat cu fork.
+    </simpara>
+   </note>
+'>
 
 <!ENTITY mongodb.note.getwriteerrors '
   <note xmlns="http://docbook.org/ns/docbook">
