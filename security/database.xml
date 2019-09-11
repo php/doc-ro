@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 0a7a550a651bf837463ea57270bdbd4697b66fb9 Maintainer: zamolxe Status: ready -->
+<!-- EN-Revision: 958d58419816840c8a7866daccd83bc5a52f90c8 Maintainer: zamolxe Status: ready -->
 <!-- CREDITS: simionea -->
 
   <chapter xml:id="security.database" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -60,16 +60,6 @@
       intrus va căpăta acces la baza de date din numele aplicației
       dumneavoastră, acesta va putea face doar operațiunile, pe care le poate
       face aplicația dumneavoastră.
-     </simpara>
-     <simpara>
-      Se recomandă să nu implementați toată business-logica în aplicația web
-      (de ex. în script-ul dumneavoastră). În loc, realizați aceasta în schema
-      bazei de date utilizând viziuni, trigger-e sau reguli. Dacă sistemul va
-      evolua, va apărea necesitatea de a deschide noi porturi la baza de date
-      și va trebui să reimplementați logica separat în fiecare client al bazei
-      de date. Or, trigger-e pot fi utilizate pentru a manipula câmpuri în mod
-      transparent și automat, ceea ce deseori vă ajută la depistarea problemelor
-      în aplicație, sau la regăsirea tranzacțiilor.
      </simpara>
    </sect1>
 

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: zamolxe Status: ready -->
+<!-- EN-Revision: 1de9b77d0306d3589e8fe27e4fa587718eb691c2 Maintainer: zamolxe Status: ready -->
 <!-- CREDITS: simionea -->
-<!-- splitted from ./index.xml, last change in rev 1.66 -->
 <chapter xml:id="security.cgi-bin" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Instalat ca un binar CGI</title>
  
@@ -111,9 +110,7 @@
    previne rularea unui script PHP direct printr-un URL gen
    <filename role="php">http://my.host/cgi-bin/php/secretdir/script.php</filename>.
    PHP va acționa în acest mod numai dacă a trecut printr-o regulă de
-   redirecționare a serverului web. PHP de versiune anterioară 4.2.0 utiliza
-   pentru aceasta opțiunea la compilare
-   <literal>--enable-force-cgi-redirect</literal>.
+   redirecționare a serverului web.
   </simpara>
   <simpara>
    De obicei redirecționarea în configurația Apache se efectuează cu ajutorul
