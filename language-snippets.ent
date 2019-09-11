@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: c483acdb5156624dbbc804226711ff1fac10a715 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 88514149da6b3e0fbcc0f1069f4480231fed7655 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -230,6 +230,11 @@ xmlns="http://docbook.org/ns/docbook"><simpara>Această facilitate a fost
 <emphasis>ÎNVECHITĂ</emphasis> începând cu PHP 7.0.0. Utilizarea acestei
 facilități este foarte discurajată.</simpara></warning>'>
 
+<!ENTITY warn.deprecated.function-7-1-0 '<warning
+xmlns="http://docbook.org/ns/docbook"><simpara>Această funcție este
+<emphasis>ÎNVECHITĂ</emphasis> începând cu PHP 7.1.0. Utilizarea acestei funcții
+este foarte descurajată.</simpara></warning>'>
+
 <!ENTITY removed.php.future 'Această facilitate învechită
 <emphasis xmlns="http://docbook.org/ns/docbook">cu siguranță</emphasis> va fi
 <emphasis xmlns="http://docbook.org/ns/docbook">eliminată</emphasis> în viitor.'>
@@ -392,6 +397,15 @@ lista sa de argumente.</simpara></warning>'>
 <!ENTITY warn.removed.function.7-0-0.alternatives '
 <para xmlns="http://docbook.org/ns/docbook">
  Această funcție a fost <emphasis>ELIMINATĂ</emphasis> în PHP 7.0.0.
+</para>
+<para xmlns="http://docbook.org/ns/docbook">
+ Variante alternative pentru această funcție sunt:
+</para>
+'>
+
+<!ENTITY warn.deprecated.function.7-1-0.alternatives '
+<para xmlns="http://docbook.org/ns/docbook">
+ Această funcție a fost <emphasis>ÎNVECHITĂ</emphasis> în PHP 7.1.0.
 </para>
 <para xmlns="http://docbook.org/ns/docbook">
  Variante alternative pentru această funcție sunt:
@@ -691,17 +705,7 @@ xmlns="http://docbook.org/ns/docbook"><term><parameter>dbm_identifier</parameter
  <note xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <para>
    PHP implementează un superset al JSON, după cum este specificat în documentul
-   <link xlink:href="&url.rfc;4627">RFC 4627</link> original; de asemenea el va
-   codifica și va decodifica tipuri scalare și &null;. RFC 4627 susține aceste
-   valori doar atunci când ele sunt încorporate într-un tablou sau obiect.
-  </para>
-  <para>
-   Cu toate că acest superset este consecvent cu definiția extinsă de "text JSON"
-   din noul <link xlink:href="&url.rfc;7159">RFC 7159</link> (care are ca scop să
-   înlocuiască RFC 4627) și
-   ECMA-404<!-- Removed link to fix the build ~sobak 12/06/2016 -->, aceasta poate cauza
-   probleme de interoperabilitate cu interpretorii JSON mai vechi care aderă
-   strict la RFC 4627 la codificarea unei singure valori scalare.
+   original <link xlink:href="&url.rfc;7159">RFC 7159</link>.
   </para>
  </note>
 '>
@@ -1392,6 +1396,9 @@ extensie <acronym xmlns="http://docbook.org/ns/docbook">PECL</acronym> nu este
 disponibilă în prezent. Accesați de asemenea și secțiunea
 <link xmlns="http://docbook.org/ns/docbook" linkend="install.windows.legacy.building">
 compilarea în Windows</link>.'>
+
+<!ENTITY pecl.windows.download.avail 'Binarele Windows (fișierele <acronym xmlns="http://docbook.org/ns/docbook">DLL</acronym>)
+pentru această extensie <acronym xmlns="http://docbook.org/ns/docbook">PECL</acronym> sunt disponibile pe site-ul PECL.'>
 
 <!ENTITY pecl.windows.download.unbundled '&pecl.windows.download;'>
 
@@ -2847,6 +2854,18 @@ extensia <link linkend="set.mongodb">MongoDB</link>.</para>'>
       <link xlink:href="&url.mongodb.docs;tutorial/query-documents/" xmlns:xlink="http://www.w3.org/1999/xlink">predicatul interpelării</link>.
       Un predicat vid se va potrivi cu toate documentele din colecție.
      </para>
+     <note>
+      <simpara>
+       La evaluarea criteriilor interpelării MongoDB compară tipurile și valorile
+       conform propriilor <link xlink:href="&url.mongodb.docs;reference/bson-type-comparison-order/" xmlns:xlink="http://www.w3.org/1999/xlink">reguli de comparație pentru tipuri BSON</link>,
+       care diferă de regulile PHP de <link linkend="types.comparisons">comparare</link> și
+       <link linkend="language.types.type-juggling">substituirea tipurilor</link>.
+       La potrivirea unui tip special BSON criteriile interpelării trebuie să utilizeze
+       <link linkend="book.bson">clasa BSON</link> respectivă (de ex. trebuie
+       utilizat <classname>MongoDB\BSON\ObjectId</classname> pentru a potrivi un
+       <link xlink:href="&url.mongodb.docs.objectid;" xmlns:xlink="http://www.w3.org/1999/xlink">ObjectId</link>).
+      </simpara>
+     </note>
     </listitem>
    </varlistentry>
 '>
