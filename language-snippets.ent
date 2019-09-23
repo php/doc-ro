@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 88514149da6b3e0fbcc0f1069f4480231fed7655 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: c3fb91ffbeaf480db1f0b842ba02d8e63bed400b Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -38,6 +38,12 @@ un program este lansat în execuție cu ajutorul acestei funcții, pentru ca el 
 continue să ruleze în fundal, ieșirile acelui program trebuie redirecționate
 spre un fișier sau spre un alt flux de ieșire. În caz contrar, PHP se va
 suspenda până când execuția programului se va încheia.</para></note>'>
+
+<!ENTITY note.exec-bypass-shell '<note xmlns="http://docbook.org/ns/docbook"><para>
+Pe sisteme Windows funcția <function>exec</function> întâi va rula cmd.exe pentru
+a lansa comanda. Dacă se dorește rularea unui program extern fără a starta
+cmd.exe este necesar de a utiliza <function>proc_open</function> cu opțiunea
+<parameter>bypass_shell</parameter>.</para></note>'>
 
 <!ENTITY note.func-callback '<note xmlns="http://docbook.org/ns/docbook">
 <simpara>În locul denumirii funcției poate fi indicat un tablou conținând o
@@ -127,12 +133,6 @@ clasa nu este cunoscută deja.</para></note>'>
 <!ENTITY note.network.header.sapi '<note xmlns="http://docbook.org/ns/docbook">
 <para>Antetele vor fi accesibile și afișate doar atunci când este utilizat un
 SAPI care le susține.</para></note>'>
-
-<!ENTITY note.passwordhashing '<note xmlns="http://docbook.org/ns/docbook">
-<title>Hashing-ul securizat al parolelor</title>
-<para>Nu este recomandabilă utilizatea acestei funcții pentru a securiza parole
-din motivul rapidității acestui algoritm de hashing. Vedeți
-<link linkend="faq.passwords.fasthash">aici</link> pentru detalii.</para></note>'>
 
 <!ENTITY note.sigchild '<note xmlns="http://docbook.org/ns/docbook">
  <para>
@@ -235,6 +235,16 @@ xmlns="http://docbook.org/ns/docbook"><simpara>Această funcție este
 <emphasis>ÎNVECHITĂ</emphasis> începând cu PHP 7.1.0. Utilizarea acestei funcții
 este foarte descurajată.</simpara></warning>'>
 
+<!ENTITY warn.deprecated.feature-7-2-0 '<warning
+xmlns="http://docbook.org/ns/docbook"><simpara>Această facilitate este
+<emphasis>ÎNVECHITĂ</emphasis> începând cu PHP 7.2.0. Utilizarea acestei
+facilități este foarte discurajată.</simpara></warning>'>
+
+<!ENTITY warn.deprecated.function-7-2-0 '<warning
+xmlns="http://docbook.org/ns/docbook"><simpara>Această funcție este
+<emphasis>ÎNVECHITĂ</emphasis> începând cu PHP 7.2.0. Utilizarea acestei funcții
+este foarte descurajată.</simpara></warning>'>
+
 <!ENTITY removed.php.future 'Această facilitate învechită
 <emphasis xmlns="http://docbook.org/ns/docbook">cu siguranță</emphasis> va fi
 <emphasis xmlns="http://docbook.org/ns/docbook">eliminată</emphasis> în viitor.'>
@@ -319,6 +329,12 @@ implicită <literal>on</literal>. În esență ea execută
 <function>addslashes</function> asupra tuturor datelor GET, POST și COOKIE.
 <function>stripslashes</function> poate fi utilizată pentru a elimina
 slash-urile suplimentare.</para></note>'>
+
+<!ENTITY warn.passwordhashing '<warning xmlns="http://docbook.org/ns/docbook">
+<para>Nu este recomandabilă utilizatea acestei funcții pentru a securiza parole
+din motivul rapidității acestui algoritm de hashing. Vedeți
+<link linkend="faq.passwords.fasthash">Password Hashing FAQ</link> pentru detalii
+și cele mai bune practici.</para></warning>'>
 
 <!ENTITY warn.ssl-non-standard '<warning xmlns="http://docbook.org/ns/docbook">
 <para>La utilizarea SSL, Microsoft IIS va viola protocolul prin închiderea
@@ -2480,7 +2496,7 @@ fără valoarea câmpului.</para></note></listitem>'>
 
 <!ENTITY mongo.listcollections.note '<note xmlns="http://docbook.org/ns/docbook">
 <simpara>Această metodă va utiliza comanda bazei de date
-<link xlink:href="&url.mongodb.dochub.listcollections;" xmlns:xlink="http://www.w3.org/1999/xlink">listCollections</link>
+<link xlink:href="&url.mongodb.docs.command;listCollections" xmlns:xlink="http://www.w3.org/1999/xlink">listCollections</link>
 la comunicarea cu MongoDB 2.8+. Pentru versiunile anterioare ale bazei de date, metoda va interpela colecția specială
 <literal>system.namespaces</literal>.</simpara></note>'>
 
@@ -2892,6 +2908,13 @@ dacă este necesară autentificare și aceasta eșuează.</member>'>
 Emite <classname>MongoDB\Driver\Exception\ConnectionException</classname> dacă
 conexiunea către server eșuează (din alte motive decât autentificarea).</member>'>
 
+<!ENTITY mongodb.throws.bson.unexpected '<member xmlns="http://docbook.org/ns/docbook">
+Emite <classname>MongoDB\Driver\Exception\UnexpectedValueException</classname>
+dacă la intrare nu se conține exact un document BSON. Motive posibile pentru
+aceasta sunt, dar nu se limitează la, BSON nevalid, date în plus (după citirea
+unui document BSON), sau o eroare neașteptată
+<link xlink:href="&url.mongodb.libbson;" xmlns:xlink="http://www.w3.org/1999/xlink">libbson</link>.</member>'>
+
 <!ENTITY mongodb.note.decimal128 '
    <note xmlns="http://docbook.org/ns/docbook">
     <simpara>
@@ -2932,6 +2955,18 @@ conexiunea către server eșuează (din alte motive decât autentificarea).</mem
     doar un <classname>BSON\ObjectID</classname> în tablou și indicele va fi
     întotdeauna 0 (indicele acestei operațiuni din serie).
    </para>
+  </note>
+'>
+
+<!ENTITY mongodb.note.uint32 '
+  <note xmlns="http://docbook.org/ns/docbook">
+   <simpara>
+    Deoarece tipul întreg al PHP este cu semn, unele valori întoarse de această
+    metodă pot apărea ca numere întregi negative pe platforme pe 32 de biți.
+    Opțiunea de formatare <literal>"&#37;u"</literal> a funcției <function>sprintf</function>
+    poate fi utilizată pentru a obține reprezentarea valorii întregi fără semn
+    ca șir de caractere.
+   </simpara>
   </note>
 '>
 
