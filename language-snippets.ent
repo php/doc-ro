@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: c3fb91ffbeaf480db1f0b842ba02d8e63bed400b Maintainer: simionea Status: ready -->
+<!-- EN-Revision: fa044ac5178d0755595dcdba863c0c04f09d0515 Maintainer: simionea Status: ready -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
@@ -598,6 +598,26 @@ verifica valoarea întoarsă de această funcție.</simpara></warning>'>
  </listitem>
 </varlistentry>'>
 
+<!ENTITY openssl.param.csr '<varlistentry xmlns="http://docbook.org/ns/docbook">
+ <term><parameter>csr</parameter></term>
+ <listitem>
+  <para>
+   A se vedea <link linkend="openssl.certparams">parametrii CSR</link> pentru
+   lista valorilor valide.
+  </para>
+ </listitem>
+</varlistentry>'>
+
+<!ENTITY openssl.param.key '<varlistentry xmlns="http://docbook.org/ns/docbook">
+ <term><parameter>key</parameter></term>
+ <listitem>
+  <para>
+   A se vedea <link linkend="openssl.certparams">parametii cheilor publice/private</link>
+   pentru lista valorilor valide.
+  </para>
+ </listitem>
+</varlistentry>'>
+
 <!-- Image (GD) Notes -->
 <!ENTITY note.config.t1lib '<note xmlns="http://docbook.org/ns/docbook">
 <simpara>Această funcție e disponibilă numai dacă PHP este compilat utilizând
@@ -627,6 +647,54 @@ pentru font-urile încorporate cu codificarea latin2 (unde numerele mai mari
 corespund font-urilor mai mari) sau orice identificator de font al
 dumneavoastră, înregistrat cu <function>imageloadfont</function>.</para>
 </listitem></varlistentry>'>
+
+<!ENTITY gd.ttf.fontfile "
+    <varlistentry xmlns='http://docbook.org/ns/docbook'>
+     <term><parameter>fontfile</parameter></term>
+     <listitem>
+      <para>
+       Calea către fontul TrueType pe care doriți să-l utilizați.
+      </para>
+      <para>
+       În dependență de versiunea bibliotecii GD utilizate de PHP, <emphasis>atunci
+       când parametrul <parameter>fontfile</parameter> nu începe cu un
+       <literal>/</literal> la numele fișierului va fi adăugat <literal>.ttf</literal></emphasis>
+       și biblioteca va încerca să caute acest fișier în căile către fonturi
+       definite în librărie.
+      </para>
+      <para>
+       La utilizarea versiunilor bibliotecii GD mai joase de 2.0.18, caracterul
+       <literal>spațiu</literal> era utilizat ca separator al căilor pentru
+       diferite fișiere cu fonturi, dar nu punctul și virgula. Utilizarea neintenționată
+       a acestei facilități va rezulta în următorul avertisment:
+       <literal>Warning: Could not find/open font</literal>. Pentru aceste
+       versiuni afectate unica soluție este de a transfera fontul într-o cale
+       care nu conține spații în denumire.
+      </para>
+      <para>
+       În multe cazuri atunci când fontul se află în același director ca și
+       scriptul care îl utilizează, următorul truc va elimina problemele de incluziune.
+       <programlisting role='php'>
+<![CDATA[
+<?php
+// Set the enviroment variable for GD
+putenv('GDFONTPATH=' . realpath('.'));
+
+// Name the font to be used (note the lack of the .ttf extension)
+$font = 'SomeFont';
+?>
+]]>
+       </programlisting>
+      </para>
+      <note>
+       <para>
+        Observați că <link linkend='ini.open-basedir'>open_basedir</link>
+        <emphasis>nu</emphasis> se aplică la <parameter>fontfile</parameter>.
+       </para>
+      </note>
+     </listitem>
+    </varlistentry>
+">
 
 <!ENTITY gd.return.identifier 'Întoarce un identificator de resursă de tip
 imagine în cazul succesului, &false; în caz de erori.'>
@@ -3128,6 +3196,12 @@ Acest parametru e ignorat dacă nu a fost stabilită opțiunea
   </simpara>
  </note>
 '>
+
+<!-- UOPZ snippets -->
+
+<!ENTITY uopz.warn.removed.function-5-0-0 '<warning
+xmlns="http://docbook.org/ns/docbook"><simpara>Această funcție a fost
+<emphasis>ELIMINATĂ</emphasis> în PECL uopz 5.0.0.</simpara></warning>'>
 
 <!-- Migration Guide snippets -->
 <!ENTITY migration56.openssl.peer-verification '
