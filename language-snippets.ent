@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 7c29a027bb6d6598b86cfc3c694901cb20e955bc Maintainer: simionea Status: ready -->
+<!-- EN-Revision: f543b07b0a335d58d7ea8ade0e6b3b63b61191dd Maintainer: simionea Status: ready -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook">
 <entry>4.2.0</entry><entry>Generatorul de numere aleatoare este însămânțat
@@ -675,6 +675,10 @@ corespund font-urilor mai mari) sau orice identificator de font al
 dumneavoastră, înregistrat cu <function>imageloadfont</function>.</para>
 </listitem></varlistentry>'>
 
+<!ENTITY gd.psfont.description '<varlistentry xmlns="http://docbook.org/ns/docbook">
+<term><parameter>font_index</parameter></term><listitem><para>O resursă font
+întoarsă de <function>imagepsloadfont</function>.</para></listitem></varlistentry>'>
+
 <!ENTITY gd.ttf.fontfile "
     <varlistentry xmlns='http://docbook.org/ns/docbook'>
      <term><parameter>fontfile</parameter></term>
@@ -726,6 +730,12 @@ $font = 'SomeFont';
 <!ENTITY gd.return.identifier 'Întoarce un identificator de resursă de tip
 imagine în cazul succesului, &false; în caz de erori.'>
 
+<!ENTITY gd.return.trueonerror '<caution xmlns="http://docbook.org/ns/docbook">
+<simpara>Însă dacă libgd eșuează să afișeze imaginea, această funcție întoarce &true;.</simpara></caution>'>
+
+<!ENTITY gd.identifier.color "Un identificator al culorii create cu
+<function xmlns='http://docbook.org/ns/docbook'>imagecolorallocate</function>.">
+
 <!ENTITY gd.value.red 'Valoarea componentei roșii.'>
 
 <!ENTITY gd.value.green 'Valoarea componentei verzi.'>
@@ -752,9 +762,7 @@ Dacă nu este stabilită sau este &null;, atunci fluxul imaginii va fi afișat d
 determinate doar culorile utilizate în imagine. Culorile prezente doar în paletă
 nu sunt determinate.'>
 
-<!ENTITY gd.font.size 'Dimensiunea font-ului. În dependență de versiunea GD,
-aceasta trebuie specificată în unități de pixeli (GD1) sau în unități de puncte
-(GD2).'>
+<!ENTITY gd.font.size 'Dimensiunea font-ului în unități de puncte.'>
 
 <!ENTITY gd.constants.types '<simpara xmlns="http://docbook.org/ns/docbook">
     Utilizată de funcția <function>imagetypes</function> în calitate de valoare întoarsă
@@ -803,6 +811,11 @@ aceasta trebuie specificată în unități de pixeli (GD1) sau în unități de 
 <!ENTITY gd.constants.interpolation '<simpara xmlns="http://docbook.org/ns/docbook">
     Utilizat cu <function>imagesetinterpolation</function>, disponibil începând cu PHP 5.5.0.
 </simpara>'>
+
+<!ENTITY gd.changlog.t1lib '<row xmlns="http://docbook.org/ns/docbook">
+    <entry>7.0.0</entry><entry>Susținerea pentru T1Lib a fost eliminată din PHP,
+    de aceea și această funcție a fost eliminată.</entry>
+</row>'>
 
 <!-- DBM notes -->
 
@@ -1499,7 +1512,7 @@ doar când această extensie a fost compilată în interiorul PHP, sau a fost
 driver-ului trebuie utilizate numai dacă utilizați acest driver.
 Utilizarea atributelor specifice unui driver cu un alt driver poate rezulta
 într-un comportament imprevizibil. <function>PDO::getAttribute</function>
-poate fi utilizată pentru a obține atributul <constant>PDO_ATTR_DRIVER_NAME
+poate fi utilizată pentru a obține atributul <constant>PDO::ATTR_DRIVER_NAME
 </constant>, pentru a verifica driver-ul în caz că codul-sursă al
 dumneavoastră poate rula cu mai multe driver-e.</simpara>'>
 
@@ -3012,6 +3025,23 @@ extensia <link linkend="set.mongodb">MongoDB</link>.</para>'>
          </row>
 '>
 
+<!ENTITY mongodb.option.readConcern '
+         <row xmlns="http://docbook.org/ns/docbook">
+          <entry>readConcern</entry>
+          <entry><classname>MongoDB\Driver\ReadConcern</classname></entry>
+          <entry>
+           <para>
+            O preocupare de citire pentru a fi aplicată operațiunii.
+           </para>
+           <para>
+            Această opțiune este disponibilă în MongoDB 3.2+ și va rezulta într-o
+            excepție în timpul execuției dacă e specificată pentru o versiune mai
+            veche a serverului.
+           </para>
+          </entry>
+         </row>
+'>
+
 <!ENTITY mongodb.option.readPreference '
          <row xmlns="http://docbook.org/ns/docbook">
           <entry>readPreference</entry>
@@ -3188,28 +3218,6 @@ unui document BSON), sau o eroare neașteptată
    </note>
 '>
 
-<!ENTITY mongodb.note.getwriteerrors '
-  <note xmlns="http://docbook.org/ns/docbook">
-   <para>
-    În cazul eșecului la înscriere
-    <methodname>MongoDB\Driver\WriteResult::getWriteErrors</methodname> va avea
-    doar un <classname>MongoDB\Driver\WriteError</classname> în tablou și
-    <methodname>MongoDB\Driver\WriteError::getIndex</methodname> va fi întotdeauna
-    0 (indicele acestei operațiuni din serie).
-   </para>
-  </note>
-'>
-
-<!ENTITY mongodb.note.getupsertedids '
-  <note xmlns="http://docbook.org/ns/docbook">
-   <para>
-    <methodname>MongoDB\Driver\WriteResult::getUpsertedIds</methodname> va avea
-    doar un <classname>BSON\ObjectId</classname> în tablou și indicele va fi
-    întotdeauna 0 (indicele acestei operațiuni din serie).
-   </para>
-  </note>
-'>
-
 <!ENTITY mongodb.note.uint32 '
   <note xmlns="http://docbook.org/ns/docbook">
    <simpara>
@@ -3218,6 +3226,30 @@ unui document BSON), sau o eroare neașteptată
     Opțiunea de formatare <literal>"&#37;u"</literal> a funcției <function>sprintf</function>
     poate fi utilizată pentru a obține reprezentarea valorii întregi fără semn
     ca șir de caractere.
+   </simpara>
+  </note>
+'>
+
+<!ENTITY mongodb.note.server.readpreference '
+  <note xmlns="http://docbook.org/ns/docbook">
+   <simpara>
+    Opțiunea <literal>"readPreference"</literal> nu controlează serverul spre
+    care driver-ul transmite operațiunea; ea întotdeauna va fi executată pe
+    acest obiect al serverului. În loc, aceasta poate fi utilizată la transmiterea
+    operațiunii către un secundar (printr-o conexiune către un set de replicare,
+    nu către un secundar de sine stătător) sau către un nod mongo pentru a vă
+    asigura că driver-ul stabilește protocolul de înscriere în mod corespunzător
+    sau adaugă la operațiune preferința de citire corespunzătoare.
+   </simpara>
+  </note>
+'>
+
+<!ENTITY mongodb.note.server.write '
+  <note xmlns="http://docbook.org/ns/docbook">
+   <simpara>
+    Este resposabilitatea apelantului să se asigure că serverul e capabil să
+    efectueze operațiunea de înscriere. Spre exemplu, executarea unei operațiuni
+    de înscriere pe un secundar (în afară de baza sa de date "locală") va eșua.
    </simpara>
   </note>
 '>
