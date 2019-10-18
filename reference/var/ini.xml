@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: f052ac1bd73549125c3fc3dc68a36d4b0608a16d Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 652367cc9d51966f31e0b85874a325ead7087c31 Maintainer: simionea Status: ready -->
 <section xml:id="var.configuration" xmlns="http://docbook.org/ns/docbook">
  &reftitle.runtime;
  &extension.runtime;
@@ -19,10 +19,10 @@
     </thead>
     <tbody>
     <row>
-     <entry>unserialize_callback_func</entry>
-     <entry>NULL</entry>
+     <entry><link linkend="ini.unserialize-callback-func">unserialize_callback_func</link></entry>
+     <entry>&null;</entry>
      <entry>PHP_INI_ALL</entry>
-     <entry>Disponibilă începând cu PHP 4.2.0.</entry>
+     <entry></entry>
     </row>
     </tbody>
    </tgroup>
@@ -34,8 +34,8 @@
 
  <para>
   <variablelist>
-   <varlistentry xml:id="unserialize-callback-func">
-    <term>
+   <varlistentry xml:id="ini.unserialize-callback-func">
+    <term xml:id="unserialize-callback-func"> <!-- Legacy ID, may be used in translations. -->
      <parameter>unserialize_callback_func</parameter>
      <type>string</type>
     </term>
