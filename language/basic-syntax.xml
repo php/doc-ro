@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-<!-- EN-Revision: 2fd5de559f683e55b33367e74c5b7a4d7072ceb7 Maintainer: simionea Status: ready -->
+<!-- $Author$ -->
+<!-- EN-Revision: 298f39a1cf7377bb5c383936d664403212fd9cab Maintainer: simionea Status: ready -->
 
  <chapter xml:id="language.basic-syntax" xmlns="http://docbook.org/ns/docbook">
   <title>Sintaxa de bază</title>
@@ -13,6 +14,10 @@
     Parsarea în această manieră permite PHP să fie încorporat în tot felul de documente,
     pentru că orice este în afara perechii de tag-uri de deschidere și închidere este
     ignorat de către parsatorul PHP.
+   </para>
+   <para>
+    PHP include un tag scurt echo <literal>&lt;?=</literal>, care este o versiune
+    prescurtată pentru <code>&lt;?php echo</code>.
    </para>
    <para>
      De asemenea, PHP permite tag scurt de deschidere <literal>&lt;?</literal>

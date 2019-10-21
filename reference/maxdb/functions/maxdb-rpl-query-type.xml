@@ -2,6 +2,7 @@
 <!-- $Revision$ -->
 <!-- $Author$ -->
 <!-- EN-Revision: 1f9c7cf094c7048933cea5105bcc491f92581e10 Maintainer: simionea Status: ready -->
+
 <refentry xmlns="http://docbook.org/ns/docbook" xml:id="function.maxdb-rpl-query-type">
  <refnamediv>
   <refname>maxdb_rpl_query_type</refname>

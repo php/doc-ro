@@ -2,6 +2,7 @@
 <!-- $Revision$ -->
 <!-- $Author$ -->
 <!-- EN-Revision: 9cc4767b2ddf65c4ed592c9deb818cbb2c9def7b Maintainer: simionea Status: ready -->
+
  <sect1 xml:id="install.macosx.compile" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Compilarea PHP pe macOS</title>
   <simpara>

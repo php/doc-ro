@@ -2,6 +2,7 @@
 <!-- $Revision$ -->
 <!-- $Author$ -->
 <!-- EN-Revision: c13a9a675e62f31f1bd85d9f16958c1764f86d38 Maintainer: radical Status: ready -->
+
 <refentry xml:id="oci-lob.close" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>OCI-Lob::close</refname>

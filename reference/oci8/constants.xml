@@ -2,6 +2,7 @@
 <!-- $Revision$ -->
 <!-- $Author$ -->
 <!-- EN-Revision: 44e38e287d29857e5cd5da1f045695e6838170b3 Maintainer: radical Status: ready -->
+
 <appendix xml:id="oci8.constants" xmlns="http://docbook.org/ns/docbook">
  &reftitle.constants;
  &extension.constants;

@@ -3,6 +3,7 @@
 <!-- $Author$ -->
 <!-- EN-Revision: 2e4914ba37887a1d59f0d66f46ee9231613dd517 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
+
 <refentry xml:id="function.date" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>date</refname>

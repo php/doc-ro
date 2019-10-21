@@ -3,6 +3,7 @@
 <!-- $Author$ -->
 <!-- EN-Revision: 821b199e5c6f7dad1366b811c079df33db863c34 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
+
 <refentry xml:id="function.array-filter" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>array_filter</refname>

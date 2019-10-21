@@ -2,6 +2,7 @@
 <!-- $Revision$ -->
 <!-- $Author$ -->
 <!-- EN-Revision: 8f1674d579f37e3d9ebb287d14b76fbce8c75002 Maintainer: alexxed Status: ready -->
+
 <appendix xml:id="mbstring.constants" xmlns="http://docbook.org/ns/docbook">
  &reftitle.constants;
  &extension.constants;

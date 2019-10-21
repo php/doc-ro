@@ -2,6 +2,7 @@
 <!-- $Revision$ -->
 <!-- $Author$ -->
 <!-- EN-Revision: 84b8fca68fc762fefe85acde180a38b2e77a28b9 Maintainer: simionea Status: ready -->
+
 <refentry xml:id="function.die" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>die</refname>

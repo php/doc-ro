@@ -2,6 +2,7 @@
 <!-- $Revision$ -->
 <!-- $Author$ -->
 <!-- EN-Revision: 14af302c9c0e561fa6f9cdd956268758ba9a89c5 Maintainer: simionea Status: ready -->
+
 <refentry xmlns="http://docbook.org/ns/docbook" xml:id="function.pdf-begin-page-ext">
  <refnamediv>
   <refname>PDF_begin_page_ext</refname>

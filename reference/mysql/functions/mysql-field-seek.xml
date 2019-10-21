@@ -3,6 +3,7 @@
 <!-- $Author$ -->
 <!-- EN-Revision: 3678ad381351e239a28248ac235a41336d970011 Maintainer: zamolxe Status: ready -->
 <!-- CREDITS: simionea -->
+
 <refentry xml:id="function.mysql-field-seek" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>mysql_field_seek</refname>

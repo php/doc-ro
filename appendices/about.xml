@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: e121a3a894a377685208abd6f0fd2731e432dc87 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 904f11cd5ca4d358f5e9bf5985980929fd7caa0f Maintainer: simionea Status: ready -->
 
 <appendix xml:id="about" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Despre manual</title>
@@ -151,7 +151,7 @@ strlen
 strlen -- Obține lungimea șirului de caractere
 
 Descrierea
-int strlen ( string $string )
+strlen ( string $string ) : int
 
 Întoarce lungimea șirului dat de caractere.
 ]]>
@@ -186,22 +186,22 @@ int strlen ( string $string )
         </row>
         <row>
          <entry>
-          int
-         </entry>
-         <entry>
-          Tipul valorii, pe care această funcție o întoarce, care este
-          <type>integer</type> (adică lungimea șirului de caractere măsurată în
-          numere).
-         </entry>
-        </row>
-        <row>
-         <entry>
           ( string $string )
          </entry>
          <entry>
           Primul (și în cazul dat unicul) parametru/argument pentru această
           funcție este numit <parameter>string</parameter>, și este de tipul
           <type>string</type>.
+         </entry>
+        </row>
+        <row>
+         <entry>
+          int
+         </entry>
+         <entry>
+          Tipul valorii, pe care această funcție o întoarce, care este
+          <type>integer</type> (adică lungimea șirului de caractere măsurată în
+          numere).
          </entry>
         </row>
        </tbody>
@@ -214,7 +214,7 @@ int strlen ( string $string )
     <para>
      <screen>
 <![CDATA[
-      tipul întors    numele funcției    ( tipul parametrului   numele parametrului )
+      numele funcției    ( tipul parametrului   numele parametrului ) :   tipul întors
 ]]>
      </screen>
     </para>
@@ -225,7 +225,7 @@ int strlen ( string $string )
     <para>
      <screen>
 <![CDATA[
-      bool in_array ( mixed $needle, array $haystack [, bool $strict = FALSE])
+      in_array ( mixed $needle, array $haystack [, bool $strict = FALSE]) : bool
 ]]>
      </screen>
     </para>
@@ -260,8 +260,8 @@ int strlen ( string $string )
     <para>
      <screen>
 <![CDATA[
-       int preg_match ( string $pattern , string $subject [, array &$matches
-      [, int $flags = 0 [, int $offset = 0 ]]] )
+       preg_match ( string $pattern , string $subject [, array &$matches
+      [, int $flags = 0 [, int $offset = 0 ]]] ) : int
 ]]>
      </screen>
     </para>

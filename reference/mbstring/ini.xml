@@ -3,6 +3,7 @@
 <!-- $Author$ -->
 <!-- EN-Revision: b824e2b1086e94a1077bd071964547283616030a Maintainer: alexxed Status: ready -->
 <!-- CREDITS: simionea -->
+
 <section xml:id="mbstring.configuration" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.runtime;
  &extension.runtime;

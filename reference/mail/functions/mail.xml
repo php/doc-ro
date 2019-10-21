@@ -3,6 +3,7 @@
 <!-- $Author$ -->
 <!-- EN-Revision: ecfc4c394dc12dbf8d09680429f5d89fb62702e3 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
+
 <refentry xml:id="function.mail" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>mail</refname>

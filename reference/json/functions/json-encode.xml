@@ -3,6 +3,7 @@
 <!-- $Author$ -->
 <!-- EN-Revision: f9254e756882a011921138392fa240189dcc3a8c Maintainer: simionea Status: ready -->
 <!-- CREDITS: radical -->
+
 <refentry xml:id="function.json-encode" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>json_encode</refname>

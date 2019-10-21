@@ -2,6 +2,7 @@
 <!-- $Revision$ -->
 <!-- $Author$ -->
 <!-- EN-Revision: 508e255fff6c604c31d5617fe9ddf6d776a3b43d Maintainer: simionea Status: ready -->
+
 <section xml:id="apache.configuration" xmlns="http://docbook.org/ns/docbook">
  &reftitle.runtime;
  <para>

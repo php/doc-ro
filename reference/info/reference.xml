@@ -2,14 +2,14 @@
 <!-- $Revision$ -->
 <!-- $Author$ -->
 <!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
- 
+
 <reference xml:id="ref.info" xmlns="http://docbook.org/ns/docbook">
  <title>&Functions; pentru opțiuni/informații PHP</title>
 
  &reference.info.entities.functions;
 
 </reference>
- 
+
 <!-- Keep this comment at the end of the file
 Local variables:
 mode: sgml

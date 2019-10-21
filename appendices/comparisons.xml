@@ -2,6 +2,7 @@
 <!-- $Revision$ -->
 <!-- $Author$ -->
 <!-- EN-Revision: 0ade9d91c1e45a8afef45c9ee514fccdc1900ca1 Maintainer: simionea Status: ready -->
+
 <appendix xml:id="types.comparisons" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Tabelele de comparații ale tipurilor PHP</title>
  <para>

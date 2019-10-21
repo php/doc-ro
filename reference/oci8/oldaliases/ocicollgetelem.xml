@@ -2,6 +2,7 @@
 <!-- $Revision$ -->
 <!-- $Author$ -->
 <!-- EN-Revision: 50315de7d3fe08fa0dfbee6ec678f63adb36213e Maintainer: simionea Status: ready -->
+
 <refentry xml:id="function.ocicollgetelem" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>ocicollgetelem</refname>

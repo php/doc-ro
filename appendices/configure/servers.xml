@@ -2,6 +2,7 @@
 <!-- $Revision$ -->
 <!-- $Author$ -->
 <!-- EN-Revision: 21e01236e01d2e4fdad5e243e237f47060a3e21e Maintainer: simionea Status: ready -->
+
  <sect3 xml:id="configure.options.servers" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Opțiunile SAPI</title>
   <para>

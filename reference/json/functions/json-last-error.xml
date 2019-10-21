@@ -3,6 +3,7 @@
 <!-- $Author$ -->
 <!-- EN-Revision: b9b36ec7576f4d44640b8c998199690b1650bd50 Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
+
 <refentry xml:id="function.json-last-error" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>json_last_error</refname>

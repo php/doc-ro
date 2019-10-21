@@ -3,6 +3,7 @@
 <!-- $Author$ -->
 <!-- EN-Revision: 13bf1bc8f52ce8b4e26a2887313bcb3f1e00d36d Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
+
 <refentry xml:id="function.restore-error-handler" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>restore_error_handler</refname>

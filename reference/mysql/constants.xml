@@ -3,6 +3,7 @@
 <!-- $Author$ -->
 <!-- EN-Revision: 95bdd6883b5dde9504701777ba81b3c5f15df52b Maintainer: zamolxe Status: ready -->
 <!-- CREDITS: simionea -->
+
 <appendix xml:id="mysql.constants" xmlns="http://docbook.org/ns/docbook">
  &reftitle.constants;
  &extension.constants;

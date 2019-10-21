@@ -2,6 +2,7 @@
 <!-- $Revision$ -->
 <!-- $Author$ -->
 <!-- EN-Revision: 1cd1e390c55c52e29a4203c05ce4c6ba2a7fa7de Maintainer: simionea Status: ready -->
+
 <refentry xml:id="function.fbsql-tablename" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>fbsql_tablename</refname>

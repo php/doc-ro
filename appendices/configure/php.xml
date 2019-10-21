@@ -2,6 +2,7 @@
 <!-- $Revision$ -->
 <!-- $Author$ -->
 <!-- EN-Revision: 1b396e517f5fada0fc4ef02a7b7f66c673623430 Maintainer: simionea Status: ready -->
+
  <sect3 xml:id="configure.options.php" xmlns="http://docbook.org/ns/docbook">
   <title>Opțiunile PHP</title>
   <variablelist>

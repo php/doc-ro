@@ -3,6 +3,7 @@
 <!-- $Author$ -->
 <!-- EN-Revision: 74508ae0d21dc4df1d6529a7f8dbaf51c894eee0 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
+
 <refentry xmlns="http://docbook.org/ns/docbook" xml:id="function.error-reporting">
  <refnamediv>
   <refname>error_reporting</refname>

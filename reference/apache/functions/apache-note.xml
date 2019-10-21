@@ -3,6 +3,7 @@
 <!-- $Author$ -->
 <!-- EN-Revision: 6230e6c0d5984e5f5748612b5be2343797b4fb03 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
+
 <refentry xml:id="function.apache-note" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>apache_note</refname>
