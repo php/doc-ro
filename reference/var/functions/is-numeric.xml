@@ -3,6 +3,7 @@
 <!-- $Author$ -->
 <!-- EN-Revision: 913a662cc354087c3d1795d5758102d0f7e51ce9 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
+
 <refentry xml:id="function.is-numeric" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>is_numeric</refname>

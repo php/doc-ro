@@ -2,6 +2,7 @@
 <!-- $Revision$ -->
 <!-- $Author$ -->
 <!-- EN-Revision: a44a1e0b7918846659a3c91013855d2c3d674fb9 Maintainer: simionea Status: ready -->
+
 <refentry xmlns="http://docbook.org/ns/docbook" xml:id="function.pdf-setfont">
  <refnamediv>
   <refname>PDF_setfont</refname>

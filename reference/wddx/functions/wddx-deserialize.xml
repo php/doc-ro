@@ -3,6 +3,7 @@
 <!-- $Author$ -->
 <!-- EN-Revision: 0e5f3d37b258329172203b06035f74b3cb5aa974 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
+
 <refentry xml:id="function.wddx-deserialize" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>wddx_deserialize</refname>

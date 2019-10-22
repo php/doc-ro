@@ -3,6 +3,7 @@
 <!-- $Author$ -->
 <!-- EN-Revision: 1a28eb6e507b3c9f4277fcc5303819947eb8aacd Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
+
 <refentry xml:id="function.strval" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>strval</refname>

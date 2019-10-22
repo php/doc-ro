@@ -3,6 +3,7 @@
 <!-- $Author$ -->
 <!-- EN-Revision: 504a1e19b435344e2c456bd9e2a1d6aaed570749 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
+
 <refentry xml:id="function.is-float" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>is_float</refname>

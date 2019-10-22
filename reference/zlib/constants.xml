@@ -2,6 +2,7 @@
 <!-- $Revision$ -->
 <!-- $Author$ -->
 <!-- EN-Revision: 5f177879f0e84765c01d2b76e05aa01454a67fa4 Maintainer: simionea Status: ready -->
+
 <appendix xml:id="zlib.constants" xmlns="http://docbook.org/ns/docbook">
  &reftitle.constants;
  &extension.constants;

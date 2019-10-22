@@ -3,6 +3,7 @@
 <!-- $Author$ -->
 <!-- EN-Revision: 1690f24f52c8b814536c9dc8dab1a327c65e1adb Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
+
 <refentry xml:id="function.import-request-variables" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>import_request_variables</refname>
