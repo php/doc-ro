@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 4de5cce5d886bf7ea08db8583141ff9715b47073 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 6ba81c064b64971e0bb5507057ba3fbb860e6572 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="exif.constants" xmlns="http://docbook.org/ns/docbook">
  &reftitle.constants;
@@ -15,15 +15,17 @@
     </term>
     <listitem>
      <simpara>
-
+      Această constantă are valoarea <literal>1</literal> atunci când
+      <link linkend="ref.mbstring">mbstring</link> este activat, în caz contrar
+      are valoarea <literal>0</literal>.
      </simpara>
     </listitem>
    </varlistentry>
   </variablelist>
  </para>
  <para>
-  <function>exif_imagetype</function> oferă lista câtorva constante încorporate
-  asociate.
+  <function>exif_imagetype</function> oferă lista câtorva constante asociate
+  încorporate.
  </para>
 </appendix>
 

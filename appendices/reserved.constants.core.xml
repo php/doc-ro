@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: a24b818c682c4599e811210e4a5a535b604537ca Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 21ac5b813520e6235f3f51324680f81e6f515b30 Maintainer: simionea Status: ready -->
 
  <sect2 xml:id="reserved.constants.core" xmlns="http://docbook.org/ns/docbook">
    <title>Constantele predefinite de bază</title>
@@ -29,7 +29,7 @@
      </term>
      <listitem>
       <simpara>
-       Versiunea "major" curentă a PHP ca număr întreg (de ex. int(5) pentru
+       Versiunea "majoră" curentă a PHP ca număr întreg (de ex. int(5) pentru
        versiunea "5.2.7-extra"). Disponibilă începând cu PHP 5.2.7.
       </simpara>
      </listitem>
@@ -41,7 +41,7 @@
      </term>
      <listitem>
       <simpara>
-       Versiunea "minor" curentă a PHP ca număr întreg (de ex. int(2) pentru
+       Versiunea "minoră" curentă a PHP ca număr întreg (de ex. int(2) pentru
        versiunea "5.2.7-extra"). Disponibilă începând cu PHP 5.2.7.
       </simpara>
      </listitem>
@@ -65,7 +65,7 @@
      </term>
      <listitem>
       <simpara>
-       Versiunea curentă a PHP ca număr întreg, util pentru compararea
+       Versiunea curentă a PHP ca număr întreg, utilă pentru compararea
        versiunilor (de ex. int(50207) pentru versiunea "5.2.7-extra").
        Disponibilă începând cu PHP 5.2.7.
       </simpara>
@@ -140,7 +140,7 @@
        <literal>'Windows'</literal>, <literal>'BSD'</literal>,
        <literal>'Darwin'</literal>, <literal>'Solaris'</literal>,
        <literal>'Linux'</literal> or <literal>'Unknown'</literal>.
-       Disponibil din PHP 7.2.0.
+       Disponibilă începând cu PHP 7.2.0.
       </simpara>
      </listitem>
     </varlistentry>
@@ -164,7 +164,7 @@
      <listitem>
       <simpara>
        Simbolul corect pentru 'End Of Line' (sfârșit de linie) pentru această
-       platformă. Disponibilă începând cu PHP 5.0.2
+       platformă. Disponibilă începând cu PHP 5.0.2.
       </simpara>
      </listitem>
     </varlistentry>
@@ -177,7 +177,7 @@
       <simpara>
        Cea mai mare valoare întreagă susținută în această asamblare a PHP. De
        regulă int(2147483647) pe sisteme de 32 biți și int(9223372036854775807)
-       pe sisteme de 64 biți. Disponibilă începând cu PHP 5.0.5
+       pe sisteme de 64 biți. Disponibilă începând cu PHP 5.0.5.
       </simpara>
      </listitem>
     </varlistentry>
@@ -209,27 +209,27 @@
     </varlistentry>
     <varlistentry xml:id="constant.php-float-dig">
      <term>
-      <constant>PHP_FLOAT_DIG</constant> 
+      <constant>PHP_FLOAT_DIG</constant>
       (<type>integer</type>)
      </term>
      <listitem>
       <simpara>
        Numărul de zecimale care pot fi rotunjite în float și înapoi
        fără a pierde din precizie.
-       Disponibil din PHP 7.2.0.
+       Disponibilă începând cu PHP 7.2.0.
       </simpara>
      </listitem>
     </varlistentry>
     <varlistentry xml:id="constant.php-float-epsilon">
      <term>
-      <constant>PHP_FLOAT_EPSILON</constant> 
+      <constant>PHP_FLOAT_EPSILON</constant>
       (<type>float</type>)
      </term>
      <listitem>
       <simpara>
        Cel mai mic număr real pozitiv reprezentabil x, astfel încât <literal>x + 1.0 !=
        1.0</literal>.
-       Available as of PHP 7.2.0.
+       Disponibilă începând cu PHP 7.2.0.
       </simpara>
      </listitem>
     </varlistentry>
@@ -240,8 +240,9 @@
      </term>
      <listitem>
       <simpara>
-       Cel mai mic număr real reprezentabil.
-       Disponibil din PHP 7.2.0.
+       Cel mai mic număr real <emphasis>pozitiv</emphasis> reprezentabil.
+       Dacă aveți nevoie de de cel mai mic număr real reprezentabil, utilizați <literal>- PHP_FLOAT_MAX</literal>.
+       Disponibilă începând cu PHP 7.2.0.
       </simpara>
      </listitem>
     </varlistentry>
@@ -253,7 +254,7 @@
      <listitem>
       <simpara>
        Cel mai mare număr real reprezentabil.
-       Disponibil din PHP 7.2.0.
+       Disponibilă începând cu PHP 7.2.0.
       </simpara>
      </listitem>
     </varlistentry>
@@ -609,7 +610,7 @@
      </term>
      <listitem>
       <simpara>
-       See <link linkend="language.types.boolean">Booleans</link>.
+       A se vedea <link linkend="language.types.boolean">Booleans</link>.
       </simpara>
      </listitem>
     </varlistentry>
@@ -620,7 +621,7 @@
      </term>
      <listitem>
       <simpara>
-       See <link linkend="language.types.boolean">Booleans</link>.
+       A se vedea <link linkend="language.types.boolean">Booleans</link>.
       </simpara>
      </listitem>
     </varlistentry>
@@ -631,7 +632,7 @@
      </term>
      <listitem>
       <simpara>
-       See <link linkend="language.types.null">Null</link>.
+       A se vedea <link linkend="language.types.null">Null</link>.
       </simpara>
      </listitem>
     </varlistentry>

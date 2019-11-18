@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: e41aab5ecacf449e51179886c17f1d41735b0234 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 028513e94be0922956387803e75b575973539254 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.set-error-handler" xmlns="http://docbook.org/ns/docbook">
@@ -133,6 +133,12 @@
            Funcția de prelucrare a erorii definită de utilizator nu trebuie să
            modifice contextul erorii.
           </simpara>
+          <warning xmlns="http://docbook.org/ns/docbook">
+           <simpara>
+            Acest parametru este <emphasis>ÎNVECHIT</emphasis> începând cu PHP 7.2.0.
+            Utilizarea acestuia este foarte descurajată.
+           </simpara>
+          </warning>
          </listitem>
         </varlistentry>
        </variablelist>
@@ -186,6 +192,13 @@
      </thead>
      <tbody>
       <row>
+       <entry>7.2.0</entry>
+       <entry>
+        Parametrul <parameter>errcontext</parameter> a devenit învechit. Utilizarea
+        acestui parametru acum emite o notificare <constant>E_DEPRECATED</constant>.
+       </entry>
+      </row>
+      <row>
        <entry>5.5.0</entry>
        <entry>
         <parameter>error_handler</parameter> acum acceptă &null;.
@@ -221,8 +234,9 @@
 function myErrorHandler($errno, $errstr, $errfile, $errline)
 {
     if (!(error_reporting() & $errno)) {
-        // Acest cod de eroare nu este inclus în error_reporting
-        return;
+        // Acest cod de eroare nu este inclus în error_reporting,
+        // deci să-l lăsăm să ajungă în handler-ul standard de erori PHP
+        return false;
     }
 
     switch ($errno) {
