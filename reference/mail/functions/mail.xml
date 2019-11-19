@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: ecfc4c394dc12dbf8d09680429f5d89fb62702e3 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: ce9318501243db8c1bdfd2aa64595c772f92427e Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.mail" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -17,7 +17,7 @@
    <methodparam><type>string</type><parameter>to</parameter></methodparam>
    <methodparam><type>string</type><parameter>subject</parameter></methodparam>
    <methodparam><type>string</type><parameter>message</parameter></methodparam>
-   <methodparam choice="opt"><type>string</type><parameter>additional_headers</parameter></methodparam>
+   <methodparam choice="opt"><type>mixed</type><parameter>additional_headers</parameter></methodparam>
    <methodparam choice="opt"><type>string</type><parameter>additional_parameters</parameter></methodparam>
   </methodsynopsis>
   <para>
@@ -92,7 +92,8 @@ $text = str_replace("\n.", "\n..", $text);
      <term><parameter>additional_headers</parameter> (opțional)</term>
      <listitem>
       <para>
-       Un string spre a fi inserat la sfârșitul antetelor mesajului.
+       Un <type>string</type> sau <type>array</type> spre a fi inserat la
+       sfârșitul antetelor mesajului.
       </para>
       <para>
        Acesta este utilizat de obicei pentru a adăuga antete suplimentare
@@ -101,13 +102,17 @@ $text = str_replace("\n.", "\n..", $text);
        ele trebuie filtrate, astfel încât să nu fie posibilă inserarea antetelor
        nedorite.
       </para>
+      <para>
+       Dacă este transmis un <type>array</type>, atunci cheile sale sunt denumirile
+       antetelor, iar valorile sale sunt valorile antetelor respective.
+      </para>
       <note>
        <para>
-        <parameter>additional_headers</parameter> nu are o protecție împotriva
-        injectării antetelor de email. De aceea utilizatorii trebuie să se
-        asigure că antetele specificate sunt în siguranță și că conțin doar
-        antete. De ex. niciodată nu începeți corpul mesajului inserând mai multe
-        linii noi.
+        Înainte de PHP 5.4.42 și 5.5.27, respectiv, <parameter>additional_headers</parameter>
+        nu avea o protecție împotriva injectării antetelor de email. De aceea
+        utilizatorii trebuie să se asigure că antetele specificate sunt în
+        siguranță și că conțin doar antete. De ex. niciodată nu începeți corpul
+        mesajului inserând mai multe linii noi.
        </para>
       </note>
       <note>
@@ -207,12 +212,18 @@ $text = str_replace("\n.", "\n..", $text);
      </thead>
      <tbody>
       <row>
-       <entry>4.2.3</entry>
+       <entry>7.2.0</entry>
        <entry>
-        Parametrul <parameter>additional_parameters</parameter> este dezactivat
-        în <link linkend="ini.safe-mode">safe_mode</link> și funcția
-        <function>mail</function> va emite un mesaj de avertizare și va
-        întoarce &false; atunci când este utilizat.
+        Parametrul <parameter>additional_headers</parameter> acum acceptă și un
+        <type>array</type>.
+       </entry>
+      </row>
+      <row>
+       <entry>5.4.42, 5.5.27</entry>
+       <entry>
+        A fost adăugată protecția contra injectării antetelor pentru parametrul
+        <parameter>additional_headers</parameter>. Aceasta înseamnă că mai multe
+        linii vide consecutive nu mai sunt permise.
        </entry>
       </row>
      </tbody>
@@ -266,6 +277,29 @@ mail($to, $subject, $message, $headers);
     </programlisting>
    </example>
    <example>
+    <title>Transmiterea unui mesaj cu antete suplimentare în <type>array</type></title>
+    <para>
+     Acest exemplu transmite același mesaj ca și exemplul anterior, dar transmite
+     antetele adiționale într-un tablou (disponibil începând cu PHP 7.2.0).
+    </para>
+    <programlisting role="php">
+<![CDATA[
+<?php
+$to      = 'nobody@example.com';
+$subject = 'the subject';
+$message = 'hello';
+$headers = array(
+    'From' => 'webmaster@example.com',
+    'Reply-To' => 'webmaster@example.com',
+    'X-Mailer' => 'PHP/' . phpversion()
+);
+
+mail($to, $subject, $message, $headers);
+?>
+]]>
+    </programlisting>
+   </example>
+   <example>
     <title>Trimiterea unui mesaj cu un parametru suplimentar în linia de
     comandă.</title>
     <para>
@@ -292,8 +326,7 @@ mail('nobody@example.com', 'the subject', 'the message', null,
 <![CDATA[
 <?php
 // Destinatari multipli
-$to  = 'aidan@example.com' . ', '; // observați virgula
-$to .= 'wez@example.com';
+$to = 'johny@example.com, sally@example.com'; // observați virgula
 
 // Subiectul
 $subject = 'Birthday Reminders for August';
@@ -311,7 +344,7 @@ $message = '
       <th>Person</th><th>Day</th><th>Month</th><th>Year</th>
     </tr>
     <tr>
-      <td>Joe</td><td>3rd</td><td>August</td><td>1970</td>
+      <td>Johny</td><td>10th</td><td>August</td><td>1970</td>
     </tr>
     <tr>
       <td>Sally</td><td>17th</td><td>August</td><td>1973</td>
@@ -322,17 +355,17 @@ $message = '
 ';
 
 // Pentru a trimite mesaje HTML, trebuie stabilit antetul Content-type
-$headers  = 'MIME-Version: 1.0' . "\r\n";
-$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+$headers[] = 'MIME-Version: 1.0';
+$headers[] = 'Content-type: text/html; charset=iso-8859-1';
 
 // Antete suplimentare
-$headers .= 'To: Mary <mary@example.com>, Kelly <kelly@example.com>' . "\r\n";
-$headers .= 'From: Birthday Reminder <birthday@example.com>' . "\r\n";
-$headers .= 'Cc: birthdayarchive@example.com' . "\r\n";
-$headers .= 'Bcc: birthdaycheck@example.com' . "\r\n";
+$headers[] = 'To: Mary <mary@example.com>, Kelly <kelly@example.com>';
+$headers[] = 'From: Birthday Reminder <birthday@example.com>';
+$headers[] = 'Cc: birthdayarchive@example.com';
+$headers[] = 'Bcc: birthdaycheck@example.com';
 
 // Trimiterea mesajului
-mail($to, $subject, $message, $headers);
+mail($to, $subject, $message, implode("\r\n", $headers));
 ?>
 ]]>
     </programlisting>
@@ -407,6 +440,7 @@ mail($to, $subject, $message, $headers);
   &reftitle.seealso;
   <para>
    <simplelist>
+    <member><function>mb_send_mail</function></member>
     <member><function>imap_mail</function></member>
     <member><link xlink:href="&url.pear.package;Mail">PEAR::Mail</link></member>
     <member><link xlink:href="&url.pear.package;Mail_Mime">PEAR::Mail_Mime</link></member>

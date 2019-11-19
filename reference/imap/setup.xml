@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: af4410a7e15898c3dbe83d6ea38246745ed9c6fb Maintainer: simionea Status: ready -->
+<!-- EN-Revision: f8ad6e41a1cbe692a2a8793b4c67d3ca86d5358c Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <chapter xml:id="imap.setup" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -60,7 +60,10 @@
  <!-- {{{ Resources -->
  <section xml:id="imap.resources">
   &reftitle.resources;
-  &no.resource;
+  <para>
+   Resursa <literal>imap</literal>, întoarsă de
+   <function>imap_open</function>, reprezintă un flux IMAP deschis.
+  </para>
  </section>
  <!-- }}} -->
 

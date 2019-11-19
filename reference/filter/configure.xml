@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: dff279a1fb1cefe17b594d2058741b308e420a36 Maintainer: simionea Status: ready -->
 
 <section xml:id="filter.installation" xmlns="http://docbook.org/ns/docbook">
  &reftitle.install;
  <para>
-  Extensia filter este activată implicit începând cu PHP 5.2.0. Anterior era
-  utilizată o extensie PECL experimentală. Acum însă versiunea PECL nu mai este
-  recomandată sau reînnoită.
+  Extensia filter este activată implicit începând cu PHP 5.2.0.
+  Pentru a dezactiva extensia filter utilizați <option role="configure">--disable-filter</option>.
+ </para>
+ <para>
+  Înainte de PHP 5.2.0 era utilizată o extensie PECL experimentală. Acum însă
+  versiunea PECL nu mai este recomandată și nici reînnoită.
  </para>
 </section>
 

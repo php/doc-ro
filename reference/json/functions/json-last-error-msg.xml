@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 7e88ca5ef326ce30c49bfdd27e4def109a4921ab Maintainer: simionea Status: ready -->
+<!-- EN-Revision: b9b36ec7576f4d44640b8c998199690b1650bd50 Maintainer: simionea Status: ready -->
 
 <refentry xml:id="function.json-last-error-msg" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
@@ -16,7 +16,9 @@
    <void />
   </methodsynopsis>
   <para>
-
+   Întoarce mesajul de eroare a ultimului apel <function>json_encode</function>
+   sau <function>json_decode</function> care nu a specificat
+   <constant>JSON_THROW_ON_ERROR</constant>.
   </para>
 
  </refsect1>
@@ -29,7 +31,7 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Întoarce mesajul de eroare în caz de succes, <literal>"No Error"</literal>
+   Întoarce mesajul de eroare în caz de succes sau <literal>"No Error"</literal>
    dacă nu s-a produs vre-o eroare, &return.falseforfailure;.
   </para>
  </refsect1>

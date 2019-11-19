@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 8bc08ef8418d334ec29738409c546282149fa2c9 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 3fe818fe95c23bc705b902363a62ac3763a7cc7c Maintainer: simionea Status: ready -->
 
 <book xml:id="book.json" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <?phpdoc extension-membership="bundled" ?>
@@ -11,16 +11,18 @@
  <preface xml:id="intro.json">
   &reftitle.intro;
   <para>
-   Această extensie implementează formatul de inter-schimbare a datlor
+   Această extensie implementează formatul de inter-schimb al datelor
    <link xlink:href="&url.json;">JavaScript Object Notation (JSON)</link>.
-   Decodificarea este efectuată de un interpretor bazat pe JSON_checker
-   de Douglas Crockford.
+   Decodificarea în PHP 5 este efectuată de un interpretor bazat pe JSON_checker
+   de Douglas Crockford. PHP 7 vine cu un interpretor complet nou și îmbunătățit,
+   scris special pentru PHP și licențiat cu licența PHP.
   </para>
   &json.implementation.superset;
  </preface>
 
  &reference.json.setup;
  &reference.json.constants;
+ &reference.json.jsonexception;
  &reference.json.jsonserializable;
  &reference.json.reference;
 
