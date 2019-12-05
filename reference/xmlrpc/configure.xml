@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: f53aa561ae0ad4dc1fdcba103f513df5c78e345c Maintainer: simionea Status: ready -->
 
 <section xml:id="xmlrpc.installation" xmlns="http://docbook.org/ns/docbook">
  &reftitle.install;
@@ -9,8 +9,7 @@
   Susținerea XML-RPC în PHP nu este activată implicit. Va trebui să
   utilizați opțiunea de configurare
   <option role="configure">--with-xmlrpc[=DIR]</option> la compilarea
-  PHP pentru a activa susținerea XML-RPC. Această extensie este
-  încorporată în PHP începând cu versiunea 4.1.0.
+  PHP pentru a activa susținerea XML-RPC.
  </para>
 </section>
 

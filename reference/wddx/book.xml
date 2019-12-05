@@ -1,19 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 1634a886415d0ab4df195fe49d18a1c150b70758 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 7be628baf8714bb4a735de1d4a08e7c701a9d3e3 Maintainer: simionea Status: ready -->
 
 <book xml:id="book.wddx" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
- <?phpdoc extension-membership="bundledexternal" ?>
+ <?phpdoc extension-membership="pecl" ?>
  <title>WDDX</title>
 
  <!-- {{{ preface -->
  <preface xml:id="intro.wddx">
   &reftitle.intro;
+  <warning>
+   <simpara>
+    Această extensie este <emphasis>ÎNVECHITĂ</emphasis> și
+    <emphasis>NU ESTE ÎNCORPORATĂ</emphasis> începând cu PHP 7.4.0.
+   </simpara>
+  </warning>
   <para>
    Aceste funcții sunt destinate pentru lucrul cu
    <link xlink:href="&url.wddx;">WDDX</link>.
   </para>
+  <warning>
+   <para>
+    Nu transmiteți date introduse de utilizator, în care nu aveți încredere, spre
+    <function>wddx_deserialize</function>. Deserializarea poate rezulta în cod ce
+    va fi încărcat și executat datorită instanțierii și autoîncărcării obiectelor,
+    și un utilizator malign s-ar putea folosi de aceasta.
+    Utilizați un format de schimb de date sigur, standardizat, cum ar fi JSON
+    (prin <function>json_decode</function> și <function>json_encode</function>)
+    dacă aveți nevoie să transmiteți date serializate utilizatorului.
+   </para>
+  </warning>
  </preface>
  <!-- }}} -->
 
