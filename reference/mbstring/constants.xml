@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 643de693035af09236b322a6895514a56ea78829 Maintainer: alexxed Status: ready -->
+<!-- EN-Revision: 983d613db33e11d2256f914ad1bacb0678ba0592 Maintainer: alexxed Status: ready -->
 
 <appendix xml:id="mbstring.constants" xmlns="http://docbook.org/ns/docbook">
  &reftitle.constants;
@@ -119,6 +119,18 @@
    <listitem>
     <simpara>
      Utilizată la operațiuni insensibile la litere minuscule sau majuscule. Disponibilă începând cu PHP 7.3.
+    </simpara>
+   </listitem>
+  </varlistentry>
+  <varlistentry xml:id="constant.mb-oniguruma-version">
+   <term>
+    <constant>MB_ONIGURUMA_VERSION</constant>
+    (<type>string</type>)
+   </term>
+   <listitem>
+    <simpara>
+     Versiunea Oniguruma, de ex. <literal>6.9.4</literal>.
+     Disponibilă începând cu PHP 7.4.
     </simpara>
    </listitem>
   </varlistentry>
