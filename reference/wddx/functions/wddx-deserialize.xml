@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 0e5f3d37b258329172203b06035f74b3cb5aa974 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: fc74d0ee2da2cc1f5666fc58ccb0437a75b6ce2e Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.wddx-deserialize" xmlns="http://docbook.org/ns/docbook">
@@ -9,6 +9,10 @@
   <refname>wddx_deserialize</refname>
   <refpurpose>Deserializează un pachet WDDX</refpurpose>
  </refnamediv>
+
+ <refsynopsisdiv>
+  &warn.removed.function-7-4-0;
+ </refsynopsisdiv>
 
  <refsect1 role="description">
   &reftitle.description;
@@ -19,6 +23,17 @@
   <para>
    Deserializează un <parameter>packet</parameter> WDDX.
   </para>
+   <warning>
+    <para>
+     Nu transmiteți date introduse de utilizator, în care nu aveți încredere, spre
+     <function>wddx_deserialize</function>. Deserializarea poate rezulta în cod ce
+     va fi încărcat și executat datorită instanțierii și autoîncărcării obiectelor,
+     și un utilizator malign s-ar putea folosi de aceasta.
+     Utilizați un format de schimb de date sigur, standardizat, cum ar fi JSON
+     (prin <function>json_decode</function> și <function>json_encode</function>)
+     dacă aveți nevoie să transmiteți date serializate utilizatorului.
+    </para>
+   </warning>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -43,18 +58,6 @@
    Întoarce valoarea deserializată, care poate fi un string, un număr sau un
    tablou. Observați că structurile sunt deserializate în tablouri asociative.
   </para>
- </refsect1>
-
- <refsect1 role="notes">
-  &reftitle.notes;
-  <warning>
-   <para>
-    Nu transmiteți date introduse de utilizator, în care nu aveți încredere, spre
-    <function>wddx_deserialize</function>. Deserializarea poate rezulta în cod ce
-    va fi încărcat și executat datorită instanțierii și autoîncărcării obiectelor,
-    și un utilizator malign s-ar putea folosi de aceasta.
-   </para>
-  </warning>
  </refsect1>
 </refentry>
 
