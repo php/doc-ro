@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 12019a89a3502579366c4db7d395e5b0b4dc6b06 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 0b7542c9e336ff5d7731d5f808aed628d5a8b96d Maintainer: simionea Status: ready -->
 
-<chapter xml:id="password.setup">
+<chapter xml:id="password.setup" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.setup;
 
  <section xml:id="password.requirements">
   &reftitle.required;
   &no.requirement;
+  <para>
+   Totuși, pentru algoritmul de hashing al parolelor Argon2 este necesară biblioteca
+   <link xlink:href="&url.libargon2;">libargon2</link>. Începând cu PHP 7.3.0,
+   este necesară libargon2 de versiune 20161029 sau ulterioară.
+  </para>
  </section>
 
  <section xml:id="password.installation">
   &reftitle.install;
   &no.install;
+  <para>
+   Totuși, pentru a activa algoritmul de hashing al paroleleor Argon2, PHP trebuie
+   să fie asamblat cu susținerea libargon2 utilizând opțiunea de configurare
+   <option role="configure">--with-password-argon2[=DIR]</option>.
+  </para>
  </section>
 
  <section xml:id="password.configuration">

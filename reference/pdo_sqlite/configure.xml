@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: c316dd3b8bce869f1c92c760900a29c2ba0a71af Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 144e8ab5f11556f756d5bf64cc67afe1d17661a6 Maintainer: simionea Status: ready -->
 
 <section xml:id="ref.pdo-sqlite.installation" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.install;
@@ -9,7 +9,10 @@
   Driver-ul PDO PDO_SQLITE este activat implicit. Pentru a-l dezactiva, puteți
   folosi opțiunea <option role="configure">--without-pdo-sqlite[=DIR]</option>,
   unde opționalul <literal>[=DIR]</literal> este directorul instalării de bază
-  a sqlite.
+  a sqlite. Începând cu PHP 7.4.0 <link xlink:href="&url.sqlite;">libsqlite</link>
+  ≥ 3.5.0 este necesară. Anterior, în locul acesteia, putea fi utilizată biblioteca
+  libsqlite încorporată, și astfel era implicit dacă <literal>[=DIR]</literal>
+  era omisă.
  </para>
 </section>
 
