@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: e41aab5ecacf449e51179886c17f1d41735b0234 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: f7800a7c1d2940cd986e86b76a46f6718a277853 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.empty" xmlns="http://docbook.org/ns/docbook">
@@ -60,7 +60,7 @@
    neegală cu zero. În caz contrar, întoarce &true;.
   </para>
   <para>
-   Următoarele entități sunt considerate a fi vide:
+   Următoarele valori sunt considerate a fi vide:
    <simplelist>
     <member><literal>""</literal> (un string vid)</member>
     <member><literal>0</literal> (0 în calitate de integer)</member>
@@ -69,7 +69,6 @@
     <member>&null;</member>
     <member>&false;</member>
     <member><literal>array()</literal> (un tablou vid)</member>
-    <member><literal>$var;</literal> (o variabilă declarată, dar fără o valoare)</member>
    </simplelist>
   </para>
  </refsect1>

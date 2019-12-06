@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: afc3f34c682418a582b0f9199db0bac4a087821f Maintainer: simionea Status: ready -->
+<!-- EN-Revision: b8758b0605e80c4e3610137b7502a6abeea5c69b Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.print-r" xmlns="http://docbook.org/ns/docbook">
@@ -17,7 +17,7 @@
   <methodsynopsis>
    <type>mixed</type><methodname>print_r</methodname>
    <methodparam><type>mixed</type><parameter>expression</parameter></methodparam>
-   <methodparam choice="opt"><type>bool</type><parameter>return</parameter><initializer>false</initializer></methodparam>
+   <methodparam choice="opt"><type>bool</type><parameter>return</parameter><initializer>&false;</initializer></methodparam>
   </methodsynopsis>
   <para>
    <function>print_r</function> afișează informația despre o variabilă într-un
@@ -25,9 +25,8 @@
   </para>
   <para>
    <function>print_r</function>, <function>var_dump</function> și
-   <function>var_export</function> de asemenea vor afișa proprietățile
-   protejate și private ale obiectelor în PHP 5. Membrii statici ai
-   claselor nu vor fi afișați.
+   <function>var_export</function> de asemenea vor afișa proprietățile protejate
+   și private ale obiectelor. Membrii statici ai claselor nu vor fi afișați.
   </para>
  </refsect1>
 

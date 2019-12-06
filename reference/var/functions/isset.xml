@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: bc655954b94d30c9ce98ae6a526c5c1df9703cc6 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: cec5c740b5f36a0c970459f6c3ea041116f7111f Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.isset" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
   <refname>isset</refname>
-  <refpurpose>Determină dacă o variablă este stabilită și nu este &null;</refpurpose>
+  <refpurpose>Determină dacă o variablă este declarată și diferă de &null;</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -18,13 +18,17 @@
    <methodparam choice="opt"><type>mixed</type><parameter>...</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Determină dacă o variablă este stabilită și nu este &null;.
+   Determină dacă o variablă este considerată ca fiind stabilită, adică dacă
+   variabila este declarată și diferă de &null;.
   </para>
   <para>
-   Dacă o variabilă a fost eliminată cu <function>unset</function>, ea nu va
-   mai fi stabilită. <function>isset</function> va întoarce &false; la testarea
-   unei variabile care a fost stabilită în &null;. De asemenea observați că
-   caracterul nul (<literal>"\0"</literal>) nu este echivalent cu constanta PHP
+   Dacă o variabilă a fost eliminată cu <function>unset</function>, ea nu mai
+   este considerată ca fiind stabilită.
+  </para>
+  <para>
+   <function>isset</function> va întoarce &false; la testarea unei variabile care
+   a fost stabilită în &null;. De asemenea observați că caracterul nul
+   (<literal>"\0"</literal>) nu este echivalent cu constanta PHP
    &null;.
   </para>
   <para>

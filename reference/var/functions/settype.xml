@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 95bdd6883b5dde9504701777ba81b3c5f15df52b Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.settype" xmlns="http://docbook.org/ns/docbook">
@@ -43,18 +43,17 @@
        <itemizedlist>
         <listitem>
          <simpara>
-          "boolean" (sau, începând cu PHP 4.2.0, "bool")
+          "boolean" sau "bool"
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          "integer" (sau, începând cu PHP 4.2.0, "int")
+          "integer" sau "int"
          </simpara>
         </listitem>
         <listitem>
          <simpara>
-          "float" (posibil numai începând cu PHP 4.2.0, pentru versiunile
-          anterioare utilizați varianta învechită "double")
+          "float" sau "double"
          </simpara>
         </listitem>
         <listitem>
@@ -74,7 +73,7 @@
         </listitem>
         <listitem>
          <simpara>
-          "null" (începând cu PHP 4.2.0)
+          "null"
          </simpara>
         </listitem>
        </itemizedlist>

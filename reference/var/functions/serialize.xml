@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: d1b39ea532d197c48104180f5e54e5d8b8e10505 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 18da52a5352ecfddf316d05a9201e685d9068384 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.serialize" xmlns="http://docbook.org/ns/docbook">
@@ -38,7 +38,8 @@
      <listitem>
       <para>
        Valoarea ce trebuie serializată. <function>serialize</function>
-       prelucrează toate tipurile, cu excepția <type>resource</type>.
+       prelucrează toate tipurile, cu excepția <type>resource</type> și unele
+       <type>object</type> (a se vedea nota de mai jos).
        Puteți chiar aplica <function>serialize</function> asupra tablourilor ce
        conțin referințe la sine însele. Referințele circulare din interiorul
        tabloului/obiectului pe care îl serializați de asemenea vor fi stocate.

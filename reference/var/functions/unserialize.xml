@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 153a97e29dc7a5bba8c394b8b16ea77bc20a7fbf Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 64642ea9c35700b3d3a584b0020d4e15a79a0a89 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.unserialize" xmlns="http://docbook.org/ns/docbook">
@@ -26,9 +26,11 @@
   <warning>
    <para>
     Nu transmiteți date ale utilizatorilor, de care nu sunteți sigur, funcției
-    <function>unserialize</function>. Deserializarea poate rezulta în încărcarea
-    și executarea codului datorită instanțierii și autoîncărcării obiectelor, și
-    un utilizator rău-intenționat poate să exploateze această posibilitate.
+    <function>unserialize</function>, indiferent dacă valoarea parametrului
+    <parameter>options</parameter> este <literal>allowed_classes</literal>.
+    Deserializarea poate rezulta în încărcarea și executarea codului datorită
+    instanțierii și autoîncărcării obiectelor, și un utilizator rău-intenționat
+    poate să exploateze această posibilitate.
     Utilizați un format securizat, standard de schimb de date, cum ar fi JSON
     (cu ajutorul <function>json_decode</function> și <function>json_encode</function>)
     dacă aveți nevoie să transmiteți date serializate utilizatorului.
@@ -65,9 +67,10 @@
          (pentru a preveni obținerea unui <type>object</type> incomplet
          "__PHP_Incomplete_Class".) Utilizați &php.ini;,
          <function>ini_set</function> sau &htaccess; pentru a defini
-         '<literal>unserialize_callback_func</literal>'. De fiecare dată când o clasă nedefinită
-         va trebui instanțiată, această funcție va fi apelată. Pentru a
-         dezactiva această facilitate lăsați această opțiune vidă.
+         <link linkend="ini.unserialize-callback-func">unserialize_callback_func</link>.
+         De fiecare dată când o clasă nedefinită va trebui instanțiată, această
+         funcție va fi apelată. Pentru a dezactiva această facilitate lăsați
+         această opțiune vidă.
         </para>
        </note>
       </para>
@@ -144,6 +147,16 @@
      </thead>
      <tbody>
       <row>
+       <entry>7.1.0</entry>
+       <entry>
+        Elementul <literal>allowed_classes</literal> al parametrului
+        <parameter>options</parameter>) este acum strict tipizat, adică dacă e
+        transmis orice în afară de <type>array</type> sau <type>boolean</type>,
+        <function>unserialize</function> va întoarce &false; și va emite un
+        <constant>E_WARNING</constant>.
+       </entry>
+      </row>
+      <row>
        <entry>7.0.0</entry>
        <entry>
         Parametrul <parameter>options</parameter> a fost adăugat.
@@ -202,7 +215,6 @@ if (!odbc_execute($stmt, $sqldata) || !odbc_fetch_into($stmt, $tmp)) {
 <?php
 $serialized_object='O:1:"a":1:{s:5:"value";s:3:"100";}';
 
-// directiva unserialize_callback_func este disponibilă începând cu PHP 4.2.0
 ini_set('unserialize_callback_func', 'mycallback'); // stabilește funcția de apel invers
 
 function mycallback($classname)
@@ -239,7 +251,7 @@ function mycallback($classname)
     <member><function>hash_hmac</function></member>
     <member><function>serialize</function></member>
     <member><link linkend="language.oop5.autoload">Autoîncărcarea claselor</link></member>
-    <member><link linkend="unserialize-callback-func">unserialize_callback_func</link></member>
+    <member><link linkend="ini.unserialize-callback-func">unserialize_callback_func</link></member>
     <member><link linkend="object.wakeup">__wakeup()</link></member>
    </simplelist>
   </para>

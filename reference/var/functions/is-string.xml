@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: d701c908c95364696e371e9cb608cce2642f4c38 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: b6d3b6bc18830fd7d278512578676262df6efa69 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.is-string" xmlns="http://docbook.org/ns/docbook">

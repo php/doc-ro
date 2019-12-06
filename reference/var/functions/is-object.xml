@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 504a1e19b435344e2c456bd9e2a1d6aaed570749 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 1e0e81afe21e78e0b556e1a953c29bb72f6302f1 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.is-object" xmlns="http://docbook.org/ns/docbook">
@@ -78,15 +78,30 @@ var_dump(get_students($obj));
   </para>
  </refsect1>
 
- <refsect1 role="notes">
-  &reftitle.notes;
-  <note>
-   <para>
-    Această funcție va întoarce &false; dacă este utilizată cu un obiect
-    neserializat, unde definiția clasei nu este prezentă (cu toate că
-    <function>gettype</function> întoarce <type>object</type>).
-   </para>
-  </note>
+ <refsect1 role="changelog">
+  &reftitle.changelog;
+  <para>
+   <informaltable>
+    <tgroup cols="2">
+     <thead>
+      <row>
+       <entry>&Version;</entry>
+       <entry>&Description;</entry>
+      </row>
+     </thead>
+     <tbody>
+      <row>
+       <entry>7.2.0</entry>
+       <entry>
+        <function>is_object</function> acum întoarce &true; pentru obiecte
+        deserializate, fără o definiție a clasei (clasă a
+        <classname>__PHP_Incomplete_Class</classname>). Anterior era întors &false;.
+       </entry>
+      </row>
+     </tbody>
+    </tgroup>
+   </informaltable>
+  </para>
  </refsect1>
 
  <refsect1 role="seealso">

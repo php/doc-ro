@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 7c20e7b4b6164cb7b98430466270dcce34e8640c Maintainer: simionea Status: ready -->
+<!-- EN-Revision: ac51aaac3b45c1214b480ab209c7cf05a5be9d07 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/var.xml, last change in rev 1.75 -->
 
@@ -49,9 +49,32 @@
    <literal>Unknown</literal>.
   </para>
   <para>
-   Această funcție va întoarce &false; și va genera o eroare dacă
+   Această funcție va întoarce &null; și va genera o eroare dacă
    <parameter>handle</parameter> nu este o <type>resource</type>.
   </para>
+ </refsect1>
+
+ <refsect1 role="changelog">
+  &reftitle.changelog;
+  <informaltable>
+   <tgroup cols="2">
+    <thead>
+     <row>
+      <entry>&Version;</entry>
+      <entry>&Description;</entry>
+     </row>
+    </thead>
+    <tbody>
+     <row>
+      <entry>5.3.0</entry>
+      <entry>
+       Dacă <parameter>handle</parameter> nu este de tip <type>resource</type>
+       această funcție întoarce &null;. Anterior ea întorcea &false;.
+      </entry>
+     </row>
+    </tbody>
+   </tgroup>
+  </informaltable>
  </refsect1>
 
  <refsect1 role="examples">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: afc3f34c682418a582b0f9199db0bac4a087821f Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 652367cc9d51966f31e0b85874a325ead7087c31 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.unset" xmlns="http://docbook.org/ns/docbook">
@@ -208,11 +208,13 @@ unset($foo1, $foo2, $foo3);
    <example>
     <title>Utilizarea modificatorului <literal>(unset)</literal></title>
     <para>
-     Utilizarea modificatorului <literal>(unset)</literal> este deseori
-     confundată cu funcția <function>unset</function>. Modificarea cu
+     Utilizarea modificatorului
+     <link linkend="language.types.null.casting"><literal>(unset)</literal></link>
+     este deseori confundată cu funcția <function>unset</function>. Modificarea cu
      ajutorul <literal>(unset)</literal> servește doar pentru transformarea
      într-un tip <literal>NULL</literal>, pentru a asigura completitudinea.
      El nu modifică variabla căreia îi modifică tipul.
+     Modificarea tipului cu (unset) este învechită începând cu PHP 7.2.0.
     </para>
     <programlisting role="php">
 <![CDATA[
@@ -247,7 +249,7 @@ string(6) "Felipe"
   <note>
    <para>
     Nu este posibil de a elimina <literal>$this</literal> în interiorul unei
-    metode a unui obiect începând cu PHP 5.
+    metode a unui obiect.
    </para>
   </note>
   <note>
@@ -268,6 +270,7 @@ string(6) "Felipe"
     <member><function>empty</function></member>
     <member><link linkend="object.unset">__unset()</link></member>
     <member><function>array_splice</function></member>
+    <member><link linkend="language.types.null.casting">(unset) casting</link></member>
    </simplelist>
   </para>
  </refsect1>

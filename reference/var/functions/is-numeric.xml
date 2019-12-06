@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 913a662cc354087c3d1795d5758102d0f7e51ce9 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: d693ad157f3c5241fb7e7dc2c61b1c27864a030d Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.is-numeric" xmlns="http://docbook.org/ns/docbook">
@@ -67,16 +67,21 @@ $tests = array(
     02471,
     0b10100111001,
     1337e0,
+    "0x539",
+    "02471",
+    "0b10100111001",
+    "1337e0",
     "not numeric",
     array(),
-    9.1
+    9.1,
+    null
 );
 
 foreach ($tests as $element) {
     if (is_numeric($element)) {
-        echo "'{$element}' is numeric", PHP_EOL;
+        echo var_export($element, true) . " is numeric", PHP_EOL;
     } else {
-        echo "'{$element}' is NOT numeric", PHP_EOL;
+        echo var_export($element, true) . " is NOT numeric", PHP_EOL;
     }
 }
 ?>
@@ -86,14 +91,20 @@ foreach ($tests as $element) {
     <screen>
 <![CDATA[
 '42' is numeric
-'1337' is numeric
-'1337' is numeric
-'1337' is numeric
-'1337' is numeric
-'1337' is numeric
+1337 is numeric
+1337 is numeric
+1337 is numeric
+1337 is numeric
+1337.0 is numeric
+'0x539' is NOT numeric
+'02471' is numeric
+'0b10100111001' is NOT numeric
+'1337e0' is numeric
 'not numeric' is NOT numeric
-'Array' is NOT numeric
-'9.1' is numeric
+array (
+) is NOT numeric
+9.1 is numeric
+NULL is NOT numeric
 ]]>
     </screen>
    </example>

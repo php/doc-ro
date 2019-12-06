@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: e5f41806a6474a2c181862849f05cff6924dfa2b Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 96510018028eb0564b76a9cca5cf7e367cff3369 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/var.xml, last change in rev 1.19 -->
 
@@ -20,7 +20,7 @@
    <methodparam><type>mixed</type><parameter>var</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Determină dacă variabila dată este o resursă.
+   Determină dacă variabila dată este de tip <type>resource</type>.
   </para>
  </refsect1>
 
