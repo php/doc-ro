@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 33cf7ce6cb52f840e3be493437ea08eb03110bc3 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 0a8aa545a4b83c6a767590e1b3726da7812ae8e3 Maintainer: simionea Status: ready -->
 
 <!ENTITY installation.enabled.disable 'Această extensie este activată în mod
 implicit. Ea poate fi dezactivată utilizând următoarea opțiune la compilare: '>
@@ -3409,8 +3409,16 @@ Acest parametru e ignorat dacă nu a fost stabilită opțiunea
 
   <para>
    Un specificator de conversie e compus după următorul prototip:
-   <literal>&#37;[flags][width][.precision]specifier</literal>.
+   <literal>&#37;[argnum$][flags][width][.precision]specifier</literal>.
   </para>
+
+  <formalpara>
+   <title>Argnum</title>
+   <para>
+    Un întreg urmat de senmul dolar <literal>$</literal>,
+    pentru a specifica ce argument de număr trebuie tratat în conversie.
+   </para>
+  </formalpara>
 
   <para>
    <table>
