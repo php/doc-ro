@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 1634a886415d0ab4df195fe49d18a1c150b70758 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 462ad78d00fa08794ac8aeed9e79f8ab3d4ca371 Maintainer: simionea Status: ready -->
 
 <book xml:id="book.readline" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <?phpdoc extension-membership="bundledexternal" ?>
@@ -20,7 +20,16 @@
    aplicațiilor Web, însă poate fi utilă la scrierea script-urilor utilizate în
    <link linkend="features.commandline">linia de comandă</link>.
   </para>
-  &note.no-windows.extension;
+  <para>
+   Începând cu PHP 7.1.0 această extensie e susținută pe Windows.
+  </para>
+  <caution>
+   <para>
+    Extensia readline nu este sigură la utilizarea cu fire de execuție multiple!
+    De aceea utilizarea sa cu orice SAPI care este sigur la utilizarea cu fire de
+    execuție multiple (cum ar fi Apache mod_winnt) este foarte nerecomandată.
+   </para>
+  </caution>
  </preface>
  <!-- }}} -->
 

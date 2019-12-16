@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 8ccc9da8beb94597dbaab64da8c4753fd9dad11d Maintainer: simionea Status: ready -->
 
 <reference xml:id="ref.strings" xmlns="http://docbook.org/ns/docbook">
  <title>&Functions; cu șiruri de caractere</title>
@@ -10,9 +10,10 @@
   &reftitle.seealso;
   <para>
    Pentru manipulări încă mai avansate cu șiruri de caractere, accesați
-   <link linkend="ref.regex">Funcțiile POSIX de lucru cu expresiile regulare</link>
-   și <link linkend="ref.pcre">Funcțiile compatibile Perl de lucru cu expresiile
-   regulare</link>.
+   <link linkend="ref.pcre">Funcțiile compatibile Perl de lucru cu expresiile
+   regulare</link>. Pentru a lucra cu codificări de caractere pe mai mulți octeți
+   considerați <link linkend="ref.mbstring">Funcțiile pentru șiruri de caractere
+   Multibyte</link>.
   </para>
  </partintro>
 

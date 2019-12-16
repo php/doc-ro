@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 16eaf79304f18e2cbd5588c00264c6074a613e42 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: d92890ef469c2527326bcb4a6730892eee3c96cb Maintainer: simionea Status: ready -->
 
 <section xml:id="readline.installation" xmlns="http://docbook.org/ns/docbook">
  &reftitle.install;
@@ -11,6 +11,9 @@
   <option role="configure">--with-readline[=DIR]</option>.
   Dacă doriți să utilizați înlocuitorul readline -- libedit -- configurați PHP
   cu opțiunea <option role="configure">--with-libedit[=DIR]</option>.
+ </para>
+ <para>
+  Această extensie este disponibilă implicit pe Windows începând cu PHP 7.1.0.
  </para>
 </section>
 
