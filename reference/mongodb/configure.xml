@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: c718200b2753a2182682aa7fd00e093cd33e3d74 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 4bab668b1e37fa990d337ffc734773598920c529 Maintainer: simionea Status: ready -->
 
 <article xml:id="mongodb.installation" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.install;
@@ -15,8 +15,8 @@
   </para>
 
   <para>
-   Utilizatorii Linux, Unix și Mac OS X pot să execute următoarea comandă pentru
-   a instala driver-ul:
+   Utilizatorii Linux, Unix și macOS pot rula următoarea comandă pentru a instala
+   driver-ul:
    <programlisting role="shell">
 <![CDATA[
 $ sudo pecl install mongodb
@@ -25,7 +25,31 @@ $ sudo pecl install mongodb
   </para>
 
   <para>
-   Este necesar de a adăuga următoarea linie în fișierul de configurare &php.ini;:
+   Dacă sistemul dumneavoastră are instalate multiple versiuni PHP (de ex. macOS
+   implicit, Homebrew, <link xlink:href="&url.xampp;">XAMPP</link>), atrageți
+   atenția că fiecare versiune PHP își are propria comandă
+   <link linkend="install.pecl">pecl</link> și fișier &php.ini;.
+  </para>
+
+  <para>
+   Instalarea driver-ului cu ajutorul PECL va utiliza versiunile încorporate ale
+   bibliotecilor <link xlink:href="&url.mongodb.libbson;">libbson</link> și
+   <link xlink:href="&url.mongodb.libmongoc;">libmongoc</link> și va încerca
+   configurarea lor automată.
+  </para>
+
+  <note>
+   <simpara>
+    Dacă procesul de asamblare nu găsește o bibliotecă SSL, verificați dacă
+    pachetele de dezvoltare (de ex. <literal>libssl-dev</literal>) și
+    <link xlink:href="&url.mongodb.wiki.pkg-config;">pkg-config</link> sunt
+    instalate. Dacă aceasta nu soluționează problema, considerați procesul de
+    <link linkend="mongodb.installation.manual">instalare manuală</link>.
+   </simpara>
+  </note>
+
+  <para>
+   În final, adăugați următoarea linie în fișierul &php.ini;:
    <programlisting role="ini">
 <![CDATA[
 extension=mongodb.so
@@ -35,27 +59,17 @@ extension=mongodb.so
  </section>
 
  <section xml:id="mongodb.installation.homebrew">
-  <title>Instalarea driver-ului PHP MongoDB pe Mac OS X cu Homebrew</title>
+  <title>Instalarea driver-ului PHP MongoDB pe macOS cu Homebrew</title>
 
   <para>
-   Dacă utilizați <link xlink:href="&url.mac.homebrew;">Homebrew</link>, tap-ul
-   PHP include formulele pentru instalarea driver-ului pe diferite versiuni PHP.
-  </para>
-
-  <simplelist>
-   <member>php54-mongodb</member>
-   <member>php55-mongodb</member>
-   <member>php56-mongodb</member>
-   <member>php70-mongodb</member>
-  </simplelist>
-
-  <para>
-   De exemplu, puteți instala driver-ul pentru PHP 7.0 cu următoarea comandă:
-   <programlisting role="shell">
-<![CDATA[
-$ brew install php70-mongodb
-]]>
-   </programlisting>
+   <link xlink:href="https://brew.sh/2018/01/19/homebrew-1.5.0/">Homebrew 1.5.0</link>
+   a învechit <link xlink:href="&url.mac.homebrew;">Homebrew/php tap</link>
+   și a eliminat formulele pentru extensiile individuale PHP. De aici încolo,
+   utilizatorii macOS sunt sfătuiți să instaleze formula
+   <link xlink:href="https://formulae.brew.sh/formula/php">php</link> și să urmeze
+   <link linkend="mongodb.installation.pecl">Instrucțiunile de instalare PECL</link>
+   standarde utilizând comanda <link linkend="install.pecl">pecl</link> oferită
+   de instalarea PHP Homebrew.
   </para>
  </section>
 
@@ -63,47 +77,109 @@ $ brew install php70-mongodb
   <title>Instalarea driver-ului PHP MongoDB pe Windows</title>
 
   <para>
-   Binare precompilate pentru fiecare versiune sunt disponibile în
-   <link xlink:href="&url.pecl.package;mongodb">PECL</link> pentru o varietate de
-   combinații ale versiunilor, siguranței în cazul firelor de execuție,
-   bibliotecilor VC. Extrageți arhiva și plasați <filename>php_mongo.dll</filename>
-   în mapa cu extensiile PHP (implicit "ext").
+   În <link xlink:href="&url.pecl.package;mongodb">PECL</link> sunt disponibile
+   binare precompilate pentru o varietate de combinații ale versiunilor,
+   siguranței față de firele de execuție multiple și biblioteci VC. Extrageți
+   arhiva și puneți <filename>php_mongodb.dll</filename> în directorul cu extensii
+   PHP (implicit "ext").
   </para>
 
   <para>
-   Adăugați următoarea linie în fișierul de configurare &php.ini;:
+   Adăugați următoarea linie în fișierul &php.ini;:
    <programlisting role="ini">
 <![CDATA[
-extension=php_mongo.dll
+extension=php_mongodb.dll
 ]]>
    </programlisting>
   </para>
+
+  <note>
+   <title>Dependențe DLL suplimentare pentru utilizatori Windows</title>
+   <para>
+    &ext.windows.path.dll;
+    <filename>libsasl.dll</filename>
+   </para>
+  </note>
  </section>
 
  <section xml:id="mongodb.installation.manual">
   <title>Instalarea manuală a driver-ului PHP MongoDB</title>
 
   <para>
-   Pentru dezvoltatorii de driver-e și alte persoane interesate de ultimele
-   corectări ale erorilor, este posibilă compilarea driver-ului din ultimul
-   cod-sursă de pe <link xlink:href="&url.mongodb.github;">Github</link>.
-   Executați următoarele comenzi pentru a clona și compila proiectul:
+   Dezvoltatorii de drivere și persoanele interesate de ultimele bugfix-uri pot
+   compila driver-ul din cel mai recent cod-sursă de pe
+   <link xlink:href="&url.mongodb.github;">Github</link>. Rulați următoarele
+   comenzi pentru a clona și a asambla proiectul:
    <programlisting role="shell">
 <![CDATA[
 $ git clone https://github.com/mongodb/mongo-php-driver.git
 $ cd mongo-php-driver
-$ git submodule sync && git submodule update --init
+$ git submodule update --init
 $ phpize
 $ ./configure
-$ make all -j 5
+$ make all
 $ sudo make install
 ]]>
    </programlisting>
   </para>
 
   <para>
-   Ultimul pas va afișa unde a fost instalat <filename>mongodb.so</filename>, ca
-   de exemplu:
+   Dacă sistemul dumneavoastră are instalate versiuni PHP multiple (de ex. macOS
+   implicit <emphasis>și</emphasis> <link xlink:href="&url.xampp;">XAMPP</link>),
+   atrageți atenția că fiecare versiune PHP are propria comandă
+   <link linkend="install.pecl.phpize">phpize</link> și fișierul &php.ini;.
+  </para>
+
+  <para>
+   Implicit driver-ul va folosi versiunile încorporate ale
+   <link xlink:href="&url.mongodb.libbson;">libbson</link> și
+   <link xlink:href="&url.mongodb.libmongoc;">libmongoc</link> și va încerca să
+   le configureze. Dacă libbson și libmongoc sunt deja instalate ca biblioteci
+   de sistem, puteți instrui driver-ul să le utilizeze specificând
+   <literal>--with-libbson=yes --with--libmongoc=yes</literal> ca argumente pentru
+   <literal>configure</literal>.
+  </para>
+
+  <para>
+   Pentru a obține o listă completă a opțiunilor <literal>configure</literal>,
+   executați <command>configure --help</command>.
+  </para>
+
+  <para>
+   La utilizarea versiunilor încorporate ale biliotecilor libbson și libmongoc,
+   driver-ul de asemenea va încerca să selecteze o bibliotecă SSL în conformitate
+   cu opțiunea <literal>--with-mongodb-ssl</literal> pentru
+   <literal>configure</literal>. Valoarea implicită este
+   <literal>--with-mongodb-ssl=auto</literal>, ce va face să fie căutată Secure
+   Transport (doar pe macOS), OpenSSL și LibreSSL în această ordine. În plus,
+   puteți specifica <literal>openssl</literal>, <literal>libressl</literal> sau
+   <literal>darwin</literal> pentru a forța selectarea respectivă a unei anumite
+   biblioteci.
+  </para>
+
+  <note>
+   <para>
+    Dacă procesul de asamblare nu găsește o bibliotecă SSL verificați dacă
+    pachetele de dezvoltare (de ex. <literal>libssl-dev</literal>) și
+    <link xlink:href="&url.mongodb.wiki.pkg-config;">pkg-config</link> sunt
+    instalate.
+   </para>
+
+   <para>
+    La utilizarea Homebrew pe macOS, este un lucru obișnuit ca un sistem să aibă
+    instalate multiple versiuni OpenSSL. Pentru a vă asigura că este selectată
+    versiunea dorită OpenSSL, variabila de mediu <literal>PKG_CONFIG_PATH</literal>
+    poate fi folosită pentru a controla calea de căutare pentru
+    <literal>pkg-config</literal>. Dacă <literal>pkg-config</literal> nu este
+    utilizat, <literal>configure</literal> de asemenea susține un argument
+    <literal>--with-openssl-dir=DIR</literal>, care poate fi utilizat pentru a
+    specifica manual calea de căutare (doar pentru OpenSSL).
+   </para>
+  </note>
+
+  <para>
+   Etapa finală a asamblării, <command>make install</command>, va raporta unde a
+   fost instalată <filename>mongodb.so</filename>, similar cu:
    <programlisting role="txt">
 <![CDATA[
 Installing shared extensions:     /usr/lib/php/extensions/debug-non-zts-20151012/
@@ -113,8 +189,8 @@ Installing shared extensions:     /usr/lib/php/extensions/debug-non-zts-20151012
 
   <para>
    Asigurați-vă că opțiunea <link linkend="ini.extension-dir">extension_dir</link>
-   din &php.ini; indică spre directorul unde <filename>mongodb.so</filename> a
-   fost instalat. Puteți afla valoarea opțiunii cu comanda:
+   din &php.ini; indică către directorul unde <filename>mongodb.so</filename> a
+   fost instalat. Puteți afla valoarea opțiunii cu următoarea comandă:
    <programlisting role="shell">
 <![CDATA[
 $ php -i | grep extension_dir
@@ -125,87 +201,16 @@ $ php -i | grep extension_dir
   </para>
 
   <para>
-   Dacă directoarele diferă, modificați
-   <link linkend="ini.extension-dir">extension_dir</link> în &php.ini; sau în
-   mod manual transferați <filename>mongodb.so</filename> în directorul corect.
+   Dacă directoarele diferă schimbați
+   <link linkend="ini.extension-dir">extension_dir</link> din &php.ini; sau
+   deplasați manual <filename>mongodb.so</filename> în directorul corect.
   </para>
 
   <para>
-   Adăugați următoarea linie în fișierul de configurare &php.ini;:
+   În final, adăugați următoarea linie în fișierul &php.ini;:
    <programlisting role="ini">
 <![CDATA[
 extension=mongodb.so
-]]>
-   </programlisting>
-  </para>
- </section>
-
- <section xml:id="mongodb.installation.hhvm">
-  <title>Instalarea manuală a driver-ului HHVM MongoDB</title>
-
-  <para>
-   La momentul scrierii acestei instrucțiuni, HHVM nu posedă un manager de pachete
-   pentru extensii. Descărcați ultimul driver de pe
-   <link xlink:href="&url.mongodb.hhvm.releases;">GitHub</link>. Alternativ,
-   puteți clona repozitarul pentru a compila ultimul cod-sursă:
-   <programlisting role="shell">
-<![CDATA[
-$ git clone https://github.com/mongodb/mongo-hhvm-driver.git
-$ cd mongo-hhvm-driver
-$ git submodule sync && git submodule update --init
-]]>
-   </programlisting>
-  </para>
-
-  <para>
-   Generați fișierele <code>configure</code> pentru bibliotecile incapsulate.
-   Pentru aceasta trebuie să aveți instalate pachetele <code>automake</code>,
-   <code>autoconf</code> și <code>libtool</code> (de ex. cu <code>apt-get</code>).
-   <programlisting role="shell">
-<![CDATA[
-$ cd libbson; ./autogen.sh; cd ..
-$ cd libmongoc; ./autogen.sh; cd ..
-]]>
-   </programlisting>
-  </para>
-
-  <para>
-    Compilați și instalați driver-ul cu aceste comenzi:
-    <programlisting role="shell">
-<![CDATA[
-$ hphpize
-$ cmake .
-$ make -j 5
-$ sudo make install
-]]>
-   </programlisting>
-  </para>
-
-  <note>
-   <para>
-    Dacă comanda <code>hphpize</code> nu este disponibilă, va trebui să compilați
-    HHVM din codul-sursă sau să instalați pachetul <code>hhvm-dev</code> (de ex.
-    cu <code>apt-get</code>).
-   </para>
-  </note>
-
-  <para>
-   La ultimul pas se va afișa unde a fost instalat <filename>mongodb.so</filename>.
-   De exemplu:
-   <programlisting role="txt">
-<![CDATA[
-Installing:     /usr/local/hhvm/3.9.1/lib/hhvm/extensions/20150212/mongodb.so
-]]>
-   </programlisting>
-  </para>
-
-  <para>
-   Adăugați următoarea linie la fișierul de configurare &php.ini; (de obicei
-   localizat în "/etc/hhvm"):
-   <programlisting role="ini">
-<![CDATA[
-hhvm.dynamic_extension_path=/usr/local/hhvm/3.9.1/lib/hhvm/extensions/20150212
-hhvm.dynamic_extensions[mongodb]=mongodb.so
 ]]>
    </programlisting>
   </para>
