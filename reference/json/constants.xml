@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: d6d7fb6e14f6a32d25e0a654d11e2890f28e208d Maintainer: simionea Status: ready -->
+<!-- EN-Revision: e60f506c01d133c64cd890e3c75889b964c3ec04 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="json.constants" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.constants;
  &extension.constants;
  <para>
   Următoarele constante indică tipul erorii întoarse de funcția
-  <function>json_last_error</function>.
+  <function>json_last_error</function> sau stocate în atributul
+  <varname>code</varname> al obiectului <classname>JsonException</classname>.
  </para>
  <variablelist>
   <varlistentry xml:id="constant.json-error-none">
    <term>
     <constant>JSON_ERROR_NONE</constant>
-     (<type>integer</type>)
+    (&integer;)
    </term>
    <listitem>
     <simpara>
@@ -26,7 +27,7 @@
   <varlistentry xml:id="constant.json-error-depth">
    <term>
     <constant>JSON_ERROR_DEPTH</constant>
-     (<type>integer</type>)
+    (&integer;)
    </term>
    <listitem>
     <simpara>
@@ -38,7 +39,7 @@
   <varlistentry xml:id="constant.json-error-state-mismatch">
    <term>
     <constant>JSON_ERROR_STATE_MISMATCH</constant>
-     (<type>integer</type>)
+    (&integer;)
    </term>
    <listitem>
     <simpara>
@@ -51,7 +52,7 @@
   <varlistentry xml:id="constant.json-error-ctrl-char">
    <term>
     <constant>JSON_ERROR_CTRL_CHAR</constant>
-     (<type>integer</type>)
+    (&integer;)
    </term>
    <listitem>
     <simpara>
@@ -63,7 +64,7 @@
   <varlistentry xml:id="constant.json-error-syntax">
    <term>
     <constant>JSON_ERROR_SYNTAX</constant>
-     (<type>integer</type>)
+    (&integer;)
    </term>
    <listitem>
     <simpara>
@@ -75,65 +76,119 @@
   <varlistentry xml:id="constant.json-error-utf8">
    <term>
     <constant>JSON_ERROR_UTF8</constant>
-     (<type>integer</type>)
+    (&integer;)
    </term>
    <listitem>
     <simpara>
-     Caractere UTF-8 eronate, posibil codificate incorect. Această constantă
-     este disponibilă începând cu PHP 5.3.3.
+     Caractere UTF-8 eronate, posibil codificate incorect.
+     Disponibilă începând cu PHP 5.3.3.
     </simpara>
    </listitem>
   </varlistentry>
   <varlistentry xml:id="constant.json-error-recursion">
    <term>
     <constant>JSON_ERROR_RECURSION</constant>
-     (<type>integer</type>)
+    (&integer;)
    </term>
    <listitem>
-    <para>
+    <simpara>
      Obiectul sau tabloul transmis funcției <function>json_encode</function>
      include referințe recursive și de aceea nu pot fi codificate.
      Dacă a fost indicată opțiunea <constant>JSON_PARTIAL_OUTPUT_ON_ERROR</constant>,
      în locul referințelor recursive va fi codificat &null;.
-    </para>
-    <para>
-     Această constantă e disponibilă începând cu PHP 5.5.0.
-    </para>
+     Disponibilă începând cu PHP 5.5.0.
+    </simpara>
    </listitem>
   </varlistentry>
   <varlistentry xml:id="constant.json-error-inf-or-nan">
    <term>
     <constant>JSON_ERROR_INF_OR_NAN</constant>
-     (<type>integer</type>)
+    (&integer;)
    </term>
    <listitem>
-    <para>
+    <simpara>
      Valoarea transmisă funcției <function>json_encode</function> include
      <link linkend="language.types.float.nan"><constant>NAN</constant></link>
      sau <link linkend="function.is-infinite"><constant>INF</constant></link>.
      Dacă a fost indicată opțiunea <constant>JSON_PARTIAL_OUTPUT_ON_ERROR</constant>,
      în locul acestor numere speciale va fi codificat <literal>0</literal>.
-    </para>
-    <para>
-     Această constantă e disponivilă începând cu PHP 5.5.0.
-    </para>
+     Disponibilă începând cu PHP 5.5.0.
+    </simpara>
    </listitem>
   </varlistentry>
   <varlistentry xml:id="constant.json-error-unsupported-type">
    <term>
     <constant>JSON_ERROR_UNSUPPORTED_TYPE</constant>
-     (<type>integer</type>)
+    (&integer;)
    </term>
    <listitem>
-    <para>
+    <simpara>
      O valoare de tip nesusținut a fost transmisă funcției
-     <function>json_encode</function>, cum ar fi o <type>resource</type>.
+     <function>json_encode</function>, cum ar fi o &resource;.
      Dacă a fost indicată opțiunea <constant>JSON_PARTIAL_OUTPUT_ON_ERROR</constant>,
      în locul valorii nesusținute va fi codificat &null;.
-    </para>
-    <para>
-     Această constantă e disponivilă începând cu PHP 5.5.0.
-    </para>
+     Disponibilă începând cu PHP 5.5.0.
+    </simpara>
+   </listitem>
+  </varlistentry>
+  <varlistentry xml:id="constant.json-error-invalid-property-name">
+   <term>
+    <constant>JSON_ERROR_INVALID_PROPERTY_NAME</constant>
+    (&integer;)
+   </term>
+   <listitem>
+    <simpara>
+     În șirul de caractere transmis funcției <function>json_decode</function> a
+     fost găsită o cheie ce începe cu caracterul \u0000, la decodificarea unui
+     obiect JSON într-un obiect PHP.
+     Disponibilă începând cu PHP 7.0.0.
+    </simpara>
+   </listitem>
+  </varlistentry>
+  <varlistentry xml:id="constant.json-error-utf16">
+   <term>
+    <constant>JSON_ERROR_UTF16</constant>
+    (&integer;)
+   </term>
+   <listitem>
+    <simpara>
+     În șirul JSON transmis către <function>json_encode</function> a fost găsit
+     un surogat UTF-16 singur, fără pereche.
+     Disponibilă începând cu PHP 7.0.0.
+    </simpara>
+   </listitem>
+  </varlistentry>
+ </variablelist>
+
+ <para>
+  Următoarele constante pot fi combinate pentru a forma opțiuni pentru
+  <function>json_decode</function>.
+ </para>
+ <variablelist>
+  <varlistentry xml:id="constant.json-bigint-as-string">
+   <term>
+    <constant>JSON_BIGINT_AS_STRING</constant>
+    (&integer;)
+   </term>
+   <listitem>
+    <simpara>
+     Decodifică numere întregi mari ca șiruri de caractere cu valoarea lor originală.
+     Disponibilă începând cu PHP 5.4.0.
+    </simpara>
+   </listitem>
+  </varlistentry>
+  <varlistentry xml:id="constant.json-object-as-array">
+   <term>
+    <constant>JSON_OBJECT_AS_ARRAY</constant>
+    (&integer;)
+   </term>
+   <listitem>
+    <simpara>
+     Decodifică obiecte JSON ca tablouri PHP. Această opțiune poate fi adăugată
+     automat apelând <function>json_decode</function> cu al doilea parametru egal
+     cu &true;.
+     Disponibilă începând cu PHP 5.4.0.
+    </simpara>
    </listitem>
   </varlistentry>
  </variablelist>
@@ -146,7 +201,7 @@
   <varlistentry xml:id="constant.json-hex-tag">
    <term>
     <constant>JSON_HEX_TAG</constant>
-     (<type>integer</type>)
+    (&integer;)
    </term>
    <listitem>
     <simpara>
@@ -158,7 +213,7 @@
   <varlistentry xml:id="constant.json-hex-amp">
    <term>
     <constant>JSON_HEX_AMP</constant>
-     (<type>integer</type>)
+    (&integer;)
    </term>
    <listitem>
     <simpara>
@@ -170,7 +225,7 @@
   <varlistentry xml:id="constant.json-hex-apos">
    <term>
     <constant>JSON_HEX_APOS</constant>
-     (<type>integer</type>)
+    (&integer;)
    </term>
    <listitem>
     <simpara>
@@ -182,7 +237,7 @@
   <varlistentry xml:id="constant.json-hex-quot">
    <term>
     <constant>JSON_HEX_QUOT</constant>
-     (<type>integer</type>)
+    (&integer;)
    </term>
    <listitem>
     <simpara>
@@ -194,7 +249,7 @@
   <varlistentry xml:id="constant.json-force-object">
    <term>
     <constant>JSON_FORCE_OBJECT</constant>
-     (<type>integer</type>)
+    (&integer;)
    </term>
    <listitem>
     <simpara>
@@ -208,7 +263,7 @@
   <varlistentry xml:id="constant.json-numeric-check">
    <term>
     <constant>JSON_NUMERIC_CHECK</constant>
-     (<type>integer</type>)
+    (&integer;)
    </term>
    <listitem>
     <simpara>
@@ -217,22 +272,10 @@
     </simpara>
    </listitem>
   </varlistentry>
-  <varlistentry xml:id="constant.json-bigint-as-string">
-   <term>
-    <constant>JSON_BIGINT_AS_STRING</constant>
-     (<type>integer</type>)
-   </term>
-   <listitem>
-    <simpara>
-     Codifică numerele întregi mari ca șiruri de caractere la valoarea lor originală.
-     Disponibilă începând cu PHP 5.4.0.
-    </simpara>
-   </listitem>
-  </varlistentry>
   <varlistentry xml:id="constant.json-pretty-print">
    <term>
     <constant>JSON_PRETTY_PRINT</constant>
-     (<type>integer</type>)
+    (&integer;)
    </term>
    <listitem>
     <simpara>
@@ -244,7 +287,7 @@
   <varlistentry xml:id="constant.json-unescaped-slashes">
    <term>
     <constant>JSON_UNESCAPED_SLASHES</constant>
-     (<type>integer</type>)
+    (&integer;)
    </term>
    <listitem>
     <simpara>
@@ -256,7 +299,7 @@
   <varlistentry xml:id="constant.json-unescaped-unicode">
    <term>
     <constant>JSON_UNESCAPED_UNICODE</constant>
-     (<type>integer</type>)
+    (&integer;)
    </term>
    <listitem>
     <simpara>
@@ -269,7 +312,7 @@
   <varlistentry xml:id="constant.json-partial-output-on-error">
    <term>
     <constant>JSON_PARTIAL_OUTPUT_ON_ERROR</constant>
-     (<type>integer</type>)
+    (&integer;)
    </term>
    <listitem>
     <simpara>
@@ -281,16 +324,79 @@
   <varlistentry xml:id="constant.json-preserve-zero-fraction">
    <term>
     <constant>JSON_PRESERVE_ZERO_FRACTION</constant>
-     (<type>integer</type>)
+    (&integer;)
    </term>
    <listitem>
     <simpara>
-     Asigură ca valorile <type>float</type> să fie întotdeauna codificate ca valori float.
+     Asigură ca valorile &float; să fie întotdeauna codificate ca valori float.
      Disponibilă începând cu PHP 5.6.6.
     </simpara>
    </listitem>
   </varlistentry>
+  <varlistentry xml:id="constant.json-unescaped-line-terminators">
+   <term>
+    <constant>JSON_UNESCAPED_LINE_TERMINATORS</constant>
+    (&integer;)
+   </term>
+   <listitem>
+    <simpara>
+     Sfârșiturile liniilor sunt păstrate fără schimbare atunci când este indicată
+     <constant>JSON_UNESCAPED_UNICODE</constant>. Ea are același comportament ca
+     și până la versiunea PHP 7.1 fără această constantă.
+     Disponibilă începând cu PHP 7.1.0.
+    </simpara>
+   </listitem>
+  </varlistentry>
  </variablelist>
+
+ <para>
+  Următoarele constante pot fi combinate pentru a forma opțiuni pentru
+  <function>json_decode</function> și <function>json_encode</function>.
+ </para>
+ <variablelist>
+  <varlistentry xml:id="constant.json-invalid-utf8-ignore">
+   <term>
+    <constant>JSON_INVALID_UTF8_IGNORE</constant>
+    (&integer;)
+   </term>
+   <listitem>
+    <simpara>
+     Ignorează caracterele UTF-8 nevalide.
+     Disponibilă începând cu PHP 7.2.0.
+    </simpara>
+   </listitem>
+  </varlistentry>
+  <varlistentry xml:id="constant.json-invalid-utf8-substitute">
+   <term>
+    <constant>JSON_INVALID_UTF8_SUBSTITUTE</constant>
+    (&integer;)
+   </term>
+   <listitem>
+    <simpara>
+     Convertește caracterele UTF-8 nevalide în \0xfffd
+     (Caracterul Unicode 'REPLACEMENT CHARACTER')
+     Disponibil începând cu PHP 7.2.0.
+    </simpara>
+   </listitem>
+  </varlistentry>
+  <varlistentry xml:id="constant.json-throw-on-error">
+   <term>
+    <constant>JSON_THROW_ON_ERROR</constant>
+    (&integer;)
+   </term>
+   <listitem>
+    <simpara>
+     Emite <classname>JsonException</classname> dacă are loc o eroare în loc să seteze
+     starea de eroare globală care este obținută cu
+     <function>json_last_error</function> și <function>json_last_error_msg</function>.
+     <constant>JSON_PARTIAL_OUTPUT_ON_ERROR</constant> are precedență față de
+     <constant>JSON_THROW_ON_ERROR</constant>.
+     Disponibilă începând cu PHP 7.3.0.
+    </simpara>
+   </listitem>
+  </varlistentry>
+ </variablelist>
+
 </appendix>
 
 <!-- Keep this comment at the end of the file

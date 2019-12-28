@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: f9254e756882a011921138392fa240189dcc3a8c Maintainer: simionea Status: ready -->
+<!-- EN-Revision: ec74881ee14f1f386fe47c2c1f5cd995a2bd0a91 Maintainer: simionea Status: ready -->
 <!-- CREDITS: radical -->
 
 <refentry xml:id="function.json-encode" xmlns="http://docbook.org/ns/docbook">
@@ -22,6 +22,11 @@
    Întoarce un șir care conține o reprezentare JSON pentru valoarea
    (<parameter>value</parameter>) dată.
   </para>
+  <para>
+   Codificarea este afectată de valoarea parametrului <parameter>options</parameter>
+   și adițional codificarea valorilor cu virgulă flotantă depinde de valoarea
+   <link linkend="ini.serialize-precision">serialize_precision</link>.
+  </para>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -33,7 +38,7 @@
      <listitem>
       <para>
        Valoarea (<parameter>value</parameter>) care trebuie reprezentată JSON.
-       Poate fi de orice tip cu excepția <type>resource</type>.
+       Poate fi de orice tip cu excepția &resource;.
       </para>
       <para>
        Toate șirurile cu date trebuie să fie codificate în UTF-8.
@@ -45,19 +50,24 @@
      <term><parameter>options</parameter></term>
      <listitem>
       <para>
-       O mască de biți, ce constă din <constant>JSON_HEX_QUOT</constant>,
+       O mască de biți, ce constă din
+       <constant>JSON_FORCE_OBJECT</constant>,
+       <constant>JSON_HEX_QUOT</constant>,
        <constant>JSON_HEX_TAG</constant>,
        <constant>JSON_HEX_AMP</constant>,
        <constant>JSON_HEX_APOS</constant>,
+       <constant>JSON_INVALID_UTF8_IGNORE</constant>,
+       <constant>JSON_INVALID_UTF8_SUBSTITUTE</constant>,
        <constant>JSON_NUMERIC_CHECK</constant>,
-       <constant>JSON_PRETTY_PRINT</constant>,
-       <constant>JSON_UNESCAPED_SLASHES</constant>,
-       <constant>JSON_FORCE_OBJECT</constant>,
+       <constant>JSON_PARTIAL_OUTPUT_ON_ERROR</constant>,
        <constant>JSON_PRESERVE_ZERO_FRACTION</constant>,
+       <constant>JSON_PRETTY_PRINT</constant>,
+       <constant>JSON_UNESCAPED_LINE_TERMINATORS</constant>,
+       <constant>JSON_UNESCAPED_SLASHES</constant>,
        <constant>JSON_UNESCAPED_UNICODE</constant>,
-       <constant>JSON_PARTIAL_OUTPUT_ON_ERROR</constant>. Comportamentul acestor
-       constante este descris în
-       <link linkend="json.constants">pagina cu constante JSON</link>.
+       <constant>JSON_THROW_ON_ERROR</constant>.
+       Comportamentul acestor constante este descris în pagina
+       <link linkend="json.constants">Constante JSON</link>.
       </para>
      </listitem>
     </varlistentry>
@@ -76,8 +86,7 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-   Întoarce un șir (<type>string</type>) reprezentat JSON în caz de succes,
-   &return.falseforfailure;.
+   Întoarce un &string; reprezentat JSON în caz de succes, &return.falseforfailure;.
   </para>
  </refsect1>
 
@@ -94,15 +103,60 @@
      </thead>
      <tbody>
       <row>
+       <entry>7.3.0</entry>
+       <entry>
+        A fost adăugată constanta <constant>JSON_THROW_ON_ERROR</constant>
+        pentru parametrul <parameter>options</parameter>.
+       </entry>
+      </row>
+      <row>
+       <entry>7.2.0</entry>
+       <entry>
+        Au fost adăugate constantele <constant>JSON_INVALID_UTF8_IGNORE</constant> și
+        <constant>JSON_INVALID_UTF8_SUBSTITUTE</constant> pentru parametrul
+        <parameter>options</parameter>.
+       </entry>
+      </row>
+      <row>
+       <entry>7.1.0</entry>
+       <entry>
+        A fost adăugată constanta <constant>JSON_UNESCAPED_LINE_TERMINATORS</constant>
+        pentru parametrul <parameter>options</parameter>.
+       </entry>
+      </row>
+      <row>
+       <entry>7.1.0</entry>
+       <entry>
+        <link linkend="ini.serialize-precision">serialize_precision</link> este
+        utilizat în loc de <link linkend="ini.precision">precision</link> la
+        codificarea valorilor de tip "double".
+       </entry>
+      </row>
+      <row>
        <entry>5.6.6</entry>
        <entry>
-        <parameter>option</parameter> <constant>JSON_PRESERVE_ZERO_FRACTION</constant> a fost adăugată.
+        A fost adăugată constanta <constant>JSON_PRESERVE_ZERO_FRACTION</constant>
+        pentru parametrul <parameter>options</parameter>.
        </entry>
       </row>
       <row>
        <entry>5.5.0</entry>
        <entry>
         A fost adăugat parametrul <parameter>depth</parameter>.
+       </entry>
+      </row>
+      <row>
+       <entry>5.5.0</entry>
+       <entry>
+        A fost adăugată constanta <constant>JSON_PARTIAL_OUTPUT_ON_ERROR</constant>
+        pentru parametrul <parameter>options</parameter>.
+       </entry>
+      </row>
+      <row>
+       <entry>5.5.0</entry>
+       <entry>
+        Valoarea întoarsă în caz de eșec a fost schimbată din șir
+        <literal>null</literal> în &false;.
        </entry>
       </row>
       <row>
@@ -118,7 +172,20 @@
       <row>
        <entry>5.3.3</entry>
        <entry>
-        A fost adăugată constanta <constant>JSON_NUMERIC_CHECK</constant> pentru parametrul <parameter>option</parameter>.
+        A fost adăugată constanta <constant>JSON_NUMERIC_CHECK</constant>
+        pentru parametrul <parameter>options</parameter>.
+       </entry>
+      </row>
+      <row>
+       <entry>5.3.0</entry>
+       <entry>
+        Au fost adăugate constantele
+        <constant>JSON_FORCE_OBJECT</constant>,
+        <constant>JSON_HEX_AMP</constant>,
+        <constant>JSON_HEX_APOS</constant>,
+        <constant>JSON_HEX_QUOT</constant>,
+        <constant>JSON_HEX_TAG</constant>
+        pentru parametrul <parameter>options</parameter>.
        </entry>
       </row>
       <row>
@@ -231,7 +298,7 @@ var_dump(
 ?>
 ]]>
     </programlisting>
-    &example.outputs;
+    &example.outputs.similar;
     <screen>
 <![CDATA[
 Strings representing numbers automatically turned into numbers
@@ -367,9 +434,8 @@ string(2) "12"
    <para>
     Ca și codificatorul JSON de referință, <function>json_encode</function> va
     genera JSON care este o valoare simplă (adică nu este obiect sau tablou)
-    dacă îi este furnizată o valoare de tip <type>string</type>,
-    <type>integer</type>, <type>float</type> sau <type>boolean</type> pentru
-    parametrul <parameter>value</parameter>. În timp ce majoritatea
+    dacă îi este furnizată o valoare de tip &string;, &integer;, &float; sau
+    &boolean; pentru parametrul <parameter>value</parameter>. În timp ce majoritatea
     decodificatorilor JSON vor accepta aceste valori ca fiind JSON valid, altele
     pot să nu-l accepte, deoarece specificația este ambiguă în această privință.
    </para>
