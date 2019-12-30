@@ -33,7 +33,7 @@
       <row xml:id="constant.mysql-client-interactive">
        <entry><constant>MYSQL_CLIENT_INTERACTIVE</constant></entry>
        <entry>Permite o inactivitate cu durata de interactive_timeout secunde
-       (în loc de wait_timeout) înainte de a închide conexiunea.</entry>
+       (în loc de <option>wait_timeout</option>) înainte de a închide conexiunea.</entry>
       </row>
       <row xml:id="constant.mysql-client-ssl">
        <entry><constant>MYSQL_CLIENT_SSL</constant></entry>

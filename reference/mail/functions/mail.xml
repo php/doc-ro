@@ -126,10 +126,8 @@ $text = str_replace("\n.", "\n..", $text);
         În caz că nu se respectă această condiție, se va produce un mesaj de
         eroare similar cu acesta: <literal>Warning: mail(): "sendmail_from" not
         set in php.ini or custom "From:" header missing</literal>
-        (<literal>Avertizare: mail(): "sendmail_from" nu este stabilit în
-        php.ini sau antetul "From:" lipsește</literal>).
-        Antetul <literal>From</literal> stabilește de asemenea <literal>
-        Return-Path</literal> în Windows.
+        Antetul <literal>From</literal> stabilește de asemenea <literal>Return-Path</literal>
+        în Windows.
        </para>
       </note>
       <note>

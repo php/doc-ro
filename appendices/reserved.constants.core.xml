@@ -259,7 +259,6 @@
       </simpara>
      </listitem>
     </varlistentry>
-
     <varlistentry xml:id="constant.default-include-path">
      <term>
       <constant>DEFAULT_INCLUDE_PATH</constant>
@@ -428,6 +427,18 @@
       </simpara>
      </listitem>
     </varlistentry>
+    <varlistentry xml:id="constant.php-fd-setsize">
+     <term>
+      <constant>PHP_FD_SETSIZE</constant>
+      (<type>string</type>)
+     </term>
+     <listitem>
+      <simpara>
+       Numărul maxim al descriptorilor de fișiere pentru anumite apeluri de sistem.
+       Disponibilă începând cu PHP 7.1.0.
+      </simpara>
+     </listitem>
+    </varlistentry>
     <varlistentry xml:id="constant.e-error">
      <term>
       <constant>E_ERROR</constant>
@@ -435,7 +446,7 @@
      </term>
      <listitem>
       <simpara>
-       <link linkend="errorfunc.constants">Constanta de raportare a erorilor</link>
+       <link linkend="errorfunc.constants">Constantă de raportare a erorilor</link>
       </simpara>
      </listitem>
     </varlistentry>
@@ -446,7 +457,7 @@
      </term>
      <listitem>
       <simpara>
-
+       <link linkend="errorfunc.constants">Constantă de raportare a erorilor</link>
       </simpara>
      </listitem>
     </varlistentry>
@@ -457,7 +468,7 @@
      </term>
      <listitem>
       <simpara>
-
+       <link linkend="errorfunc.constants">Constantă de raportare a erorilor</link>
       </simpara>
      </listitem>
     </varlistentry>
@@ -468,7 +479,7 @@
      </term>
      <listitem>
       <simpara>
-
+       <link linkend="errorfunc.constants">Constantă de raportare a erorilor</link>
       </simpara>
      </listitem>
     </varlistentry>
@@ -479,7 +490,7 @@
      </term>
      <listitem>
       <simpara>
-
+       <link linkend="errorfunc.constants">Constantă de raportare a erorilor</link>
       </simpara>
      </listitem>
     </varlistentry>
@@ -490,7 +501,7 @@
      </term>
      <listitem>
       <simpara>
-
+       <link linkend="errorfunc.constants">Constantă de raportare a erorilor</link>
       </simpara>
      </listitem>
     </varlistentry>
@@ -501,7 +512,7 @@
      </term>
      <listitem>
       <simpara>
-
+       <link linkend="errorfunc.constants">Constantă de raportare a erorilor</link>
       </simpara>
      </listitem>
     </varlistentry>
@@ -512,7 +523,7 @@
      </term>
      <listitem>
       <simpara>
-
+       <link linkend="errorfunc.constants">Constantă de raportare a erorilor</link>
       </simpara>
      </listitem>
     </varlistentry>
@@ -523,7 +534,7 @@
      </term>
      <listitem>
       <simpara>
-
+       <link linkend="errorfunc.constants">Constantă de raportare a erorilor</link>
       </simpara>
      </listitem>
     </varlistentry>
@@ -534,7 +545,7 @@
      </term>
      <listitem>
       <simpara>
-
+       <link linkend="errorfunc.constants">Constantă de raportare a erorilor</link>
       </simpara>
      </listitem>
     </varlistentry>
@@ -545,7 +556,19 @@
      </term>
      <listitem>
       <simpara>
-
+       <link linkend="errorfunc.constants">Constantă de raportare a erorilor</link>
+      </simpara>
+     </listitem>
+    </varlistentry>
+    <varlistentry xml:id="constant.e-recoverble-error">
+     <term>
+      <constant>E_RECOVERABLE_ERROR</constant> 
+      (<type>integer</type>)
+     </term>
+     <listitem>
+      <simpara>
+       <link linkend="errorfunc.constants">Constantă de raportare a erorii</link>.
+       Disponibilă începând cu PHP 5.2.0.
       </simpara>
      </listitem>
     </varlistentry>
@@ -556,6 +579,7 @@
      </term>
      <listitem>
       <simpara>
+       <link linkend="errorfunc.constants">Constantă de raportare a erorilor</link>
        Disponibilă începând cu PHP 5.3.0
       </simpara>
      </listitem>
@@ -567,6 +591,7 @@
      </term>
      <listitem>
       <simpara>
+       <link linkend="errorfunc.constants">Constantă de raportare a erorilor</link>
        Disponibilă începând cu PHP 5.3.0
       </simpara>
      </listitem>
@@ -578,7 +603,7 @@
      </term>
      <listitem>
       <simpara>
-
+       <link linkend="errorfunc.constants">Constantă de raportare a erorilor</link>
       </simpara>
      </listitem>
     </varlistentry>
@@ -589,7 +614,7 @@
      </term>
      <listitem>
       <simpara>
-
+       <link linkend="errorfunc.constants">Constantă de raportare a erorilor</link>
       </simpara>
      </listitem>
     </varlistentry>

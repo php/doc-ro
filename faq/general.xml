@@ -56,9 +56,8 @@
      <para>
       PHP/FI 2.0 este prima versiune a PHP și nu mai este întreținută în prezent.
       PHP 3 este succesorul PHP/FI 2.0 și e mult mai plăcut. PHP 7 este generația
-      modernă a PHP, ce folosește <link xlink:href="&url.zend;">Zend
-      engine 3</link> care, printre altele, oferă multe facilități suplimentare
-      de programare <link linkend="language.oop5">OOP</link>.
+      modernă a PHP, ce folosește Zend engine 3 care, printre altele, oferă multe
+      facilități suplimentare de programare <link linkend="language.oop5">OOP</link>.
      </para>
     </answer>
    </qandaentry>
