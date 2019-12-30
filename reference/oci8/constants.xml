@@ -402,7 +402,7 @@
        <row xml:id="constant.sqlt-rset">
          <entry><constant>SQLT_RSET</constant></entry>
          <entry>
-           La fel ca <constant>OCI_B_CURSOR</constant>.           
+           La fel ca <constant>OCI_B_CURSOR</constant>.
          </entry>
        </row>
        <row xml:id="constant.sqlt-str">

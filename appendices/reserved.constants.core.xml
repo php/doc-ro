@@ -131,7 +131,7 @@
     </varlistentry>
     <varlistentry xml:id="constant.php-os-family">
      <term>
-      <constant>PHP_OS_FAMILY</constant> 
+      <constant>PHP_OS_FAMILY</constant>
       (<type>string</type>)
      </term>
      <listitem>
@@ -235,7 +235,7 @@
     </varlistentry>
     <varlistentry xml:id="constant.php-float-min">
      <term>
-      <constant>PHP_FLOAT_MIN</constant> 
+      <constant>PHP_FLOAT_MIN</constant>
       (<type>float</type>)
      </term>
      <listitem>
@@ -562,7 +562,7 @@
     </varlistentry>
     <varlistentry xml:id="constant.e-recoverble-error">
      <term>
-      <constant>E_RECOVERABLE_ERROR</constant> 
+      <constant>E_RECOVERABLE_ERROR</constant>
       (<type>integer</type>)
      </term>
      <listitem>

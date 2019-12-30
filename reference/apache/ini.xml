@@ -87,7 +87,7 @@
     <listitem>
      <para>
       Specifică dacă scripturile PHP pot cere terminarea procesului-fiu la
-      sfârșitul interpelării, vedeți de asemenea 
+      sfârșitul interpelării, vedeți de asemenea
       <function>apache_child_terminate</function>.
      </para>
     </listitem>

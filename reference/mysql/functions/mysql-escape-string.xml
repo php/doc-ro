@@ -31,11 +31,11 @@
    Aceasta functie este va fi scoasa din uz.
   </para>
   <para>
-   Aceasta functie este identica cu <function>mysql_real_escape_string</function> 
-   cu exceptia ca <function>mysql_real_escape_string</function> se foloseste de 
-  conexiunea curenta si escapeaza string-ul in fuctie de encodingul (charset-ul) setat. 
-    <function>mysql_escape_string</function> nu ia ca argument conexiunea curenta 
-   si nu respecta encodingul setat la momentul respectiv.  
+   Aceasta functie este identica cu <function>mysql_real_escape_string</function>
+   cu exceptia ca <function>mysql_real_escape_string</function> se foloseste de
+  conexiunea curenta si escapeaza string-ul in fuctie de encodingul (charset-ul) setat.
+    <function>mysql_escape_string</function> nu ia ca argument conexiunea curenta
+   si nu respecta encodingul setat la momentul respectiv.
   </para>
  </refsect1>
 
@@ -54,7 +54,7 @@
    </variablelist>
   </para>
  </refsect1>
- 
+
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
@@ -83,7 +83,7 @@
       <row>
        <entry>4.3.0</entry>
        <entry>
-        Aceasta functie este scoasa din uz, nu o mai folositi. In locul ei, 
+        Aceasta functie este scoasa din uz, nu o mai folositi. In locul ei,
         folositi <function>mysql_real_escape_string</function>.
        </entry>
       </row>

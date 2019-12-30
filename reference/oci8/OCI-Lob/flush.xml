@@ -33,7 +33,7 @@
        Folosește această opțiune numai dacă știi ce faci - pentru următoarea operațiune de citire/scriere
        în LOB va fi necesar inițializarea unei
        noi zone-tampon. Este recomandată folosirea opțiunii
-       <constant>OCI_LOB_BUFFER_FREE</constant> atunci când nu 
+       <constant>OCI_LOB_BUFFER_FREE</constant> atunci când nu
        mai aveți de lucrat cu obiectul LOB.
       </para>
      </listitem>

@@ -268,7 +268,7 @@ echo "Ultima declarație";
     sau <literal># ...  ?&gt;</literal> VA FI afișat:
     ?&gt; iese din modul PHP și intră în modul HTML, iar
     <literal>//</literal> sau <literal>#</literal> nu pot influența acest lucru.
-    Dacă directiva de configurație <link linkend="ini.asp-tags">asp_tags</link> 
+    Dacă directiva de configurație <link linkend="ini.asp-tags">asp_tags</link>
     este activată, se comportă la fel cu <literal>// %&gt;</literal> și
     <literal># %&gt;</literal>.
     Totuși, tag-ul <literal>&lt;/script&gt;</literal> nu iese din modul PHP in comentariile de un rând.
