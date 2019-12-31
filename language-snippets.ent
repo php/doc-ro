@@ -1058,9 +1058,9 @@ Lista zonelor orare susținute</title>'>
 
 <!ENTITY date.timezone.intro "<para xmlns='http://docbook.org/ns/docbook'>
 Aici puteți găsi lista deplină a zonelor orare susținute de PHP, care pot fi
-utilizate cu de ex. <function>date_default_timezone_set</function>.</para>
+utilizate cu de ex. <function>date_default_timezone_set</function>.
 <caution><simpara>Comportamentul zonelor orare care nu sunt enumerate aici este
-nedefinit.</simpara></caution>
+nedefinit.</simpara></caution></para>
 <note xmlns='http://docbook.org/ns/docbook'><simpara>Ultima versiune a bazei de
 date cu zonele orare poate fi instalată prin
 <link xlink:href='&url.pecl.package.get;timezonedb'
