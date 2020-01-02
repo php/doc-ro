@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: e60f506c01d133c64cd890e3c75889b964c3ec04 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: bd5c1c0ac014e9e2d58e5555194f80a3dfa4695f Maintainer: simionea Status: ready -->
 
 <appendix xml:id="json.constants" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.constants;
@@ -152,7 +152,7 @@
    </term>
    <listitem>
     <simpara>
-     În șirul JSON transmis către <function>json_encode</function> a fost găsit
+     În șirul JSON transmis către <function>json_decode</function> a fost găsit
      un surogat UTF-16 singur, fără pereche.
      Disponibilă începând cu PHP 7.0.0.
     </simpara>
