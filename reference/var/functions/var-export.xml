@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: b8758b0605e80c4e3610137b7502a6abeea5c69b Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 9ddc8b69468da104704dadf9fb8d22480c7ad687 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/var.xml, last change in rev 1.6 -->
 
@@ -77,9 +77,20 @@
      </thead>
      <tbody>
       <row>
+       <entry>7.3.0</entry>
+       <entry>
+        Acum exportă obiecte <classname>stdClass</classname> ca un tablou
+        transformat în obiect (<code>(object) array( ... )</code>), dar
+        nu utilizează metoda neexistentă <methodname>stdClass::__setState</methodname>.
+        Efectul practic este că acum <classname>stdClass</classname> este
+        exportabil și codul-sursă ce rezultă va funcționa chiar și pe
+        versiuni anterioare ale PHP.
+       </entry>
+      </row>
+      <row>
        <entry>5.1.0</entry>
        <entry>
-        Posibilitatea de a exporta clase și tablouri conținând clase utilizând
+        Acum este posibil de a exporta clase și tablouri conținând clase utilizând
         metoda magică <link linkend="object.set-state">__set_state()</link>.
        </entry>
       </row>
@@ -138,7 +149,31 @@ echo $v;
   </para>
   <para>
    <example>
-    <title>Exportarea claselor începând cu PHP 5.1.0</title>
+    <title>Exportarea stdClass (începând cu PHP 7.3.0)</title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+$person = new stdClass;
+$person->name = 'ElePHPant ElePHPantsdotter';
+$person->website = 'https://php.net/elephpant.php';
+
+var_export($person);
+]]>
+    </programlisting>
+    &example.outputs;
+    <screen>
+<![CDATA[
+(object) array(
+   'name' => 'ElePHPant ElePHPantsdotter',
+   'website' => 'https://php.net/elephpant.php',
+)
+]]>
+    </screen>
+   </example>
+  </para>
+  <para>
+   <example>
+    <title>Exportarea claselor (începând cu PHP 5.1.0)</title>
     <programlisting role="php">
 <![CDATA[
 <?php
@@ -233,8 +268,9 @@ object(A)#2 (2) {
    <para>
     Pentru a putea evalua codul PHP generat de <function>var_export</function>,
     toate obiectele procesate trebuie să implementeze metoda magică <link
-    linkend="object.set-state">__set_state</link>. Observați că StdClass
-    nu implementează __set_state().
+    linkend="object.set-state">__set_state</link>. Unica excepție este
+    <classname>stdClass</classname>, care este exportată utilizând un
+    tablou cu tipul schimbat în obiect.
    </para>
   </note>
  </refsect1>

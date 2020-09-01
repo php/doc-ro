@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 562aa81d99a81a56aac6ad7e92672c91d10048da Maintainer: simionea Status: ready -->
 
 <section xml:id="msql.installation" xmlns="http://docbook.org/ns/docbook">
  &reftitle.install;
+ <para>
+  Această extensie nu mai este furnizată cu PHP începând cu PHP 5.3.
+  Această extensie este considerată nemenținută și moartă.
+ </para>
  <para>
   Pentru ca aceste funcții să fie disponibile, PHP trebuie să fie compilat cu
   susțineara msql, utilizând opțiunea

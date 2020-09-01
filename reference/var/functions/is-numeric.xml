@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: d693ad157f3c5241fb7e7dc2c61b1c27864a030d Maintainer: simionea Status: ready -->
+<!-- EN-Revision: bb2cebd57553066f7502ae8c6bfe61a2a3d458fc Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.is-numeric" xmlns="http://docbook.org/ns/docbook">
@@ -20,7 +20,7 @@
   </methodsynopsis>
   <para>
    Determină dacă variabila dată este numerică. String-urile numerice constau
-   din semnul opțional, orice număr de cifre, partea decimală opțională și
+   din spațiu opțional, semn opțional, orice număr de cifre, partea decimală opțională și
    partea exponențială opțională. Astfel <literal>+0123.45e6</literal> este
    o valoare numerică validă. Notarea hexadecimală (de ex.
    <literal>0xf4c3b00c</literal>) sau binară (de ex. <literal>0b10100111001</literal>),

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 18da52a5352ecfddf316d05a9201e685d9068384 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: e1438a020bbc755a27f18235a0ea94f3d9d556aa Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.serialize" xmlns="http://docbook.org/ns/docbook">
@@ -46,13 +46,14 @@
        Orice altă referință va fi pierdută.
       </para>
       <para>
-       La serializarea obiectelor, PHP va încerca să apeleze funcția-membru
+       La serializarea obiectelor, PHP va încerca să apeleze una din funcțiile-membru
+       <link linkend="object.serialize">__serialize()</link> sau
        <link linkend="object.sleep">__sleep()</link> înainte de
        serializare. Aceasta se efectuează pentru a-i permite obiectului să
        efectueze orice curățiri, etc. înainte de a fi serializat. La fel, când
        obiectul este restabilit cu ajutorul <function>unserialize</function>
-       funcția-membru <link linkend="object.wakeup">__wakeup()</link>
-       este apelată.
+       funcția-membru <link linkend="object.unserialize">__unserialize()</link> sau
+       <link linkend="object.wakeup">__wakeup()</link> este apelată.
       </para>
       <note>
        <para>
@@ -119,10 +120,10 @@ if (!odbc_execute($stmt, $sqldata)) {
     Atrageți atenția că multe obiecte PHP încorporate nu pot fi serializate.
     Însă cele ce permit acest lucru implementează interfața
     <interfacename>Serializable</interfacename> sau metodele magice
-    <link linkend="object.sleep">__sleep()</link> și
-    <link linkend="object.wakeup">__wakeup()</link>. Dacă o clasă internă nu
-    îndeplinește cel puțin una dintre aceste cerințe, ea nu poate fi serializată
-    cu siguranță.
+    <link linkend="object.serialize">__serialize()</link>/<link linkend="object.unserialize">__unserialize()</link> sau
+    <link linkend="object.sleep">__sleep()</link>/<link linkend="object.wakeup">__wakeup()</link>.
+    Dacă o clasă internă nu îndeplinește cel puțin una dintre aceste cerințe, ea
+    nu poate fi serializată cu siguranță.
    </para>
    <para>
     Există unele excepții istorice de la această regulă, când unele obiecte
@@ -150,6 +151,8 @@ if (!odbc_execute($stmt, $sqldata)) {
     <member><link linkend="language.oop5.serialization">Serializarea Obiectelor</link></member>
     <member><link linkend="object.sleep">__sleep()</link></member>
     <member><link linkend="object.wakeup">__wakeup()</link></member>
+    <member><link linkend="object.serialize">__serialize()</link></member>
+    <member><link linkend="object.unserialize">__unserialize()</link></member>
    </simplelist>
   </para>
  </refsect1>

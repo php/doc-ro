@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 64642ea9c35700b3d3a584b0020d4e15a79a0a89 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: e1438a020bbc755a27f18235a0ea94f3d9d556aa Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.unserialize" xmlns="http://docbook.org/ns/docbook">
@@ -55,8 +55,9 @@
       </para>
       <para>
        Dacă variabila ce se deserializează este un obiect, după ce se
-       reconstituie cu succes, PHP automat va încerca să apeleze funcția-membru
-       <link linkend="object.wakeup">__wakeup()</link> (dacă aceasta există).
+       reconstituie cu succes, PHP automat va încerca să apeleze una din metodele
+       <link linkend="object.unserialize">__unserialize()</link> sau
+       <link linkend="object.wakeup">__wakeup()</link> (dacă acestea există).
       </para>
       <para>
        <note>
@@ -253,6 +254,8 @@ function mycallback($classname)
     <member><link linkend="language.oop5.autoload">Autoîncărcarea claselor</link></member>
     <member><link linkend="ini.unserialize-callback-func">unserialize_callback_func</link></member>
     <member><link linkend="object.wakeup">__wakeup()</link></member>
+    <member><link linkend="object.serialize">__serialize()</link></member>
+    <member><link linkend="object.unserialize">__unserialize()</link></member>
    </simplelist>
   </para>
  </refsect1>
