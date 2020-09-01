@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 06cae82e92e039ac0e4547b1798a0035c4c149af Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/mail.xml, last change in rev 1.6 -->
 
@@ -10,6 +10,10 @@
   <refname>ezmlm_hash</refname>
   <refpurpose>Calculează valoarea hash necesară EZMLM</refpurpose>
  </refnamediv>
+
+ <refsynopsisdiv>
+  &warn.deprecated.function-7-4-0;
+ </refsynopsisdiv>
 
  <refsect1 role="description">
   &reftitle.description;

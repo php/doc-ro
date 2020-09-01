@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 04ca316e18ff2e9fec8d15d02b98bd5625fac067 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 594b45f55e4651003dc2077f61b3ff93cead1ad1 Maintainer: simionea Status: ready -->
 
  <book xml:id="book.mongodb" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Clasele driver-ului MongoDB</title>
@@ -12,6 +12,7 @@
   &reference.mongodb.mongodb.driver.query;
   &reference.mongodb.mongodb.driver.bulkwrite;
   &reference.mongodb.mongodb.driver.session;
+  &reference.mongodb.mongodb.driver.clientencryption;
 
   &reference.mongodb.mongodb.driver.writeconcern;
   &reference.mongodb.mongodb.driver.readpreference;

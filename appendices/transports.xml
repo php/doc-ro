@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: eda3b067eb85fcd307682aa8966d3c017cc29be2 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: b95c7c24eaff058d0efb63f2b1db8bcb13a20699 Maintainer: simionea Status: ready -->
 
 <appendix xml:id="transports" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Lista transporturilor prin socket-e susținute</title>
@@ -22,8 +22,6 @@
  <section xml:id="transports.inet">
   <title>Domeniul Internet: TCP, UDP, SSL și TLS</title>
   <simpara>
-   PHP 4, PHP 5.
-   <literal>ssl://</literal> &amp; <literal>tls://</literal> începând cu PHP 4.3.0
    <literal>sslv2://</literal> &amp; <literal>sslv3://</literal> începând cu PHP 5.0.2
   </simpara>
 
@@ -80,9 +78,7 @@
    Transporturile <literal>ssl://</literal> și <literal>tls://</literal>
    (disponibile doar atunci când susținerea openssl este compilată în PHP) sunt
    niște extensii ale transportului <literal>tcp://</literal> care oferă
-   criptare SSL. Începând cu PHP 4.3.0 susținerea OpenSSL trebuie să fie
-   compilată static în PHP, începând cu PHP 5.0.0 aceasta poate fi compilată fie
-   ca modul, sau static.
+   criptare SSL.
   </simpara>
 
   <simpara>
@@ -116,6 +112,12 @@
    nu necesită un număr de port. În cazul <function>fsockopen</function>
    parametrul <parameter>portno</parameter> trebuie să fie stabilit 0.
   </simpara>
+
+  <note>
+   <simpara>
+    Socket-urile din domeniul Unix nu sunt susținute pe Windows.
+   </simpara>
+  </note>
  </section>
 
 </appendix>

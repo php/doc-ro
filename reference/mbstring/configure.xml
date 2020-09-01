@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 7fe8548cfea516a5587267f9a06aa19ff46c93b5 Maintainer: alexxed Status: ready -->
+<!-- EN-Revision: 8ca69ba3fb4cf1cfa528bb0e0bddf1a383003e8b Maintainer: alexxed Status: ready -->
 
 <section xml:id="mbstring.installation" xmlns="http://docbook.org/ns/docbook">
   &reftitle.install;
@@ -43,6 +43,8 @@
       <productname>Oniguruma</productname> este deja instalat în sistem,
       poate fi specificată opțiunea <option role="configure">--with-onig[=DIR]</option>
       pentru a utiliza biblioteca instalată.
+      Începând cu PHP 7.4.0 opțiunea <option role="configure">--with-onig</option>
+      a fost eliminată; pkg-config este utilizat acum pentru a detecta biblioteca libonig.
      </para>
      <para>
       Începând cu PHP 5.4.0 este bosibil de a deconecta verificarea multibyte
