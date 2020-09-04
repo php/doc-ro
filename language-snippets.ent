@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 0a8aa545a4b83c6a767590e1b3726da7812ae8e3 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: cb45cf977218b72b0ba93015683ee169d97d278b Maintainer: simionea Status: ready -->
 
 <!ENTITY installation.enabled.disable 'Această extensie este activată în mod
 implicit. Ea poate fi dezactivată utilizând următoarea opțiune la compilare: '>
@@ -34,6 +34,14 @@ utilizarea <function>random_int</function>, <function>random_bytes</function> sa
 
 <!ENTITY note.bin-safe '<note xmlns="http://docbook.org/ns/docbook"><simpara>
 Această funcție acceptă și date binare.</simpara></note>'>
+
+<!ENTITY note.locale-single-byte '<note xmlns="http://docbook.org/ns/docbook">
+<simpara>Această funcție ia în considerare setările de localizare și va prelucra
+intrările conform setărilor curente de localizare. Însă aceasta se aplică doar în
+cazul seturilor de caractere de un singur byte. Dacă aveți nevoie să utilizați
+caractere multibyte (majoritatea limbilor ce nu sunt vest-Europene) vedeți
+extensiile <link linkend="book.mbstring">multibyte</link> sau
+<link linkend="book.intl">intl</link>.</simpara></note>'>
 
 <!ENTITY note.clearstatcache '<note xmlns="http://docbook.org/ns/docbook">
 <simpara>Rezultatele acestei funcții sunt stocate în cache. Accesați
@@ -105,6 +113,12 @@ Această funcție nu este implementată pe platformele Windows.</simpara></note>
 
 <!ENTITY note.no-windows.extension '<note xmlns="http://docbook.org/ns/docbook">
 <simpara>Această extensie nu este disponibilă pe platformele Windows.</simpara></note>'>
+
+<!ENTITY note.no-zts '<note xmlns="http://docbook.org/ns/docbook"><simpara>Această
+funcție nu este disponibilă în interpretatorii PHP cu ZTS (Zend Thread Safety)
+ativat. Pentru a verifica dacă copia dumneavoastră a PHP este cu ZTS activat
+utilizați <command>php -i</command> sau verificați constanta încorporată
+<constant>PHP_ZTS</constant>.</simpara></note>'>
 
 <!ENTITY note.randomseed '<note xmlns="http://docbook.org/ns/docbook"><simpara>
 Nu este nevoie de a însămânța generatorul de numere aleatoare cu ajutorul
@@ -510,6 +524,9 @@ Exemplul de mai sus va afișa în PHP 7.0:</para>'>
 <!ENTITY example.outputs.71 '<para xmlns="http://docbook.org/ns/docbook">
 Exemplul de mai sus va afișa în PHP 7.1:</para>'>
 
+<!ENTITY example.outputs.73 '<para xmlns="http://docbook.org/ns/docbook">
+Exemplul de mai sus va afișa în PHP 7.3:</para>'>
+
 <!ENTITY example.outputs.32bit '<para xmlns="http://docbook.org/ns/docbook">
 Exemplul de mai sus va afișa pe mașini pe 32 de biți:</para>'>
 
@@ -729,7 +746,7 @@ dumneavoastră, înregistrat cu <function>imageloadfont</function>.</para>
        <programlisting role='php'>
 <![CDATA[
 <?php
-// Set the enviroment variable for GD
+// Set the environment variable for GD
 putenv('GDFONTPATH=' . realpath('.'));
 
 // Name the font to be used (note the lack of the .ttf extension)
@@ -773,9 +790,9 @@ Dacă nu este stabilită sau este &null;, atunci fluxul imaginii va fi afișat d
 
 <!ENTITY gd.image.new 'Creează o imagine nouă din fișier sau din URL'>
 
-<!ENTITY gd.image.source 'Resursa referinței imaginii sursă.'>
+<!ENTITY gd.image.source 'Resursa imaginii sursă.'>
 
-<!ENTITY gd.image.destination 'Resursa referinței imaginii destinație.'>
+<!ENTITY gd.image.destination 'Resursa imaginii destinație.'>
 
 <!ENTITY gd.image.output 'Afișează imaginea în navigator sau în fișier'>
 
@@ -837,6 +854,11 @@ nu sunt determinate.'>
     <entry>7.0.0</entry><entry>Susținerea pentru T1Lib a fost eliminată din PHP,
     de aceea și această funcție a fost eliminată.</entry>
 </row>'>
+
+<!ENTITY gd.deprecated.gd-formats '<warning xmlns="http://docbook.org/ns/docbook">
+<simpara>Formatele GD și GD2 sunt formate de imagini proprii ale libgd. Ele trebuie
+Acestea trebuie considerate <emphasis>învechite</emphasis> și trebuie utilizate
+doar pentru scopuri de dezvoltare și testare.</simpara></warning>'>
 
 <!-- DBM notes -->
 
@@ -1198,6 +1220,16 @@ funcție poate să genereze erori de tip <constant>E_WARNING</constant> atunci c
 întâlnește un marcaj greșit. <link linkend="function.libxml-use-internal-errors">
 Funcțiile de gestiune a erorilor libxml</link> pot fi utilizate pentru a prelucra
 aceste erori.</para>'>
+
+<!ENTITY dom.note.utf8 '<note xmlns="http://docbook.org/ns/docbook">
+<para>Extensia DOM utilizează codificarea UTF-8. Utilizați <function>utf8_encode</function>
+și <function>utf8_decode</function> pentru lucrul cu texte codificate în ISO-8859-1
+sau <link linkend="ref.iconv">iconv</link> pentru alte codificări.</para></note>'>
+
+<!ENTITY dom.note.json '<note xmlns="http://docbook.org/ns/docbook">
+<para>La utilizarea <function>json_encode</function> cu un obiect
+<classname>DOMDocument</classname>, rezultatul va fi ca și la codificarea unui
+obiect vid.</para></note>'>
 
 <!-- Dom Examples -->
 
@@ -2204,6 +2236,10 @@ Imagick a fost compilat cu ImageMagick de versiunea 6.5.7 sau ulterior.'>
 <!ENTITY imagick.constant.available 'Această constantă este disponibilă dacă
 Imagick a fost compilat cu ImageMagick de versiunea'>
 
+<!ENTITY imagick.deprecated.function-3-4-4 '<warning xmlns="http://docbook.org/ns/docbook">
+<simpara>Această funcție este <emphasis>ÎNVECHITĂ</emphasis> începând cu Imagick
+3.4.4. Utilizarea acesteia este foarte nerecomandată.</simpara></warning>'>
+
 <!-- Imagick default channel information -->
 
 <!ENTITY imagick.default.channel.info 'Valoarea implicită este
@@ -2322,8 +2358,10 @@ versiunea 2.0.0. Implementări alternative sunt disponibile utilizând
 <!ENTITY libxml.required '<para xmlns="http://docbook.org/ns/docbook">Această
 extensie necesită extensia PHP <link linkend="book.libxml">libxml</link>.
 Aceasta înseamnă că e necesară de asemenea și indicarea opțiunii
-<option role="configure">--enable-libxml</option>, cu toate că aceasta este
-realizat în mod implicit deoarece libxml este activată implicit.</para>'>
+<option role="configure">--with-libxml</option>, sau
+<option role="configure">--enable-libxml</option> pentru PHP anterior 7.4, cu
+toate că aceasta este realizat în mod implicit deoarece libxml este activată
+implicit.</para>'>
 
 <!-- XMLReader -->
 
@@ -3031,6 +3069,62 @@ extensia <link linkend="set.mongodb">MongoDB</link>.</para>'>
          </row>
 '>
 
+<!ENTITY mongodb.option.encryption.keyVaultClient '
+         <row xmlns="http://docbook.org/ns/docbook">
+          <entry>keyVaultClient</entry>
+          <entry><classname>MongoDB\Driver\Manager</classname></entry>
+          <entry>Managerul utilizat pentru a ruta interpelările cheilor de date
+          către un cluster separat MongoDB. Sunt utilizate implicit Managerul și
+          cluster-ul curent.</entry>
+         </row>
+'>
+
+<!ENTITY mongodb.option.encryption.keyVaultNamespace '
+         <row xmlns="http://docbook.org/ns/docbook">
+          <entry>keyVaultNamespace</entry>
+          <entry><type>string</type></entry>
+          <entry>Un spațiu de nume deplin calificat (de ex. <literal>"databaseName.collectionName"</literal>)
+          ce denotă colecția ce conține toate cheile de date utilizate pentru criptare și decriptare.</entry>
+         </row>
+'>
+
+<!ENTITY mongodb.option.encryption.kmsProviders '
+         <row xmlns="http://docbook.org/ns/docbook">
+          <entry>kmsProviders</entry>
+          <entry><type>array</type></entry>
+          <entry>
+           <para>
+            Un document ce conține configurația pentru unul sau mai mulți
+            furnizori KMS, ce vor fi utilizați pentru criptarea cheilor de date.
+            În prezent sunt susținute <literal>aws</literal> și <literal>local</literal>
+            și cel puțin unul dintre ei trebuie specificat.
+           </para>
+           <para>
+            Formatul pentru <literal>aws</literal> este după cum urmează:
+           </para>
+           <programlisting role="javascript">
+<![CDATA[
+aws: {
+    accessKeyId: <string>,
+    secretAccessKey: <string>
+}
+]]>
+           </programlisting>
+           <para>
+            Formatul pentru <literal>local</literal> este după cum urmează:
+           </para>
+           <programlisting role="javascript">
+<![CDATA[
+local: {
+    // Cheia principală utilizată pentru criptarea/decriptarea cheilor de date
+    key: <96-byte MongoDB\BSON\Binary with subtype 0>
+}
+]]>
+           </programlisting>
+          </entry>
+         </row>
+'>
+
 <!ENTITY mongodb.option.maxCommitTimeMS '
          <row xmlns="http://docbook.org/ns/docbook">
           <entry>maxCommitTimeMS</entry>
@@ -3610,7 +3704,7 @@ Acest parametru e ignorat dacă nu a fost stabilită opțiunea
        <entry><literal>G</literal></entry>
        <entry>
         La fel ca și specificatorul <literal>g</literal>, dar utilizează
-        <literal>E</literal> și <literal>F</literal>.
+        <literal>E</literal> și <literal>f</literal>.
        </entry>
       </row>
       <row>

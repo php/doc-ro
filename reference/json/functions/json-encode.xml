@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: ec74881ee14f1f386fe47c2c1f5cd995a2bd0a91 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 0d77f05f4541d8a977ebe4f96965dec4e10d6b33 Maintainer: simionea Status: ready -->
 <!-- CREDITS: radical -->
 
 <refentry xml:id="function.json-encode" xmlns="http://docbook.org/ns/docbook">
@@ -150,6 +150,26 @@
        <entry>
         A fost adăugată constanta <constant>JSON_PARTIAL_OUTPUT_ON_ERROR</constant>
         pentru parametrul <parameter>options</parameter>.
+       </entry>
+      </row>
+      <row>
+       <entry>5.5.0</entry>
+       <entry>
+        Când parametrul <parameter>value</parameter> produce o eroare de
+        codificare JSON, se întoarce &false; în loc de rezultatul parțial, doar
+        dacă parametrul <parameter>options</parameter> conține
+        <constant>JSON_PARTIAL_OUTPUT_ON_ERROR</constant>.
+        A se vedea <function>json_last_error</function> pentru lista deplină a
+        motivelor care pot cauza o codificare JSON să eșueze. Unul din potențialele
+        motive de eșec este că <parameter>value</parameter> conține șiruri de
+        caractere ce conțin UTF-8 nevalid.
+       </entry>
+      </row>
+      <row>
+       <entry>5.5.0</entry>
+       <entry>
+        <constant>E_WARNING</constant> nu mai este emisă pentru un parametru
+        <parameter>value</parameter> nevalid.
        </entry>
       </row>
       <row>
