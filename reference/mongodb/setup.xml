@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: f86cb421a18ad378eb2bc60f5cad2daddeb79ff0 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 57f5cde3ce57ccad06d600d8a29d781f475faf34 Maintainer: simionea Status: ready -->
 
 <book xml:id="mongodb.setup" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.setup;
@@ -9,32 +9,40 @@
  <article xml:id="mongodb.requirements">
   &reftitle.required;
   <para>
-   Driver-ul necesită PHP 5.5 sau ulterior.
+   Începând cu versiunea 1.8.0, driver-ul necesită PHP 7.0 sau ulterior.
+   Versiunile anterioare ale driver-ului permit compatibilitatea cu versiuni
+   PHP mai vechi.
   </para>
   <para>
    Driver-ul necesită <link xlink:href="&url.mongodb.libbson;">libbson</link>
    și <link xlink:href="&url.mongodb.libmongoc;">libmongoc</link>, și implicit
    va utiliza versiunile încorporate ale ambelor biblioteci.
+   Bibliotecile de sistem de asemenea pot fi utilizate, după cum e descris în
+   documentația <link linkend="mongodb.installation.manual">instalarea manuală</link>.
   </para>
   <para>
-   Driver-ul necesită <link xlink:href="&url.openssl;">OpenSSL</link> și se va
-   baza pe PHP pentru a găsi antetele sale (de ex. <literal>PHP_SETUP_OPENSSL</literal>).
-   Dacă procesul asamblării nu găsește OpenSSL, verificați ca pachetul de
-   dezvoltare OpenSSL (de ex. <literal>libssl-dev</literal>) și
-   <link xlink:href="&url.mongodb.wiki.pkg-config;">pkg-config</link> sunt ambele
-   instalate.
-  </para>
-  <para>
-   Datorită potențialelor probleme de reprezentare a întregilor de 64 biți pe
-   platforme de 32 biți, utilizatorii sunt sfătuiți să utilizeze medii de 64 de
-   biți. La utilizarea unei platforme pe 32 biți, observați că orice întreg pe 64
-   biți citit din baza de date va fi întors ca o instanță
-   <classname>MongoDB\BSON\Int64</classname> în loc de tip întreg PHP.
+   Driver-ul, prin intermediul libmongoc, depinde opțional de o bibliotecă TLS
+   (de ex. OpenSSL) și o va utiliza dacă este disponibilă. Dacă procesul de
+   asamblare nu reușește să găsească o bibliotecă TLS, utilizatorii trebuie să
+   verifice ca pachetele de dezvoltare corespunzătoare să fie instalate (de ex.
+   <literal>libssl-dev</literal>) și
+   <link xlink:href="&url.mongodb.wiki.pkg-config;">pkg-config</link>. Procesul
+   de detectare și configurare a bibliotecilor TLS este discutat mai detaliat în
+   documentația <link linkend="mongodb.installation.manual">instalarea manuală</link>.
   </para>
   <para>
    <link xlink:href="&url.cyrus;">Cyrus SASL</link> este o dependență opțională
-   și va fi utilizată dacă e disponibilă.
+   pentru a susține autentificarea Kerberos și va fi utilizată dacă e disponibilă.
   </para>
+  <note>
+   <simpara>
+    Datorită potențialelor probleme de reprezentare a întregilor de 64 biți pe
+    platforme de 32 biți, utilizatorii sunt sfătuiți să utilizeze medii de 64 de
+    biți. La utilizarea unei platforme pe 32 biți, observați că orice întreg pe 64
+    biți citit din baza de date va fi întors ca o instanță
+    <classname>MongoDB\BSON\Int64</classname> în loc de tip întreg PHP.
+   </simpara>
+  </note>
  </article>
 
  &reference.mongodb.configure;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 4bab668b1e37fa990d337ffc734773598920c529 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: d990a25ab53a1dba248be91c8a18dcb95affefe8 Maintainer: simionea Status: ready -->
 
 <article xml:id="mongodb.installation" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.install;
@@ -103,7 +103,7 @@ extension=php_mongodb.dll
  </section>
 
  <section xml:id="mongodb.installation.manual">
-  <title>Instalarea manuală a driver-ului PHP MongoDB</title>
+  <title>Asamblarea driver-ului PHP MongoDB din cod-sursă</title>
 
   <para>
    Dezvoltatorii de drivere și persoanele interesate de ultimele bugfix-uri pot
@@ -132,12 +132,15 @@ $ sudo make install
 
   <para>
    Implicit driver-ul va folosi versiunile încorporate ale
-   <link xlink:href="&url.mongodb.libbson;">libbson</link> și
-   <link xlink:href="&url.mongodb.libmongoc;">libmongoc</link> și va încerca să
-   le configureze. Dacă libbson și libmongoc sunt deja instalate ca biblioteci
-   de sistem, puteți instrui driver-ul să le utilizeze specificând
+   <link xlink:href="&url.mongodb.libbson;">libbson</link>,
+   <link xlink:href="&url.mongodb.libmongoc;">libmongoc</link> și
+   <link xlink:href="&url.mongodb.libmongocrypt;">libmongocrypt</link> și va
+   încerca să le configureze. Dacă aceste biblioteci sunt deja instalate ca
+   biblioteci de sistem, puteți instrui driver-ul să le utilizeze specificând
    <literal>--with-libbson=yes --with--libmongoc=yes</literal> ca argumente pentru
-   <literal>configure</literal>.
+   <literal>configure</literal>. Începând cu versiunea 1.7.0 a extensiei, aceste
+   argumente sunt învechite și ar trebui să utilizați în loc
+   <literal>--with-mongodb-system-libs=yes</literal>.
   </para>
 
   <para>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 983d613db33e11d2256f914ad1bacb0678ba0592 Maintainer: alexxed Status: ready -->
+<!-- EN-Revision: 9e4c917c09b4eed089d61074189ef81934a9dd23 Maintainer: alexxed Status: ready -->
 
 <appendix xml:id="mbstring.constants" xmlns="http://docbook.org/ns/docbook">
  &reftitle.constants;
@@ -44,6 +44,9 @@
    </term>
    <listitem>
     <simpara>
+     Efectuează un transfer deplin la litere majuscule.
+     Aceasta poate modifica lungimea șirului de caractere.
+     Acesta e modul utilizat de mb_strtoupper().
     </simpara>
    </listitem>
   </varlistentry>
@@ -54,6 +57,9 @@
    </term>
    <listitem>
     <simpara>
+     Efectuează un transfer deplin la litere minuscule.
+     Aceasta poate modifica lungimea șirului de caractere.
+     Acesta e modul utilizat de mb_strtolower().
     </simpara>
    </listitem>
   </varlistentry>
@@ -64,6 +70,10 @@
    </term>
    <listitem>
     <simpara>
+     Efectuează o conversie deplină de tip "title-case" bazată pe proprietățile
+     Unicode derivate Cased și CaseIgnorable.
+     În particular aceasta îmbunătățește lucrul cu apostroafele.
+     Aceasta poate modifica lungimea șirului de caractere.
     </simpara>
    </listitem>
   </varlistentry>
@@ -74,6 +84,10 @@
    </term>
    <listitem>
     <simpara>
+     Efectuează o conversie deplină a caracterelor minuscule și majuscule, ceea
+     ce elimină distincțiile caracterelor prezente în șir.
+     Aceasta se folosește pentru potrivirea caracterelor indiferent de tipul lor (minuscule sau majuscule).
+     Aceasta poate modifica lungimea șirului de caractere.
      Disponibilă începând cu PHP 7.3.
     </simpara>
    </listitem>
@@ -85,6 +99,8 @@
    </term>
    <listitem>
     <simpara>
+     Efectuează o conversie simplă în caractere minuscule.
+     Aceasta nu modifică lungimea șirului de caractere.
      Disponibilă începând cu PHP 7.3.
     </simpara>
    </listitem>
@@ -96,6 +112,8 @@
    </term>
    <listitem>
     <simpara>
+     Efectuează o conversie simplă în caractere majuscule.
+     Aceasta nu modifică lungimea șirului de caractere.
      Disponibilă începând cu PHP 7.3.
     </simpara>
    </listitem>
@@ -107,6 +125,8 @@
    </term>
    <listitem>
     <simpara>
+     Efectuează o conversie simplă de tip "title-case".
+     Aceasta nu modifică lungimea șirului de caractere.
      Disponibilă începând cu PHP 7.3.
     </simpara>
    </listitem>
@@ -118,7 +138,11 @@
    </term>
    <listitem>
     <simpara>
-     Utilizată la operațiuni insensibile la litere minuscule sau majuscule. Disponibilă începând cu PHP 7.3.
+     Efectuează o conversie simplă a caracterelor minuscule și majuscule, ceea
+     ce elimină distincțiile caracterelor prezente în șir.
+     Aceasta se folosește pentru potrivirea caracterelor indiferent de tipul lor (minuscule sau majuscule).
+     Aceasta nu modifică lungimea șirului de caractere.
+     Utilizată intern de extensia MBString la operațiuni insensibile la litere minuscule sau majuscule. Disponibilă începând cu PHP 7.3.
     </simpara>
    </listitem>
   </varlistentry>
