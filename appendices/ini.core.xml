@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 13076e3094f8f42eded79c2a841d344f7a17e728 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: c653b888fbfb9036b7dc514ba71d6f04edca755d Maintainer: simionea Status: ready -->
 
  <section xml:id="ini.core" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Descrierea directivelor de bază ale &php.ini;</title>
@@ -104,6 +104,12 @@
         <entry>Disponibil începând cu PHP 7.1.0.</entry>
        </row>
        <row>
+        <entry><link linkend="ini.zend.exception-ignore-args">zend.exception_ignore_args</link></entry>
+        <entry>"0"</entry>
+        <entry>PHP_INI_ALL</entry>
+        <entry>Disponibil începând cu PHP 7.4.0</entry>
+       </row>
+       <row>
         <entry><link linkend="ini.zend.multibyte">zend.multibyte</link></entry>
         <entry>"0"</entry>
         <entry>PHP_INI_ALL</entry>
@@ -149,9 +155,9 @@
      </tgroup>
     </table>
    </para>
-
+   
    &ini.descriptions.title;
-
+   
    <para>
     <variablelist>
      <varlistentry xml:id="ini.short-open-tag">
@@ -160,7 +166,7 @@
        <type>boolean</type>
       </term>
       <listitem>
-        <para>
+       <para>
          Indică PHP dacă forma prescurtată (
          <userinput>&lt;? ?&gt;</userinput>)
          a etichetei de deschidere a PHP este permisă. Dacă doriți să
@@ -171,7 +177,7 @@
          </userinput>. De asemenea, dacă este dezactivată, trebuie să utilizați
          forma lungă a etichetei de deschidere PHP (<userinput>&lt;?php ?&gt;
          </userinput>).
-        </para>
+       </para>
        <note>
         <para>
          Această directivă de asemenea afectează scurtătura
@@ -185,7 +191,7 @@
        </note>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.asp-tags">
       <term>
        <parameter>asp_tags</parameter>
@@ -222,7 +228,7 @@
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.precision">
       <term>
        <parameter>precision</parameter>
@@ -250,7 +256,7 @@
        </simpara>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.y2k-compliance">
       <term>
        <parameter>y2k_compliance</parameter>
@@ -262,7 +268,8 @@
        </simpara>
       </listitem>
      </varlistentry>
-
+     
+     
      <varlistentry xml:id="ini.allow-call-time-pass-reference">
       <term>
        <parameter>allow_call_time_pass_reference</parameter>
@@ -326,7 +333,7 @@
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.expose-php">
       <term>
        <parameter>expose_php</parameter>
@@ -357,7 +364,7 @@
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.disable-functions">
       <term>
        <parameter>disable_functions</parameter>
@@ -382,7 +389,7 @@
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.disable-classes">
       <term>
        <parameter>disable_classes</parameter>
@@ -431,7 +438,7 @@
        </note>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.zend.ze1-compatibility-mode">
       <term>
        <parameter>zend.ze1_compatibility_mode</parameter>
@@ -457,7 +464,7 @@
        </warning>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.hard-timeout">
       <term>
        <parameter>hard_timeout</parameter>
@@ -465,6 +472,18 @@
       </term>
       <listitem>
        <para>
+       </para>
+      </listitem>
+     </varlistentry>
+     
+     <varlistentry xml:id="ini.zend.exception-ignore-args">
+      <term>
+       <parameter>zend.exception_ignore_args</parameter>
+       <type>boolean</type>
+      </term>
+      <listitem>
+       <para>
+        Exclude argumentele din "stack trace"-urile generate din excepții.
        </para>
       </listitem>
      </varlistentry>
@@ -488,7 +507,7 @@
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.zend.script-encoding">
       <term>
        <parameter>zend.script_encoding</parameter>
@@ -524,7 +543,7 @@
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.zend.signal-check">
       <term>
        <parameter>zend.signal_check</parameter>
@@ -536,7 +555,7 @@
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.exit-on-timeout">
       <term>
        <parameter>exit_on_timeout</parameter>
@@ -550,11 +569,11 @@
        </para>
       </listitem>
      </varlistentry>
-
+     
     </variablelist>
    </para>
   </section>
-
+  
   <section xml:id="ini.sect.resource-limits">
    <title>Limitele resurselor</title>
    <para>
@@ -580,9 +599,9 @@
      </tgroup>
     </table>
    </para>
-
+   
    &ini.descriptions.title;
-
+   
    <para>
     <variablelist>
      <varlistentry xml:id="ini.memory-limit">
@@ -606,9 +625,9 @@
         necesar pentru a defini funcțiile <function>memory_get_usage</function> și
         <function>memory_get_peak_usage</function> anterior versiunii 5.2.1.
        </para>
-
+       
        &ini.shorthandbytes;
-
+       
       </listitem>
      </varlistentry>
     </variablelist>
@@ -617,7 +636,7 @@
     Accesați de asemenea: <link linkend="ini.max-execution-time">max_execution_time</link>.
    </para>
   </section>
-
+  
   <section xml:id="ini.sect.performance">
    <title>Reglarea performanței</title>
    <para>
@@ -699,7 +718,7 @@
     </variablelist>
    </para>
   </section>
-
+  
   <section xml:id="ini.sect.data-handling">
    <title>Manipularea datelor</title>
    <para>
@@ -809,9 +828,9 @@
      </tgroup>
     </table>
    </para>
-
+   
    &ini.descriptions.title;
-
+   
    <para>
     <variablelist>
      <varlistentry xml:id="ini.arg-separator.output">
@@ -825,7 +844,7 @@
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.arg-separator.input">
       <term>
        <parameter>arg_separator.input</parameter>
@@ -842,7 +861,7 @@
        </note>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.variables-order">
       <term>
        <parameter>variables_order</parameter>
@@ -895,7 +914,7 @@
        </note>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.request-order">
       <term>
        <parameter>request_order</parameter>
@@ -920,7 +939,7 @@
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.auto-globals-jit">
       <term>
        <parameter>auto_globals_jit</parameter>
@@ -954,7 +973,7 @@
        </warning>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.register-globals">
       <term>
        <parameter>register_globals</parameter>
@@ -995,7 +1014,7 @@
        &warn.deprecated.feature-5-3-0.removed-5-4-0;
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.register-argc-argv">
       <term>
        <parameter>register_argc_argv</parameter>
@@ -1011,7 +1030,7 @@
        </simpara>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.register-long-arrays">
       <term>
        <parameter>register_long_arrays</parameter>
@@ -1035,7 +1054,7 @@
        &warn.deprecated.feature-5-3-0.removed-5-4-0;
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.enable-post-data-reading">
       <term>
        <parameter>enable_post_data_reading</parameter>
@@ -1069,9 +1088,9 @@
         Vorbind la general, <link linkend="ini.memory-limit">memory_limit</link>
         ar trebui să fie mai mare decât <parameter>post_max_size</parameter>.
        </simpara>
-
+       
        &ini.shorthandbytes;
-
+       
        <simpara>
         Dacă mărimea datelor post este mai mare decât post_max_size, atunci
         <varname>$_POST</varname> și <varname>$_FILES</varname>
@@ -1146,7 +1165,7 @@
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.auto-append-file">
       <term>
        <parameter>auto_append_file</parameter>
@@ -1170,7 +1189,7 @@
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.default-mimetype">
       <term>
        <parameter>default_mimetype</parameter>
@@ -1186,7 +1205,7 @@
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.default-charset">
       <term>
        <parameter>default_charset</parameter>
@@ -1224,7 +1243,7 @@
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.input-encoding">
       <term>
        <parameter>input_encoding</parameter>
@@ -1237,7 +1256,7 @@
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.output-encoding">
       <term>
        <parameter>output_encoding</parameter>
@@ -1250,7 +1269,7 @@
        </para>
       </listitem>
      </varlistentry>
-
+      
      <varlistentry xml:id="ini.internal-encoding">
       <term>
        <parameter>internal_encoding</parameter>
@@ -1265,7 +1284,7 @@
        </para>
       </listitem>
      </varlistentry>
-
+      
      <varlistentry xml:id="ini.always-populate-raw-post-data">
       <term>
        <parameter>always_populate_raw_post_data</parameter>
@@ -1294,7 +1313,7 @@
        </para>
       </listitem>
      </varlistentry>
-
+     
     </variablelist>
    </para>
    <para>
@@ -1304,7 +1323,7 @@
     <link linkend="ini.magic-quotes-sybase">magic_quotes_sybase</link>.
    </para>
   </section>
-
+  
   <section xml:id="ini.sect.path-directory">
    <title>Căile și directoarele</title>
    <para>
@@ -1450,9 +1469,9 @@
      </tgroup>
     </table>
    </para>
-
+   
    &ini.descriptions.title;
-
+   
    <para>
     <variablelist>
      <varlistentry xml:id="ini.include-path">
@@ -1532,7 +1551,7 @@ include_path = ".:${USER}/pear/php"
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.open-basedir">
       <term>
        <parameter>open_basedir</parameter>
@@ -1618,7 +1637,7 @@ include_path = ".:${USER}/pear/php"
        </note>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.doc-root">
       <term>
        <parameter>doc_root</parameter>
@@ -1638,7 +1657,7 @@ include_path = ".:${USER}/pear/php"
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.user-ini.cache-ttl">
       <term>
        <parameter>user_ini.cache_ttl</parameter>
@@ -1649,7 +1668,7 @@ include_path = ".:${USER}/pear/php"
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.user-ini.filename">
       <term>
        <parameter>user_ini.filename</parameter>
@@ -1660,7 +1679,7 @@ include_path = ".:${USER}/pear/php"
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.user-dir">
       <term>
        <parameter>user_dir</parameter>
@@ -1674,7 +1693,7 @@ include_path = ".:${USER}/pear/php"
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.extension-dir">
       <term>
        <parameter>extension_dir</parameter>
@@ -1689,7 +1708,7 @@ include_path = ".:${USER}/pear/php"
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.extension">
       <term>
        <parameter>extension</parameter>
@@ -1701,7 +1720,7 @@ include_path = ".:${USER}/pear/php"
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.zend-extension">
       <term>
        <parameter>zend_extension</parameter>
@@ -1714,7 +1733,7 @@ include_path = ".:${USER}/pear/php"
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.zend-extension-debug">
       <term>
        <parameter>zend_extension_debug</parameter>
@@ -1727,7 +1746,7 @@ include_path = ".:${USER}/pear/php"
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.zend-extension-debug-ts">
       <term>
        <parameter>zend_extension_debug_ts</parameter>
@@ -1741,7 +1760,7 @@ include_path = ".:${USER}/pear/php"
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.zend-extension-ts">
       <term>
        <parameter>zend_extension_ts</parameter>
@@ -1754,7 +1773,7 @@ include_path = ".:${USER}/pear/php"
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.cgi.check-shebang-line">
       <term>
        <parameter>cgi.check_shebang_line</parameter>
@@ -1772,7 +1791,7 @@ include_path = ".:${USER}/pear/php"
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.cgi.discard-path">
       <term>
        <parameter>cgi.discard_path</parameter>
@@ -1785,7 +1804,7 @@ include_path = ".:${USER}/pear/php"
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.cgi.fix-pathinfo">
       <term>
        <parameter>cgi.fix_pathinfo</parameter>
@@ -1809,7 +1828,7 @@ include_path = ".:${USER}/pear/php"
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.cgi.force-redirect">
       <term>
        <parameter>cgi.force_redirect</parameter>
@@ -1831,7 +1850,7 @@ include_path = ".:${USER}/pear/php"
        </note>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.cgi.nph">
       <term>
        <parameter>cgi.nph</parameter>
@@ -1844,7 +1863,7 @@ include_path = ".:${USER}/pear/php"
         </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.cgi.redirect-status-env">
       <term>
        <parameter>cgi.redirect_status_env</parameter>
@@ -1866,7 +1885,7 @@ include_path = ".:${USER}/pear/php"
        </note>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.cgi.rfc2616-headers">
       <term>
        <parameter>cgi.rfc2616_headers</parameter>
@@ -1893,7 +1912,7 @@ include_path = ".:${USER}/pear/php"
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.fastcgi.impersonate">
       <term>
        <parameter>fastcgi.impersonate</parameter>
@@ -1910,7 +1929,7 @@ include_path = ".:${USER}/pear/php"
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.fastcgi.logging">
       <term>
        <parameter>fastcgi.logging</parameter>
@@ -1923,11 +1942,11 @@ include_path = ".:${USER}/pear/php"
        </para>
       </listitem>
      </varlistentry>
-
+     
     </variablelist>
    </para>
   </section>
-
+  
   <section xml:id="ini.sect.file-uploads">
    <title>Încărcarea fișierelor</title>
    <para>
@@ -1983,9 +2002,9 @@ include_path = ".:${USER}/pear/php"
      </tgroup>
     </table>
    </para>
-
+   
    &ini.descriptions.title;
-
+   
    <para>
     <variablelist>
      <varlistentry xml:id="ini.file-uploads">
@@ -2003,7 +2022,7 @@ include_path = ".:${USER}/pear/php"
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.upload-tmp-dir">
       <term>
        <parameter>upload_tmp_dir</parameter>
@@ -2025,7 +2044,7 @@ include_path = ".:${USER}/pear/php"
        </para>
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.upload-max-filesize">
       <term>
        <parameter>upload_max_filesize</parameter>
@@ -2035,12 +2054,12 @@ include_path = ".:${USER}/pear/php"
        <para>
         Mărimea maximă a unui fișier încărcat.
        </para>
-
+       
        &ini.shorthandbytes;
-
+       
       </listitem>
      </varlistentry>
-
+     
      <varlistentry xml:id="ini.max-file-uploads">
       <term>
        <parameter>max_file_uploads</parameter>
@@ -2057,7 +2076,7 @@ include_path = ".:${USER}/pear/php"
     </variablelist>
    </para>
   </section>
-
+  
   <section xml:id="ini.sect.sql-general">
    <title>SQL general</title>
    <para>
@@ -2083,9 +2102,9 @@ include_path = ".:${USER}/pear/php"
      </tgroup>
     </table>
    </para>
-
+   
    &ini.descriptions.title;
-
+   
    <para>
     <variablelist>
      <varlistentry xml:id="ini.sql.safe-mode">
@@ -2111,7 +2130,7 @@ include_path = ".:${USER}/pear/php"
     </variablelist>
    </para>
   </section>
-
+  
   <section xml:id="ini.sect.windows">
    <title>Specifice Windows</title>
    <para>
@@ -2137,9 +2156,9 @@ include_path = ".:${USER}/pear/php"
      </tgroup>
     </table>
    </para>
-
+   
    &ini.descriptions.title;
-
+   
    <para>
     <variablelist>
      <varlistentry xml:id="ini.windows-show-crt-warning">
@@ -2157,7 +2176,7 @@ include_path = ".:${USER}/pear/php"
     </variablelist>
    </para>
   </section>
-
+  
  </section>
 
 <!-- Keep this comment at the end of the file
