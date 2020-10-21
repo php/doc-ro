@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: c8e0df5f35214f64fadb31a5149c2bd2cfdc4aa3 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 0970bf6ea3abcd27673fe4632a1ee62eb9f5223e Maintainer: simionea Status: ready -->
 
 <appendix xml:id="migration51" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <title>Migrarea de la PHP 5.0.x la PHP 5.1.x</title>
@@ -617,11 +617,11 @@ class test {
        <entry>Nu este menținută activ</entry>
       </row>
       <row>
-       <entry><link linkend="ref.mcve">ext/mcve</link></entry>
+       <entry>ext/mcve</entry>
        <entry>pecl/mcve</entry>
       </row>
       <row>
-       <entry><link linkend="ref.mnogosearch">ext/mnogosearch</link></entry>
+       <entry>ext/mnogosearch</entry>
        <entry>Nu este menținută activ</entry>
       </row>
       <row>
@@ -644,7 +644,7 @@ class test {
        <entry><link xlink:href="&url.pecl.package;ffi">pecl/ffi</link></entry>
       </row>
       <row>
-       <entry><link linkend="ref.nis">ext/yp</link></entry>
+       <entry>ext/yp</entry>
        <entry>Nu este menținută activ</entry>
       </row>
       <row>

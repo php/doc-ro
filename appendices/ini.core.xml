@@ -375,7 +375,7 @@
         Această directivă vă permite să dezactivați anumite funcții din motive
         de <link linkend="security">securitate</link>. Ea conține o listă a
         denumirilor funcțiilor, separate prin virgulă. disable_functions
-        nu este afectată de <link linkend="ini.safe-mode">Modul securizat</link>.
+        nu este afectată de Modul securizat.
        </para>
        <para>
         Doar <link linkend="functions.internal">internal functions</link> poate
@@ -400,7 +400,7 @@
         Această directivă vă permite să dezactivați anumite clase din motive
         de <link linkend="security">securitate</link>. Ea conține o listă a
         denumirilor claselor, separate prin virgulă. disable_classes
-        nu este afectată de <link linkend="ini.safe-mode">Modul securizat</link>.
+        nu este afectată de Modul securizat.
        </simpara>
        <simpara>
         Această directivă trebuie să fie stabilită în &php.ini; De exemplu nu
@@ -1318,9 +1318,9 @@
    </para>
    <para>
     Accesați de asemenea:
-    <link linkend="ini.magic-quotes-gpc">magic_quotes_gpc</link>,
+ <link linkend="ini.magic-quotes-gpc">magic_quotes_gpc</link>,
     <link linkend="ini.magic-quotes-runtime">magic_quotes_runtime</link> și
-    <link linkend="ini.magic-quotes-sybase">magic_quotes_sybase</link>.
+    magic_quotes_sybase.
    </para>
   </section>
   
@@ -1729,7 +1729,7 @@ include_path = ".:${USER}/pear/php"
       <listitem>
        <para>
         Denumirea extensiei Zend încărcabile dinamic (spre exemplu
-        <link linkend="book.apd">APD</link>) ce va fi încărcată la startarea PHP.
+        XDebug) ce va fi încărcată la startarea PHP.
        </para>
       </listitem>
      </varlistentry>

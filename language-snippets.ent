@@ -360,8 +360,8 @@ viitoare a PHP. Utilizați această funcție la propriul risc.</simpara>
 
 <!ENTITY warn.imaprecodeyaz '<warning xmlns="http://docbook.org/ns/docbook">
 <simpara>Extensiile <link linkend="book.imap">IMAP</link>,
-<link linkend="book.recode">recode</link>, <link linkend="book.yaz">YAZ</link>
-și <link linkend="book.cyrus">Cyrus</link> nu pot fi utilizate împreună,
+<link linkend="book.recode">recode</link> și <link linkend="book.yaz">YAZ</link>
+nu pot fi utilizate împreună,
 deoarece ele utilizează aceleași simboluri interne. Notă: Yaz 2.0 și ulterior nu
 manifestă această problemă</simpara></warning>'>
 
@@ -554,10 +554,6 @@ tabloului (<type>array</type>) de intrare după utilizare.</simpara></note>'>
 
 <!ENTITY seealso.array.sorting '<link xmlns="http://docbook.org/ns/docbook"
 linkend="array.sorting">Comparația funcțiilor de sortare a tablourilor</link>'>
-
-<!ENTITY seealso.callback 'informație despre tipul
-<link xmlns="http://docbook.org/ns/docbook" linkend="language.types.callback">
-callback</link>'>
 
 <!ENTITY avail.register-long-arrays 'Începând cu PHP 5.0.0
 <link xmlns="http://docbook.org/ns/docbook" linkend="language.variables.predefined">
@@ -1633,10 +1629,8 @@ Versiunea PHP pentru Windows susține implicit această extensie. Nu este nevoie
 să încărcați extensii suplimentare pentru a putea utiliza aceste funcții.
 </simpara>'>
 
-<!-- These are here as helpers for manual consistency and brievety -->
-
-<!ENTITY safemode '<link xmlns="http://docbook.org/ns/docbook"
-linkend="ini.safe-mode">modul securizat</link>'>
+<!-- These are here as helpers for manual consistency and brievety-->
+<!ENTITY safemode '<link xmlns="http://docbook.org/ns/docbook" linkend="ini.safe-mode">modul securizat</link>'>
 
 <!ENTITY sqlsafemode '<link  xmlns="http://docbook.org/ns/docbook"
 linkend="ini.sql.safe-mode">modul SQL securizat</link>'>
