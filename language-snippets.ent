@@ -1488,8 +1488,8 @@ aceea, <literal>echo y | echo x</literal> devine <literal>echo y \| echo x
 
 <!ENTITY note.exec-path '<note xmlns="http://docbook.org/ns/docbook"><simpara>
 Când este activat <link linkend="features.safe-mode">modul securizat</link>,
-puteți executa fișierele aflate în <link linkend="ini.safe-mode-exec-dir">
-safe_mode_exec_dir</link>. Din motive practice, în prezent nu se permite de a
+puteți executa fișierele aflate în safe_mode_exec_dir. Din motive practice,
+în prezent nu se permite de a
 avea componente <literal>..</literal> în calea către executabil.</simpara>
 </note>'>
 
@@ -1630,7 +1630,6 @@ să încărcați extensii suplimentare pentru a putea utiliza aceste funcții.
 </simpara>'>
 
 <!-- These are here as helpers for manual consistency and brievety-->
-<!ENTITY safemode '<link xmlns="http://docbook.org/ns/docbook" linkend="ini.safe-mode">modul securizat</link>'>
 
 <!ENTITY sqlsafemode '<link  xmlns="http://docbook.org/ns/docbook"
 linkend="ini.sql.safe-mode">modul SQL securizat</link>'>
@@ -1658,7 +1657,6 @@ a fost stabilită cu ajutorul acestei funcții.</para></listitem>
 </varlistentry>'>
 
 <!-- CTYPE Notes -->
-
 <!ENTITY note.ctype.parameter.integer '<note xmlns="http://docbook.org/ns/docbook"><para>
 Dacă e furnizat un <type>integer</type> cu valoarea între -128 și 255 inclusiv,
 el este interpretat ca o valoare ASCII a unui singur caracter (valorilor negative
