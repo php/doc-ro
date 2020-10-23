@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: f7800a7c1d2940cd986e86b76a46f6718a277853 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 3e15d2894fb35432d2a111db36fe8ba8ebc62024 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.empty" xmlns="http://docbook.org/ns/docbook">
@@ -70,41 +70,6 @@
     <member>&false;</member>
     <member><literal>array()</literal> (un tablou vid)</member>
    </simplelist>
-  </para>
- </refsect1>
-
- <refsect1 role="changelog">
-  &reftitle.changelog;
-  <para>
-   <informaltable>
-    <tgroup cols="2">
-     <thead>
-      <row>
-       <entry>&Version;</entry>
-       <entry>&Description;</entry>
-      </row>
-     </thead>
-     <tbody>
-      <row>
-       <entry>5.5.0</entry>
-       <entry>
-        <para>
-         <function>empty</function> acum susține și expresii, nu doar variabile.
-        </para>
-       </entry>
-      </row>
-      <row>
-       <entry>5.4.0</entry>
-       <entry>
-        <para>
-         Verificarea deplasamentelor non-numerice ale șirurilor de caractere
-         întoarce &true;.
-        </para>
-       </entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
   </para>
  </refsect1>
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: b824e2b1086e94a1077bd071964547283616030a Maintainer: simionea Status: ready -->
+<!-- EN-Revision: b92a33c51c87151412a2d75ef485f9d529fd9c33 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xmlns="http://docbook.org/ns/docbook" xml:id="function.error-reporting">
@@ -63,36 +63,6 @@
   </para>
  </refsect1>
 
- <refsect1 role="changelog">
-  &reftitle.changelog;
-  <para>
-   <informaltable>
-    <tgroup cols="2">
-     <thead>
-      <row>
-       <entry>&Version;</entry>
-       <entry>&Description;</entry>
-      </row>
-     </thead>
-     <tbody>
-      <row>
-       <entry>5.4.0</entry>
-       <entry><constant>E_STRICT</constant> a devenit parte componentă a <constant>E_ALL</constant>.</entry>
-      </row>
-      <row>
-       <entry>5.3.0</entry>
-       <entry>Au fost introduse <constant>E_DEPRECATED</constant> și <constant>E_USER_DEPRECATED</constant>.</entry>
-      </row>
-      <row>
-       <entry>5.2.0</entry>
-       <entry>A fost introdusă <constant>E_RECOVERABLE_ERROR</constant>.</entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-  </para>
- </refsect1>
-
  <refsect1 role="examples">
   &reftitle.examples;
   <para>
@@ -116,7 +86,7 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
 // Raportează toate erorile cu excepția E_NOTICE
 error_reporting(E_ALL & ~E_NOTICE);
 
-// Raportează toate erorile PHP (vezi jurnalul schimbărilor)
+// Raportează toate erorile PHP
 error_reporting(E_ALL);
 
 // Raportează toate erorile PHP

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: a2db0ec37511850cc529be2b141bf194ad878ee2 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 9af43469f46843451955b8926fe470a9f3d45034 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.error-log" xmlns="http://docbook.org/ns/docbook">
@@ -171,30 +171,6 @@ error_log("Ai dat-o în bară!", 3, "/var/tmp/my-errors.log");
 ]]>
     </programlisting>
    </example>
-  </para>
- </refsect1>
-
- <refsect1 role="changelog">
-  &reftitle.changelog;
-  <para>
-   <informaltable>
-    <tgroup cols="2">
-     <thead>
-      <row>
-       <entry>&Version;</entry>
-       <entry>&Description;</entry>
-      </row>
-     </thead>
-     <tbody>
-     <row>
-       <entry>5.2.7</entry>
-       <entry>
-        A fost adăugată valoarea posibilă 4 la <parameter>message_type</parameter>.
-       </entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
   </para>
  </refsect1>
 </refentry>

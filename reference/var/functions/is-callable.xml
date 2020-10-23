@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 8088fbe7ef741a952c44faf4a09131c78d4bfe82 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 468e71623d4c2269ef237ce7ab5a2792dbd0e7b7 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.is-callable" xmlns="http://docbook.org/ns/docbook">
@@ -21,10 +21,7 @@
    <methodparam choice="opt"><type>string</type><parameter role="reference">callable_name</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Verifică dacă conținutul unei variabile poate fi apelat în calitate de
-   funcție. Aceasta poate verifica dacă o variabilă simplă conține denumirea unei
-   funcții valide, sau dacă un tablou conține un obiect și denumirea unei funcții
-   codificate în mod corespunzător.
+   Verifică dacă valoarea este de tip <type>callable</type>.
   </para>
  </refsect1>
 

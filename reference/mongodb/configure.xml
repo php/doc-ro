@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: d990a25ab53a1dba248be91c8a18dcb95affefe8 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 892e1c8921d314bed5e844a38845f38ecc14b37b Maintainer: simionea Status: ready -->
 
 <article xml:id="mongodb.installation" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.install;
@@ -108,7 +108,7 @@ extension=php_mongodb.dll
   <para>
    Dezvoltatorii de drivere și persoanele interesate de ultimele bugfix-uri pot
    compila driver-ul din cel mai recent cod-sursă de pe
-   <link xlink:href="&url.mongodb.github;">Github</link>. Rulați următoarele
+   <link xlink:href="&url.mongodb.github.new;">Github</link>. Rulați următoarele
    comenzi pentru a clona și a asambla proiectul:
    <programlisting role="shell">
 <![CDATA[

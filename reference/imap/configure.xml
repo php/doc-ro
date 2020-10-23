@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: fc870e6f972ed48069f4c7a5a449c2e843f343a7 Maintainer: simionea Status: ready -->
 
 <section xml:id="imap.installation" xmlns="http://docbook.org/ns/docbook">
  &reftitle.install;
@@ -14,11 +14,6 @@
   descrierii anterioare. Utilizatorii <productname>Windows</productname> pot
   include biblioteca DLL <filename>php_imap.dll</filename> în &php.ini;.
  </para>
- <para>
-  IMAP nu este susținut pe sisteme mai vechi de Windows 2000. Aceasta se
-  datorează faptului că el utilizează funcții de criptare pentru a permite
-  conexiuni SSL la serverele de poștă.
- </para>
  <note>
   <simpara>
    În dependență de configurarea c-client, posibil va trebui să adăugați
@@ -27,6 +22,13 @@
    la linia de configurare PHP.
   </simpara>
  </note>
+
+ <warning>
+  <simpara>
+   Extensia IMAP nu este sigură la utilizarea firelor de execuție; deci nu trebuie
+   utilizată cu versiuni ZTS ale PHP.
+  </simpara>
+ </warning>
 
  &warn.imaprecodeyaz;
 

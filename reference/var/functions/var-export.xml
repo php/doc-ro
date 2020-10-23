@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 9ddc8b69468da104704dadf9fb8d22480c7ad687 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 53bdffa6b9f8ce5ffdaf476c9d450f7cd0d1afa2 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 <!-- splitted from ./en/functions/var.xml, last change in rev 1.6 -->
 
@@ -85,13 +85,6 @@
         Efectul practic este că acum <classname>stdClass</classname> este
         exportabil și codul-sursă ce rezultă va funcționa chiar și pe
         versiuni anterioare ale PHP.
-       </entry>
-      </row>
-      <row>
-       <entry>5.1.0</entry>
-       <entry>
-        Acum este posibil de a exporta clase și tablouri conținând clase utilizând
-        metoda magică <link linkend="object.set-state">__set_state()</link>.
        </entry>
       </row>
      </tbody>

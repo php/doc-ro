@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 40352bfbde2dba2110bab608d6a65687c85ad064 Maintainer: radical Status: ready -->
+<!-- EN-Revision: 9af43469f46843451955b8926fe470a9f3d45034 Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
 
 <refentry xml:id="function.json-decode" xmlns="http://docbook.org/ns/docbook">
@@ -15,7 +15,7 @@
   <methodsynopsis>
    <type>mixed</type><methodname>json_decode</methodname>
    <methodparam><type>string</type><parameter>json</parameter></methodparam>
-   <methodparam choice="opt"><type>bool</type><parameter>assoc</parameter><initializer>&false;</initializer></methodparam>
+   <methodparam choice="opt"><type>bool</type><parameter>assoc</parameter><initializer>&null;</initializer></methodparam>
    <methodparam choice="opt"><type>int</type><parameter>depth</parameter><initializer>512</initializer></methodparam>
    <methodparam choice="opt"><type>int</type><parameter>options</parameter><initializer>0</initializer></methodparam>
   </methodsynopsis>
@@ -46,8 +46,10 @@
      <term><parameter>assoc</parameter></term>
      <listitem>
       <para>
-       Dacă e specificată valoarea &true;, &object; întors va fi convertit într-un
-       &array; asociativ.
+       Când este &true;, obiectele JSON vor fi întoarse ca tablouri asociative;
+       când este &false;, obiectele JSON vor fi întoarse ca obiecte.
+       Când este &null;, obiectele JSON vor fi întoarse ca tablouri asociative sau obiecte în dependență dacă <constant>JSON_OBJECT_AS_ARRAY</constant>
+       este setat în <parameter>options</parameter>.
       </para>
      </listitem>
     </varlistentry>
@@ -112,6 +114,12 @@
       <row>
        <entry>7.2.0</entry>
        <entry>
+        Parametrul <parameter>assoc</parameter> poate fi acum nul.
+       </entry>
+      </row>
+      <row>
+       <entry>7.2.0</entry>
+       <entry>
         Au fost adăugate valorile <constant>JSON_INVALID_UTF8_IGNORE</constant> și
         <constant>JSON_INVALID_UTF8_SUBSTITUTE</constant> a parametrului
         <parameter>options</parameter>.
@@ -122,62 +130,6 @@
        <entry>
         O cheie JSON vidă ("") poate fi codificată într-o proprietate vidă a
         obiectului în loc de a folosi o cheie cu valoarea <literal>_empty_</literal>.
-       </entry>
-      </row>
-      <row>
-       <entry>7.0.0</entry>
-       <entry>
-        S-a renunțat la formatele de numere incompatibile cu RFC 7159 - la nivel superior
-        (07, 0xff, .1, -.1) și la toate nivelele ([1.], [1.e1])
-       </entry>
-      </row>
-      <row>
-       <entry>7.0.0</entry>
-       <entry>
-        Un șir de caractere PHP vid sau o valoare care după transformarea în șir
-        de caractere devine vidă (<literal>NULL</literal>, <literal>FALSE</literal>) rezultă
-        într-o eroare de sintaxă JSON.
-       </entry>
-      </row>
-      <row>
-       <entry>5.6.0</entry>
-       <entry>
-        Variantele cuvintelor-cheie <literal>true</literal>,
-        <literal>false</literal> și <literal>null</literal> care nu sunt scrise
-        în întregime cu litere minuscule nu mai sunt acceptate ca date de
-        intrare valide și vor genera avertismente.
-       </entry>
-      </row>
-      <row>
-       <entry>5.4.0</entry>
-       <entry>
-        Au fost adăugate valorile parametrului <parameter>options</parameter>
-        <constant>JSON_BIGINT_AS_STRING</constant> și <constant>JSON_OBJECT_AS_ARRAY</constant>.
-       </entry>
-      </row>
-      <row>
-       <entry>5.4.0</entry>
-       <entry>
-        A fost adăugat parametrul <parameter>options</parameter>.
-       </entry>
-      </row>
-      <row>
-       <entry>5.3.0</entry>
-       <entry>
-        A fost adăugat parametrul opțional <parameter>depth</parameter>.
-        Limita de imbricare implicită a fost mărită de la 128 la 512.
-       </entry>
-      </row>
-      <row>
-       <entry>5.2.3</entry>
-       <entry>
-        Limita de imbricare a fost mărită de la 20 la 128.
-       </entry>
-      </row>
-      <row>
-       <entry>5.2.1</entry>
-       <entry>
-        A fost adăugată susținerea decodificării JSON a tipurilor de bază.
        </entry>
       </row>
      </tbody>
