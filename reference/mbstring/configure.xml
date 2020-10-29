@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 8ca69ba3fb4cf1cfa528bb0e0bddf1a383003e8b Maintainer: alexxed Status: ready -->
+<!-- EN-Revision: 4df3260b89b68c99096afa87ccc8f261df8d5c37 Maintainer: alexxed Status: ready -->
 
 <section xml:id="mbstring.installation" xmlns="http://docbook.org/ns/docbook">
   &reftitle.install;
@@ -38,16 +38,14 @@
      <para>
       <productname>Oniguruma</productname> este necesar pentru funcțiile cu
       expresii regulare cu susținerea caracterelor pe mai mulți baiți.
-      <productname>Oniguruma</productname> e încorporat cu
-      <literal>mbstring</literal>. Începând cu PHP 5.4.0, dacă
-      <productname>Oniguruma</productname> este deja instalat în sistem,
-      poate fi specificată opțiunea <option role="configure">--with-onig[=DIR]</option>
-      pentru a utiliza biblioteca instalată.
-      Începând cu PHP 7.4.0 opțiunea <option role="configure">--with-onig</option>
-      a fost eliminată; pkg-config este utilizat acum pentru a detecta biblioteca libonig.
+      Începând cu PHP 7.4.0, pkg-config este utilizat pentru a detecta biblioteca
+      libonig. Înainte de PHP 7.4.0 <productname>Oniguruma</productname> era
+      încorporat cu <literal>mbstring</literal>, dar era posibilă compilarea cu
+      o bibliotecă libonig deja instalată specificând opțiunea
+      <option role="configure">--with-onig[=DIR]</option>.
      </para>
      <para>
-      Începând cu PHP 5.4.0 este bosibil de a deconecta verificarea multibyte
+      Este bosibil de a deconecta verificarea multibyte
       regex backtrack specificând
       <option role="configure">--disable-mbregex-backtrack</option>.
      </para>

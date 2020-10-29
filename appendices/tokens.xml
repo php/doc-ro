@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: a26d5a22cda7fbfcf2ad1cbad258d904729517bd Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 58d1813178b506452ca45051b241c2982a6cd4af Maintainer: simionea Status: ready -->
 
 <appendix xml:id="tokens" xmlns="http://docbook.org/ns/docbook">
  <title>Lista semnelor interpretorului</title>
@@ -76,8 +76,11 @@
     <row>
      <entry><constant>T_BAD_CHARACTER</constant></entry>
      <entry></entry>
-     <entry>orice caracter cu codul ASCII mai mic decât 32 cu excepția \t
-     (0x09), \n (0x0a) și \r (0x0d)</entry>
+     <entry>
+      orice caracter cu codul ASCII mai mic decât 32 cu excepția \t (0x09), \n
+      (0x0a) și \r (0x0d)
+      (disponibilă începând cu PHP 7.4.0, și de asemenea înainte de PHP 7.0.0, dar nu era utilizată)
+     </entry>
     </row>
     <row>
      <entry><constant>T_BOOLEAN_AND</constant></entry>
@@ -102,7 +105,7 @@
     <row>
      <entry><constant>T_CALLABLE</constant></entry>
      <entry>callable</entry>
-     <entry><link linkend="language.types.callable">callable</link></entry>
+     <entry><link linkend="language.types.callable">callable</link>(disponibilă începând cu PHP 5.4.0)</entry>
     </row>
     <row>
      <entry><constant>T_CASE</constant></entry>
@@ -117,7 +120,7 @@
     <row>
      <entry><constant>T_CHARACTER</constant></entry>
      <entry></entry>
-     <entry>nu mai este utilizat</entry>
+     <entry>nu mai este utilizată (eliminată în PHP 7.0.0)</entry>
     </row>
     <row>
      <entry><constant>T_CLASS</constant></entry>
@@ -149,6 +152,14 @@
      <entry>
       <link linkend="language.operators.comparison.coalesce">operatori de comparare</link>
       (disponibil începând cu PHP 7.0.0)
+     </entry>
+    </row>
+    <row>
+     <entry><constant>T_COALESCE_EQUAL</constant></entry>
+     <entry>??=</entry>
+     <entry>
+      <link linkend="language.operators.assignment">operatori de atribuire</link>
+      (disponibilă începând cu PHP 7.4.0)
      </entry>
     </row>
     <row>
@@ -217,16 +228,16 @@
      <entry><link linkend="language.types.float">numere cu virgulă flotantă</link></entry>
     </row>
     <row>
+     <entry><constant>T_DO</constant></entry>
+     <entry>do</entry>
+     <entry><link linkend="control-structures.do.while">do..while</link></entry>
+    </row>
+    <row>
      <entry><constant>T_DOC_COMMENT</constant></entry>
      <entry>/** */</entry>
      <entry>
       <link linkend="language.basic-syntax.comments">comentarii în stil PHPDoc</link>
      </entry>
-    </row>
-    <row>
-     <entry><constant>T_DO</constant></entry>
-     <entry>do</entry>
-     <entry><link linkend="control-structures.do.while">do..while</link></entry>
     </row>
     <row>
      <entry><constant>T_DOLLAR_OPEN_CURLY_BRACES</constant></entry>
@@ -356,6 +367,14 @@
      <entry><xref linkend="language.exceptions"/> (disponibil începând cu PHP 5.5.0)</entry>
     </row>
     <row>
+     <entry><constant>T_FN</constant></entry>
+     <entry>fn</entry>
+     <entry>
+      <link linkend="functions.arrow">funcții arrow</link>
+      (disponibilă începând cu PHP 7.4.0)
+     </entry>
+    </row>
+    <row>
      <entry><constant>T_FOR</constant></entry>
      <entry>for</entry>
      <entry><link linkend="control-structures.for">for</link></entry>
@@ -367,7 +386,7 @@
     </row>
     <row>
      <entry><constant>T_FUNCTION</constant></entry>
-     <entry>function sau cfunction</entry>
+     <entry>function</entry>
      <entry><link linkend="language.functions">funcții</link></entry>
     </row>
     <row>
@@ -437,14 +456,14 @@
      <entry><xref linkend="language.oop5.traits"/> (disponibilă începând cu PHP 5.4.0)</entry>
     </row>
     <row>
-     <entry><constant>T_INT_CAST</constant></entry>
-     <entry>(int) sau (integer)</entry>
-     <entry><link linkend="language.types.typecasting">type-casting</link></entry>
-    </row>
-    <row>
      <entry><constant>T_INTERFACE</constant></entry>
      <entry>interface</entry>
      <entry><xref linkend="language.oop5.interfaces"/></entry>
+    </row>
+    <row>
+     <entry><constant>T_INT_CAST</constant></entry>
+     <entry>(int) sau (integer)</entry>
+     <entry><link linkend="language.types.typecasting">type-casting</link></entry>
     </row>
     <row>
      <entry><constant>T_ISSET</constant></entry>
@@ -480,14 +499,6 @@
      <entry><constant>T_IS_SMALLER_OR_EQUAL</constant></entry>
      <entry>&lt;=</entry>
      <entry><link linkend="language.operators.comparison">operatori de comparare</link></entry>
-    </row>
-    <row>
-     <entry><constant>T_SPACESHIP</constant></entry>
-     <entry>&lt;=&gt;</entry>
-     <entry>
-      <link linkend="language.operators.comparison">operatori de comparare</link>
-      (disponibil începând cu PHP 7.0.0)
-     </entry>
     </row>
     <row>
      <entry><constant>T_LINE</constant></entry>
@@ -550,6 +561,11 @@
      </entry>
     </row>
     <row>
+     <entry><constant>T_NEW</constant></entry>
+     <entry>new</entry>
+     <entry><link linkend="language.oop5">clase și obiecte</link></entry>
+    </row>
+    <row>
      <entry><constant>T_NS_C</constant></entry>
      <entry>__NAMESPACE__</entry>
      <entry>
@@ -564,11 +580,6 @@
       <link linkend="language.namespaces">spațiile de nume</link> (disponibile
       începând cu PHP 5.3.0)
      </entry>
-    </row>
-    <row>
-     <entry><constant>T_NEW</constant></entry>
-     <entry>new</entry>
-     <entry><link linkend="language.oop5">clase și obiecte</link></entry>
     </row>
     <row>
      <entry><constant>T_NUM_STRING</constant></entry>
@@ -640,15 +651,15 @@
      </entry>
     </row>
     <row>
-     <entry><constant>T_PUBLIC</constant></entry>
-     <entry>public</entry>
+     <entry><constant>T_PROTECTED</constant></entry>
+     <entry>protected</entry>
      <entry>
       <link linkend="language.oop5">clase și obiecte</link>
      </entry>
     </row>
     <row>
-     <entry><constant>T_PROTECTED</constant></entry>
-     <entry>protected</entry>
+     <entry><constant>T_PUBLIC</constant></entry>
+     <entry>public</entry>
      <entry>
       <link linkend="language.oop5">clase și obiecte</link>
      </entry>
@@ -677,6 +688,14 @@
      <entry><constant>T_SL_EQUAL</constant></entry>
      <entry>&lt;&lt;=</entry>
      <entry><link linkend="language.operators.assignment">operatori de atribuire</link></entry>
+    </row>
+    <row>
+     <entry><constant>T_SPACESHIP</constant></entry>
+     <entry>&lt;=&gt;</entry>
+     <entry>
+      <link linkend="language.operators.comparison">operatori de comparație</link>
+      (disponibilă începând cu PHP 7.0.0)
+     </entry>
     </row>
     <row>
      <entry><constant>T_SR</constant></entry>

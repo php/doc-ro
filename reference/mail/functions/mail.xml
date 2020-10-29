@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 3e15d2894fb35432d2a111db36fe8ba8ebc62024 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 33301d17ba3b7d06ec557ded64b21626e22a24c0 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.mail" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -127,7 +127,7 @@ $text = str_replace("\n.", "\n..", $text);
         eroare similar cu acesta: <literal>Warning: mail(): "sendmail_from" not
         set in php.ini or custom "From:" header missing</literal>
         Antetul <literal>From</literal> stabilește de asemenea <literal>Return-Path</literal>
-        în Windows.
+        când mesajul este transmis direct prin SMTP (doar în Windows).
        </para>
       </note>
       <note>
@@ -376,11 +376,12 @@ mail($to, $subject, $message, implode("\r\n", $headers));
   &reftitle.notes;
   <note>
    <para>
-    Implementarea funcției <function>mail</function> în Windows diferă în multe
-    aspecte de cea din Unix. În primul rând ea nu utilizează un binar local
-    pentru a compune mesajele, dar operează direct asupra socket-urilor, ceea
-    ce înseamnă că este necesar ca un <literal>MTA</literal> să asculte pe un
-    socket de rețea (care poate fi pe serverul local sau pe unul îndepărtat).
+    Implementarea SMTP (doar în Windows) a funcției <function>mail</function>
+    diferă în multe aspecte de implementarea sendmail. În primul rând ea nu
+    utilizează un binar local pentru a compune mesajele, dar operează direct
+    asupra socket-urilor, ceea ce înseamnă că este necesar ca un
+    <literal>MTA</literal> să asculte pe un socket de rețea (care poate fi pe
+    serverul local sau pe unul îndepărtat).
    </para>
    <para>
     În al doilea rând, antetele personalizate, cum ar fi

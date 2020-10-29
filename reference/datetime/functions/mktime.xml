@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: bce4e5f7d7979c5b672e9375a17860b0ced5eef3 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: be5b0f33a18415823da76389915b49aae4ee6835 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.mktime" xmlns="http://docbook.org/ns/docbook">
@@ -20,7 +20,7 @@
    <methodparam choice="opt"><type>int</type><parameter>month</parameter><initializer>date("n")</initializer></methodparam>
    <methodparam choice="opt"><type>int</type><parameter>day</parameter><initializer>date("j")</initializer></methodparam>
    <methodparam choice="opt"><type>int</type><parameter>year</parameter><initializer>date("Y")</initializer></methodparam>
-   <methodparam choice="opt"><type>int</type><parameter>is_dst</parameter><initializer>-1</initializer></methodparam>
+   <methodparam choice="opt"><type>int</type><parameter>isDST</parameter><initializer>-1</initializer></methodparam>
   </methodsynopsis>
   <para>
    Întoarce timestamp-ul Unix ce corespunde argumentelor furnizate. Acest
@@ -130,7 +130,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><parameter>is_dst</parameter></term>
+     <term><parameter>isDST</parameter></term>
      <listitem>
       <para>
        Acest parametru poate fi stabilit în 1 dacă este în efect timpul de vară
@@ -139,7 +139,7 @@
        cunoaște, PHP încearcă singur să determine acest lucru. Aceasta poate
        cauza rezultate neașteptate (dar nu neapărat incorecte).
        Unele ore nu sunt valide dacă DST este activat pe sistemul unde rulează
-       PHP, sau dacă parametrul <parameter>is_dst</parameter> este stabilit în
+       PHP, sau dacă parametrul <parameter>isDST</parameter> este stabilit în
        1. Dacă DST este activat de ex. la 2:00, toate orele între 2:00 și 3:00
        sunt invalide și <function>mktime</function> întoarce o valoare
        nedefinită (de obicei negativă). Unele sisteme (de ex. Solaris 8)
@@ -176,58 +176,6 @@
  <refsect1 role="errors">
   &reftitle.errors;
   &date.timezone.errors.description;
- </refsect1>
-
- <refsect1 role="changelog">
-  &reftitle.changelog;
-  <para>
-   <informaltable>
-    <tgroup cols="2">
-     <thead>
-      <row>
-       <entry>&Version;</entry>
-       <entry>&Description;</entry>
-      </row>
-     </thead>
-     <tbody>
-      <row>
-       <entry>7.0.0</entry>
-       <entry>
-        Parametrul <parameter>is_dst</parameter> a fost eliminat.
-       </entry>
-      </row>
-      <row>
-       <entry>5.3.0</entry>
-       <entry>
-        <function>mktime</function> acum emite o notificare
-        <constant>E_DEPRECATED</constant> dacă este utilizat parametrul
-        <parameter>is_dst</parameter>.
-       </entry>
-      </row>
-      <row>
-       <entry>5.1.0</entry>
-       <entry>
-        Parametrul <parameter>is_dst</parameter> a devenit dezapreciat.
-        Funcția a fost modificată să întoarcă &false; în caz de eroare, în loc
-        de <literal>-1</literal>. Funcția a fost modificată să accepte anul,
-        luna și ziua cu valorile zero.
-       </entry>
-      </row>
-      <row>
-       <entry>5.1.0</entry>
-       <entry>
-        Când este apelată fără argumente, <function>mktime</function> aruncă o
-        notificare <constant>E_STRICT</constant>. Utilizați funcția
-        <function>time</function> în loc.
-       </entry>
-      </row>
-
-      &date.timezone.errors.changelog;
-
-     </tbody>
-    </tgroup>
-   </informaltable>
-  </para>
  </refsect1>
 
  <refsect1 role="examples">

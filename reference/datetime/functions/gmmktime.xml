@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: bce4e5f7d7979c5b672e9375a17860b0ced5eef3 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: be5b0f33a18415823da76389915b49aae4ee6835 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.gmmktime" xmlns="http://docbook.org/ns/docbook">
@@ -20,7 +20,7 @@
    <methodparam choice="opt"><type>int</type><parameter>month</parameter><initializer>gmdate("n")</initializer></methodparam>
    <methodparam choice="opt"><type>int</type><parameter>day</parameter><initializer>gmdate("j")</initializer></methodparam>
    <methodparam choice="opt"><type>int</type><parameter>year</parameter><initializer>gmdate("Y")</initializer></methodparam>
-   <methodparam choice="opt"><type>int</type><parameter>is_dst</parameter><initializer>-1</initializer></methodparam>
+   <methodparam choice="opt"><type>int</type><parameter>isDST</parameter><initializer>-1</initializer></methodparam>
   </methodsynopsis>
   <para>
    Este identică cu <function>mktime</function> cu excepția că parametrii
@@ -113,11 +113,11 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><parameter>is_dst</parameter></term>
+     <term><parameter>isDST</parameter></term>
      <listitem>
       <para>
        Parametrii întotdeauna reprezintă o dată GMT, deci
-       <parameter>is_dst</parameter> nu influențează rezultatul.
+       <parameter>isDST</parameter> nu influențează rezultatul.
       </para>
       <note>
        <para>
@@ -134,38 +134,6 @@
   &reftitle.returnvalues;
   <para>
    Întoarce un moment de timp Unix de tip <type>integer</type>.
-  </para>
- </refsect1>
-
- <refsect1 role="changelog">
-  &reftitle.changelog;
-  <para>
-   <informaltable>
-    <tgroup cols="2">
-     <thead>
-      <row>
-       <entry>&Version;</entry>
-       <entry>&Description;</entry>
-      </row>
-     </thead>
-     <tbody>
-      <row>
-       <entry>7.0.0</entry>
-       <entry>
-        Parametrul <parameter>is_dst</parameter> a fost eliminat.
-       </entry>
-      </row>
-      <row>
-       <entry>5.1.0</entry>
-       <entry>
-        Începând cu PHP 5.1.0, parametrul <parameter>is_dst</parameter> a
-        devenit învechit. În rezultat, trabuie utilizată în loc noua facilitate
-        de manipulare cu fusul orar.
-       </entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
   </para>
  </refsect1>
 

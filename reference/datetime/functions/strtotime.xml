@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 866b749d19ee0b4df802cc6751855311364521ed Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 53bdffa6b9f8ce5ffdaf476c9d450f7cd0d1afa2 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.strtotime" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -13,7 +13,7 @@
   &reftitle.description;
   <methodsynopsis>
    <type>int</type><methodname>strtotime</methodname>
-   <methodparam><type>string</type><parameter>time</parameter></methodparam>
+   <methodparam><type>string</type><parameter>datetime</parameter></methodparam>
    <methodparam choice="opt"><type>int</type><parameter>now</parameter><initializer>time()</initializer></methodparam>
   </methodsynopsis>
   <simpara>
@@ -23,6 +23,13 @@
    dat în parametrul <parameter>now</parameter>, sau cu ora curentă dacă
    parametrul <parameter>now</parameter> nu este furnizat.
   </simpara>
+  <warning>
+   <para>
+    Timestamp-ul Unix pe care îl întoarce această funcție nu conține informații
+    despre fusurile orare. Pentru a efectua calcule cu informații dată/oră
+    trebuie utilizate obiecte <classname>DateTimeImmutable</classname> mai capabile.
+   </para>
+  </warning>
   <para>
    Fiecare parametru al acestei funcții utilizează fusul orar implicit, afară de
    cazul când fusul orar este specificat în acel parametru. Fiți atenți să nu
@@ -38,7 +45,7 @@
   <para>
    <variablelist>
     <varlistentry>
-     <term><parameter>time</parameter></term>
+     <term><parameter>datetime</parameter></term>
      <listitem>
       <para>&date.formats.parameter;</para>
      </listitem>
@@ -67,76 +74,6 @@
   &reftitle.errors;
 
   &date.timezone.errors.description;
- </refsect1>
-
- <refsect1 role="changelog">
-  &reftitle.changelog;
-  <para>
-   <informaltable>
-    <tgroup cols="2">
-     <thead>
-      <row>
-       <entry>&Version;</entry>
-       <entry>&Description;</entry>
-      </row>
-     </thead>
-     <tbody>
-      <row>
-       <entry>5.3.0</entry>
-       <entry>
-        Anterior versiunii PHP 5.3.0, formatele de timp relative transmise prin
-        argumentul <parameter>time</parameter> al funcției <function>strtotime</function>,
-        cum ar fi <literal>this week</literal>, <literal>previous week</literal>,
-        <literal>last week</literal> și <literal>next week</literal> erau
-        interpretate ca perioadă de 7 zile relativ cu data/ora curentă, și nu ca
-        o perioadă de o săptămână de la <literal>Monday</literal> până la
-        <literal>Sunday</literal>.
-       </entry>
-      </row>
-      <row>
-       <entry>5.3.0</entry>
-       <entry>
-        Anterior versiunii PHP 5.3.0, <literal>24:00</literal> nu era un format
-        valid și <function>strtotime</function> întorcea &false;.
-       </entry>
-      </row>
-      <row>
-       <entry>5.2.7</entry>
-       <entry>
-        În PHP 5 anterior versiunii 5.2.7, cererea de a obține o anumită zi a
-        săptămânii într-o lună, unde această zi este prima zi a lunii, adăuga
-        în mod incorect o săptămână la valoarea întoarsă. Aceasta a fost
-        corectat în versiunea 5.2.7 și cele ulterioare.
-       </entry>
-      </row>
-      <row>
-       <entry>5.1.0</entry>
-       <entry>
-        Acum întoarce &false; în caz de eșec, în loc de <literal>-1</literal>.
-       </entry>
-      </row>
-
-      &date.timezone.errors.changelog;
-
-      <row>
-       <entry>5.0.2</entry>
-       <entry>
-        În PHP 5 până la versiunea 5.0.2, <literal>"now"</literal> și alte
-        momente de timp relative erau calculate greșit relativ la miezul nopții
-        de astăzi. Aceasta diferă de alte versiuni, unde el este calculat corect
-        relativ la ora curentă.
-       </entry>
-      </row>
-      <row>
-       <entry>5.0.0</entry>
-       <entry>
-        Microsecundele au început să fie permise, dar sunt ignorate.
-       </entry>
-      </row>
-     </tbody>
-    </tgroup>
-   </informaltable>
-  </para>
  </refsect1>
 
  <refsect1 role="examples">

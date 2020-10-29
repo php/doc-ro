@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 95bdd6883b5dde9504701777ba81b3c5f15df52b Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 33301d17ba3b7d06ec557ded64b21626e22a24c0 Maintainer: simionea Status: ready -->
 
 <section xml:id="mail.configuration" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.runtime;
@@ -149,7 +149,7 @@
    <listitem>
     <para>
      Indică adresa ce trebuie înscrisă în câmpul <literal>"From:"</literal> în
-     poșta trimisă din PHP sub Windows. Această directivă de asemenea
+     poșta trimisă direct prin SMTP (doar în Windows). Această directivă de asemenea
      stabilește antetul <literal>"Return-Path:"</literal>.
     </para>
    </listitem>

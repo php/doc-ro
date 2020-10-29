@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: b8758b0605e80c4e3610137b7502a6abeea5c69b Maintainer: simionea Status: ready -->
+<!-- EN-Revision: a59ed9b526c8bae64a3e762063f2bd4de39a00da Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.microtime" xmlns="http://docbook.org/ns/docbook">
@@ -14,12 +14,15 @@
   &reftitle.description;
   <methodsynopsis>
    <type>mixed</type><methodname>microtime</methodname>
-   <methodparam choice="opt"><type>bool</type><parameter>get_as_float</parameter><initializer>&false;</initializer></methodparam>
+   <methodparam choice="opt"><type>bool</type><parameter>getAsFloat</parameter><initializer>&false;</initializer></methodparam>
   </methodsynopsis>
   <para>
    <function>microtime</function> întoarce timpul curent Unix cu microsecunde.
    Această funcție este disponibilă numai pe sistemele de operare ce susțin
    apelul de sistem gettimeofday().
+  </para>
+  <para>
+   Pentru măsurarea performanței este recomandată utilizarea funcției <function>hrtime</function>.
   </para>
  </refsect1>
 
@@ -28,7 +31,7 @@
   <para>
    <variablelist>
     <varlistentry>
-     <term><parameter>get_as_float</parameter></term>
+     <term><parameter>getAsFloat</parameter></term>
      <listitem>
       <para>
        Dacă se utilizează și este stabilită în &true;, <function>microtime</function>
@@ -51,7 +54,7 @@
    <literal>sec</literal> exprimat în secunde.
   </para>
   <para>
-   Dacă <parameter>get_as_float</parameter> este stabilit în &true;, atunci
+   Dacă <parameter>getAsFloat</parameter> este stabilit în &true;, atunci
    <function>microtime</function> întoarce un <type>float</type>, care reprezintă
    timpul curent în secunde ce s-au scurs de la epoca Unix cu precizia de
    microsecundă.
@@ -131,6 +134,7 @@ echo "Nu am făcut nimic timp de $time secunde\n";
   <para>
    <simplelist>
     <member><function>time</function></member>
+    <member><function>hrtime</function></member>
    </simplelist>
   </para>
  </refsect1>
