@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 21e01236e01d2e4fdad5e243e237f47060a3e21e Maintainer: simionea Status: ready -->
+<!-- EN-Revision: e443388d4249fea383d6ec2d1a338be220cf95ee Maintainer: simionea Status: ready -->
 
  <sect3 xml:id="configure.options.servers" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Opțiunile SAPI</title>
@@ -12,16 +12,6 @@
    pentru PHP.
   </para>
   <variablelist>
-   <varlistentry xml:id="configure.with-aolserver">
-    <term>
-     <option role="configure">--with-aolserver=DIR</option>
-    </term>
-    <listitem>
-     <para>
-      Specifică calea spre AOLserver instalat.
-     </para>
-    </listitem>
-   </varlistentry>
    <varlistentry xml:id="configure.with-apxs">
     <term>
      <option role="configure">--with-apxs[=FILE]</option>
@@ -35,6 +25,7 @@
      </para>
     </listitem>
    </varlistentry>
+
    <varlistentry xml:id="configure.with-apache">
     <term>
      <option role="configure">--with-apache[=DIR]</option>
@@ -46,6 +37,7 @@
      </para>
     </listitem>
    </varlistentry>
+
    <varlistentry xml:id="configure.with-mod-charset">
     <term>
      <option role="configure">--with-mod_charset</option>
@@ -56,6 +48,7 @@
      </para>
     </listitem>
    </varlistentry>
+
    <varlistentry xml:id="configure.with-apxs2">
     <term>
      <option role="configure">--with-apxs2[=FILE]</option>
@@ -64,19 +57,6 @@
      <para>
       Asamblează un modul partajat pentru Apache 2.0. FILE este calea opțională spre
       instrumentul apxs; implicit este apxs.
-     </para>
-    </listitem>
-   </varlistentry>
-
-   <varlistentry xml:id="configure.with-caudium">
-    <term>
-     <option role="configure">--with-caudium=DIR</option>
-    </term>
-    <listitem>
-     <para>
-      Asamblează PHP în calitate de modul Pike, pentru a fi folosit cu Caudium. DIR este
-      directorul serverului Caudium, cu valoarea implicită
-      <filename>/usr/local/caudium/server</filename>.
      </para>
     </listitem>
    </varlistentry>
@@ -120,16 +100,6 @@
     </listitem>
    </varlistentry>
 
-   <varlistentry xml:id="configure.with-isapi">
-    <term>
-     <option role="configure">--with-isapi=DIR</option>
-    </term>
-    <listitem>
-     <para>
-      Asamblează PHP în calitate de modul ISAPI, pentru a fi utilizat cu Zeus.
-     </para>
-    </listitem>
-   </varlistentry>
    <varlistentry xml:id="configure.with-nsapi">
     <term>
      <option role="configure">--with-nsapi=DIR</option>
@@ -140,47 +110,7 @@
      </para>
     </listitem>
    </varlistentry>
-   <varlistentry xml:id="configure.with-phttpd">
-    <term>
-     <option role="configure">--with-phttpd=DIR</option>
-    </term>
-    <listitem>
-     <para>
-      Deocamdată nu există informații.
-     </para>
-    </listitem>
-   </varlistentry>
-   <varlistentry xml:id="configure.with-pi3web">
-    <term>
-     <option role="configure">--with-pi3web=DIR</option>
-    </term>
-    <listitem>
-     <para>
-      Asamblează PHP în calitate de modul, pentru a fi utilizat cu Pi3Web.
-     </para>
-    </listitem>
-   </varlistentry>
-   <varlistentry xml:id="configure.with-roxen">
-    <term>
-     <option role="configure">--with-roxen=DIR</option>
-    </term>
-    <listitem>
-     <para>
-      Asamblează PHP în calitate de modul Pike. DIR este directorul de bază al Roxen,
-      în mod normal <filename>/usr/local/roxen/server</filename>.
-     </para>
-    </listitem>
-   </varlistentry>
-   <varlistentry xml:id="configure.enable-roxen-zts">
-    <term>
-     <option role="configure">--enable-roxen-zts</option>
-    </term>
-    <listitem>
-     <para>
-      Asamblează modulul Roxen utilizând Zend Thread Safety.
-     </para>
-    </listitem>
-   </varlistentry>
+
    <varlistentry xml:id="configure.with-servlet">
     <term>
      <option role="configure">--with-servlet[=DIR]</option>
@@ -190,38 +120,6 @@
       Include susținerea servlet-urilor. DIR este directorul de bază,
       unde este instalat JSDK. Acest SAPI necesită ca extensia java să
       fie asamblată ca un 'dl' partajat.
-     </para>
-    </listitem>
-   </varlistentry>
-   <varlistentry xml:id="configure.with-thttpd">
-    <term>
-     <option role="configure">--with-thttpd=SRCDIR</option>
-    </term>
-    <listitem>
-     <para>
-      Asamblează PHP în calitate de modul thttpd.
-     </para>
-    </listitem>
-   </varlistentry>
-
-   <varlistentry xml:id="configure.with-tux">
-    <term>
-     <option role="configure">--with-tux=MODULEDIR</option>
-    </term>
-    <listitem>
-     <para>
-      Asamblează PHP în calitate de modul TUX (numai în Linux).
-     </para>
-    </listitem>
-   </varlistentry>
-
-   <varlistentry xml:id="configure.with-webjames">
-    <term>
-     <option role="configure">--with-webjames=SRCDIR</option>
-    </term>
-    <listitem>
-     <para>
-      Asamblează PHP în calitate de modul WebJames (numai în RISC OS)
      </para>
     </listitem>
    </varlistentry>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 821b199e5c6f7dad1366b811c079df33db863c34 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: fea06f18ecf93275638c995be73440b85baee545 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.array-filter" xmlns="http://docbook.org/ns/docbook">
@@ -23,9 +23,13 @@
    transmițând-o funcției <parameter>callback</parameter>. Dacă funcția
    <parameter>callback</parameter> întoarce &true;, valoarea curentă din
    <parameter>array</parameter> este întoarsă în &array; rezultant.
-   Cheile tabloului sunt păstrate.
   </para>
-</refsect1>
+  <para>
+   Cheile tabloului sunt păstrate și pot apărea lacune dacă
+   <parameter>array</parameter> a fost indexat. Rezultatul &array; poate fi
+   reindexat utilizând funcția <function>array_values</function>.
+  </para>
+ </refsect1>
 
  <refsect1 role="parameters">
   &reftitle.parameters;
@@ -49,9 +53,9 @@
       </para>
       <para>
        Dacă nu este furnizată nici o funcție <parameter>callback</parameter>,
-       toate înregistrările din <parameter>array</parameter> egale cu &false;
-       (vedeți <link linkend="language.types.boolean.casting">convertarea în
-        boolean</link>) vor fi eliminate.
+       toate înregistrările vide din <parameter>array</parameter> vor fi eliminate.
+       A se vedea funcția <function>empty</function> pentru a afla modul cum PHP
+       definește conținutul vid în acest caz.
       </para>
      </listitem>
     </varlistentry>

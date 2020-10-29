@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 99f97fe9cef39cb1432c7c71d0b3b5325dc31947 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: 3e15d2894fb35432d2a111db36fe8ba8ebc62024 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.getallheaders" xmlns="http://docbook.org/ns/docbook">
@@ -51,21 +51,6 @@
        <entry>7.3.0</entry>
        <entry>
         Această funcție a devenit disponibilă în FPM SAPI.
-       </entry>
-      </row>
-      <row>
-       <entry>5.5.7</entry>
-       <entry>
-        Această funcție a devenit disponibilă în serverul CLI.
-       </entry>
-      </row>
-      <row>
-       <entry>5.4.0</entry>
-       <entry>
-        Această funcție a devenit disponibilă în FastCGI. Anterior ea era
-        susținută dacă PHP era instalat ca modul Apache sau ca
-        <link linkend="book.nsapi">modul server NSAPI</link> în serverele web
-        Netscape/iPlanet/SunONE.
        </entry>
       </row>
      </tbody>

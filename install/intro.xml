@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 6b25eaaf7d07c2fd3c0d19274fbb8be1c231762e Maintainer: simionea Status: ready -->
+<!-- EN-Revision: e443388d4249fea383d6ec2d1a338be220cf95ee Maintainer: simionea Status: ready -->
 <!-- CREDITS: spooky -->
 
   <chapter xml:id="install.general" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -33,12 +33,11 @@
     alegerea metodei de conectare dintre PHP și server. Pentru multe servere
     PHP are o interfață-modul directă (denumită de asemenea SAPI). Aceste
     servere includ Apache, Microsoft Internet Information Server, serverele
-    Netscape și iPlanet. Multe alte servere susțin ISAPI - interfața-modul
-    Microsoft (OmniHTTPd spre exemplu). Dacă PHP nu este susținut ca modul
-    pentru server-ul dumneavoastră web, atunci oricând îl puteți utiliza ca
-    procesor CGI sau FastCGI. Aceasta înseamnă să configurați serverul
-    dumneavoastră să utilizeze executabilul CGI al PHP pentru a procesa toate
-    cererile de fișiere PHP de pe server.
+    Netscape și iPlanet. Dacă PHP nu este susținut ca modul pentru server-ul
+    dumneavoastră web, atunci oricând îl puteți utiliza ca procesor CGI sau
+    FastCGI. Aceasta înseamnă să configurați serverul dumneavoastră să utilizeze
+    executabilul CGI al PHP pentru a procesa toate cererile de fișiere PHP de pe
+    server.
    </para>
    <para>
     Dacă de asemenea sunteți interesat să utilizați PHP pentru scripting în

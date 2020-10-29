@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 52ae7dd55e62b1e7b6920499ed7448892e09bb48 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: b8990010918c977f62f147cf57a04c7e36f625e5 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
 
 <refentry xml:id="function.array-diff" xmlns="http://docbook.org/ns/docbook">
@@ -61,8 +61,8 @@
   &reftitle.returnvalues;
   <para>
    Întoarce un <type>array</type> ce conține toate înregistrările din
-   <parameter>array1</parameter> care nu sunt prezente nici în unul din
-   celelalte tablouri.
+   <parameter>array1</parameter> care nu sunt prezente nici în unul din celelalte
+   tablouri. Cheile din tabloul <parameter>array1</parameter> sunt păstrate.
   </para>
  </refsect1>
 
@@ -96,18 +96,54 @@ Array
     </screen>
    </example>
   </para>
+  <para>
+   <example>
+    <title>Exemplu <function>array_diff</function> cu tipuri ce nu se potrivesc</title>
+    <para>
+     Două elemente sunt considerate egale dacă și numai dacă
+     <literal>(string) $elem1 === (string) $elem2</literal>. Adică atunci când
+     <link linkend="language.types.string.casting">reprezentarea sub formă de
+     șir de caractere</link> este aceeași.
+    </para>
+    <programlisting role="php">
+     <![CDATA[
+<?php
+// Aceasta va genera o notificare că un tablou nu poate fi preschimbat în șir de caractere.
+$source = [1, 2, 3, 4];
+$filter = [3, 4, [5], 6];
+$result = array_diff($source, $filter);
+
+// Iar aceasta este fine, deoarece obiectele pot fi preschimbate în șiruri de caractere.
+class S {
+  private $v;
+
+  public function __construct(string $v) {
+    $this->v = $v;
+  }
+
+  public function __toString() {
+    return $this->v;
+  }
+}
+
+$source = [new S('a'), new S('b'), new S('c')];
+$filter = [new S('b'), new S('c'), new S('d')];
+
+$result = array_diff($source, $filter);
+
+// $result acum conține o instanță a S('a');
+?>
+]]>
+    </programlisting>
+    <para>
+     Pentru a utiliza o funcție de comparație alternativă vedeți <function>array_udiff</function>.
+    </para>
+   </example>
+  </para>
  </refsect1>
 
  <refsect1 role="notes">
   &reftitle.notes;
-  <note>
-   <para>
-    Două elemente sunt considerate egale dacă și numai dacă <literal>(string)
-    $elem1 === (string) $elem2</literal>. Cu alte cuvinte: dacă reprezentarea lor
-    ca șiruri de caractere este aceeași.
-    <!-- TODO: example of it... -->
-   </para>
-  </note>
   <note>
    <para>
     Această funcție verifică numai o dimensiune a unui tablou n-dimensional.
@@ -122,6 +158,7 @@ Array
   <para>
    <simplelist>
     <member><function>array_diff_assoc</function></member>
+    <member><function>array_udiff</function></member>
     <member><function>array_intersect</function></member>
     <member><function>array_intersect_assoc</function></member>
    </simplelist>

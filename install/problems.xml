@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: simionea Status: ready -->
+<!-- EN-Revision: dec1f8445ab2af7fbafef012fb7907ab2cd349b5 Maintainer: simionea Status: ready -->
 
   <chapter xml:id="install.problems" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
    <title>Probleme?</title>
@@ -34,9 +34,9 @@
      Dacă doriți să obțineți ajutor din lista de distribuție poștală vă rugăm să
      fiți cât mai precis și să oferiți detaliile necesare despre mediul de lucru
      (care este sistemul de operare, versiunea PHP, care este serverul web, dacă
-     rulați PHP în regim CGI sau ca modul al serverului, &safemode;, etc.), și
-     preferabil cod-sursă suficient pentru ca alții să poată reproduce și testa
-     problema dumneavoastră.
+     rulați PHP în regim CGI sau ca modul al serverului, etc.), și preferabil
+     cod-sursă suficient pentru ca alții să poată reproduce și testa problema
+     dumneavoastră.
     </simpara>
    </sect1>
 
