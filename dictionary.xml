@@ -2,6 +2,7 @@
 <?xml-stylesheet href="dictionary.xsl" type="text/xsl"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
+
 <dictionary title="Dicționar al termenilor utilizați în manualul PHP" author="Simion Onea">
   <term>
     <english>use /verb/</english>

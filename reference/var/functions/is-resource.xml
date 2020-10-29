@@ -3,7 +3,6 @@
 <!-- $Author$ -->
 <!-- EN-Revision: 96510018028eb0564b76a9cca5cf7e367cff3369 Maintainer: simionea Status: ready -->
 <!-- CREDITS: adiju -->
-<!-- splitted from ./en/functions/var.xml, last change in rev 1.19 -->
 
 <refentry xml:id="function.is-resource" xmlns="http://docbook.org/ns/docbook">
  <refnamediv>
