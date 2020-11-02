@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 58d1813178b506452ca45051b241c2982a6cd4af Maintainer: simionea Status: ready -->
+<!-- EN-Revision: cdaea0421544885f02ff3d36bd203dc01b78299e Maintainer: simionea Status: ready -->
 
 <appendix xml:id="tokens" xmlns="http://docbook.org/ns/docbook">
  <title>Lista semnelor interpretorului</title>
@@ -79,7 +79,7 @@
      <entry>
       orice caracter cu codul ASCII mai mic decât 32 cu excepția \t (0x09), \n
       (0x0a) și \r (0x0d)
-      (disponibilă începând cu PHP 7.4.0, și de asemenea înainte de PHP 7.0.0, dar nu era utilizată)
+      (disponibilă începând cu PHP 7.4.0)
      </entry>
     </row>
     <row>
@@ -105,7 +105,7 @@
     <row>
      <entry><constant>T_CALLABLE</constant></entry>
      <entry>callable</entry>
-     <entry><link linkend="language.types.callable">callable</link>(disponibilă începând cu PHP 5.4.0)</entry>
+     <entry><link linkend="language.types.callable">callable</link></entry>
     </row>
     <row>
      <entry><constant>T_CASE</constant></entry>
@@ -116,11 +116,6 @@
      <entry><constant>T_CATCH</constant></entry>
      <entry>catch</entry>
      <entry><xref linkend="language.exceptions"/></entry>
-    </row>
-    <row>
-     <entry><constant>T_CHARACTER</constant></entry>
-     <entry></entry>
-     <entry>nu mai este utilizată (eliminată în PHP 7.0.0)</entry>
     </row>
     <row>
      <entry><constant>T_CLASS</constant></entry>
@@ -151,7 +146,6 @@
      <entry>??</entry>
      <entry>
       <link linkend="language.operators.comparison.coalesce">operatori de comparare</link>
-      (disponibil începând cu PHP 7.0.0)
      </entry>
     </row>
     <row>
@@ -213,8 +207,7 @@
     <row>
      <entry><constant>T_DIR</constant></entry>
      <entry>__DIR__</entry>
-     <entry><link linkend="language.constants.predefined">constante magice</link>
-     (disponibile începând cu PHP 5.3.0)</entry>
+     <entry><link linkend="language.constants.predefined">constante magice</link></entry>
     </row>
     <row>
      <entry><constant>T_DIV_EQUAL</constant></entry>
@@ -268,10 +261,7 @@
     <row>
      <entry><constant>T_ELLIPSIS</constant></entry>
      <entry>...</entry>
-     <entry>
-      <link linkend="functions.variable-arg-list.new">argumentele funcțiilor</link>
-      (disponibilă începând cu PHP 5.6.0)
-     </entry>
+     <entry><link linkend="functions.variable-arg-list">argumentele funcțiilor</link></entry>
     </row>
     <row>
      <entry><constant>T_ELSE</constant></entry>
@@ -364,7 +354,7 @@
     <row>
      <entry><constant>T_FINALLY</constant></entry>
      <entry>finally</entry>
-     <entry><xref linkend="language.exceptions"/> (disponibil începând cu PHP 5.5.0)</entry>
+     <entry><xref linkend="language.exceptions"/></entry>
     </row>
     <row>
      <entry><constant>T_FN</constant></entry>
@@ -404,12 +394,12 @@
     <row>
      <entry><constant>T_GOTO</constant></entry>
      <entry>goto</entry>
-     <entry><link linkend="control-structures.goto">goto</link> (disponibil începând cu PHP 5.3.0)</entry>
+     <entry><link linkend="control-structures.goto">goto</link></entry>
     </row>
     <row>
      <entry><constant>T_HALT_COMPILER</constant></entry>
      <entry>__halt_compiler()</entry>
-     <entry><xref linkend="function.halt-compiler"/> (disponibil începând cu PHP 5.1.0)</entry>
+     <entry><xref linkend="function.halt-compiler"/></entry>
     </row>
     <row>
      <entry><constant>T_IF</constant></entry>
@@ -453,7 +443,7 @@
     <row>
      <entry><constant>T_INSTEADOF</constant></entry>
      <entry>insteadof</entry>
-     <entry><xref linkend="language.oop5.traits"/> (disponibilă începând cu PHP 5.4.0)</entry>
+     <entry><xref linkend="language.oop5.traits"/></entry>
     </row>
     <row>
      <entry><constant>T_INTERFACE</constant></entry>
@@ -555,10 +545,7 @@
     <row>
      <entry><constant>T_NAMESPACE</constant></entry>
      <entry>namespace</entry>
-     <entry>
-      <link linkend="language.namespaces">spațiile de nume</link> (disponibile
-      începând cu PHP 5.3.0)
-     </entry>
+     <entry><link linkend="language.namespaces">spațiile de nume</link></entry>
     </row>
     <row>
      <entry><constant>T_NEW</constant></entry>
@@ -568,18 +555,12 @@
     <row>
      <entry><constant>T_NS_C</constant></entry>
      <entry>__NAMESPACE__</entry>
-     <entry>
-      <link linkend="language.namespaces">spațiile de nume</link> (disponibile
-      începând cu PHP 5.3.0)
-     </entry>
+     <entry><link linkend="language.namespaces">spațiile de nume</link></entry>
     </row>
     <row>
      <entry><constant>T_NS_SEPARATOR</constant></entry>
      <entry>\</entry>
-     <entry>
-      <link linkend="language.namespaces">spațiile de nume</link> (disponibile
-      începând cu PHP 5.3.0)
-     </entry>
+     <entry><link linkend="language.namespaces">spațiile de nume</link></entry>
     </row>
     <row>
      <entry><constant>T_NUM_STRING</constant></entry>
@@ -625,18 +606,12 @@
     <row>
      <entry><constant>T_POW</constant></entry>
      <entry>**</entry>
-     <entry>
-      <link linkend="language.operators.arithmetic">operatori aritmetici</link>
-      (disponibil începând cu PHP 5.6.0)
-     </entry>
+     <entry><link linkend="language.operators.arithmetic">operatori aritmetici</link></entry>
     </row>
     <row>
      <entry><constant>T_POW_EQUAL</constant></entry>
      <entry>**=</entry>
-     <entry>
-      <link linkend="language.operators.assignment">operatori de atribuire</link>
-      (disponibil începând cu PHP 5.6.0)
-     </entry>
+     <entry><link linkend="language.operators.assignment">operatori de atribuire</link></entry>
     </row>
     <row>
      <entry><constant>T_PRINT</constant></entry>
@@ -692,10 +667,7 @@
     <row>
      <entry><constant>T_SPACESHIP</constant></entry>
      <entry>&lt;=&gt;</entry>
-     <entry>
-      <link linkend="language.operators.comparison">operatori de comparație</link>
-      (disponibilă începând cu PHP 7.0.0)
-     </entry>
+     <entry><link linkend="language.operators.comparison">operatori de comparație</link></entry>
     </row>
     <row>
      <entry><constant>T_SR</constant></entry>
@@ -749,12 +721,12 @@
     <row>
      <entry><constant>T_TRAIT</constant></entry>
      <entry>trait</entry>
-     <entry><xref linkend="language.oop5.traits"/> (disponibilă începând cu PHP 5.4.0)</entry>
+     <entry><xref linkend="language.oop5.traits"/></entry>
     </row>
     <row>
      <entry><constant>T_TRAIT_C</constant></entry>
      <entry>__TRAIT__</entry>
-     <entry><link linkend="constant.trait">__TRAIT__</link> (disponibilă începând cu PHP 5.4.0)</entry>
+     <entry><link linkend="constant.trait">__TRAIT__</link></entry>
     </row>
     <row>
      <entry><constant>T_TRY</constant></entry>
@@ -774,8 +746,7 @@
     <row>
      <entry><constant>T_USE</constant></entry>
      <entry>use</entry>
-     <entry><link linkend="language.namespaces">spații de nume</link>
-     (disponibil începând cu PHP 5.3.0)</entry>
+     <entry><link linkend="language.namespaces">spații de nume</link></entry>
     </row>
     <row>
      <entry><constant>T_VAR</constant></entry>
@@ -806,12 +777,12 @@
     <row>
      <entry><constant>T_YIELD</constant></entry>
      <entry>yield</entry>
-     <entry><link linkend="control-structures.yield">generators</link> (disponibilă începând cu PHP 5.5.0)</entry>
+     <entry><link linkend="control-structures.yield">generators</link></entry>
     </row>
     <row>
      <entry><constant>T_YIELD_FROM</constant></entry>
      <entry>yield from</entry>
-     <entry><link linkend="control-structures.yield.from">generators</link> (disponibilă începând cu PHP 7.0.0)</entry>
+     <entry><link linkend="control-structures.yield.from">generators</link></entry>
     </row>
    </tbody>
   </tgroup>

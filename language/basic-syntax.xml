@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 298f39a1cf7377bb5c383936d664403212fd9cab Maintainer: simionea Status: ready -->
+<!-- EN-Revision: cdaea0421544885f02ff3d36bd203dc01b78299e Maintainer: simionea Status: ready -->
 
  <chapter xml:id="language.basic-syntax" xmlns="http://docbook.org/ns/docbook">
   <title>Sintaxa de bază</title>
@@ -45,35 +45,6 @@ echo "Ultima declarație";
 ]]>
      </programlisting>
     </informalexample>
-   </para>
-   <para>
-    <table>
-     &reftitle.changelog;
-     <tgroup cols="2">
-      <thead>
-       <row>
-        <entry>&Version;</entry>
-        <entry>&Description;</entry>
-       </row>
-      </thead>
-      <tbody>
-       <row>
-        <entry>7.0.0</entry>
-         <entry>
-          Tag-urile ASP <code>&lt;%</code>, <code>%&gt;</code>, <code>&lt;%=</code>
-          și tag-ul de stil script <code>&lt;script language="php"&gt;</code>
-          sunt excluse din PHP.
-         </entry>
-       </row>
-       <row>
-        <entry>5.4.0</entry>
-         <entry>
-          Tag-ul &lt;?= este mereu disponibil indiferent de setarea ini short_open_tag.
-         </entry>
-       </row>
-      </tbody>
-     </tgroup>
-    </table>
    </para>
   </sect1>
   <sect1 xml:id="language.basic-syntax.phpmode">
@@ -123,29 +94,15 @@ echo "Ultima declarație";
     <function>echo</function> sau <function>print</function>.
    </para>
    <para>
-    În PHP 5 sunt disponibile cel mult cinci perechi diferite de tag-uri de
-    deschidere și de închidere, în dependență de modul cum este configurat PHP.
-    Două dintre ele, <code>&lt;?php ?&gt;</code> și
-    <code>&lt;script language="php"&gt; &lt;/script&gt;</code> sunt mereu disponibile.
-    De asemenea există tag-ul scurt de afișare <code>&lt;?= ?&gt;</code>, care
-    este întotdeauna disponibil în PHP 5.4.0 și ulterior.
+    De asemenea există tag-ul scurt de afișare <code>&lt;?= ?&gt;</code>.
    </para>
    <para>
-    Celelalte două sunt tag-urile scurte și tag-uri în stil <productname>ASP</productname>.
-    Ca atare, în timp ce unii oameni găsesc tag-urile scurte și tag-urile stil
-    <productname>ASP</productname> comode, ele sunt mai puțin portabile, și în general nerecomandate.
     <note>
      <para>
       De asemenea rețineți că dacă încorporați PHP în XML sau XHTML va trebui să folosiți
       tag-urile &lt;?php ?&gt; pentru a vă conforma standardelor.
      </para>
     </note>
-   </para>
-   <para>
-    PHP 7 încetează susținerea tag-urilor <productname>ASP</productname> și
-    <code>&lt;script language="php"&gt;</code>. Ca atare, vă recomandăm să utilizați
-    doar <code>&lt;?php ?&gt;</code> și <code>&lt;?= ?&gt;</code> la scrierea
-    codului PHP pentru maximizarea compatibilității.
    </para>
    <para>
     <example>
@@ -156,57 +113,27 @@ echo "Ultima declarație";
                 folosește aceste tag-uri'; ?>
 
 2.  Puteți utiliza tag-ul scurt de afișare pentru a <?= 'afișa aceasta' ?>.
-    El este întotdeauna activat în PHP 5.4.0 și ulterior, și este echivalent cu
-    <?php echo 'afișa aceasta' ?>.
+    Aceasta este echivalent cu <?php echo 'afișa aceasta' ?>.
 
 3.  <? echo 'acest cod este între tag-uri scurte și va funcționa doar dacă '.
             'opțiunea short_open_tag este activată'; ?>
-
-4.  <script language="php">
-        echo 'anumitori editori (precum FrontPage) nu le place
-              să proceseze instrucțiuni între aceste tag-uri';
-    </script>
-    Această sintaxă este eliminată în PHP 7.0.0.
-
-5.  <% echo 'Opțional puteți folosi tag-uri stil ASP'; %>
-    Codul între aceste tag-uri <%= $variable; %> este o scurtătură pentru acest cod <% echo $variable; %>
-    Aceste două sintaxe au fost eliminate în PHP 7.0.0.
 ]]>
      </programlisting>
     </example>
    </para>
    <para>
-    Tag-uri scurte (exemplul trei) sunt disponibile numai când sunt activate
-    cu ajutorul directivei <link linkend="ini.short-open-tag">short_open_tag</link>
-    din fișierul de configurare &php.ini;, sau dacă PHP a fost configurat cu
-    opțiunea <option>--enable-short-tags</option>.
-   </para>
-   <para>
-    Tag-uri stil <productname>ASP</productname> (exemplul cinci) sunt valabile numai
-    când sunt activate cu ajutorul directivei <link linkend="ini.asp-tags">asp_tags</link>
-    din fișierul de configurare &php.ini; și au fost eliminate în PHP 7.0.0.
+    Tag-uri scurte (exemplul trei) sunt disponibile implicit, dar pot fi
+    dezactivate cu ajutorul directivei
+    <link linkend="ini.short-open-tag">short_open_tag</link> din fișierul de
+    configurare &php.ini;, sau dacă PHP a fost configurat cu opțiunea
+    <option>--disable-short-tags</option>.
    </para>
    <para>
     <note>
      <para>
-      Folosirea tag-urilor scurte ar trebui evitată în timpul dezvoltării aplicațiilor
-      sau bibliotecilor destinate redistribuirii, sau implemetării pe servere PHP asupra cărora
-      nu aveți control, deoarece tag-urile scurte s-ar putea să nu fie susținute de acel server.
-      Pentru cod portabil, redistribuibil, asigurați-vă că nu folosiți tag-uri scurte.
-     </para>
-    </note>
-    <note>
-     <para>
-      În PHP 5.2 și versiunile anterioare, parsatorul nu permite ca tag-ul de deschidere
-      <literal>&lt;?php</literal> să fie singurul element din fișier.
-      Aceasta este permis începând cu PHP 5.3 cu condiția să existe unul sau mai multe caractere
-      spațiu gol după tag-ul de deschidere.
-     </para>
-    </note>
-    <note>
-     <para>
-      Începând cu PHP 5.4, tag-ul scurt de afișare <literal>&lt;?=</literal> este mereu recunoscut și valid,
-      indiferent de setarea <link linkend="ini.short-open-tag">short_open_tag</link>.
+      Deoarece tag-urile scurte pot fi dezactivate, se recomandă utilizarea doar
+      a tag-urilor normale (<code>&lt;?php ?&gt;</code> și <code>&lt;?= ?&gt;</code>)
+      pentru a maximiza compatibilitatea.
      </para>
     </note>
    </para>
@@ -268,10 +195,6 @@ echo "Ultima declarație";
     sau <literal># ...  ?&gt;</literal> VA FI afișat:
     ?&gt; iese din modul PHP și intră în modul HTML, iar
     <literal>//</literal> sau <literal>#</literal> nu pot influența acest lucru.
-    Dacă directiva de configurație <link linkend="ini.asp-tags">asp_tags</link>
-    este activată, se comportă la fel cu <literal>// %&gt;</literal> și
-    <literal># %&gt;</literal>.
-    Totuși, tag-ul <literal>&lt;/script&gt;</literal> nu iese din modul PHP in comentariile de un rând.
    </simpara>
    <para>
     <informalexample>

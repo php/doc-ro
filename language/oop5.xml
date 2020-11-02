@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: a2063d133694286a06fc7cbbd73684c49dc1accb Maintainer: radical Status: ready -->
+<!-- EN-Revision: cdaea0421544885f02ff3d36bd203dc01b78299e Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
 
  <chapter xml:id="language.oop5" xmlns="http://docbook.org/ns/docbook">
@@ -10,7 +10,7 @@
   <sect1 xml:id="oop5.intro">
    <title>Introducere</title>
    <para>
-    Începând cu PHP 5, PHP are un model de obiecte deplin.
+    PHP conține un model de obiecte deplin.
     Unele dintre facilitățile sale sunt:
     <link linkend="language.oop5.visibility">visibility</link>,
     <link linkend="language.oop5.abstract">abstract</link> și
@@ -18,7 +18,7 @@
     <link linkend="language.oop5.magic">metode magice</link> și
     <link linkend="language.oop5.interfaces">interfețe</link> adiționale,
     <link linkend="language.oop5.cloning">clonarea</link> și
-    <link linkend="language.oop5.typehinting">typehinting</link>.
+    <link linkend="language.oop5.typehinting">declararea tipurilor</link>.
    </para>
    <para>
     PHP tratează obiectele la fel ca pe niște referințe sau handle-uri, ceea ce
