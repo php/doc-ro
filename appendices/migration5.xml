@@ -876,7 +876,7 @@ Action application/x-httpd-php "/php/php-cgi.exe"
     îmbunătățit)</link>, care este proiectat să lucreze cu MySQL 4.1 și ulterior.
    </para>
    <para>
-    Începând cu PHP 5, extensia <link linkend="ref.sqlite">SQLite</link> este
+    Începând cu PHP 5, extensia SQLite este
     încorporată în PHP. SQLite este un motor de baze de date SQL ușor încorporabil
     și nu este o bibliotecă-client utilizată pentru conectarea la un server mare
     de baze de date (ca MySQL sau PostgreSQL). Biblioteca SQLite citește și înscrie

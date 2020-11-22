@@ -16,9 +16,8 @@
     <link linkend="language.oop5.abstract">abstract</link> și
     <link linkend="language.oop5.final">final</link>,
     <link linkend="language.oop5.magic">metode magice</link> și
-    <link linkend="language.oop5.interfaces">interfețe</link> adiționale,
-    <link linkend="language.oop5.cloning">clonarea</link> și
-    <link linkend="language.oop5.typehinting">declararea tipurilor</link>.
+    <link linkend="language.oop5.interfaces">interfețe</link> adiționale și
+    <link linkend="language.oop5.cloning">clonarea</link>.
    </para>
    <para>
     PHP tratează obiectele la fel ca pe niște referințe sau handle-uri, ceea ce
@@ -48,14 +47,13 @@
   &language.oop5.final;
   &language.oop5.cloning;
   &language.oop5.object-comparison;
-  &language.oop5.typehinting;
   &language.oop5.late-static-bindings;
   &language.oop5.references;
   &language.oop5.serialization;
   &language.oop5.variance;
   &language.oop5.changelog;
 </chapter>
-
+ 
 <!-- Keep this comment at the end of the file
 Local variables:
 mode: sgml
