@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: db2ac1420fa7946f15518a9e42e1474159b765fd Maintainer: radical Status: ready -->
+<!-- EN-Revision: a6338d747762e36e01061eae19aadca4167375b6 Maintainer: radical Status: ready -->
 <!-- CREDITS: simionea -->
 
  <sect1 xml:id="language.oop5.decon" xmlns="http://docbook.org/ns/docbook">
@@ -11,8 +11,7 @@
    <title>Constructor</title>
    <methodsynopsis xml:id="object.construct">
     <type>void</type><methodname>__construct</methodname>
-    <methodparam choice="opt"><type>mixed</type><parameter>args</parameter><initializer>""</initializer></methodparam>
-    <methodparam choice="opt"><parameter>...</parameter></methodparam>
+    <methodparam rep="repeat"><type>mixed</type><parameter>values</parameter><initializer>""</initializer></methodparam>
    </methodsynopsis>
    <para>
     PHP 5 permite programatorilor să definească constructori pentru clase.
@@ -61,28 +60,10 @@ $obj = new SubClass();
 
 // In BaseClass constructor
 $obj = new OtherSubClass();
-?>
+?> 
 ]]>
     </programlisting>
    </example>
-   <para>
-    Pentru compatibilitate cu PHP 3 și 4, dacă PHP nu poate găsi funcția
-    <link linkend="object.construct">__construct()</link> pentru o clasă dată,
-    va fi căutată funcția constructor de stil vechi, cu numele clasei.
-    Drept urmare, singurul caz care va duce la probleme de compatibilitate este
-    dacă clasa a avut o metodă <link linkend="object.construct">__construct()</link>
-    folosită cu alt scop semantic.
-   </para>
-   <!-- Not using an entity because I want specific wording here, since we're
-   not deprecating constructors in general. -->
-   <warning>
-    <simpara>
-     Constructorii de stil vechi sunt <emphasis>ÎNVECHIȚI</emphasis> în PHP 7.0
-     și vor fi eliminați într-o versiune ulterioară. Trebuie întotdeauna să
-     utilizați <link linkend="object.construct">__construct()</link> în
-     coduri-sursă noi.
-    </simpara>
-   </warning>
    <para>
     Spre deosebire de alte metode, PHP nu va genera un mesaj de eroare de nivel
     <constant>E_STRICT</constant> atunci când <link linkend="object.construct">__construct()</link>
@@ -90,28 +71,175 @@ $obj = new OtherSubClass();
     <link linkend="object.construct">__construct()</link> din clasa-părinte.
    </para>
    <para>
-    Începând cu PHP 5.3.3, metodele cu același nume ca și ultimul element al
-    unei clase din spațiul de nume nu vor mai fi tratate ca constructor. Această
-    schimbare nu afectează clasele fără spații de nume.
+    Constructorii sunt metode apelate la inițializarea obiectelor.
+    Aceștia pot fi definiți cu un număr arbitrar de argumente, care 
+    pot fi opționali sau nu, pot ave tip, și pot avea valoare implicită. Argumentele pentru
+    constructori se pun între paranteze după numele clasei.
    </para>
    <example>
     <title>Constructori în clasele cu spații de nume</title>
     <programlisting role="php">
 <![CDATA[
 <?php
-namespace Foo;
-class Bar {
-    public function Bar() {
-        // tratată ca constructor în PHP 5.3.0-5.3.2
-        // tratată ca o metodă obișnuită începând cu PHP 5.3.3
+class Point {
+    protected int $x;
+    protected int $y;
+
+    public function __construct(int $x, int $y = 0) {
+        $this->x = $x;
+        $this->y = $y;
     }
 }
+
+// Apel cu ambii parametrii
+$p1 = new Point(4, 5);
+// Apel cu argumentul necesar. $y va prelua valoare implictă 0.
+$p2 = new Point(4);
+// Cu argumente numite (începând cu PHP 8.0):
+$p3 = new Point(y: 5, x: 4);
 ?>
 ]]>
     </programlisting>
    </example>
-  </sect2>
+   <para>
+    Dacă o clasă nu are constructor, sau constructorul nu are nici un argument necesar, parantezele
+    pot fi omise.
+   </para>
+   <sect3>
+    <title>Constructorii de stil vechi</title>
+    <para>
+     Înainte de PHP 8.0.0, clasele din namespaceul global interpretau o metodă cu același nume
+     ca și clasa ca un constructor de stil vechi.  Acea syntaxă este învechită și nerecomandată,
+     iar utilizarea ei va genera or eroare de tip <constant>E_DEPRECATED</constant> dar metoda constructor va fi apelată.
+     Dacă atât <link linkend="object.construct">__construct()</link> cât și o motodă cu acelasi nume cu al clasei sunt
+     definite, numai <link linkend="object.construct">__construct()</link> va fi apelat.
+    </para>
+    <para>
+     În clasele din namespace-uri, sau orice altă clasă începând cu PHP 8.0.0, o metodă cu același nume
+     cu al clasei nu are însemnătate specială.
+    </para>
+    <para>Folosiți întotdeauna <link linkend="object.construct">__construct()</link> în cod nou.
+    </para>
+   </sect3>
+   <sect3 xml:id="language.oop5.decon.constructor.promotion">
+    <title>Promovarea prin constructor</title>
+    <para>
+     Începând cu PHP 8.0.0, parametrii constructorului pot fi promovati să corespundă cu o
+     proprietate a objectului.  Este foarte des întâlnit ca parametrii constructorului să fie asignat
+     unei proprietăți în constructor și apoi să nu se mai lucreze cu acea proprietate.  Promovarea prin constructor
+     oferă o scurtătură a acestul caz.  Exemplul de mai sus poate fi rescris în forma următoare.
+    </para>
+    <example>
+     <title>Folosirea promovării prin constructor</title>
+     <programlisting role="php">
+<![CDATA[
+<?php
+class Point {
+    public function __construct(protected int $x, protected int $y = 0) {
+    }
+}
+]]>
+     </programlisting>
+    </example>
+    <para>
+     Atunci când argumentele constructorului include modificatori de vizibilitate, PHP îl va interpreta atât ca
+     o proprietate a obiectului cât și drept argument al constructorului, va asigna valoarea argumentului la
+     proprietatea respectivă.  Corpul constructorului poate fi gol sau poate contine alte declarații.
+     Declarațiile vor fi executate după ce valorile au fost asignate
+     la proprietățile corespunzătoare.
+    </para>
+    <para>
+     Nu este necesar să fie promovate toate argumentele. Este posibil să se amestece argumente/proprietăți promovate și nepromovate,
+     în orice ordine.  Argumentele promovate nu au nici un impact asupra codului care apelează constructorul.
+    </para>
+    <note>
+     <para>
+      Proprietățile obiectelor nu pot fi de tipul <type>callable</type> pentru că ar introduce ambiguități.
+      Argumentele promovate, de asemenea, nu pot fi de tipul <type>callable</type>. Orice
+      alte <link linkend="language.types.declarations">declarații de tip</link> sunt permise.
+     </para>
+    </note>
+    <note>
+     <para>
+      <!-- This should be linked once attributes are documented. -->
+      Atributele plasate ca argumente la un constructor promovat  vor fi replicate și ca proprietăți dar
+      și ca argumente.
+     </para>
+    </note>
+   </sect3>
+   <sect3 xml:id="language.oop5.decon.constructor.static">
+    <title>Metode de creare statice</title>
+    <para>
+     PHP suportă un singur constructor într-o clasă.  În unele cazuri, însă, este nevoie
+     să permitem crearea unui obiect în diferite feluri cu intrări diferite.
+     Metoda recomandată este folosind metode statice care împacheterază constructorul.
+    </para>
+    <example>
+     <title>Folosirea metodelor de creare statice</title>
+     <programlisting role="php">
+<![CDATA[
+<?php
+class Product {
 
+    private ?int $id;
+    private ?string $name;
+
+    private function __construct(?int $id = null, ?string $name = null) {
+        $this->id = $id;
+        $this->name = $name;
+    }
+
+    public static function fromBasicData(int $id, string $name): static {
+        $new = new static($id, $name);
+        return $new;
+    }
+
+    public static function fromJson(string $json): static {
+        $data = json_decode($json);
+        return new static($data['id'], $data['name']);
+    }
+
+    public static function fromXml(string $xml): static {
+        // Put your own logic here.
+        $data = convert_xml_to_array($xml);
+        $new = new static();
+        $new->id = $data['id'];
+        $new->name = $data['name'];
+        return $new;
+    }
+}
+
+$p1 = Product::fromBasicData(5, 'Widget');
+$p2 = Product::fromJson($some_json_string);
+$p3 = Product::fromXml($some_xml_string);
+]]>
+     </programlisting>
+    </example>
+    <para>
+     Constructorul poate fi făcut private sau protected pentru a preveni apelarea din exterior.
+     Dacă se alege această cale, numai o metodă statică va putea instanția classa.  Pentru că sunt definite în
+     aceeași clasă au access la metodele private, chiar dacă obiectele instanțiate sunt 
+     diferite.  Un constructor private este opțional și poate fi o alegere bună în funcție
+     de cerințe...
+    </para>
+    <para>
+     Cele trei metode statice publice demonstrează feluri diferite de instanțiere a obiectelor.
+    </para>
+    <simplelist>
+     <member><code>fromBasicData()</code> permite exact parametrii necesari, și apoi crează
+      obiectul apelând constructorul și returnând rezultatul.</member>
+     <member><code>fromJson()</code> acceptă un text în format JSON și îl pre-procesează pentru într-un
+     format necesar constructorului. Apoi returnează obiectul nou.</member>
+     <member><code>fromXml()</code> acceptă un text XML, în pro-procesează, apoi crează un obiect
+     gol.  Constructorul este apelat, dar pentru că toți parapetrii sunt opționali nu sunt 
+     pasați.  Apoi asignează valori corecte proprietăților obiectului înainte de a întoarce rezultatul.</member>
+    </simplelist>
+    <para>
+     În toate cele trei cazuri, cuvântul cheie <code>static</code>este tradus în numele clasei în care este scris acest cod.
+     În acest caz, <code>Product</code>.
+    </para>
+   </sect3>
+  </sect2>
   <sect2 xml:id="language.oop5.decon.destructor">
    <title>Destructori</title>
    <methodsynopsis xml:id="object.destruct">
