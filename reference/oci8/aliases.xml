@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 <!-- $Author$ -->
-<!-- EN-Revision: 0d6ff20e32320b08ddb19d33fc9e4c189cff4c2a Maintainer: simionea Status: ready -->
+<!-- EN-Revision: bd788d13db9448d2077d82ee357082d0fbc2da88 Maintainer: simionea Status: ready -->
 
 <reference xml:id="oldaliases.oci8" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Pseudonime și funcții OCI8 învechite</title>
