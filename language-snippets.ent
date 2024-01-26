@@ -1547,7 +1547,7 @@ Comportamentul acestor funcții este afectat de parametrii stabiliți în
 &php.ini;.</simpara>'>
 
 <!ENTITY ini.php.constants 'Pentru mai multe detalii și definiții ale
-modurilor PHP_INI_* accesați <xref xmlns="http://docbook.org/ns/docbook"
+modurilor INI_* accesați <xref xmlns="http://docbook.org/ns/docbook"
 linkend="configuration.changes.modes"/>.'>
 
 <!-- Used in reference/$extname/constants.xml -->
