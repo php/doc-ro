@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- EN-Revision: 690c3ea7c7d416c55e2c54d90bfd1f7f4d489288 Maintainer: lacatoire Status: ready -->
+
+<sect1 xml:id="control-structures.else" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <title>else</title>
+ <?phpdoc print-version-for="else"?>
+ <para>
+  Adesea este necesar să se execute o instrucțiune dacă o anumită condiție
+  este îndeplinită și o altă instrucțiune dacă condiția nu este îndeplinită.
+  Acesta este scopul lui <literal>else</literal>. <literal>else</literal>
+  extinde o instrucțiune <literal>if</literal> pentru a executa o instrucțiune
+  în cazul în care expresia din instrucțiunea <literal>if</literal> este
+  evaluată la &false;. De exemplu, următorul cod ar afișa
+  <computeroutput>a este mai mare decât b</computeroutput>
+  dacă <varname>$a</varname> este mai mare decât
+  <varname>$b</varname>, și <computeroutput>a NU este mai mare
+  decât b</computeroutput> în caz contrar:
+  <informalexample>
+   <programlisting role="php">
+<![CDATA[
+<?php
+if ($a > $b) {
+  echo "a este mai mare decât b";
+} else {
+  echo "a NU este mai mare decât b";
+}
+?>
+]]>
+   </programlisting>
+  </informalexample>
+
+  Instrucțiunea <literal>else</literal> se execută doar dacă expresia
+  <literal>if</literal> a fost evaluată la &false;, iar dacă există
+  expresii <literal>elseif</literal> — doar dacă și acestea au fost
+  evaluate la &false; (a se vedea <link
+  linkend="control-structures.elseif">elseif</link>).
+
+ </para>
+ <note>
+  <title>Else suspendat</title>
+  <para>
+   În cazul instrucțiunilor <literal>if</literal>-<literal>else</literal>
+   imbricate, un <literal>else</literal> este întotdeauna asociat cu cel
+   mai apropiat <literal>if</literal>.
+   <informalexample>
+    <programlisting role="php">
+<![CDATA[
+<?php
+$a = false;
+$b = true;
+if ($a)
+    if ($b)
+        echo "b";
+else
+    echo "c";
+?>
+]]>
+    </programlisting>
+   </informalexample>
+   În ciuda indentării (care nu contează pentru PHP), <literal>else</literal>
+   este asociat cu <literal>if ($b)</literal>, astfel încât exemplul nu
+   produce nicio ieșire. Deși acest comportament este valid, este recomandat
+   să fie evitat prin utilizarea acoladelor pentru a rezolva eventualele
+   ambiguități.
+  </para>
+ </note>
+</sect1>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:1
+sgml-indent-data:t
+indent-tabs-mode:nil
+sgml-parent-document:nil
+sgml-default-dtd-file:"~/.phpdoc/manual.ced"
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+vim600: syn=xml fen fdm=syntax fdl=2 si
+vim: et tw=78 syn=sgml
+vi: ts=1 sw=1
+-->
