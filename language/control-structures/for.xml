@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- EN-Revision: 7104ee97ced1768a3231588dfc0bc0d7eb1117ad Maintainer: lacatoire Status: ready -->
+
+<sect1 xml:id="control-structures.for" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <title>for</title>
+ <?phpdoc print-version-for="for"?>
+ <para>
+  Buclele <literal>for</literal> sunt cel mai complex tip de buclă în PHP.
+  Se comportă la fel ca echivalentele lor din C. Sintaxa unei bucle
+  <literal>for</literal> este:
+  <informalexample>
+   <programlisting>
+<![CDATA[
+for (expr1; expr2; expr3)
+    statement
+]]>
+   </programlisting>
+  </informalexample>
+ </para>
+ <simpara>
+  Prima expresie (<varname>expr1</varname>) este evaluată (executată) o
+  singură dată, necondiționat, la începutul buclei.
+ </simpara>
+ <simpara>
+  La începutul fiecărei iterații, <varname>expr2</varname> este evaluată.
+  Dacă este evaluată la &true;, bucla continuă și instrucțiunea
+  (instrucțiunile) imbricată este executată. Dacă este evaluată la
+  &false;, execuția buclei se termină.
+ </simpara>
+ <simpara>
+  La sfârșitul fiecărei iterații, <varname>expr3</varname> este evaluată
+  (executată).
+ </simpara>
+ <simpara>
+  Fiecare dintre expresii poate fi vidă sau poate conține mai multe
+  expresii separate prin virgule. În <varname>expr2</varname>, toate
+  expresiile separate prin virgulă sunt evaluate, dar rezultatul este
+  preluat din ultima parte. Dacă <varname>expr2</varname> este vidă,
+  bucla se va executa la infinit (PHP o consideră implicit ca &true;, la
+  fel ca C). Acest lucru poate fi util, deoarece adesea se dorește
+  terminarea buclei folosind o instrucțiune <link
+  linkend="control-structures.break"><literal>break</literal></link>
+  condiționată în locul expresiei de adevăr a buclei
+  <literal>for</literal>.
+ </simpara>
+ <para>
+  Următoarele exemple afișează toate numerele de la 1 la 10:
+  <informalexample>
+   <programlisting role="php">
+<![CDATA[
+<?php
+/* exemplul 1 */
+
+for ($i = 1; $i <= 10; $i++) {
+    echo $i;
+}
+
+/* exemplul 2 */
+
+for ($i = 1; ; $i++) {
+    if ($i > 10) {
+        break;
+    }
+    echo $i;
+}
+
+/* exemplul 3 */
+
+$i = 1;
+for (; ; ) {
+    if ($i > 10) {
+        break;
+    }
+    echo $i;
+    $i++;
+}
+
+/* exemplul 4 */
+
+for ($i = 1, $j = 0; $i <= 10; $j += $i, print $i, $i++);
+?>
+]]>
+   </programlisting>
+  </informalexample>
+ </para>
+ <simpara>
+  Desigur, primul exemplu pare cel mai elegant (sau poate al patrulea),
+  dar posibilitatea de a utiliza expresii vide în buclele
+  <literal>for</literal> se dovedește utilă în multe situații.
+ </simpara>
+ <para>
+  PHP suportă și sintaxa alternativă cu două puncte pentru buclele
+  <literal>for</literal>.
+  <informalexample>
+   <programlisting>
+<![CDATA[
+for (expr1; expr2; expr3):
+    statement
+    ...
+endfor;
+]]>
+   </programlisting>
+  </informalexample>
+ </para>
+ <simpara>
+  Este obișnuit ca mulți utilizatori să itereze prin tablouri ca în
+  exemplul de mai jos.
+ </simpara>
+ <para>
+  <informalexample>
+   <programlisting role="php">
+<![CDATA[
+<?php
+/*
+ * Acesta este un tablou cu date pe care dorim să le modificăm
+ * în timpul parcurgerii buclei for.
+ */
+$people = array(
+    array('name' => 'Kalle', 'salt' => 856412),
+    array('name' => 'Pierre', 'salt' => 215863)
+);
+
+for($i = 0; $i < count($people); ++$i) {
+    $people[$i]['salt'] = mt_rand(000000, 999999);
+}
+?>
+]]>
+   </programlisting>
+  </informalexample>
+ </para>
+ <simpara>
+  Codul de mai sus poate fi lent, deoarece dimensiunea tabloului este
+  obținută la fiecare iterație. Deoarece dimensiunea nu se schimbă niciodată,
+  bucla poate fi ușor optimizată folosind o variabilă intermediară pentru
+  a stoca dimensiunea, în loc de a apela repetat
+  <function>count</function>:
+ </simpara>
+ <para>
+  <informalexample>
+   <programlisting role="php">
+<![CDATA[
+<?php
+$people = array(
+    array('name' => 'Kalle', 'salt' => 856412),
+    array('name' => 'Pierre', 'salt' => 215863)
+);
+
+for($i = 0, $size = count($people); $i < $size; ++$i) {
+    $people[$i]['salt'] = mt_rand(000000, 999999);
+}
+?>
+]]>
+   </programlisting>
+  </informalexample>
+ </para>
+</sect1>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:1
+sgml-indent-data:t
+indent-tabs-mode:nil
+sgml-parent-document:nil
+sgml-default-dtd-file:"~/.phpdoc/manual.ced"
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+vim600: syn=xml fen fdm=syntax fdl=2 si
+vim: et tw=78 syn=sgml
+vi: ts=1 sw=1
+-->

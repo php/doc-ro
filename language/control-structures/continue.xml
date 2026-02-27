@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- EN-Revision: 16389a7b31069481d6c8c0705172bee5ef1ddf5f Maintainer: lacatoire Status: ready -->
+
+<sect1 xml:id="control-structures.continue" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <title>continue</title>
+ <?phpdoc print-version-for="continue"?>
+ <simpara>
+  <literal>continue</literal> este utilizat în structurile de buclă pentru
+  a sări peste restul iterației curente și a continua execuția la evaluarea
+  condiției, apoi la începutul iterației următoare.
+ </simpara>
+ <note>
+  <simpara>
+   În PHP, instrucțiunea
+   <link linkend="control-structures.switch">switch</link> este considerată
+   o structură de buclă în ceea ce privește <literal>continue</literal>.
+   <literal>continue</literal> se comportă ca <literal>break</literal>
+   (când nu se transmit argumente), dar va genera un avertisment, deoarece
+   este probabil o greșeală. Dacă un <literal>switch</literal> se află
+   în interiorul unei bucle, <literal>continue 2</literal> va continua cu
+   iterația următoare a buclei exterioare.
+  </simpara>
+ </note>
+ <simpara>
+  <literal>continue</literal> acceptă un argument numeric opțional care
+  indică peste câte niveluri de bucle imbricate trebuie să se sară la
+  sfârșit. Valoarea implicită este <literal>1</literal>, sărind astfel la
+  sfârșitul buclei curente.
+ </simpara>
+ <para>
+  <informalexample>
+   <programlisting role="php">
+<![CDATA[
+<?php
+$arr = ['zero', 'one', 'two', 'three', 'four', 'five', 'six'];
+foreach ($arr as $key => $value) {
+    if (0 === ($key % 2)) { // se omit elementele cu cheie pară
+        continue;
+    }
+    echo $value . "\n";
+}
+?>
+]]>
+   </programlisting>
+   &examples.outputs;
+   <screen>
+<![CDATA[
+one
+three
+five
+]]>
+   </screen>
+   <programlisting role="php">
+<![CDATA[
+<?php
+$i = 0;
+while ($i++ < 5) {
+    echo "Outer\n";
+    while (1) {
+        echo "Middle\n";
+        while (1) {
+            echo "Inner\n";
+            continue 3;
+        }
+        echo "This never gets output.\n";
+    }
+    echo "Neither does this.\n";
+}
+?>
+]]>
+   </programlisting>
+   &examples.outputs;
+   <screen>
+<![CDATA[
+Outer
+Middle
+Inner
+Outer
+Middle
+Inner
+Outer
+Middle
+Inner
+Outer
+Middle
+Inner
+Outer
+Middle
+Inner
+]]>
+   </screen>
+  </informalexample>
+ </para>
+ <para>
+  Omiterea punctului și virgulă după <literal>continue</literal> poate
+  duce la confuzii. Iată un exemplu a ceea ce nu trebuie făcut.
+ </para>
+ <para>
+  <informalexample>
+   <programlisting role="php">
+<![CDATA[
+<?php
+for ($i = 0; $i < 5; ++$i) {
+    if ($i == 2)
+        continue
+    print "$i\n";
+}
+?>
+]]>
+   </programlisting>
+   <para>
+    Rezultatul așteptat ar fi:
+   </para>
+   <screen>
+<![CDATA[
+0
+1
+3
+4
+]]>
+   </screen>
+  </informalexample>
+ </para>
+ <para>
+  <table>
+   <title>Istoricul modificărilor pentru <literal>continue</literal></title>
+   <tgroup cols="2">
+    <thead>
+     <row>
+      <entry>&Version;</entry>
+      <entry>&Description;</entry>
+     </row>
+    </thead>
+    <tbody>
+     <row>
+      <entry>7.3.0</entry>
+      <entry>
+       <literal>continue</literal> în interiorul unui <literal>switch</literal>
+       care încearcă să funcționeze ca o instrucțiune <literal>break</literal>
+       pentru <literal>switch</literal> va genera un
+       <constant>E_WARNING</constant>.
+      </entry>
+     </row>
+    </tbody>
+   </tgroup>
+  </table>
+ </para>
+</sect1>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-omittag:t
+sgml-shorttag:t
+sgml-minimize-attributes:nil
+sgml-always-quote-attributes:t
+sgml-indent-step:1
+sgml-indent-data:t
+indent-tabs-mode:nil
+sgml-parent-document:nil
+sgml-default-dtd-file:"~/.phpdoc/manual.ced"
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+vim600: syn=xml fen fdm=syntax fdl=2 si
+vim: et tw=78 syn=sgml
+vi: ts=1 sw=1
+-->
