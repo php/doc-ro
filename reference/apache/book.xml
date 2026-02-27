@@ -18,7 +18,6 @@
  <!-- }}} -->
 
  &reference.apache.setup;
- &reference.apache.constants;
  &reference.apache.reference;
 
 </book>
